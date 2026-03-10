@@ -84,8 +84,10 @@ Poor early targets:
 The script is heuristic by design:
 
 - It scans for `<u16 reg, u16 val>` patterns
-- It deduplicates identical payloads found at multiple offsets
+- It deduplicates identical payloads found at multiple offsets by default
 - It defaults to the common Sony table shape that starts at `0x3030` and ends at `0x3004`
+
+Use `--keep-duplicates` when you need the physical table-slot layout instead of just unique payloads.
 
 Adjust `--start-reg`, `--terminator`, and `--min-len` when working on other sensors.
 

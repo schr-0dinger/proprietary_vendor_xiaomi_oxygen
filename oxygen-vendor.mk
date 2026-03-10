@@ -964,3 +964,5 @@ PRODUCT_PACKAGES += \
     libts_detected_face_hal \
     libts_face_beautify_hal \
     uceShimService
+
+-include vendor/xiaomi/oxygen/opensource/vendor_overrides.mk

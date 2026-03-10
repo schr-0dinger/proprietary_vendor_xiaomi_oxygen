@@ -624,3 +624,5 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libadsprpc
+
+-include vendor/xiaomi/oxygen/opensource/vendor_overrides.mk

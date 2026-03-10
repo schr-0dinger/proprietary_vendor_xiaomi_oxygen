@@ -46,6 +46,7 @@ def extract_modes(
     start_reg: int,
     terminator: int,
     min_len: int,
+    dedupe_payloads: bool,
 ) -> list[TableCandidate]:
     candidates: list[TableCandidate] = []
     seen_offsets: set[int] = set()
@@ -61,7 +62,9 @@ def extract_modes(
             continue
 
         payload = tuple(entries)
-        if offset in seen_offsets or payload in seen_payloads:
+        if offset in seen_offsets:
+            continue
+        if dedupe_payloads and payload in seen_payloads:
             continue
 
         seen_offsets.add(offset)
@@ -120,6 +123,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Do not emit file offsets as comments",
     )
+    parser.add_argument(
+        "--keep-duplicates",
+        action="store_true",
+        help="Emit duplicate payloads found at different offsets",
+    )
     return parser.parse_args()
 
 
@@ -136,6 +144,7 @@ def main() -> int:
         start_reg=parse_u16(args.start_reg),
         terminator=parse_u16(args.terminator),
         min_len=args.min_len,
+        dedupe_payloads=not args.keep_duplicates,
     )
 
     print(

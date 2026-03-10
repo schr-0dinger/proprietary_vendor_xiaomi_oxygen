@@ -1,0 +1,16 @@
+cc_library_shared {
+    name: "consumerir.msm8953.open",
+    defaults: ["oxygen_open_vendor_defaults"],
+    stem: "consumerir.msm8953",
+    relative_install_path: "hw",
+    compile_multilib: "64",
+    srcs: [
+        "backend/backend_select.c",
+        "backend/downstream/backend_downstream.c",
+        "backend/mainline/backend_mainline.c",
+        "consumerir.c",
+        "lirc_common.c",
+    ],
+    local_include_dirs: ["include"],
+    shared_libs: ["liblog"],
+}
