@@ -18,11 +18,11 @@
 
 static const char kLircDevice[] = "/dev/lirc0";
 /*
- * Xiaomi's consumerir blob uses ioctl number 0x4004691c before write().
- * The upstream LIRC header names that slot differently, so treat this as a
- * downstream reconstruction point until the kernel-side contract is verified.
+ * oxygen's downstream kernel driver (drivers/media/rc/ir-spi.c) repurposes
+ * LIRC_SET_REC_FILTER to mean "set TX buffer length before write()".
+ * The original blob issues the same ioctl number before writing to /dev/lirc0.
  */
-static const uint32_t kDownstreamLengthIoctl = _IOW('i', 0x1c, __u32);
+static const uint32_t kDownstreamTxLengthIoctl = LIRC_SET_REC_FILTER;
 
 static int open_lirc_device(const char *backend_name) {
     int fd = open(kLircDevice, O_WRONLY | O_CLOEXEC);
@@ -104,7 +104,7 @@ int consumerir_transmit_lirc_pulse(
     const int pattern[],
     int pattern_len,
     int set_send_mode,
-    int use_length_ioctl) {
+    int use_downstream_tx_length) {
     int fd = -1;
     int ret = 0;
     int total_time = 0;
@@ -156,6 +156,11 @@ int consumerir_transmit_lirc_pulse(
         0);
 
     buffer_size = (size_t)pattern_len * sizeof(*buffer);
+    if (buffer_size > UINT32_MAX) {
+        ret = -EOVERFLOW;
+        goto out;
+    }
+
     buffer = calloc((size_t)pattern_len, sizeof(*buffer));
     if (buffer == NULL) {
         ret = -ENOMEM;
@@ -166,14 +171,14 @@ int consumerir_transmit_lirc_pulse(
         buffer[i] = (lirc_t)pattern[i];
     }
 
-    if (use_length_ioctl) {
+    if (use_downstream_tx_length) {
         length_hint = (uint32_t)buffer_size;
         ret = set_ioctl_u32(
             fd,
-            kDownstreamLengthIoctl,
+            kDownstreamTxLengthIoctl,
             length_hint,
             backend_name,
-            "downstream_length_hint",
+            "LIRC_SET_REC_FILTER(tx-length)",
             1);
         if (ret < 0) {
             goto out;

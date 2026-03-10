@@ -16,7 +16,7 @@ int consumerir_transmit_lirc_pulse(
     const int pattern[],
     int pattern_len,
     int set_send_mode,
-    int use_length_ioctl);
+    int use_downstream_tx_length);
 int consumerir_validate_pattern(
     int carrier_freq,
     const int pattern[],

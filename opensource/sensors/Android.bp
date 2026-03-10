@@ -1,0 +1,18 @@
+cc_defaults {
+    name: "oxygen_open_sensors_defaults",
+    defaults: ["oxygen_open_skeleton_defaults"],
+    compile_multilib: "64",
+}
+
+cc_binary {
+    name: "sensors.qti.open",
+    defaults: ["oxygen_open_sensors_defaults"],
+    stem: "sensors.qti",
+    srcs: [
+        "backend/backend_select.c",
+        "backend/downstream/backend_downstream.c",
+        "backend/mainline/backend_mainline.c",
+        "sensors_qti.c",
+    ],
+    local_include_dirs: ["include"],
+}

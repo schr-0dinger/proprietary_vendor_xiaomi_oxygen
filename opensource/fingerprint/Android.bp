@@ -1,0 +1,19 @@
+cc_defaults {
+    name: "oxygen_open_fingerprint_defaults",
+    defaults: ["oxygen_open_skeleton_defaults"],
+    compile_multilib: "64",
+}
+
+cc_library_shared {
+    name: "fingerprint.msm8953.open",
+    defaults: ["oxygen_open_fingerprint_defaults"],
+    stem: "fingerprint.msm8953",
+    relative_install_path: "hw",
+    srcs: [
+        "backend/backend_select.c",
+        "backend/disabled/backend_disabled.c",
+        "backend/passthrough/backend_passthrough.c",
+        "fingerprint_hal.c",
+    ],
+    local_include_dirs: ["include"],
+}
