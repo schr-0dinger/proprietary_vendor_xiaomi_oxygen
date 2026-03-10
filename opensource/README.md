@@ -31,6 +31,9 @@ This directory is the first concrete layer of the `oxygen` port-first open-vendo
 - `fingerprint/`
   - Source skeleton for `vendor/lib64/hw/fingerprint.msm8953.so`.
   - Starts as a non-operational gating shim so the repo has a concrete place for the future disabled/passthrough split.
+- `KERNEL_CONTEXT.md`
+  - Maps the local downstream and mainline kernel trees to the vendor-side open-source effort.
+  - Records the current subsystem anchor files and the important gap that mainline has `mido`/`vince` references but no `oxygen` DTS yet.
 
 ## Mixed-vendor enablement
 
@@ -41,6 +44,31 @@ To enable the open IR HAL in a product or device makefile:
 ```make
 OXYGEN_OPEN_VENDOR_COMPONENTS += consumerir
 ```
+
+Additional component toggles now exist:
+
+```make
+OXYGEN_OPEN_VENDOR_COMPONENTS += sensors
+OXYGEN_OPEN_VENDOR_COMPONENTS += fingerprint
+OXYGEN_OPEN_VENDOR_COMPONENTS += camera-imx386
+OXYGEN_OPEN_VENDOR_COMPONENTS += camera-stubs
+OXYGEN_OPEN_VENDOR_COMPONENTS += camera-all
+```
+
+Current meaning:
+
+- `consumerir`
+  - real open replacement target
+- `sensors`
+  - source skeleton for `vendor/bin/sensors.qti`
+- `fingerprint`
+  - source skeleton for `vendor/lib64/hw/fingerprint.msm8953.so`
+- `camera-imx386`
+  - swaps in the IMX386 sensor/eeprom/actuator source set
+- `camera-stubs`
+  - swaps in the generic OV12A and S5K5E8 source stubs
+- `camera-all`
+  - enables both camera groups above
 
 Both [`oxygen-vendor.mk`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/oxygen-vendor.mk) and [`mithorium-common-vendor.mk`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/mithorium-common-vendor.mk) now include this overlay at the end, so replacements can be layered on top without rewriting the generated blob lists.
 
@@ -62,9 +90,10 @@ python3 opensource/tools/vendor_inventory.py > /tmp/oxygen-vendor-inventory.json
 
 The most useful extra reference trees for the next implementation phase are:
 
-- a stable custom or downstream `oxygen` kernel tree with the currently working
-  drivers and DTS
-- any `msm8953-mainline` tree or patch stack you want this work to converge on
+- the local downstream `oxygen` kernel tree at
+  [`android_kernel_xiaomi_oxygen/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen)
+- the local mainline reference tree at
+  [`linux/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/linux)
 - extracted init logs or service failure logs once runtime enablement begins
 
 Useful but lower priority:
@@ -80,3 +109,4 @@ Useful but lower priority:
 - Camera, sensors, and fingerprint scaffolding are present as source now, but only `consumerir` is wired into [`vendor_overrides.mk`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/opensource/vendor_overrides.mk).
 - The IMX386 camera skeleton compiles as source scaffolding, but it is not yet wired into `vendor_overrides.mk` because the full Qualcomm `sensor_open_lib()` userspace ABI is still being reconstructed.
 - The generic camera/eeprom/actuator stubs, the `sensors.qti` skeleton, and the fingerprint shim are coverage scaffolding only. They exist to anchor future RE and implementation work, not to replace blobs yet.
+- The new mixed-vendor toggles for `sensors`, `fingerprint`, `camera-imx386`, `camera-stubs`, and `camera-all` are build-selection hooks only. They are useful for controlled bring-up work, not for production boot yet.
