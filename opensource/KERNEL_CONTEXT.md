@@ -1,21 +1,22 @@
 # Kernel Context
 
-This repo now has the two kernel reference trees that matter most to the
-open-vendor effort:
+This repo now has the two kernel trees that matter most to the open-vendor
+effort:
 
-- downstream truth:
+- primary implementation target:
   [`android_kernel_xiaomi_oxygen/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen)
   - Linux `4.9.337`
-- mainline target:
+- reference-only track for now:
   [`linux/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/linux)
   - Linux `6.12`
 
 ## Why this matters
 
 - The downstream tree defines the currently working device-specific kernel
-  contracts that the proprietary userspace was written against.
-- The mainline tree defines the direction the open replacements should converge
-  on, especially for sensors, power, and other kernel-facing interfaces.
+  contracts that the proprietary userspace was written against. This is the
+  primary compatibility target.
+- The mainline tree is reference material for future backend design,
+  especially for sensors, power, and other kernel-facing interfaces.
 
 ## Immediate subsystem anchors
 
@@ -52,5 +53,7 @@ not for `oxygen` yet. That means:
   wiring
 - `mido` and `vince` mainline DTS files are reference material, not drop-in
   replacements
-- open vendor code should avoid baking downstream-only assumptions into
-  top-level HAL logic, but it still needs downstream-specific backends today
+- current vendor open-source work should first become correct on downstream
+  `4.9`
+- mainline-aware structure is still useful, but it should not slow down or
+  complicate the downstream bring-up path

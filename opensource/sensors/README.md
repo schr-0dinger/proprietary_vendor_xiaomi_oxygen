@@ -2,10 +2,13 @@
 
 This directory is the first source skeleton for `vendor/bin/sensors.qti`.
 
+Current priority is downstream `4.9` compatibility. The mainline path is
+reference-only for now.
+
 ## Intent
 
 - keep a real build target for the future open sensors daemon
-- preserve the planned backend split between downstream and mainline kernels
+- preserve a backend split without losing focus on downstream `4.9` bring-up
 - avoid claiming runtime compatibility with Qualcomm SSC/DSP userspace before
   the protocol and service contract are reconstructed
 

@@ -2,6 +2,11 @@
 
 This directory is the first concrete layer of the `oxygen` port-first open-vendor plan.
 
+Current priority:
+
+- primary target: `oxygen` on the downstream `4.9` kernel
+- mainline is reference material for future backend work, not a current compatibility target
+
 ## What is here
 
 - `tools/vendor_inventory.py`
@@ -14,9 +19,7 @@ This directory is the first concrete layer of the `oxygen` port-first open-vendo
   - Mixed-vendor overlay that filters selected prebuilts out of the generated `PRODUCT_COPY_FILES` lists and replaces them with source modules.
 - `consumerir/`
   - First open replacement module, installed as `vendor/lib64/hw/consumerir.msm8953.so`.
-  - Uses a backend split:
-    - `backend/downstream`
-    - `backend/mainline`
+  - Uses a backend split, but the downstream `4.9` backend is the primary target today.
   - Backend selection is auto-probed at runtime and can be overridden with `OXYGEN_CONSUMERIR_BACKEND=downstream|mainline|auto`.
 - `camera/`
   - Shared camera compat headers plus source skeletons for the oxygen camera family.
@@ -27,13 +30,13 @@ This directory is the first concrete layer of the `oxygen` port-first open-vendo
   - This is a research module, not a runtime-ready blob replacement yet.
 - `sensors/`
   - Source skeleton for `vendor/bin/sensors.qti`.
-  - Keeps the planned backend split in place without claiming runtime compatibility with SSC/DSP or the Qualcomm sensors stack yet.
+  - Keeps the planned backend split in place, with downstream `4.9` as the primary compatibility goal.
 - `fingerprint/`
   - Source skeleton for `vendor/lib64/hw/fingerprint.msm8953.so`.
   - Starts as a non-operational gating shim so the repo has a concrete place for the future disabled/passthrough split.
 - `KERNEL_CONTEXT.md`
   - Maps the local downstream and mainline kernel trees to the vendor-side open-source effort.
-  - Records the current subsystem anchor files and the important gap that mainline has `mido`/`vince` references but no `oxygen` DTS yet.
+  - Records that downstream `4.9` is the implementation target, while mainline is reference-only for now.
 
 ## Mixed-vendor enablement
 
@@ -70,6 +73,8 @@ Current meaning:
 - `camera-all`
   - enables both camera groups above
 
+These toggles are for downstream `4.9` bring-up first. They should not be read as a promise of current mainline compatibility.
+
 Both [`oxygen-vendor.mk`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/oxygen-vendor.mk) and [`mithorium-common-vendor.mk`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/mithorium-common-vendor.mk) now include this overlay at the end, so replacements can be layered on top without rewriting the generated blob lists.
 
 ## Inventory usage
@@ -88,7 +93,7 @@ python3 opensource/tools/vendor_inventory.py > /tmp/oxygen-vendor-inventory.json
 
 ## Helpful Local Inputs
 
-The most useful extra reference trees for the next implementation phase are:
+The most useful local kernel inputs for the current implementation phase are:
 
 - the local downstream `oxygen` kernel tree at
   [`android_kernel_xiaomi_oxygen/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen)
@@ -109,4 +114,4 @@ Useful but lower priority:
 - Camera, sensors, and fingerprint scaffolding are present as source now, but only `consumerir` is wired into [`vendor_overrides.mk`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/opensource/vendor_overrides.mk).
 - The IMX386 camera skeleton compiles as source scaffolding, but it is not yet wired into `vendor_overrides.mk` because the full Qualcomm `sensor_open_lib()` userspace ABI is still being reconstructed.
 - The generic camera/eeprom/actuator stubs, the `sensors.qti` skeleton, and the fingerprint shim are coverage scaffolding only. They exist to anchor future RE and implementation work, not to replace blobs yet.
-- The new mixed-vendor toggles for `sensors`, `fingerprint`, `camera-imx386`, `camera-stubs`, and `camera-all` are build-selection hooks only. They are useful for controlled bring-up work, not for production boot yet.
+- The new mixed-vendor toggles for `sensors`, `fingerprint`, `camera-imx386`, `camera-stubs`, and `camera-all` are build-selection hooks for controlled downstream `4.9` bring-up work, not for production boot yet.

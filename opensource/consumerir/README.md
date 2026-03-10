@@ -11,6 +11,9 @@ This directory contains the first runtime-oriented open replacement in the
   - `backend/downstream`
   - `backend/mainline`
 
+Current priority is the downstream `4.9` backend. The mainline backend exists
+only as a reference/design track for now.
+
 ## Downstream basis
 
 The downstream path is grounded against the local kernel tree:
@@ -46,6 +49,5 @@ Accepted values are `downstream`, `mainline`, and `auto`.
 ## Current limits
 
 - Not hardware-verified on a running device yet.
-- Mainline support is still a compatibility path, not a confirmed upstream
-  `oxygen` backend.
+- Mainline support is reference-only today, not a current `oxygen` target.
 - Carrier frequency ranges are still static and conservative.
