@@ -88,6 +88,26 @@ def check_imx386() -> None:
         [0x00000003, 0x00000003, 0x00000000, 0x00000000, 0x00000001, 0x00021203],
     )
 
+    output_base = 0x78FC8
+    stride = 0x40
+    expected = [
+        (4032, 3016, 4296, 3070, 388000000, 398400000, 1),
+        (2016, 1508, 2256, 1692, 114670000, 137600000, 1),
+        (4032, 2256, 4296, 2310, 298000000, 308000000, 1),
+        (3840, 2160, 4296, 2360, 297330000, 356800000, 1),
+        (1920, 1080, 2256, 1692, 114670000, 137600000, 1),
+        (1920, 1080, 2256, 1174, 318000000, 381600000, 1),
+    ]
+    for idx, want in enumerate(expected):
+        off = output_base + idx * stride
+        chunk = data[off : off + 20]
+        x, y, line, frame = struct.unpack_from("<HHHH", chunk, 0)
+        vt, op = struct.unpack_from("<II", chunk, 8)
+        binning = struct.unpack_from("<H", chunk, 16)[0]
+        got = (x, y, line, frame, vt, op, binning)
+        if got != want:
+            raise AssertionError(f"imx386 output_info[{idx}] mismatch: got {got}, expected {want}")
+
     triplets = read_words(data, base + 0x0F8, 1)
     assert_word("imx386 triplets[0]", triplets[0], 0x00000006)
 

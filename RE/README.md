@@ -115,3 +115,12 @@ Important implication:
 - Extracting register arrays alone is not enough
 
 Use `RE/imx386_sensor_open_lib.md` for the current address map.
+
+Additional sensor notes:
+
+- `RE/ov12a_sensor_open_lib.md`
+- `RE/s5k5e8_sensor_open_lib.md`
+
+Camera blob export summary:
+
+- `RE/camera_blob_exports.md`

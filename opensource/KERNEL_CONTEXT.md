@@ -6,7 +6,7 @@ effort:
 - primary implementation target:
   [`android_kernel_xiaomi_oxygen/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen)
   - Linux `4.9.337`
-- reference-only track for now:
+- secondary (mainline) compatibility track:
   [`linux/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/linux)
   - Linux `6.12`
 
@@ -15,8 +15,9 @@ effort:
 - The downstream tree defines the currently working device-specific kernel
   contracts that the proprietary userspace was written against. This is the
   primary compatibility target.
-- The mainline tree is reference material for future backend design,
-  especially for sensors, power, and other kernel-facing interfaces.
+- The mainline tree is now a tracked blocker. We still prioritize downstream
+  correctness, but we keep mainline compatibility in view for each new open
+  component.
 
 ## Immediate subsystem anchors
 
@@ -36,6 +37,11 @@ effort:
   - driver family:
     [`android_kernel_xiaomi_oxygen/drivers/media/platform/msm/camera_v2/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen/drivers/media/platform/msm/camera_v2)
 
+- mainline GPU path (Freedreno)
+  - DRM driver:
+    [`linux/drivers/gpu/drm/msm/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/linux/drivers/gpu/drm/msm)
+  - Userspace will be Mesa/Freedreno; firmware remains proprietary.
+
 - mainline msm8953 Xiaomi references
   - common:
     [`linux/arch/arm64/boot/dts/qcom/msm8953-xiaomi-common.dtsi`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/linux/arch/arm64/boot/dts/qcom/msm8953-xiaomi-common.dtsi)
@@ -54,6 +60,5 @@ not for `oxygen` yet. That means:
 - `mido` and `vince` mainline DTS files are reference material, not drop-in
   replacements
 - current vendor open-source work should first become correct on downstream
-  `4.9`
-- mainline-aware structure is still useful, but it should not slow down or
-  complicate the downstream bring-up path
+  `4.9`, but each new component should avoid downstream-only assumptions so
+  we can pivot to mainline faster

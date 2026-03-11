@@ -5,7 +5,8 @@ This directory is the first concrete layer of the `oxygen` port-first open-vendo
 Current priority:
 
 - primary target: `oxygen` on the downstream `4.9` kernel
-- mainline is reference material for future backend work, not a current compatibility target
+- mainline is now a tracked blocker and a parallel compatibility target
+  (still secondary to downstream bring-up)
 
 ## What is here
 
@@ -14,7 +15,8 @@ Current priority:
   - Annotates each artifact with layer, partition, kind, architecture, subsystem, policy, and a small dependency graph.
 - `policy/vendor_policy.json`
   - Default replacement policy map.
-  - Current default stance is conservative: camera, sensors, and IR are replacement targets; fingerprint is a shim target; radio/IMS/data, GPU/media, location, DRM/TEE, and firmware stay binary by default.
+  - Current default stance is conservative: camera, sensors, and IR are replacement targets; fingerprint is a shim target; radio/IMS/data, location, DRM/TEE, and firmware stay binary by default.
+  - Graphics/GPU stays binary for downstream, but the mainline path will prefer Freedreno + Mesa while keeping firmware proprietary.
 - `vendor_overrides.mk`
   - Mixed-vendor overlay that filters selected prebuilts out of the generated `PRODUCT_COPY_FILES` lists and replaces them with source modules.
 - `consumerir/`
@@ -36,7 +38,7 @@ Current priority:
   - Starts as a non-operational gating shim so the repo has a concrete place for the future disabled/passthrough split.
 - `KERNEL_CONTEXT.md`
   - Maps the local downstream and mainline kernel trees to the vendor-side open-source effort.
-  - Records that downstream `4.9` is the implementation target, while mainline is reference-only for now.
+  - Records downstream `4.9` as the primary implementation target, with mainline tracked in parallel.
 
 ## Mixed-vendor enablement
 
@@ -73,7 +75,8 @@ Current meaning:
 - `camera-all`
   - enables both camera groups above
 
-These toggles are for downstream `4.9` bring-up first. They should not be read as a promise of current mainline compatibility.
+These toggles are for downstream `4.9` bring-up first. Mainline support is tracked in
+parallel, but not promised for every component yet.
 
 Both [`oxygen-vendor.mk`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/oxygen-vendor.mk) and [`mithorium-common-vendor.mk`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/mithorium-common-vendor.mk) now include this overlay at the end, so replacements can be layered on top without rewriting the generated blob lists.
 

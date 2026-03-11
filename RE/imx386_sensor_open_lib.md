@@ -251,6 +251,25 @@ These are raw little-endian words in the returned object (file offsets above).
 
 - `0x00000003 0x00000003 0x00000000 0x00000000 0x00000001 0x00021203`
 
+### Output info array (mode geometry + clocks)
+
+There is a contiguous array of 6 output entries starting at file offset
+`0x78fc8`. Each entry is 0x40 bytes wide; the `msm_sensor_output_info_t`
+payload occupies the first 20 bytes (with padding), and the rest is unknown
+per-mode metadata.
+
+Extracted output_info values:
+
+- `idx 0`: `4032x3016`, `line=4296`, `frame=3070`, `vt=388000000`, `op=398400000`
+- `idx 1`: `2016x1508`, `line=2256`, `frame=1692`, `vt=114670000`, `op=137600000`
+- `idx 2`: `4032x2256`, `line=4296`, `frame=2310`, `vt=298000000`, `op=308000000`
+- `idx 3`: `3840x2160`, `line=4296`, `frame=2360`, `vt=297330000`, `op=356800000`
+- `idx 4`: `1920x1080`, `line=2256`, `frame=1692`, `vt=114670000`, `op=137600000`
+- `idx 5`: `1920x1080`, `line=2256`, `frame=1174`, `vt=318000000`, `op=381600000`
+
+These match the expected mode families (full, binned preview, 16:9, 4K,
+1080p, and a high-FPS 1080p variant).
+
 ## Cross-sensor comparison
 
 Dumping the same blocks from other oxygen sensors shows patterns that help
@@ -283,6 +302,57 @@ Across sensors, words 5/6 line up with known native sizes:
 
 The following two packed words (imx386 `0x000c000c`, `0x00100010`) vary between
 `0x0008` and `0x0010` depending on sensor, and look like crop/guard margins.
+
+### Provisional `0x6230` field map (inferred)
+
+This is a best-effort decode based on cross-sensor comparisons. Names are
+intentional guesses; treat them as provisional until we locate a CAF sensor
+lib header.
+
+Index -> value (IMX386) -> proposed meaning:
+
+- `0`: `0x00020002` -> packed small constants (likely even/odd alignment or
+  minimum crop step in pixels)
+- `1`: `0x00000002` -> small constant (likely scale/step selector)
+- `2`: `0x3fa00000` (1.25) -> pixel size in microns (IMX386 = 1.25µm, S5K5E8 = 1.12µm)
+- `3`: `0x00000002` -> small constant (likely another step or selector)
+- `4`: `0x40b8f5c3` (5.78) -> unknown float; possibly focal length or sensor-specific
+  calibration factor (OV12A shows 1.33, S5K5E8 is 0)
+- `5`: `0x00000fc0` -> active array width (4032)
+- `6`: `0x00000bc8` -> active array height (3016)
+- `7`: `0x000c000c` -> packed margin or crop start (12, 12)
+- `8`: `0x00100010` -> packed margin or crop start (16, 16)
+- `9`: `0x004003ff` -> packed black level / max raw value (0x0040, 0x03ff)
+- `10`: `0x00400040` -> packed black level per channel (0x0040, 0x0040)
+- `11`: `0x00000040` -> black level scalar (64)
+- `12`: `0x00000003` -> CFA / format selector (unknown, small enum)
+- `13`: `0x00022b00` -> unknown packed register/value (IMX-only)
+- `17`: `0x00023601` -> unknown packed register/value (IMX-only)
+- `21`: `0x00023502` -> unknown packed register/value (IMX-only)
+
+The IMX-only packed words likely encode extra sensor-specific registers or
+PDAF-related hooks; OV12A and S5K5E8 set these to zero.
+
+### `0x1e8` looks like gain/exposure limits (inferred)
+
+The `0x1e8` block is consistent across sensors:
+
+- word 1 is `8` or `10` (a small integer, likely gain or exposure step count)
+- word 2 is `1.0` (base gain)
+- word 3/4 are `15.5` or `16.0` (likely max analog/digital gain)
+- word 9 varies per sensor (`0xFFF5`, `0x7FF7`, `0x4056`), possibly the max
+  frame-length or coarse integration time limit in sensor lines
+
+Tentative interpretation:
+
+- word 1: small integer (8 or 10) -> likely max analog gain step count or
+  gain table index count
+- word 2: base gain = 1.0
+- word 3/4: max gain (15.5 or 16.0)
+- word 9: sensor-specific upper limit (possibly max coarse integration time)
+
+This mapping is provisional; it matches patterns but still needs validation
+against a known sensor-lib header or CAF source.
 
 ### `0x62b8` is IMX386-only (PDAF?)
 
