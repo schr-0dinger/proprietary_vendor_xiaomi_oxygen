@@ -1,0 +1,880 @@
+arch     arm
+baddr    0x0
+binsz    41493
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+compiler GCC: (GNU) 4.9 20150123 (prerelease)
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+intrp    /system/bin/linker
+laddr    0x0
+lang     c++
+linenum  false
+lsyms    false
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   false
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped true
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type   size lib name                                    demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+59  0x0000a024 0x0000b024 GLOBAL OBJ    28       AELI
+60  0x000013b0 0x000013b0 GLOBAL FUNC   444      offload_effects_bundle_hal_start_output
+61  ---------- 0x0000b078 GLOBAL NOTYPE 0        _end
+62  ---------- 0x0000b040 GLOBAL NOTYPE 0        _edata
+63  0x0000156c 0x0000156c GLOBAL FUNC   208      offload_effects_bundle_hal_stop_output
+64  ---------- 0x0000b040 GLOBAL NOTYPE 0        __bss_start
+65  0x00001848 0x00001848 GLOBAL FUNC   4        offload_effects_bundle_get_parameters
+66  0x0000163c 0x0000163c GLOBAL FUNC   524      offload_effects_bundle_set_hpx_state
+67  0x0000184c 0x0000184c GLOBAL FUNC   4        offload_effects_bundle_set_parameters
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000154    0x13 0x00000154    0x13 -r-- PROGBITS    .interp
+2   0x00000168    0x18 0x00000168    0x18 -r-- NOTE        .note.android.ident
+3   0x00000180    0x20 0x00000180    0x20 -r-- NOTE        .note.gnu.build-id
+4   0x000001a0   0x440 0x000001a0   0x440 -r-- DYNSYM      .dynsym
+5   0x000005e0   0x403 0x000005e0   0x403 -r-- STRTAB      .dynstr
+6   0x000009e4    0x48 0x000009e4    0x48 -r-- GNU_HASH    .gnu.hash
+7   0x00000a2c    0x88 0x00000a2c    0x88 -r-- GNU_VERSYM  .gnu.version
+8   0x00000ab4    0x1c 0x00000ab4    0x1c -r-- GNU_VERDEF  .gnu.version_d
+9   0x00000ad0    0x50 0x00000ad0    0x50 -r-- GNU_VERNEED .gnu.version_r
+10  0x00000b20   0x348 0x00000b20   0x348 -r-- REL         .rel.dyn
+11  0x00000e68   0x1b8 0x00000e68   0x1b8 -r-- REL         .rel.plt
+12  0x00001020   0x2a8 0x00001020   0x2a8 -r-x PROGBITS    .plt
+13  0x000012d0  0x61ec 0x000012d0  0x61ec -r-x PROGBITS    .text
+14  0x000074bc   0x3f8 0x000074bc   0x3f8 -r-- ----        .ARM.exidx
+15  0x000078b4  0x1828 0x000078b4  0x1828 -r-- PROGBITS    .rodata
+16  0x000090dc    0x54 0x000090dc    0x54 -r-- PROGBITS    .ARM.extab
+17  0x00009c7c     0x4 0x0000ac7c     0x4 -rw- FINI_ARRAY  .fini_array
+18  0x00009c80    0xa8 0x0000ac80    0xa8 -rw- PROGBITS    .data.rel.ro
+19  0x00009d28   0x120 0x0000ad28   0x120 -rw- DYNAMIC     .dynamic
+20  0x00009e48   0x1b8 0x0000ae48   0x1b8 -rw- PROGBITS    .got
+21  0x0000a000    0x40 0x0000b000    0x40 -rw- PROGBITS    .data
+22  0x0000a040     0x0 0x0000b040    0x38 -rw- NOBITS      .bss
+23  0x0000a040    0x63 0x00000000    0x63 ---- PROGBITS    .comment
+24  0x0000a0a4    0x1c 0x00000000    0x1c ---- NOTE        .note.gnu.gold-version
+25  0x0000a0c0    0x3e 0x00000000    0x3e ---- ----        .ARM.attributes
+26  0x0000a0fe   0x117 0x00000000   0x117 ---- STRTAB      .shstrtab
+
+[Strings]
+nth paddr      vaddr      len size section                type    string
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 5   12                          utf16le 4 \t(\e
+1   0x00000038 0x00000038 5   24                          utf32le 444ĠĠ
+2   0x00000154 0x00000154 18  19   .interp                ascii   /system/bin/linker
+3   0x00000174 0x00000174 7   8    .note.android.ident    ascii   Android
+4   0x000005e1 0x000005e1 14  15   .dynstr                ascii   __cxa_finalize
+5   0x000005f0 0x000005f0 4   5    .dynstr                ascii   LIBC
+6   0x000005f5 0x000005f5 7   8    .dynstr                ascii   libc.so
+7   0x000005fd 0x000005fd 24  25   .dynstr                ascii   libqcompostprocbundle.so
+8   0x00000616 0x00000616 12  13   .dynstr                ascii   __cxa_atexit
+9   0x00000623 0x00000623 17  18   .dynstr                ascii   __register_atfork
+10  0x00000635 0x00000635 4   5    .dynstr                ascii   AELI
+11  0x0000063a 0x0000063a 14  15   .dynstr                ascii   __aeabi_memcpy
+12  0x00000649 0x00000649 6   7    .dynstr                ascii   LIBC_N
+13  0x00000650 0x00000650 15  16   .dynstr                ascii   __aeabi_memcpy4
+14  0x00000660 0x00000660 19  20   .dynstr                ascii   __android_log_print
+15  0x00000674 0x00000674 14  15   .dynstr                ascii   __snprintf_chk
+16  0x00000683 0x00000683 16  17   .dynstr                ascii   __stack_chk_fail
+17  0x00000694 0x00000694 17  18   .dynstr                ascii   __stack_chk_guard
+18  0x000006a6 0x000006a6 23  24   .dynstr                ascii   __gnu_Unwind_Find_exidx
+19  0x000006be 0x000006be 6   7    .dynstr                ascii   dladdr
+20  0x000006c5 0x000006c5 8   9    .dynstr                ascii   libdl.so
+21  0x000006ce 0x000006ce 6   7    .dynstr                ascii   calloc
+22  0x000006d5 0x000006d5 4   5    .dynstr                ascii   free
+23  0x000006da 0x000006da 6   7    .dynstr                ascii   malloc
+24  0x000006e1 0x000006e1 6   7    .dynstr                ascii   memcmp
+25  0x000006e8 0x000006e8 21  22   .dynstr                ascii   mixer_get_ctl_by_name
+26  0x000006fe 0x000006fe 37  38   .dynstr                ascii   offload_effects_bundle_get_parameters
+27  0x00000724 0x00000724 39  40   .dynstr                ascii   offload_effects_bundle_hal_start_output
+28  0x0000074c 0x0000074c 5   6    .dynstr                ascii   abort
+29  0x00000752 0x00000752 38  39   .dynstr                ascii   offload_effects_bundle_hal_stop_output
+30  0x00000779 0x00000779 36  37   .dynstr                ascii   offload_effects_bundle_set_hpx_state
+31  0x0000079e 0x0000079e 7   8    .dynstr                ascii   fprintf
+32  0x000007a6 0x000007a6 37  38   .dynstr                ascii   offload_effects_bundle_set_parameters
+33  0x000007cc 0x000007cc 6   7    .dynstr                ascii   stderr
+34  0x000007d3 0x000007d3 18  19   .dynstr                ascii   pthread_mutex_init
+35  0x000007e6 0x000007e6 5   6    .dynstr                ascii   close
+36  0x000007ec 0x000007ec 18  19   .dynstr                ascii   pthread_mutex_lock
+37  0x000007ff 0x000007ff 5   6    .dynstr                ascii   creat
+38  0x00000805 0x00000805 20  21   .dynstr                ascii   pthread_mutex_unlock
+39  0x0000081a 0x0000081a 6   7    .dynstr                ascii   fclose
+40  0x00000821 0x00000821 12  13   .dynstr                ascii   pthread_once
+41  0x0000082e 0x0000082e 5   6    .dynstr                ascii   fgets
+42  0x00000834 0x00000834 5   6    .dynstr                ascii   fopen
+43  0x0000083a 0x0000083a 4   5    .dynstr                ascii   open
+44  0x0000083f 0x0000083f 6   7    .dynstr                ascii   remove
+45  0x00000846 0x00000846 6   7    .dynstr                ascii   strchr
+46  0x0000084d 0x0000084d 6   7    .dynstr                ascii   strstr
+47  0x00000854 0x00000854 6   7    .dynstr                ascii   usleep
+48  0x0000085b 0x0000085b 15  16   .dynstr                ascii   __aeabi_memclr4
+49  0x0000086b 0x0000086b 25  26   .dynstr                ascii   __android_log_error_write
+50  0x00000885 0x00000885 13  14   .dynstr                ascii   __strlcpy_chk
+51  0x00000893 0x00000893 12  13   .dynstr                ascii   __strlen_chk
+52  0x000008a0 0x000008a0 4   5    .dynstr                ascii   atoi
+53  0x000008a5 0x000008a5 5   6    .dynstr                ascii   atoll
+54  0x000008ab 0x000008ab 7   8    .dynstr                ascii   dlclose
+55  0x000008b3 0x000008b3 6   7    .dynstr                ascii   dlopen
+56  0x000008ba 0x000008ba 5   6    .dynstr                ascii   dlsym
+57  0x000008c0 0x000008c0 12  13   .dynstr                ascii   property_get
+58  0x000008cd 0x000008cd 7   8    .dynstr                ascii   strncmp
+59  0x000008d5 0x000008d5 15  16   .dynstr                ascii   __aeabi_memclr8
+60  0x000008e5 0x000008e5 7   8    .dynstr                ascii   __errno
+61  0x000008ed 0x000008ed 5   6    .dynstr                ascii   ioctl
+62  0x000008f3 0x000008f3 11  12   .dynstr                ascii   mixer_close
+63  0x000008ff 0x000008ff 19  20   .dynstr                ascii   mixer_ctl_set_array
+64  0x00000913 0x00000913 10  11   .dynstr                ascii   mixer_open
+65  0x0000091e 0x0000091e 13  14   .dynstr                ascii   __strlcat_chk
+66  0x0000092c 0x0000092c 13  14   .dynstr                ascii   __strncat_chk
+67  0x0000093a 0x0000093a 14  15   .dynstr                ascii   __strncpy_chk2
+68  0x00000949 0x00000949 11  12   .dynstr                ascii   __write_chk
+69  0x00000955 0x00000955 5   6    .dynstr                ascii   chmod
+70  0x0000095b 0x0000095b 19  20   .dynstr                ascii   mixer_ctl_get_array
+71  0x0000096f 0x0000096f 17  18   .dynstr                ascii   str_parms_add_int
+72  0x00000981 0x00000981 17  18   .dynstr                ascii   str_parms_get_str
+73  0x00000993 0x00000993 4   5    .dynstr                ascii   _end
+74  0x00000998 0x00000998 6   7    .dynstr                ascii   _edata
+75  0x0000099f 0x0000099f 11  12   .dynstr                ascii   __bss_start
+76  0x000009ab 0x000009ab 12  13   .dynstr                ascii   libcutils.so
+77  0x000009b8 0x000009b8 9   10   .dynstr                ascii   liblog.so
+78  0x000009c2 0x000009c2 14  15   .dynstr                ascii   libtinyalsa.so
+79  0x000009d1 0x000009d1 9   10   .dynstr                ascii   libc++.so
+80  0x000009db 0x000009db 7   8    .dynstr                ascii   libm.so
+81  0x0000130b 0x0000130a 4   5    .text                  ascii   \n\b0\e
+82  0x000013cc 0x000013cc 8   9    .text                  ascii   PHQIxDyD
+83  0x000013d8 0x000013d8 4   5    .text                  ascii   OHxD
+84  0x000013e4 0x000013e4 4   5    .text                  ascii   MHxD
+85  0x000013ec 0x000013ec 6   7    .text                  ascii   LIyD\bh
+86  0x000013f6 0x000013f6 4   5    .text                  ascii   KIyD
+87  0x0000140d 0x0000140c 11  12   .text                  ascii    GJGKyDzD{D
+88  0x00001439 0x00001438 5   6    .text                  ascii   `yDoa
+89  0x00001457 0x00001456 4   6    .text                  utf8    aг8I
+90  0x0000145e 0x0000145e 6   7    .text                  ascii   \f\b(byD
+91  0x00001482 0x00001482 4   5    .text                  ascii   0F)F
+92  0x0000148c 0x0000148c 6   7    .text                  ascii   (ip`(i
+93  0x00001493 0x00001492 7   8    .text                  ascii   `.a?hOE
+94  0x0000149c 0x0000149c 14  15   .text                  ascii   )HxD(`Ahi`\r`E`
+95  0x000014b1 0x000014b0 11  12   .text                  ascii    *J*KyDzD{D
+96  0x000014c6 0x000014c6 8   9    .text                  ascii   "I"JyDzD
+97  0x000014d3 0x000014d2 5   6    .text                  ascii   JyDzD
+98  0x00001570 0x00001570 4   5    .text                  ascii   \fF)I
+99  0x00001575 0x00001574 7   8    .text                  ascii   F'HyDxD
+100 0x00001580 0x00001580 4   5    .text                  ascii   &HxD
+101 0x0000158a 0x0000158a 4   5    .text                  ascii   %HxD
+102 0x00001592 0x00001592 4   5    .text                  ascii   $HxD
+103 0x0000159c 0x0000159c 4   5    .text                  ascii   "HxD
+104 0x000015d7 0x000015d6 7   8    .text                  ascii   KyDzD{D
+105 0x000015f2 0x000015f2 4   5    .text                  ascii   \b` F
+106 0x00001603 0x00001602 5   6    .text                  ascii   5\fHxD
+107 0x00001645 0x00001644 7   8    .text                  ascii   FhHyDxD
+108 0x00001650 0x00001650 4   5    .text                  ascii   gHxD
+109 0x0000165a 0x0000165a 5   7    .text                  utf8    ÀeHxD
+110 0x0000166e 0x0000166e 4   5    .text                  ascii   lHxD
+111 0x00001679 0x00001678 5   6    .text                  ascii   $~D(j
+112 0x00001694 0x00001694 6   7    .text                  ascii   dM}D,h
+113 0x000016a3 0x000016a2 6   7    .text                  ascii   \b}D'FW
+114 0x000016d4 0x000016d4 6   7    .text                  ascii   VH-hxD
+115 0x000016de 0x000016de 4   5    .text                  ascii   UHxD
+116 0x000016e8 0x000016e8 6   7    .text                  ascii   SM}D j
+117 0x00001702 0x00001702 4   5    .text                  ascii   NHxD
+118 0x0000170f 0x0000170e 6   7    .text                  ascii   %~D jO
+119 0x00001726 0x00001726 4   5    .text                  ascii   5HxD
+120 0x00001731 0x00001730 5   6    .text                  ascii   $~D(j
+121 0x0000174c 0x0000174c 6   7    .text                  ascii   -L|D%h
+122 0x00001756 0x00001756 6   7    .text                  ascii   ,L|D(j
+123 0x00001768 0x00001768 6   7    .text                  ascii   (H$hxD
+124 0x00001772 0x00001772 4   5    .text                  ascii   'HxD
+125 0x0000177c 0x0000177c 8   9    .text                  ascii   %M}D j&F
+126 0x000017c3 0x000017c2 6   7    .text                  ascii   %~D jO
+127 0x00001895 0x00001894 4   5    .text                  ascii    pG-
+128 0x000019de 0x000019de 4   5    .text                  ascii   xDyD
+129 0x00001a64 0x00001a64 4   5    .text                  ascii   xDyD
+130 0x00001b25 0x00001b24 7   8    .text                  ascii   hxD\eh6h
+131 0x00001b6b 0x00001b6a 4   6    .text                  utf8    (wЍH
+132 0x00001b81 0x00001b80 4   6    .text                  utf8    (uЈH
+133 0x00001b97 0x00001b96 6   8    .text                  utf8    (rфHxD
+134 0x00001bc4 0x00001bc4 4   5    .text                  ascii   xDyD
+135 0x00001be6 0x00001be6 4   5    .text                  ascii   xDxO
+136 0x00001c12 0x00001c12 4   5    .text                  ascii   tH?h
+137 0x00001c58 0x00001c58 5   6    .text                  ascii   WHxD\n
+138 0x00001c5e 0x00001c5e 4   5    .text                  ascii   UHxD
+139 0x00001c70 0x00001c70 4   5    .text                  ascii   OHxD
+140 0x00001c8a 0x00001c8a 4   5    .text                  ascii   mHxD
+141 0x00001cb2 0x00001cb2 9   10   .text                  ascii   eHAFeKxDA
+142 0x00001cbe 0x00001cbe 6   7    .text                  ascii   {DBhJ`
+143 0x00001cce 0x00001cce 4   5    .text                  ascii   `HxD
+144 0x00001ce3 0x00001ce2 11  12   .text                  ascii    ]J^KyDzD{D
+145 0x00001d18 0x00001d18 6   7    .text                  ascii   \biP`\bi
+146 0x00001d2b 0x00001d2a 5   6    .text                  ascii   GIHxD
+147 0x00001e69 0x00001e68 7   8    .text                  ascii   F-HyDxD
+148 0x00001e74 0x00001e74 4   5    .text                  ascii   ,HxD
+149 0x00001e7e 0x00001e7e 4   5    .text                  ascii   +HxD
+150 0x00001e86 0x00001e86 6   7    .text                  ascii   *IyD\bh
+151 0x00001e90 0x00001e90 4   5    .text                  ascii   (IyD
+152 0x00001eac 0x00001eac 4   5    .text                  ascii   "HxD
+153 0x00001f13 0x00001f12 5   6    .text                  ascii   %\nHxD
+154 0x00001f4f 0x00001f4e 5   6    .text                  ascii   HyDxD
+155 0x00001f75 0x00001f74 4   5    .text                  ascii   HxD\a
+156 0x00001f98 0x00001f98 4   5    .text                  ascii    F1F
+157 0x00001fc3 0x00001fc2 5   6    .text                  ascii   F\rFxD
+158 0x00001fcd 0x00001fcc 5   6    .text                  ascii   IyD\bh
+159 0x00001ffe 0x00001ffe 6   7    .text                  ascii   0F)F"F
+160 0x0000204c 0x0000204c 4   5    .text                  ascii   yD\bh
+161 0x000020e3 0x000020e2 4   5    .text                  ascii   \a@-@
+162 0x0000216b 0x0000216a 5   6    .text                  ascii    !FzD
+163 0x000021d0 0x000021d0 4   5    .text                  ascii   RFKF
+164 0x00002205 0x00002204 5   6    .text                  ascii     FQF
+165 0x00002226 0x00002226 8   9    .text                  ascii    F1F*FSF
+166 0x00002261 0x00002260 6   7    .text                  ascii   JyDzDv
+167 0x00002292 0x00002292 4   6    .text                  utf8    @(iѴ
+168 0x000022e2 0x000022e2 4   6    .text                  utf8    \b-+Ѻ
+169 0x00002312 0x00002312 4   5    .text                  ascii   SK{D
+170 0x0000231c 0x0000231c 4   5    .text                  ascii   QK{D
+171 0x0000232e 0x0000232e 10  11   .text                  ascii   [I[J\KyDzD
+172 0x0000233e 0x0000233e 12  13   .text                  ascii   LILJMKyDzD{D
+173 0x0000234e 0x0000234e 8   9    .text                  ascii   MIMJyDzD
+174 0x0000235a 0x0000235a 8   9    .text                  ascii   HIHJyDzD
+175 0x0000236d 0x0000236c 5   6    .text                  ascii   \aNHxD
+176 0x00002396 0x00002396 4   5    .text                  ascii   HFQF
+177 0x000023a6 0x000023a6 6   7    .text                  ascii    FIFBF
+178 0x0000243e 0x0000243e 6   7    .text                  ascii   \biP`\bi
+179 0x000024e2 0x000024e2 4   5    .text                  ascii   Bm\bF
+180 0x0000250d 0x0000250c 11  12   .text                  ascii   $\tJ\tHyDzDxD
+181 0x00002580 0x00002580 4   5    .text                  ascii   \fJ(F
+182 0x00002585 0x00002584 5   6    .text                  ascii   !3FzD
+183 0x000025df 0x000025de 4   5    .text                  ascii   2jFb
+184 0x000025fc 0x000025fc 4   5    .text                  ascii   \rJ(F
+185 0x00002601 0x00002600 5   6    .text                  ascii   !3FzD
+186 0x0000263f 0x0000263e 4   5    .text                  ascii   %#FS
+187 0x00002646 0x00002646 6   7    .text                  ascii   fh%`\t)
+188 0x000026be 0x000026be 4   5    .text                  ascii   %`\b%
+189 0x000026d7 0x000026d6 5   6    .text                  ascii   h5D\f5
+190 0x0000270f 0x0000270e 4   5    .text                  ascii   P(`\f
+191 0x00002732 0x00002732 4   5    .text                  ascii   TPyD
+192 0x00002747 0x00002746 6   7    .text                  ascii   JyDzDz
+193 0x0000276c 0x0000276c 4   5    .text                  ascii   TPyD
+194 0x0000277e 0x0000277e 9   10   .text                  ascii   yIyJyDzD]
+195 0x000027a6 0x000027a6 4   5    .text                  ascii   TPyD
+196 0x000027b8 0x000027b8 9   10   .text                  ascii   fIgJyDzD@
+197 0x0000282a 0x0000282a 4   5    .text                  ascii   TPyD
+198 0x0000283c 0x0000283c 8   9    .text                  ascii   AIBJyDzD
+199 0x00002894 0x00002894 5   6    .text                  ascii   1HxDP
+200 0x000028a0 0x000028a0 9   10   .text                  ascii   @h\bD@\b(`A
+201 0x000028aa 0x000028aa 5   6    .text                  ascii   (HxDP
+202 0x000028cf 0x000028ce 4   5    .text                  ascii   IyDQ
+203 0x000028ec 0x000028ec 4   5    .text                  ascii   TPyD
+204 0x00002906 0x00002906 5   6    .text                  ascii   \vIyDB
+205 0x0000298d 0x0000298c 4   5    .text                  ascii   1#`!
+206 0x000029c1 0x000029c0 4   5    .text                  ascii   ? `e
+207 0x000029ce 0x000029ce 4   5    .text                  ascii   TPyD
+208 0x000029e3 0x000029e2 9   10   .text                  ascii    1J3FyDzD
+209 0x00002a0d 0x00002a0c 5   6    .text                  ascii    (F1F
+210 0x00002a24 0x00002a24 4   5    .text                  ascii   TPyD
+211 0x00002a3b 0x00002a3a 5   6    .text                  ascii   J3FyD
+212 0x00002a6c 0x00002a6c 4   5    .text                  ascii   \b (F
+213 0x00002a78 0x00002a78 4   5    .text                  ascii   \n (F
+214 0x00002a84 0x00002a84 4   5    .text                  ascii   \f (F
+215 0x00002c72 0x00002c72 4   5    .text                  ascii   Lh\v`
+216 0x00002d09 0x00002d08 4   5    .text                  ascii   F\bFP
+217 0x00002d11 0x00002d10 5   6    .text                  ascii   %Jh\r`
+218 0x00002d27 0x00002d26 5   6    .text                  ascii   KyDzD
+219 0x00002d93 0x00002d92 4   5    .text                  ascii   F\a,\a
+220 0x00002dbb 0x00002dba 5   6    .text                  ascii   KyDzD
+221 0x00002ea7 0x00002ea6 9   10   .text                  ascii    \bJ\tKyDzD
+222 0x00002ed9 0x00002ed8 5   6    .text                  ascii   F<H\fF
+223 0x0000303d 0x0000303c 4   5    .text                  ascii   *?"c
+224 0x000030da 0x000030da 4   5    .text                  ascii   DBxD
+225 0x00003102 0x00003102 4   5    .text                  ascii   Qp!d
+226 0x00003155 0x00003154 8   10   .text                  utf8    Fͱ=I(FyD
+227 0x0000316a 0x0000316a 6   7    .text                  ascii   ;JxDzD
+228 0x0000318c 0x0000318c 16  17   .text                  ascii   :I;J;KyD;HzD{DxD
+229 0x000031a6 0x000031a6 12  13   .text                  ascii   1I1J2KyDzD{D
+230 0x000031d4 0x000031d4 6   7    .text                  ascii   zDIFCF
+231 0x0000320e 0x0000320e 6   7    .text                  ascii   IFzDCF
+232 0x000034fa 0x000034fa 4   5    .text                  ascii    F1F
+233 0x00003552 0x00003552 4   6    .text                  utf8    @)\bб
+234 0x000035fc 0x000035fc 4   6    .text                  utf8    @)\fб
+235 0x0000365f 0x0000365e 5   6    .text                  ascii    8p(F
+236 0x0000367b 0x0000367a 5   6    .text                  ascii   $Mh\f`
+237 0x000036c9 0x000036c8 5   6    .text                  ascii   h,D\f4
+238 0x0000372b 0x0000372a 4   5    .text                  ascii   33DO
+239 0x00003739 0x00003738 4   5    .text                  ascii   3sC\e
+240 0x00003797 0x00003796 4   5    .text                  ascii   0PCO
+241 0x000037ff 0x000037fe 4   5    .text                  ascii   \n(F@
+242 0x00003825 0x00003824 4   5    .text                  ascii   #"FR
+243 0x00003896 0x00003896 4   6    .text                  utf8    @,\tд
+244 0x000038f9 0x000038f8 5   6    .text                  ascii   KyDzD
+245 0x00003bbc 0x00003bbc 4   5    .text                  ascii   qh(F
+246 0x00003c47 0x00003c46 5   6    .text                  ascii    fIpC
+247 0x00003c50 0x00003c50 6   7    .text                  ascii   yD\t^(F
+248 0x00003c66 0x00003c66 4   5    .text                  ascii   )F!"
+249 0x00003c76 0x00003c76 4   5    .text                  ascii   )F!"
+250 0x00003c9e 0x00003c9e 4   5    .text                  ascii   )FA"
+251 0x00003cae 0x00003cae 4   5    .text                  ascii   )FA"
+252 0x00003cc0 0x00003cc0 4   5    .text                  ascii   Ah(F
+253 0x00003e08 0x00003e08 6   7    .text                  ascii   \foKh\r`
+254 0x0000401c 0x0000401c 4   5    .text                  ascii   )F!"
+255 0x0000402e 0x0000402e 5   6    .text                  ascii   )F!"\f
+256 0x0000409c 0x0000409c 4   5    .text                  ascii   )FA"
+257 0x000040ac 0x000040ac 5   7    .text                  utf8    Ԁ)FA"
+258 0x0000447a 0x0000447a 4   5    .text                  ascii   @hpG
+259 0x000044bf 0x000044be 4   5    .text                  ascii   FxDO
+260 0x00004597 0x00004596 5   6    .text                  ascii   hzD{D
+261 0x00004609 0x00004608 11  12   .text                  ascii   F\nF\nIyD\th\th
+262 0x00004640 0x00004640 4   5    .text                  ascii   A`pG
+263 0x00004657 0x00004656 10  11   .text                  ascii   F1HoF\rFxDO
+264 0x000046e8 0x000046e8 4   5    .text                  ascii   iF F
+265 0x0000473c 0x0000473c 5   6    .text                  ascii   \rFxDO
+266 0x000047eb 0x000047ea 5   6    .text                  ascii   hzD{D
+267 0x000048af 0x000048ae 4   5    .text                  ascii   FxDO
+268 0x000049a9 0x000049a8 5   6    .text                  ascii   hzD{D
+269 0x00004a29 0x00004a28 11  12   .text                  ascii   F\nF\nIyD\th\th
+270 0x00004a85 0x00004a84 4   5    .text                  ascii   !pG-
+271 0x00004b1f 0x00004b1e 4   5    .text                  ascii   FxDO
+272 0x00004b8b 0x00004b8a 4   5    .text                  ascii   \nEIC
+273 0x00004bcd 0x00004bcc 5   6    .text                  ascii   !Aa1i
+274 0x00004be5 0x00004be4 5   6    .text                  ascii   `KhC`
+275 0x00004c55 0x00004c54 5   6    .text                  ascii   hzD{D
+276 0x00004cbd 0x00004cbc 11  12   .text                  ascii   F\nF\nIyD\th\th
+277 0x00004cf7 0x00004cf6 4   6    .text                  utf8    )ȿpG
+278 0x00004d19 0x00004d18 7   8    .text                  ascii   bpGAbpG
+279 0x00004d2c 0x00004d2c 6   7    .text                  ascii   \fF\aI\aJ
+280 0x00004d33 0x00004d32 7   8    .text                  ascii   F\aKyDzD
+281 0x00004d58 0x00004d58 4   5    .text                  ascii   AcpG
+282 0x00004d91 0x00004d90 4   5    .text                  ascii   FxDO
+283 0x00004e06 0x00004e06 4   7    .text                  utf8    \nF\vѠ
+284 0x00004e4a 0x00004e4a 4   7    .text                  utf8    \nF\vȠ
+285 0x00004e5b 0x00004e5a 5   6    .text                  ascii   \npi\b`
+286 0x00004ee3 0x00004ee2 5   6    .text                  ascii   \npj\b`
+287 0x00004f6b 0x00004f6a 5   6    .text                  ascii   \npk\b`
+288 0x00004ff8 0x00004ff8 8   9    .text                  ascii   JIKJKKyD
+289 0x00005001 0x00005000 5   6    .text                  ascii   hzD{D
+290 0x00005139 0x00005138 11  12   .text                  ascii   F\nF\nIyD\th\th
+291 0x00005177 0x00005176 6   7    .text                  ascii   F9HoFO
+292 0x0000520c 0x0000520c 4   5    .text                  ascii   iF F
+293 0x00005271 0x00005270 4   5    .text                  ascii   H\rFO
+294 0x000052a5 0x000052a4 7   8    .text                  ascii   KyDzD{D
+295 0x000052c0 0x000052c0 4   5    .text                  ascii   iF F
+296 0x000052d0 0x000052d0 6   7    .text                  ascii   yD\th\th
+297 0x00005301 0x00005300 6   7    .text                  ascii   FEHFJ\v
+298 0x00005313 0x00005312 9   10   .text                  ascii   hAH1`)FxD
+299 0x00005320 0x00005320 4   5    .text                  ascii   @H)F
+300 0x00005345 0x00005344 5   6    .text                  ascii   SyD(F
+301 0x0000534e 0x0000534e 4   5    .text                  ascii   7H\r!
+302 0x00005353 0x00005352 5   6    .text                  ascii   "\r#xD
+303 0x00005366 0x00005366 5   6    .text                  ascii   (F!FO
+304 0x000053db 0x000053da 6   7    .text                  ascii   F F)FO
+305 0x000053f5 0x000053f4 5   6    .text                  ascii   JyDzD
+306 0x000053ff 0x000053fe 5   6    .text                  ascii   H1hxD
+307 0x00005451 0x00005450 4   5    .text                  ascii   JxD\r
+308 0x00005470 0x00005470 4   5    .text                  ascii   !FxD
+309 0x000054a3 0x000054a2 6   7    .text                  ascii   RyD FO
+310 0x000054b4 0x000054b4 4   5    .text                  ascii   xH\r!
+311 0x000054b9 0x000054b8 5   6    .text                  ascii   "\r#xD
+312 0x000054c4 0x000054c4 4   5    .text                  ascii   #G8F
+313 0x000054cc 0x000054cc 5   6    .text                  ascii    F9FO
+314 0x00005572 0x00005572 5   6    .text                  ascii   KHxDP
+315 0x00005578 0x00005578 6   7    .text                  ascii   $@0F!F
+316 0x00005582 0x00005582 4   5    .text                  ascii   ;!\aF
+317 0x0000558f 0x0000558e 6   7    .text                  ascii   F1F8FO
+318 0x000055b0 0x000055b0 5   6    .text                  ascii   8F!FO
+319 0x000055e5 0x000055e4 5   6    .text                  ascii   \t F\r#
+320 0x000055fa 0x000055fa 5   6    .text                  ascii   8F!FO
+321 0x0000561a 0x0000561a 5   6    .text                  ascii    FAFO
+322 0x0000564b 0x0000564a 6   7    .text                  ascii   F F)FO
+323 0x000056b9 0x000056b8 5   6    .text                  ascii   F(H)J
+324 0x000056cb 0x000056ca 9   10   .text                  ascii   h$H1`)FxD
+325 0x000056d8 0x000056d8 4   5    .text                  ascii   #H)F
+326 0x000056fb 0x000056fa 5   6    .text                  ascii   SyD(F
+327 0x00005709 0x00005708 5   6    .text                  ascii   "\r#xD
+328 0x0000571c 0x0000571c 5   6    .text                  ascii   (F!FO
+329 0x00005742 0x00005742 6   7    .text                  ascii   \fH1hxD
+330 0x00005786 0x00005786 6   7    .text                  ascii   MJxDzD
+331 0x0000578d 0x0000578c 8   9    .text                  ascii   hJH\thxD
+332 0x000057c1 0x000057c0 4   5    .text                  ascii   \n\vFC
+333 0x000057d4 0x000057d4 4   5    .text                  ascii   :HiF
+334 0x000057e4 0x000057e4 8   9    .text                  ascii   7H8IxDyD
+335 0x000057f0 0x000057f0 4   5    .text                  ascii   6HxD
+336 0x000057fe 0x000057fe 6   7    .text                  ascii    F #yD
+337 0x00005823 0x00005822 11  12   .text                  ascii    +J,KyDzD{D
+338 0x0000583e 0x0000583e 6   7    .text                  ascii    F #yD
+339 0x00005872 0x00005872 4   5    .text                  ascii   \f\tHF
+340 0x000058f0 0x000058f0 4   5    .text                  ascii   &HxD
+341 0x0000590a 0x0000590a 4   5    .text                  ascii   !IyD
+342 0x00005950 0x00005950 4   5    .text                  ascii   zD{D
+343 0x0000596a 0x0000596a 4   5    .text                  ascii   zD{D
+344 0x000059bd 0x000059bc 5   6    .text                  ascii   FCH\fF
+345 0x000059c6 0x000059c6 4   5    .text                  ascii   xDBJ
+346 0x000059cb 0x000059ca 10  11   .text                  ascii   hzD@H\thxD!
+347 0x00005a01 0x00005a00 4   5    .text                  ascii   \n\vFC
+348 0x00005a14 0x00005a14 4   5    .text                  ascii   0HiF
+349 0x00005a24 0x00005a24 8   9    .text                  ascii   -H.IxDyD
+350 0x00005a30 0x00005a30 4   5    .text                  ascii   ,HxD
+351 0x00005a3e 0x00005a3e 6   7    .text                  ascii   (F #yD
+352 0x00005a4c 0x00005a4c 12  13   .text                  ascii   *H+IxDyDBh F
+353 0x00005a60 0x00005a60 6   7    .text                  ascii   (F #yD
+354 0x00005a6e 0x00005a6e 8   9    .text                  ascii   %H%IxDyD
+355 0x00005a82 0x00005a82 6   7    .text                  ascii   (F #yD
+356 0x00005a91 0x00005a90 7   8    .text                  ascii   H IxDyD
+357 0x00005aa9 0x00005aa8 7   8    .text                  ascii   KyDzD{D
+358 0x00005b33 0x00005b32 9   10   .text                  ascii   hGHzD\thxD
+359 0x00005b5f 0x00005b5e 4   5    .text                  ascii   \n\vFC
+360 0x00005b72 0x00005b72 4   5    .text                  ascii   :HiF
+361 0x00005b82 0x00005b82 8   9    .text                  ascii   7H7IxDyD
+362 0x00005b8e 0x00005b8e 4   5    .text                  ascii   6HxD
+363 0x00005bcd 0x00005bcc 11  12   .text                  ascii    (J(KyDzD{D
+364 0x00005bde 0x00005bde 4   5    .text                  ascii   &L|D
+365 0x00005c0f 0x00005c0e 8   9    .text                  ascii   KyDzD{D\a
+366 0x00005c21 0x00005c20 5   6    .text                  ascii   hyDzD
+367 0x00005c2d 0x00005c2c 5   6    .text                  ascii   HxD\f0
+368 0x00005ca1 0x00005ca0 9   10   .text                  ascii   "DmyD\th F
+369 0x00005d18 0x00005d18 12  13   .text                  ascii   >H?IxD?J?KyD
+370 0x00005d25 0x00005d24 5   6    .text                  ascii   hzD{D
+371 0x00005d43 0x00005d42 4   5    .text                  ascii     aO
+372 0x00005d56 0x00005d56 4   5    .text                  ascii   4IyD
+373 0x00005d71 0x00005d70 5   6    .text                  ascii   -*FyD
+374 0x00005d7d 0x00005d7c 11  12   .text                  ascii   `,I,J-KyDzD
+375 0x00005d94 0x00005d94 12  13   .text                  ascii   ,H)I)JxD)KyD
+376 0x00005da2 0x00005da2 4   5    .text                  ascii   zD{D
+377 0x00005dc9 0x00005dc8 5   6    .text                  ascii   q}D(F
+378 0x00005ddf 0x00005dde 5   6    .text                  ascii   KyDzD
+379 0x00005df3 0x00005df2 5   6    .text                  ascii   hyDzD
+380 0x00005ef8 0x00005ef8 6   7    .text                  ascii    F\r!BF
+381 0x00005f1b 0x00005f1a 11  15   .text                  utf8    )$܀)6А)OР)@
+382 0x00005f5e 0x00005f5e 4   5    .text                  ascii    F\r!
+383 0x00005f8b 0x00005f8a 4   5    .text                  ascii   " Fw
+384 0x00005fd4 0x00005fd4 4   5    .text                  ascii    FBF
+385 0x00006046 0x00006046 6   7    .text                  ascii    F\r!BF
+386 0x0000606e 0x0000606e 5   6    .text                  ascii   E[--\n
+387 0x0000607c 0x0000607c 4   5    .text                  ascii    " F
+388 0x0000614c 0x0000614c 4   5    .text                  ascii   \b \aI
+389 0x00006152 0x00006152 6   7    .text                  ascii   yD\th\th
+390 0x0000618e 0x0000618e 4   5    .text                  ascii   (F1F
+391 0x000061b2 0x000061b2 4   5    .text                  ascii   (F"F
+392 0x000061db 0x000061da 5   6    .text                  ascii   q(F"F
+393 0x000061f3 0x000061f2 5   6    .text                  ascii   JxDzD
+394 0x00006222 0x00006222 6   7    .text                  ascii   2h F)F
+395 0x0000628f 0x0000628e 5   6    .text                  ascii   JxDzD
+396 0x000062a7 0x000062a6 5   6    .text                  ascii   FIH\rF
+397 0x000062ce 0x000062ce 4   5    .text                  ascii   @F\r!
+398 0x0000633e 0x0000633e 4   5    .text                  ascii   @F\r!
+399 0x00006366 0x00006366 4   5    .text                  ascii   )F@h
+400 0x0000636d 0x0000636c 5   6    .text                  ascii    @F"F
+401 0x00006394 0x00006394 6   7    .text                  ascii   yD\th\th
+402 0x000063ae 0x000063ae 4   5    .text                  ascii   @F\r!
+403 0x000063c5 0x000063c4 5   6    .text                  ascii   JxDzD
+404 0x0000642a 0x0000642a 6   7    .text                  ascii   yD\th\th
+405 0x0000645d 0x0000645c 4   5    .text                  ascii   F&H\n
+406 0x00006479 0x00006478 5   6    .text                  ascii   `)F0F
+407 0x00006482 0x00006482 4   5    .text                  ascii   iF0F
+408 0x0000649d 0x0000649c 4   5    .text                  ascii   d2F\b
+409 0x000064b0 0x000064b0 4   5    .text                  ascii   0F9F
+410 0x0000650b 0x0000650a 4   5    .text                  ascii   F3H\f
+411 0x0000653e 0x0000653e 5   6    .text                  ascii   "i(FO
+412 0x0000654d 0x0000654c 4   5    .text                  ascii   \n(Fo
+413 0x0000655a 0x0000655a 4   5    .text                  ascii   (FIF
+414 0x0000656f 0x0000656e 4   5    .text                  ascii   d*F\t
+415 0x00006578 0x00006578 4   5    .text                  ascii    e8F
+416 0x00006595 0x00006594 5   6    .text                  ascii   JxDzD
+417 0x000065b6 0x000065b6 4   5    .text                  ascii    a(F
+418 0x00006600 0x00006600 4   5    .text                  ascii   (F!F
+419 0x00006611 0x00006610 5   6    .text                  ascii   JxDzD
+420 0x00006630 0x00006630 4   5    .text                  ascii   xD\bK
+421 0x00006640 0x00006640 4   5    .text                  ascii   aFrF
+422 0x0000665c 0x0000665c 9   10   .text                  ascii   \vIyD\th\th\v
+423 0x0000667c 0x0000667c 4   5    .text                  ascii   \th\th
+424 0x00006698 0x00006698 9   10   .text                  ascii   \vIyD\th\th\v
+425 0x000066b8 0x000066b8 4   5    .text                  ascii   \th\th
+426 0x0000677d 0x0000677c 9   10   .text                  ascii   F\rHzDxD\b0
+427 0x000067c1 0x000067c0 5   6    .text                  ascii   F0h\rF
+428 0x000067d0 0x000067d0 4   5    .text                  ascii   0h)F
+429 0x000067ef 0x000067ee 5   6    .text                  ascii   F h\rF
+430 0x000067fe 0x000067fe 6   7    .text                  ascii    h)F2F
+431 0x00006823 0x00006822 5   6    .text                  ascii   %Bk F
+432 0x00006829 0x00006828 4   5    .text                  ascii   G(Fp
+433 0x00006833 0x00006832 9   10   .text                  ascii   F0h\rFBi0F
+434 0x00006842 0x00006842 4   5    .text                  ascii   0h)F
+435 0x0000686b 0x0000686a 5   6    .text                  ascii   FBi8F
+436 0x00006876 0x00006876 8   9    .text                  ascii   8h1F*FCF
+437 0x00006897 0x00006896 5   6    .text                  ascii   h\tj\bG
+438 0x000068a1 0x000068a0 5   6    .text                  ascii   hJj!F
+439 0x000068cf 0x000068ce 4   5    .text                  ascii   k\bG!
+440 0x00006967 0x00006966 7   8    .text                  ascii   KxDyD{D
+441 0x00006987 0x00006986 4   5    .text                  ascii   F\f.\b
+442 0x000069e5 0x000069e4 4   5    .text                  ascii   qDPp
+443 0x000069f3 0x000069f2 7   8    .text                  ascii   KxDyD{D
+444 0x00006a11 0x00006a10 4   5    .text                  ascii   "p(O
+445 0x00006ab9 0x00006ab8 7   8    .text                  ascii   KxDyD{D
+446 0x00006ad5 0x00006ad4 4   5    .text                  ascii   F\aF&
+447 0x00006b2b 0x00006b2a 4   5    .text                  ascii   qEPO
+448 0x00006b53 0x00006b52 4   5    .text                  ascii   qEPO
+449 0x00006b6b 0x00006b6a 4   5    .text                  ascii   qEPO
+450 0x00006b85 0x00006b84 7   8    .text                  ascii   KxDyD{D
+451 0x00006bb5 0x00006bb4 5   6    .text                  ascii   !Bk F
+452 0x00006c2b 0x00006c2a 7   8    .text                  ascii   FyD\th\th
+453 0x00006c5a 0x00006c5a 4   5    .text                  ascii   0F)F
+454 0x00006c72 0x00006c72 6   7    .text                  ascii   yD\th\th
+455 0x00006cd0 0x00006cd0 6   7    .text                  ascii   jF F)F
+456 0x00006d19 0x00006d18 7   8    .text                  ascii   F\aIxDyD
+457 0x00006d27 0x00006d26 5   6    .text                  ascii   #rFcF
+458 0x00006d6a 0x00006d6a 5   6    .text                  ascii   \b(\aH\b
+459 0x00006e04 0x00006e04 4   5    .text                  ascii   bh^h
+460 0x00006e1d 0x00006e1c 5   7    .text                  utf8    (~аB|
+461 0x00006e2c 0x00006e2c 5   6    .text                  ascii   (F)FP
+462 0x00006eb6 0x00006eb6 4   5    .text                  ascii   +N~D
+463 0x00006ec2 0x00006ec2 4   5    .text                  ascii   )N~D
+464 0x00006f41 0x00006f40 7   8    .text                  ascii   KxDyD{D
+465 0x00006f51 0x00006f50 11  12   .text                  ascii   2\aI\aKxDyD{D
+466 0x00006fbf 0x00006fbe 5   6    .text                  ascii   \a'Dl\b
+467 0x000070aa 0x000070aa 4   5    .text                  ascii   xDpG
+468 0x000078b4 0x000078b4 21  22   .rodata                ascii   offload_effect_bundle
+469 0x000078ca 0x000078ca 25  26   .rodata                ascii   %s output already started
+470 0x000078e4 0x000078e4 39  40   .rodata                ascii   offload_effects_bundle_hal_start_output
+471 0x0000790c 0x0000790c 38  39   .rodata                ascii   %s fail to allocate for output context
+472 0x00007933 0x00007933 5   6    .rodata                ascii   %s %d
+473 0x00007939 0x00007939 20  21   .rodata                ascii   Audio Effects Config
+474 0x0000794e 0x0000794e 13  14   .rodata                ascii   Invalid mixer
+475 0x0000795c 0x0000795c 28  29   .rodata                ascii   mixer_get_ctl_by_name failed
+476 0x00007979 0x00007979 21  22   .rodata                ascii   %s output not started
+477 0x0000798f 0x0000798f 38  39   .rodata                ascii   offload_effects_bundle_hal_stop_output
+478 0x000079b6 0x000079b6 14  15   .rodata                ascii   %s init failed
+479 0x000079c5 0x000079c5 17  18   .rodata                ascii   effect_lib_create
+480 0x000079d7 0x000079d7 61  62   .rodata                ascii   EFFECT_CMD_GET_PARAM invalid command cmdSize %d *replySize %d
+481 0x00007a15 0x00007a15 61  62   .rodata                ascii   EFFECT_CMD_SET_PARAM invalid command cmdSize %d *replySize %d
+482 0x00007a53 0x00007a53 48  49   .rodata                ascii   EFFECT_CMD_SET_DEVICE invalid command cmdSize %d
+483 0x00007a84 0x00007a84 32  33   .rodata                ascii   %s EFFECT_CMD_OFFLOAD bad format
+484 0x00007aa5 0x00007aa5 14  15   .rodata                ascii   effect_command
+485 0x00007ab4 0x00007ab4 21  22   .rodata                ascii   %s invalid command %d
+486 0x00007aca 0x00007aca 30  31   .rodata                ascii   Offload Effects Bundle Library
+487 0x00007ae9 0x00007ae9 20  21   .rodata                ascii   The Linux Foundation
+488 0x00007afe 0x00007afe 6   7    .rodata                ascii   Custom
+489 0x00007b05 0x00007b05 8   9    .rodata                ascii   32438598
+490 0x00007b0e 0x00007b0e 24  25   .rodata                ascii   offload_effect_equalizer
+491 0x00007b27 0x00007b27 34  35   .rodata                ascii   \tERROR EQ_PARAM_BAND_LEVEL band %d
+492 0x00007b4a 0x00007b4a 8   9    .rodata                ascii   32436341
+493 0x00007b53 0x00007b53 35  36   .rodata                ascii   \tERROR EQ_PARAM_CENTER_FREQ band %d
+494 0x00007b77 0x00007b77 8   9    .rodata                ascii   32247948
+495 0x00007b80 0x00007b80 39  40   .rodata                ascii   \tERROR EQ_PARAM_BAND_FREQ_RANGE band %d
+496 0x00007ba8 0x00007ba8 8   9    .rodata                ascii   32588016
+497 0x00007bb1 0x00007bb1 41  42   .rodata                ascii   \tERROR EQ_PARAM_GET_PRESET_NAME preset %d
+498 0x00007bdb 0x00007bdb 8   9    .rodata                ascii   37536407
+499 0x00007be4 0x00007be4 8   9    .rodata                ascii   32585400
+500 0x00007bed 0x00007bed 8   9    .rodata                ascii   37563371
+501 0x00007bf6 0x00007bf6 44  45   .rodata                ascii   \tERROR EQ_PARAM_PROPERTIES valueSize %d < %d
+502 0x00007c23 0x00007c23 6   7    .rodata                ascii   Normal
+503 0x00007c2a 0x00007c2a 9   10   .rodata                ascii   Classical
+504 0x00007c34 0x00007c34 5   6    .rodata                ascii   Dance
+505 0x00007c3a 0x00007c3a 4   5    .rodata                ascii   Flat
+506 0x00007c3f 0x00007c3f 4   5    .rodata                ascii   Folk
+507 0x00007c44 0x00007c44 11  12   .rodata                ascii   Heavy Metal
+508 0x00007c50 0x00007c50 7   8    .rodata                ascii   Hip Hop
+509 0x00007c58 0x00007c58 4   5    .rodata                ascii   Jazz
+510 0x00007c61 0x00007c61 4   5    .rodata                ascii   Rock
+511 0x00007c66 0x00007c66 19  20   .rodata                ascii   offload_effect_bass
+512 0x00007c7a 0x00007c7a 32  33   .rodata                ascii   %s ignore set strength, index %d
+513 0x00007c9b 0x00007c9b 18  19   .rodata                ascii   bass_set_parameter
+514 0x00007cae 0x00007cae 26  27   .rodata                ascii   %s: disabled by device: %x
+515 0x00007cc9 0x00007cc9 15  16   .rodata                ascii   bass_set_device
+516 0x00007cd9 0x00007cd9 17  18   .rodata                ascii   offload_effect_bb
+517 0x00007ceb 0x00007ceb 37  38   .rodata                ascii   %s: ctxt %p, disabled based on device
+518 0x00007d11 0x00007d11 20  21   .rodata                ascii   bassboost_set_device
+519 0x00007d26 0x00007d26 22  23   .rodata                ascii   audio.safx.pbe.enabled
+520 0x00007d3d 0x00007d3d 4   5    .rodata                ascii   true
+521 0x00007d42 0x00007d42 16  17   .rodata                ascii   libacdbloader.so
+522 0x00007d53 0x00007d53 18  19   .rodata                ascii   offload_effect_pbe
+523 0x00007d66 0x00007d66 27  28   .rodata                ascii   %s error opening library %s
+524 0x00007d82 0x00007d82 15  16   .rodata                ascii   pbe_load_config
+525 0x00007d92 0x00007d92 28  29   .rodata                ascii   acdb_loader_get_audio_cal_v2
+526 0x00007daf 0x00007daf 36  37   .rodata                ascii   %s error resolving acdb func symbols
+527 0x00007dd4 0x00007dd4 23  24   .rodata                ascii   audio.safx.pbe.app.type
+528 0x00007dee 0x00007dee 24  25   .rodata                ascii   %s pbe_app_type = 0x%.8x
+529 0x00007e07 0x00007e07 21  22   .rodata                ascii   %s ret = %d, len = %u
+530 0x00007e1d 0x00007e1d 26  27   .rodata                ascii   offload_effect_virtualizer
+531 0x00007e38 0x00007e38 22  23   .rodata                ascii   virtualizer_set_device
+532 0x00007e4f 0x00007e4f 18  19   .rodata                ascii   offload_effect_api
+533 0x00007e62 0x00007e62 20  21   .rodata                ascii   Failed to open mixer
+534 0x00007e77 0x00007e77 19  20   .rodata                ascii   %s: reverb level %d
+535 0x00007e8b 0x00007e8b 31  32   .rodata                ascii   offload_reverb_set_reverb_level
+536 0x00007eab 0x00007eab 43  44   .rodata                ascii   %s: sending h/w acc effects params fail[%d]
+537 0x00007ed7 0x00007ed7 21  22   .rodata                ascii   bassboost_send_params
+538 0x00007eed 0x00007eed 15  16   .rodata                ascii   pbe_send_params
+539 0x00007efd 0x00007efd 23  24   .rodata                ascii   virtualizer_send_params
+540 0x00007f15 0x00007f15 14  15   .rodata                ascii   eq_send_params
+541 0x00007f24 0x00007f24 18  19   .rodata                ascii   reverb_send_params
+542 0x00007f37 0x00007f37 31  32   .rodata                ascii   %s: ctl is NULL, return invalid
+543 0x00007f57 0x00007f57 15  16   .rodata                ascii   hpx_send_params
+544 0x00007f67 0x00007f67 45  46   .rodata                ascii   %s: sending h/w acc hpx state params fail[%d]
+545 0x00007f95 0x00007f95 13  14   .rodata                ascii   use.dts_eagle
+546 0x00007fa3 0x00007fa3 21  22   .rodata                ascii   /data/misc/dts/effect
+547 0x00007fbc 0x00007fbc 11  12   .rodata                ascii   effect_util
+548 0x00007fc8 0x00007fc8 41  42   .rodata                ascii   opening effect state node failed returned
+549 0x00007ff2 0x00007ff2 186 187  .rodata                ascii   eq_enable=%d;virt_enable=%d;bb_enable=%d;eq_param_level0=%d;eq_param_level1=%d;eq_param_level2=%d;eq_param_level3=%d;eq_param_level4=%d;virt_param_strength=%d;bassboost_param_strength=%d
+550 0x000080b1 0x000080b1 9   10   .rodata                ascii   eq_enable
+551 0x000080bb 0x000080bb 11  12   .rodata                ascii   virt_enable
+552 0x000080c7 0x000080c7 9   10   .rodata                ascii   bb_enable
+553 0x000080d1 0x000080d1 15  16   .rodata                ascii   eq_param_level0
+554 0x000080e1 0x000080e1 15  16   .rodata                ascii   eq_param_level1
+555 0x000080f1 0x000080f1 15  16   .rodata                ascii   eq_param_level2
+556 0x00008101 0x00008101 15  16   .rodata                ascii   eq_param_level3
+557 0x00008111 0x00008111 15  16   .rodata                ascii   eq_param_level4
+558 0x00008121 0x00008121 19  20   .rodata                ascii   virt_param_strength
+559 0x00008135 0x00008135 24  25   .rodata                ascii   bassboost_param_strength
+560 0x0000814e 0x0000814e 24  25   .rodata                ascii   audio.pp.asphere.enabled
+561 0x00008167 0x00008167 5   6    .rodata                ascii   false
+562 0x0000816d 0x0000816d 16  17   .rodata                ascii   audio_pp_asphere
+563 0x0000817e 0x0000817e 24  25   .rodata                ascii   %s: init check failed!!!
+564 0x00008197 0x00008197 22  23   .rodata                ascii   asphere_set_parameters
+565 0x000081ae 0x000081ae 14  15   .rodata                ascii   asphere_enable
+566 0x000081bd 0x000081bd 16  17   .rodata                ascii   asphere_strength
+567 0x000081ce 0x000081ce 22  23   .rodata                ascii   asphere_get_parameters
+568 0x000081e5 0x000081e5 14  15   .rodata                ascii   asphere_status
+569 0x000081f4 0x000081f4 32  33   .rodata                ascii   handle_asphere_on_effect_enabled
+570 0x00008218 0x00008218 17  18   .rodata                ascii   asphere_init_once
+571 0x0000822a 0x0000822a 21  22   .rodata                ascii   MSM ASphere Set Param
+572 0x00008240 0x00008240 40  41   .rodata                ascii   %s: could not get ctl for mixer cmd - %s
+573 0x00008269 0x00008269 29  30   .rodata                ascii   asphere_get_values_from_mixer
+574 0x00008287 0x00008287 40  41   .rodata                ascii   %s: returned %d, enabled:%d, strength:%d
+575 0x000082b0 0x000082b0 30  31   .rodata                ascii   /data/misc/audio_pp/event_node
+576 0x000082cf 0x000082cf 36  37   .rodata                ascii   creating notification node failed %d
+577 0x000082f4 0x000082f4 45  46   .rodata                ascii   %s: successfully created notification node %s
+578 0x00008322 0x00008322 36  37   .rodata                ascii   asphere_create_app_notification_node
+579 0x00008347 0x00008347 27  28   .rodata                ascii   asphere_set_values_to_mixer
+580 0x00008363 0x00008363 35  36   .rodata                ascii   opening notification node failed %d
+581 0x00008387 0x00008387 41  42   .rodata                ascii   %s: successfully opened notification node
+582 0x000083b1 0x000083b1 18  19   .rodata                ascii   asphere_notify_app
+583 0x000083c4 0x000083c4 40  41   .rodata                ascii   void _Unwind_Resume(_Unwind_Exception *)
+584 0x000083ed 0x000083ed 44  45   .rodata                ascii   external/libunwind_llvm/src/Unwind-EHABI.cpp
+585 0x0000841a 0x0000841a 29  30   .rodata                ascii   _Unwind_Resume() can't return
+586 0x00008438 0x00008438 125 126  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Set(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+587 0x000084b6 0x000084b6 26  27   .rodata                ascii   unsupported register class
+588 0x000084d1 0x000084d1 117 118  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Pop(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation)
+589 0x00008547 0x00008547 77  78   .rodata                ascii   _Unwind_Reason_Code unwind_phase2(unw_context_t *, _Unwind_Exception *, bool)
+590 0x00008595 0x00008595 98  99   .rodata                ascii   during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+591 0x000085f8 0x000085f8 25  26   .rodata                ascii   libunwind: %s %s:%d - %s\n
+592 0x00008612 0x00008612 134 135  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Get_Internal(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+593 0x00008699 0x00008699 44  45   .rodata                ascii   external/libunwind_llvm/src/UnwindCursor.hpp
+594 0x000086c6 0x000086c6 51  52   .rodata                ascii   uint32_t libunwind::Registers_arm::getRegister(int)
+595 0x000086fa 0x000086fa 41  42   .rodata                ascii   external/libunwind_llvm/src/Registers.hpp
+596 0x00008724 0x00008724 24  25   .rodata                ascii   unsupported arm register
+597 0x0000873d 0x0000873d 57  58   .rodata                ascii   void libunwind::Registers_arm::setRegister(int, uint32_t)
+598 0x00008777 0x00008777 59  60   .rodata                ascii   unw_fpreg_t libunwind::Registers_arm::getFloatRegister(int)
+599 0x000087b3 0x000087b3 26  27   .rodata                ascii   Unknown ARM float register
+600 0x000087ce 0x000087ce 65  66   .rodata                ascii   void libunwind::Registers_arm::setFloatRegister(int, unw_fpreg_t)
+601 0x00008810 0x00008810 221 222  .rodata                ascii   bool libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getInfoFromEHABISection(pint_t, const libunwind::UnwindInfoSections &) [A = libunwind::LocalAddressSpace, R = libunwind::Registers_arm]
+602 0x000088ee 0x000088ee 27  28   .rodata                ascii   unknown personality routine
+603 0x0000890a 0x0000890a 65  66   .rodata                ascii   index inlined table detected but pr function requires extra words
+604 0x00008a6b 0x00008a6b 16  17   .rodata                ascii   unknown register
+605 0x00008aa8 0x00008aa8 21  22   .rodata                ascii   MSM offload equalizer
+606 0x00008ae8 0x00008ae8 31  32   .rodata                ascii   The Android Open Source Project
+607 0x00008bec 0x00008bec 21  22   .rodata                ascii   MSM offload bassboost
+608 0x00008c2c 0x00008c2c 31  32   .rodata                ascii   The Android Open Source Project
+609 0x00008c98 0x00008c98 23  24   .rodata                ascii   MSM offload virtualizer
+610 0x00008cd8 0x00008cd8 31  32   .rodata                ascii   The Android Open Source Project
+611 0x00008d44 0x00008d44 42  43   .rodata                ascii   MSM offload Auxiliary Environmental Reverb
+612 0x00008d84 0x00008d84 31  32   .rodata                ascii   The Android Open Source Project
+613 0x00008df0 0x00008df0 39  40   .rodata                ascii   MSM offload Insert Environmental Reverb
+614 0x00008e30 0x00008e30 31  32   .rodata                ascii   The Android Open Source Project
+615 0x00008e70 0x00008e70 4   5    .rodata                ascii   `-8G
+616 0x00008e9c 0x00008e9c 35  36   .rodata                ascii   MSM offload Auxiliary Preset Reverb
+617 0x00008edc 0x00008edc 31  32   .rodata                ascii   The Android Open Source Project
+618 0x00008f1c 0x00008f1c 4   5    .rodata                ascii   `-8G
+619 0x00008f48 0x00008f48 32  33   .rodata                ascii   MSM offload Insert Preset Reverb
+620 0x00008f88 0x00008f88 31  32   .rodata                ascii   The Android Open Source Project
+621 0x0000a024 0x0000b024 4   5    .data                  ascii   TLEA
+622 0x0000a041 0x00000001 36  37   .comment               ascii   GCC: (GNU) 4.9 20150123 (prerelease)
+623 0x0000a066 0x00000026 60  61   .comment               ascii   Android clang version 3.8.256229  (based on LLVM 3.8.256229)
+624 0x0000a0b4 0x00000010 9   10   .note.gnu.gold-version ascii   gold 1.11
+625 0x0000a0c5 0x00000005 5   6    .ARM.attributes        ascii   aeabi
+626 0x0000a0d1 0x00000011 6   7    .ARM.attributes        ascii   ARM v7
+627 0x0000a0d9 0x00000019 4   5    .ARM.attributes        ascii   \n\aA\b
+628 0x0000a0ff 0x00000001 9   10   .shstrtab              ascii   .shstrtab
+629 0x0000a109 0x0000000b 7   8    .shstrtab              ascii   .interp
+630 0x0000a111 0x00000013 19  20   .shstrtab              ascii   .note.android.ident
+631 0x0000a125 0x00000027 18  19   .shstrtab              ascii   .note.gnu.build-id
+632 0x0000a138 0x0000003a 7   8    .shstrtab              ascii   .dynsym
+633 0x0000a140 0x00000042 7   8    .shstrtab              ascii   .dynstr
+634 0x0000a148 0x0000004a 9   10   .shstrtab              ascii   .gnu.hash
+635 0x0000a152 0x00000054 12  13   .shstrtab              ascii   .gnu.version
+636 0x0000a15f 0x00000061 14  15   .shstrtab              ascii   .gnu.version_d
+637 0x0000a16e 0x00000070 14  15   .shstrtab              ascii   .gnu.version_r
+638 0x0000a17d 0x0000007f 8   9    .shstrtab              ascii   .rel.dyn
+639 0x0000a186 0x00000088 8   9    .shstrtab              ascii   .rel.plt
+640 0x0000a18f 0x00000091 5   6    .shstrtab              ascii   .text
+641 0x0000a195 0x00000097 10  11   .shstrtab              ascii   .ARM.exidx
+642 0x0000a1a0 0x000000a2 7   8    .shstrtab              ascii   .rodata
+643 0x0000a1a8 0x000000aa 10  11   .shstrtab              ascii   .ARM.extab
+644 0x0000a1b3 0x000000b5 11  12   .shstrtab              ascii   .fini_array
+645 0x0000a1bf 0x000000c1 12  13   .shstrtab              ascii   .data.rel.ro
+646 0x0000a1cc 0x000000ce 8   9    .shstrtab              ascii   .dynamic
+647 0x0000a1d5 0x000000d7 4   5    .shstrtab              ascii   .got
+648 0x0000a1da 0x000000dc 5   6    .shstrtab              ascii   .data
+649 0x0000a1e0 0x000000e2 4   5    .shstrtab              ascii   .bss
+650 0x0000a1e5 0x000000e7 8   9    .shstrtab              ascii   .comment
+651 0x0000a1ee 0x000000f0 22  23   .shstrtab              ascii   .note.gnu.gold-version
+652 0x0000a205 0x00000107 15  16   .shstrtab              ascii   .ARM.attributes
+0x00001034    1     12 sym.imp.__cxa_finalize
+0x00001040    1     12 sym.imp.__cxa_atexit
+0x0000104c    1     12 sym.imp.__register_atfork
+0x000010f4    1     12 sym.imp.__aeabi_memcpy
+0x000010e8    1     12 sym.imp.__aeabi_memcpy4
+0x00001070    1     12 sym.imp.__android_log_print
+0x00001088    1     12 sym.imp.__snprintf_chk
+0x000010b8    1     12 sym.imp.__stack_chk_fail
+0x000012bc    1     12 sym.imp.__gnu_Unwind_Find_exidx
+0x000012b0    1     12 sym.imp.dladdr
+0x000010dc    1     12 sym.imp.calloc
+0x000010a0    1     12 sym.imp.free
+0x0000107c    1     12 sym.imp.malloc
+0x000010d0    1     12 sym.imp.memcmp
+0x00001094    1     12 sym.imp.mixer_get_ctl_by_name
+0x00001298    1     12 sym.imp.abort
+0x000012a4    1     12 sym.imp.fprintf
+0x00001100    1     12 sym.imp.pthread_mutex_init
+0x000011fc    1     12 sym.imp.close
+0x00001064    1     12 sym.imp.pthread_mutex_lock
+0x000011d8    1     12 sym.imp.creat
+0x000010ac    1     12 sym.imp.pthread_mutex_unlock
+0x00001250    1     12 sym.imp.fclose
+0x00001058    1     12 sym.imp.pthread_once
+0x00001214    1     12 sym.imp.fgets
+0x00001208    1     12 sym.imp.fopen
+0x000011cc    1     12 sym.imp.open
+0x0000125c    1     12 sym.imp.remove
+0x0000122c    1     12 sym.imp.strchr
+0x00001220    1     12 sym.imp.strstr
+0x000010c4    1     12 sym.imp.usleep
+0x00001130    1     12 sym.imp.__aeabi_memclr4
+0x0000110c    1     12 sym.imp.__android_log_error_write
+0x00001118    1     12 sym.imp.__strlcpy_chk
+0x00001124    1     12 sym.imp.__strlen_chk
+0x00001148    1     12 sym.imp.atoi
+0x00001178    1     12 sym.imp.atoll
+0x00001184    1     12 sym.imp.dlclose
+0x00001160    1     12 sym.imp.dlopen
+0x0000116c    1     12 sym.imp.dlsym
+0x0000113c    1     12 sym.imp.property_get
+0x00001154    1     12 sym.imp.strncmp
+0x00001190    1     12 sym.imp.__aeabi_memclr8
+0x000011b4    1     12 sym.imp.__errno
+0x000011a8    1     12 sym.imp.ioctl
+0x0000119c    1     12 sym.imp.mixer_ctl_set_array
+0x00001274    1     12 sym.imp.mixer_open
+0x000011c0    1     12 sym.imp.__strlcat_chk
+0x00001244    1     12 sym.imp.__strncat_chk
+0x00001238    1     12 sym.imp.__strncpy_chk2
+0x000011f0    1     12 sym.imp.__write_chk
+0x000011e4    1     12 sym.imp.chmod
+0x0000128c    1     12 sym.imp.mixer_ctl_get_array
+0x00001280    1     12 sym.imp.str_parms_add_int
+0x00001268    1     12 sym.imp.str_parms_get_str
+0x000012d0    1     28 entry0
+0x000013b0   23    342 sym.offload_effects_bundle_hal_start_output
+0x0000156c   16    166 sym.offload_effects_bundle_hal_stop_output
+0x00001848   12    274 sym.offload_effects_bundle_get_parameters
+0x0000163c   41    428 sym.offload_effects_bundle_set_hpx_state
+0x0000184c   14    314 sym.offload_effects_bundle_set_parameters
+0x000052f8    7    284 fcn.000052f8
+0x000056b0    5    168 fcn.000056b0
+0x00005170   11    188 fcn.00005170
+0x00005268    9    120 fcn.00005268
+0x00003b4c    1     20 fcn.00003b4c
+0x00003b44    1      8 fcn.00003b44
+0x00005b1c   17    302 fcn.00005b1c
+0x00004a7e    1     10 fcn.00004a7e
+0x00004a88    6    112 fcn.00004a88
+0x00004af8    1     18 fcn.00004af8
+0x00004b10   22    360 fcn.00004b10
+0x00004cb8    1     48 fcn.00004cb8
+0x000025b8    1    120 fcn.000025b8
+0x00002540    1    114 fcn.00002540
+0x00004458    1      4 fcn.00004458
+0x00001850    3     72 fcn.00001850
+0x0000447a    1      4 fcn.0000447a
+0x00004a60    1     30 fcn.00004a60
+0x00005440   20    576 fcn.00005440
+0x0000447e    1     30 fcn.0000447e
+0x0000449c    1     18 fcn.0000449c
+0x000044b0   17    266 fcn.000044b0
+0x00004604    1     48 fcn.00004604
+0x00002dfc   14    204 fcn.00002dfc
+0x00002ed4   17    242 fcn.00002ed4
+0x000024fc    1     12 fcn.000024fc
+0x0000445c    1     30 fcn.0000445c
+0x00004640    1      4 fcn.00004640
+0x00004650   11    184 fcn.00004650
+0x00004730   12    222 fcn.00004730
+0x000030cc   10    374 fcn.000030cc
+0x000032da    6     86 fcn.000032da
+0x00004844    1     30 fcn.00004844
+0x00004862    1     30 fcn.00004862
+0x00004880    1     18 fcn.00004880
+0x000048a0   20    300 fcn.000048a0
+0x00004a24    1     48 fcn.00004a24
+0x000034c6    3     96 fcn.000034c6
+0x00003526   34    330 fcn.00003526
+0x00004d10    1      4 fcn.00004d10
+0x00004d14    1      4 fcn.00004d14
+0x00004d18    1      4 fcn.00004d18
+0x00004d1c    1      4 fcn.00004d1c
+0x00004d28    1     34 fcn.00004d28
+0x00004d58    1      4 fcn.00004d58
+0x00004d20    1      4 fcn.00004d20
+0x00004d24    1      4 fcn.00004d24
+0x00004d5c    1      4 fcn.00004d5c
+0x00004d60    1      4 fcn.00004d60
+0x00004d64    1     18 fcn.00004d64
+0x00004d80   53    676 fcn.00004d80
+0x00005134    1     48 fcn.00005134
+0x00004cf4    3     10 fcn.00004cf4
+0x00003b60    1    196 fcn.00003b60
+0x00003c34    3    418 fcn.00003c34
+0x000058ec    5    154 fcn.000058ec
+0x00005c9c    6     98 fcn.00005c9c
+0x000067bc    3     46 fcn.000067bc
+0x000067ea    6     68 fcn.000067ea
+0x000062a0   25    292 fcn.000062a0
+0x00006204   21    132 fcn.00006204
+0x000068cc    1      6 fcn.000068cc
+0x0000685e    3     56 fcn.0000685e
+0x00006624    1     40 fcn.00006624
+0x0000689c    1     30 fcn.0000689c
+0x00006896    1      6 fcn.00006896
+0x0000682e    3     48 fcn.0000682e
+0x000066f0    1      6 fcn.000066f0
+0x00006778    1     60 fcn.00006778
+0x00006c90    5    100 fcn.00006c90
+0x00006500   15    214 fcn.00006500
+0x000068ba    1     18 fcn.000068ba
+0x00006764    3     38 fcn.00006764
+0x00006d10    1     36 fcn.00006d10
+0x00006710   10     72 fcn.00006710
+0x00006720    6    114 fcn.00006720
+0x00006718    1      8 fcn.00006718
+0x00006708    2     12 fcn.00006708
+0x00006d3c    1     72 fcn.00006d3c
+0x00005e6c    5     64 fcn.00005e6c
+0x00005ec0   56    656 fcn.00005ec0
+0x00006d90   13     88 fcn.00006d90
+0x00006de8   23    372 fcn.00006de8
+0x00007434    1      8 fcn.00007434
+0x0000742c    1      8 fcn.0000742c
+0x0000743c    1      8 fcn.0000743c
+0x00007444    1     68 fcn.00007444
+0x000074b0    1      8 fcn.000074b0

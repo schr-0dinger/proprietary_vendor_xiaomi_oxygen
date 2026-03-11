@@ -1,0 +1,353 @@
+arch     arm
+baddr    0x0
+binsz    27244
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                                    demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+39  0x0000314c 0x0000314c GLOBAL FUNC 132      _ZN14ReferenceMeterC1E9MeterInfo                                                        ReferenceMeter::ReferenceMeter(MeterInfo)
+46  0x00003554 0x00003554 GLOBAL FUNC 48       _ZN14ReferenceMeter5startEv                                                             ReferenceMeter::start()
+47  0x0000314c 0x0000314c GLOBAL FUNC 132      _ZN14ReferenceMeterC2E9MeterInfo                                                        ReferenceMeter::ReferenceMeter(MeterInfo)
+48  0x0000311c 0x0000311c GLOBAL FUNC 48       _ZN14ReferenceMeterC2ERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE ReferenceMeter::ReferenceMeter(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&)
+49  ---------- 0x00007450 GLOBAL OBJ  1        _ZN14ReferenceMeter13registerMeterE                                                     ReferenceMeter::registerMeter
+58  0x00006008 0x00006008 GLOBAL OBJ  64       _ZTV14ReferenceMeter                                                                    vtable for ReferenceMeter
+59  0x0000311c 0x0000311c GLOBAL FUNC 48       _ZN14ReferenceMeterC1ERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE ReferenceMeter::ReferenceMeter(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&)
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x618 0x000002a8   0x618 -r-- DYNSYM      .dynsym
+4   0x000008c0    0x82 0x000008c0    0x82 -r-- GNU_VERSYM  .gnu.version
+5   0x00000944    0x50 0x00000944    0x50 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000998    0xd0 0x00000998    0xd0 -r-- GNU_HASH    .gnu.hash
+7   0x00000a68  0x1189 0x00000a68  0x1189 -r-- STRTAB      .dynstr
+8   0x00001bf8    0xc3 0x00001bf8    0xc3 -r-- ----        .rela.dyn
+9   0x00001cc0    0x10 0x00001cc0    0x10 -r-- ----        .relr.dyn
+10  0x00001cd0   0x3a8 0x00001cd0   0x3a8 -r-- RELA        .rela.plt
+11  0x00002078   0x114 0x00002078   0x114 -r-- PROGBITS    .gcc_except_table
+12  0x0000218c    0xdf 0x0000218c    0xdf -r-- PROGBITS    .rodata
+13  0x0000226c   0x10c 0x0000226c   0x10c -r-- PROGBITS    .eh_frame_hdr
+14  0x00002378   0x4b4 0x00002378   0x4b4 -r-- PROGBITS    .eh_frame
+15  0x00003000  0x2468 0x00003000  0x2468 -r-x PROGBITS    .text
+16  0x00005470   0x290 0x00005470   0x290 -r-x PROGBITS    .plt
+17  0x00006000    0x88 0x00006000    0x88 -rw- PROGBITS    .data.rel.ro
+18  0x00006088    0x10 0x00006088    0x10 -rw- FINI_ARRAY  .fini_array
+19  0x00006098     0x8 0x00006098     0x8 -rw- INIT_ARRAY  .init_array
+20  0x000060a0   0x210 0x000060a0   0x210 -rw- DYNAMIC     .dynamic
+21  0x000062b0    0x48 0x000062b0    0x48 -rw- PROGBITS    .got
+22  0x000062f8   0x150 0x000062f8   0x150 -rw- PROGBITS    .got.plt
+23  0x00006448     0x8 0x00007448     0x8 -rw- PROGBITS    .data
+24  0x00006450     0x0 0x00007450     0x1 -rw- NOBITS      .bss
+25  0x00006450   0x114 0x00000000   0x114 ---- STRTAB      .shstrtab
+26  0x00006564   0x508 0x00000000   0x508 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 5   12                       utf16le @8\n@\e
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x000002a2 0x000002a2 4   5    .note.gnu.build-id  ascii   -whK
+3   0x000009e8 0x000009e8 6   28   .gnu.hash           utf32le '-16;?
+4   0x00000a0d 0x00000a0d 4   5    .gnu.hash           ascii   BNu\n
+5   0x00000a3b 0x00000a3b 6   8    .gnu.hash           utf8    1\abB\f>
+6   0x00000a69 0x00000a69 14  15   .dynstr             ascii   __cxa_finalize
+7   0x00000a78 0x00000a78 14  15   .dynstr             ascii   _Unwind_Resume
+8   0x00000a87 0x00000a87 58  59   .dynstr             ascii   _Z14createClassObjI5Meter9MeterInfo14ReferenceMeterEPT_T0_
+9   0x00000ac2 0x00000ac2 43  44   .dynstr             ascii   _ZN12RegistryBaseI5Meter9MeterInfoE6mMutexE
+10  0x00000aee 0x00000aee 46  47   .dynstr             ascii   _ZN12RegistryBaseI5Meter9MeterInfoE9classListE
+11  0x00000b1d 0x00000b1d 35  36   .dynstr             ascii   _ZN14ReferenceMeter13registerMeterE
+12  0x00000b41 0x00000b41 27  28   .dynstr             ascii   _ZN14ReferenceMeter5startEv
+13  0x00000b5d 0x00000b5d 32  33   .dynstr             ascii   _ZN14ReferenceMeterC1E9MeterInfo
+14  0x00000b7e 0x00000b7e 87  88   .dynstr             ascii   _ZN14ReferenceMeterC1ERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+15  0x00000bd6 0x00000bd6 32  33   .dynstr             ascii   _ZN14ReferenceMeterC2E9MeterInfo
+16  0x00000bf7 0x00000bf7 87  88   .dynstr             ascii   _ZN14ReferenceMeterC2ERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+17  0x00000c4f 0x00000c4f 86  87   .dynstr             ascii   _ZN5Meter15getAsyncUpdatesERNSt3__16vectorI19AsyncTriggerPayloadNS0_9allocatorIS2_EEEE
+18  0x00000ca6 0x00000ca6 28  29   .dynstr             ascii   _ZN5Meter15getAsyncUpdatesEv
+19  0x00000cc3 0x00000cc3 53  54   .dynstr             ascii   _ZN5Meter18asyncTriggerUpdateERK19AsyncTriggerPayload
+20  0x00000cf9 0x00000cf9 22  23   .dynstr             ascii   _ZN5MeterC2E9MeterInfo
+21  0x00000d10 0x00000d10 77  78   .dynstr             ascii   _ZN5MeterC2ERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+22  0x00000d5e 0x00000d5e 13  14   .dynstr             ascii   _ZN5MeterD2Ev
+23  0x00000d6c 0x00000d6c 62  63   .dynstr             ascii   _ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+24  0x00000dab 0x00000dab 63  64   .dynstr             ascii   _ZNKSt3__121__basic_string_commonILb1EE20__throw_length_errorEv
+25  0x00000deb 0x00000deb 24  25   .dynstr             ascii   _ZNSt11logic_errorC2EPKc
+26  0x00000e04 0x00000e04 23  24   .dynstr             ascii   _ZNSt12length_errorD1Ev
+27  0x00000e1c 0x00000e1c 376 377  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP5Meter9MeterInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE16__construct_nodeIJNS_4pairIPKcSC_EEEEENS_10unique_ptrINS_11__hash_nodeISD_PvEENS_22__hash_node_destructorINS5_ISW_EEEEEEDpOT_
+28  0x00000f95 0x00000f95 355 356  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP5Meter9MeterInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE21__emplace_unique_implIJNS_4pairIPKcSC_EEEEENSP_INS_15__hash_iteratorIPNS_11__hash_nodeISD_PvEEEEbEEDpOT_
+29  0x000010f9 0x000010f9 258 259  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP5Meter9MeterInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE6rehashEm
+30  0x000011fc 0x000011fc 260 261  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP5Meter9MeterInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE8__rehashEm
+31  0x00001301 0x00001301 353 354  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_NS_8equal_toIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_4pairIKS7_S7_EEEEENSK_INS_15__hash_iteratorIPNS_11__hash_nodeIS8_PvEEEEbEERKT_DpOT0_
+32  0x00001463 0x00001463 241 242  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_NS_8equal_toIS7_EELb1EEENS5_IS8_EEE6rehashEm
+33  0x00001555 0x00001555 243 244  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_NS_8equal_toIS7_EELb1EEENS5_IS8_EEE8__rehashEm
+34  0x00001649 0x00001649 236 237  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_NS_8equal_toIS7_EELb1EEENS5_IS8_EEED2Ev
+35  0x00001736 0x00001736 25  26   .dynstr             ascii   _ZNSt3__112__next_primeEm
+36  0x00001750 0x00001750 71  72   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+37  0x00001798 0x00001798 98  99   .dynstr             ascii   _ZNSt3__113__vector_baseINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEED2Ev
+38  0x000017fb 0x000017fb 74  75   .dynstr             ascii   _ZNSt3__127__tree_balance_after_insertIPNS_16__tree_node_baseIPvEEEEvT_S5_
+39  0x00001846 0x00001846 22  23   .dynstr             ascii   _ZNSt3__15mutex4lockEv
+40  0x0000185d 0x0000185d 24  25   .dynstr             ascii   _ZNSt3__15mutex6unlockEv
+41  0x00001876 0x00001876 203 204  .dynstr             ascii   _ZNSt3__16__treeI9AsyncInfoNS_4lessIS1_EENS_9allocatorIS1_EEE12__find_equalIS1_EERPNS_16__tree_node_baseIPvEENS_21__tree_const_iteratorIS1_PNS_11__tree_nodeIS1_S9_EElEERPNS_15__tree_end_nodeISB_EESC_RKT_
+42  0x00001942 0x00001942 95  96   .dynstr             ascii   _ZNSt3__16__treeI9AsyncInfoNS_4lessIS1_EENS_9allocatorIS1_EEE7destroyEPNS_11__tree_nodeIS1_PvEE
+43  0x000019a2 0x000019a2 12  13   .dynstr             ascii   _ZSt7nothrow
+44  0x000019af 0x000019af 15  16   .dynstr             ascii   _ZSt9terminatev
+45  0x000019bf 0x000019bf 19  20   .dynstr             ascii   _ZTISt11logic_error
+46  0x000019d3 0x000019d3 20  21   .dynstr             ascii   _ZTISt12length_error
+47  0x000019e8 0x000019e8 16  17   .dynstr             ascii   _ZTISt9exception
+48  0x000019f9 0x000019f9 19  20   .dynstr             ascii   _ZTSSt11logic_error
+49  0x00001a0d 0x00001a0d 20  21   .dynstr             ascii   _ZTSSt12length_error
+50  0x00001a22 0x00001a22 16  17   .dynstr             ascii   _ZTSSt9exception
+51  0x00001a33 0x00001a33 20  21   .dynstr             ascii   _ZTV14ReferenceMeter
+52  0x00001a48 0x00001a48 37  38   .dynstr             ascii   _ZTVN10__cxxabiv117__class_type_infoE
+53  0x00001a6e 0x00001a6e 40  41   .dynstr             ascii   _ZTVN10__cxxabiv120__si_class_type_infoE
+54  0x00001a97 0x00001a97 20  21   .dynstr             ascii   _ZTVSt12length_error
+55  0x00001aac 0x00001aac 6   7    .dynstr             ascii   _ZdlPv
+56  0x00001ab3 0x00001ab3 20  21   .dynstr             ascii   _ZdlPvRKSt9nothrow_t
+57  0x00001ac8 0x00001ac8 5   6    .dynstr             ascii   _Znwm
+58  0x00001ace 0x00001ace 19  20   .dynstr             ascii   _ZnwmRKSt9nothrow_t
+59  0x00001ae2 0x00001ae2 19  20   .dynstr             ascii   __android_log_print
+60  0x00001af6 0x00001af6 24  25   .dynstr             ascii   __cxa_allocate_exception
+61  0x00001b0f 0x00001b0f 17  18   .dynstr             ascii   __cxa_begin_catch
+62  0x00001b21 0x00001b21 20  21   .dynstr             ascii   __cxa_free_exception
+63  0x00001b36 0x00001b36 11  12   .dynstr             ascii   __cxa_throw
+64  0x00001b42 0x00001b42 20  21   .dynstr             ascii   __gxx_personality_v0
+65  0x00001b57 0x00001b57 16  17   .dynstr             ascii   __stack_chk_fail
+66  0x00001b68 0x00001b68 6   7    .dynstr             ascii   memcmp
+67  0x00001b6f 0x00001b6f 6   7    .dynstr             ascii   memcpy
+68  0x00001b76 0x00001b76 6   7    .dynstr             ascii   strlen
+69  0x00001b7d 0x00001b7d 4   5    .dynstr             ascii   time
+70  0x00001b82 0x00001b82 9   10   .dynstr             ascii   liblog.so
+71  0x00001b8c 0x00001b8c 6   7    .dynstr             ascii   LIBLOG
+72  0x00001b93 0x00001b93 7   8    .dynstr             ascii   libc.so
+73  0x00001b9b 0x00001b9b 4   5    .dynstr             ascii   LIBC
+74  0x00001ba0 0x00001ba0 6   7    .dynstr             ascii   LIBC_R
+75  0x00001ba7 0x00001ba7 12  13   .dynstr             ascii   libcutils.so
+76  0x00001bb4 0x00001bb4 20  21   .dynstr             ascii   liblearningmodule.so
+77  0x00001bc9 0x00001bc9 9   10   .dynstr             ascii   libc++.so
+78  0x00001bd3 0x00001bd3 7   8    .dynstr             ascii   libm.so
+79  0x00001bdb 0x00001bdb 8   9    .dynstr             ascii   libdl.so
+80  0x00001be4 0x00001be4 12  13   .dynstr             ascii   libmeters.so
+81  0x00001bf8 0x00001bf8 4   5    .rela.dyn           ascii   APS2
+82  0x0000218c 0x0000218c 8   9    .rodata             ascii   RefMeter
+83  0x00002195 0x00002195 67  68   .rodata             ascii   allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+84  0x000021d9 0x000021d9 63  64   .rodata             ascii   %s: %s() %d: getMap() returned nullptr, Class %s not registered
+85  0x00002219 0x00002219 13  14   .rodata             ascii   MeterRegistry
+86  0x00002227 0x00002227 12  13   .rodata             ascii   ANDR-PERF-LM
+87  0x00002234 0x00002234 8   9    .rodata             ascii   Registry
+88  0x0000223d 0x0000223d 16  17   .rodata             ascii   St12length_error
+89  0x0000224e 0x0000224e 15  16   .rodata             ascii   St11logic_error
+90  0x0000225e 0x0000225e 12  13   .rodata             ascii   St9exception
+91  0x00002661 0x00002661 4   5    .eh_frame           ascii   zPLR
+92  0x00002724 0x00002724 5   24   .eh_frame           utf32le \b4Ô᥀А
+93  0x0000344b 0x0000344b 4   5    .text               ascii   6`\n@
+94  0x000034c1 0x000034c1 4   5    .text               ascii   B@9\b
+95  0x000034d5 0x000034d5 4   5    .text               ascii   B@9h
+96  0x0000354d 0x0000354d 4   6    .text               utf8    {è \b
+97  0x000035a1 0x000035a1 4   6    .text               utf8    {¨\v\b
+98  0x0000369e 0x0000369e 7   8    .text               ascii   @9+p@9_
+99  0x000036ab 0x000036ab 4   5    .text               ascii   T*$@
+100 0x000036c3 0x000036c3 5   6    .text               ascii   T*p@9
+101 0x0000373b 0x0000373b 4   5    .text               ascii   TL%@
+102 0x0000374f 0x0000374f 5   6    .text               ascii   TLq@9
+103 0x0000379f 0x0000379f 4   5    .text               ascii   Tj @
+104 0x000037c7 0x000037c7 5   6    .text               ascii   Tlq@9
+105 0x00003812 0x00003812 4   6    .text               utf8    _֊\b@
+106 0x0000382e 0x0000382e 7   8    .text               ascii   @9kp@9_
+107 0x0000387b 0x0000387b 4   5    .text               ascii   TL%@
+108 0x0000388f 0x0000388f 5   6    .text               ascii   TLq@9
+109 0x00003977 0x00003977 4   5    .text               ascii   T)\b@
+110 0x0000397c 0x0000397c 5   6    .text               ascii   (a@9\b
+111 0x00003983 0x00003983 4   5    .text               ascii   5(\t@
+112 0x00003c2d 0x00003c2d 4   5    .text               ascii   80.\b
+113 0x00003cf5 0x00003cf5 4   5    .text               ascii   B@9\b
+114 0x00003d09 0x00003d09 4   5    .text               ascii   B@9h
+115 0x00003db1 0x00003db1 4   5    .text               ascii   80.\n
+116 0x00003deb 0x00003deb 5   7    .text               utf8    T\t\vԚ8
+117 0x00003e60 0x00003e60 5   6    .text               ascii   jC@9k
+118 0x00003e8c 0x00003e8c 5   6    .text               ascii   \f\rA8\r
+119 0x00003f04 0x00003f04 5   6    .text               ascii   +\rA8,
+120 0x00003f5c 0x00003f5c 4   5    .text               ascii   +\rA8
+121 0x00003f98 0x00003f98 7   8    .text               ascii   \tA@9\n\r@
+122 0x00003fc0 0x00003fc0 7   8    .text               ascii   \tA@9\n\r@
+123 0x00003ff0 0x00003ff0 7   8    .text               ascii   \tA@9\n\r@
+124 0x000040dd 0x000040dd 4   5    .text               ascii   80.\b
+125 0x0000416f 0x0000416f 5   7    .text               utf8    T\t\tښ(
+126 0x00004184 0x00004184 5   6    .text               ascii   *\rA8+
+127 0x000041bc 0x000041bc 9   10   .text               ascii   JE@9\vki8_
+128 0x00004218 0x00004218 5   6    .text               ascii   *\rA8+
+129 0x00004250 0x00004250 9   10   .text               ascii   JE@9\vki8_
+130 0x000043ef 0x000043ef 5   7    .text               utf8    T*\tښI
+131 0x00004498 0x00004498 5   6    .text               ascii   \b@@9(
+132 0x000044b0 0x000044b0 5   6    .text               ascii   hB@9h
+133 0x00004666 0x00004666 4   7    .text               utf8    ʓ.yɓ
+134 0x0000475a 0x0000475a 4   6    .text               utf8    Mʠ}\b
+135 0x000048f6 0x000048f6 7   8    .text               ascii   @9)hi8J
+136 0x00004a79 0x00004a79 4   5    .text               ascii   B@9h
+137 0x00004bac 0x00004bac 6   7    .text               ascii   (A@9*E
+138 0x00004cd5 0x00004cd5 4   5    .text               ascii   80.\t
+139 0x00004cf7 0x00004cf7 5   7    .text               utf8    TK\tȚj
+140 0x00004d57 0x00004d57 5   7    .text               utf8    TI\tȚ*
+141 0x00004dac 0x00004dac 4   5    .text               ascii   \b@@9
+142 0x00004db3 0x00004db3 6   7    .text               ascii   4hB@9h
+143 0x00004e0d 0x00004e0d 4   5    .text               ascii   80.\b
+144 0x00004e8b 0x00004e8b 5   7    .text               utf8    T\t\tؚ(
+145 0x00004ea0 0x00004ea0 5   6    .text               ascii   *\rA8+
+146 0x00004ed8 0x00004ed8 4   5    .text               ascii   JE@9
+147 0x00004edd 0x00004edd 4   5    .text               ascii   ji8_
+148 0x00004f2c 0x00004f2c 5   6    .text               ascii   *\rA8+
+149 0x00004f64 0x00004f64 4   5    .text               ascii   JE@9
+150 0x00004f69 0x00004f69 4   5    .text               ascii   ji8_
+151 0x0000509d 0x0000509d 4   5    .text               ascii   80.\b
+152 0x00005195 0x00005195 4   5    .text               ascii   80.\n
+153 0x000051cf 0x000051cf 5   7    .text               utf8    T\t\vԚ8
+154 0x00005244 0x00005244 5   6    .text               ascii   jC@9k
+155 0x00005270 0x00005270 5   6    .text               ascii   \f\rA8\r
+156 0x000052e8 0x000052e8 5   6    .text               ascii   +\rA8,
+157 0x00005340 0x00005340 4   5    .text               ascii   +\rA8
+158 0x0000537c 0x0000537c 7   8    .text               ascii   \tA@9\n\r@
+159 0x000053a4 0x000053a4 7   8    .text               ascii   \tA@9\n\r@
+160 0x000053d4 0x000053d4 7   8    .text               ascii   \tA@9\n\r@
+161 0x00006451 0x00000001 11  12   .shstrtab           ascii   .init_array
+162 0x0000645d 0x0000000d 11  12   .shstrtab           ascii   .fini_array
+163 0x00006469 0x00000019 5   6    .shstrtab           ascii   .text
+164 0x0000646f 0x0000001f 4   5    .shstrtab           ascii   .got
+165 0x00006474 0x00000024 19  20   .shstrtab           ascii   .note.android.ident
+166 0x00006488 0x00000038 8   9    .shstrtab           ascii   .got.plt
+167 0x00006491 0x00000041 9   10   .shstrtab           ascii   .rela.plt
+168 0x0000649b 0x0000004b 4   5    .shstrtab           ascii   .bss
+169 0x000064a0 0x00000050 7   8    .shstrtab           ascii   .dynstr
+170 0x000064a8 0x00000058 13  14   .shstrtab           ascii   .eh_frame_hdr
+171 0x000064b6 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+172 0x000064c5 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+173 0x000064d2 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+174 0x000064dc 0x0000008c 9   10   .shstrtab           ascii   .rela.dyn
+175 0x000064e6 0x00000096 12  13   .shstrtab           ascii   .gnu.version
+176 0x000064f3 0x000000a3 7   8    .shstrtab           ascii   .dynsym
+177 0x000064fb 0x000000ab 9   10   .shstrtab           ascii   .gnu.hash
+178 0x00006505 0x000000b5 9   10   .shstrtab           ascii   .eh_frame
+179 0x0000650f 0x000000bf 17  18   .shstrtab           ascii   .gcc_except_table
+180 0x00006521 0x000000d1 18  19   .shstrtab           ascii   .note.gnu.build-id
+181 0x00006534 0x000000e4 8   9    .shstrtab           ascii   .dynamic
+182 0x0000653d 0x000000ed 9   10   .shstrtab           ascii   .shstrtab
+183 0x00006547 0x000000f7 7   8    .shstrtab           ascii   .rodata
+184 0x0000654f 0x000000ff 14  15   .shstrtab           ascii   .gnu_debugdata
+185 0x0000655e 0x0000010e 5   6    .shstrtab           ascii   .data
+186 0x00006565 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+187 0x000065b4 0x00000050 4   6    .gnu_debugdata      utf8    $^ɻ\e
+188 0x00006628 0x000000c4 6   7    .gnu_debugdata      ascii   g!E~}\v
+189 0x00006665 0x00000101 4   5    .gnu_debugdata      ascii   evl_
+190 0x0000667a 0x00000116 5   6    .gnu_debugdata      ascii   \eJAt#
+191 0x000066c4 0x00000160 6   8    .gnu_debugdata      utf8    ݴ)eb6E
+192 0x000066d0 0x0000016c 4   8    .gnu_debugdata      utf8    ꗿSȶ_
+193 0x000066dd 0x00000179 4   6    .gnu_debugdata      utf8    <kT؟
+194 0x000066e7 0x00000183 4   5    .gnu_debugdata      ascii   d\bz.
+195 0x000066ff 0x0000019b 5   7    .gnu_debugdata      utf8    }ɼ_js
+196 0x00006740 0x000001dc 5   6    .gnu_debugdata      ascii   7L>4U
+197 0x00006788 0x00000224 5   7    .gnu_debugdata      utf8    3̃?LS
+198 0x00006795 0x00000231 4   5    .gnu_debugdata      ascii   0^JH
+199 0x000067b0 0x0000024c 4   5    .gnu_debugdata      ascii   \fB!S
+200 0x00006823 0x000002bf 4   5    .gnu_debugdata      ascii   eQ0l
+201 0x0000685f 0x000002fb 4   5    .gnu_debugdata      ascii   w*')
+202 0x0000686c 0x00000308 5   8    .gnu_debugdata      utf8    dy&櫋\r
+203 0x000068b2 0x0000034e 4   6    .gnu_debugdata      utf8    3Y/Ȩ
+204 0x000068e5 0x00000381 5   7    .gnu_debugdata      utf8    ;ֱL\b5
+205 0x000068ef 0x0000038b 5   6    .gnu_debugdata      ascii   O2uO\a
+206 0x00006905 0x000003a1 5   7    .gnu_debugdata      utf8    a(ZՋ\n
+207 0x00006947 0x000003e3 4   5    .gnu_debugdata      ascii   Dq\fe
+208 0x0000694d 0x000003e9 5   6    .gnu_debugdata      ascii   Zz7`u
+209 0x0000698e 0x0000042a 4   5    .gnu_debugdata      ascii   gc7h
+210 0x000069b8 0x00000454 4   5    .gnu_debugdata      ascii   s\b_\t
+211 0x00006a2a 0x000004c6 7   9    .gnu_debugdata      utf8    }r04c۵3
+0x00005490    1     16 sym.imp.__cxa_finalize
+0x00005500    1     16 sym.imp._Unwind_Resume
+0x000054e0    1     16 sym.imp.__android_log_print
+0x00005620    1     16 sym.imp.__cxa_allocate_exception
+0x00005600    1     16 sym.imp.__cxa_begin_catch
+0x00005640    1     16 sym.imp.__cxa_free_exception
+0x00005630    1     16 sym.imp.__cxa_throw
+0x000054f0    1     16 sym.imp.__stack_chk_fail
+0x00005680    1     16 sym.imp.memcmp
+0x000056c0    1     16 sym.imp.memcpy
+0x000056b0    1     16 sym.imp.strlen
+0x000055e0    1     16 sym.imp.time
+0x00003000    1     12 entry0
+0x0000314c    3    112 method.ReferenceMeter.ReferenceMeter_MeterInfo_
+0x000031d0   24    572 method.MeterInfo.MeterInfo_MeterInfo_const_
+0x00005520    1     16 sym.imp.Meter::Meter_MeterInfo_
+0x0000345c   21    248 method.MeterInfo.MeterInfo__
+0x00003ca0   10    140 sym.std::__1::__hash_table_std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1::__unordered_map_hasher_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1::hash_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______true___std::__1::__unordered_map_equal_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1::equal_to_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______true___std::__1::allocator_std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_________::__hash_table__
+0x000035a8   71    784 method.std::__1::__tree_node_base_void__std::__1::__tree_AsyncInfo__std::__1::less_AsyncInfo___std::__1::allocator_AsyncInfo___.__find_equal_AsyncInfo__std::__1::__tree_const_iterator_AsyncInfo__std::__1::__tree_node_AsyncInfo__void___long___std::__1
+0x00004930    5    172 sym.Meter_createClassObj_Meter__MeterInfo__ReferenceMeter__MeterInfo_
+0x00003554    1     48 method.ReferenceMeter.start__
+0x0000311c    1     48 method.ReferenceMeter.ReferenceMeter_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____
+0x00005510    1     16 sym.imp.Meter::Meter_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____
+0x00005110   57    836 reloc._ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP5Meter9MeterInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE8__re
+0x00003ba4   14    268 sym.std::__1::__hash_table_std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1::__unordered_map_hasher_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1::hash_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______true___std::__1::__unordered_map_equal_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1::equal_to_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______true___std::__1::allocator_std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_________::rehash_unsigned_long_
+0x00003ae4    3     64 method.std::__1::__tree_AsyncInfo__std::__1::less_AsyncInfo___std::__1::allocator_AsyncInfo___.destroy_std::__1::__tree_node_AsyncInfo__void__
+0x000055c0    1     16 fcn.000055c0
+0x00004ad4   10    324 reloc._ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP5Meter9MeterInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE16__c
+0x00004a18    9    168 reloc._ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP5Meter9MeterInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE21__e
+0x00004070   59    988 sym._ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered
+0x00005014   14    268 sym._ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP5Meter9MeterInfoEE
+0x00003d2c   57    836 method.std::__1::__hash_table_std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1::__unordered
+0x00003944   27    416 method.void_std::__1::__tree_balance_after_insert_std::__1.__tree_node_base_void___std::__1::__tree_node_base_void___std::__1::__tree_node_base_void__
+0x00003b24   10    128 method.std::__1::__vector_base_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::allocator_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______.__vector_base__
+0x000055f0    1     16 sym.imp.Meter::Meter__
+0x00005590    1     16 sym.imp.std::__1::__vector_base_common_true_::__throw_length_error___const
+0x000056d0    1     16 sym.imp.std::__1::__basic_string_common_true_::__throw_length_error___const
+0x00005650    1     16 sym.imp.std::logic_error::logic_error_char_const_
+0x00005660    1     16 sym.imp.std::__1::__next_prime_unsigned_long_
+0x00005530    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.basic_string_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x000054a0    1     16 sym.imp.std::__1::mutex::lock__
+0x000054d0    1     16 sym.imp.std::__1::mutex::unlock__
+0x00005610    1     16 sym.imp.std::terminate__
+0x000055d0    1     16 sym.imp.operator_delete_void_
+0x00005690    1     16 sym.imp.operator_delete_void__std::nothrow_t_const_
+0x00005550    1     16 sym.imp.operator_new_unsigned_long_
+0x000054b0    1     16 sym.imp.operator_new_unsigned_long__std::nothrow_t_const_
+0x00003010    1      4 entry.fini0
+0x00005454    1     20 entry.init0
+0x000054c0    1     16 fcn.000054c0
+0x00005540    1     16 fcn.00005540
+0x00005560    1     16 fcn.00005560
+0x00005570    1     16 fcn.00005570
+0x00005580    1     16 fcn.00005580
+0x000055a0    1     16 fcn.000055a0
+0x000055b0    1     16 fcn.000055b0
+0x00003914    1     48 method.std::length_error.length_error_char_const_
+0x000038c4    1     80 method.std::__1.__throw_length_error_char_const_
+0x000044dc   16   1108 method.std::__1::__murmur2_or_cityhash_unsigned_long__64ul_.operator___void_const__unsigned_long_
+0x00004480    8     92 method.std::__1::unique_ptr_std::__1::__hash_node_std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______v
+0x000038b8    1     12 sym.__clang_call_terminate
+0x000056a0    1     16 fcn.000056a0
+0x00004c30   18    352 fcn.00004c30
+0x00004d94    6     76 method.std::__1::unique_ptr_std::__1::__hash_node_std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1.allocator_char_____Meter____MeterInfo____void___std::__1::__hash_node_destructor_std::__1::allocator_std::_
+0x00004de0   40    564 fcn.00004de0
+0x000056e0    1     16 fcn.000056e0
+0x00003014   10    236 method.Registry_Meter__MeterInfo__ReferenceMeter_.Registry_char_const_
+0x00003584    1     36 method.ReferenceMeter.ReferenceMeter__
+0x00005470    1     20 section..plt

@@ -1,0 +1,523 @@
+arch     arm
+baddr    0x0
+binsz    45658
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                 demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+31  0x0000411c 0x0000411c GLOBAL FUNC 312      linux_qmi_qmux_if_client_tx_msg
+32  0x00004e3c 0x00004e3c GLOBAL FUNC 572      qmi_linux_get_internal_use_port
+33  0x00008e1c 0x00008e1c GLOBAL FUNC 196      qmi_qmux_if_reg_srvc_avail
+34  0x000075fc 0x000075fc GLOBAL FUNC 172      qmi_qmux_if_set_data_format
+35  0x000044d8 0x000044d8 GLOBAL FUNC 140      qmi_linux_get_conn_id_by_name
+36  0x00008160 0x00008160 GLOBAL FUNC 8        qmi_qmux_if_pwr_up_init
+37  0x00007a88 0x00007a88 GLOBAL FUNC 60       qmi_qmux_if_send_qmi_msg
+38  0x00008780 0x00008780 GLOBAL FUNC 508      qmi_qmux_if_qmi_proxy_send_to_qmux
+39  0x000045a4 0x000045a4 GLOBAL FUNC 2032     qmi_linux_get_conn_id_by_name_ex
+40  0x00004564 0x00004564 GLOBAL FUNC 64       qmi_linux_get_name_by_conn_id
+41  0x0000773c 0x0000773c GLOBAL FUNC 512      qmi_qmux_if_config_pwr_save_settings
+42  0x000079f4 0x000079f4 GLOBAL FUNC 148      qmi_qmux_if_get_pwr_state
+43  0x00007944 0x00007944 GLOBAL FUNC 176      qmi_qmux_if_set_pwr_state
+44  0x00009128 0x00009128 GLOBAL FUNC 148      qmi_util_alloc_and_addref_txn
+45  0x00004384 0x00004384 GLOBAL FUNC 340      qmi_linux_wait_for_sig_with_timeout
+46  0x00008778 0x00008778 GLOBAL FUNC 8        qmi_qmux_if_open_connection
+47  0x0000755c 0x0000755c GLOBAL FUNC 160      qmi_qmux_if_release_service_client
+48  0x00009290 0x00009290 GLOBAL FUNC 192      qmi_util_release_txn
+49  0x000091f4 0x000091f4 GLOBAL FUNC 156      qmi_util_release_txn_no_lock
+50  0x00004d94 0x00004d94 GLOBAL FUNC 168      qmi_format_diag_log_msg
+51  0x00007ac4 0x00007ac4 GLOBAL FUNC 1692     qmi_qmux_if_pwr_up_init_ex
+52  0x000076a8 0x000076a8 GLOBAL FUNC 148      qmi_qmux_if_reg_pwr_save_mode
+53  0x00004014 0x00004014 GLOBAL FUNC 264      linux_qmi_qmux_if_client_init
+54  0x00008ee0 0x00008ee0 GLOBAL FUNC 584      qmi_qmux_if_send_raw_qmi_cntl_msg
+55  0x000094e4 0x000094e4 GLOBAL FUNC 132      qmi_util_get_std_result_code
+56  0x00009474 0x00009474 GLOBAL FUNC 112      qmi_util_write_std_tlv
+57  0x0000897c 0x0000897c GLOBAL FUNC 1184     qmi_qmux_if_get_version_list
+58  0x0000793c 0x0000793c GLOBAL FUNC 8        qmi_qmux_if_is_conn_active
+59  0x00008168 0x00008168 GLOBAL FUNC 1552     qmi_qmux_if_pwr_down_release
+60  0x00006b3c 0x00006b3c GLOBAL FUNC 1876     qmi_qmux_if_send_if_msg_to_qmux
+61  0x00009350 0x00009350 GLOBAL FUNC 120      qmi_util_find_and_addref_txn
+62  0x000093f4 0x000093f4 GLOBAL FUNC 128      qmi_util_read_std_tlv
+63  ---------- 0x0003ff50 GLOBAL OBJ  4        qmi_log_adb_level
+64  ---------- 0x0000bdf8 GLOBAL OBJ  1        qmi_platform_qxdm_init
+65  0x00005078 0x00005078 GLOBAL FUNC 604      qmi_platform_log_raw_qmi_msg
+66  0x000074b0 0x000074b0 GLOBAL FUNC 172      qmi_qmux_if_alloc_service_client
+67  0x000091bc 0x000091bc GLOBAL FUNC 56       qmi_util_service_delete_txn
+68  0x00004254 0x00004254 GLOBAL FUNC 304      linux_qmi_qmux_if_client_release
+69  0x000052d4 0x000052d4 GLOBAL FUNC 5656     qmi_qmux_if_rx_msg
+70  0x000093c8 0x000093c8 GLOBAL FUNC 44       qmi_util_addref_txn_no_lock
+[Sections]
+
+nth paddr         size vaddr         vsize perm type        name
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000      0x0 ---- NULL
+1   0x00000270    0x18 0x00000270     0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288     0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x6a8 0x000002a8    0x6a8 -r-- DYNSYM      .dynsym
+4   0x00000950    0x8e 0x00000950     0x8e -r-- GNU_VERSYM  .gnu.version
+5   0x000009e0    0x40 0x000009e0     0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000a20   0x118 0x00000a20    0x118 -r-- GNU_HASH    .gnu.hash
+7   0x00000b38   0x6c7 0x00000b38    0x6c7 -r-- STRTAB      .dynstr
+8   0x00001200    0x1a 0x00001200     0x1a -r-- ----        .rela.dyn
+9   0x00001220    0x38 0x00001220     0x38 -r-- ----        .relr.dyn
+10  0x00001258   0x408 0x00001258    0x408 -r-- RELA        .rela.plt
+11  0x00001660  0x1300 0x00001660   0x1300 -r-- PROGBITS    .rodata
+12  0x00002960   0x174 0x00002960    0x174 -r-- PROGBITS    .eh_frame_hdr
+13  0x00002ad8   0x69c 0x00002ad8    0x69c -r-- PROGBITS    .eh_frame
+14  0x00004000  0x5568 0x00004000   0x5568 -r-x PROGBITS    .text
+15  0x00009570   0x2d0 0x00009570    0x2d0 -r-x PROGBITS    .plt
+16  0x0000a000   0xa40 0x0000a000    0xa40 -rw- PROGBITS    .data.rel.ro
+17  0x0000aa40    0x10 0x0000aa40     0x10 -rw- FINI_ARRAY  .fini_array
+18  0x0000aa50   0x220 0x0000aa50    0x220 -rw- DYNAMIC     .dynamic
+19  0x0000ac70    0x10 0x0000ac70     0x10 -rw- PROGBITS    .got
+20  0x0000ac80   0x170 0x0000ac80    0x170 -rw- PROGBITS    .got.plt
+21  0x0000adf0     0x4 0x0000bdf0      0x4 -rw- PROGBITS    .data
+22  0x0000adf4     0x0 0x0000bdf8  0x3415c -rw- NOBITS      .bss
+23  0x0000adf4    0xf6 0x00000000     0xf6 ---- STRTAB      .shstrtab
+24  0x0000aeea   0x370 0x00000000    0x370 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x000002a4 0x000002a4 4   5    .note.gnu.build-id  ascii   6\f~<
+3   0x00000a74 0x00000a74 9   40   .gnu.hash           utf32le #&'-259?D
+4   0x00000acb 0x00000acb 5   6    .gnu.hash           ascii   \nCjyE
+5   0x00000ae3 0x00000ae3 6   7    .gnu.hash           ascii   xnw{Cn
+6   0x00000af8 0x00000af8 6   8    .gnu.hash           utf8    J\fnA3Ŋ
+7   0x00000b02 0x00000b02 4   5    .gnu.hash           ascii   a~&8
+8   0x00000b39 0x00000b39 14  15   .dynstr             ascii   __cxa_finalize
+9   0x00000b48 0x00000b48 19  20   .dynstr             ascii   __android_log_print
+10  0x00000b5c 0x00000b5c 16  17   .dynstr             ascii   __stack_chk_fail
+11  0x00000b6d 0x00000b6d 29  30   .dynstr             ascii   linux_qmi_qmux_if_client_init
+12  0x00000b8b 0x00000b8b 32  33   .dynstr             ascii   linux_qmi_qmux_if_client_release
+13  0x00000bac 0x00000bac 31  32   .dynstr             ascii   linux_qmi_qmux_if_client_tx_msg
+14  0x00000bcc 0x00000bcc 11  12   .dynstr             ascii   msg_sprintf
+15  0x00000bd8 0x00000bd8 18  19   .dynstr             ascii   pthread_mutex_lock
+16  0x00000beb 0x00000beb 20  21   .dynstr             ascii   pthread_mutex_unlock
+17  0x00000c00 0x00000c00 23  24   .dynstr             ascii   qmi_format_diag_log_msg
+18  0x00000c18 0x00000c18 17  18   .dynstr             ascii   qmi_log_adb_level
+19  0x00000c2a 0x00000c2a 22  23   .dynstr             ascii   qmi_platform_qxdm_init
+20  0x00000c41 0x00000c41 13  14   .dynstr             ascii   clock_gettime
+21  0x00000c4f 0x00000c4f 7   8    .dynstr             ascii   ds_atoi
+22  0x00000c57 0x00000c57 11  12   .dynstr             ascii   ds_get_epid
+23  0x00000c63 0x00000c63 13  14   .dynstr             ascii   ds_get_target
+24  0x00000c71 0x00000c71 17  18   .dynstr             ascii   ds_get_target_str
+25  0x00000c83 0x00000c83 12  13   .dynstr             ascii   gettimeofday
+26  0x00000c90 0x00000c90 22  23   .dynstr             ascii   pthread_cond_timedwait
+27  0x00000ca7 0x00000ca7 29  30   .dynstr             ascii   qmi_linux_get_conn_id_by_name
+28  0x00000cc5 0x00000cc5 32  33   .dynstr             ascii   qmi_linux_get_conn_id_by_name_ex
+29  0x00000ce6 0x00000ce6 31  32   .dynstr             ascii   qmi_linux_get_internal_use_port
+30  0x00000d06 0x00000d06 29  30   .dynstr             ascii   qmi_linux_get_name_by_conn_id
+31  0x00000d24 0x00000d24 35  36   .dynstr             ascii   qmi_linux_wait_for_sig_with_timeout
+32  0x00000d48 0x00000d48 28  29   .dynstr             ascii   qmi_platform_log_raw_qmi_msg
+33  0x00000d65 0x00000d65 6   7    .dynstr             ascii   strlen
+34  0x00000d6c 0x00000d6c 11  12   .dynstr             ascii   strncasecmp
+35  0x00000d78 0x00000d78 7   8    .dynstr             ascii   strncmp
+36  0x00000d80 0x00000d80 9   10   .dynstr             ascii   vsnprintf
+37  0x00000d8a 0x00000d8a 4   5    .dynstr             ascii   free
+38  0x00000d8f 0x00000d8f 6   7    .dynstr             ascii   getpid
+39  0x00000d96 0x00000d96 6   7    .dynstr             ascii   malloc
+40  0x00000d9d 0x00000d9d 6   7    .dynstr             ascii   memcpy
+41  0x00000da4 0x00000da4 6   7    .dynstr             ascii   memset
+42  0x00000dab 0x00000dab 20  21   .dynstr             ascii   pthread_cond_destroy
+43  0x00000dc0 0x00000dc0 17  18   .dynstr             ascii   pthread_cond_init
+44  0x00000dd2 0x00000dd2 19  20   .dynstr             ascii   pthread_cond_signal
+45  0x00000de6 0x00000de6 24  25   .dynstr             ascii   pthread_condattr_destroy
+46  0x00000dff 0x00000dff 21  22   .dynstr             ascii   pthread_condattr_init
+47  0x00000e15 0x00000e15 25  26   .dynstr             ascii   pthread_condattr_setclock
+48  0x00000e2f 0x00000e2f 21  22   .dynstr             ascii   pthread_mutex_destroy
+49  0x00000e45 0x00000e45 18  19   .dynstr             ascii   pthread_mutex_init
+50  0x00000e58 0x00000e58 32  33   .dynstr             ascii   qmi_qmux_if_alloc_service_client
+51  0x00000e79 0x00000e79 36  37   .dynstr             ascii   qmi_qmux_if_config_pwr_save_settings
+52  0x00000e9e 0x00000e9e 25  26   .dynstr             ascii   qmi_qmux_if_get_pwr_state
+53  0x00000eb8 0x00000eb8 28  29   .dynstr             ascii   qmi_qmux_if_get_version_list
+54  0x00000ed5 0x00000ed5 26  27   .dynstr             ascii   qmi_qmux_if_is_conn_active
+55  0x00000ef0 0x00000ef0 27  28   .dynstr             ascii   qmi_qmux_if_open_connection
+56  0x00000f0c 0x00000f0c 28  29   .dynstr             ascii   qmi_qmux_if_pwr_down_release
+57  0x00000f29 0x00000f29 23  24   .dynstr             ascii   qmi_qmux_if_pwr_up_init
+58  0x00000f41 0x00000f41 26  27   .dynstr             ascii   qmi_qmux_if_pwr_up_init_ex
+59  0x00000f5c 0x00000f5c 34  35   .dynstr             ascii   qmi_qmux_if_qmi_proxy_send_to_qmux
+60  0x00000f7f 0x00000f7f 29  30   .dynstr             ascii   qmi_qmux_if_reg_pwr_save_mode
+61  0x00000f9d 0x00000f9d 26  27   .dynstr             ascii   qmi_qmux_if_reg_srvc_avail
+62  0x00000fb8 0x00000fb8 34  35   .dynstr             ascii   qmi_qmux_if_release_service_client
+63  0x00000fdb 0x00000fdb 18  19   .dynstr             ascii   qmi_qmux_if_rx_msg
+64  0x00000fee 0x00000fee 31  32   .dynstr             ascii   qmi_qmux_if_send_if_msg_to_qmux
+65  0x0000100e 0x0000100e 24  25   .dynstr             ascii   qmi_qmux_if_send_qmi_msg
+66  0x00001027 0x00001027 33  34   .dynstr             ascii   qmi_qmux_if_send_raw_qmi_cntl_msg
+67  0x00001049 0x00001049 27  28   .dynstr             ascii   qmi_qmux_if_set_data_format
+68  0x00001065 0x00001065 25  26   .dynstr             ascii   qmi_qmux_if_set_pwr_state
+69  0x0000107f 0x0000107f 29  30   .dynstr             ascii   qmi_util_alloc_and_addref_txn
+70  0x0000109d 0x0000109d 28  29   .dynstr             ascii   qmi_util_find_and_addref_txn
+71  0x000010ba 0x000010ba 20  21   .dynstr             ascii   qmi_util_release_txn
+72  0x000010cf 0x000010cf 27  28   .dynstr             ascii   qmi_util_addref_txn_no_lock
+73  0x000010eb 0x000010eb 28  29   .dynstr             ascii   qmi_util_get_std_result_code
+74  0x00001108 0x00001108 21  22   .dynstr             ascii   qmi_util_read_std_tlv
+75  0x0000111e 0x0000111e 28  29   .dynstr             ascii   qmi_util_release_txn_no_lock
+76  0x0000113b 0x0000113b 27  28   .dynstr             ascii   qmi_util_service_delete_txn
+77  0x00001157 0x00001157 22  23   .dynstr             ascii   qmi_util_write_std_tlv
+78  0x0000116e 0x0000116e 9   10   .dynstr             ascii   liblog.so
+79  0x00001178 0x00001178 6   7    .dynstr             ascii   LIBLOG
+80  0x0000117f 0x0000117f 7   8    .dynstr             ascii   libc.so
+81  0x00001187 0x00001187 4   5    .dynstr             ascii   LIBC
+82  0x0000118c 0x0000118c 10  11   .dynstr             ascii   libdiag.so
+83  0x00001197 0x00001197 13  14   .dynstr             ascii   libdsutils.so
+84  0x000011a5 0x000011a5 17  18   .dynstr             ascii   libqmiservices.so
+85  0x000011b7 0x000011b7 9   10   .dynstr             ascii   libidl.so
+86  0x000011c1 0x000011c1 12  13   .dynstr             ascii   libcutils.so
+87  0x000011ce 0x000011ce 9   10   .dynstr             ascii   libc++.so
+88  0x000011d8 0x000011d8 7   8    .dynstr             ascii   libm.so
+89  0x000011e0 0x000011e0 8   9    .dynstr             ascii   libdl.so
+90  0x000011e9 0x000011e9 21  22   .dynstr             ascii   libqmi_client_qmux.so
+91  0x00001200 0x00001200 4   5    .rela.dyn           ascii   APS2
+92  0x00001230 0x00001230 13  16   .relr.dyn           utf8    UUUUUUUUk۶m۶m
+93  0x00001240 0x00001240 5   8    .relr.dyn           utf8    m۶m۶m
+94  0x00001248 0x00001248 5   8    .relr.dyn           utf8    m۶m۶m
+95  0x00001660 0x00001660 10  11   .rodata             ascii   rev_rmnet3
+96  0x0000166b 0x0000166b 11  12   .rodata             ascii   rmnet_sdio5
+97  0x00001677 0x00001677 57  58   .rodata             ascii   qmi_qmux_if_rx_msg: Received client_id=%d for service=%d\n
+98  0x000016b1 0x000016b1 10  11   .rodata             ascii   rmnet_mhi1
+99  0x000016bc 0x000016bc 66  67   .rodata             ascii   qmi_qmux_if_pwr_down_release: Released QMUX client handle [%d] %x\n
+100 0x000016ff 0x000016ff 10  11   .rodata             ascii   rev_rmnet2
+101 0x0000170a 0x0000170a 11  12   .rodata             ascii   rmnet_sdio6
+102 0x00001716 0x00001716 80  81   .rodata             ascii   qmi_qmux_if_pwr_down_release: Unable to remove qmux client ID [%d] %x from qmux\n
+103 0x00001767 0x00001767 52  53   .rodata             ascii   qmi_qmux_if_send_raw_qmi_cntl_msg: bad parameter(s)\n
+104 0x0000179c 0x0000179c 79  80   .rodata             ascii   qmi_qmux_if_handle_sys_ind_msg: Could not add qmux_client_id=0x%x to qmuxd [%d]
+105 0x000017ec 0x000017ec 68  69   .rodata             ascii   qmi_qmux_if_unsol_release_service_client: failed to TX msg to QMUXD\n
+106 0x00001831 0x00001831 6   7    .rodata             ascii   rmnet8
+107 0x00001838 0x00001838 10  11   .rodata             ascii   rev_rmnet7
+108 0x00001843 0x00001843 10  11   .rodata             ascii   rmnet_usb1
+109 0x0000184e 0x0000184e 66  67   .rodata             ascii   [%d] %x: MODEM_OUT_OF_SERVICE indication on conn_id=%d, dev_id=%s\n
+110 0x00001891 0x00001891 6   7    .rodata             ascii   rmnet6
+111 0x00001898 0x00001898 14  15   .rodata             ascii   rev_rmnet_usb6
+112 0x000018a7 0x000018a7 57  58   .rodata             ascii   qmi_qmux_if_rx_msg: QMUX IF cmd_data too short size = %d\n
+113 0x000018e1 0x000018e1 60  61   .rodata             ascii   qmi_qmux_if_pwr_up_init_ex:  Initialization failed, rc = %d\n
+114 0x0000191e 0x0000191e 62  63   .rodata             ascii   qmi_qmux_if_handle_sys_ind_msg: Message too small, size is %d\n
+115 0x00001960 0x00001960 10  11   .rodata             ascii   rev_rmnet1
+116 0x0000196b 0x0000196b 11  12   .rodata             ascii   rmnet_smux0
+117 0x00001977 0x00001977 71  72   .rodata             ascii   qmi_qmux_if_handle_sys_ind_msg: adding new qmux_client_id=0x%x to qmuxd
+118 0x000019bf 0x000019bf 63  64   .rodata             ascii   vendor/qcom/proprietary/qmi/platform/linux_qmi_qmux_if_client.c
+119 0x000019ff 0x000019ff 9   10   .rodata             ascii   QC-DS-LIB
+120 0x00001a09 0x00001a09 11  12   .rodata             ascii   rmnet_sdio3
+121 0x00001a15 0x00001a15 62  63   .rodata             ascii   [%d] %x: MODEM_IN_SERVICE indication on conn_id=%d, dev_id=%s\n
+122 0x00001a54 0x00001a54 107 108  .rodata             ascii   qmi_qmux_if_handle_sys_ind_msg: sending QMI_SYS_EVENT_PORT_WRITE_FAIL_IND on conn_id [%d] to client_id [%d]
+123 0x00001ac0 0x00001ac0 44  45   .rodata             ascii   qmi_linux_get_conn_id_by_name: returned [%d]
+124 0x00001aed 0x00001aed 10  11   .rodata             ascii   rev_rmnet4
+125 0x00001af8 0x00001af8 10  11   .rodata             ascii   rmnet_mhi0
+126 0x00001b03 0x00001b03 47  48   .rodata             ascii   qmi_qmux_if_rx_msg: Unable to find TXN ID = %d\n
+127 0x00001b33 0x00001b33 61  62   .rodata             ascii   qmi_qmux_if_send_raw_qmi_cntl_msg: Invalid qmux client ID=%d\n
+128 0x00001b71 0x00001b71 30  31   .rodata             ascii   qmi_client [%d] QMUXD disabled
+129 0x00001b90 0x00001b90 10  11   .rodata             ascii   rmnet_usb4
+130 0x00001b9b 0x00001b9b 52  53   .rodata             ascii   Too many indication ID's configured: num=%d, max=%d\n
+131 0x00001bd0 0x00001bd0 52  53   .rodata             ascii   qmi_qmux_if_pwr_down_release: Invalid client handle\n
+132 0x00001c05 0x00001c05 71  72   .rodata             ascii   qmi_qmux_if_pwr_down_release: Last client releases, performing de-init\n
+133 0x00001c4d 0x00001c4d 48  49   .rodata             ascii   vendor/qcom/proprietary/qmi/qmuxd/qmi_platform.c
+134 0x00001c7e 0x00001c7e 11  12   .rodata             ascii   rmnet2_usb0
+135 0x00001c8a 0x00001c8a 11  12   .rodata             ascii   rmnet2_usb2
+136 0x00001c96 0x00001c96 59  60   .rodata             ascii   Addition of QMUX client %d returns err %d, qmi_err_code %d\n
+137 0x00001cd2 0x00001cd2 54  55   .rodata             ascii   qmi_qmux_if_send_to_qmux: Invalid qmux client ID=0x%x\n
+138 0x00001d09 0x00001d09 74  75   .rodata             ascii   qmi_qmux_if_handle_sys_ind_msg: updating qmux_client_id old=0x%x, new=0x%x
+139 0x00001d54 0x00001d54 64  65   .rodata             ascii   qmi_qmux_if_handle_sys_ind_msg: not updating qmux_client_id=0x%x
+140 0x00001d95 0x00001d95 26  27   .rodata             ascii   Invalid dev id [%s] passed
+141 0x00001db0 0x00001db0 11  12   .rodata             ascii   rmnet_sdio4
+142 0x00001dbc 0x00001dbc 10  11   .rodata             ascii   rev_rmnet6
+143 0x00001dc7 0x00001dc7 11  12   .rodata             ascii   rmnet_sdio1
+144 0x00001dd3 0x00001dd3 10  11   .rodata             ascii   rmnet_usb3
+145 0x00001dde 0x00001dde 50  51   .rodata             ascii   qmi_qmux_if_rx_msg: Message too small, size is %d\n
+146 0x00001e11 0x00001e11 54  55   .rodata             ascii   conn_id=%d, qmux_client_id=0x%x, msg=0x%02x, txid=0x%x
+147 0x00001e48 0x00001e48 81  82   .rodata             ascii   linux_qmi_qmux_if_client_tx_msg qmi_client [%d] %x: unable to locate client data\n
+148 0x00001e9a 0x00001e9a 10  11   .rodata             ascii   rev_rmnet5
+149 0x00001ea5 0x00001ea5 10  11   .rodata             ascii   rmnet_usb6
+150 0x00001eb0 0x00001eb0 11  12   .rodata             ascii   rmnet2_usb3
+151 0x00001ebc 0x00001ebc 55  56   .rodata             ascii   qmi_qmux_if_send_if_msg_to_qmux: NULL cmd_data invalid\n
+152 0x00001ef4 0x00001ef4 53  54   .rodata             ascii   qmi_qmux_if_send_if_msg_to_qmux: Unable to alloc TXN\n
+153 0x00001f2a 0x00001f2a 59  60   .rodata             ascii   qmi_client [%d] %x: release - unable to locate client data\n
+154 0x00001f66 0x00001f66 10  11   .rodata             ascii   rmnet_usb7
+155 0x00001f71 0x00001f71 14  15   .rodata             ascii   rev_rmnet_usb1
+156 0x00001f80 0x00001f80 60  61   .rodata             ascii   qmi_qmux_if_pwr_up_init_ex:  Malloc failed, returning error\n
+157 0x00001fbd 0x00001fbd 10  11   .rodata             ascii   rmnet_ipa0
+158 0x00001fc8 0x00001fc8 14  15   .rodata             ascii   rev_rmnet_usb2
+159 0x00001fd7 0x00001fd7 14  15   .rodata             ascii   rev_rmnet_usb5
+160 0x00001fe6 0x00001fe6 9   10   .rodata             ascii   qmi_proxy
+161 0x00001ff0 0x00001ff0 75  76   .rodata             ascii   qmi_qmux_if_pwr_down_release: qmux_if_client_handle 0x%x not found in list\n
+162 0x0000203c 0x0000203c 6   7    .rodata             ascii   QC-QMI
+163 0x00002043 0x00002043 10  11   .rodata             ascii   rmnet_data
+164 0x0000204e 0x0000204e 20  21   .rodata             ascii   mux_id %d, epid 0x%x
+165 0x00002063 0x00002063 32  33   .rodata             ascii   Setting internal use port to %s\n
+166 0x00002084 0x00002084 6   7    .rodata             ascii   rmnet1
+167 0x0000208b 0x0000208b 14  15   .rodata             ascii   rev_rmnet_usb8
+168 0x0000209a 0x0000209a 11  12   .rodata             ascii   rmnet2_usb5
+169 0x000020a6 0x000020a6 40  41   .rodata             ascii   Sending signal ...... to read cmd data \n
+170 0x000020cf 0x000020cf 11  12   .rodata             ascii   rmnet_sdio0
+171 0x000020db 0x000020db 7   8    .rodata             ascii   rmnet11
+172 0x000020e3 0x000020e3 11  12   .rodata             ascii   rmnet2_usb1
+173 0x000020ef 0x000020ef 27  28   .rodata             ascii   qmi error code.........:%d\n
+174 0x0000210b 0x0000210b 103 104  .rodata             ascii   qmi_qmux_if_complete_sync_txns: completing txn conn_id=%d, qmux_client_id=0x%x, msg_id=0x%02x, txn=0x%x
+175 0x00002173 0x00002173 18  19   .rodata             ascii   Invalid parameters
+176 0x00002186 0x00002186 6   7    .rodata             ascii   rmnet7
+177 0x0000218d 0x0000218d 6   7    .rodata             ascii   rmnet9
+178 0x00002194 0x00002194 11  12   .rodata             ascii   rmnet_sdio2
+179 0x000021a0 0x000021a0 11  12   .rodata             ascii   rmnet2_usb6
+180 0x000021ac 0x000021ac 69  70   .rodata             ascii   qmi_qmux_if_rx_msg:  No RX msg handler found for qmux_client_id = %d\n
+181 0x000021f2 0x000021f2 55  56   .rodata             ascii   Unable to initialize internal use conn_id, dev_name=%s\n
+182 0x0000222a 0x0000222a 94  95   .rodata             ascii   qmi_qmux_if_unsol_release_service_client %x: releasing client=%d for service=%d on conn_id=%d\n
+183 0x00002289 0x00002289 10  11   .rodata             ascii   rmnet_usb0
+184 0x00002294 0x00002294 11  12   .rodata             ascii   rmnet_sdio7
+185 0x000022a0 0x000022a0 11  12   .rodata             ascii   rmnet2_usb4
+186 0x000022ac 0x000022ac 55  56   .rodata             ascii   vendor/qcom/proprietary/qmi/libqmi_legacy/qmi_qmux_if.c
+187 0x000022e4 0x000022e4 69  70   .rodata             ascii   qmi_qmux_if_pwr_down_release: PLATFORM client release fails, rc = %d\n
+188 0x0000232a 0x0000232a 105 106  .rodata             ascii   Getting service version from cache: Conn_id %d, Service %d, Major version %d, Minor version %d..........\n
+189 0x00002394 0x00002394 6   7    .rodata             ascii   rmnet2
+190 0x0000239b 0x0000239b 8   9    .rodata             ascii   not used
+191 0x000023a4 0x000023a4 75  76   .rodata             ascii   qmi_qmux_if_pwr_up_init_ex:  Successfully created and added QMUX client %d\n
+192 0x000023f0 0x000023f0 6   7    .rodata             ascii   rmnet5
+193 0x000023f7 0x000023f7 72  73   .rodata             ascii   qmi_qmux_if_complete_sync_txns: Sending signal ...... to read cmd data \n
+194 0x00002440 0x00002440 10  11   .rodata             ascii   rev_rmnet8
+195 0x0000244b 0x0000244b 10  11   .rodata             ascii   rmnet_usb2
+196 0x00002456 0x00002456 11  12   .rodata             ascii   rmnet2_usb7
+197 0x00002462 0x00002462 27  28   .rodata             ascii   Timeout error.............\n
+198 0x0000247e 0x0000247e 49  50   .rodata             ascii   qmi_qmux_if_handle_sys_ind_msg: unknown msg_id %d
+199 0x000024b0 0x000024b0 37  38   .rodata             ascii   Target: %s, dev_name %s, conn_name %s
+200 0x000024d6 0x000024d6 10  11   .rodata             ascii   rev_rmnet0
+201 0x000024e1 0x000024e1 108 109  .rodata             ascii   qmi_qmux_if_handle_sys_ind_msg: got indication msg_id=%d, but no handler registered for qmux_client_id=0x%x\n
+202 0x0000254e 0x0000254e 6   7    .rodata             ascii   rmnet0
+203 0x00002555 0x00002555 12  13   .rodata             ascii   r_rmnet_data
+204 0x00002562 0x00002562 14  15   .rodata             ascii   rev_rmnet_usb3
+205 0x00002571 0x00002571 13  14   .rodata             ascii   rmnet_invalid
+206 0x0000257f 0x0000257f 73  74   .rodata             ascii   qmi_qmux_if_pwr_down_release: More clients in list, no de-init performed\n
+207 0x000025c9 0x000025c9 93  94   .rodata             ascii   qmi_qmux_if_handle_sys_ind_msg: got indication msg_id=%d, for an invalid qmux_client_id=0x%x\n
+208 0x00002627 0x00002627 6   7    .rodata             ascii   rmnet4
+209 0x0000262e 0x0000262e 7   8    .rodata             ascii   rmnet10
+210 0x00002636 0x00002636 10  11   .rodata             ascii   rmnet_usb5
+211 0x00002641 0x00002641 37  38   .rodata             ascii   qmi_qmux_if_rx_msg: input msg is NULL
+212 0x00002667 0x00002667 66  67   .rodata             ascii   qmi_qmux_if_handle_sys_ind_msg: failed to find qmux_client_id=0x%x
+213 0x000026aa 0x000026aa 6   7    .rodata             ascii   rmnet3
+214 0x000026b1 0x000026b1 14  15   .rodata             ascii   rev_rmnet_usb4
+215 0x000026c0 0x000026c0 19  20   .rodata             ascii   Invalid conn_id:%d\n
+216 0x000026d8 0x000026d8 14  15   .rodata             ascii   rev_rmnet_usb0
+217 0x000026e7 0x000026e7 14  15   .rodata             ascii   rev_rmnet_usb7
+218 0x000026f6 0x000026f6 31  32   .rodata             ascii   qmi sys error code.........:%d\n
+219 0x00002716 0x00002716 21  22   .rodata             ascii   Invalid input handle\n
+220 0x0000272c 0x0000272c 23  24   .rodata             ascii    Number of services:%d\n
+221 0x00002744 0x00002744 91  92   .rodata             ascii   qmi_qmux_if_handle_sys_ind_msg: Sending system event indication %d for qmux_client_id=0x%x\n
+222 0x000027a0 0x000027a0 61  62   .rodata             ascii   qmuxd: get_internal_port(): Target Configuration: [%d]: [%s]\n
+223 0x000027de 0x000027de 82  83   .rodata             ascii   qmi_qmux_if_pwr_up_init_ex: Unable to allocate dynamic memory for RX buf, sz = %d\n
+224 0x00002831 0x00002831 76  77   .rodata             ascii    Sending message control to modem for getting version information..........\n
+225 0x0000291c 0x0000291c 10  11   .rodata             ascii   \t\t\t\t\t\t\t\t\t\t
+226 0x0000292b 0x0000292b 11  12   .rodata             ascii   \t\t\t\t\t\t\t\t\t\t\t
+227 0x0000293c 0x0000293c 16  17   .rodata             ascii   0123456789ABCDEF
+228 0x0000415f 0x0000415f 4   5    .text               ascii   oB 9
+229 0x000043fa 0x000043fa 4   5    .text               ascii   \v\e)}
+230 0x0000442e 0x0000442e 4   5    .text               ascii   \v\v\f}
+231 0x0000443e 0x0000443e 4   5    .text               ascii   \f\eJ}
+232 0x0000445f 0x0000445f 5   7    .text               utf8    T+\tʚ\b
+233 0x000046b3 0x000046b3 4   5    .text               ascii   5wk|
+234 0x00004798 0x00004798 7   8    .text               ascii   +yhxJ\t\v
+235 0x00004836 0x00004836 5   6    .text               ascii   @99?F
+236 0x000048a3 0x000048a3 4   5    .text               ascii   oBT6
+237 0x00004980 0x00004980 7   8    .text               ascii   +ih8J\t\v
+238 0x000049bb 0x000049bb 4   5    .text               ascii   oBT6
+239 0x00004a47 0x00004a47 4   5    .text               ascii   oBT6
+240 0x00004f54 0x00004f54 7   8    .text               ascii   +ih8J\t\v
+241 0x00005117 0x00005117 8   9    .text               ascii   Tij{8\b}@
+242 0x00005130 0x00005130 10  11   .text               ascii   \rki8\fkl8\t\r
+243 0x00005207 0x00005207 4   5    .text               ascii   oBP\e
+244 0x00005217 0x00005217 5   6    .text               ascii   R?I(8
+245 0x0000531f 0x0000531f 4   5    .text               ascii   oBx7
+246 0x00005416 0x00005416 6   7    .text               ascii   @9H9\b6
+247 0x0000550c 0x0000550c 4   11   .text               utf8    ૃ=ৃ=
+248 0x00005596 0x00005596 4   5    .text               ascii   @9H-
+249 0x0000567a 0x0000567a 4   5    .text               ascii   @9(&
+250 0x000057ef 0x000057ef 4   5    .text               ascii   oB\f,
+251 0x00005906 0x00005906 5   6    .text               ascii   @9d&@
+252 0x000059ab 0x000059ab 4   5    .text               ascii   oBx$
+253 0x000059e4 0x000059e4 4   11   .text               utf8    ૃ=ৃ=
+254 0x00005b98 0x00005b98 7   8    .text               ascii   \nyyx)\t\n
+255 0x00005bf8 0x00005bf8 4   11   .text               utf8    ૃ=ৃ=
+256 0x00005cc8 0x00005cc8 4   11   .text               utf8    ૃ=ৃ=
+257 0x00005d2b 0x00005d2b 4   5    .text               ascii   *B8!
+258 0x00005e44 0x00005e44 4   11   .text               utf8    ૃ=ৃ=
+259 0x00005ea7 0x00005ea7 4   5    .text               ascii   *BT(
+260 0x00005f5c 0x00005f5c 4   11   .text               utf8    ૃ=ৃ=
+261 0x00005fb7 0x00005fb7 4   5    .text               ascii   =D\v@
+262 0x00006098 0x00006098 4   11   .text               utf8    ૃ=ৃ=
+263 0x00006188 0x00006188 4   11   .text               utf8    ૃ=ৃ=
+264 0x00006278 0x00006278 4   11   .text               utf8    ૃ=ৃ=
+265 0x00006353 0x00006353 4   5    .text               ascii   oBP5
+266 0x00006388 0x00006388 4   11   .text               utf8    ૃ=ৃ=
+267 0x00006433 0x00006433 4   5    .text               ascii   oB$4
+268 0x00006468 0x00006468 4   11   .text               utf8    ૃ=ৃ=
+269 0x00006568 0x00006568 4   11   .text               utf8    ૃ=ৃ=
+270 0x00006664 0x00006664 4   11   .text               utf8    ૃ=ৃ=
+271 0x00006748 0x00006748 4   11   .text               utf8    ૃ=ৃ=
+272 0x00006854 0x00006854 4   11   .text               utf8    ૃ=ৃ=
+273 0x00006e26 0x00006e26 4   5    .text               ascii   \b\eZ\n
+274 0x000072b9 0x000072b9 4   6    .text               utf8    {¨A\t
+275 0x000073cb 0x000073cb 4   5    .text               ascii   oBH3
+276 0x00007525 0x00007525 4   5    .text               ascii   #@9h
+277 0x0000779f 0x0000779f 4   5    .text               ascii   oBl.
+278 0x000080af 0x000080af 4   5    .text               ascii   oBX2
+279 0x0000852b 0x0000852b 4   5    .text               ascii   oB@/
+280 0x0000879e 0x0000879e 4   6    .text               utf8    \tѨs@
+281 0x00008897 0x00008897 4   5    .text               ascii   oBH3
+282 0x00008adb 0x00008adb 4   5    .text               ascii   RJ+\v
+283 0x00008c9f 0x00008c9f 4   5    .text               ascii   Rk19
+284 0x00008cab 0x00008cab 4   5    .text               ascii   R@/\n
+285 0x00008e88 0x00008e88 5   6    .text               ascii   \t1y9I
+286 0x00008eac 0x00008eac 4   5    .text               ascii   \t199
+287 0x00009213 0x00009213 4   5    .text               ascii   5\t\f@
+288 0x0000941e 0x0000941e 4   5    .text               ascii   @xJ\r
+289 0x000094fa 0x000094fa 4   5    .text               ascii   @xJ\r
+290 0x0000952b 0x0000952b 6   7    .text               ascii   T\bQ@xH
+291 0x0000adf5 0x00000001 11  12   .shstrtab           ascii   .fini_array
+292 0x0000ae01 0x0000000d 5   6    .shstrtab           ascii   .text
+293 0x0000ae07 0x00000013 4   5    .shstrtab           ascii   .got
+294 0x0000ae0c 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+295 0x0000ae20 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+296 0x0000ae29 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+297 0x0000ae33 0x0000003f 4   5    .shstrtab           ascii   .bss
+298 0x0000ae38 0x00000044 7   8    .shstrtab           ascii   .dynstr
+299 0x0000ae40 0x0000004c 13  14   .shstrtab           ascii   .eh_frame_hdr
+300 0x0000ae4e 0x0000005a 14  15   .shstrtab           ascii   .gnu.version_r
+301 0x0000ae5d 0x00000069 12  13   .shstrtab           ascii   .data.rel.ro
+302 0x0000ae6a 0x00000076 9   10   .shstrtab           ascii   .relr.dyn
+303 0x0000ae74 0x00000080 9   10   .shstrtab           ascii   .rela.dyn
+304 0x0000ae7e 0x0000008a 12  13   .shstrtab           ascii   .gnu.version
+305 0x0000ae8b 0x00000097 7   8    .shstrtab           ascii   .dynsym
+306 0x0000ae93 0x0000009f 9   10   .shstrtab           ascii   .gnu.hash
+307 0x0000ae9d 0x000000a9 9   10   .shstrtab           ascii   .eh_frame
+308 0x0000aea7 0x000000b3 18  19   .shstrtab           ascii   .note.gnu.build-id
+309 0x0000aeba 0x000000c6 8   9    .shstrtab           ascii   .dynamic
+310 0x0000aec3 0x000000cf 9   10   .shstrtab           ascii   .shstrtab
+311 0x0000aecd 0x000000d9 7   8    .shstrtab           ascii   .rodata
+312 0x0000aed5 0x000000e1 14  15   .shstrtab           ascii   .gnu_debugdata
+313 0x0000aee4 0x000000f0 5   6    .shstrtab           ascii   .data
+314 0x0000aeeb 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+315 0x0000af25 0x0000003b 4   5    .gnu_debugdata      ascii   p_^{
+316 0x0000af33 0x00000049 4   5    .gnu_debugdata      ascii   XZxh
+317 0x0000af59 0x0000006f 4   5    .gnu_debugdata      ascii   *|:|
+318 0x0000af90 0x000000a6 4   5    .gnu_debugdata      ascii   [b2"
+319 0x0000afad 0x000000c3 4   7    .gnu_debugdata      utf8    &Yûڊ
+320 0x0000afb4 0x000000ca 4   5    .gnu_debugdata      ascii   X|B%
+321 0x0000b011 0x00000127 4   5    .gnu_debugdata      ascii   \an"B
+322 0x0000b01d 0x00000133 5   7    .gnu_debugdata      utf8    ٭G>NQ
+323 0x0000b048 0x0000015e 4   6    .gnu_debugdata      utf8    ܘ e\v
+324 0x0000b068 0x0000017e 7   9    .gnu_debugdata      utf8    EJ'\nK)\v
+325 0x0000b07f 0x00000195 5   7    .gnu_debugdata      utf8    \r4ۧ<d
+326 0x0000b0b2 0x000001c8 4   5    .gnu_debugdata      ascii   ,]v\a
+327 0x0000b118 0x0000022e 8   11   .gnu_debugdata      utf8    xnƼ_vQ&ӌ
+328 0x0000b172 0x00000288 8   10   .gnu_debugdata      utf8    ZŪ0>j\vE9
+329 0x0000b1b8 0x000002ce 4   5    .gnu_debugdata      ascii   xif/
+330 0x0000b1fa 0x00000310 4   5    .gnu_debugdata      ascii   62Ql
+331 0x0000b218 0x0000032e 6   8    .gnu_debugdata      utf8    `i=}n߲
+332 0x0000b223 0x00000339 5   6    .gnu_debugdata      ascii   +tevj
+333 0x0000b230 0x00000346 4   5    .gnu_debugdata      ascii   )Ja)
+0x00009590    1     16 sym.imp.__cxa_finalize
+0x000095d0    1     16 sym.imp.__android_log_print
+0x000095f0    1     16 sym.imp.__stack_chk_fail
+0x000095c0    1     16 sym.imp.msg_sprintf
+0x000095a0    1     16 sym.imp.pthread_mutex_lock
+0x000095e0    1     16 sym.imp.pthread_mutex_unlock
+0x00009600    1     16 sym.imp.clock_gettime
+0x00009670    1     16 sym.imp.ds_atoi
+0x00009680    1     16 sym.imp.ds_get_epid
+0x00009650    1     16 sym.imp.ds_get_target
+0x00009690    1     16 sym.imp.ds_get_target_str
+0x00009610    1     16 sym.imp.gettimeofday
+0x00009620    1     16 sym.imp.pthread_cond_timedwait
+0x00009630    1     16 sym.imp.strlen
+0x00009640    1     16 sym.imp.strncasecmp
+0x00009660    1     16 sym.imp.strncmp
+0x000096a0    1     16 sym.imp.vsnprintf
+0x00009810    1     16 sym.imp.free
+0x00009710    1     16 sym.imp.getpid
+0x000097f0    1     16 sym.imp.malloc
+0x000096d0    1     16 sym.imp.memcpy
+0x000096b0    1     16 sym.imp.memset
+0x000097b0    1     16 sym.imp.pthread_cond_destroy
+0x00009770    1     16 sym.imp.pthread_cond_init
+0x000096e0    1     16 sym.imp.pthread_cond_signal
+0x000097a0    1     16 sym.imp.pthread_condattr_destroy
+0x00009750    1     16 sym.imp.pthread_condattr_init
+0x00009760    1     16 sym.imp.pthread_condattr_setclock
+0x000097c0    1     16 sym.imp.pthread_mutex_destroy
+0x00009780    1     16 sym.imp.pthread_mutex_init
+0x00004000    1     12 entry0
+0x0000411c    7    312 sym.linux_qmi_qmux_if_client_tx_msg
+0x00004e3c   14    536 sym.qmi_linux_get_internal_use_port
+0x00008e1c    5    196 sym.qmi_qmux_if_reg_srvc_avail
+0x000075fc    3    172 sym.qmi_qmux_if_set_data_format
+0x00009720    1     16 fcn.00009720
+0x000044d8    8    140 sym.qmi_linux_get_conn_id_by_name
+0x00008160    2     24 sym.qmi_qmux_if_pwr_up_init
+0x00007a88    1     60 sym.qmi_qmux_if_send_qmi_msg
+0x000072c0   15    496 sym.qmi_qmux_if_send_to_qmux
+0x00008780   13    508 sym.qmi_qmux_if_qmi_proxy_send_to_qmux
+0x000045a4   66   1840 sym.qmi_linux_get_conn_id_by_name_ex
+0x00004564    5     64 sym.qmi_linux_get_name_by_conn_id
+0x0000773c   18    512 sym.qmi_qmux_if_config_pwr_save_settings
+0x000079f4    3    148 sym.qmi_qmux_if_get_pwr_state
+0x00007944    7    176 sym.qmi_qmux_if_set_pwr_state
+0x00009128    5    148 sym.qmi_util_alloc_and_addref_txn
+0x00004384   13    340 sym.qmi_linux_wait_for_sig_with_timeout
+0x00008778    1      8 sym.qmi_qmux_if_open_connection
+0x0000755c    3    160 sym.qmi_qmux_if_release_service_client
+0x00009290   15    192 sym.qmi_util_release_txn
+0x000091f4   13    156 sym.qmi_util_release_txn_no_lock
+0x00004d94    6    168 sym.qmi_format_diag_log_msg
+0x00007ac4   44   1692 sym.qmi_qmux_if_pwr_up_init_ex
+0x000076a8    3    148 sym.qmi_qmux_if_reg_pwr_save_mode
+0x00004014    7    264 sym.linux_qmi_qmux_if_client_init
+0x00008ee0   16    584 sym.qmi_qmux_if_send_raw_qmi_cntl_msg
+0x000094e4    7    132 sym.qmi_util_get_std_result_code
+0x00009474    3    112 sym.qmi_util_write_std_tlv
+0x0000897c   39   1184 sym.qmi_qmux_if_get_version_list
+0x0000793c    1      8 sym.qmi_qmux_if_is_conn_active
+0x00008168   48   1552 sym.qmi_qmux_if_pwr_down_release
+0x00006b3c   51   1876 sym.qmi_qmux_if_send_if_msg_to_qmux
+0x00009350    7    120 sym.qmi_util_find_and_addref_txn
+0x000093f4    5    128 sym.qmi_util_read_std_tlv
+0x00005078   18    604 sym.qmi_platform_log_raw_qmi_msg
+0x000074b0    5    172 sym.qmi_qmux_if_alloc_service_client
+0x000091bc    5     56 sym.qmi_util_service_delete_txn
+0x00004254    7    304 sym.linux_qmi_qmux_if_client_release
+0x000052d4   68   2452 sym.qmi_qmux_if_rx_msg
+0x000093c8    6     44 sym.qmi_util_addref_txn_no_lock
+0x00004010    1      4 entry.fini0
+0x000095b0    1     16 fcn.000095b0
+0x000096c0    1     16 fcn.000096c0
+0x0000690c   12    560 sym.qmi_qmux_if_unsol_release_service_client
+0x000096f0    1     16 fcn.000096f0
+0x00009700    1     16 fcn.00009700
+0x00009730    1     16 fcn.00009730
+0x00009740    1     16 fcn.00009740
+0x00009790    1     16 fcn.00009790
+0x000097d0    1     16 fcn.000097d0
+0x000097e0    1     16 fcn.000097e0
+0x00009800    1     16 fcn.00009800
+0x00009830    1     16 fcn.00009830
+0x00007290    1     48 sym.qmi_qmux_if_txn_delete
+0x00009570    1     20 section..plt

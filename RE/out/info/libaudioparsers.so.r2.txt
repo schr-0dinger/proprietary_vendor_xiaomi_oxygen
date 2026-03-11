@@ -1,0 +1,360 @@
+arch     arm
+baddr    0x0
+binsz    10089
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                       demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+11  0x00000d30 0x00001d30 GLOBAL FUNC 68       get_audio_frame
+12  0x000013d0 0x000023d0 GLOBAL FUNC 216      get_channel_status_ac3
+13  0x000014a8 0x000024a8 GLOBAL FUNC 20       init_audio_parser_ac3
+14  0x00001ba8 0x00002ba8 GLOBAL FUNC 244      get_dts_frame_channel_info
+15  0x0000158c 0x0000258c GLOBAL FUNC 544      get_dts_frame_info
+16  0x000014bc 0x000024bc GLOBAL FUNC 144      get_dts_frame_sync_info
+17  0x000010e4 0x000020e4 GLOBAL FUNC 392      get_ac3_frame
+18  0x00001914 0x00002914 GLOBAL FUNC 556      get_dts_frame
+19  0x00000d74 0x00001d74 GLOBAL FUNC 60       get_first_frame_info
+20  0x00000ce8 0x00001ce8 GLOBAL FUNC 72       get_iec61937_info
+21  0x00000df4 0x00001df4 GLOBAL FUNC 80       init_audio_parser
+22  0x00001338 0x00002338 GLOBAL FUNC 152      get_ac3_frame_channel_info
+23  0x00000fa4 0x00001fa4 GLOBAL FUNC 116      get_ac3_frame_info
+24  0x00000e44 0x00001e44 GLOBAL FUNC 352      get_ac3_frame_sync_info
+25  0x0000181c 0x0000281c GLOBAL FUNC 248      get_dts_first_frame_info
+26  0x000017ac 0x000027ac GLOBAL FUNC 112      get_silent_frame
+27  0x00000db0 0x00001db0 GLOBAL FUNC 68       get_channel_status
+28  0x00001c9c 0x00002c9c GLOBAL FUNC 156      get_channel_status_dts
+29  0x00001d38 0x00002d38 GLOBAL FUNC 20       init_audio_parser_dts
+30  0x00002068 0x00005068 GLOBAL OBJ  228      ac3_fr_sz_code_tbl
+31  0x00001b40 0x00002b40 GLOBAL FUNC 104      set_bits
+32  0x00001018 0x00002018 GLOBAL FUNC 204      get_ac3_first_frame_info
+33  0x0000126c 0x0000226c GLOBAL FUNC 204      init_chan_status
+34  0x0000154c 0x0000254c GLOBAL FUNC 64       extract_bits
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000174    0x18 0x00000174    0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c    0x20 0x0000018c    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0x230 0x000001ac   0x230 -r-- DYNSYM      .dynsym
+4   0x000003dc    0x46 0x000003dc    0x46 -r-- GNU_VERSYM  .gnu.version
+5   0x00000424    0x20 0x00000424    0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000444    0xc8 0x00000444    0xc8 -r-- GNU_HASH    .gnu.hash
+7   0x0000050c   0x28f 0x0000050c   0x28f -r-- STRTAB      .dynstr
+8   0x0000079c    0x13 0x0000079c    0x13 -r-- ----        .rel.dyn
+9   0x000007b0     0x8 0x000007b0     0x8 -r-- ----        .relr.dyn
+10  0x000007b8    0xa8 0x000007b8    0xa8 -r-- ----        .ARM.exidx
+11  0x00000860    0xa8 0x00000860    0xa8 -r-- REL         .rel.plt
+12  0x00000908   0x3cc 0x00000908   0x3cc -r-- PROGBITS    .rodata
+13  0x00000cd4  0x10bc 0x00001cd4  0x10bc -r-x PROGBITS    .text
+14  0x00001d90   0x170 0x00002d90   0x170 -r-x PROGBITS    .plt
+15  0x00001f00     0x4 0x00003f00     0x4 -rw- PROGBITS    .data.rel.ro
+16  0x00001f04     0x8 0x00003f04     0x8 -rw- FINI_ARRAY  .fini_array
+17  0x00001f0c    0xf0 0x00003f0c    0xf0 -rw- DYNAMIC     .dynamic
+18  0x00001ffc     0xc 0x00003ffc     0xc -rw- PROGBITS    .got
+19  0x00002008    0x60 0x00004008    0x60 -rw- PROGBITS    .got.plt
+20  0x00002068    0xe4 0x00005068    0xe4 -rw- PROGBITS    .data
+21  0x0000214c     0x0 0x0000514c    0x20 -rw- NOBITS      .bss
+22  0x0000214c    0x4e 0x00000000    0x4e ---- ----        .ARM.attributes
+23  0x0000219a    0xf7 0x00000000    0xf7 ---- STRTAB      .shstrtab
+24  0x00002291   0x4d8 0x00000000   0x4d8 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+3   0x000001a1 0x000001a1 4   5    .note.gnu.build-id  ascii   "lA\t
+4   0x000004e4 0x000004e4 4   5    .gnu.hash           ascii   Jwm<
+5   0x000004ef 0x000004ef 4   5    .gnu.hash           ascii   >Jm\e
+6   0x0000050d 0x0000050d 14  15   .dynstr             ascii   __cxa_finalize
+7   0x0000051c 0x0000051c 7   8    .dynstr             ascii   fprintf
+8   0x00000524 0x00000524 24  25   .dynstr             ascii   get_ac3_first_frame_info
+9   0x0000053d 0x0000053d 13  14   .dynstr             ascii   get_ac3_frame
+10  0x0000054b 0x0000054b 15  16   .dynstr             ascii   get_audio_frame
+11  0x0000055b 0x0000055b 18  19   .dynstr             ascii   get_channel_status
+12  0x0000056e 0x0000056e 22  23   .dynstr             ascii   get_channel_status_ac3
+13  0x00000585 0x00000585 22  23   .dynstr             ascii   get_channel_status_dts
+14  0x0000059c 0x0000059c 24  25   .dynstr             ascii   get_dts_first_frame_info
+15  0x000005b5 0x000005b5 13  14   .dynstr             ascii   get_dts_frame
+16  0x000005c3 0x000005c3 20  21   .dynstr             ascii   get_first_frame_info
+17  0x000005d8 0x000005d8 17  18   .dynstr             ascii   get_iec61937_info
+18  0x000005ea 0x000005ea 17  18   .dynstr             ascii   init_audio_parser
+19  0x000005fc 0x000005fc 21  22   .dynstr             ascii   init_audio_parser_ac3
+20  0x00000612 0x00000612 21  22   .dynstr             ascii   init_audio_parser_dts
+21  0x00000628 0x00000628 6   7    .dynstr             ascii   stderr
+22  0x0000062f 0x0000062f 16  17   .dynstr             ascii   __stack_chk_fail
+23  0x00000640 0x00000640 17  18   .dynstr             ascii   __stack_chk_guard
+24  0x00000652 0x00000652 18  19   .dynstr             ascii   ac3_fr_sz_code_tbl
+25  0x00000665 0x00000665 6   7    .dynstr             ascii   fwrite
+26  0x0000066c 0x0000066c 26  27   .dynstr             ascii   get_ac3_frame_channel_info
+27  0x00000687 0x00000687 18  19   .dynstr             ascii   get_ac3_frame_info
+28  0x0000069a 0x0000069a 23  24   .dynstr             ascii   get_ac3_frame_sync_info
+29  0x000006b2 0x000006b2 16  17   .dynstr             ascii   init_chan_status
+30  0x000006c3 0x000006c3 8   9    .dynstr             ascii   set_bits
+31  0x000006cc 0x000006cc 12  13   .dynstr             ascii   extract_bits
+32  0x000006d9 0x000006d9 4   5    .dynstr             ascii   free
+33  0x000006de 0x000006de 26  27   .dynstr             ascii   get_dts_frame_channel_info
+34  0x000006f9 0x000006f9 18  19   .dynstr             ascii   get_dts_frame_info
+35  0x0000070c 0x0000070c 23  24   .dynstr             ascii   get_dts_frame_sync_info
+36  0x00000724 0x00000724 16  17   .dynstr             ascii   get_silent_frame
+37  0x00000735 0x00000735 6   7    .dynstr             ascii   malloc
+38  0x0000073c 0x0000073c 6   7    .dynstr             ascii   memcpy
+39  0x00000743 0x00000743 6   7    .dynstr             ascii   memset
+40  0x0000074a 0x0000074a 7   8    .dynstr             ascii   libc.so
+41  0x00000752 0x00000752 4   5    .dynstr             ascii   LIBC
+42  0x00000757 0x00000757 11  12   .dynstr             ascii   libutils.so
+43  0x00000763 0x00000763 9   10   .dynstr             ascii   liblog.so
+44  0x0000076d 0x0000076d 9   10   .dynstr             ascii   libc++.so
+45  0x00000777 0x00000777 7   8    .dynstr             ascii   libm.so
+46  0x0000077f 0x0000077f 8   9    .dynstr             ascii   libdl.so
+47  0x00000788 0x00000788 18  19   .dynstr             ascii   libaudioparsers.so
+48  0x0000079c 0x0000079c 4   5    .rel.dyn            ascii   APS2
+49  0x00000908 0x00000908 26  27   .rodata             ascii   invalid ac3 frame size %u\n
+50  0x00000923 0x00000923 17  18   .rodata             ascii   get_iec61937_info
+51  0x00000935 0x00000935 21  22   .rodata             ascii   invalid fscod 0x%02x\n
+52  0x0000094b 0x0000094b 50  51   .rodata             ascii   sample rate %d  ac3_frame_size in 16 bit words %d\n
+53  0x0000097e 0x0000097e 22  23   .rodata             ascii   invalid syncinfo size\n
+54  0x00000995 0x00000995 26  27   .rodata             ascii   %s Invalid sample_rate %u\n
+55  0x000009b0 0x000009b0 28  29   .rodata             ascii   return val of sync_info %d \n
+56  0x000009cd 0x000009cd 39  40   .rodata             ascii   %s : end of file. audio_data_index  %u\n
+57  0x000009f5 0x000009f5 74  75   .rodata             ascii   sync word 0x%04x fscod 0x%02x frmsizcod 0x%02x bsid 0x%02x bsmod = 0x%02x\n
+58  0x00000a40 0x00000a40 13  14   .rodata             ascii   get_ac3_frame
+59  0x00000a4e 0x00000a4e 13  14   .rodata             ascii   get_dts_frame
+60  0x00000a5c 0x00000a5c 26  27   .rodata             ascii   invalid dts frame size %u\n
+61  0x00000a77 0x00000a77 15  16   .rodata             ascii   get_audio_frame
+62  0x00000a87 0x00000a87 48  49   .rodata             ascii   %s : out of bounds for audio stream buffer   %d\n
+63  0x00000ab8 0x00000ab8 17  18   .rodata             ascii   init_audio_parser
+64  0x00000aca 0x00000aca 20  21   .rodata             ascii   invalid bsid 0x%02x\n
+65  0x00000adf 0x00000adf 40  41   .rodata             ascii   Failed to allocate memory for frame hdr\n
+66  0x00000b08 0x00000b08 17  18   .rodata             ascii   Invalid DTS type\n
+67  0x00000b1a 0x00000b1a 26  27   .rodata             ascii   Unsupported codec type %u\n
+68  0x00000b35 0x00000b35 25  26   .rodata             ascii   invalid frmsizcod 0x%02x\n
+69  0x00000b4f 0x00000b4f 16  17   .rodata             ascii   init_chan_status
+70  0x00000b60 0x00000b60 21  22   .rodata             ascii   invalid bsmod 0x%02x\n
+71  0x00000b76 0x00000b76 23  24   .rodata             ascii   Invalid sample rate %d\n
+72  0x00000b8e 0x00000b8e 37  38   .rodata             ascii   audio_data_index %d audio_data_sz %d
+73  0x00000bb4 0x00000bb4 18  19   .rodata             ascii   get_channel_status
+74  0x00000bc7 0x00000bc7 25  26   .rodata             ascii   invalid sync_word 0x%04x\n
+75  0x00000be1 0x00000be1 14  15   .rodata             ascii   read_ac3_frame
+76  0x00000bf0 0x00000bf0 29  30   .rodata             ascii   %s un supported code type %u\n
+77  0x00000c0e 0x00000c0e 29  30   .rodata             ascii   invalid syncinfo word 0x%04x\n
+78  0x00000c2c 0x00000c2c 20  21   .rodata             ascii   %s No frame. errors\n
+79  0x00000c41 0x00000c41 27  28   .rodata             ascii   error %d for codec type %u\n
+80  0x00000c5d 0x00000c5d 14  15   .rodata             ascii   read_dts_frame
+81  0x00000c6c 0x00000c6c 27  28   .rodata             ascii   sync word not matching %x \n
+82  0x00000ceb 0x00001cea 5   6    .text               ascii   h\fHxD
+83  0x00000d0d 0x00001d0c 7   8    .text               ascii   I\aJyDzD
+84  0x00000d57 0x00001d56 5   6    .text               ascii   JyDzD
+85  0x00000dd7 0x00001dd6 5   6    .text               ascii   JyDzD
+86  0x00000e29 0x00001e28 5   6    .text               ascii   JyDzD
+87  0x00000e85 0x00001e84 5   6    .text               ascii   h>HxD
+88  0x00000eab 0x00001eaa 4   5    .text               ascii   \A\A
+89  0x00000ee0 0x00001ee0 4   5    .text               ascii   +IyD
+90  0x00000f26 0x00001f26 4   5    .text               ascii   \eIyD
+91  0x00000f68 0x00001f68 4   5    .text               ascii   \rIyD
+92  0x00000fb1 0x00001fb0 4   5    .text               ascii   K{DS
+93  0x00000fb6 0x00001fb6 4   5    .text               ascii   !@L#
+94  0x00000fbd 0x00001fbc 5   6    .text               ascii   IyD\th
+95  0x0000101d 0x0000201c 5   6    .text               ascii   F)HjF
+96  0x0000102b 0x0000202a 4   5    .text               ascii   h0h\t
+97  0x0000103c 0x0000203c 4   5    .text               ascii   "HxD
+98  0x0000105b 0x0000205a 4   5    .text               ascii   01h\t
+99  0x00001073 0x00002072 7   8    .text               ascii   IL#yD\th
+100 0x00001087 0x00002086 4   5    .text               ascii   IyDQ
+101 0x0000108f 0x0000208e 5   6    .text               ascii   HxD*F
+102 0x000010a3 0x000020a2 4   5    .text               ascii   `1h\t
+103 0x000010eb 0x000020ea 5   6    .text               ascii   FQH\rF
+104 0x000010f7 0x000020f6 8   9    .text               ascii   FxD\ah8h\b
+105 0x0000110c 0x0000210c 4   5    .text               ascii    F)F
+106 0x00001114 0x00002114 4   5    .text               ascii   HN~D
+107 0x00001120 0x00002120 6   7    .text               ascii   1h\nX\bD
+108 0x0000113f 0x0000213e 4   5    .text               ascii   09h\b
+109 0x00001158 0x00002158 5   6    .text               ascii   :IyDQ
+110 0x00001166 0x00002166 4   5    .text               ascii   8HxD
+111 0x0000117a 0x0000217a 6   7    .text               ascii   4HxDCF
+112 0x00001188 0x00002188 4   5    .text               ascii   1IyD
+113 0x000011d2 0x000021d2 6   7    .text               ascii   ph(Dp`
+114 0x000011d9 0x000021d8 4   5    .text               ascii    9h\b
+115 0x000011fd 0x000021fc 6   7    .text               ascii   Ij\byD\r
+116 0x0000120b 0x0000220a 5   6    .text               ascii   JyDzD
+117 0x0000122b 0x0000222a 5   6    .text               ascii   JyDzD
+118 0x00001271 0x00002270 6   7    .text               ascii   F-H\rF\r
+119 0x000012ed 0x000022ec 4   5    .text               ascii   z( \r
+120 0x0000130c 0x0000230c 4   5    .text               ascii   \aHxD
+121 0x00001315 0x00002314 7   8    .text               ascii   I\aJyDzD
+122 0x00001341 0x00002340 8   9    .text               ascii   p IyD\th\n
+123 0x000013d8 0x000023d8 8   9    .text               ascii   w3yD\fh!h
+124 0x000013f6 0x000023f6 7   8    .text               ascii   )IyD\th\n
+125 0x00001476 0x00002476 4   5    .text               ascii   \nHxD
+126 0x0000147d 0x0000247c 5   6    .text               ascii   h\tIyD
+127 0x0000151b 0x0000251a 5   6    .text               ascii   h\nIyD
+128 0x00001570 0x00002570 4   5    .text               ascii   .F3D
+129 0x0000159d 0x0000259c 5   6    .text               ascii   (|D `
+130 0x000015b3 0x000025b2 4   5    .text               ascii   `ah\n
+131 0x0000164b 0x0000264a 6   7    .text               ascii   #\a$yDQ
+132 0x00001674 0x00002674 4   5    .text               ascii   =F,D
+133 0x0000167b 0x0000267a 4   5    .text               ascii   @I\e&
+134 0x000016d4 0x000026d4 6   7    .text               ascii   4F%D6\e
+135 0x0000177d 0x0000277c 5   6    .text               ascii   h\nHxD
+136 0x000017c8 0x000027c8 5   6    .text               ascii   \a ."@
+137 0x00001831 0x00002830 4   5    .text               ascii   h(h\a
+138 0x0000183d 0x0000283c 7   8    .text               ascii   `.HxD@h
+139 0x0000187d 0x0000287c 4   5    .text               ascii   $(h\a
+140 0x0000188b 0x0000288a 4   5    .text               ascii   4(h\a
+141 0x000018c7 0x000028c6 5   6    .text               ascii   h\rIyD
+142 0x000018df 0x000028de 5   6    .text               ascii   h\vIyD
+143 0x0000193b 0x0000293a 5   6    .text               ascii   `HF1F
+144 0x00001944 0x00002944 4   5    .text               ascii   kL|D
+145 0x000019a0 0x000029a0 5   6    .text               ascii   @\t8ao
+146 0x000019c0 0x000029c0 4   5    .text               ascii   `h*F
+147 0x000019d0 0x000029d0 4   5    .text               ascii   !i\bD
+148 0x00001a3c 0x00002a3c 4   5    .text               ascii   0HxD
+149 0x00001a43 0x00002a42 5   6    .text               ascii   h/IyD
+150 0x00001a4a 0x00002a4a 6   7    .text               ascii   ;H*FxD
+151 0x00001a53 0x00002a52 5   6    .text               ascii   h9IyD
+152 0x00001a67 0x00002a66 5   6    .text               ascii   h$IyD
+153 0x00001a7f 0x00002a7e 5   6    .text               ascii   h"IyD
+154 0x00001a8a 0x00002a8a 6   7    .text               ascii   !Hr\bxD
+155 0x00001aa5 0x00002aa4 5   6    .text               ascii   JyDzD
+156 0x00001acd 0x00002acc 5   6    .text               ascii   JyDzD
+157 0x00001c54 0x00002c54 6   7    .text               ascii   5F)Dv\e
+158 0x00001c74 0x00002c74 4   5    .text               ascii   \aH(!
+159 0x00001ca1 0x00002ca0 5   6    .text               ascii   F!HxD
+160 0x00001cef 0x00002cee 4   5    .text               ascii   x\f!a
+161 0x00001d06 0x00002d06 4   5    .text               ascii   \tHxD
+162 0x00001d0d 0x00002d0c 9   10   .text               ascii   h\bI\bJyDzD
+163 0x00001d75 0x00002d74 4   5    .text               ascii   D`G@
+164 0x00001d81 0x00002d80 4   5    .text               ascii   D`G@
+165 0x00002068 0x00005068 8   18   .data               utf16le @@PP``pp
+166 0x000020b4 0x000050b4 8   18   .data               utf16le EFWXhiyz
+167 0x00002100 0x00005100 4   10   .data               utf16le ``xx
+168 0x00002151 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+169 0x0000215c 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+170 0x00002163 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+171 0x0000219b 0x00000001 11  12   .shstrtab           ascii   .fini_array
+172 0x000021a7 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+173 0x000021b2 0x00000018 5   6    .shstrtab           ascii   .text
+174 0x000021b8 0x0000001e 4   5    .shstrtab           ascii   .got
+175 0x000021bd 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+176 0x000021d1 0x00000037 8   9    .shstrtab           ascii   .got.plt
+177 0x000021da 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+178 0x000021e3 0x00000049 4   5    .shstrtab           ascii   .bss
+179 0x000021e8 0x0000004e 15  16   .shstrtab           ascii   .ARM.attributes
+180 0x000021f8 0x0000005e 7   8    .shstrtab           ascii   .dynstr
+181 0x00002200 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+182 0x0000220f 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+183 0x0000221c 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+184 0x00002226 0x0000008c 8   9    .shstrtab           ascii   .rel.dyn
+185 0x0000222f 0x00000095 12  13   .shstrtab           ascii   .gnu.version
+186 0x0000223c 0x000000a2 7   8    .shstrtab           ascii   .dynsym
+187 0x00002244 0x000000aa 9   10   .shstrtab           ascii   .gnu.hash
+188 0x0000224e 0x000000b4 18  19   .shstrtab           ascii   .note.gnu.build-id
+189 0x00002261 0x000000c7 8   9    .shstrtab           ascii   .dynamic
+190 0x0000226a 0x000000d0 9   10   .shstrtab           ascii   .shstrtab
+191 0x00002274 0x000000da 7   8    .shstrtab           ascii   .rodata
+192 0x0000227c 0x000000e2 14  15   .shstrtab           ascii   .gnu_debugdata
+193 0x0000228b 0x000000f1 5   6    .shstrtab           ascii   .data
+194 0x00002292 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+195 0x000022ce 0x0000003d 6   7    .gnu_debugdata      ascii   W\evQD8
+196 0x000022d9 0x00000048 6   8    .gnu_debugdata      utf8    Tl!VӫP
+197 0x000022eb 0x0000005a 4   5    .gnu_debugdata      ascii   Vlxn
+198 0x00002333 0x000000a2 7   10   .gnu_debugdata      utf8    P:K QꠖN
+199 0x0000234d 0x000000bc 5   7    .gnu_debugdata      utf8    r\aoڮ\n
+200 0x00002355 0x000000c4 4   5    .gnu_debugdata      ascii   _PV\e
+201 0x0000235d 0x000000cc 4   7    .gnu_debugdata      utf8    ڃ6zا
+202 0x0000236d 0x000000dc 4   5    .gnu_debugdata      ascii   \(`<
+203 0x00002377 0x000000e6 5   6    .gnu_debugdata      ascii   \t<EbY
+204 0x000023b2 0x00000121 5   6    .gnu_debugdata      ascii   [5R"\n
+205 0x000023eb 0x0000015a 4   5    .gnu_debugdata      ascii   qdF'
+206 0x000023f7 0x00000166 4   5    .gnu_debugdata      ascii   \GYp
+207 0x00002437 0x000001a6 4   5    .gnu_debugdata      ascii   @#n`
+208 0x00002447 0x000001b6 4   5    .gnu_debugdata      ascii   Wc[=
+209 0x0000244f 0x000001be 4   7    .gnu_debugdata      utf8    8iຢ7
+210 0x000024b1 0x00000220 4   5    .gnu_debugdata      ascii   lv.T
+211 0x00002533 0x000002a2 4   5    .gnu_debugdata      ascii   O^eJ
+212 0x0000256d 0x000002dc 4   5    .gnu_debugdata      ascii   o\r*+
+213 0x000025b3 0x00000322 4   5    .gnu_debugdata      ascii   $7pQ
+214 0x000025be 0x0000032d 10  13   .gnu_debugdata      utf8    |w쯽I/jT,\bR
+215 0x00002604 0x00000373 8   9    .gnu_debugdata      ascii   u6JidE$J
+216 0x00002613 0x00000382 5   8    .gnu_debugdata      utf8    ᡤ5?.=
+217 0x0000266f 0x000003de 4   5    .gnu_debugdata      ascii   xQWw
+218 0x00002676 0x000003e5 4   5    .gnu_debugdata      ascii   1jFp
+219 0x000026c8 0x00000437 5   7    .gnu_debugdata      utf8    y՜4_G
+0x00002da4    1     12 sym.imp.__cxa_finalize
+0x00002db0    1     12 sym.imp.fprintf
+0x00002e34    1      8 sym.imp.__stack_chk_fail
+0x00002e1c    1      4 sym.imp.fwrite
+0x00002e64    1      8 sym.imp.free
+0x00002e58    1      4 sym.imp.malloc
+0x00002e88    1      4 sym.imp.memcpy
+0x00002e94    1      8 sym.imp.memset
+0x00001cd4    2     20 entry0
+0x00001d30    7     78 sym.get_audio_frame
+0x00002dc0    1     12 fcn.00002dc0
+0x000023d0   24    374 sym.get_channel_status_ac3
+0x000024a8    1     14 sym.init_audio_parser_ac3
+0x00002ba8    8    232 sym.get_dts_frame_channel_info
+0x0000258c   28    512 sym.get_dts_frame_info
+0x000024bc   10    126 sym.get_dts_frame_sync_info
+0x000020e4   17    334 sym.get_ac3_frame
+0x00002914   31    490 sym.get_dts_frame
+0x00001d74    5     50 sym.get_first_frame_info
+0x00002df0    1     12 fcn.00002df0
+0x00002e00    1     12 fcn.00002e00
+0x00001ce8    3     54 sym.get_iec61937_info
+0x00001df4    7     68 sym.init_audio_parser
+0x00002e30    1      4 fcn.00002e30
+0x00002e40    1      4 fcn.00002e40
+0x00002338   13    138 sym.get_ac3_frame_channel_info
+0x00001fa4    3     90 sym.get_ac3_frame_info
+0x00001e44   16    310 sym.get_ac3_frame_sync_info
+0x0000281c   13    230 sym.get_dts_first_frame_info
+0x000027ac    6    106 sym.get_silent_frame
+0x00001db0    5     54 sym.get_channel_status
+0x00002e10    1     12 fcn.00002e10
+0x00002e20    1     12 fcn.00002e20
+0x00002c9c   16    172 sym.get_channel_status_dts
+0x00002d38    1      2 sym.init_audio_parser_dts
+0x00002b40    7    104 sym.set_bits
+0x00002018    1     14 sym.get_ac3_first_frame_info
+0x0000226c   12    194 sym.init_chan_status
+0x0000254c    4     64 sym.extract_bits
+0x00001ce2    2      6 entry.fini0
+0x00002e50    1      8 fcn.00002e50
+0x00002e60    1      4 fcn.00002e60
+0x00002e70    1     12 fcn.00002e70
+0x00002d60    2     24 sym.__aeabi_memclr
+0x00002d4c    2     16 sym.__aeabi_memcpy
+0x00002e80    1      8 fcn.00002e80
+0x00002e90    1      4 fcn.00002e90
+0x00002ea0    1     12 fcn.00002ea0
+0x00002eb0    1     12 fcn.00002eb0
+0x00002ec0    1     12 fcn.00002ec0
+0x00002ed0    1     12 fcn.00002ed0

@@ -1,0 +1,126 @@
+arch     arm
+baddr    0x0
+binsz    9656
+bintype  elf
+bits     64
+canary   false
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+8   0x00001014 0x00001014 GLOBAL FUNC 224      check_system_health
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000238   0x18 0x00000238   0x18 -r-- NOTE        .note.android.ident
+2   0x00000250   0x20 0x00000250   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270   0xd8 0x00000270   0xd8 -r-- DYNSYM      .dynsym
+4   0x00000348   0x12 0x00000348   0x12 -r-- GNU_VERSYM  .gnu.version
+5   0x0000035c   0x40 0x0000035c   0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x000003a0   0x20 0x000003a0   0x20 -r-- GNU_HASH    .gnu.hash
+7   0x000003c0   0xd7 0x000003c0   0xd7 -r-- STRTAB      .dynstr
+8   0x00000498   0x10 0x00000498   0x10 -r-- ----        .relr.dyn
+9   0x000004a8   0xa8 0x000004a8   0xa8 -r-- RELA        .rela.plt
+10  0x00000550   0xae 0x00000550   0xae -r-- PROGBITS    .rodata
+11  0x00000600   0x2c 0x00000600   0x2c -r-- PROGBITS    .eh_frame_hdr
+12  0x00000630   0x84 0x00000630   0x84 -r-- PROGBITS    .eh_frame
+13  0x00001000   0xf4 0x00001000   0xf4 -r-x PROGBITS    .text
+14  0x00001100   0x90 0x00001100   0x90 -r-x PROGBITS    .plt
+15  0x00002000    0x8 0x00002000    0x8 -rw- PROGBITS    .data.rel.ro
+16  0x00002008   0x10 0x00002008   0x10 -rw- FINI_ARRAY  .fini_array
+17  0x00002018  0x1c0 0x00002018  0x1c0 -rw- DYNAMIC     .dynamic
+18  0x000021d8   0x50 0x000021d8   0x50 -rw- PROGBITS    .got.plt
+19  0x00002228   0xdc 0x00000000   0xdc ---- STRTAB      .shstrtab
+20  0x00002304  0x2b4 0x00000000  0x2b4 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x000003c1 0x000003c1 14  15   .dynstr             ascii   __cxa_finalize
+3   0x000003d0 0x000003d0 23  24   .dynstr             ascii   __android_log_buf_print
+4   0x000003e8 0x000003e8 19  20   .dynstr             ascii   __android_log_print
+5   0x000003fc 0x000003fc 7   8    .dynstr             ascii   __errno
+6   0x00000404 0x00000404 8   9    .dynstr             ascii   __open_2
+7   0x0000040d 0x0000040d 19  20   .dynstr             ascii   check_system_health
+8   0x00000421 0x00000421 5   6    .dynstr             ascii   close
+9   0x00000427 0x00000427 5   6    .dynstr             ascii   ioctl
+10  0x0000042d 0x0000042d 9   10   .dynstr             ascii   liblog.so
+11  0x00000437 0x00000437 6   7    .dynstr             ascii   LIBLOG
+12  0x0000043e 0x0000043e 7   8    .dynstr             ascii   libc.so
+13  0x00000446 0x00000446 4   5    .dynstr             ascii   LIBC
+14  0x0000044b 0x0000044b 12  13   .dynstr             ascii   libcutils.so
+15  0x00000458 0x00000458 11  12   .dynstr             ascii   libutils.so
+16  0x00000464 0x00000464 9   10   .dynstr             ascii   libc++.so
+17  0x0000046e 0x0000046e 7   8    .dynstr             ascii   libm.so
+18  0x00000476 0x00000476 8   9    .dynstr             ascii   libdl.so
+19  0x0000047f 0x0000047f 23  24   .dynstr             ascii   libsystem_health_mon.so
+20  0x00000550 0x00000550 40  41   .rodata             ascii   %s: Successfully initiated health check\n
+21  0x0000057d 0x0000057d 19  20   .rodata             ascii   check_system_health
+22  0x00000591 0x00000591 26  27   .rodata             ascii   /dev/system_health_monitor
+23  0x000005ac 0x000005ac 47  48   .rodata             ascii   %s: Failed to initiate health check - errno %d\n
+24  0x000005dc 0x000005dc 33  34   .rodata             ascii   %s: Failed to open %s - errno %d\n
+25  0x00002229 0x00000001 11  12   .shstrtab           ascii   .fini_array
+26  0x00002235 0x0000000d 5   6    .shstrtab           ascii   .text
+27  0x0000223b 0x00000013 19  20   .shstrtab           ascii   .note.android.ident
+28  0x0000224f 0x00000027 8   9    .shstrtab           ascii   .got.plt
+29  0x00002258 0x00000030 9   10   .shstrtab           ascii   .rela.plt
+30  0x00002262 0x0000003a 7   8    .shstrtab           ascii   .dynstr
+31  0x0000226a 0x00000042 13  14   .shstrtab           ascii   .eh_frame_hdr
+32  0x00002278 0x00000050 14  15   .shstrtab           ascii   .gnu.version_r
+33  0x00002287 0x0000005f 12  13   .shstrtab           ascii   .data.rel.ro
+34  0x00002294 0x0000006c 9   10   .shstrtab           ascii   .relr.dyn
+35  0x0000229e 0x00000076 12  13   .shstrtab           ascii   .gnu.version
+36  0x000022ab 0x00000083 7   8    .shstrtab           ascii   .dynsym
+37  0x000022b3 0x0000008b 9   10   .shstrtab           ascii   .gnu.hash
+38  0x000022bd 0x00000095 9   10   .shstrtab           ascii   .eh_frame
+39  0x000022c7 0x0000009f 18  19   .shstrtab           ascii   .note.gnu.build-id
+40  0x000022da 0x000000b2 8   9    .shstrtab           ascii   .dynamic
+41  0x000022e3 0x000000bb 9   10   .shstrtab           ascii   .shstrtab
+42  0x000022ed 0x000000c5 7   8    .shstrtab           ascii   .rodata
+43  0x000022f5 0x000000cd 14  15   .shstrtab           ascii   .gnu_debugdata
+44  0x00002305 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+45  0x000023a8 0x000000a4 7   9    .gnu_debugdata      utf8    a2.\b1\nܢ
+46  0x000023b1 0x000000ad 4   6    .gnu_debugdata      utf8    ݅~3;
+47  0x000023bb 0x000000b7 4   7    .gnu_debugdata      utf8    _sl
+48  0x000023c5 0x000000c1 4   5    .gnu_debugdata      ascii   E`z\b
+49  0x00002401 0x000000fd 5   6    .gnu_debugdata      ascii   \bF9aW
+50  0x00002448 0x00000144 5   6    .gnu_debugdata      ascii   <X5\ek
+51  0x000024ac 0x000001a8 4   6    .gnu_debugdata      utf8    =U?-
+52  0x000024bb 0x000001b7 4   5    .gnu_debugdata      ascii   \v42p
+53  0x000024f4 0x000001f0 4   5    .gnu_debugdata      ascii   d\t\rH
+54  0x0000254d 0x00000249 5   6    .gnu_debugdata      ascii   /vu\$
+0x00001120    1     16 sym.imp.__cxa_finalize
+0x00001150    1     16 sym.imp.__android_log_buf_print
+0x00001170    1     16 sym.imp.__android_log_print
+0x00001160    1     16 sym.imp.__errno
+0x00001130    1     16 sym.imp.__open_2
+0x00001180    1     16 sym.imp.close
+0x00001140    1     16 sym.imp.ioctl
+0x00001000    1     12 entry0
+0x00001014    7    224 sym.check_system_health
+0x00001010    1      4 entry.fini0
+0x00001100    1     20 section..plt

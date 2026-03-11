@@ -1,0 +1,813 @@
+arch     arm
+baddr    0x0
+binsz    53582
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                                                                          demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+39  0x00005be8 0x00005be8 GLOBAL FUNC 364      _ZN11QRemoteCdfw11startSourceEv                                                                                               QRemoteCdfw::startSource()
+40  0x000076f0 0x000076f0 GLOBAL FUNC 180      _ZN18QDgnssRemoteSource11unsubscribeEv                                                                                        QDgnssRemoteSource::unsubscribe()
+41  0x000077fc 0x000077fc GLOBAL FUNC 8        _ZN20QDgnssRemoteListener14createListenerEmPKc                                                                                QDgnssRemoteListener::createListener(unsigned long, char const*)
+42  0x00007808 0x00007808 GLOBAL FUNC 4        _ZN20QDgnssRemoteListener15reportDataUsageERK18SourceDataUsageMsg                                                             QDgnssRemoteListener::reportDataUsage(SourceDataUsageMsg const&)
+44  0x0000ad28 0x0000ad28 GLOBAL FUNC 80       _ZN16QDgnssBinEncoder17packInjectDataMsgEPK10EncodeDataPKc                                                                    QDgnssBinEncoder::packInjectDataMsg(EncodeData const*, char const*)
+45  0x0000b210 0x0000b210 GLOBAL FUNC 428      _ZN16QDgnssBinDecoder20unpackStartSourceMsgEPK10CdfwIpcMsg                                                                    QDgnssBinDecoder::unpackStartSourceMsg(CdfwIpcMsg const*)
+46  0x00005a20 0x00005a20 GLOBAL FUNC 456      _ZN11QRemoteCdfw15handleStatusMsgEPK10CdfwIpcMsg                                                                              QRemoteCdfw::handleStatusMsg(CdfwIpcMsg const*)
+47  0x00007804 0x00007804 GLOBAL FUNC 4        _ZN20QDgnssRemoteListener11unsubscribeEv                                                                                      QDgnssRemoteListener::unsubscribe()
+49  0x0000c060 0x0000c060 GLOBAL OBJ  40       _ZTV16QRemoteCdfwTimer                                                                                                        vtable for QRemoteCdfwTimer
+50  0x0000a5b8 0x0000a5b8 GLOBAL FUNC 328      _ZN16QDgnssBinEncoder19packGloEphemerisMsgEPK20glonassEphemerisTypePK10EncodeData                                             QDgnssBinEncoder::packGloEphemerisMsg(glonassEphemerisType const*, EncodeData const*)
+51  0x0000b3bc 0x0000b3bc GLOBAL FUNC 284      _ZN16QDgnssBinDecoder12decodeIpcMsgEPK10CdfwIpcMsg                                                                            QDgnssBinDecoder::decodeIpcMsg(CdfwIpcMsg const*)
+52  0x0000b0ec 0x0000b0ec GLOBAL FUNC 292      _ZN16QDgnssBinDecoder21unpackSourceStatusMsgEPK10CdfwIpcMsg                                                                   QDgnssBinDecoder::unpackSourceStatusMsg(CdfwIpcMsg const*)
+54  0x00006a48 0x00006a48 GLOBAL FUNC 356      _ZN11QRemoteCdfw10stopSourceEv                                                                                                QRemoteCdfw::stopSource()
+55  0x0000700c 0x0000700c GLOBAL FUNC 1764     _ZN18QDgnssRemoteSource12createSourceE16QDgnssDataSource22QDgnssInjectDataFormatNSt3__18functionIFv18QDgnssSourceStatusEEEPKc QDgnssRemoteSource::createSource(QDgnssDataSource, QDgnssInjectDataFormat, std::__1::function<void (QDgnssSourceStatus)>, char const*)
+56  0x0000c030 0x0000c030 GLOBAL OBJ  48       _ZTV20QDgnssRemoteListener                                                                                                    vtable for QDgnssRemoteListener
+57  0x0000ac54 0x0000ac54 GLOBAL FUNC 140      _ZN16QDgnssBinEncoder18packStartSourceMsgEPK10EncodeDataPKc                                                                   QDgnssBinEncoder::packStartSourceMsg(EncodeData const*, char const*)
+60  0x0000a0f4 0x0000a0f4 GLOBAL FUNC 264      _ZN16QDgnssBinEncoder17packRefStationMsgEPK16ReferenceStationPK10EncodeData                                                   QDgnssBinEncoder::packRefStationMsg(ReferenceStation const*, EncodeData const*)
+61  0x0000c328 0x0000c328 GLOBAL OBJ  40       _ZTV16QDgnssBinDecoder                                                                                                        vtable for QDgnssBinDecoder
+63  0x00009e74 0x00009e74 GLOBAL FUNC 484      _ZN16QDgnssBinEncoder16createCdfwIpcMsgEtjPKc                                                                                 QDgnssBinEncoder::createCdfwIpcMsg(unsigned short, unsigned int, char const*)
+64  0x0000a3e8 0x0000a3e8 GLOBAL FUNC 464      _ZN16QDgnssBinEncoder19packGpsEphemerisMsgEPK16gpsEphemerisTypePK10EncodeData                                                 QDgnssBinEncoder::packGpsEphemerisMsg(gpsEphemerisType const*, EncodeData const*)
+65  0x000054f0 0x000054f0 GLOBAL FUNC 1328     _ZN11QRemoteCdfw13processIpcMsgEPKcjPKN8loc_util12LocIpcRecverE                                                               QRemoteCdfw::processIpcMsg(char const*, unsigned int, loc_util::LocIpcRecver const*)
+66  0x0000a9fc 0x0000a9fc GLOBAL FUNC 284      _ZN16QDgnssBinEncoder20packSbasEphemerisMsgEPK20sbasGeoEphemerisTypePK10EncodeData                                            QDgnssBinEncoder::packSbasEphemerisMsg(sbasGeoEphemerisType const*, EncodeData const*)
+67  0x00005268 0x00005268 GLOBAL FUNC 580      _ZN11QRemoteCdfwD1Ev                                                                                                          QRemoteCdfw::~QRemoteCdfw()
+70  0x00008ef0 0x00008ef0 GLOBAL FUNC 724      _Z15printRefStationPKh                                                                                                        printRefStation(unsigned char const*)
+71  0x00005014 0x00005014 GLOBAL FUNC 440      _ZN11QRemoteCdfwC1Ev                                                                                                          QRemoteCdfw::QRemoteCdfw()
+72  0x00005268 0x00005268 GLOBAL FUNC 580      _ZN11QRemoteCdfwD2Ev                                                                                                          QRemoteCdfw::~QRemoteCdfw()
+73  0x000077a4 0x000077a4 GLOBAL FUNC 88       _ZN18QDgnssRemoteSource20injectCorrectionDataEPKhj                                                                            QDgnssRemoteSource::injectCorrectionData(unsigned char const*, unsigned int)
+74  0x0000a058 0x0000a058 GLOBAL FUNC 156      _ZN16QDgnssBinEncoder22setListenerRecvMsgHeadEP18BinListenerRecvMsgtj16QDgnssDataSource22QDgnssInjectDataFormatjj             QDgnssBinEncoder::setListenerRecvMsgHead(BinListenerRecvMsg*, unsigned short, unsigned int, QDgnssDataSource, QDgnssInjectDataFormat, unsigned int, unsigned int)
+75  0x0000a700 0x0000a700 GLOBAL FUNC 380      _ZN16QDgnssBinEncoder23packGalileoEphemerisMsgEPK20galileoEphemerisTypePK10EncodeData                                         QDgnssBinEncoder::packGalileoEphemerisMsg(galileoEphemerisType const*, EncodeData const*)
+76  0x00005014 0x00005014 GLOBAL FUNC 440      _ZN11QRemoteCdfwC2Ev                                                                                                          QRemoteCdfw::QRemoteCdfw()
+79  0x000087d8 0x000087d8 GLOBAL FUNC 236      _Z14dgnssMsgString11QDgnssMsgId                                                                                               dgnssMsgString(QDgnssMsgId)
+80  0x00008a34 0x00008a34 GLOBAL FUNC 1212     _Z16printObservationPKh                                                                                                       printObservation(unsigned char const*)
+81  0x0000a87c 0x0000a87c GLOBAL FUNC 384      _ZN16QDgnssBinEncoder19packBdsEphemerisMsgEPK21bdsMbRawEphemerisTypePK10EncodeData                                            QDgnssBinEncoder::packBdsEphemerisMsg(bdsMbRawEphemerisType const*, EncodeData const*)
+82  0x000087a8 0x000087a8 GLOBAL FUNC 48       _Z12cdfwMsgSringt                                                                                                             cdfwMsgSring(unsigned short)
+83  0x0000ace0 0x0000ace0 GLOBAL FUNC 72       _ZN16QDgnssBinEncoder17packStopSourceMsgEPKc                                                                                  QDgnssBinEncoder::packStopSourceMsg(char const*)
+84  0x0000ab18 0x0000ab18 GLOBAL FUNC 136      _ZN16QDgnssBinEncoder20packSessionActiveMsgEPK16SessionActiveMsgPK10EncodeData                                                QDgnssBinEncoder::packSessionActiveMsg(SessionActiveMsg const*, EncodeData const*)
+85  0x00006ea4 0x00006ea4 GLOBAL FUNC 360      _ZN16QRemoteCdfwTimer15timeOutCallbackEv                                                                                      QRemoteCdfwTimer::timeOutCallback()
+87  0x00009578 0x00009578 GLOBAL FUNC 852      _Z17printBdsEphemerisPKh                                                                                                      printBdsEphemeris(unsigned char const*)
+88  0x000098cc 0x000098cc GLOBAL FUNC 868      _Z17printGalEphemerisPKh                                                                                                      printGalEphemeris(unsigned char const*)
+89  0x000091c4 0x000091c4 GLOBAL FUNC 948      _Z17printGpsEphemerisPKh                                                                                                      printGpsEphemeris(unsigned char const*)
+90  0x00005d54 0x00005d54 GLOBAL FUNC 2700     _ZN11QRemoteCdfw18processStartSourceEb                                                                                        QRemoteCdfw::processStartSource(bool)
+92  0x0000ad78 0x0000ad78 GLOBAL FUNC 884      _ZN16QDgnssBinEncoder12encodeIpcMsgEtPK10EncodeDataPKc                                                                        QDgnssBinEncoder::encodeIpcMsg(unsigned short, EncodeData const*, char const*)
+93  0x000088c4 0x000088c4 GLOBAL FUNC 368      _Z18isControlSocketMsgPKcj                                                                                                    isControlSocketMsg(char const*, unsigned int)
+94  0x00006bac 0x00006bac GLOBAL FUNC 760      _ZN11QRemoteCdfw13stopSourceIpcEv                                                                                             QRemoteCdfw::stopSourceIpc()
+96  0x0000c008 0x0000c008 GLOBAL OBJ  40       _ZTV18QDgnssRemoteSource                                                                                                      vtable for QDgnssRemoteSource
+97  0x0000a1fc 0x0000a1fc GLOBAL FUNC 312      _ZN16QDgnssBinEncoder18packObservationMsgEPK16DGnssObservationPK10EncodeData                                                  QDgnssBinEncoder::packObservationMsg(DGnssObservation const*, EncodeData const*)
+98  0x000067e0 0x000067e0 GLOBAL FUNC 616      _ZN11QRemoteCdfw20injectCorrectionDataEPKhj                                                                                   QRemoteCdfw::injectCorrectionData(unsigned char const*, unsigned int)
+101 0x0000c2f8 0x0000c2f8 GLOBAL OBJ  48       _ZTV16QDgnssBinEncoder                                                                                                        vtable for QDgnssBinEncoder
+102 0x0000a334 0x0000a334 GLOBAL FUNC 180      _ZN16QDgnssBinEncoder14packGloBiasMsgEPK11GlonassBiasPK10EncodeData                                                           QDgnssBinEncoder::packGloBiasMsg(GlonassBias const*, EncodeData const*)
+103 ---------- 0x0000d888 GLOBAL OBJ  8        _ZN11QRemoteCdfw9mInstanceE                                                                                                   QRemoteCdfw::mInstance
+105 0x0000840c 0x0000840c GLOBAL FUNC 756      _Z18cdfwGetDebugConfigv                                                                                                       cdfwGetDebugConfig()
+106 0x00009c30 0x00009c30 GLOBAL FUNC 580      _Z18printSessionActivePKh                                                                                                     printSessionActive(unsigned char const*)
+107 0x0000aba0 0x0000aba0 GLOBAL FUNC 180      _ZN16QDgnssBinEncoder13packStatusMsgE18QDgnssSourceStatus                                                                     QDgnssBinEncoder::packStatusMsg(QDgnssSourceStatus)
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0xa20 0x000002a8   0xa20 -r-- DYNSYM      .dynsym
+4   0x00000cc8    0xd8 0x00000cc8    0xd8 -r-- GNU_VERSYM  .gnu.version
+5   0x00000da0    0x40 0x00000da0    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000de0   0x1e8 0x00000de0   0x1e8 -r-- GNU_HASH    .gnu.hash
+7   0x00000fc8  0x125c 0x00000fc8  0x125c -r-- STRTAB      .dynstr
+8   0x00002228   0x114 0x00002228   0x114 -r-- ----        .rela.dyn
+9   0x00002340    0x28 0x00002340    0x28 -r-- ----        .relr.dyn
+10  0x00002368   0x4f8 0x00002368   0x4f8 -r-- RELA        .rela.plt
+11  0x00002860  0x17b9 0x00002860  0x17b9 -r-- PROGBITS    .rodata
+12  0x0000401c   0x28c 0x0000401c   0x28c -r-- PROGBITS    .eh_frame_hdr
+13  0x000042a8   0xa8c 0x000042a8   0xa8c -r-- PROGBITS    .eh_frame
+14  0x00005000  0x64d8 0x00005000  0x64d8 -r-x PROGBITS    .text
+15  0x0000b4e0   0x370 0x0000b4e0   0x370 -r-x PROGBITS    .plt
+16  0x0000c000   0x350 0x0000c000   0x350 -rw- PROGBITS    .data.rel.ro
+17  0x0000c350    0x10 0x0000c350    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x0000c360   0x1e0 0x0000c360   0x1e0 -rw- DYNAMIC     .dynamic
+19  0x0000c540    0x70 0x0000c540    0x70 -rw- PROGBITS    .got
+20  0x0000c5b0   0x1c0 0x0000c5b0   0x1c0 -rw- PROGBITS    .got.plt
+21  0x0000c770   0x114 0x0000d770   0x114 -rw- PROGBITS    .data
+22  0x0000c884     0x0 0x0000d888    0xd0 -rw- NOBITS      .bss
+23  0x0000c884    0xf6 0x00000000    0xf6 ---- STRTAB      .shstrtab
+24  0x0000c97a   0x7d4 0x00000000   0x7d4 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00000e25 0x00000e25 4   5    .gnu.hash           ascii   aB8@
+3   0x00000e70 0x00000e70 17  72   .gnu.hash           utf32le ',.56:=ACGLRUZ]bg
+4   0x00000ec9 0x00000ec9 7   8    .gnu.hash           ascii   =\r\fe1\e.
+5   0x00000ef5 0x00000ef5 4   5    .gnu.hash           ascii   F.BL
+6   0x00000f77 0x00000f77 4   6    .gnu.hash           utf8    O\fOڢ
+7   0x00000f87 0x00000f87 5   6    .gnu.hash           ascii   zK3\a2
+8   0x00000fa5 0x00000fa5 4   5    .gnu.hash           ascii   E1LD
+9   0x00000fc9 0x00000fc9 14  15   .dynstr             ascii   __cxa_finalize
+10  0x00000fd8 0x00000fd8 17  18   .dynstr             ascii   _Z12cdfwMsgSringt
+11  0x00000fea 0x00000fea 26  27   .dynstr             ascii   _Z18isControlSocketMsgPKcj
+12  0x00001005 0x00001005 30  31   .dynstr             ascii   _ZN11QRemoteCdfw10stopSourceEv
+13  0x00001024 0x00001024 31  32   .dynstr             ascii   _ZN11QRemoteCdfw11startSourceEv
+14  0x00001044 0x00001044 63  64   .dynstr             ascii   _ZN11QRemoteCdfw13processIpcMsgEPKcjPKN8loc_util12LocIpcRecverE
+15  0x00001084 0x00001084 33  34   .dynstr             ascii   _ZN11QRemoteCdfw13stopSourceIpcEv
+16  0x000010a6 0x000010a6 48  49   .dynstr             ascii   _ZN11QRemoteCdfw15handleStatusMsgEPK10CdfwIpcMsg
+17  0x000010d7 0x000010d7 38  39   .dynstr             ascii   _ZN11QRemoteCdfw18processStartSourceEb
+18  0x000010fe 0x000010fe 43  44   .dynstr             ascii   _ZN11QRemoteCdfw20injectCorrectionDataEPKhj
+19  0x0000112a 0x0000112a 27  28   .dynstr             ascii   _ZN11QRemoteCdfw9mInstanceE
+20  0x00001146 0x00001146 20  21   .dynstr             ascii   _ZN11QRemoteCdfwC1Ev
+21  0x0000115b 0x0000115b 20  21   .dynstr             ascii   _ZN11QRemoteCdfwC2Ev
+22  0x00001170 0x00001170 20  21   .dynstr             ascii   _ZN11QRemoteCdfwD1Ev
+23  0x00001185 0x00001185 20  21   .dynstr             ascii   _ZN11QRemoteCdfwD2Ev
+24  0x0000119a 0x0000119a 40  41   .dynstr             ascii   _ZN16QRemoteCdfwTimer15timeOutCallbackEv
+25  0x000011c3 0x000011c3 38  39   .dynstr             ascii   _ZN18QDgnssRemoteSource11unsubscribeEv
+26  0x000011ea 0x000011ea 125 126  .dynstr             ascii   _ZN18QDgnssRemoteSource12createSourceE16QDgnssDataSource22QDgnssInjectDataFormatNSt3__18functionIFv18QDgnssSourceStatusEEEPKc
+27  0x00001268 0x00001268 50  51   .dynstr             ascii   _ZN18QDgnssRemoteSource20injectCorrectionDataEPKhj
+28  0x0000129b 0x0000129b 40  41   .dynstr             ascii   _ZN20QDgnssRemoteListener11unsubscribeEv
+29  0x000012c4 0x000012c4 46  47   .dynstr             ascii   _ZN20QDgnssRemoteListener14createListenerEmPKc
+30  0x000012f3 0x000012f3 65  66   .dynstr             ascii   _ZN20QDgnssRemoteListener15reportDataUsageERK18SourceDataUsageMsg
+31  0x00001335 0x00001335 120 121  .dynstr             ascii   _ZN8loc_util6LocIpc19getLocIpcQrtrRecverERKNSt3__110shared_ptrINS_15ILocIpcListenerEEEiiRKNS2_INS_17LocIpcQrtrWatcherEEE
+32  0x000013ae 0x000013ae 43  44   .dynstr             ascii   _ZN8loc_util6LocIpc19getLocIpcQrtrSenderEii
+33  0x000013da 0x000013da 47  48   .dynstr             ascii   _ZN8loc_util6LocIpc24stopNonBlockingListeningEv
+34  0x0000140a 0x0000140a 114 115  .dynstr             ascii   _ZN8loc_util6LocIpc25startNonBlockingListeningERNSt3__110unique_ptrINS_12LocIpcRecverENS1_14default_deleteIS3_EEEE
+35  0x0000147d 0x0000147d 26  27   .dynstr             ascii   _ZN8loc_util7MsgTaskC1EPKc
+36  0x00001498 0x00001498 28  29   .dynstr             ascii   _ZN8loc_util8LocTimer4stopEv
+37  0x000014b5 0x000014b5 30  31   .dynstr             ascii   _ZN8loc_util8LocTimer5startEjb
+38  0x000014d4 0x000014d4 25  26   .dynstr             ascii   _ZN8loc_util8LocTimerC2Ev
+39  0x000014ee 0x000014ee 25  26   .dynstr             ascii   _ZN8loc_util8LocTimerD2Ev
+40  0x00001508 0x00001508 29  30   .dynstr             ascii   _ZN8loc_util9LocThread4stopEv
+41  0x00001526 0x00001526 43  44   .dynstr             ascii   _ZNK8loc_util7MsgTask7sendMsgEPKNS_6LocMsgE
+42  0x00001552 0x00001552 61  62   .dynstr             ascii   _ZNKSt3__119__shared_weak_count13__get_deleterERKSt9type_info
+43  0x00001590 0x00001590 48  49   .dynstr             ascii   _ZNSt3__119__shared_weak_count14__release_weakEv
+44  0x000015c1 0x000015c1 34  35   .dynstr             ascii   _ZNSt3__119__shared_weak_countD2Ev
+45  0x000015e4 0x000015e4 85  86   .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceI11IpcListenerNS_9allocatorIS1_EEE16__on_zero_sharedEv
+46  0x0000163a 0x0000163a 90  91   .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceI11IpcListenerNS_9allocatorIS1_EEE21__on_zero_shared_weakEv
+47  0x00001695 0x00001695 90  91   .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceI16QDgnssBinDecoderNS_9allocatorIS1_EEE16__on_zero_sharedEv
+48  0x000016f0 0x000016f0 95  96   .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceI16QDgnssBinDecoderNS_9allocatorIS1_EEE21__on_zero_shared_weakEv
+49  0x00001750 0x00001750 90  91   .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceI16QDgnssBinEncoderNS_9allocatorIS1_EEE16__on_zero_sharedEv
+50  0x000017ab 0x000017ab 95  96   .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceI16QDgnssBinEncoderNS_9allocatorIS1_EEE21__on_zero_shared_weakEv
+51  0x0000180b 0x0000180b 91  92   .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceI17QRemoteCdfwSourceNS_9allocatorIS1_EEE16__on_zero_sharedEv
+52  0x00001867 0x00001867 96  97   .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceI17QRemoteCdfwSourceNS_9allocatorIS1_EEE21__on_zero_shared_weakEv
+53  0x000018c8 0x000018c8 17  18   .dynstr             ascii   _ZTV11IpcListener
+54  0x000018da 0x000018da 22  23   .dynstr             ascii   _ZTV16QDgnssBinDecoder
+55  0x000018f1 0x000018f1 22  23   .dynstr             ascii   _ZTV16QDgnssBinEncoder
+56  0x00001908 0x00001908 22  23   .dynstr             ascii   _ZTV16QRemoteCdfwTimer
+57  0x0000191f 0x0000191f 23  24   .dynstr             ascii   _ZTV17QRemoteCdfwSource
+58  0x00001937 0x00001937 24  25   .dynstr             ascii   _ZTV18QDgnssRemoteSource
+59  0x00001950 0x00001950 26  27   .dynstr             ascii   _ZTV20QDgnssRemoteListener
+60  0x0000196b 0x0000196b 22  23   .dynstr             ascii   _ZTVN8loc_util6LocIpcE
+61  0x00001982 0x00001982 25  26   .dynstr             ascii   _ZTVN8loc_util9LocThreadE
+62  0x0000199c 0x0000199c 68  69   .dynstr             ascii   _ZTVNSt3__120__shared_ptr_emplaceI11IpcListenerNS_9allocatorIS1_EEEE
+63  0x000019e1 0x000019e1 73  74   .dynstr             ascii   _ZTVNSt3__120__shared_ptr_emplaceI16QDgnssBinDecoderNS_9allocatorIS1_EEEE
+64  0x00001a2b 0x00001a2b 73  74   .dynstr             ascii   _ZTVNSt3__120__shared_ptr_emplaceI16QDgnssBinEncoderNS_9allocatorIS1_EEEE
+65  0x00001a75 0x00001a75 74  75   .dynstr             ascii   _ZTVNSt3__120__shared_ptr_emplaceI17QRemoteCdfwSourceNS_9allocatorIS1_EEEE
+66  0x00001ac0 0x00001ac0 6   7    .dynstr             ascii   _ZdlPv
+67  0x00001ac7 0x00001ac7 5   6    .dynstr             ascii   _Znwm
+68  0x00001acd 0x00001acd 19  20   .dynstr             ascii   __android_log_print
+69  0x00001ae1 0x00001ae1 18  19   .dynstr             ascii   __cxa_pure_virtual
+70  0x00001af4 0x00001af4 16  17   .dynstr             ascii   __stack_chk_fail
+71  0x00001b05 0x00001b05 13  14   .dynstr             ascii   __strlcpy_chk
+72  0x00001b13 0x00001b13 12  13   .dynstr             ascii   __strlen_chk
+73  0x00001b20 0x00001b20 5   6    .dynstr             ascii   abort
+74  0x00001b26 0x00001b26 4   5    .dynstr             ascii   free
+75  0x00001b2b 0x00001b2b 17  18   .dynstr             ascii   get_tag_log_level
+76  0x00001b3d 0x00001b3d 13  14   .dynstr             ascii   get_timestamp
+77  0x00001b4b 0x00001b4b 6   7    .dynstr             ascii   getpid
+78  0x00001b52 0x00001b52 10  11   .dynstr             ascii   loc_logger
+79  0x00001b5d 0x00001b5d 17  18   .dynstr             ascii   log_buffer_insert
+80  0x00001b6f 0x00001b6f 6   7    .dynstr             ascii   malloc
+81  0x00001b76 0x00001b76 6   7    .dynstr             ascii   memcpy
+82  0x00001b7d 0x00001b7d 6   7    .dynstr             ascii   memset
+83  0x00001b84 0x00001b84 6   7    .dynstr             ascii   strcmp
+84  0x00001b8b 0x00001b8b 7   8    .dynstr             ascii   syscall
+85  0x00001b93 0x00001b93 9   10   .dynstr             ascii   vsnprintf
+86  0x00001b9d 0x00001b9d 17  18   .dynstr             ascii   LOC_PATH_GPS_CONF
+87  0x00001baf 0x00001baf 31  32   .dynstr             ascii   _Z14dgnssMsgString11QDgnssMsgId
+88  0x00001bcf 0x00001bcf 22  23   .dynstr             ascii   _Z15printRefStationPKh
+89  0x00001be6 0x00001be6 23  24   .dynstr             ascii   _Z16printObservationPKh
+90  0x00001bfe 0x00001bfe 24  25   .dynstr             ascii   _Z17printBdsEphemerisPKh
+91  0x00001c17 0x00001c17 24  25   .dynstr             ascii   _Z17printGalEphemerisPKh
+92  0x00001c30 0x00001c30 24  25   .dynstr             ascii   _Z17printGpsEphemerisPKh
+93  0x00001c49 0x00001c49 23  24   .dynstr             ascii   _Z18cdfwGetDebugConfigv
+94  0x00001c61 0x00001c61 25  26   .dynstr             ascii   _Z18printSessionActivePKh
+95  0x00001c7b 0x00001c7b 15  16   .dynstr             ascii   __vsnprintf_chk
+96  0x00001c8b 0x00001c8b 18  19   .dynstr             ascii   loc_read_conf_long
+97  0x00001c9e 0x00001c9e 54  55   .dynstr             ascii   _ZN16QDgnssBinEncoder12encodeIpcMsgEtPK10EncodeDataPKc
+98  0x00001cd5 0x00001cd5 57  58   .dynstr             ascii   _ZN16QDgnssBinEncoder13packStatusMsgE18QDgnssSourceStatus
+99  0x00001d0f 0x00001d0f 67  68   .dynstr             ascii   _ZN16QDgnssBinEncoder14packGloBiasMsgEPK11GlonassBiasPK10EncodeData
+100 0x00001d53 0x00001d53 45  46   .dynstr             ascii   _ZN16QDgnssBinEncoder16createCdfwIpcMsgEtjPKc
+101 0x00001d81 0x00001d81 58  59   .dynstr             ascii   _ZN16QDgnssBinEncoder17packInjectDataMsgEPK10EncodeDataPKc
+102 0x00001dbc 0x00001dbc 75  76   .dynstr             ascii   _ZN16QDgnssBinEncoder17packRefStationMsgEPK16ReferenceStationPK10EncodeData
+103 0x00001e08 0x00001e08 44  45   .dynstr             ascii   _ZN16QDgnssBinEncoder17packStopSourceMsgEPKc
+104 0x00001e35 0x00001e35 76  77   .dynstr             ascii   _ZN16QDgnssBinEncoder18packObservationMsgEPK16DGnssObservationPK10EncodeData
+105 0x00001e82 0x00001e82 59  60   .dynstr             ascii   _ZN16QDgnssBinEncoder18packStartSourceMsgEPK10EncodeDataPKc
+106 0x00001ebe 0x00001ebe 82  83   .dynstr             ascii   _ZN16QDgnssBinEncoder19packBdsEphemerisMsgEPK21bdsMbRawEphemerisTypePK10EncodeData
+107 0x00001f11 0x00001f11 81  82   .dynstr             ascii   _ZN16QDgnssBinEncoder19packGloEphemerisMsgEPK20glonassEphemerisTypePK10EncodeData
+108 0x00001f63 0x00001f63 77  78   .dynstr             ascii   _ZN16QDgnssBinEncoder19packGpsEphemerisMsgEPK16gpsEphemerisTypePK10EncodeData
+109 0x00001fb1 0x00001fb1 82  83   .dynstr             ascii   _ZN16QDgnssBinEncoder20packSbasEphemerisMsgEPK20sbasGeoEphemerisTypePK10EncodeData
+110 0x00002004 0x00002004 78  79   .dynstr             ascii   _ZN16QDgnssBinEncoder20packSessionActiveMsgEPK16SessionActiveMsgPK10EncodeData
+111 0x00002053 0x00002053 113 114  .dynstr             ascii   _ZN16QDgnssBinEncoder22setListenerRecvMsgHeadEP18BinListenerRecvMsgtj16QDgnssDataSource22QDgnssInjectDataFormatjj
+112 0x000020c5 0x000020c5 85  86   .dynstr             ascii   _ZN16QDgnssBinEncoder23packGalileoEphemerisMsgEPK20galileoEphemerisTypePK10EncodeData
+113 0x0000211b 0x0000211b 50  51   .dynstr             ascii   _ZN16QDgnssBinDecoder12decodeIpcMsgEPK10CdfwIpcMsg
+114 0x0000214e 0x0000214e 58  59   .dynstr             ascii   _ZN16QDgnssBinDecoder20unpackStartSourceMsgEPK10CdfwIpcMsg
+115 0x00002189 0x00002189 59  60   .dynstr             ascii   _ZN16QDgnssBinDecoder21unpackSourceStatusMsgEPK10CdfwIpcMsg
+116 0x000021c5 0x000021c5 9   10   .dynstr             ascii   liblog.so
+117 0x000021cf 0x000021cf 6   7    .dynstr             ascii   LIBLOG
+118 0x000021d6 0x000021d6 7   8    .dynstr             ascii   libc.so
+119 0x000021de 0x000021de 4   5    .dynstr             ascii   LIBC
+120 0x000021e3 0x000021e3 15  16   .dynstr             ascii   libgps.utils.so
+121 0x000021f3 0x000021f3 9   10   .dynstr             ascii   libc++.so
+122 0x000021fd 0x000021fd 7   8    .dynstr             ascii   libm.so
+123 0x00002205 0x00002205 8   9    .dynstr             ascii   libdl.so
+124 0x0000220e 0x0000220e 21  22   .dynstr             ascii   libcdfw_remote_api.so
+125 0x00002228 0x00002228 5   6    .rela.dyn           ascii   APS2#
+126 0x00002360 0x00002360 4   5    .relr.dyn           ascii   3333
+127 0x00002860 0x00002860 9   10   .rodata             ascii   onReceive
+128 0x0000286a 0x0000286a 41  42   .rodata             ascii   %s:%d] sent CDFW_START_SOURCE_MSG size %d
+129 0x00002894 0x00002894 47  48   .rodata             ascii   %s:%d] Dgnss service is down, drop this message
+130 0x000028c4 0x000028c4 17  18   .rodata             ascii   printGpsEphemeris
+131 0x000028d6 0x000028d6 12  13   .rodata             ascii   encodeIpcMsg
+132 0x000028e3 0x000028e3 64  65   .rodata             ascii   %s:%d] mismatch SOURCE_STATUS_MSG_VER receiver = %d, sender = %d
+133 0x00002924 0x00002924 20  21   .rodata             ascii   unpackStartSourceMsg
+134 0x00002939 0x00002939 35  36   .rodata             ascii   %s:%d] startNonBlockingListening %s
+135 0x0000295d 0x0000295d 40  41   .rodata             ascii   %s:%d] send CDFW_STOP_SOURCE_MSG size %d
+136 0x00002986 0x00002986 62  63   .rodata             ascii   %s:%d] send CDFW_INJECT_DATA_MSG failed, Dgnss service is down
+137 0x000029c5 0x000029c5 15  16   .rodata             ascii   printRefStation
+138 0x000029d5 0x000029d5 25  26   .rodata             ascii   %s %d %ld %s :%s:%d] des\n
+139 0x000029ef 0x000029ef 62  63   .rodata             ascii   %s:%d] send CDFW_STOP_SOURCE_MSG failed, Dgnss service is down
+140 0x00002a2e 0x00002a2e 43  44   .rodata             ascii   %s %d %ld %s :%s:%d] Invalid dataSource %d\n
+141 0x00002a5a 0x00002a5a 15  16   .rodata             ascii   onListenerReady
+142 0x00002a6a 0x00002a6a 17  18   .rodata             ascii   unknown dgnss msg
+143 0x00002a7c 0x00002a7c 441 442  .rodata             ascii   Gps Ephemeris:\n\tSV ID: %u\n\tCode L2: 0x%X\n\tAccuracy: %u\n\tHealth: %u\n\tIodc: %u\n\tP Code Flag : %u\n\tIs PCode Flag Valid: %u\n\tAre SF1 bits valid: %u\n\tTgd: %u\n\tIs Tgd Valid: %u\n\tToc: %u\n\tAf2: %u\n\tAf1: %u\n\tAf0: %u\n\tIode: %u\n\tCrs: %u\n\tDeltaN: %u\n\tM0: %u\n\tCuc: %u\n\te: %u\n\tCus: %u\n\tSqrtA: %u\n\tToe: %u\n\tFit Interval Flag: %u\n\tIs Fit Interval Flag Valid: %u\n\tCic: %u\n\tOmega0: %u\n\tCis: %u\n\tI0: %u\n\tCrc: %u\n\tOmega %u\n\tOmegaDot: %u\n\tiDot: %u\n\tGps Week: %u\n
+144 0x00002c36 0x00002c36 21  22   .rodata             ascii   unpackSourceStatusMsg
+145 0x00002c4c 0x00002c4c 26  27   .rodata             ascii   %s %d %ld %s :%s:%d] cons\n
+146 0x00002c67 0x00002c67 20  21   .rodata             ascii   %s:%d] malloc failed
+147 0x00002c7c 0x00002c7c 20  21   .rodata             ascii   CDFW_INJECT_DATA_MSG
+148 0x00002c91 0x00002c91 13  14   .rodata             ascii   SSR_CODE_BIAS
+149 0x00002c9f 0x00002c9f 14  15   .rodata             ascii   DEBUG_GLO_BIAS
+150 0x00002cae 0x00002cae 44  45   .rodata             ascii   %s %d %ld %s :%s:%d] %s from %s encoding %d\n
+151 0x00002cdb 0x00002cdb 22  23   .rodata             ascii   %s %d %ld %s :%s:%d] \n
+152 0x00002cf2 0x00002cf2 26  27   .rodata             ascii   %s:%d] NULL statusCallback
+153 0x00002d0d 0x00002d0d 16  17   .rodata             ascii   createCdfwIpcMsg
+154 0x00002d1e 0x00002d1e 18  19   .rodata             ascii   processStartSource
+155 0x00002d31 0x00002d31 41  42   .rodata             ascii   %s %d %ld %s :%s:%d] Invalid userName %s\n
+156 0x00002d5b 0x00002d5b 18  19   .rodata             ascii   %s:%d] null source
+157 0x00002d6e 0x00002d6e 63  64   .rodata             ascii   %s %d %ld %s :%s:%d] service is down, will create source later\n
+158 0x00002dae 0x00002dae 30  31   .rodata             ascii   %s:%d] receive %d data from %s
+159 0x00002dcd 0x00002dcd 10  11   .rodata             ascii   QCDFW_Util
+160 0x00002dd8 0x00002dd8 15  16   .rodata             ascii   unkonw CDFW_MSG
+161 0x00002de8 0x00002de8 37  38   .rodata             ascii   %s %d %ld %s :%s:%d] nullptr message\n
+162 0x00002e0e 0x00002e0e 32  33   .rodata             ascii   %s:%d] QDGNSS session active: %d
+163 0x00002e2f 0x00002e2f 24  25   .rodata             ascii   %s:%d] Invalid sender %s
+164 0x00002e48 0x00002e48 20  21   .rodata             ascii   injectCorrectionData
+165 0x00002e5d 0x00002e5d 43  44   .rodata             ascii   %s %d %ld %s :%s:%d] Invalid dataFormat %d\n
+166 0x00002e89 0x00002e89 17  18   .rodata             ascii   printBdsEphemeris
+167 0x00002e9b 0x00002e9b 13  14   .rodata             ascii   QCDFW_Decoder
+168 0x00002ea9 0x00002ea9 12  13   .rodata             ascii   decodeIpcMsg
+169 0x00002eb6 0x00002eb6 26  27   .rodata             ascii   %s:%d] empty data received
+170 0x00002ed1 0x00002ed1 34  35   .rodata             ascii   %s %d %ld %s :%s:%d] NULL pSource\n
+171 0x00002ef4 0x00002ef4 57  58   .rodata             ascii   %s:%d] create IpcSender to QDGNSS_API_SERVICE_INSTANCE_ID
+172 0x00002f2e 0x00002f2e 15  16   .rodata             ascii   timeOutCallback
+173 0x00002f3e 0x00002f3e 14  15   .rodata             ascii   %s:%d] nullptr
+174 0x00002f4d 0x00002f4d 19  20   .rodata             ascii   %s:%d] NULL pSource
+175 0x00002f61 0x00002f61 62  63   .rodata             ascii   %s %d %ld %s :%s:%d] Dgnss service is down, drop this message\n
+176 0x00002fa0 0x00002fa0 45  46   .rodata             ascii   %s %d %ld %s :%s:%d] receive %d data from %s\n
+177 0x00002fce 0x00002fce 17  18   .rodata             ascii   REFERENCE_STATION
+178 0x00002fe0 0x00002fe0 12  13   .rodata             ascii   GLONASS_BIAS
+179 0x00002fed 0x00002fed 23  24   .rodata             ascii   SSR_USER_RANGE_ACCURACY
+180 0x00003005 0x00003005 22  23   .rodata             ascii   %s:%d] nullptr message
+181 0x0000301c 0x0000301c 17  18   .rodata             ascii   printGalEphemeris
+182 0x0000302e 0x0000302e 22  23   .rodata             ascii   setListenerRecvMsgHead
+183 0x00003045 0x00003045 12  13   .rodata             ascii   createSource
+184 0x00003052 0x00003052 13  14   .rodata             ascii   QCDFW_Encoder
+185 0x00003060 0x00003060 22  23   .rodata             ascii   %s:%d] null CdfwIpcMsg
+186 0x00003077 0x00003077 48  49   .rodata             ascii   %s:%d] service is down, will create source later
+187 0x000030a8 0x000030a8 55  56   .rodata             ascii   %s %d %ld %s :%s:%d] send CDFW_INJECT_DATA_MSG size %d\n
+188 0x000030e0 0x000030e0 17  18   .rodata             ascii   GLONASS_EPHEMERIS
+189 0x000030f2 0x000030f2 37  38   .rodata             ascii   %s %d %ld %s :%s:%d] Unknown message\n
+190 0x00003118 0x00003118 12  13   .rodata             ascii   OBSERVATIONS
+191 0x00003125 0x00003125 21  22   .rodata             ascii   SSR_ORBIT_CORRECTIONS
+192 0x0000313b 0x0000313b 14  15   .rodata             ascii   DEBUG_EPH_SBAS
+193 0x0000314a 0x0000314a 35  36   .rodata             ascii   %s %d %ld %s :%s:%d] malloc failed\n
+194 0x0000316e 0x0000316e 17  18   .rodata             ascii   DEBUG_OBSERVATION
+195 0x00003180 0x00003180 22  23   .rodata             ascii   %s:%d] Unknown message
+196 0x00003197 0x00003197 14  15   .rodata             ascii   SESSION_ACTIVE
+197 0x000031a6 0x000031a6 308 309  .rodata             ascii   BDS Ephemeris:\n\tSV ID: %u\n\tBds Week: %u\n\ttoe: %u\n\ttoc: %u\n\taode: %u\n\taodc: %u\n\thealth: %u\n\tURAI: %u\n\tSqrtA: %u\n\te: %u\n\tOmega %u\n\tDeltaN: %u\n\tM0: %u\n\tOmega0: %u\n\tOmegaDot: %u\n\tI0: %u\n\tiDot: %u\n\tCrs: %u\n\tCuc: %u\n\tCus: %u\n\tCic: %u\n\tCis: %u\n\tCrc: %u\n\tA2: %u\n\tA1: %u\n\tA0: %u\n\tTgd: %u\n\tTgd2: %u\n\tIs Tgd2 Valid: %u\n
+198 0x000032db 0x000032db 38  39   .rodata             ascii   %s:%d] invalid cdfw protocol msg ID %d
+199 0x00003302 0x00003302 31  32   .rodata             ascii   %s:%d] decode %d is unsupported
+200 0x00003322 0x00003322 4   5    .rodata             ascii   proc
+201 0x00003327 0x00003327 77  78   .rodata             ascii   %s %d %ld %s :%s:%d] send CDFW_INJECT_DATA_MSG failed, Dgnss service is down\n
+202 0x00003375 0x00003375 20  21   .rodata             ascii   CDFW_STOP_SOURCE_MSG
+203 0x0000338a 0x0000338a 39  40   .rodata             ascii   %s %d %ld %s :%s:%d] Invalid sender %s\n
+204 0x000033b2 0x000033b2 77  78   .rodata             ascii   %s %d %ld %s :%s:%d] send CDFW_STOP_SOURCE_MSG failed, Dgnss service is down\n
+205 0x00003400 0x00003400 68  69   .rodata             ascii   %s:%d] DEBUG_REF_STATION %d, DEBUG_OBSERVATION %d, DEBUG_GLO_BIAS %d
+206 0x00003445 0x00003445 22  23   .rodata             ascii   CDFW_STOP_LISTENER_MSG
+207 0x0000345c 0x0000345c 13  14   .rodata             ascii   DEBUG_EPH_GLO
+208 0x0000346a 0x0000346a 41  42   .rodata             ascii   %s %d %ld %s :%s:%d] NULL statusCallback\n
+209 0x00003494 0x00003494 40  41   .rodata             ascii   %s:%d] send CDFW_INJECT_DATA_MSG size %d
+210 0x000034bd 0x000034bd 83  84   .rodata             ascii   %s %d %ld %s :%s:%d] DEBUG_REF_STATION %d, DEBUG_OBSERVATION %d, DEBUG_GLO_BIAS %d\n
+211 0x00003511 0x00003511 21  22   .rodata             ascii   CDFW_START_SOURCE_MSG
+212 0x00003527 0x00003527 417 418  .rodata             ascii   Reference Station Information:\n\tReference Station ID: %u\n\tReference Station Status Indicator: 0x%X\n\tLinked Reference Station ID: %u\n\tITRF-yy: %u\n\tConstellation Bit Mask: 0x%X\n\tARP ECEF-X: %lf\n\tARP ECEF-Y: %lf\n\tARP ECEF-Z: %lf\n\tAntenna height: %f\n\tARP Uncertainty-X: %f\n\tARP Uncertainty-Y: %f\n\tARP Uncertainty-Z: %f\n\tARP Uncertainty Confidence-X: %u\n\tARP Uncertainty Confidence-Y: %u\n\tARP Uncertainty Confidence-Z: %u\n
+213 0x000036c9 0x000036c9 13  14   .rodata             ascii   DEBUG_EPH_GAL
+214 0x000036d7 0x000036d7 31  32   .rodata             ascii   %s:%d] edcode %d is unsupported
+215 0x000036f7 0x000036f7 24  25   .rodata             ascii   %s:%d] unknown source %d
+216 0x00003710 0x00003710 9   10   .rodata             ascii   %s:%d] %s
+217 0x0000371a 0x0000371a 10  11   .rodata             ascii   stopSource
+218 0x00003725 0x00003725 22  23   .rodata             ascii   CDFW_LISTENER_RECV_MSG
+219 0x0000373c 0x0000373c 30  31   .rodata             ascii   SSR_HIGHRATE_CLOCK_CORRECTIONS
+220 0x0000375b 0x0000375b 17  18   .rodata             ascii   GALILEO_EPHEMERIS
+221 0x0000376d 0x0000376d 63  64   .rodata             ascii   %s:%d] mismatch START_SOURCE_MSG_VER receiver = %d, sender = %d
+222 0x000037ad 0x000037ad 29  30   .rodata             ascii   %s:%d] %s from %s encoding %d
+223 0x000037cb 0x000037cb 33  34   .rodata             ascii   %s %d %ld %s :%s:%d] null source\n
+224 0x000037ed 0x000037ed 63  64   .rodata             ascii   %s:%d] send CDFW_START_SOURCE_MSG failed, Dgnss service is down
+225 0x0000382d 0x0000382d 11  12   .rodata             ascii   %s:%d] cons
+226 0x00003839 0x00003839 13  14   .rodata             ascii   processIpcMsg
+227 0x00003847 0x00003847 11  12   .rodata             ascii   startSource
+228 0x00003853 0x00003853 72  73   .rodata             ascii   %s %d %ld %s :%s:%d] create IpcSender to QDGNSS_API_SERVICE_INSTANCE_ID\n
+229 0x0000389c 0x0000389c 22  23   .rodata             ascii   CDFW_SOURCE_STATUS_MSG
+230 0x000038b3 0x000038b3 16  17   .rodata             ascii   printObservation
+231 0x000038c4 0x000038c4 153 154  .rodata             ascii   DGnss Observation: \nStation ID: %u\nEpoch Time: %u\nStatus Flags: 0X%hX\nIssue Of Data Station: %u\nConstellation Identifier: %u\nNumber Of Measurements: %u \n
+232 0x0000395e 0x0000395e 322 323  .rodata             ascii   Galileo Ephemeris:\n\tSV ID: %u\n\tSisa: %u\n\tIode: %u\n\tToe: %u\n\tM0: %u\n\tDeltaN: %u\n\te: %u\n\tSqrtA: %u\n\tOmega0: %u\n\tOmega %u\n\tOmegaDot: %u\n\tI0: %u\n\tiDot: %u\n\tCic: %u\n\tCis: %u\n\tCrc: %u\n\tCrs: %u\n\tCuc: %u\n\tCus: %u\n\tGalileo Week: %u\n\tHealth : %u\n\tToc: %u\n\tAf2: %u\n\tAf1: %u\n\tAf0: %u\n\tbgdE1E5a: %u\n\tbgdE1E5b: %u\n\tTgd: %u\n\tIs Fnav: %u\n
+233 0x00003aa1 0x00003aa1 18  19   .rodata             ascii   printSessionActive
+234 0x00003ab4 0x00003ab4 13  14   .rodata             ascii   GPS_EPHEMERIS
+235 0x00003ac2 0x00003ac2 18  19   .rodata             ascii   isControlSocketMsg
+236 0x00003ad5 0x00003ad5 16  17   .rodata             ascii   %s:%d] No memory
+237 0x00003ae6 0x00003ae6 26  27   .rodata             ascii   %s:%d] Invalid encoding %d
+238 0x00003b01 0x00003b01 55  56   .rodata             ascii   %s %d %ld %s :%s:%d] send CDFW_STOP_SOURCE_MSG size %d\n
+239 0x00003b39 0x00003b39 13  14   .rodata             ascii   DEBUG_EPH_GPS
+240 0x00003b47 0x00003b47 12  13   .rodata             ascii   QCDFW_Remote
+241 0x00003b54 0x00003b54 10  11   .rodata             ascii   %s:%d] des
+242 0x00003b5f 0x00003b5f 12  13   .rodata             ascii   ~QRemoteCdfw
+243 0x00003b6c 0x00003b6c 41  42   .rodata             ascii   %s %d %ld %s :%s:%d] Invalid encoding %d\n
+244 0x00003b96 0x00003b96 78  79   .rodata             ascii   %s %d %ld %s :%s:%d] send CDFW_START_SOURCE_MSG failed, Dgnss service is down\n
+245 0x00003be5 0x00003be5 14  15   .rodata             ascii   SBAS_EPHEMERIS
+246 0x00003bf4 0x00003bf4 47  48   .rodata             ascii   %s %d %ld %s :%s:%d] QDGNSS session active: %d\n
+247 0x00003c24 0x00003c24 24  25   .rodata             ascii   %s:%d] unknown format %d
+248 0x00003c3d 0x00003c3d 50  51   .rodata             ascii   %s %d %ld %s :%s:%d] startNonBlockingListening %s\n
+249 0x00003c70 0x00003c70 18  19   .rodata             ascii   cdfwGetDebugConfig
+250 0x00003c83 0x00003c83 69  70   .rodata             ascii   %s %d %ld %s :%s:%d] DEBUG_EPH_GPS %d, GLO %d, GAL %d BDS %d SBAS %d\n
+251 0x00003cc9 0x00003cc9 14  15   .rodata             ascii   QZSS_EPHEMERIS
+252 0x00003cd8 0x00003cd8 13  14   .rodata             ascii   stopSourceIpc
+253 0x00003ce6 0x00003ce6 26  27   .rodata             ascii   %s:%d] Invalid userName %s
+254 0x00003d01 0x00003d01 19  20   .rodata             ascii   SSR_ORBIT_AND_CLOCK
+255 0x00003d15 0x00003d15 223 224  .rodata             ascii   Measurement %u: \n\tSV Id: %u\n\tExtended Satellite Information: %u\n\tGnss Signal Identifier: %u\n\tSignal Observation Status: 0x%X\n\tPseudorange: %lf\n\tPhaserange: %lf\n\tPhaserange Rate: %lf\n\tLock Time Indicator: %u\n\tSignal CNR: %f\n
+256 0x00003df5 0x00003df5 15  16   .rodata             ascii   handleStatusMsg
+257 0x00003e05 0x00003e05 7   8    .rodata             ascii   %s:%d]
+258 0x00003e0d 0x00003e0d 54  55   .rodata             ascii   %s:%d] DEBUG_EPH_GPS %d, GLO %d, GAL %d BDS %d SBAS %d
+259 0x00003e44 0x00003e44 21  22   .rodata             ascii   SSR_CLOCK_CORRECTIONS
+260 0x00003e5a 0x00003e5a 13  14   .rodata             ascii   BDS_EPHEMERIS
+261 0x00003e68 0x00003e68 17  18   .rodata             ascii   DEBUG_REF_STATION
+262 0x00003e7a 0x00003e7a 13  14   .rodata             ascii   DEBUG_EPH_BDS
+263 0x00003e88 0x00003e88 11  12   .rodata             ascii   QRemoteCdfw
+264 0x00003e94 0x00003e94 41  42   .rodata             ascii   %s %d %ld %s :%s:%d] empty data received\n
+265 0x00003ebe 0x00003ebe 24  25   .rodata             ascii   %s %d %ld %s :%s:%d] %s\n
+266 0x00003ed7 0x00003ed7 23  24   .rodata             ascii   CDFW_START_LISTENER_MSG
+267 0x00003eef 0x00003eef 56  57   .rodata             ascii   %s %d %ld %s :%s:%d] sent CDFW_START_SOURCE_MSG size %d\n
+268 0x00003f28 0x00003f28 28  29   .rodata             ascii   %s:%d] Invalid dataSource %d
+269 0x00003f45 0x00003f45 28  29   .rodata             ascii   %s:%d] Invalid dataFormat %d
+270 0x00003f62 0x00003f62 6   7    .rodata             ascii   intOne
+271 0x00003f69 0x00003f69 4   5    .rodata             ascii   cv2x
+272 0x00003f6e 0x00003f6e 6   7    .rodata             ascii   garden
+273 0x00003f81 0x00003f81 52  53   .rodata             ascii   !$'------------------------------------------------*
+274 0x00003fb6 0x00003fb6 4   5    .rodata             ascii   \a\f\t\v
+275 0x00003fce 0x00003fce 10  11   .rodata             ascii   cioooooov|
+276 0x00003fdc 0x00003fdc 48  49   .rodata             ascii   oooooooooooooooooooooooooooooooooooooooooooooooo
+277 0x0000400d 0x0000400d 4   5    .rodata             ascii   cdfw
+278 0x00004014 0x00004014 5   6    .rodata             ascii   !$'*-
+279 0x0000434c 0x0000434c 5   24   .eh_frame           utf32le \b$¬༐Ʉ
+280 0x000050e8 0x000050e8 4   5    .text               ascii   \bA@9
+281 0x00005308 0x00005308 4   5    .text               ascii   \bA@9
+282 0x0000556f 0x0000556f 4   5    .text               ascii   q@s\a
+283 0x000055b4 0x000055b4 4   5    .text               ascii   \bA@9
+284 0x00005613 0x00005613 4   5    .text               ascii   q@s\a
+285 0x00005623 0x00005623 5   6    .text               ascii   T`\n@y
+286 0x00005670 0x00005670 4   5    .text               ascii   \bA@9
+287 0x000056ac 0x000056ac 4   5    .text               ascii   h\n@y
+288 0x0000572f 0x0000572f 4   5    .text               ascii   T@sG
+289 0x00005757 0x00005757 5   6    .text               ascii   Th\n@y
+290 0x0000578b 0x0000578b 4   5    .text               ascii   q@s\a
+291 0x000057d4 0x000057d4 4   5    .text               ascii   \bA@9
+292 0x000058a7 0x000058a7 4   5    .text               ascii   q@s\a
+293 0x000058f0 0x000058f0 4   5    .text               ascii   \bA@9
+294 0x00005987 0x00005987 4   5    .text               ascii   q@s\a
+295 0x000059cc 0x000059cc 5   6    .text               ascii   \bA@9\b
+296 0x00005a58 0x00005a58 4   6    .text               utf8    \t}\nȪ
+297 0x00005b0c 0x00005b0c 4   5    .text               ascii   \bA@9
+298 0x00005c6b 0x00005c6b 4   5    .text               ascii   q`r\a
+299 0x00005cb0 0x00005cb0 4   5    .text               ascii   \bA@9
+300 0x00005d9c 0x00005d9c 4   6    .text               utf8    \t}\nȪ
+301 0x00005de7 0x00005de7 4   5    .text               ascii   q@s\a
+302 0x00005e34 0x00005e34 4   5    .text               ascii   \bA@9
+303 0x00005f73 0x00005f73 4   5    .text               ascii   q@s\a
+304 0x00005fb8 0x00005fb8 6   7    .text               ascii   \bA@9(7
+305 0x0000603f 0x0000603f 4   5    .text               ascii   q@s\a
+306 0x00006084 0x00006084 4   5    .text               ascii   \bA@9
+307 0x000063ff 0x000063ff 4   5    .text               ascii   q@s\a
+308 0x00006444 0x00006444 4   5    .text               ascii   \bA@9
+309 0x0000658b 0x0000658b 4   5    .text               ascii   9@sG
+310 0x000065cb 0x000065cb 4   5    .text               ascii   q@s\a
+311 0x00006610 0x00006610 4   5    .text               ascii   \bA@9
+312 0x00006713 0x00006713 4   5    .text               ascii   q@s\a
+313 0x0000675c 0x0000675c 5   6    .text               ascii   \bA@9\b
+314 0x00006897 0x00006897 4   5    .text               ascii   q`r\a
+315 0x000068dc 0x000068dc 4   5    .text               ascii   \bA@9
+316 0x00006983 0x00006983 4   5    .text               ascii   q`r\a
+317 0x000069c8 0x000069c8 5   6    .text               ascii   \bA@9h
+318 0x00006ae4 0x00006ae4 4   5    .text               ascii   \bA@9
+319 0x00006bec 0x00006bec 4   6    .text               utf8    *}\vȫ
+320 0x00006cab 0x00006cab 4   5    .text               ascii   q q\a
+321 0x00006cf0 0x00006cf0 6   7    .text               ascii   \bA@9h\n
+322 0x00006dc4 0x00006dc4 4   5    .text               ascii   \bA@9
+323 0x00006f40 0x00006f40 4   5    .text               ascii   \bA@9
+324 0x00007170 0x00007170 6   7    .text               ascii   \bA@9\b*
+325 0x00007244 0x00007244 5   6    .text               ascii   \bA@9\b
+326 0x00007348 0x00007348 4   5    .text               ascii   \bA@9
+327 0x00007618 0x00007618 4   5    .text               ascii   \bA@9
+328 0x00007940 0x00007940 4   6    .text               utf8    *}\vȫ
+329 0x00007a03 0x00007a03 4   5    .text               ascii   q q\a
+330 0x00007a48 0x00007a48 4   5    .text               ascii   \bA@9
+331 0x00007bb4 0x00007bb4 5   6    .text               ascii   \bA@9H
+332 0x00007cff 0x00007cff 4   5    .text               ascii   q`r\a
+333 0x00007d44 0x00007d44 4   5    .text               ascii   \bA@9
+334 0x00007eb0 0x00007eb0 4   5    .text               ascii   \bA@9
+335 0x000080c4 0x000080c4 4   6    .text               utf8    \t}\nȪ
+336 0x000080e4 0x000080e4 4   6    .text               utf8    \t}\nȪ
+337 0x00008168 0x00008168 4   6    .text               utf8    \t}\nȪ
+338 0x00008184 0x00008184 4   6    .text               utf8    \t}\nȪ
+339 0x0000843c 0x0000843c 5   6    .text               ascii   hBb9H
+340 0x00008463 0x00008463 6   7    .text               ascii   RhB"96
+341 0x000084f0 0x000084f0 4   5    .text               ascii   \bA@9
+342 0x00008624 0x00008624 5   6    .text               ascii   \bA@9(
+343 0x000087f0 0x000087f0 7   8    .text               ascii   +ih8J\t\v
+344 0x00008903 0x00008903 5   6    .text               ascii   5\b\b@9
+345 0x00008963 0x00008963 4   5    .text               ascii   q`z\b
+346 0x000089a8 0x000089a8 4   5    .text               ascii   \bA@9
+347 0x00008ad6 0x00008ad6 14  15   .text               ascii   @yg"@9h&@9i*@9
+348 0x00008b98 0x00008b98 5   6    .text               ascii   \bA@9(
+349 0x00008c20 0x00008c20 4   5    .text               ascii   h*@9
+350 0x00008c50 0x00008c50 5   6    .text               ascii   h*@99
+351 0x00008cb3 0x00008cb3 4   5    .text               ascii   =#\a@
+352 0x00008cba 0x00008cba 4   5    .text               ascii   @9&\a
+353 0x00008cbf 0x00008cbf 6   7    .text               ascii   9'\v@9(
+354 0x00008cd0 0x00008cd0 4   5    .text               ascii   )C@y
+355 0x00008d58 0x00008d58 4   5    .text               ascii   \bA@9
+356 0x00008df3 0x00008df3 4   5    .text               ascii   q`z\b
+357 0x00008e38 0x00008e38 5   6    .text               ascii   \bA@9\b
+358 0x00008f3e 0x00008f3e 5   6    .text               ascii   E-f2@
+359 0x00008f66 0x00008f66 6   7    .text               ascii   @9k"@9
+360 0x00008feb 0x00008feb 4   5    .text               ascii   q`z\b
+361 0x00009038 0x00009038 4   5    .text               ascii   \bA@9
+362 0x000090cf 0x000090cf 4   5    .text               ascii   q`z\b
+363 0x00009114 0x00009114 5   6    .text               ascii   \bA@9\b
+364 0x0000921e 0x0000921e 6   7    .text               ascii   @9e>@9
+365 0x0000922a 0x0000922a 9   10   .text               ascii   @9d&@9c&@
+366 0x0000923c 0x0000923c 16  17   .text               ascii   h\n@9`BA9aB@ybF@y
+367 0x00009252 0x00009252 7   8    .text               ascii   @9m"@9n
+368 0x0000925a 0x0000925a 6   7    .text               ascii   @yo2@9
+369 0x00009264 0x00009264 5   6    .text               ascii   h\n@yp
+370 0x00009270 0x00009270 4   5    .text               ascii   tR@y
+371 0x0000927a 0x0000927a 7   8    .text               ascii   @yvV@yw
+372 0x00009282 0x00009282 7   8    .text               ascii   E)yj@yz
+373 0x00009292 0x00009292 5   6    .text               ascii   @y~:@
+374 0x00009298 0x00009298 15  16   .text               ascii   lz@yu~@yk*H)iJ@
+375 0x00009397 0x00009397 4   5    .text               ascii   q`z\b
+376 0x000093e4 0x000093e4 4   5    .text               ascii   \bA@9
+377 0x0000947b 0x0000947b 4   5    .text               ascii   q`z\b
+378 0x000094c0 0x000094c0 5   6    .text               ascii   \bA@9\b
+379 0x000095cc 0x000095cc 5   6    .text               ascii   cRF)q
+380 0x000095d2 0x000095d2 5   6    .text               ascii   D)a*@
+381 0x000095d8 0x000095d8 5   6    .text               ascii   b^@yd
+382 0x000095ea 0x000095ea 35  36   .text               ascii   @9i2@9j6@9k:@9l6B)nZ@yoBC)v^H)ybG)z
+383 0x0000960e 0x0000960e 7   8    .text               ascii   @y|nI)~
+384 0x0000961a 0x0000961a 6   7    .text               ascii   @ysRA9
+385 0x000096eb 0x000096eb 4   5    .text               ascii   q`z\b
+386 0x00009738 0x00009738 4   5    .text               ascii   \bA@9
+387 0x000097cf 0x000097cf 4   5    .text               ascii   q`z\b
+388 0x00009814 0x00009814 5   6    .text               ascii   \bA@9\b
+389 0x0000991c 0x0000991c 4   5    .text               ascii   c^@y
+390 0x00009924 0x00009924 13  14   .text               ascii   `R@yaV@ybZ@yd
+391 0x0000993a 0x0000993a 7   8    .text               ascii   @yg\n@yh
+392 0x00009942 0x00009942 17  18   .text               ascii   @yi*A)k2B)n6C)o"@
+393 0x00009954 0x00009954 17  18   .text               ascii   pJ@yqN@ytb@yvf@yw
+394 0x00009966 0x00009966 7   8    .text               ascii   @9xv@yy
+395 0x00009972 0x00009972 11  12   .text               ascii   G)|n@y~r@yu
+396 0x00009a4f 0x00009a4f 4   5    .text               ascii   q`z\b
+397 0x00009a9c 0x00009a9c 4   5    .text               ascii   \bA@9
+398 0x00009b33 0x00009b33 4   5    .text               ascii   q`z\b
+399 0x00009b78 0x00009b78 5   6    .text               ascii   \bA@9\b
+400 0x00009ce8 0x00009ce8 4   5    .text               ascii   \bA@9
+401 0x00009dc8 0x00009dc8 4   5    .text               ascii   \bA@9
+402 0x00009ed8 0x00009ed8 7   8    .text               ascii   +ih8J\t\v
+403 0x0000a0b7 0x0000a0b7 4   5    .text               ascii   q`~\b
+404 0x0000a172 0x0000a172 4   5    .text               ascii   @y\tQ
+405 0x0000a177 0x0000a177 7   8    .text               ascii   yi\n@y\tU
+406 0x0000a17f 0x0000a17f 6   7    .text               ascii   yi\n@9\t
+407 0x0000a1aa 0x0000a1aa 4   5    .text               ascii   @y\te
+408 0x0000a1af 0x0000a1af 4   5    .text               ascii   yi*@
+409 0x0000a276 0x0000a276 4   5    .text               ascii   @y\t\b
+410 0x0000a290 0x0000a290 4   5    .text               ascii   h*@9
+411 0x0000a29f 0x0000a29f 5   6    .text               ascii   9hB@9
+412 0x0000a2c0 0x0000a2c0 5   6    .text               ascii   lA_8)
+413 0x0000a2da 0x0000a2da 4   5    .text               ascii   _8L\t
+414 0x0000a2e2 0x0000a2e2 4   5    .text               ascii   @9L\r
+415 0x0000a2e7 0x0000a2e7 4   5    .text               ascii   9l!@
+416 0x0000a308 0x0000a308 5   6    .text               ascii   l9@yk
+417 0x0000a3a6 0x0000a3a6 4   5    .text               ascii   @y\tQ
+418 0x0000a3ab 0x0000a3ab 6   7    .text               ascii   yi\n@9\t
+419 0x0000a47b 0x0000a47b 6   7    .text               ascii   9i\n@9\t
+420 0x0000a48b 0x0000a48b 7   8    .text               ascii   9i\n@y\tY
+421 0x0000a4a3 0x0000a4a3 6   7    .text               ascii   9iZ@9\t
+422 0x0000a4ab 0x0000a4ab 6   7    .text               ascii   9iV@9\t
+423 0x0000a4b3 0x0000a4b3 7   8    .text               ascii   9i2@y\te
+424 0x0000a4bb 0x0000a4bb 6   7    .text               ascii   yij@9\t
+425 0x0000a4c3 0x0000a4c3 7   8    .text               ascii   9i:@y\tQ
+426 0x0000a4cb 0x0000a4cb 6   7    .text               ascii   xiR@9\t
+427 0x0000a4ec 0x0000a4ec 5   6    .text               ascii   iN@y\t
+428 0x0000a4f3 0x0000a4f3 6   7    .text               ascii   yiR@y\t
+429 0x0000a4fb 0x0000a4fb 4   5    .text               ascii   yi.@
+430 0x0000a504 0x0000a504 5   6    .text               ascii   ib@y\t
+431 0x0000a50b 0x0000a50b 6   7    .text               ascii   yir@y\t
+432 0x0000a513 0x0000a513 4   5    .text               ascii   yi6@
+433 0x0000a52e 0x0000a52e 4   5    .text               ascii   A9\ty
+434 0x0000a533 0x0000a533 7   8    .text               ascii   9i\nA9\t}
+435 0x0000a53b 0x0000a53b 4   5    .text               ascii   9iJ@
+436 0x0000a553 0x0000a553 4   5    .text               ascii   yiR@
+437 0x0000a643 0x0000a643 6   7    .text               ascii   9i\n@9\t
+438 0x0000a673 0x0000a673 6   7    .text               ascii   9i"@9\t
+439 0x0000a67b 0x0000a67b 6   7    .text               ascii   9i&@9\t
+440 0x0000a683 0x0000a683 6   7    .text               ascii   9i*@9\t
+441 0x0000a68b 0x0000a68b 6   7    .text               ascii   9i.@9\t
+442 0x0000a693 0x0000a693 6   7    .text               ascii   9i:@9j
+443 0x0000a6a3 0x0000a6a3 7   8    .text               ascii   yi"@y\tq
+444 0x0000a6ab 0x0000a6ab 7   8    .text               ascii   yi&@y\tu
+445 0x0000a6de 0x0000a6de 4   5    .text               ascii   @9\ta
+446 0x0000a6e6 0x0000a6e6 4   5    .text               ascii   @9\te
+447 0x0000a782 0x0000a782 4   5    .text               ascii   @y\tQ
+448 0x0000a787 0x0000a787 7   8    .text               ascii   yi\n@y\tU
+449 0x0000a792 0x0000a792 4   5    .text               ascii   @y\tY
+450 0x0000a79a 0x0000a79a 4   5    .text               ascii   @y\t]
+451 0x0000a79f 0x0000a79f 4   5    .text               ascii   yi\n@
+452 0x0000a7d8 0x0000a7d8 5   6    .text               ascii   iR@y\t
+453 0x0000a7df 0x0000a7df 6   7    .text               ascii   yiV@y\t
+454 0x0000a7e7 0x0000a7e7 6   7    .text               ascii   yiZ@y\t
+455 0x0000a7ef 0x0000a7ef 6   7    .text               ascii   yi^@y\t
+456 0x0000a7f7 0x0000a7f7 6   7    .text               ascii   yib@y\t
+457 0x0000a7ff 0x0000a7ff 6   7    .text               ascii   yif@y\t
+458 0x0000a807 0x0000a807 6   7    .text               ascii   yij@y\t
+459 0x0000a80f 0x0000a80f 6   7    .text               ascii   yin@y\t
+460 0x0000a81a 0x0000a81a 4   5    .text               ascii   @9\tq
+461 0x0000a81f 0x0000a81f 7   8    .text               ascii   9i\n@9\tu
+462 0x0000a837 0x0000a837 6   7    .text               ascii   yiv@y\t
+463 0x0000a83f 0x0000a83f 4   5    .text               ascii   yiB@
+464 0x0000a857 0x0000a857 6   7    .text               ascii   9i:A9\t
+465 0x0000a907 0x0000a907 6   7    .text               ascii   9i2@9\t
+466 0x0000a912 0x0000a912 4   5    .text               ascii   @y\tU
+467 0x0000a928 0x0000a928 5   6    .text               ascii   i6@9\t
+468 0x0000a92f 0x0000a92f 6   7    .text               ascii   9i:@9\t
+469 0x0000a937 0x0000a937 6   7    .text               ascii   9i>@9\t
+470 0x0000a978 0x0000a978 5   6    .text               ascii   i:@y\t
+471 0x0000a97f 0x0000a97f 6   7    .text               ascii   yib@y\t
+472 0x0000a987 0x0000a987 4   5    .text               ascii   yi:@
+473 0x0000a9d7 0x0000a9d7 6   7    .text               ascii   yizA9\t
+474 0x0000aa7e 0x0000aa7e 4   5    .text               ascii   @y\tQ
+475 0x0000aa83 0x0000aa83 6   7    .text               ascii   yi\n@9\t
+476 0x0000ac00 0x0000ac00 7   8    .text               ascii   Lii8k\t\f
+477 0x0000ac7f 0x0000ac7f 4   5    .text               ascii   *\b\r@
+478 0x0000ad07 0x0000ad07 4   5    .text               ascii   *\b\r@
+479 0x0000ada4 0x0000ada4 7   8    .text               ascii   +ih8J\t\v
+480 0x0000adcc 0x0000adcc 7   8    .text               ascii   +ih8J\t\v
+481 0x0000ae07 0x0000ae07 4   5    .text               ascii   *\b\r@
+482 0x0000ae5b 0x0000ae5b 4   5    .text               ascii   *\b\r@
+483 0x0000ae7b 0x0000ae7b 4   5    .text               ascii   R\b\r@
+484 0x0000aef0 0x0000aef0 7   8    .text               ascii   +ih8J\t\v
+485 0x0000b09b 0x0000b09b 4   5    .text               ascii   q`~\b
+486 0x0000b108 0x0000b108 4   5    .text               ascii   ( @y
+487 0x0000b130 0x0000b130 7   8    .text               ascii   +ih8J\t\v
+488 0x0000b183 0x0000b183 5   6    .text               ascii   Tf"@y
+489 0x0000b230 0x0000b230 4   5    .text               ascii   ( @y
+490 0x0000b2bb 0x0000b2bb 5   6    .text               ascii   Tf"@y
+491 0x0000b3cc 0x0000b3cc 4   5    .text               ascii   3\b@y
+492 0x0000c885 0x00000001 11  12   .shstrtab           ascii   .fini_array
+493 0x0000c891 0x0000000d 5   6    .shstrtab           ascii   .text
+494 0x0000c897 0x00000013 4   5    .shstrtab           ascii   .got
+495 0x0000c89c 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+496 0x0000c8b0 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+497 0x0000c8b9 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+498 0x0000c8c3 0x0000003f 4   5    .shstrtab           ascii   .bss
+499 0x0000c8c8 0x00000044 7   8    .shstrtab           ascii   .dynstr
+500 0x0000c8d0 0x0000004c 13  14   .shstrtab           ascii   .eh_frame_hdr
+501 0x0000c8de 0x0000005a 14  15   .shstrtab           ascii   .gnu.version_r
+502 0x0000c8ed 0x00000069 12  13   .shstrtab           ascii   .data.rel.ro
+503 0x0000c8fa 0x00000076 9   10   .shstrtab           ascii   .relr.dyn
+504 0x0000c904 0x00000080 9   10   .shstrtab           ascii   .rela.dyn
+505 0x0000c90e 0x0000008a 12  13   .shstrtab           ascii   .gnu.version
+506 0x0000c91b 0x00000097 7   8    .shstrtab           ascii   .dynsym
+507 0x0000c923 0x0000009f 9   10   .shstrtab           ascii   .gnu.hash
+508 0x0000c92d 0x000000a9 9   10   .shstrtab           ascii   .eh_frame
+509 0x0000c937 0x000000b3 18  19   .shstrtab           ascii   .note.gnu.build-id
+510 0x0000c94a 0x000000c6 8   9    .shstrtab           ascii   .dynamic
+511 0x0000c953 0x000000cf 9   10   .shstrtab           ascii   .shstrtab
+512 0x0000c95d 0x000000d9 7   8    .shstrtab           ascii   .rodata
+513 0x0000c965 0x000000e1 14  15   .shstrtab           ascii   .gnu_debugdata
+514 0x0000c974 0x000000f0 5   6    .shstrtab           ascii   .data
+515 0x0000c97b 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+516 0x0000c9ab 0x00000031 4   5    .gnu_debugdata      ascii   Yg\vb
+517 0x0000c9b2 0x00000038 4   5    .gnu_debugdata      ascii   @Xk5
+518 0x0000c9ce 0x00000054 4   7    .gnu_debugdata      utf8    S㽎VE
+519 0x0000c9d9 0x0000005f 4   5    .gnu_debugdata      ascii   6<Kf
+520 0x0000c9ed 0x00000073 4   5    .gnu_debugdata      ascii   rP>V
+521 0x0000c9f5 0x0000007b 4   5    .gnu_debugdata      ascii   Tu,$
+522 0x0000ca22 0x000000a8 6   7    .gnu_debugdata      ascii   ?Y@Ld|
+523 0x0000ca55 0x000000db 4   5    .gnu_debugdata      ascii   C+d\r
+524 0x0000ca93 0x00000119 4   5    .gnu_debugdata      ascii   ^JN\e
+525 0x0000ca99 0x0000011f 4   5    .gnu_debugdata      ascii   JI\n\
+526 0x0000caa2 0x00000128 4   6    .gnu_debugdata      utf8    L<yӷ
+527 0x0000cadf 0x00000165 7   9    .gnu_debugdata      utf8    '3"<ƻ*w
+528 0x0000cb05 0x0000018b 4   5    .gnu_debugdata      ascii   a$.>
+529 0x0000cb18 0x0000019e 4   6    .gnu_debugdata      utf8    1J֓x
+530 0x0000cb2d 0x000001b3 5   6    .gnu_debugdata      ascii   @40{#
+531 0x0000cb80 0x00000206 4   5    .gnu_debugdata      ascii   c.dw
+532 0x0000cbdc 0x00000262 4   5    .gnu_debugdata      ascii   >=D1
+533 0x0000cbe6 0x0000026c 4   5    .gnu_debugdata      ascii   0tH]
+534 0x0000cc6e 0x000002f4 4   6    .gnu_debugdata      utf8    Sę8"
+535 0x0000cc8b 0x00000311 7   8    .gnu_debugdata      ascii   >N^?&S_
+536 0x0000cca9 0x0000032f 4   5    .gnu_debugdata      ascii   1r ;
+537 0x0000ccba 0x00000340 4   5    .gnu_debugdata      ascii   @_P\r
+538 0x0000ccf5 0x0000037b 5   7    .gnu_debugdata      utf8    N7އIC
+539 0x0000cd0a 0x00000390 6   8    .gnu_debugdata      utf8    n˺t#O%
+540 0x0000cd24 0x000003aa 4   5    .gnu_debugdata      ascii   ypVx
+541 0x0000cd2f 0x000003b5 5   6    .gnu_debugdata      ascii   <N>$[
+542 0x0000cd3f 0x000003c5 4   5    .gnu_debugdata      ascii   %$)s
+543 0x0000cd55 0x000003db 4   9    .gnu_debugdata      utf8    䭲Ls"
+544 0x0000cd67 0x000003ed 4   5    .gnu_debugdata      ascii   \>@\a
+545 0x0000cd9e 0x00000424 4   7    .gnu_debugdata      utf8    ?n憋p
+546 0x0000cdc0 0x00000446 4   5    .gnu_debugdata      ascii   7yS[
+547 0x0000cdd5 0x0000045b 5   8    .gnu_debugdata      utf8    Gl莲u2
+548 0x0000cdf6 0x0000047c 5   6    .gnu_debugdata      ascii   C&_Sr
+549 0x0000ce0b 0x00000491 6   8    .gnu_debugdata      utf8    ,F]~ޚC
+550 0x0000ce1d 0x000004a3 4   5    .gnu_debugdata      ascii   hduG
+551 0x0000ce24 0x000004aa 7   10   .gnu_debugdata      utf8    SظПnZw%
+552 0x0000ce5e 0x000004e4 4   5    .gnu_debugdata      ascii   \e"\fJ
+553 0x0000ced0 0x00000556 4   5    .gnu_debugdata      ascii   5'J+
+554 0x0000cee1 0x00000567 5   6    .gnu_debugdata      ascii   b!-Ov
+555 0x0000cf02 0x00000588 4   7    .gnu_debugdata      utf8    02۾ֽ
+556 0x0000cf09 0x0000058f 6   7    .gnu_debugdata      ascii   }HE&d\t
+557 0x0000cf1c 0x000005a2 4   5    .gnu_debugdata      ascii   \eh\t>
+558 0x0000cf45 0x000005cb 4   5    .gnu_debugdata      ascii   ,bw?
+559 0x0000cfd1 0x00000657 4   5    .gnu_debugdata      ascii   I9}%
+560 0x0000cfdf 0x00000665 5   6    .gnu_debugdata      ascii   |\tLjT
+561 0x0000cfe9 0x0000066f 4   5    .gnu_debugdata      ascii   z\e2}
+562 0x0000d003 0x00000689 6   7    .gnu_debugdata      ascii   DF.j\1
+563 0x0000d01a 0x000006a0 4   5    .gnu_debugdata      ascii   Xr9Z
+564 0x0000d03c 0x000006c2 7   8    .gnu_debugdata      ascii   =`}62l}
+565 0x0000d050 0x000006d6 4   5    .gnu_debugdata      ascii   dYX(
+566 0x0000d0c1 0x00000747 4   6    .gnu_debugdata      utf8    <s(ߖ
+567 0x0000d12e 0x000007b4 4   6    .gnu_debugdata      utf8    :r}S
+0x0000b500    1     16 sym.imp.__cxa_finalize
+0x0000b530    1     16 sym.imp.__android_log_print
+0x0000b5b0    1     16 sym.imp.__stack_chk_fail
+0x0000b780    1     16 sym.imp.__strlcpy_chk
+0x0000b620    1     16 sym.imp.__strlen_chk
+0x0000b750    1     16 sym.imp.abort
+0x0000b730    1     16 sym.imp.free
+0x0000b520    1     16 sym.imp.get_tag_log_level
+0x0000b540    1     16 sym.imp.get_timestamp
+0x0000b560    1     16 sym.imp.getpid
+0x0000b580    1     16 sym.imp.log_buffer_insert
+0x0000b6a0    1     16 sym.imp.malloc
+0x0000b6b0    1     16 sym.imp.memcpy
+0x0000b550    1     16 sym.imp.memset
+0x0000b660    1     16 sym.imp.strcmp
+0x0000b570    1     16 sym.imp.syscall
+0x0000b5c0    1     16 sym.imp.vsnprintf
+0x0000b7a0    1     16 sym.imp.__vsnprintf_chk
+0x0000b790    1     16 sym.imp.loc_read_conf_long
+0x00005000    1     12 entry0
+0x00005be8   12    364 method.QRemoteCdfw.startSource__
+0x000076f0   11    180 method.QDgnssRemoteSource.unsubscribe__
+0x000077fc    1      8 method.QDgnssRemoteListener.createListener_unsigned_long__char_const_
+0x00007808    1      4 method.QDgnssRemoteListener.reportDataUsage_SourceDataUsageMsg_const_
+0x0000ad28    1     80 method.QDgnssBinEncoder.packInjectDataMsg_EncodeData_const__char_const_
+0x0000b210   27    428 method.QDgnssBinDecoder.unpackStartSourceMsg_CdfwIpcMsg_const_
+0x00005a20   23    456 method.QRemoteCdfw.handleStatusMsg_CdfwIpcMsg_const_
+0x00007804    1      4 method.QDgnssRemoteListener.unsubscribe__
+0x00007c90    1      4 method.std::__1::__shared_ptr_emplace_QDgnssBinDecoder__std::__1::allocator_QDgnssBinDecoder___.__on_zero_shared_weak__
+0x0000a5b8    4    328 method.QDgnssBinEncoder.packGloEphemerisMsg_glonassEphemerisType_const__EncodeData_const_
+0x0000b3bc   19    284 method.QDgnssBinDecoder.decodeIpcMsg_CdfwIpcMsg_const_
+0x0000b0ec   11    220 method.QDgnssBinDecoder.unpackSourceStatusMsg_CdfwIpcMsg_const_
+0x00007c84    1     12 method.std::__1::__shared_ptr_emplace_QDgnssBinDecoder__std::__1::allocator_QDgnssBinDecoder___.__on_zero_shared__
+0x00006a48   10    356 method.QRemoteCdfw.stopSource__
+0x0000700c   73   1764 method.QDgnssRemoteSource.createSource_QDgnssDataSource__QDgnssInjectDataFormat__std::__1::function_void__QDgnssSourceStatus____char_const_
+0x0000ac54    9    140 method.QDgnssBinEncoder.packStartSourceMsg_EncodeData_const__char_const_
+0x00007c74    1     12 method.std::__1::__shared_ptr_emplace_QDgnssBinEncoder__std::__1::allocator_QDgnssBinEncoder___.__on_zero_shared__
+0x00007c80    1      4 method.std::__1::__shared_ptr_emplace_QDgnssBinEncoder__std::__1::allocator_QDgnssBinEncoder___.__on_zero_shared_weak__
+0x0000a0f4    4    264 method.QDgnssBinEncoder.packRefStationMsg_ReferenceStation_const__EncodeData_const_
+0x00009e74   12    252 method.QDgnssBinEncoder.createCdfwIpcMsg_unsigned_short__unsigned_int__char_const_
+0x0000a3e8    4    464 method.QDgnssBinEncoder.packGpsEphemerisMsg_gpsEphemerisType_const__EncodeData_const_
+0x000054f0   48   1328 method.QRemoteCdfw.processIpcMsg_char_const__unsigned_int__loc_util::LocIpcRecver_const_
+0x0000a9fc    4    284 method.QDgnssBinEncoder.packSbasEphemerisMsg_sbasGeoEphemerisType_const__EncodeData_const_
+0x00005268   27    580 method.QRemoteCdfw.QRemoteCdfw__
+0x00007ca0    1     12 method.std::__1::__shared_ptr_emplace_IpcListener__std::__1::allocator_IpcListener___.__on_zero_shared__
+0x00008ef0   20    724 sym.printRefStation_unsigned_char_const_
+0x00005014   12    440 sym.QRemoteCdfw::QRemoteCdfw__
+0x000077a4    4    104 method.QDgnssRemoteSource.injectCorrectionData_unsigned_char_const__unsigned_int_
+0x0000a058    9    156 method.QDgnssBinEncoder.setListenerRecvMsgHead_BinListenerRecvMsg__unsigned_short__unsigned_int__QDgnssDataSource__QDgnssInjectDataFormat__unsigned_int__unsigned_int_
+0x0000a700    4    380 method.QDgnssBinEncoder.packGalileoEphemerisMsg_galileoEphemerisType_const__EncodeData_const_
+0x00007cac    1      4 method.std::__1::__shared_ptr_emplace_IpcListener__std::__1::allocator_IpcListener___.__on_zero_shared_weak__
+0x000087d8    3     56 sym.dgnssMsgString_QDgnssMsgId_
+0x00008a34   29   1212 sym.printObservation_unsigned_char_const_
+0x0000a87c    4    384 method.QDgnssBinEncoder.packBdsEphemerisMsg_bdsMbRawEphemerisType_const__EncodeData_const_
+0x000087a8    3     48 sym.cdfwMsgSring_unsigned_short_
+0x0000ace0    3     72 method.QDgnssBinEncoder.packStopSourceMsg_char_const_
+0x0000ab18    4    136 method.QDgnssBinEncoder.packSessionActiveMsg_SessionActiveMsg_const__EncodeData_const_
+0x00006ea4   10    360 method.QRemoteCdfwTimer.timeOutCallback__
+0x00009578   20    852 sym.printBdsEphemeris_unsigned_char_const_
+0x000098cc   20    868 sym.printGalEphemeris_unsigned_char_const_
+0x000091c4   20    948 sym.printGpsEphemeris_unsigned_char_const_
+0x00005d54  125   2700 method.QRemoteCdfw.processStartSource_bool_
+0x0000ad78    3     84 method.QDgnssBinEncoder.encodeIpcMsg_unsigned_short__EncodeData_const__char_const_
+0x000088c4   16    368 sym.isControlSocketMsg_char_const__unsigned_int_
+0x00006bac   30    760 method.QRemoteCdfw.stopSourceIpc__
+0x0000a1fc    7    312 method.QDgnssBinEncoder.packObservationMsg_DGnssObservation_const__EncodeData_const_
+0x000067e0   21    616 method.QRemoteCdfw.injectCorrectionData_unsigned_char_const__unsigned_int_
+0x00008008    1     12 method.std::__1::__shared_ptr_emplace_QRemoteCdfwSource__std::__1::allocator_QRemoteCdfwSource___.__on_zero_shared__
+0x00008014    1      4 method.std::__1::__shared_ptr_emplace_QRemoteCdfwSource__std::__1::allocator_QRemoteCdfwSource___.__on_zero_shared_weak__
+0x0000a334    4    180 method.QDgnssBinEncoder.packGloBiasMsg_GlonassBias_const__EncodeData_const_
+0x0000840c   20    756 sym.cdfwGetDebugConfig__
+0x00009c30   19    580 sym.printSessionActive_unsigned_char_const_
+0x0000aba0    6    132 method.QDgnssBinEncoder.packStatusMsg_QDgnssSourceStatus_
+0x0000b670    1     16 method.loc_util::LocIpc.getLocIpcQrtrRecver_std::__1::shared_ptr_loc_util::ILocIpcListener__const__int__int__std::__1::shared_ptr_loc_util::LocIpcQrtrWatcher__const_
+0x0000b650    1     16 sym.imp.loc_util::LocIpc::getLocIpcQrtrSender_int__int_
+0x0000b5f0    1     16 sym.imp.loc_util::LocIpc::stopNonBlockingListening__
+0x0000b680    1     16 method.loc_util::LocIpc.startNonBlockingListening_std::__1::unique_ptr_loc_util::LocIpcRecver__std::__1::default_delete_loc_util::LocIpcRecver____
+0x0000b510    1     16 sym.imp.loc_util::MsgTask::MsgTask_char_const_
+0x0000b5d0    1     16 sym.imp.loc_util::LocTimer::stop__
+0x0000b690    1     16 sym.imp.loc_util::LocTimer::start_unsigned_int__bool_
+0x0000b5a0    1     16 fcn.0000b5a0
+0x0000b710    1     16 sym.imp.loc_util::LocTimer::LocTimer__
+0x0000b600    1     16 sym.imp.loc_util::LocThread::stop__
+0x0000b640    1     16 sym.imp.loc_util::MsgTask::sendMsg_loc_util::LocMsg_const__const
+0x0000b5e0    1     16 sym.imp.std::__1::__shared_weak_count::__release_weak__
+0x0000b740    1     16 sym.imp.std::__1::__shared_weak_count::__shared_weak_count__
+0x0000b700    1     16 sym.imp.operator_delete_void_
+0x0000b590    1     16 sym.imp.operator_new_unsigned_long_
+0x00005010    1      4 entry.fini0
+0x000051cc    3    156 fcn.000051cc
+0x0000b610    1     16 fcn.0000b610
+0x0000b630    1     16 fcn.0000b630
+0x00007c94    1     12 method.std::__1.__throw_bad_function_call__
+0x0000b6c0    1     16 fcn.0000b6c0
+0x00008018   43    620 sym._ZNSt3__122__compressed_pair_elemI17QRemoteCdfwSourceLi1ELb0EEC2IJR16QDgnssDataSourceR22QDgnssInjectDataFormatRNS_8functionIFv
+0x0000b6d0    1     16 fcn.0000b6d0
+0x0000b6e0    1     16 fcn.0000b6e0
+0x0000b760    1     16 fcn.0000b760
+0x0000b770    1     16 fcn.0000b770
+0x00008284   28    356 sym.QRemoteCdfwSource::QRemoteCdfwSource__
+0x00008700    3    168 sym.snprintf_char__unsigned_long_pass_object_size1__char_const__::_
+0x0000b830    1     16 fcn.0000b830
+0x0000b840    1     16 fcn.0000b840
+0x0000780c    1      4 method.IQDgnssSource.IQDgnssSource__
+0x00007810    1      4 method.QRemoteCdfw.stopSource__::StopSourceHandler::StopSourceHandler__
+0x00007814    1      4 method.QDgnssRemoteListener.QDgnssRemoteListener__
+0x00007818    1     36 method.QRemoteCdfwTimer.QRemoteCdfwTimer__
+0x0000783c    1     76 method.loc_util::LocIpc.LocIpc__
+0x0000789c    1     52 method.loc_util::LocThread.LocThread__
+0x000078d0    2     28 method.QRemoteCdfw.startSource__::StartSourceHandler::proc___const
+0x000078dc   33    860 method.QRemoteCdfw.injectCorrectionData_unsigned_char_const__unsigned_int_::InjectSourceHandler::proc___const
+0x00007c38    1      8 method.QRemoteCdfw.stopSource__::StopSourceHandler::proc___const
+0x00007c40    1     12 method.QRemoteCdfwTimer.timeOutCallback__::ReconnectMsg::proc___const
+0x00007c50    1     36 method.std::__1::__shared_ptr_emplace_QDgnssBinEncoder__std::__1::allocator_QDgnssBinEncoder___.__shared_ptr_emplace__
+0x00007cb0   10    312 method.IpcListener.onListenerReady__
+0x00007de8   12    432 method.IpcListener.onReceive_char_const__unsigned_int__loc_util::LocIpcRecver_const_
+0x00007fcc    1     60 method.std::__1::__shared_ptr_emplace_QRemoteCdfwSource__std::__1::allocator_QRemoteCdfwSource___.__shared_ptr_emplace__
+0x000083e8    1     36 method.QRemoteCdfwSource.QRemoteCdfwSource__
+0x000054ac    1     68 sym.loc_util::LocIpc::LocIpc__
+0x00007f98    1     52 sym.std::__1::__shared_ptr_emplace_QRemoteCdfwSource__std::__1::allocator_QRemoteCdfwSource___::__shared_ptr_emplace__
+0x0000ade0    2     32 fcn.0000ade0
+0x0000af6c    2     32 fcn.0000af6c
+0x0000af84    2     32 fcn.0000af84
+0x0000afb8    2     32 fcn.0000afb8
+0x0000afd0    2     32 fcn.0000afd0
+0x0000afe8    2     32 fcn.0000afe8
+0x0000b000    2     32 fcn.0000b000
+0x0000b018    2     32 fcn.0000b018
+0x0000b4e0    1     20 section..plt

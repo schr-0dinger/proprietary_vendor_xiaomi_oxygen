@@ -1,0 +1,284 @@
+arch     arm
+baddr    0x0
+binsz    11143
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                       demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+24  0x000019ac 0x000029ac GLOBAL FUNC 320      gef_get_param_v1
+25  0x00001750 0x00002750 GLOBAL FUNC 320      gef_set_param_v1
+26  0x000012b4 0x000022b4 GLOBAL FUNC 368      gef_enable_effect
+27  0x00001aec 0x00002aec GLOBAL FUNC 232      gef_get_param_v2
+28  0x0000158c 0x0000258c GLOBAL FUNC 200      gef_query_version
+29  0x00001890 0x00002890 GLOBAL FUNC 232      gef_set_param_v2
+30  0x00001bd4 0x00002bd4 GLOBAL FUNC 240      gef_store_cacheparam_v1
+31  0x00001424 0x00002424 GLOBAL FUNC 360      gef_disable_effect
+32  0x00001e50 0x00002e50 GLOBAL FUNC 140      gef_init
+33  0x00000d38 0x00001d38 GLOBAL FUNC 1084     gef_register_session
+34  0x00001d64 0x00002d64 GLOBAL FUNC 236      gef_retrieve_cacheparam_v1
+35  0x00001cc4 0x00002cc4 GLOBAL FUNC 160      gef_store_cacheparam_v2
+36  0x00001978 0x00002978 GLOBAL FUNC 52       copy_v2_to_v1
+37  0x00001edc 0x00002edc GLOBAL FUNC 156      gef_deinit
+38  0x00001174 0x00002174 GLOBAL FUNC 320      gef_deregister_session
+39  0x00001f78 0x00002f78 GLOBAL FUNC 432      gef_device_config_cb
+40  0x00001654 0x00002654 GLOBAL FUNC 252      gef_register_callback
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000174    0x18 0x00000174    0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c    0x20 0x0000018c    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0x290 0x000001ac   0x290 -r-- DYNSYM      .dynsym
+4   0x0000043c    0x52 0x0000043c    0x52 -r-- GNU_VERSYM  .gnu.version
+5   0x00000490    0x60 0x00000490    0x60 -r-- GNU_VERNEED .gnu.version_r
+6   0x000004f0    0x84 0x000004f0    0x84 -r-- GNU_HASH    .gnu.hash
+7   0x00000574   0x2b7 0x00000574   0x2b7 -r-- STRTAB      .dynstr
+8   0x0000082c     0xd 0x0000082c     0xd -r-- ----        .rel.dyn
+9   0x0000083c     0x8 0x0000083c     0x8 -r-- ----        .relr.dyn
+10  0x00000844    0xa0 0x00000844    0xa0 -r-- ----        .ARM.exidx
+11  0x000008e4    0xb0 0x000008e4    0xb0 -r-- REL         .rel.plt
+12  0x00000994   0x38e 0x00000994   0x38e -r-- PROGBITS    .rodata
+13  0x00000d24  0x1578 0x00001d24  0x1578 -r-x PROGBITS    .text
+14  0x000022a0   0x180 0x000032a0   0x180 -r-x PROGBITS    .plt
+15  0x00002420     0x4 0x00004420     0x4 -rw- PROGBITS    .data.rel.ro
+16  0x00002424     0x8 0x00004424     0x8 -rw- FINI_ARRAY  .fini_array
+17  0x0000242c    0xf0 0x0000442c    0xf0 -rw- DYNAMIC     .dynamic
+18  0x0000251c     0x4 0x0000451c     0x4 -rw- PROGBITS    .got
+19  0x00002520    0x64 0x00004520    0x64 -rw- PROGBITS    .got.plt
+20  0x00002584     0x0 0x00005584    0x38 -rw- NOBITS      .bss
+21  0x00002584    0x4e 0x00000000    0x4e ---- ----        .ARM.attributes
+22  0x000025d2    0xf1 0x00000000    0xf1 ---- STRTAB      .shstrtab
+23  0x000026c3   0x4c4 0x00000000   0x4c4 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x000000f6 0x000000f6 4   5                        ascii   td $
+3   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+4   0x00000514 0x00000514 4   6    .gnu.hash           utf8    <\b\b@
+5   0x0000054d 0x0000054d 4   5    .gnu.hash           ascii   M"1j
+6   0x00000575 0x00000575 14  15   .dynstr             ascii   __cxa_finalize
+7   0x00000584 0x00000584 19  20   .dynstr             ascii   __android_log_print
+8   0x00000598 0x00000598 16  17   .dynstr             ascii   __stack_chk_fail
+9   0x000005a9 0x000005a9 17  18   .dynstr             ascii   __stack_chk_guard
+10  0x000005bb 0x000005bb 6   7    .dynstr             ascii   access
+11  0x000005c2 0x000005c2 6   7    .dynstr             ascii   calloc
+12  0x000005c9 0x000005c9 13  14   .dynstr             ascii   copy_v2_to_v1
+13  0x000005d7 0x000005d7 7   8    .dynstr             ascii   dlclose
+14  0x000005df 0x000005df 7   8    .dynstr             ascii   dlerror
+15  0x000005e7 0x000005e7 6   7    .dynstr             ascii   dlopen
+16  0x000005ee 0x000005ee 5   6    .dynstr             ascii   dlsym
+17  0x000005f4 0x000005f4 4   5    .dynstr             ascii   free
+18  0x000005f9 0x000005f9 10  11   .dynstr             ascii   gef_deinit
+19  0x00000604 0x00000604 22  23   .dynstr             ascii   gef_deregister_session
+20  0x0000061b 0x0000061b 20  21   .dynstr             ascii   gef_device_config_cb
+21  0x00000630 0x00000630 18  19   .dynstr             ascii   gef_disable_effect
+22  0x00000643 0x00000643 17  18   .dynstr             ascii   gef_enable_effect
+23  0x00000655 0x00000655 16  17   .dynstr             ascii   gef_get_param_v1
+24  0x00000666 0x00000666 16  17   .dynstr             ascii   gef_get_param_v2
+25  0x00000677 0x00000677 8   9    .dynstr             ascii   gef_init
+26  0x00000680 0x00000680 17  18   .dynstr             ascii   gef_query_version
+27  0x00000692 0x00000692 21  22   .dynstr             ascii   gef_register_callback
+28  0x000006a8 0x000006a8 20  21   .dynstr             ascii   gef_register_session
+29  0x000006bd 0x000006bd 26  27   .dynstr             ascii   gef_retrieve_cacheparam_v1
+30  0x000006d8 0x000006d8 16  17   .dynstr             ascii   gef_set_param_v1
+31  0x000006e9 0x000006e9 16  17   .dynstr             ascii   gef_set_param_v2
+32  0x000006fa 0x000006fa 23  24   .dynstr             ascii   gef_store_cacheparam_v1
+33  0x00000712 0x00000712 23  24   .dynstr             ascii   gef_store_cacheparam_v2
+34  0x0000072a 0x0000072a 12  13   .dynstr             ascii   property_get
+35  0x00000737 0x00000737 17  18   .dynstr             ascii   property_get_bool
+36  0x00000749 0x00000749 17  18   .dynstr             ascii   pthread_cond_init
+37  0x0000075b 0x0000075b 19  20   .dynstr             ascii   pthread_cond_signal
+38  0x0000076f 0x0000076f 18  19   .dynstr             ascii   pthread_mutex_init
+39  0x00000782 0x00000782 18  19   .dynstr             ascii   pthread_mutex_lock
+40  0x00000795 0x00000795 20  21   .dynstr             ascii   pthread_mutex_unlock
+41  0x000007aa 0x000007aa 12  13   .dynstr             ascii   pthread_once
+42  0x000007b7 0x000007b7 8   9    .dynstr             ascii   strerror
+43  0x000007c0 0x000007c0 9   10   .dynstr             ascii   vsnprintf
+44  0x000007ca 0x000007ca 6   7    .dynstr             ascii   memcpy
+45  0x000007d1 0x000007d1 6   7    .dynstr             ascii   memset
+46  0x000007d8 0x000007d8 9   10   .dynstr             ascii   liblog.so
+47  0x000007e2 0x000007e2 6   7    .dynstr             ascii   LIBLOG
+48  0x000007e9 0x000007e9 7   8    .dynstr             ascii   libc.so
+49  0x000007f1 0x000007f1 4   5    .dynstr             ascii   LIBC
+50  0x000007f6 0x000007f6 8   9    .dynstr             ascii   libdl.so
+51  0x000007ff 0x000007ff 12  13   .dynstr             ascii   libcutils.so
+52  0x0000080c 0x0000080c 9   10   .dynstr             ascii   libc++.so
+53  0x00000816 0x00000816 7   8    .dynstr             ascii   libm.so
+54  0x0000081e 0x0000081e 12  13   .dynstr             ascii   libqtigef.so
+55  0x0000082c 0x0000082c 4   5    .rel.dyn            ascii   APS2
+56  0x00000994 0x00000994 22  23   .rodata             ascii   %s: Exit with error %d
+57  0x000009ab 0x000009ab 17  18   .rodata             ascii   gef_enable_effect
+58  0x000009bd 0x000009bd 23  24   .rodata             ascii   gef_store_cacheparam_v1
+59  0x000009d5 0x000009d5 14  15   .rodata             ascii   generic_effect
+60  0x000009e4 0x000009e4 51  52   .rodata             ascii   %s: Enter with (device:%d, mask:%d, acdb_dev_id:%d)
+61  0x00000a18 0x00000a18 22  23   .rodata             ascii   gef_deregister_session
+62  0x00000a2f 0x00000a2f 27  28   .rodata             ascii   %s: enter with (%d, %d, %d)
+63  0x00000a4b 0x00000a4b 28  29   .rodata             ascii   audio_extn_gef_get_audio_cal
+64  0x00000a68 0x00000a68 30  31   .rodata             ascii   %s: Exit with effect_handle %p
+65  0x00000a87 0x00000a87 26  27   .rodata             ascii   gef_retrieve_cacheparam_v1
+66  0x00000aa2 0x00000aa2 31  32   .rodata             ascii   number of registered effects %d
+67  0x00000ac2 0x00000ac2 17  18   .rodata             ascii   gef_query_version
+68  0x00000ad4 0x00000ad4 37  38   .rodata             ascii   %s: dlsym failed for %s with error %s
+69  0x00000afa 0x00000afa 16  17   .rodata             ascii   gef_get_param_v1
+70  0x00000b0b 0x00000b0b 16  17   .rodata             ascii   gef_set_param_v1
+71  0x00000b1c 0x00000b1c 16  17   .rodata             ascii   gef_get_param_v2
+72  0x00000b2d 0x00000b2d 23  24   .rodata             ascii   gef_store_cacheparam_v2
+73  0x00000b45 0x00000b45 34  35   .rodata             ascii   /vendor/lib/hw/audio.primary.%s.so
+74  0x00000b68 0x00000b68 30  31   .rodata             ascii   audio_extn_gef_store_audio_cal
+75  0x00000b87 0x00000b87 33  34   .rodata             ascii   audio_extn_gef_retrieve_audio_cal
+76  0x00000ba9 0x00000ba9 16  17   .rodata             ascii   gef_set_param_v2
+77  0x00000bba 0x00000bba 20  21   .rodata             ascii   gef_device_config_cb
+78  0x00000bcf 0x00000bcf 18  19   .rodata             ascii   gef_disable_effect
+79  0x00000be2 0x00000be2 31  32   .rodata             ascii   opening %s failed with error %s
+80  0x00000c02 0x00000c02 8   9    .rodata             ascii   gef_init
+81  0x00000c0b 0x00000c0b 10  11   .rodata             ascii   gef_deinit
+82  0x00000c16 0x00000c16 29  30   .rodata             ascii   audio_extn_gef_send_audio_cal
+83  0x00000c34 0x00000c34 28  29   .rodata             ascii   %s: Number of callbacks: %d)
+84  0x00000c51 0x00000c51 27  28   .rodata             ascii   %s: DLOPEN successfulfor %s
+85  0x00000c6d 0x00000c6d 21  22   .rodata             ascii   gef_register_callback
+86  0x00000c83 0x00000c83 30  31   .rodata             ascii   vendor.audio.gef.enable.traces
+87  0x00000ca2 0x00000ca2 24  25   .rodata             ascii   try_and_init_hal_handles
+88  0x00000cbb 0x00000cbb 9   10   .rodata             ascii   %s: Enter
+89  0x00000cc6 0x00000cc6 7   8    .rodata             ascii   msm8937
+90  0x00000cce 0x00000cce 20  21   .rodata             ascii   gef_register_session
+91  0x00000ce3 0x00000ce3 28  29   .rodata             ascii   vendor.audio.gef.debug.flags
+92  0x00000d00 0x00000d00 8   9    .rodata             ascii   %s: Exit
+93  0x00000d09 0x00000d09 24  25   .rodata             ascii   %s: DLOPEN failed for %s
+94  0x00002589 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+95  0x00002594 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+96  0x0000259b 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+97  0x000025d3 0x00000001 11  12   .shstrtab           ascii   .fini_array
+98  0x000025df 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+99  0x000025ea 0x00000018 5   6    .shstrtab           ascii   .text
+100 0x000025f0 0x0000001e 4   5    .shstrtab           ascii   .got
+101 0x000025f5 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+102 0x00002609 0x00000037 8   9    .shstrtab           ascii   .got.plt
+103 0x00002612 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+104 0x0000261b 0x00000049 4   5    .shstrtab           ascii   .bss
+105 0x00002620 0x0000004e 15  16   .shstrtab           ascii   .ARM.attributes
+106 0x00002630 0x0000005e 7   8    .shstrtab           ascii   .dynstr
+107 0x00002638 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+108 0x00002647 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+109 0x00002654 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+110 0x0000265e 0x0000008c 8   9    .shstrtab           ascii   .rel.dyn
+111 0x00002667 0x00000095 12  13   .shstrtab           ascii   .gnu.version
+112 0x00002674 0x000000a2 7   8    .shstrtab           ascii   .dynsym
+113 0x0000267c 0x000000aa 9   10   .shstrtab           ascii   .gnu.hash
+114 0x00002686 0x000000b4 18  19   .shstrtab           ascii   .note.gnu.build-id
+115 0x00002699 0x000000c7 8   9    .shstrtab           ascii   .dynamic
+116 0x000026a2 0x000000d0 9   10   .shstrtab           ascii   .shstrtab
+117 0x000026ac 0x000000da 7   8    .shstrtab           ascii   .rodata
+118 0x000026b4 0x000000e2 14  15   .shstrtab           ascii   .gnu_debugdata
+119 0x000026c4 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+120 0x00002703 0x00000040 6   7    .gnu_debugdata      ascii   \rF"-w)
+121 0x00002712 0x0000004f 6   7    .gnu_debugdata      ascii   @C#y3'
+122 0x0000276e 0x000000ab 4   5    .gnu_debugdata      ascii   w-R\f
+123 0x000027b4 0x000000f1 5   7    .gnu_debugdata      utf8    PAR\v'
+124 0x000027e9 0x00000126 4   5    .gnu_debugdata      ascii   >\tFM
+125 0x00002800 0x0000013d 4   5    .gnu_debugdata      ascii   *Kl%
+126 0x00002833 0x00000170 4   7    .gnu_debugdata      utf8    )п#ӌ
+127 0x0000286c 0x000001a9 7   9    .gnu_debugdata      utf8    D7^|P\bI
+128 0x00002879 0x000001b6 4   5    .gnu_debugdata      ascii   %tKB
+129 0x0000289f 0x000001dc 4   5    .gnu_debugdata      ascii   bnlh
+130 0x000028b4 0x000001f1 4   5    .gnu_debugdata      ascii   m+)[
+131 0x00002905 0x00000242 5   6    .gnu_debugdata      ascii   8bO5e
+132 0x00002932 0x0000026f 4   5    .gnu_debugdata      ascii   \b\tz,
+133 0x0000294d 0x0000028a 4   5    .gnu_debugdata      ascii   OO:T
+134 0x0000297e 0x000002bb 7   9    .gnu_debugdata      utf8    UEès\edU
+135 0x000029c1 0x000002fe 4   5    .gnu_debugdata      ascii   dwJ7
+136 0x000029ce 0x0000030b 4   5    .gnu_debugdata      ascii   92(s
+137 0x000029ec 0x00000329 4   5    .gnu_debugdata      ascii   o?v&
+138 0x00002a1c 0x00000359 4   7    .gnu_debugdata      utf8    Į<*ӝ
+139 0x00002a4d 0x0000038a 4   5    .gnu_debugdata      ascii    5~h
+140 0x00002a5a 0x00000397 4   6    .gnu_debugdata      utf8    нIO.
+141 0x00002a71 0x000003ae 4   7    .gnu_debugdata      utf8    Hhѹ'
+142 0x00002a7e 0x000003bb 4   6    .gnu_debugdata      utf8    t%ݛv
+143 0x00002aab 0x000003e8 8   10   .gnu_debugdata      utf8    {7V?Ұ\<)
+144 0x00002b1b 0x00000458 4   8    .gnu_debugdata      utf8    FhɅ
+145 0x00002b4c 0x00000489 4   5    .gnu_debugdata      ascii   ]LjQ
+146 0x00002b67 0x000004a4 5   6    .gnu_debugdata      ascii   Q\vM8I
+147 0x00002d40 0x0000067d 6   28                       utf32le @\tBࣤࣤ°
+0x000032b4    1     12 sym.imp.__cxa_finalize
+0x000032f0    1     12 sym.imp.__android_log_print
+0x00003344    1      8 sym.imp.__stack_chk_fail
+0x000032d8    1      4 sym.imp.access
+0x00003320    1     12 sym.imp.calloc
+0x00003350    1     12 sym.imp.dlclose
+0x00003308    1      4 sym.imp.dlerror
+0x000032fc    1      4 sym.imp.dlopen
+0x00003314    1      8 sym.imp.dlsym
+0x0000335c    1      4 sym.imp.free
+0x00003368    1      4 sym.imp.property_get
+0x00003374    1      8 sym.imp.property_get_bool
+0x0000338c    1      4 sym.imp.pthread_cond_init
+0x0000332c    1      4 sym.imp.pthread_cond_signal
+0x00003380    1     12 sym.imp.pthread_mutex_init
+0x000032cc    1      4 sym.imp.pthread_mutex_lock
+0x00003338    1      4 sym.imp.pthread_mutex_unlock
+0x000032c0    1     12 sym.imp.pthread_once
+0x000032e4    1      8 sym.imp.strerror
+0x00003398    1      4 sym.imp.vsnprintf
+0x000033a4    1      8 sym.imp.memcpy
+0x000033b0    1     12 sym.imp.memset
+0x00001d24    2     20 entry0
+0x000029ac   11    292 sym.gef_get_param_v1
+0x00002750   11    292 sym.gef_set_param_v1
+0x000022b4   15    336 sym.gef_enable_effect
+0x00002aec    9    204 sym.gef_get_param_v2
+0x0000258c    5    172 sym.gef_query_version
+0x00002890    9    204 sym.gef_set_param_v2
+0x00002bd4    8    224 sym.gef_store_cacheparam_v1
+0x00002424   14    328 sym.gef_disable_effect
+0x00002e50    3    120 sym.gef_init
+0x00001d38   29    956 sym.gef_register_session
+0x00002d64    5    208 sym.gef_retrieve_cacheparam_v1
+0x00003310    1      4 fcn.00003310
+0x00002cc4    6    144 sym.gef_store_cacheparam_v2
+0x00002978    3     52 sym.copy_v2_to_v1
+0x00003270    2     16 sym.__aeabi_memcpy
+0x00002edc    5    140 sym.gef_deinit
+0x00002174   11    284 sym.gef_deregister_session
+0x00002f78   15    384 sym.gef_device_config_cb
+0x00002654    9    224 sym.gef_register_callback
+0x00001d32    2      6 entry.fini0
+0x000032d0    1      8 fcn.000032d0
+0x000032e0    1      4 fcn.000032e0
+0x00003284    2     24 sym.__aeabi_memclr8
+0x00003220    1     80 sym.snprintf_char__unsigned_int_pass_object_size1__char_const__::_
+0x000033f0    1     12 fcn.000033f0
+0x00003300    1      8 fcn.00003300
+0x00003330    1      8 fcn.00003330
+0x00003340    1      4 fcn.00003340
+0x00003360    1      8 fcn.00003360
+0x00003370    1      4 fcn.00003370
+0x00003390    1      8 fcn.00003390
+0x000033a0    1      4 fcn.000033a0

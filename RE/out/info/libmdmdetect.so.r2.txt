@@ -1,0 +1,266 @@
+arch     arm
+baddr    0x0
+binsz    18293
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                     demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+21  0x00002330 0x00002330 GLOBAL FUNC 252      get_soc_link
+22  0x00002014 0x00002014 GLOBAL FUNC 252      get_soc_name
+23  0x000026c4 0x000026c4 GLOBAL FUNC 396      get_soc_port
+24  0x0000252c 0x0000252c GLOBAL FUNC 408      get_soc_ramdump_path
+25  0x00002e80 0x00002e80 GLOBAL FUNC 488      get_subsystem_info
+26  0x00003068 0x00003068 GLOBAL FUNC 888      get_system_info
+27  0x000042f8 0x000052f8 GLOBAL OBJ  72       supported_modems
+28  0x00002a5c 0x00002a5c GLOBAL FUNC 108      esoc_framework_supported
+29  0x00002850 0x00002850 GLOBAL FUNC 524      esoc_supported
+30  0x00002ac8 0x00002ac8 GLOBAL FUNC 952      get_esoc_details
+31  0x000033e0 0x000033e0 GLOBAL FUNC 1164     get_peripheral_state
+32  0x0000242c 0x0000242c GLOBAL FUNC 256      get_soc_extra_link_info
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x318 0x000002a8   0x318 -r-- DYNSYM      .dynsym
+4   0x000005c0    0x42 0x000005c0    0x42 -r-- GNU_VERSYM  .gnu.version
+5   0x00000604    0x40 0x00000604    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000648    0x6c 0x00000648    0x6c -r-- GNU_HASH    .gnu.hash
+7   0x000006b4   0x1fe 0x000006b4   0x1fe -r-- STRTAB      .dynstr
+8   0x000008b8    0x12 0x000008b8    0x12 -r-- ----        .rela.dyn
+9   0x000008d0    0x20 0x000008d0    0x20 -r-- ----        .relr.dyn
+10  0x000008f0   0x270 0x000008f0   0x270 -r-- RELA        .rela.plt
+11  0x00000b60   0x551 0x00000b60   0x551 -r-- PROGBITS    .rodata
+12  0x000010b4    0x8c 0x000010b4    0x8c -r-- PROGBITS    .eh_frame_hdr
+13  0x00001140   0x264 0x00001140   0x264 -r-- PROGBITS    .eh_frame
+14  0x00002000  0x186c 0x00002000  0x186c -r-x PROGBITS    .text
+15  0x00003870   0x1c0 0x00003870   0x1c0 -r-x PROGBITS    .plt
+16  0x00004000     0x8 0x00004000     0x8 -rw- PROGBITS    .data.rel.ro
+17  0x00004008    0x10 0x00004008    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00004018   0x1f0 0x00004018   0x1f0 -rw- DYNAMIC     .dynamic
+19  0x00004208     0x8 0x00004208     0x8 -rw- PROGBITS    .got
+20  0x00004210    0xe8 0x00004210    0xe8 -rw- PROGBITS    .got.plt
+21  0x000042f8    0x48 0x000052f8    0x48 -rw- PROGBITS    .data
+22  0x00004340    0xf1 0x00000000    0xf1 ---- STRTAB      .shstrtab
+23  0x00004431   0x344 0x00000000   0x344 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x000006a7 0x000006a7 4   5    .gnu.hash           ascii   iRlI
+3   0x000006b5 0x000006b5 14  15   .dynstr             ascii   __cxa_finalize
+4   0x000006c4 0x000006c4 19  20   .dynstr             ascii   __android_log_print
+5   0x000006d8 0x000006d8 7   8    .dynstr             ascii   __errno
+6   0x000006e0 0x000006e0 8   9    .dynstr             ascii   __open_2
+7   0x000006e9 0x000006e9 10  11   .dynstr             ascii   __read_chk
+8   0x000006f4 0x000006f4 16  17   .dynstr             ascii   __stack_chk_fail
+9   0x00000705 0x00000705 13  14   .dynstr             ascii   __strlcpy_chk
+10  0x00000713 0x00000713 15  16   .dynstr             ascii   __vsnprintf_chk
+11  0x00000723 0x00000723 5   6    .dynstr             ascii   close
+12  0x00000729 0x00000729 8   9    .dynstr             ascii   closedir
+13  0x00000732 0x00000732 24  25   .dynstr             ascii   esoc_framework_supported
+14  0x0000074b 0x0000074b 14  15   .dynstr             ascii   esoc_supported
+15  0x0000075a 0x0000075a 4   5    .dynstr             ascii   free
+16  0x0000075f 0x0000075f 16  17   .dynstr             ascii   get_esoc_details
+17  0x00000770 0x00000770 20  21   .dynstr             ascii   get_peripheral_state
+18  0x00000785 0x00000785 23  24   .dynstr             ascii   get_soc_extra_link_info
+19  0x0000079d 0x0000079d 12  13   .dynstr             ascii   get_soc_link
+20  0x000007aa 0x000007aa 12  13   .dynstr             ascii   get_soc_name
+21  0x000007b7 0x000007b7 12  13   .dynstr             ascii   get_soc_port
+22  0x000007c4 0x000007c4 20  21   .dynstr             ascii   get_soc_ramdump_path
+23  0x000007d9 0x000007d9 18  19   .dynstr             ascii   get_subsystem_info
+24  0x000007ec 0x000007ec 15  16   .dynstr             ascii   get_system_info
+25  0x000007fc 0x000007fc 6   7    .dynstr             ascii   malloc
+26  0x00000803 0x00000803 6   7    .dynstr             ascii   memset
+27  0x0000080a 0x0000080a 7   8    .dynstr             ascii   opendir
+28  0x00000812 0x00000812 7   8    .dynstr             ascii   readdir
+29  0x0000081a 0x0000081a 4   5    .dynstr             ascii   stat
+30  0x0000081f 0x0000081f 8   9    .dynstr             ascii   strerror
+31  0x00000828 0x00000828 7   8    .dynstr             ascii   strlcpy
+32  0x00000830 0x00000830 6   7    .dynstr             ascii   strlen
+33  0x00000837 0x00000837 7   8    .dynstr             ascii   strncmp
+34  0x0000083f 0x0000083f 16  17   .dynstr             ascii   supported_modems
+35  0x00000850 0x00000850 9   10   .dynstr             ascii   liblog.so
+36  0x0000085a 0x0000085a 6   7    .dynstr             ascii   LIBLOG
+37  0x00000861 0x00000861 7   8    .dynstr             ascii   libc.so
+38  0x00000869 0x00000869 4   5    .dynstr             ascii   LIBC
+39  0x0000086e 0x0000086e 12  13   .dynstr             ascii   libcutils.so
+40  0x0000087b 0x0000087b 11  12   .dynstr             ascii   libutils.so
+41  0x00000887 0x00000887 9   10   .dynstr             ascii   libc++.so
+42  0x00000891 0x00000891 7   8    .dynstr             ascii   libm.so
+43  0x00000899 0x00000899 8   9    .dynstr             ascii   libdl.so
+44  0x000008a2 0x000008a2 15  16   .dynstr             ascii   libmdmdetect.so
+45  0x000008b8 0x000008b8 4   5    .rela.dyn           ascii   APS2
+46  0x00000b64 0x00000b64 21  22   .rodata             ascii   Failed to open %s: %s
+47  0x00000b7a 0x00000b7a 7   8    .rodata             ascii   MDM9x15
+48  0x00000b82 0x00000b82 6   7    .rodata             ascii   SDX55M
+49  0x00000b89 0x00000b89 9   10   .rodata             ascii   esoc_name
+50  0x00000b93 0x00000b93 42  43   .rodata             ascii   Failed to get the name of the soc port: %s
+51  0x00000bbe 0x00000bbe 4   5    .rodata             ascii   esoc
+52  0x00000bc3 0x00000bc3 23  24   .rodata             ascii   soc_name passed as NULL
+53  0x00000bdb 0x00000bdb 32  33   .rodata             ascii   Failed to get soc name for modem
+54  0x00000bfc 0x00000bfc 4   5    .rodata             ascii   slpi
+55  0x00000c01 0x00000c01 25  26   .rodata             ascii   Failed to get name for %s
+56  0x00000c1b 0x00000c1b 27  28   .rodata             ascii   Invalid buf/buf size passed
+57  0x00000c37 0x00000c37 21  22   .rodata             ascii   Failed to read %s: %s
+58  0x00000c4d 0x00000c4d 32  33   .rodata             ascii   Too many additional subsystems..
+59  0x00000c6e 0x00000c6e 7   8    .rodata             ascii   MDM9x45
+60  0x00000c76 0x00000c76 23  24   .rodata             ascii   Failed to read soc_name
+61  0x00000c8e 0x00000c8e 7   8    .rodata             ascii   /dev/%s
+62  0x00000c9a 0x00000c9a 5   6    .rodata             ascii   modem
+63  0x00000ca0 0x00000ca0 7   8    .rodata             ascii   MDM9x55
+64  0x00000ca8 0x00000ca8 9   10   .rodata             ascii   esoc_link
+65  0x00000cb2 0x00000cb2 8   9    .rodata             ascii   esoc-dev
+66  0x00000cbf 0x00000cbf 7   8    .rodata             ascii   MDM9x35
+67  0x00000cc7 0x00000cc7 4   5    .rodata             ascii   spss
+68  0x00000ccc 0x00000ccc 11  12   .rodata             ascii   %s/%s/state
+69  0x00000cd8 0x00000cd8 30  31   .rodata             ascii   Failed to get ESOC info for %s
+70  0x00000cf7 0x00000cf7 49  50   .rodata             ascii   Failed to allocate memory for ramdump path string
+71  0x00000d29 0x00000d29 38  39   .rodata             ascii   Failed to open port node directory: %s
+72  0x00000d50 0x00000d50 14  15   .rodata             ascii   /dev/subsys_%s
+73  0x00000d5f 0x00000d5f 21  22   .rodata             ascii   /sys/bus/esoc/devices
+74  0x00000d75 0x00000d75 45  46   .rodata             ascii   Invalid argument passed to get_subsystem_info
+75  0x00000da3 0x00000da3 32  33   .rodata             ascii   Failed to open ssr bus directory
+76  0x00000dc4 0x00000dc4 30  31   .rodata             ascii   Read 0 length string from : %s
+77  0x00000de3 0x00000de3 14  15   .rodata             ascii   esoc_link_info
+78  0x00000df2 0x00000df2 48  49   .rodata             ascii   Unrecognised name passed to get_peripheral_state
+79  0x00000e23 0x00000e23 38  39   .rodata             ascii   Failed to allocate memory for soc link
+80  0x00000e4e 0x00000e4e 5   6    .rodata             ascii   %s/%s
+81  0x00000e54 0x00000e54 26  27   .rodata             ascii   dev info paseed in as NULL
+82  0x00000e6f 0x00000e6f 7   8    .rodata             ascii   MDM9x25
+83  0x00000e77 0x00000e77 23  24   .rodata             ascii   /data/vendor/tombstones
+84  0x00000e8f 0x00000e8f 19  20   .rodata             ascii   Invalid path string
+85  0x00000ea3 0x00000ea3 23  24   .rodata             ascii   Failed to open ESOC dir
+86  0x00000ebb 0x00000ebb 33  34   .rodata             ascii   Failed to get information on : %s
+87  0x00000edd 0x00000edd 43  44   .rodata             ascii   Failed to allocate memory for soc port name
+88  0x00000f09 0x00000f09 37  38   .rodata             ascii   Failed to get ram dump path for modem
+89  0x00000f2f 0x00000f2f 27  28   .rodata             ascii   /sys/bus/msm_subsys/devices
+90  0x00000f4b 0x00000f4b 43  44   .rodata             ascii   Failed to locate registered ssr name for %s
+91  0x00000f77 0x00000f77 6   7    .rodata             ascii   SDX50M
+92  0x00000f7e 0x00000f7e 26  27   .rodata             ascii   Failed to get ramdump path
+93  0x00000f99 0x00000f99 6   7    .rodata             ascii   %s/%s/
+94  0x00000fa0 0x00000fa0 32  33   .rodata             ascii   Failed to get mdm link for modem
+95  0x00000fc1 0x00000fc1 23  24   .rodata             ascii   Too many mdm's detected
+96  0x00000fd9 0x00000fd9 31  32   .rodata             ascii   Failed to open SSR root dir: %s
+97  0x00000ff9 0x00000ff9 10  11   .rodata             ascii   SDXPRAIRIE
+98  0x00001004 0x00001004 12  13   .rodata             ascii   libmdmdetect
+99  0x00001011 0x00001011 32  33   .rodata             ascii   Failed to get soc port for modem
+100 0x00001032 0x00001032 10  11   .rodata             ascii   %s/%s/name
+101 0x0000103d 0x0000103d 8   9    .rodata             ascii   %s/%s/%s
+102 0x00001046 0x00001046 33  34   .rodata             ascii   Failed to get internal modem info
+103 0x00001068 0x00001068 38  39   .rodata             ascii   Failed to allocate memory for soc name
+104 0x0000108f 0x0000108f 33  34   .rodata             ascii   Failed to find a ssr entry for %s
+105 0x000011e4 0x000011e4 5   24   .eh_frame           utf32le \b$¬࿈Ÿ
+106 0x0000222b 0x0000222b 4   5    .text               ascii   Q\b}@
+107 0x00002231 0x00002231 5   6    .text               ascii   jh8?)
+108 0x00002770 0x00002770 4   5    .text               ascii   \bL@9
+109 0x000031b7 0x000031b7 4   5    .text               ascii   T\bM\e
+110 0x000031f3 0x000031f3 4   5    .text               ascii   T\bM\e
+111 0x000036ac 0x000036ac 4   5    .text               ascii   \bL@9
+112 0x00004341 0x00000001 11  12   .shstrtab           ascii   .fini_array
+113 0x0000434d 0x0000000d 5   6    .shstrtab           ascii   .text
+114 0x00004353 0x00000013 4   5    .shstrtab           ascii   .got
+115 0x00004358 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+116 0x0000436c 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+117 0x00004375 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+118 0x0000437f 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+119 0x00004387 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+120 0x00004395 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+121 0x000043a4 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+122 0x000043b1 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+123 0x000043bb 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+124 0x000043c5 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+125 0x000043d2 0x00000092 7   8    .shstrtab           ascii   .dynsym
+126 0x000043da 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+127 0x000043e4 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+128 0x000043ee 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+129 0x00004401 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+130 0x0000440a 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+131 0x00004414 0x000000d4 7   8    .shstrtab           ascii   .rodata
+132 0x0000441c 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+133 0x0000442b 0x000000eb 5   6    .shstrtab           ascii   .data
+134 0x00004432 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+135 0x00004469 0x00000038 5   6    .gnu_debugdata      ascii   "\r&\n\
+136 0x000044d5 0x000000a4 5   7    .gnu_debugdata      utf8    <mރ@d
+137 0x0000450d 0x000000dc 5   6    .gnu_debugdata      ascii   byDpH
+138 0x00004523 0x000000f2 4   5    .gnu_debugdata      ascii   M~)A
+139 0x0000455b 0x0000012a 4   5    .gnu_debugdata      ascii   :q\b#
+140 0x000045a2 0x00000171 4   5    .gnu_debugdata      ascii   f\aG\r
+141 0x000045b9 0x00000188 4   5    .gnu_debugdata      ascii   Jsij
+142 0x000045d2 0x000001a1 4   5    .gnu_debugdata      ascii   c/q]
+143 0x000045f8 0x000001c7 5   6    .gnu_debugdata      ascii   <?k\.
+144 0x00004635 0x00000204 5   6    .gnu_debugdata      ascii   KE,ap
+145 0x0000463e 0x0000020d 6   7    .gnu_debugdata      ascii   0T9)7Y
+146 0x00004695 0x00000264 5   6    .gnu_debugdata      ascii   6%5*\t
+147 0x000046c7 0x00000296 6   8    .gnu_debugdata      utf8    Wep¢G}
+148 0x000046e2 0x000002b1 4   5    .gnu_debugdata      ascii   .NPA
+149 0x000046fd 0x000002cc 4   5    .gnu_debugdata      ascii   (C\a$
+0x00003890    1     16 sym.imp.__cxa_finalize
+0x000038c0    1     16 sym.imp.__android_log_print
+0x00003940    1     16 sym.imp.__errno
+0x000038f0    1     16 sym.imp.__open_2
+0x00003910    1     16 sym.imp.__read_chk
+0x000038d0    1     16 sym.imp.__stack_chk_fail
+0x000039b0    1     16 sym.imp.__strlcpy_chk
+0x000038e0    1     16 sym.imp.__vsnprintf_chk
+0x00003930    1     16 sym.imp.close
+0x00003980    1     16 sym.imp.closedir
+0x000038b0    1     16 sym.imp.free
+0x000038a0    1     16 sym.imp.malloc
+0x00003900    1     16 sym.imp.memset
+0x00003960    1     16 sym.imp.opendir
+0x00003970    1     16 sym.imp.readdir
+0x000039a0    1     16 sym.imp.stat
+0x00003950    1     16 sym.imp.strerror
+0x000039d0    1     16 sym.imp.strlcpy
+0x00003920    1     16 sym.imp.strlen
+0x00003990    1     16 sym.imp.strncmp
+0x00002000    1     12 entry0
+0x00002330    7    252 sym.get_soc_link
+0x00002014    7    252 sym.get_soc_name
+0x000026c4   13    396 sym.get_soc_port
+0x0000252c   11    408 sym.get_soc_ramdump_path
+0x00002e80   14    488 sym.get_subsystem_info
+0x00003068   43    888 sym.get_system_info
+0x00002a5c    3    108 sym.esoc_framework_supported
+0x00002850   22    524 sym.esoc_supported
+0x00002ac8   23    952 sym.get_esoc_details
+0x000033e0   50   1164 sym.get_peripheral_state
+0x0000242c    7    256 sym.get_soc_extra_link_info
+0x00002010    1      4 entry.fini0
+0x00002110    3    168 sym.snprintf_char__unsigned_long_pass_object_size1__char_const__::_
+0x000021b8   22    376 sym.get_subsys_string
+0x000039c0    1     16 fcn.000039c0
+0x000039e0    1     16 fcn.000039e0
+0x000039f0    1     16 fcn.000039f0
+0x00003a00    1     16 fcn.00003a00
+0x00003a10    1     16 fcn.00003a10
+0x00003a20    1     16 fcn.00003a20
+0x00003870    1     20 section..plt

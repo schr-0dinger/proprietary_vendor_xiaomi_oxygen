@@ -1,0 +1,854 @@
+arch     arm
+baddr    0x0
+binsz    87449
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                                                                                                                                                                      demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+168 0x0000cc2c 0x0000cc2c GLOBAL FUNC 36       _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection5debugERKN7android8hardware11hidl_handleERKNS7_8hidl_vecINS7_11hidl_stringEEE                                                                            vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::debug(android::hardware::hidl_handle const&, android::hardware::hidl_vec<android::hardware::hidl_string> const&)
+169 0x0000c68c 0x0000c68c GLOBAL FUNC 152      _ZTv0_n40_N6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection15onLastStrongRefEPKv                                                                                                                            virtual thunk to vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::onLastStrongRef(void const*)
+170 0x0000bb70 0x0000bb70 GLOBAL FUNC 32       _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection13unlinkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEE                                                                                       vendor::qti::hardware::data::connection::V1_1::IDataConnection::unlinkToDeath(android::sp<android::hardware::hidl_death_recipient> const&)
+171 0x0000daf0 0x0000daf0 GLOBAL FUNC 52       _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD0Ev                                                                                                                                                     vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::~BnHwDataConnection()
+172 0x000131b0 0x000131b0 GLOBAL OBJ  144      _ZTTN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE                                                                                                                                                      VTT for vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection
+173 0x00013240 0x00013240 GLOBAL OBJ  256      _ZTVN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionE                                                                                                                                                      vtable for vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection
+174 0x0000e7ec 0x0000e7ec GLOBAL FUNC 12       _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection10getServiceERKNSt3__112basic_stringIcNS6_11char_traitsIcEENS6_9allocatorIcEEEEb                                                                            vendor::qti::hardware::data::connection::V1_1::IDataConnection::getService(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
+175 0x0000ca00 0x0000ca00 GLOBAL FUNC 32       _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection23getAllBearerAllocationsERKN7android2spINS3_4V1_023IDataConnectionResponseEEE                                                                           vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::getAllBearerAllocations(android::sp<vendor::qti::hardware::data::connection::V1_0::IDataConnectionResponse> const&)
+176 0x000136e0 0x000136e0 GLOBAL OBJ  232      _ZTCN6vendor3qti8hardware4data10connection4V1_115IDataConnectionE0_N7android4hidl4base4V1_05IBaseE                                                                                                                        construction vtable for android::hidl::base::V1_0::IBase-in-vendor::qti::hardware::data::connection::V1_1::IDataConnection
+177 0x00013b50 0x00013b50 GLOBAL OBJ  232      _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE0_N7android4hidl4base4V1_05IBaseE                                                                                                                     construction vtable for android::hidl::base::V1_0::IBase-in-vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection
+178 0x00013340 0x00013340 GLOBAL OBJ  64       _ZTTN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionE                                                                                                                                                      VTT for vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection
+179 0x0000b81c 0x0000b81c GLOBAL FUNC 16       _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection5debugERKN7android8hardware11hidl_handleERKNS7_8hidl_vecINS7_11hidl_stringEEE                                                                               vendor::qti::hardware::data::connection::V1_1::IDataConnection::debug(android::hardware::hidl_handle const&, android::hardware::hidl_vec<android::hardware::hidl_string> const&)
+180 0x0000c238 0x0000c238 GLOBAL FUNC 424      _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionC2ERKN7android2spINS6_8hardware7IBinderEEE                                                                                                               vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::BpHwDataConnection(android::sp<android::hardware::IBinder> const&)
+182 0x0000b6ec 0x0000b6ec GLOBAL FUNC 304      _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection14interfaceChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_11hidl_stringEEEEEE                                                                   vendor::qti::hardware::data::connection::V1_1::IDataConnection::interfaceChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_string> const&)>)
+183 0x0000e8a0 0x0000e8a0 GLOBAL FUNC 296      _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection24registerForNotificationsERKNSt3__112basic_stringIcNS6_11char_traitsIcEENS6_9allocatorIcEEEERKN7android2spINSF_4hidl7manager4V1_020IServiceNotificationEEE vendor::qti::hardware::data::connection::V1_1::IDataConnection::registerForNotifications(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, android::sp<android::hidl::manager::V1_0::IServiceNotification> const&)
+184 0x0000ddf0 0x0000ddf0 GLOBAL FUNC 164      _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnection12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE                                                                               vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::getDebugInfo(std::__1::function<void (android::hidl::base::V1_0::DebugInfo const&)>)
+185 0x0000dde0 0x0000dde0 GLOBAL FUNC 16       _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnection4pingEv                                                                                                                                                  vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::ping()
+186 0x0000cd40 0x0000cd40 GLOBAL FUNC 240      _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection12getHashChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_10hidl_arrayIhLm32EJEEEEEEEE                                                         vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::getHashChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_array<unsigned char, 32ul> > const&)>)
+187 0x0000d164 0x0000d164 GLOBAL FUNC 564      _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection13unlinkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEE                                                                                    vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::unlinkToDeath(android::sp<android::hardware::hidl_death_recipient> const&)
+188 0x0000c9dc 0x0000c9dc GLOBAL FUNC 36       _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection19getBearerAllocationEiRKN7android2spINS3_4V1_023IDataConnectionResponseEEE                                                                              vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::getBearerAllocation(int, android::sp<vendor::qti::hardware::data::connection::V1_0::IDataConnectionResponse> const&)
+191 0x0000b8c0 0x0000b8c0 GLOBAL FUNC 216      _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection12getHashChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_10hidl_arrayIhLm32EJEEEEEEEE                                                            vendor::qti::hardware::data::connection::V1_1::IDataConnection::getHashChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_array<unsigned char, 32ul> > const&)>)
+192 0x0000bb90 0x0000bb90 GLOBAL FUNC 192      _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection8castFromERKN7android2spIS5_EEb                                                                                                                             vendor::qti::hardware::data::connection::V1_1::IDataConnection::castFrom(android::sp<vendor::qti::hardware::data::connection::V1_1::IDataConnection> const&, bool)
+193 0x0000cc50 0x0000cc50 GLOBAL FUNC 240      _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection19interfaceDescriptorENSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE                                                                           vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::interfaceDescriptor(std::__1::function<void (android::hardware::hidl_string const&)>)
+195 0x000135e0 0x000135e0 GLOBAL OBJ  256      _ZTCN6vendor3qti8hardware4data10connection4V1_115IDataConnectionE0_NS3_4V1_015IDataConnectionE                                                                                                                            construction vtable for vendor::qti::hardware::data::connection::V1_0::IDataConnection-in-vendor::qti::hardware::data::connection::V1_1::IDataConnection
+196 0x00013948 0x00013948 GLOBAL OBJ  264      _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE0_NS4_15IDataConnectionE                                                                                                                              construction vtable for vendor::qti::hardware::data::connection::V1_1::IDataConnection-in-vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection
+198 0x0000dba0 0x0000dba0 GLOBAL FUNC 576      _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnection15_hidl_getConfigEPN7android4hidl4base4V1_08BnHwBaseERKNS6_8hardware6ParcelEPSD_NSt3__18functionIFvRSD_EEE                                               vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::_hidl_getConfig(android::hidl::base::V1_0::BnHwBase*, android::hardware::Parcel const&, android::hardware::Parcel*, std::__1::function<void (android::hardware::Parcel&)>)
+199 0x0000d398 0x0000d398 GLOBAL FUNC 600      _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionC2ERKN7android2spINS4_15IDataConnectionEEE                                                                                                               vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::BnHwDataConnection(android::sp<vendor::qti::hardware::data::connection::V1_1::IDataConnection> const&)
+200 0x0000cb3c 0x0000cb3c GLOBAL FUNC 240      _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection14interfaceChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_11hidl_stringEEEEEE                                                                vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::interfaceChain(std::__1::function<void (android::hardware::hidl_vec<android::hardware::hidl_string> const&)>)
+201 0x0000d148 0x0000d148 GLOBAL FUNC 28       _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection21notifySyspropsChangedEv                                                                                                                                vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::notifySyspropsChanged()
+202 0x0000ce30 0x0000ce30 GLOBAL FUNC 28       _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection21setHALInstrumentationEv                                                                                                                                vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::setHALInstrumentation()
+205 0x00013cd0 0x00013cd0 GLOBAL OBJ  168      _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE16_N7android8hardware11BpHwRefBaseE                                                                                                                   construction vtable for android::hardware::BpHwRefBase-in-vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection
+206 0x0000c5f8 0x0000c5f8 GLOBAL FUNC 148      _ZThn16_N6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection15onLastStrongRefEPKv                                                                                                                              non-virtual thunk to vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::onLastStrongRef(void const*)
+207 0x0000e570 0x0000e570 GLOBAL FUNC 12       _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection13tryGetServiceERKNSt3__112basic_stringIcNS6_11char_traitsIcEENS6_9allocatorIcEEEEb                                                                         vendor::qti::hardware::data::connection::V1_1::IDataConnection::tryGetService(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool)
+208 0x0000bf44 0x0000bf44 GLOBAL FUNC 164      _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection8castFromERKN7android2spINS6_4hidl4base4V1_05IBaseEEEb                                                                                                      vendor::qti::hardware::data::connection::V1_1::IDataConnection::castFrom(android::sp<android::hidl::base::V1_0::IBase> const&, bool)
+209 0x0000de94 0x0000de94 GLOBAL FUNC 832      _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnection10onTransactEjRKN7android8hardware6ParcelEPS8_jNSt3__18functionIFvRS8_EEE                                                                                vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::onTransact(unsigned int, android::hardware::Parcel const&, android::hardware::Parcel*, unsigned int, std::__1::function<void (android::hardware::Parcel&)>)
+210 0x0000d058 0x0000d058 GLOBAL FUNC 240      _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE                                                                               vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::getDebugInfo(std::__1::function<void (android::hidl::base::V1_0::DebugInfo const&)>)
+211 0x0000c3e0 0x0000c3e0 GLOBAL FUNC 392      _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionC1ERKN7android2spINS6_8hardware7IBinderEEE                                                                                                               vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::BpHwDataConnection(android::sp<android::hardware::IBinder> const&)
+212 0x000134a8 0x000134a8 GLOBAL OBJ  264      _ZTVN6vendor3qti8hardware4data10connection4V1_115IDataConnectionE                                                                                                                                                         vtable for vendor::qti::hardware::data::connection::V1_1::IDataConnection
+213 0x00014968 0x00015968 GLOBAL OBJ  8        _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection10descriptorE                                                                                                                                               vendor::qti::hardware::data::connection::V1_1::IDataConnection::descriptor
+214 0x0000ba80 0x0000ba80 GLOBAL FUNC 16       _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection21setHALInstrumentationEv                                                                                                                                   vendor::qti::hardware::data::connection::V1_1::IDataConnection::setHALInstrumentation()
+215 0x0000e1d4 0x0000e1d4 GLOBAL FUNC 388      _ZN6vendor3qti8hardware4data10connection4V1_116BsDataConnectionC2EN7android2spINS4_15IDataConnectionEEE                                                                                                                   vendor::qti::hardware::data::connection::V1_1::BsDataConnection::BsDataConnection(android::sp<vendor::qti::hardware::data::connection::V1_1::IDataConnection>)
+219 0x0000dab8 0x0000dab8 GLOBAL FUNC 56       _ZTv0_n24_N6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD1Ev                                                                                                                                             virtual thunk to vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::~BnHwDataConnection()
+220 0x0000ba90 0x0000ba90 GLOBAL FUNC 32       _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection11linkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEEm                                                                                        vendor::qti::hardware::data::connection::V1_1::IDataConnection::linkToDeath(android::sp<android::hardware::hidl_death_recipient> const&, unsigned long)
+221 0x0000bb44 0x0000bb44 GLOBAL FUNC 44       _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection21notifySyspropsChangedEv                                                                                                                                   vendor::qti::hardware::data::connection::V1_1::IDataConnection::notifySyspropsChanged()
+222 0x0000e358 0x0000e358 GLOBAL FUNC 340      _ZN6vendor3qti8hardware4data10connection4V1_116BsDataConnectionC1EN7android2spINS4_15IDataConnectionEEE                                                                                                                   vendor::qti::hardware::data::connection::V1_1::BsDataConnection::BsDataConnection(android::sp<vendor::qti::hardware::data::connection::V1_1::IDataConnection>)
+223 0x0000d5f0 0x0000d5f0 GLOBAL FUNC 608      _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionC1ERKN7android2spINS4_15IDataConnectionEEE                                                                                                               vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::BnHwDataConnection(android::sp<vendor::qti::hardware::data::connection::V1_1::IDataConnection> const&)
+224 0x000135b0 0x000135b0 GLOBAL OBJ  48       _ZTTN6vendor3qti8hardware4data10connection4V1_115IDataConnectionE                                                                                                                                                         VTT for vendor::qti::hardware::data::connection::V1_1::IDataConnection
+225 0x0000da88 0x0000da88 GLOBAL FUNC 48       _ZThn32_N6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD1Ev                                                                                                                                               non-virtual thunk to vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::~BnHwDataConnection()
+226 0x0000e7f8 0x0000e7f8 GLOBAL FUNC 168      _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection17registerAsServiceERKNSt3__112basic_stringIcNS6_11char_traitsIcEENS6_9allocatorIcEEEE                                                                      vendor::qti::hardware::data::connection::V1_1::IDataConnection::registerAsService(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+227 0x0000c568 0x0000c568 GLOBAL FUNC 144      _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection15onLastStrongRefEPKv                                                                                                                                    vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::onLastStrongRef(void const*)
+228 0x00013f38 0x00013f38 GLOBAL OBJ  216      _ZTCN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionE0_N7android8hardware7IBinderE                                                                                                                         construction vtable for android::hardware::IBinder-in-vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection
+229 0x0000d850 0x0000d850 GLOBAL FUNC 236      _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD2Ev                                                                                                                                                     vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::~BnHwDataConnection()
+232 0x000137c8 0x000137c8 GLOBAL OBJ  384      _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE0_N7android8hardware11BpInterfaceINS4_15IDataConnectionEEE                                                                                            construction vtable for android::hardware::BpInterface<vendor::qti::hardware::data::connection::V1_1::IDataConnection>-in-vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection
+233 0x00013a50 0x00013a50 GLOBAL OBJ  256      _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE0_NS3_4V1_015IDataConnectionE                                                                                                                         construction vtable for vendor::qti::hardware::data::connection::V1_0::IDataConnection-in-vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection
+235 0x0000db60 0x0000db60 GLOBAL FUNC 64       _ZTv0_n24_N6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD0Ev                                                                                                                                             virtual thunk to vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::~BnHwDataConnection()
+236 0x0000bac0 0x0000bac0 GLOBAL FUNC 132      _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE                                                                                  vendor::qti::hardware::data::connection::V1_1::IDataConnection::getDebugInfo(std::__1::function<void (android::hidl::base::V1_0::DebugInfo const&)>)
+237 0x0000db24 0x0000db24 GLOBAL FUNC 60       _ZThn32_N6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD0Ev                                                                                                                                               non-virtual thunk to vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::~BnHwDataConnection()
+238 0x0000b82c 0x0000b82c GLOBAL FUNC 148      _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection19interfaceDescriptorENSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE                                                                              vendor::qti::hardware::data::connection::V1_1::IDataConnection::interfaceDescriptor(std::__1::function<void (android::hardware::hidl_string const&)>)
+239 0x0000e4ac 0x0000e4ac GLOBAL FUNC 196      _ZN6vendor3qti8hardware4data10connection4V1_116BsDataConnection13addOnewayTaskENSt3__18functionIFvvEEE                                                                                                                    vendor::qti::hardware::data::connection::V1_1::BsDataConnection::addOnewayTask(std::__1::function<void ()>)
+241 0x00013d78 0x00013d78 GLOBAL OBJ  224      _ZTCN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionE0_N7android4hidl4base4V1_08BnHwBaseE                                                                                                                  construction vtable for android::hidl::base::V1_0::BnHwBase-in-vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection
+242 0x0000bab0 0x0000bab0 GLOBAL FUNC 16       _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection4pingEv                                                                                                                                                     vendor::qti::hardware::data::connection::V1_1::IDataConnection::ping()
+243 0x0000da5c 0x0000da5c GLOBAL FUNC 44       _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD1Ev                                                                                                                                                     vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::~BnHwDataConnection()
+244 0x0000c724 0x0000c724 GLOBAL FUNC 696      _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection15_hidl_getConfigEPN7android8hardware10IInterfaceEPNS7_7details16HidlInstrumentorERKNS7_11hidl_stringESF_NSt3__18functionIFvSF_EEE                       vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::_hidl_getConfig(android::hardware::IInterface*, android::hardware::details::HidlInstrumentor*, android::hardware::hidl_string const&, android::hardware::hidl_string const&, std::__1::function<void (android::hardware::hidl_string const&)>)
+245 0x0000d03c 0x0000d03c GLOBAL FUNC 28       _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection4pingEv                                                                                                                                                  vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::ping()
+246 0x00013e58 0x00013e58 GLOBAL OBJ  224      _ZTCN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionE0_N7android8hardware9BHwBinderE                                                                                                                       construction vtable for android::hardware::BHwBinder-in-vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection
+247 0x0000bc50 0x0000bc50 GLOBAL FUNC 164      _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection8castFromERKN7android2spINS3_4V1_015IDataConnectionEEEb                                                                                                     vendor::qti::hardware::data::connection::V1_1::IDataConnection::castFrom(android::sp<vendor::qti::hardware::data::connection::V1_0::IDataConnection> const&, bool)
+248 0x0000ce4c 0x0000ce4c GLOBAL FUNC 496      _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection11linkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEEm                                                                                     vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::linkToDeath(android::sp<android::hardware::hidl_death_recipient> const&, unsigned long)
+249 0x0000ca20 0x0000ca20 GLOBAL FUNC 32       _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection37registerForAllBearerAllocationUpdatesERKN7android2spINS3_4V1_025IDataConnectionIndicationEEE                                                           vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::registerForAllBearerAllocationUpdates(android::sp<vendor::qti::hardware::data::connection::V1_0::IDataConnectionIndication> const&)
+250 0x0000ca40 0x0000ca40 GLOBAL FUNC 252      _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection9getConfigERKN7android8hardware11hidl_stringESA_NSt3__18functionIFvSA_EEE                                                                                vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::getConfig(android::hardware::hidl_string const&, android::hardware::hidl_string const&, std::__1::function<void (android::hardware::hidl_string const&)>)
+253 0x00013c38 0x00013c38 GLOBAL OBJ  152      _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE8_N7android8hardware10IInterfaceE                                                                                                                     construction vtable for android::hardware::IInterface-in-vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection
+254 0x00013008 0x00013008 GLOBAL OBJ  424      _ZTVN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE                                                                                                                                                      vtable for vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8  0x17e8 0x000002a8  0x17e8 -r-- DYNSYM      .dynsym
+4   0x00001a90   0x1fe 0x00001a90   0x1fe -r-- GNU_VERSYM  .gnu.version
+5   0x00001c90    0x40 0x00001c90    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00001cd0   0x2c0 0x00001cd0   0x2c0 -r-- GNU_HASH    .gnu.hash
+7   0x00001f90  0x56a8 0x00001f90  0x56a8 -r-- STRTAB      .dynstr
+8   0x00007638   0x688 0x00007638   0x688 -r-- ----        .rela.dyn
+9   0x00007cc0    0x60 0x00007cc0    0x60 -r-- ----        .relr.dyn
+10  0x00007d20   0xb88 0x00007d20   0xb88 -r-- RELA        .rela.plt
+11  0x000088b0   0x51b 0x000088b0   0x51b -r-- PROGBITS    .rodata
+12  0x00008dcc   0x474 0x00008dcc   0x474 -r-- PROGBITS    .eh_frame_hdr
+13  0x00009240  0x1244 0x00009240  0x1244 -r-- PROGBITS    .eh_frame
+14  0x0000b000  0x6bfc 0x0000b000  0x6bfc -r-x PROGBITS    .text
+15  0x00011c00   0x7d0 0x00011c00   0x7d0 -r-x PROGBITS    .plt
+16  0x00013000  0x12c8 0x00013000  0x12c8 -rw- PROGBITS    .data.rel.ro
+17  0x000142c8    0x18 0x000142c8    0x18 -rw- FINI_ARRAY  .fini_array
+18  0x000142e0     0x8 0x000142e0     0x8 -rw- INIT_ARRAY  .init_array
+19  0x000142e8   0x230 0x000142e8   0x230 -rw- DYNAMIC     .dynamic
+20  0x00014518    0x60 0x00014518    0x60 -rw- PROGBITS    .got
+21  0x00014578   0x3f0 0x00014578   0x3f0 -rw- PROGBITS    .got.plt
+22  0x00014968     0x8 0x00015968     0x8 -rw- PROGBITS    .data
+23  0x00014970    0xfd 0x00000000    0xfd ---- STRTAB      .shstrtab
+24  0x00014a6d   0xb2c 0x00000000   0xb2c ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00001e7c 0x00001e7c 4   6    .gnu.hash           utf8    Ժ5Z^
+3   0x00001edc 0x00001edc 4   6    .gnu.hash           utf8    Jθ^^
+4   0x00001ef7 0x00001ef7 4   5    .gnu.hash           ascii   \Uq3
+5   0x00001f18 0x00001f18 4   6    .gnu.hash           utf8    Ae׳^
+6   0x00001f3c 0x00001f3c 5   6    .gnu.hash           ascii   V%\t:_
+7   0x00001f91 0x00001f91 14  15   .dynstr             ascii   __cxa_finalize
+8   0x00001fa0 0x00001fa0 75  76   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_015IDataConnection10descriptorE
+9   0x00001fec 0x00001fec 130 131  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_015IDataConnection11linkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEEm
+10  0x0000206f 0x0000206f 136 137  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_015IDataConnection12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE
+11  0x000020f8 0x000020f8 158 159  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_015IDataConnection12getHashChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_10hidl_arrayIhLm32EJEEEEEEEE
+12  0x00002197 0x00002197 131 132  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_015IDataConnection13unlinkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEE
+13  0x0000221b 0x0000221b 151 152  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_015IDataConnection14interfaceChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_11hidl_stringEEEEEE
+14  0x000022b3 0x000022b3 140 141  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_015IDataConnection19interfaceDescriptorENSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE
+15  0x00002340 0x00002340 87  88   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_015IDataConnection21notifySyspropsChangedEv
+16  0x00002398 0x00002398 87  88   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_015IDataConnection21setHALInstrumentationEv
+17  0x000023f0 0x000023f0 69  70   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_015IDataConnection4pingEv
+18  0x00002436 0x00002436 139 140  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_015IDataConnection5debugERKN7android8hardware11hidl_handleERKNS7_8hidl_vecINS7_11hidl_stringEEE
+19  0x000024c2 0x000024c2 181 182  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_018BnHwDataConnection25_hidl_getBearerAllocationEPN7android4hidl4base4V1_08BnHwBaseERKNS6_8hardware6ParcelEPSD_NSt3__18functionIFvRSD_EEE
+20  0x00002578 0x00002578 185 186  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_018BnHwDataConnection29_hidl_getAllBearerAllocationsEPN7android4hidl4base4V1_08BnHwBaseERKNS6_8hardware6ParcelEPSD_NSt3__18functionIFvRSD_EEE
+21  0x00002632 0x00002632 199 200  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_018BnHwDataConnection43_hidl_registerForAllBearerAllocationUpdatesEPN7android4hidl4base4V1_08BnHwBaseERKNS6_8hardware6ParcelEPSD_NSt3__18functionIFvRSD_EEE
+22  0x000026fa 0x000026fa 200 201  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_018BpHwDataConnection25_hidl_getBearerAllocationEPN7android8hardware10IInterfaceEPNS7_7details16HidlInstrumentorEiRKNS6_2spINS4_23IDataConnectionResponseEEE
+23  0x000027c3 0x000027c3 203 204  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_018BpHwDataConnection29_hidl_getAllBearerAllocationsEPN7android8hardware10IInterfaceEPNS7_7details16HidlInstrumentorERKNS6_2spINS4_23IDataConnectionResponseEEE
+24  0x0000288f 0x0000288f 219 220  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_018BpHwDataConnection43_hidl_registerForAllBearerAllocationUpdatesEPN7android8hardware10IInterfaceEPNS7_7details16HidlInstrumentorERKNS6_2spINS4_25IDataConnectionIndicationEEE
+25  0x0000296b 0x0000296b 75  76   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection10descriptorE
+26  0x000029b7 0x000029b7 142 143  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection10getServiceERKNSt3__112basic_stringIcNS6_11char_traitsIcEENS6_9allocatorIcEEEEb
+27  0x00002a46 0x00002a46 130 131  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection11linkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEEm
+28  0x00002ac9 0x00002ac9 136 137  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE
+29  0x00002b52 0x00002b52 158 159  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection12getHashChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_10hidl_arrayIhLm32EJEEEEEEEE
+30  0x00002bf1 0x00002bf1 145 146  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection13tryGetServiceERKNSt3__112basic_stringIcNS6_11char_traitsIcEENS6_9allocatorIcEEEEb
+31  0x00002c83 0x00002c83 131 132  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection13unlinkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEE
+32  0x00002d07 0x00002d07 151 152  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection14interfaceChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_11hidl_stringEEEEEE
+33  0x00002d9f 0x00002d9f 148 149  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection17registerAsServiceERKNSt3__112basic_stringIcNS6_11char_traitsIcEENS6_9allocatorIcEEEE
+34  0x00002e34 0x00002e34 140 141  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection19interfaceDescriptorENSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE
+35  0x00002ec1 0x00002ec1 87  88   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection21notifySyspropsChangedEv
+36  0x00002f19 0x00002f19 87  88   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection21setHALInstrumentationEv
+37  0x00002f71 0x00002f71 217 218  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection24registerForNotificationsERKNSt3__112basic_stringIcNS6_11char_traitsIcEENS6_9allocatorIcEEEERKN7android2spINSF_4hidl7manager4V1_020IServiceNotificationEEE
+38  0x0000304b 0x0000304b 69  70   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection4pingEv
+39  0x00003091 0x00003091 139 140  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection5debugERKN7android8hardware11hidl_handleERKNS7_8hidl_vecINS7_11hidl_stringEEE
+40  0x0000311d 0x0000311d 117 118  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection8castFromERKN7android2spINS3_4V1_015IDataConnectionEEEb
+41  0x00003193 0x00003193 116 117  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection8castFromERKN7android2spINS6_4hidl4base4V1_05IBaseEEEb
+42  0x00003208 0x00003208 93  94   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_115IDataConnection8castFromERKN7android2spIS5_EEb
+43  0x00003266 0x00003266 102 103  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_116BsDataConnection13addOnewayTaskENSt3__18functionIFvvEEE
+44  0x000032cd 0x000032cd 103 104  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_116BsDataConnectionC1EN7android2spINS4_15IDataConnectionEEE
+45  0x00003335 0x00003335 103 104  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_116BsDataConnectionC2EN7android2spINS4_15IDataConnectionEEE
+46  0x0000339d 0x0000339d 138 139  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnection10onTransactEjRKN7android8hardware6ParcelEPS8_jNSt3__18functionIFvRS8_EEE
+47  0x00003428 0x00003428 139 140  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnection12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE
+48  0x000034b4 0x000034b4 171 172  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnection15_hidl_getConfigEPN7android4hidl4base4V1_08BnHwBaseERKNS6_8hardware6ParcelEPSD_NSt3__18functionIFvRSD_EEE
+49  0x00003560 0x00003560 72  73   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnection4pingEv
+50  0x000035a9 0x000035a9 107 108  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionC1ERKN7android2spINS4_15IDataConnectionEEE
+51  0x00003615 0x00003615 107 108  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionC2ERKN7android2spINS4_15IDataConnectionEEE
+52  0x00003681 0x00003681 69  70   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD0Ev
+53  0x000036c7 0x000036c7 69  70   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD1Ev
+54  0x0000370d 0x0000370d 69  70   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD2Ev
+55  0x00003753 0x00003753 133 134  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection11linkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEEm
+56  0x000037d9 0x000037d9 139 140  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE
+57  0x00003865 0x00003865 161 162  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection12getHashChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_10hidl_arrayIhLm32EJEEEEEEEE
+58  0x00003907 0x00003907 134 135  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection13unlinkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEE
+59  0x0000398e 0x0000398e 154 155  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection14interfaceChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_11hidl_stringEEEEEE
+60  0x00003a29 0x00003a29 195 196  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection15_hidl_getConfigEPN7android8hardware10IInterfaceEPNS7_7details16HidlInstrumentorERKNS7_11hidl_stringESF_NSt3__18functionIFvSF_EEE
+61  0x00003aed 0x00003aed 86  87   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection15onLastStrongRefEPKv
+62  0x00003b44 0x00003b44 140 141  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection19getBearerAllocationEiRKN7android2spINS3_4V1_023IDataConnectionResponseEEE
+63  0x00003bd1 0x00003bd1 143 144  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection19interfaceDescriptorENSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE
+64  0x00003c61 0x00003c61 90  91   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection21notifySyspropsChangedEv
+65  0x00003cbc 0x00003cbc 90  91   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection21setHALInstrumentationEv
+66  0x00003d17 0x00003d17 143 144  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection23getAllBearerAllocationsERKN7android2spINS3_4V1_023IDataConnectionResponseEEE
+67  0x00003da7 0x00003da7 159 160  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection37registerForAllBearerAllocationUpdatesERKN7android2spINS3_4V1_025IDataConnectionIndicationEEE
+68  0x00003e47 0x00003e47 72  73   .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection4pingEv
+69  0x00003e90 0x00003e90 142 143  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection5debugERKN7android8hardware11hidl_handleERKNS7_8hidl_vecINS7_11hidl_stringEEE
+70  0x00003f1f 0x00003f1f 138 139  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection9getConfigERKN7android8hardware11hidl_stringESA_NSt3__18functionIFvSA_EEE
+71  0x00003faa 0x00003faa 107 108  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionC1ERKN7android2spINS6_8hardware7IBinderEEE
+72  0x00004016 0x00004016 107 108  .dynstr             ascii   _ZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionC2ERKN7android2spINS6_8hardware7IBinderEEE
+73  0x00004082 0x00004082 29  30   .dynstr             ascii   _ZN7android14sp_report_raceEv
+74  0x000040a0 0x000040a0 36  37   .dynstr             ascii   _ZN7android21report_sysprop_changeEv
+75  0x000040c5 0x000040c5 38  39   .dynstr             ascii   _ZN7android23sp_report_stack_pointerEv
+76  0x000040ec 0x000040ec 45  46   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase10descriptorE
+77  0x0000411a 0x0000411a 93  94   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase11linkToDeathERKNS_2spINS_8hardware20hidl_death_recipientEEEm
+78  0x00004178 0x00004178 86  87   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase12getDebugInfoENSt3__18functionIFvRKNS2_9DebugInfoEEEE
+79  0x000041cf 0x000041cf 122 123  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase12getHashChainENSt3__18functionIFvRKNS_8hardware8hidl_vecINS6_10hidl_arrayIhLm32EJEEEEEEEE
+80  0x0000424a 0x0000424a 94  95   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase13unlinkToDeathERKNS_2spINS_8hardware20hidl_death_recipientEEE
+81  0x000042a9 0x000042a9 115 116  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase14interfaceChainENSt3__18functionIFvRKNS_8hardware8hidl_vecINS6_11hidl_stringEEEEEE
+82  0x0000431d 0x0000431d 104 105  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase19interfaceDescriptorENSt3__18functionIFvRKNS_8hardware11hidl_stringEEEE
+83  0x00004386 0x00004386 57  58   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase21notifySyspropsChangedEv
+84  0x000043c0 0x000043c0 57  58   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase21setHALInstrumentationEv
+85  0x000043fa 0x000043fa 39  40   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase4pingEv
+86  0x00004422 0x00004422 103 104  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase5debugERKNS_8hardware11hidl_handleERKNS4_8hidl_vecINS4_11hidl_stringEEE
+87  0x0000448a 0x0000448a 102 103  .dynstr             ascii   _ZN7android4hidl4base4V1_08BnHwBase10onTransactEjRKNS_8hardware6ParcelEPS5_jNSt3__18functionIFvRS5_EEE
+88  0x000044f1 0x000044f1 129 130  .dynstr             ascii   _ZN7android4hidl4base4V1_08BnHwBaseC2ERKNS_2spINS2_5IBaseEEERKNSt3__112basic_stringIcNS9_11char_traitsIcEENS9_9allocatorIcEEEESH_
+89  0x00004573 0x00004573 39  40   .dynstr             ascii   _ZN7android4hidl4base4V1_08BnHwBaseD0Ev
+90  0x0000459b 0x0000459b 39  40   .dynstr             ascii   _ZN7android4hidl4base4V1_08BnHwBaseD1Ev
+91  0x000045c3 0x000045c3 39  40   .dynstr             ascii   _ZN7android4hidl4base4V1_08BnHwBaseD2Ev
+92  0x000045eb 0x000045eb 106 107  .dynstr             ascii   _ZN7android4hidl4base4V1_08BpHwBase10_hidl_pingEPNS_8hardware10IInterfaceEPNS4_7details16HidlInstrumentorE
+93  0x00004656 0x00004656 163 164  .dynstr             ascii   _ZN7android4hidl4base4V1_08BpHwBase11_hidl_debugEPNS_8hardware10IInterfaceEPNS4_7details16HidlInstrumentorERKNS4_11hidl_handleERKNS4_8hidl_vecINS4_11hidl_stringEEE
+94  0x000046fa 0x000046fa 153 154  .dynstr             ascii   _ZN7android4hidl4base4V1_08BpHwBase18_hidl_getDebugInfoEPNS_8hardware10IInterfaceEPNS4_7details16HidlInstrumentorENSt3__18functionIFvRKNS2_9DebugInfoEEEE
+95  0x00004794 0x00004794 181 182  .dynstr             ascii   _ZN7android4hidl4base4V1_08BpHwBase18_hidl_getHashChainEPNS_8hardware10IInterfaceEPNS4_7details16HidlInstrumentorENSt3__18functionIFvRKNS4_8hidl_vecINS4_10hidl_arrayIhLm32EJEEEEEEEE
+96  0x0000484a 0x0000484a 174 175  .dynstr             ascii   _ZN7android4hidl4base4V1_08BpHwBase20_hidl_interfaceChainEPNS_8hardware10IInterfaceEPNS4_7details16HidlInstrumentorENSt3__18functionIFvRKNS4_8hidl_vecINS4_11hidl_stringEEEEEE
+97  0x000048f9 0x000048f9 163 164  .dynstr             ascii   _ZN7android4hidl4base4V1_08BpHwBase25_hidl_interfaceDescriptorEPNS_8hardware10IInterfaceEPNS4_7details16HidlInstrumentorENSt3__18functionIFvRKNS4_11hidl_stringEEEE
+98  0x0000499d 0x0000499d 123 124  .dynstr             ascii   _ZN7android4hidl4base4V1_08BpHwBase27_hidl_notifySyspropsChangedEPNS_8hardware10IInterfaceEPNS4_7details16HidlInstrumentorE
+99  0x00004a19 0x00004a19 123 124  .dynstr             ascii   _ZN7android4hidl4base4V1_08BpHwBase27_hidl_setHALInstrumentationEPNS_8hardware10IInterfaceEPNS4_7details16HidlInstrumentorE
+100 0x00004a95 0x00004a95 33  34   .dynstr             ascii   _ZN7android7RefBase10onFirstRefEv
+101 0x00004ab7 0x00004ab7 45  46   .dynstr             ascii   _ZN7android7RefBase12weakref_type7decWeakEPKv
+102 0x00004ae5 0x00004ae5 38  39   .dynstr             ascii   _ZN7android7RefBase13onLastWeakRefEPKv
+103 0x00004b0c 0x00004b0c 40  41   .dynstr             ascii   _ZN7android7RefBase15onLastStrongRefEPKv
+104 0x00004b35 0x00004b35 46  47   .dynstr             ascii   _ZN7android7RefBase20onIncStrongAttemptedEjPKv
+105 0x00004b64 0x00004b64 23  24   .dynstr             ascii   _ZN7android7RefBaseC2Ev
+106 0x00004b7c 0x00004b7c 23  24   .dynstr             ascii   _ZN7android7RefBaseD2Ev
+107 0x00004b94 0x00004b94 47  48   .dynstr             ascii   _ZN7android8hardware10IInterface8asBinderEPKS1_
+108 0x00004bc4 0x00004bc4 36  37   .dynstr             ascii   _ZN7android8hardware10IInterfaceC2Ev
+109 0x00004be9 0x00004be9 36  37   .dynstr             ascii   _ZN7android8hardware10IInterfaceD0Ev
+110 0x00004c0e 0x00004c0e 36  37   .dynstr             ascii   _ZN7android8hardware10IInterfaceD1Ev
+111 0x00004c33 0x00004c33 36  37   .dynstr             ascii   _ZN7android8hardware10IInterfaceD2Ev
+112 0x00004c58 0x00004c58 47  48   .dynstr             ascii   _ZN7android8hardware11BpHwRefBase10onFirstRefEv
+113 0x00004c88 0x00004c88 54  55   .dynstr             ascii   _ZN7android8hardware11BpHwRefBase15onLastStrongRefEPKv
+114 0x00004cbf 0x00004cbf 60  61   .dynstr             ascii   _ZN7android8hardware11BpHwRefBase20onIncStrongAttemptedEjPKv
+115 0x00004cfc 0x00004cfc 60  61   .dynstr             ascii   _ZN7android8hardware11BpHwRefBaseC2ERKNS_2spINS0_7IBinderEEE
+116 0x00004d39 0x00004d39 37  38   .dynstr             ascii   _ZN7android8hardware11BpHwRefBaseD0Ev
+117 0x00004d5f 0x00004d5f 37  38   .dynstr             ascii   _ZN7android8hardware11BpHwRefBaseD1Ev
+118 0x00004d85 0x00004d85 37  38   .dynstr             ascii   _ZN7android8hardware11BpHwRefBaseD2Ev
+119 0x00004dab 0x00004dab 39  40   .dynstr             ascii   _ZN7android8hardware11hidl_stringC1EPKc
+120 0x00004dd3 0x00004dd3 102 103  .dynstr             ascii   _ZN7android8hardware11hidl_stringC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+121 0x00004e3a 0x00004e3a 37  38   .dynstr             ascii   _ZN7android8hardware11hidl_stringC1Ev
+122 0x00004e60 0x00004e60 37  38   .dynstr             ascii   _ZN7android8hardware11hidl_stringD1Ev
+123 0x00004e86 0x00004e86 41  42   .dynstr             ascii   _ZN7android8hardware11hidl_stringaSERKS1_
+124 0x00004eb0 0x00004eb0 53  54   .dynstr             ascii   _ZN7android8hardware12ProcessState15startThreadPoolEv
+125 0x00004ee6 0x00004ee6 41  42   .dynstr             ascii   _ZN7android8hardware12ProcessState4selfEv
+126 0x00004f10 0x00004f10 63  64   .dynstr             ascii   _ZN7android8hardware13writeToParcelERKNS0_6StatusEPNS0_6ParcelE
+127 0x00004f50 0x00004f50 64  65   .dynstr             ascii   _ZN7android8hardware14readFromParcelEPNS0_6StatusERKNS0_6ParcelE
+128 0x00004f91 0x00004f91 75  76   .dynstr             ascii   _ZN7android8hardware16getRequestingSidERKNS_2spINS_4hidl4base4V1_05IBaseEEE
+129 0x00004fdd 0x00004fdd 45  46   .dynstr             ascii   _ZN7android8hardware21defaultServiceManagerEv
+130 0x0000500b 0x0000500b 80  81   .dynstr             ascii   _ZN7android8hardware21getMinSchedulerPolicyERKNS_2spINS_4hidl4base4V1_05IBaseEEE
+131 0x0000505c 0x0000505c 79  80   .dynstr             ascii   _ZN7android8hardware21writeEmbeddedToParcelERKNS0_11hidl_stringEPNS0_6ParcelEmm
+132 0x000050ac 0x000050ac 81  82   .dynstr             ascii   _ZN7android8hardware22readEmbeddedFromParcelERKNS0_11hidl_stringERKNS0_6ParcelEmm
+133 0x000050fe 0x000050fe 72  73   .dynstr             ascii   _ZN7android8hardware23getOrCreateCachedBinderEPNS_4hidl4base4V1_05IBaseE
+134 0x00005147 0x00005147 65  66   .dynstr             ascii   _ZN7android8hardware27hidl_binder_death_recipient12getRecipientEv
+135 0x00005189 0x00005189 125 126  .dynstr             ascii   _ZN7android8hardware27hidl_binder_death_recipientC1ERKNS_2spINS0_20hidl_death_recipientEEEmRKNS2_INS_4hidl4base4V1_05IBaseEEE
+136 0x00005207 0x00005207 47  48   .dynstr             ascii   _ZN7android8hardware6Parcel11writeBufferEPKvmPm
+137 0x00005237 0x00005237 52  53   .dynstr             ascii   _ZN7android8hardware6Parcel19writeInterfaceTokenEPKc
+138 0x0000526c 0x0000526c 31  32   .dynstr             ascii   _ZN7android8hardware6ParcelC1Ev
+139 0x0000528c 0x0000528c 31  32   .dynstr             ascii   _ZN7android8hardware6ParcelD1Ev
+140 0x000052ac 0x000052ac 45  46   .dynstr             ascii   _ZN7android8hardware6Status14setFromStatusTEi
+141 0x000052da 0x000052da 48  49   .dynstr             ascii   _ZN7android8hardware6Status17fromExceptionCodeEi
+142 0x0000530b 0x0000530b 51  52   .dynstr             ascii   _ZN7android8hardware6Status17fromExceptionCodeEiPKc
+143 0x0000533f 0x0000533f 32  33   .dynstr             ascii   _ZN7android8hardware6Status2okEv
+144 0x00005360 0x00005360 43  44   .dynstr             ascii   _ZN7android8hardware7IBinder11localBinderEv
+145 0x0000538c 0x0000538c 44  45   .dynstr             ascii   _ZN7android8hardware7IBinder12remoteBinderEv
+146 0x000053b9 0x000053b9 32  33   .dynstr             ascii   _ZN7android8hardware7IBinderD0Ev
+147 0x000053da 0x000053da 32  33   .dynstr             ascii   _ZN7android8hardware7IBinderD1Ev
+148 0x000053fb 0x000053fb 71  72   .dynstr             ascii   _ZN7android8hardware7details10TaskRunner4pushERKNSt3__18functionIFvvEEE
+149 0x00005443 0x00005443 48  49   .dynstr             ascii   _ZN7android8hardware7details10TaskRunner5startEm
+150 0x00005474 0x00005474 44  45   .dynstr             ascii   _ZN7android8hardware7details10TaskRunnerC1Ev
+151 0x000054a1 0x000054a1 44  45   .dynstr             ascii   _ZN7android8hardware7details10TaskRunnerD1Ev
+152 0x000054ce 0x000054ce 42  43   .dynstr             ascii   _ZN7android8hardware7details10debuggableEv
+153 0x000054f9 0x000054f9 198 199  .dynstr             ascii   _ZN7android8hardware7details13castInterfaceIN6vendor3qti8hardware4data10connection4V1_115IDataConnectionENS7_4V1_015IDataConnectionENS8_18BpHwDataConnectionEEENS0_6ReturnINS_2spIT_EEEENSE_IT0_EEPKcb
+154 0x000055c0 0x000055c0 196 197  .dynstr             ascii   _ZN7android8hardware7details13castInterfaceIN6vendor3qti8hardware4data10connection4V1_115IDataConnectionENS_4hidl4base4V1_05IBaseENS8_18BpHwDataConnectionEEENS0_6ReturnINS_2spIT_EEEENSG_IT0_EEPKcb
+155 0x00005685 0x00005685 47  48   .dynstr             ascii   _ZN7android8hardware7details13return_statusD2Ev
+156 0x000056b5 0x000056b5 50  51   .dynstr             ascii   _ZN7android8hardware7details13return_statusaSEOS2_
+157 0x000056e8 0x000056e8 48  49   .dynstr             ascii   _ZN7android8hardware7details14logAlwaysFatalEPKc
+158 0x00005719 0x00005719 132 133  .dynstr             ascii   _ZN7android8hardware7details15wrapPassthroughIN6vendor3qti8hardware4data10connection4V1_023IDataConnectionResponseEvEENS_2spIT_EESC_
+159 0x0000579e 0x0000579e 134 135  .dynstr             ascii   _ZN7android8hardware7details15wrapPassthroughIN6vendor3qti8hardware4data10connection4V1_025IDataConnectionIndicationEvEENS_2spIT_EESC_
+160 0x00005825 0x00005825 74  75   .dynstr             ascii   _ZN7android8hardware7details16HidlInstrumentor24configureInstrumentationEb
+161 0x00005870 0x00005870 118 119  .dynstr             ascii   _ZN7android8hardware7details16HidlInstrumentorC2ERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEESB_
+162 0x000058e7 0x000058e7 50  51   .dynstr             ascii   _ZN7android8hardware7details16HidlInstrumentorD2Ev
+163 0x0000591a 0x0000591a 77  78   .dynstr             ascii   _ZN7android8hardware7details16canCastInterfaceEPNS_4hidl4base4V1_05IBaseEPKcb
+164 0x00005968 0x00005968 48  49   .dynstr             ascii   _ZN7android8hardware7details16getPidIfSharableEv
+165 0x00005999 0x00005999 219 220  .dynstr             ascii   _ZN7android8hardware7details18getServiceInternalIN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionENS8_15IDataConnectionEvvEENS_2spIT0_EERKNSt3__112basic_stringIcNSE_11char_traitsIcEENSE_9allocatorIcEEEEbb
+166 0x00005a75 0x00005a75 51  52   .dynstr             ascii   _ZN7android8hardware7details19getBnConstructorMapEv
+167 0x00005aa9 0x00005aa9 51  52   .dynstr             ascii   _ZN7android8hardware7details19getBsConstructorMapEv
+168 0x00005add 0x00005add 123 124  .dynstr             ascii   _ZN7android8hardware7details21getRawServiceInternalERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEESA_bb
+169 0x00005b59 0x00005b59 88  89   .dynstr             ascii   _ZN7android8hardware7details23wrapPassthroughInternalENS_2spINS_4hidl4base4V1_05IBaseEEE
+170 0x00005bb2 0x00005bb2 158 159  .dynstr             ascii   _ZN7android8hardware7details25registerAsServiceInternalERKNS_2spINS_4hidl4base4V1_05IBaseEEERKNSt3__112basic_stringIcNSA_11char_traitsIcEENSA_9allocatorIcEEEE
+171 0x00005c51 0x00005c51 36  37   .dynstr             ascii   _ZN7android8hardware7details6gBnMapE
+172 0x00005c76 0x00005c76 89  90   .dynstr             ascii   _ZN7android8hardware9BHwBinder10onTransactEjRKNS0_6ParcelEPS2_jNSt3__18functionIFvRS2_EEE
+173 0x00005cd0 0x00005cd0 87  88   .dynstr             ascii   _ZN7android8hardware9BHwBinder11linkToDeathERKNS_2spINS0_7IBinder14DeathRecipientEEEPvj
+174 0x00005d28 0x00005d28 45  46   .dynstr             ascii   _ZN7android8hardware9BHwBinder11localBinderEv
+175 0x00005d56 0x00005d56 66  67   .dynstr             ascii   _ZN7android8hardware9BHwBinder12attachObjectEPKvPvS4_PFvS3_S4_S4_E
+176 0x00005d99 0x00005d99 48  49   .dynstr             ascii   _ZN7android8hardware9BHwBinder12detachObjectEPKv
+177 0x00005dca 0x00005dca 93  94   .dynstr             ascii   _ZN7android8hardware9BHwBinder13unlinkToDeathERKNS_2wpINS0_7IBinder14DeathRecipientEEEPvjPS5_
+178 0x00005e28 0x00005e28 50  51   .dynstr             ascii   _ZN7android8hardware9BHwBinder16setRequestingSidEb
+179 0x00005e5b 0x00005e5b 86  87   .dynstr             ascii   _ZN7android8hardware9BHwBinder8transactEjRKNS0_6ParcelEPS2_jNSt3__18functionIFvRS2_EEE
+180 0x00005eb2 0x00005eb2 34  35   .dynstr             ascii   _ZN7android8hardware9BHwBinderD0Ev
+181 0x00005ed5 0x00005ed5 34  35   .dynstr             ascii   _ZN7android8hardware9BHwBinderD1Ev
+182 0x00005ef8 0x00005ef8 55  56   .dynstr             ascii   _ZNK7android4hidl4base4V1_08BnHwBase13checkSubclassEPKv
+183 0x00005f30 0x00005f30 36  37   .dynstr             ascii   _ZNK7android7RefBase10createWeakEPKv
+184 0x00005f55 0x00005f55 35  36   .dynstr             ascii   _ZNK7android7RefBase11getWeakRefsEv
+185 0x00005f79 0x00005f79 34  35   .dynstr             ascii   _ZNK7android7RefBase9decStrongEPKv
+186 0x00005f9c 0x00005f9c 34  35   .dynstr             ascii   _ZNK7android7RefBase9incStrongEPKv
+187 0x00005fbf 0x00005fbf 48  49   .dynstr             ascii   _ZNK7android8hardware6Parcel10readBufferEmPmPPKv
+188 0x00005ff0 0x00005ff0 50  51   .dynstr             ascii   _ZNK7android8hardware6Parcel16enforceInterfaceEPKc
+189 0x00006023 0x00006023 48  49   .dynstr             ascii   _ZNK7android8hardware7IBinder13checkSubclassEPKv
+190 0x00006054 0x00006054 64  65   .dynstr             ascii   _ZNK7android8hardware7details13return_status16onValueRetrievalEv
+191 0x00006095 0x00006095 55  56   .dynstr             ascii   _ZNK7android8hardware7details13return_status8assertOkEv
+192 0x000060cd 0x000060cd 47  48   .dynstr             ascii   _ZNK7android8hardware9BHwBinder10findObjectEPKv
+193 0x000060fd 0x000060fd 62  63   .dynstr             ascii   _ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+194 0x0000613c 0x0000613c 63  64   .dynstr             ascii   _ZNKSt3__121__basic_string_commonILb1EE20__throw_length_errorEv
+195 0x0000617c 0x0000617c 71  72   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+196 0x000061c4 0x000061c4 60  61   .dynstr             ascii   _ZNSt3__113__tree_removeIPNS_16__tree_node_baseIPvEEEEvT_S5_
+197 0x00006201 0x00006201 74  75   .dynstr             ascii   _ZNSt3__127__tree_balance_after_insertIPNS_16__tree_node_baseIPvEEEEvT_S5_
+198 0x0000624c 0x0000624c 22  23   .dynstr             ascii   _ZNSt3__15mutex4lockEv
+199 0x00006263 0x00006263 24  25   .dynstr             ascii   _ZNSt3__15mutex6unlockEv
+200 0x0000627c 0x0000627c 19  20   .dynstr             ascii   _ZNSt3__15mutexD1Ev
+201 0x00006290 0x00006290 298 299  .dynstr             ascii   _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_4hidl4base4V1_05IBaseEEEPvEEEEENS_19__map_value_compareIS7_SJ_NS_4lessIS7_EELb1EEENS5_ISJ_EEE12__find_equalIS7_EERPNS_16__tree_node_baseISG_EERPNS_15__tree_end_nodeIST_EERKT_
+202 0x000063bb 0x000063bb 285 286  .dynstr             ascii   _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_4hidl4base4V1_05IBaseEEEPvEEEEENS_19__map_value_compareIS7_SJ_NS_4lessIS7_EELb1EEENS5_ISJ_EEE4findIS7_EENS_15__tree_iteratorISJ_PNS_11__tree_nodeISJ_SG_EElEERKT_
+203 0x000064d9 0x000064d9 283 284  .dynstr             ascii   _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_4hidl4base4V1_05IBaseEEEPvEEEEENS_19__map_value_compareIS7_SJ_NS_4lessIS7_EELb1EEENS5_ISJ_EEE5eraseENS_21__tree_const_iteratorISJ_PNS_11__tree_nodeISJ_SG_EElEE
+204 0x000065f5 0x000065f5 294 295  .dynstr             ascii   _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_8hardware7IBinderEEEPvEEEEENS_19__map_value_compareIS7_SH_NS_4lessIS7_EELb1EEENS5_ISH_EEE12__find_equalIS7_EERPNS_16__tree_node_baseISE_EERPNS_15__tree_end_nodeISR_EERKT_
+205 0x0000671c 0x0000671c 281 282  .dynstr             ascii   _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_8hardware7IBinderEEEPvEEEEENS_19__map_value_compareIS7_SH_NS_4lessIS7_EELb1EEENS5_ISH_EEE4findIS7_EENS_15__tree_iteratorISH_PNS_11__tree_nodeISH_SE_EElEERKT_
+206 0x00006836 0x00006836 279 280  .dynstr             ascii   _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_8hardware7IBinderEEEPvEEEEENS_19__map_value_compareIS7_SH_NS_4lessIS7_EELb1EEENS5_ISH_EEE5eraseENS_21__tree_const_iteratorISH_PNS_11__tree_nodeISH_SE_EElEE
+207 0x0000694e 0x0000694e 128 129  .dynstr             ascii   _ZNSt3__16vectorIN7android2spINS1_8hardware27hidl_binder_death_recipientEEENS_9allocatorIS5_EEE21__push_back_slow_pathIS5_EEvOT_
+208 0x000069cf 0x000069cf 98  99   .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_115IDataConnectionE0_N7android4hidl4base4V1_05IBaseE
+209 0x00006a32 0x00006a32 94  95   .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_115IDataConnectionE0_NS3_4V1_015IDataConnectionE
+210 0x00006a91 0x00006a91 90  91   .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_116BsDataConnectionE0_NS4_15IDataConnectionE
+211 0x00006aec 0x00006aec 104 105  .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionE0_N7android4hidl4base4V1_08BnHwBaseE
+212 0x00006b55 0x00006b55 97  98   .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionE0_N7android8hardware7IBinderE
+213 0x00006bb7 0x00006bb7 99  100  .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionE0_N7android8hardware9BHwBinderE
+214 0x00006c1b 0x00006c1b 101 102  .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE0_N7android4hidl4base4V1_05IBaseE
+215 0x00006c81 0x00006c81 126 127  .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE0_N7android8hardware11BpInterfaceINS4_15IDataConnectionEEE
+216 0x00006d00 0x00006d00 97  98   .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE0_NS3_4V1_015IDataConnectionE
+217 0x00006d62 0x00006d62 92  93   .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE0_NS4_15IDataConnectionE
+218 0x00006dbf 0x00006dbf 103 104  .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE16_N7android8hardware11BpHwRefBaseE
+219 0x00006e27 0x00006e27 101 102  .dynstr             ascii   _ZTCN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE8_N7android8hardware10IInterfaceE
+220 0x00006e8d 0x00006e8d 65  66   .dynstr             ascii   _ZTTN6vendor3qti8hardware4data10connection4V1_115IDataConnectionE
+221 0x00006ecf 0x00006ecf 68  69   .dynstr             ascii   _ZTTN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionE
+222 0x00006f14 0x00006f14 68  69   .dynstr             ascii   _ZTTN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE
+223 0x00006f59 0x00006f59 65  66   .dynstr             ascii   _ZTVN6vendor3qti8hardware4data10connection4V1_115IDataConnectionE
+224 0x00006f9b 0x00006f9b 66  67   .dynstr             ascii   _ZTVN6vendor3qti8hardware4data10connection4V1_116BsDataConnectionE
+225 0x00006fde 0x00006fde 68  69   .dynstr             ascii   _ZTVN6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionE
+226 0x00007023 0x00007023 68  69   .dynstr             ascii   _ZTVN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnectionE
+227 0x00007068 0x00007068 92  93   .dynstr             ascii   _ZThn16_N6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection15onLastStrongRefEPKv
+228 0x000070c5 0x000070c5 75  76   .dynstr             ascii   _ZThn32_N6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD0Ev
+229 0x00007111 0x00007111 75  76   .dynstr             ascii   _ZThn32_N6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD1Ev
+230 0x0000715d 0x0000715d 77  78   .dynstr             ascii   _ZTv0_n24_N6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD0Ev
+231 0x000071ab 0x000071ab 77  78   .dynstr             ascii   _ZTv0_n24_N6vendor3qti8hardware4data10connection4V1_118BnHwDataConnectionD1Ev
+232 0x000071f9 0x000071f9 47  48   .dynstr             ascii   _ZTv0_n24_N7android4hidl4base4V1_08BnHwBaseD0Ev
+233 0x00007229 0x00007229 47  48   .dynstr             ascii   _ZTv0_n24_N7android4hidl4base4V1_08BnHwBaseD1Ev
+234 0x00007259 0x00007259 44  45   .dynstr             ascii   _ZTv0_n24_N7android8hardware10IInterfaceD0Ev
+235 0x00007286 0x00007286 44  45   .dynstr             ascii   _ZTv0_n24_N7android8hardware10IInterfaceD1Ev
+236 0x000072b3 0x000072b3 45  46   .dynstr             ascii   _ZTv0_n24_N7android8hardware11BpHwRefBaseD0Ev
+237 0x000072e1 0x000072e1 45  46   .dynstr             ascii   _ZTv0_n24_N7android8hardware11BpHwRefBaseD1Ev
+238 0x0000730f 0x0000730f 40  41   .dynstr             ascii   _ZTv0_n24_N7android8hardware7IBinderD0Ev
+239 0x00007338 0x00007338 40  41   .dynstr             ascii   _ZTv0_n24_N7android8hardware7IBinderD1Ev
+240 0x00007361 0x00007361 42  43   .dynstr             ascii   _ZTv0_n24_N7android8hardware9BHwBinderD0Ev
+241 0x0000738c 0x0000738c 42  43   .dynstr             ascii   _ZTv0_n24_N7android8hardware9BHwBinderD1Ev
+242 0x000073b7 0x000073b7 55  56   .dynstr             ascii   _ZTv0_n32_N7android8hardware11BpHwRefBase10onFirstRefEv
+243 0x000073ef 0x000073ef 94  95   .dynstr             ascii   _ZTv0_n40_N6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection15onLastStrongRefEPKv
+244 0x0000744e 0x0000744e 62  63   .dynstr             ascii   _ZTv0_n40_N7android8hardware11BpHwRefBase15onLastStrongRefEPKv
+245 0x0000748d 0x0000748d 68  69   .dynstr             ascii   _ZTv0_n48_N7android8hardware11BpHwRefBase20onIncStrongAttemptedEjPKv
+246 0x000074d2 0x000074d2 6   7    .dynstr             ascii   _ZdaPv
+247 0x000074d9 0x000074d9 6   7    .dynstr             ascii   _ZdlPv
+248 0x000074e0 0x000074e0 5   6    .dynstr             ascii   _Znam
+249 0x000074e6 0x000074e6 5   6    .dynstr             ascii   _Znwm
+250 0x000074ec 0x000074ec 20  21   .dynstr             ascii   __android_log_assert
+251 0x00007501 0x00007501 18  19   .dynstr             ascii   __cxa_pure_virtual
+252 0x00007514 0x00007514 16  17   .dynstr             ascii   __stack_chk_fail
+253 0x00007525 0x00007525 5   6    .dynstr             ascii   abort
+254 0x0000752b 0x0000752b 17  18   .dynstr             ascii   atrace_begin_body
+255 0x0000753d 0x0000753d 15  16   .dynstr             ascii   atrace_end_body
+256 0x0000754d 0x0000754d 23  24   .dynstr             ascii   atrace_get_enabled_tags
+257 0x00007565 0x00007565 6   7    .dynstr             ascii   memcmp
+258 0x0000756c 0x0000756c 6   7    .dynstr             ascii   memcpy
+259 0x00007573 0x00007573 6   7    .dynstr             ascii   memset
+260 0x0000757a 0x0000757a 6   7    .dynstr             ascii   strlen
+261 0x00007581 0x00007581 9   10   .dynstr             ascii   liblog.so
+262 0x0000758b 0x0000758b 6   7    .dynstr             ascii   LIBLOG
+263 0x00007592 0x00007592 7   8    .dynstr             ascii   libc.so
+264 0x0000759a 0x0000759a 4   5    .dynstr             ascii   LIBC
+265 0x0000759f 0x0000759f 42  43   .dynstr             ascii   vendor.qti.hardware.data.connection@1.0.so
+266 0x000075ca 0x000075ca 14  15   .dynstr             ascii   libhidlbase.so
+267 0x000075d9 0x000075d9 11  12   .dynstr             ascii   libutils.so
+268 0x000075e5 0x000075e5 12  13   .dynstr             ascii   libcutils.so
+269 0x000075f2 0x000075f2 9   10   .dynstr             ascii   libc++.so
+270 0x000075fc 0x000075fc 7   8    .dynstr             ascii   libm.so
+271 0x00007604 0x00007604 8   9    .dynstr             ascii   libdl.so
+272 0x0000760d 0x0000760d 42  43   .dynstr             ascii   vendor.qti.hardware.data.connection@1.1.so
+273 0x00007638 0x00007638 4   5    .rela.dyn           ascii   APS2
+274 0x00007781 0x00007781 4   5    .rela.dyn           ascii   o\b\b\b
+275 0x00008924 0x00008924 55  56   .rodata             ascii   Passthrough oneway function queue exceeds maximum size.
+276 0x0000895c 0x0000895c 48  49   .rodata             ascii   HIDL::IDataConnection::getHashChain::passthrough
+277 0x0000898d 0x0000898d 15  16   .rodata             ascii   IDataConnection
+278 0x0000899d 0x0000899d 55  56   .rodata             ascii   vendor.qti.hardware.data.connection@1.1::DataConnection
+279 0x000089d5 0x000089d5 55  56   .rodata             ascii   HIDL::IDataConnection::getBearerAllocation::passthrough
+280 0x00008a0d 0x00008a0d 73  74   .rodata             ascii   HIDL::IDataConnection::registerForAllBearerAllocationUpdates::passthrough
+281 0x00008a57 0x00008a57 57  58   .rodata             ascii   HIDL::IDataConnection::notifySyspropsChanged::passthrough
+282 0x00008a91 0x00008a91 59  60   .rodata             ascii   HIDL::IDataConnection::getAllBearerAllocations::passthrough
+283 0x00008acd 0x00008acd 40  41   .rodata             ascii   HIDL::IDataConnection::getConfig::client
+284 0x00008af6 0x00008af6 47  48   .rodata             ascii   HIDL::IDataConnection::linkToDeath::passthrough
+285 0x00008b26 0x00008b26 41  42   .rodata             ascii   HIDL::IDataConnection::debug::passthrough
+286 0x00008b50 0x00008b50 56  57   .rodata             ascii   getConfig: _hidl_cb not called, but must be called once.
+287 0x00008b89 0x00008b89 40  41   .rodata             ascii   HIDL::IDataConnection::ping::passthrough
+288 0x00008bb2 0x00008bb2 48  49   .rodata             ascii   HIDL::IDataConnection::getDebugInfo::passthrough
+289 0x00008be3 0x00008be3 49  50   .rodata             ascii   HIDL::IDataConnection::unlinkToDeath::passthrough
+290 0x00008c15 0x00008c15 39  40   .rodata             ascii   vendor.qti.hardware.data.connection@1.1
+291 0x00008c3d 0x00008c3d 55  56   .rodata             ascii   HIDL::IDataConnection::interfaceDescriptor::passthrough
+292 0x00008c75 0x00008c75 34  35   .rodata             ascii   Cannot wrap passthrough interface.
+293 0x00008c98 0x00008c98 66  67   .rodata             ascii   getConfig: _hidl_cb called a second time, but must be called once.
+294 0x00008cdb 0x00008cdb 40  41   .rodata             ascii   HIDL::IDataConnection::getConfig::server
+295 0x00008d04 0x00008d04 44  45   .rodata             ascii   hidl_vec can't hold more than 2^32 elements.
+296 0x00008d31 0x00008d31 56  57   .rodata             ascii   vendor.qti.hardware.data.connection@1.1::IDataConnection
+297 0x00008d6a 0x00008d6a 45  46   .rodata             ascii   HIDL::IDataConnection::getConfig::passthrough
+298 0x00008d98 0x00008d98 50  51   .rodata             ascii   HIDL::IDataConnection::interfaceChain::passthrough
+299 0x0000b10d 0x0000b10d 4   5    .text               ascii   #@9h
+300 0x0000b1e5 0x0000b1e5 4   5    .text               ascii   #@9h
+301 0x0000bdc1 0x0000bdc1 5   6    .text               ascii   GA9\b\n
+302 0x0000c0b5 0x0000c0b5 5   6    .text               ascii   GA9\b\n
+303 0x0000c351 0x0000c351 4   5    .text               ascii   #@9h
+304 0x0000c4e1 0x0000c4e1 4   5    .text               ascii   #@9h
+305 0x0000d45d 0x0000d45d 5   6    .text               ascii   #@9H\v
+306 0x0000d6c1 0x0000d6c1 5   6    .text               ascii   #@9(\v
+307 0x0000d6ca 0x0000d6ca 4   5    .text               ascii   @9h\v
+308 0x0000dee0 0x0000dee0 7   8    .text               ascii   +ih8J\t\v
+309 0x0000e2b1 0x0000e2b1 4   5    .text               ascii   #@9h
+310 0x0000e411 0x0000e411 4   5    .text               ascii   #@9h
+311 0x0000e648 0x0000e648 4   5    .text               ascii   ?k88
+312 0x0000e651 0x0000e651 4   5    .text               ascii   #@9h
+313 0x0000eb3d 0x0000eb3d 4   6    .text               utf8    {èt\r
+314 0x0000eb61 0x0000eb61 4   6    .text               utf8    {¨C\f
+315 0x0000eb91 0x0000eb91 4   6    .text               utf8    {¨7\f
+316 0x0000ebc1 0x0000ebc1 4   6    .text               utf8    {¨+\f
+317 0x0000ec68 0x0000ec68 4   5    .text               ascii   @\bX7
+318 0x0000ed0d 0x0000ed0d 4   5    .text               ascii   #@9h
+319 0x0000ed65 0x0000ed65 4   5    .text               ascii   #@9h
+320 0x0000ee31 0x0000ee31 4   5    .text               ascii   #@9h
+321 0x0000eea9 0x0000eea9 4   5    .text               ascii   #@9h
+322 0x0000eee8 0x0000eee8 4   5    .text               ascii   @\bX7
+323 0x0000ef8d 0x0000ef8d 4   5    .text               ascii   #@9h
+324 0x0000efe5 0x0000efe5 4   5    .text               ascii   #@9h
+325 0x0000f034 0x0000f034 4   5    .text               ascii   @\bX7
+326 0x0000f0d9 0x0000f0d9 4   5    .text               ascii   #@9h
+327 0x0000f131 0x0000f131 4   5    .text               ascii   #@9h
+328 0x0000f1bc 0x0000f1bc 4   5    .text               ascii   @\aX7
+329 0x0000f3a5 0x0000f3a5 4   5    .text               ascii   #@9h
+330 0x0000f458 0x0000f458 4   5    .text               ascii   @\bX7
+331 0x0000f4fd 0x0000f4fd 4   5    .text               ascii   #@9h
+332 0x0000f555 0x0000f555 4   5    .text               ascii   #@9h
+333 0x0000f661 0x0000f661 4   5    .text               ascii   c@9h
+334 0x0000f889 0x0000f889 4   6    .text               utf8    {¨!\n
+335 0x0000fb41 0x0000fb41 4   5    .text               ascii   cA9(
+336 0x0000fbc1 0x0000fbc1 4   5    .text               ascii   cA9(
+337 0x0000fe11 0x0000fe11 4   5    .text               ascii   cA9(
+338 0x0000fe91 0x0000fe91 4   5    .text               ascii   cA9(
+339 0x000100e1 0x000100e1 4   5    .text               ascii   cA9(
+340 0x00010161 0x00010161 4   5    .text               ascii   cA9(
+341 0x00010269 0x00010269 4   5    .text               ascii   #@9h
+342 0x000102c5 0x000102c5 4   5    .text               ascii   #@9H
+343 0x00010349 0x00010349 4   6    .text               utf8    {¨q\a
+344 0x0001044d 0x0001044d 4   6    .text               utf8    {è0\a
+345 0x00010550 0x00010550 5   6    .text               ascii   \t\rB8\n
+346 0x0001063b 0x0001063b 4   5    .text               ascii   T)\b@
+347 0x00010640 0x00010640 5   6    .text               ascii   (a@9\b
+348 0x00010647 0x00010647 4   5    .text               ascii   5(\t@
+349 0x00010920 0x00010920 5   6    .text               ascii   \t\rB8\n
+350 0x00010b4c 0x00010b4c 5   6    .text               ascii   \t\rB8\n
+351 0x00010b94 0x00010b94 5   6    .text               ascii   \t\rB8\n
+352 0x00010cf3 0x00010cf3 4   5    .text               ascii   RH\t@
+353 0x00010d0f 0x00010d0f 4   5    .text               ascii   TH\t@
+354 0x00010d1c 0x00010d1c 5   6    .text               ascii   La@9_
+355 0x00010d58 0x00010d58 5   6    .text               ascii   La@9_
+356 0x00010d63 0x00010d63 4   5    .text               ascii   T-\b@
+357 0x00010d9c 0x00010d9c 4   5    .text               ascii   -`@9
+358 0x00010dbb 0x00010dbb 4   5    .text               ascii   R\n\t@
+359 0x00010dc0 0x00010dc0 5   6    .text               ascii   \va@9L
+360 0x00010df7 0x00010df7 4   5    .text               ascii   9\n\t@
+361 0x00010e4c 0x00010e4c 6   7    .text               ascii   Ka@9\v\b
+362 0x00010e5c 0x00010e5c 4   5    .text               ascii   la@9
+363 0x00010e63 0x00010e63 4   5    .text               ascii   4\n\t@
+364 0x00010e7f 0x00010e7f 4   5    .text               ascii   9\n\t@
+365 0x00010ed4 0x00010ed4 6   7    .text               ascii   Ka@9K\t
+366 0x00010ee4 0x00010ee4 5   6    .text               ascii   la@9\f
+367 0x00010eeb 0x00010eeb 4   5    .text               ascii   4\n\t@
+368 0x00010efb 0x00010efb 6   7    .text               ascii   THa@9(
+369 0x00010f03 0x00010f03 4   5    .text               ascii   4H\t@
+370 0x00010f30 0x00010f30 5   6    .text               ascii   La@9_
+371 0x00010f58 0x00010f58 6   7    .text               ascii   ia@9)\b
+372 0x00010fac 0x00010fac 4   5    .text               ascii   Ia@9
+373 0x0001100b 0x0001100b 7   8    .text               ascii   R\na@9*a
+374 0x0001101f 0x0001101f 4   5    .text               ascii   9(\t@
+375 0x0001106b 0x0001106b 7   8    .text               ascii   R\na@9*a
+376 0x0001107f 0x0001107f 4   5    .text               ascii   9(\t@
+377 0x00011128 0x00011128 5   6    .text               ascii   \t\rB8\n
+378 0x00011170 0x00011170 5   6    .text               ascii   \t\rB8\n
+379 0x00011457 0x00011457 4   5    .text               ascii   5h\n@
+380 0x000115a3 0x000115a3 4   5    .text               ascii   Tt.@
+381 0x000116ae 0x000116ae 4   5    .text               ascii   @9\t\b
+382 0x000116dd 0x000116dd 4   5    .text               ascii   C@9h
+383 0x00014971 0x00000001 11  12   .shstrtab           ascii   .init_array
+384 0x0001497d 0x0000000d 11  12   .shstrtab           ascii   .fini_array
+385 0x00014989 0x00000019 5   6    .shstrtab           ascii   .text
+386 0x0001498f 0x0000001f 4   5    .shstrtab           ascii   .got
+387 0x00014994 0x00000024 19  20   .shstrtab           ascii   .note.android.ident
+388 0x000149a8 0x00000038 8   9    .shstrtab           ascii   .got.plt
+389 0x000149b1 0x00000041 9   10   .shstrtab           ascii   .rela.plt
+390 0x000149bb 0x0000004b 7   8    .shstrtab           ascii   .dynstr
+391 0x000149c3 0x00000053 13  14   .shstrtab           ascii   .eh_frame_hdr
+392 0x000149d1 0x00000061 14  15   .shstrtab           ascii   .gnu.version_r
+393 0x000149e0 0x00000070 12  13   .shstrtab           ascii   .data.rel.ro
+394 0x000149ed 0x0000007d 9   10   .shstrtab           ascii   .relr.dyn
+395 0x000149f7 0x00000087 9   10   .shstrtab           ascii   .rela.dyn
+396 0x00014a01 0x00000091 12  13   .shstrtab           ascii   .gnu.version
+397 0x00014a0e 0x0000009e 7   8    .shstrtab           ascii   .dynsym
+398 0x00014a16 0x000000a6 9   10   .shstrtab           ascii   .gnu.hash
+399 0x00014a20 0x000000b0 9   10   .shstrtab           ascii   .eh_frame
+400 0x00014a2a 0x000000ba 18  19   .shstrtab           ascii   .note.gnu.build-id
+401 0x00014a3d 0x000000cd 8   9    .shstrtab           ascii   .dynamic
+402 0x00014a46 0x000000d6 9   10   .shstrtab           ascii   .shstrtab
+403 0x00014a50 0x000000e0 7   8    .shstrtab           ascii   .rodata
+404 0x00014a58 0x000000e8 14  15   .shstrtab           ascii   .gnu_debugdata
+405 0x00014a67 0x000000f7 5   6    .shstrtab           ascii   .data
+406 0x00014a6e 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+407 0x00014aa2 0x00000035 4   5    .gnu_debugdata      ascii   E#z;
+408 0x00014aa7 0x0000003a 4   5    .gnu_debugdata      ascii   \e^1J
+409 0x00014aba 0x0000004d 5   6    .gnu_debugdata      ascii   u`*"!
+410 0x00014af2 0x00000085 5   6    .gnu_debugdata      ascii   em:3\v
+411 0x00014b6a 0x000000fd 4   5    .gnu_debugdata      ascii   +c\fh
+412 0x00014b8e 0x00000121 5   6    .gnu_debugdata      ascii   X5XV\a
+413 0x00014ba4 0x00000137 8   9    .gnu_debugdata      ascii   PomG$hFA
+414 0x00014bcb 0x0000015e 6   7    .gnu_debugdata      ascii   Hyj}4}
+415 0x00014bf1 0x00000184 4   5    .gnu_debugdata      ascii   z?ER
+416 0x00014c18 0x000001ab 4   5    .gnu_debugdata      ascii   :V5O
+417 0x00014c2e 0x000001c1 4   5    .gnu_debugdata      ascii   \fBM]
+418 0x00014c6d 0x00000200 4   5    .gnu_debugdata      ascii   %W7M
+419 0x00014c92 0x00000225 7   10   .gnu_debugdata      utf8    ͋:qUOҤ[
+420 0x00014cad 0x00000240 6   7    .gnu_debugdata      ascii   Ui\n=j@
+421 0x00014ce3 0x00000276 5   6    .gnu_debugdata      ascii   DO@uo
+422 0x00014d2f 0x000002c2 4   5    .gnu_debugdata      ascii   =ptA
+423 0x00014d37 0x000002ca 4   7    .gnu_debugdata      utf8    )"t톳
+424 0x00014d41 0x000002d4 5   6    .gnu_debugdata      ascii   1t)v.
+425 0x00014d9f 0x00000332 5   7    .gnu_debugdata      utf8    n\b9ŷ=
+426 0x00014dab 0x0000033e 6   7    .gnu_debugdata      ascii   bA9A=z
+427 0x00014dbc 0x0000034f 4   5    .gnu_debugdata      ascii   \a\rKl
+428 0x00014ded 0x00000380 4   5    .gnu_debugdata      ascii   .3#i
+429 0x00014e09 0x0000039c 6   7    .gnu_debugdata      ascii   [.|+.M
+430 0x00014e6b 0x000003fe 4   5    .gnu_debugdata      ascii   e5~9
+431 0x00014e95 0x00000428 4   5    .gnu_debugdata      ascii   *2Xi
+432 0x00014eed 0x00000480 5   7    .gnu_debugdata      utf8    +5\aʃn
+433 0x00014f07 0x0000049a 4   5    .gnu_debugdata      ascii   h;^9
+434 0x00014f4f 0x000004e2 6   7    .gnu_debugdata      ascii   <E5*W!
+435 0x00014ffa 0x0000058d 6   7    .gnu_debugdata      ascii   `PI]aE
+436 0x00015011 0x000005a4 4   5    .gnu_debugdata      ascii   ^Hz\
+437 0x00015018 0x000005ab 5   7    .gnu_debugdata      utf8    <ӈ.0S
+438 0x0001505f 0x000005f2 5   6    .gnu_debugdata      ascii   9UfP:
+439 0x000150b1 0x00000644 4   5    .gnu_debugdata      ascii   >OSO
+440 0x00015103 0x00000696 7   8    .gnu_debugdata      ascii   l)w ]]@
+441 0x00015132 0x000006c5 7   8    .gnu_debugdata      ascii   dQoj2{u
+442 0x00015141 0x000006d4 5   6    .gnu_debugdata      ascii   K%`=C
+443 0x0001517a 0x0000070d 4   5    .gnu_debugdata      ascii   ^K$I
+444 0x0001518e 0x00000721 4   5    .gnu_debugdata      ascii   1\tb\a
+445 0x000151a5 0x00000738 6   7    .gnu_debugdata      ascii   v<zpNB
+446 0x000151c1 0x00000754 4   5    .gnu_debugdata      ascii   X1_i
+447 0x000151de 0x00000771 6   8    .gnu_debugdata      utf8    m`*ي6J
+448 0x000151ee 0x00000781 5   6    .gnu_debugdata      ascii   Mpyke
+449 0x000151f4 0x00000787 4   5    .gnu_debugdata      ascii   h@EA
+450 0x00015237 0x000007ca 4   5    .gnu_debugdata      ascii   jh@j
+451 0x00015245 0x000007d8 7   8    .gnu_debugdata      ascii   M+uV?6#
+452 0x00015259 0x000007ec 4   5    .gnu_debugdata      ascii   6\Y\e
+453 0x0001529c 0x0000082f 4   5    .gnu_debugdata      ascii   ;BT1
+454 0x000152a9 0x0000083c 4   6    .gnu_debugdata      utf8    OFױ~
+455 0x000152ce 0x00000861 4   5    .gnu_debugdata      ascii   !G\tC
+456 0x000152e9 0x0000087c 4   5    .gnu_debugdata      ascii   lz{Y
+457 0x0001531d 0x000008b0 4   5    .gnu_debugdata      ascii   >BNC
+458 0x0001534b 0x000008de 4   5    .gnu_debugdata      ascii   \b\bj5
+459 0x0001535b 0x000008ee 4   5    .gnu_debugdata      ascii   h"kz
+460 0x00015383 0x00000916 5   6    .gnu_debugdata      ascii   knO>P
+461 0x000153b1 0x00000944 5   7    .gnu_debugdata      utf8    WłNDU
+462 0x000153d6 0x00000969 6   7    .gnu_debugdata      ascii   :\bTjXp
+463 0x000153e2 0x00000975 4   5    .gnu_debugdata      ascii   aYxL
+464 0x00015406 0x00000999 6   7    .gnu_debugdata      ascii   /3g*e0
+465 0x0001541d 0x000009b0 4   5    .gnu_debugdata      ascii   h8\rV
+466 0x0001546b 0x000009fe 4   5    .gnu_debugdata      ascii   ]-jM
+467 0x0001547c 0x00000a0f 4   7    .gnu_debugdata      utf8    ˔1uƹ
+468 0x0001549b 0x00000a2e 5   7    .gnu_debugdata      utf8    -reɤ!
+469 0x000154e8 0x00000a7b 4   5    .gnu_debugdata      ascii   \nst1
+470 0x000154f8 0x00000a8b 4   5    .gnu_debugdata      ascii   ~Bal
+471 0x00015535 0x00000ac8 5   7    .gnu_debugdata      utf8    Yzے~Z
+472 0x0001553e 0x00000ad1 4   5    .gnu_debugdata      ascii   QY-y
+473 0x00015569 0x00000afc 7   10   .gnu_debugdata      utf8    ס0N{c\nη
+0x00011c20    1     16 sym.imp.__cxa_finalize
+0x00012160    1     16 sym.imp.__android_log_assert
+0x00011ca0    1     16 sym.imp.__stack_chk_fail
+0x00012340    1     16 sym.imp.abort
+0x00011f30    1     16 sym.imp.atrace_begin_body
+0x00011f40    1     16 sym.imp.atrace_end_body
+0x00011eb0    1     16 sym.imp.atrace_get_enabled_tags
+0x00012350    1     16 sym.imp.memcmp
+0x00011c60    1     16 sym.imp.memcpy
+0x00011d90    1     16 sym.imp.memset
+0x00011c40    1     16 sym.imp.strlen
+0x0000b000    1     12 entry0
+0x0000cc2c    2     52 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.debug_android::hardware::hidl_handle_const__android::hardware::hidl_vec_android::hardware::hidl_string__const_
+0x0000c68c    6    152 method.virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.onLastStrongRef_void_const_
+0x0000bb70    1     32 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.unlinkToDeath_android::sp_android::hardware::hidl_death_recipient__const_
+0x0000daf0    1     52 fcn.0000daf0
+0x00012100    1     16 fcn.00012100
+0x00012110    1     16 sym.imp.android::RefBase::RefBase__
+0x0000e7ec    2     28 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.getService_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__bool_
+0x0000ca00    2     48 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.getAllBearerAllocations_android::sp_vendor::qti::hardware::data::connection::V1_0::IDataConnectionResponse__const_
+0x0000b81c    1     16 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.debug_android::hardware::hidl_handle_const__android::hardware::hidl_vec_android::hardware::hidl_string__const_
+0x0000c238    7    424 fcn.0000c238
+0x000104ec   20    284 reloc._ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_8hardware7IBinderEEEPvEEEEENS_19__map_value_compareIS7_SH_NS_4lessIS7_EELb1EEENS5_ISH_EEE12__find_equalIS7_EERPNS_16__tree_node_ba
+0x0000b6ec   11    304 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.interfaceChain_std::__1::function_void__android::hardware::hidl_vec_android::hardware::hidl_string__const___
+0x0000e8a0   10    296 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.registerForNotifications_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__android::sp_android::hidl::manager::V1_0::IServiceNotification__co
+0x0000ddf0    5    164 method.vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection.getDebugInfo_std::__1::function_void__android::hidl::base::V1_0::DebugInfo_const___
+0x00012170    1     16 sym.imp.android::hardware::details::getPidIfSharable__
+0x00012180    1     16 sym.imp.android::hardware::details::debuggable__
+0x000104e0    1     12 method.std::__1.__throw_bad_function_call__
+0x0000dde0    1     16 method.vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection.ping__
+0x0000cd40   13    240 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.getHashChain_std::__1::function_void__android::hardware::hidl_vec_android::hardware::hidl_array_unsigned_char__32ul____const___
+0x0000d164   30    564 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.unlinkToDeath_android::sp_android::hardware::hidl_death_recipient__const_
+0x0000c9dc    2     52 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.getBearerAllocation_int__android::sp_vendor::qti::hardware::data::connection::V1_0::IDataConnectionResponse__const_
+0x0000bcf4   27    592 method.android::hardware::Return_android::sp_vendor::qti::hardware::data::connection::V1_1::IDataConnection____android::hardware::details::castInterface_vendor::qti::hardware::data::connection::V1_1::IDataConnection__vendor::qti::hardware::data::connectio
+0x000114fc   18    300 method.void_std::__1::vector_android::sp_android::hardware::hidl_binder_death_recipient___std::__1::allocator_android::sp_android::hardware::hidl_binder_death_recipient_____::__push_back_slow_path_android::sp_android::hardware.hidl_binder_death_recipient_
+0x0000b8c0    8    216 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.getHashChain_std::__1::function_void__android::hardware::hidl_vec_android::hardware::hidl_array_unsigned_char__32ul____const___
+0x0000bb90    8    192 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.castFrom_android::sp_vendor::qti::hardware::data::connection::V1_1::IDataConnection__const__bool_
+0x0000cc50   13    240 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.interfaceDescriptor_std::__1::function_void__android::hardware::hidl_string_const___
+0x000108bc   20    284 reloc._ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_4hidl4base4V1_05IBaseEEEPvEEEEENS_19__map_value_compareIS7_SJ_NS_4lessIS7_EELb1EEENS5_ISJ_EEE12__find_equalIS7_EERPNS_16__tree_nod
+0x00010ae4   15    276 reloc._ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_8hardware7IBinderEEEPvEEEEENS_19__map_value_compareIS7_SH_NS_4lessIS7_EELb1EEENS5_ISH_EEE4findIS7_EENS_15__tree_iteratorISH_PNS_11
+0x0000dba0   24    576 method.vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection._hidl_getConfig_android::hidl::base::V1_0::BnHwBase__android::hardware::Parcel_const__android::hardware::Parcel__std::__1::function_void__android::hardware::Parcel___
+0x0000d398   26    600 fcn.0000d398
+0x0000cb3c   13    240 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.interfaceChain_std::__1::function_void__android::hardware::hidl_vec_android::hardware::hidl_string__const___
+0x0000d148    2     44 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.notifySyspropsChanged__
+0x0000ce30    2     44 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.setHALInstrumentation__
+0x00011b1c   12    224 method.android::sp_vendor::qti::hardware::data::connection::V1_0::IDataConnectionIndication__android::hardware::details::wrapPassthrough_vendor::qti::hardware::data::connection::V1_0.IDataConnectionIndication__void__android::sp_vendor::qti::hardware::data
+0x000110c0   15    276 reloc._ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_4hidl4base4V1_05IBaseEEEPvEEEEENS_19__map_value_compareIS7_SJ_NS_4lessIS7_EELb1EEENS5_ISJ_EEE4findIS7_EENS_15__tree_iteratorISJ_PN
+0x0000c5f8    6    148 method.non_virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.onLastStrongRef_void_const_
+0x0000e570    1     12 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.tryGetService_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__bool_
+0x0000bf44    7    164 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.castFrom_android::sp_android::hidl::base::V1_0::IBase__const__bool_
+0x0000de94   15    296 method.vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection.onTransact_unsigned_int__android::hardware::Parcel_const__android::hardware::Parcel__unsigned_int__std::__1::function_void__android::hardware::Parcel___
+0x0000d058   13    240 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.getDebugInfo_std::__1::function_void__android::hidl::base::V1_0::DebugInfo_const___
+0x0000c3e0    7    392 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.BpHwDataConnection_android::sp_android::hardware::IBinder__const_
+0x0000ba80    1     16 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.setHALInstrumentation__
+0x0000e1d4    9    388 fcn.0000e1d4
+0x00011a3c   12    224 method.android::sp_vendor::qti::hardware::data::connection::V1_0::IDataConnectionResponse__android::hardware::details::wrapPassthrough_vendor::qti::hardware::data::connection::V1_0.IDataConnectionResponse__void__android::sp_vendor::qti::hardware::data::co
+0x00010cc8   67   1016 method.void_std::__1::__tree_remove_std::__1.__tree_node_base_void___std::__1::__tree_node_base_void___std::__1::__tree_node_base_void__
+0x0000dab8    1     56 method.virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection.BnHwDataConnection__
+0x0000ba90    1     32 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.linkToDeath_android::sp_android::hardware::hidl_death_recipient__const__unsigned_long_
+0x0000bb44    1     44 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.notifySyspropsChanged__
+0x00011da0    1     16 sym.imp.android::report_sysprop_change__
+0x0000e358    9    340 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.BsDataConnection_android::sp_vendor::qti::hardware::data::connection::V1_1::IDataConnection__
+0x0000d5f0   26    608 method.vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection.BnHwDataConnection_android::sp_vendor::qti::hardware::data::connection::V1_1::IDataConnection__const_
+0x0000da88    1     48 method.non_virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection.BnHwDataConnection__
+0x0000e7f8    7    168 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.registerAsService_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x0000c568    6    144 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.onLastStrongRef_void_const_
+0x0000d850    7    236 method.vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection.BnHwDataConnection__
+0x0000bfe8   27    592 method.android::hardware::Return_android::sp_vendor::qti::hardware::data::connection::V1_1::IDataConnection____android::hardware::details::castInterface_vendor::qti::hardware::data::connection::V1_1::IDataConnection__android::hidl::base::V1_0::IBase__vend
+0x00010608   27    416 method.void_std::__1::__tree_balance_after_insert_std::__1.__tree_node_base_void___std::__1::__tree_node_base_void___std::__1::__tree_node_base_void__
+0x0000db60    1     64 sym.virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::BnHwDataConnection__
+0x0000bac0    5    132 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.getDebugInfo_std::__1::function_void__android::hidl::base::V1_0::DebugInfo_const___
+0x0000db24    1     60 sym.non_virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::BnHwDataConnection__
+0x0000b82c    5    148 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.interfaceDescriptor_std::__1::function_void__android::hardware::hidl_string_const___
+0x00011d40    1     16 sym.imp.android::hardware::hidl_string::hidl_string_char_const_
+0x00011d50    1     16 sym.imp.android::hardware::hidl_string::hidl_string__
+0x0000e4ac    8    196 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.addOnewayTask_std::__1::function_void_____
+0x0000e57c   29    624 method.android::sp_vendor::qti::hardware::data::connection::V1_1::IDataConnection__android::hardware::details::getServiceInternal_vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection__vendor::qti::hardware::data::connection::V1_1.IDataConnect
+0x0000bab0    1     16 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.ping__
+0x0000da5c    1     44 sym.vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::BnHwDataConnection__
+0x0000c724   28    696 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection._hidl_getConfig_android::hardware::IInterface__android::hardware::details::HidlInstrumentor__android::hardware::hidl_string_const__android::hardware::hidl_string_const__std::__1:
+0x0000d03c    1     28 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.ping__
+0x0000bc50    7    164 method.vendor::qti::hardware::data::connection::V1_1::IDataConnection.castFrom_android::sp_vendor::qti::hardware::data::connection::V1_0::IDataConnection__const__bool_
+0x0000ce4c   19    496 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.linkToDeath_android::sp_android::hardware::hidl_death_recipient__const__unsigned_long_
+0x0000ca20    2     48 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.registerForAllBearerAllocationUpdates_android::sp_vendor::qti::hardware::data::connection::V1_0::IDataConnectionIndication__const_
+0x0000ca40   13    252 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.getConfig_android::hardware::hidl_string_const__android::hardware::hidl_string_const__std::__1::function_void__android::hardware::hidl_string_const___
+0x000111d4   15    208 sym._ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_4h
+0x00010bf8   15    208 sym._ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_8functionIFN7android2spINS9_8h
+0x000121a0    1     16 method.vendor::qti::hardware::data::connection::V1_0::BnHwDataConnection._hidl_getBearerAllocation_android::hidl::base::V1_0::BnHwBase__android::hardware::Parcel_const__android::hardware::Parcel__std::__1::function_void__android::hardware::Parcel___
+0x000121e0    1     16 method.vendor::qti::hardware::data::connection::V1_0::BnHwDataConnection._hidl_getAllBearerAllocations_android::hidl::base::V1_0::BnHwBase__android::hardware::Parcel_const__android::hardware::Parcel__std::__1::function_void__android::hardware::Parcel_
+0x00012190    1     16 method.vendor::qti::hardware::data::connection::V1_0::BnHwDataConnection._hidl_registerForAllBearerAllocationUpdates_android::hidl::base::V1_0::BnHwBase__android::hardware::Parcel_const__android::hardware::Parcel__std::__1::function_void__android::hard
+0x00012090    1     16 sym.imp.android::sp_report_race__
+0x00011e30    1     16 sym.imp.android::sp_report_stack_pointer__
+0x000121f0    1     16 method.android::hidl::base::V1_0::BnHwBase.onTransact_unsigned_int__android::hardware::Parcel_const__android::hardware::Parcel__unsigned_int__std::__1::function_void__android::hardware::Parcel___
+0x000120a0    1     16 method.android::hidl::base::V1_0::BnHwBase.BnHwBase_android::sp_android::hidl::base::V1_0::IBase__const__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__std::__1::basic_string_char__std::__1::char_traits_char
+0x000120e0    1     16 sym.imp.android::hidl::base::V1_0::BnHwBase::BnHwBase__
+0x00012020    1     16 sym.imp.android::hidl::base::V1_0::BpHwBase::_hidl_ping_android::hardware::IInterface__android::hardware::details::HidlInstrumentor_
+0x00012030    1     16 method.android::hidl::base::V1_0::BpHwBase._hidl_getDebugInfo_android::hardware::IInterface__android::hardware::details::HidlInstrumentor__std::__1::function_void__android::hidl::base::V1_0::DebugInfo_const___
+0x00011fc0    1     16 method.android::hidl::base::V1_0::BpHwBase._hidl_getHashChain_android::hardware::IInterface__android::hardware::details::HidlInstrumentor__std::__1::function_void__android::hardware::hidl_vec_android::hardware::hidl_array_unsigned_char__32ul____const__
+0x00011f90    1     16 method.android::hidl::base::V1_0::BpHwBase._hidl_interfaceChain_android::hardware::IInterface__android::hardware::details::HidlInstrumentor__std::__1::function_void__android::hardware::hidl_vec_android::hardware::hidl_string__const___
+0x00011fb0    1     16 method.android::hidl::base::V1_0::BpHwBase._hidl_interfaceDescriptor_android::hardware::IInterface__android::hardware::details::HidlInstrumentor__std::__1::function_void__android::hardware::hidl_string_const___
+0x00012070    1     16 sym.imp.android::RefBase::weakref_type::decWeak_void_const_
+0x00011e90    1     16 fcn.00011e90
+0x00011f00    1     16 sym.imp.android::hardware::IInterface::asBinder_android::hardware::IInterface_const_
+0x00011e60    1     16 fcn.00011e60
+0x000122c0    1     16 sym.imp.android::hardware::IInterface::IInterface__
+0x00011ea0    1     16 sym.imp.android::hardware::BpHwRefBase::onLastStrongRef_void_const_
+0x00011e70    1     16 sym.imp.android::hardware::BpHwRefBase::BpHwRefBase_android::sp_android::hardware::IBinder__const_
+0x000122b0    1     16 sym.imp.android::hardware::BpHwRefBase::BpHwRefBase__
+0x00012280    1     16 method.android::hardware::hidl_string.hidl_string_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00012380    1     16 fcn.00012380
+0x00012390    1     16 sym.imp.android::hardware::hidl_string::operator_android::hardware::hidl_string_const_
+0x00011ff0    1     16 sym.imp.android::hardware::ProcessState::startThreadPool__
+0x00011fe0    1     16 sym.imp.android::hardware::ProcessState::self__
+0x000121d0    1     16 sym.imp.android::hardware::writeToParcel_android::hardware::Status_const__android::hardware::Parcel_
+0x000123a0    1     16 sym.imp.android::hardware::readFromParcel_android::hardware::Status__android::hardware::Parcel_const_
+0x000120c0    1     16 sym.imp.android::hardware::getRequestingSid_android::sp_android::hidl::base::V1_0::IBase__const_
+0x00012270    1     16 sym.imp.android::hardware::defaultServiceManager__
+0x000120b0    1     16 sym.imp.android::hardware::getMinSchedulerPolicy_android::sp_android::hidl::base::V1_0::IBase__const_
+0x00011ef0    1     16 method.android::hardware.writeEmbeddedToParcel_android::hardware::hidl_string_const__android::hardware::Parcel__unsigned_long__unsigned_long_
+0x00012140    1     16 method.android::hardware.readEmbeddedFromParcel_android::hardware::hidl_string_const__android::hardware::Parcel_const__unsigned_long__unsigned_long_
+0x00011e10    1     16 sym.imp.android::hardware::getOrCreateCachedBinder_android::hidl::base::V1_0::IBase_
+0x00012050    1     16 sym.imp.android::hardware::hidl_binder_death_recipient::getRecipient__
+0x00012000    1     16 method.android::hardware::hidl_binder_death_recipient.hidl_binder_death_recipient_android::sp_android::hardware::hidl_death_recipient__const__unsigned_long__android::sp_android::hidl::base::V1_0::IBase__const_
+0x00011ee0    1     16 sym.imp.android::hardware::Parcel::writeBuffer_void_const__unsigned_long__unsigned_long_
+0x00011ed0    1     16 sym.imp.android::hardware::Parcel::writeInterfaceToken_char_const_
+0x00011ec0    1     16 fcn.00011ec0
+0x00011f20    1     16 sym.imp.android::hardware::Parcel::Parcel__
+0x00011f10    1     16 sym.imp.android::hardware::Status::setFromStatusT_int_
+0x000121c0    1     16 sym.imp.android::hardware::Status::fromExceptionCode_int_
+0x00012230    1     16 sym.imp.android::hardware::Status::fromExceptionCode_int__char_const_
+0x000122d0    1     16 sym.imp.android::hardware::Status::ok__
+0x00012220    1     16 sym.imp.android::hardware::details::TaskRunner::push_std::__1::function_void_____const_
+0x00012210    1     16 sym.imp.android::hardware::details::TaskRunner::start_unsigned_long_
+0x00012200    1     16 fcn.00012200
+0x00012310    1     16 sym.imp.android::hardware::details::TaskRunner::TaskRunner__
+0x00011e40    1     16 sym.imp.android::hardware::details::return_status::return_status__
+0x000122e0    1     16 sym.imp.android::hardware::details::return_status::operator_android::hardware::details::return_status_
+0x00011d70    1     16 sym.imp.android::hardware::details::logAlwaysFatal_char_const_
+0x000122f0    1     16 sym.imp.android::hardware::details::HidlInstrumentor::configureInstrumentation_bool_
+0x00011e80    1     16 method.android::hardware::details::HidlInstrumentor.HidlInstrumentor_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const
+0x000122a0    1     16 sym.imp.android::hardware::details::HidlInstrumentor::HidlInstrumentor__
+0x00011de0    1     16 sym.imp.android::hardware::details::canCastInterface_android::hidl::base::V1_0::IBase__char_const__bool_
+0x00011c30    1     16 sym.imp.android::hardware::details::getBnConstructorMap__
+0x00011c80    1     16 sym.imp.android::hardware::details::getBsConstructorMap__
+0x00012250    1     16 method.android::hardware::details.getRawServiceInternal_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__bool__bool_
+0x000123c0    1     16 sym.imp.android::hardware::details::wrapPassthroughInternal_android::sp_android::hidl::base::V1_0::IBase__
+0x00012260    1     16 method.android::hardware::details.registerAsServiceInternal_android::sp_android::hidl::base::V1_0::IBase__const__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x000120d0    1     16 sym.imp.android::hardware::BHwBinder::setRequestingSid_bool_
+0x00012080    1     16 sym.imp.android::RefBase::createWeak_void_const__const
+0x00012060    1     16 sym.imp.android::RefBase::getWeakRefs___const
+0x00011dc0    1     16 sym.imp.android::RefBase::decStrong_void_const__const
+0x00011db0    1     16 sym.imp.android::RefBase::incStrong_void_const__const
+0x00012130    1     16 sym.imp.android::hardware::Parcel::readBuffer_unsigned_long__unsigned_long__void_const__const
+0x00012120    1     16 sym.imp.android::hardware::Parcel::enforceInterface_char_const__const
+0x00011e00    1     16 sym.imp.android::hardware::details::return_status::onValueRetrieval___const
+0x00012150    1     16 sym.imp.android::hardware::details::return_status::assertOk___const
+0x000123b0    1     16 sym.imp.std::__1::__vector_base_common_true_::__throw_length_error___const
+0x00011c90    1     16 sym.imp.std::__1::__basic_string_common_true_::__throw_length_error___const
+0x00011df0    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.basic_string_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00011cb0    1     16 sym.imp.std::__1::mutex::lock__
+0x00011ce0    1     16 sym.imp.std::__1::mutex::unlock__
+0x00012290    1     16 sym.imp.std::__1::mutex::mutex__
+0x00011d60    1     16 sym.imp.operator_delete___void_
+0x00011c70    1     16 sym.imp.operator_delete_void_
+0x00011d80    1     16 sym.imp.operator_new___unsigned_long_
+0x00011c50    1     16 sym.imp.operator_new_unsigned_long_
+0x0000b010    1      4 entry.fini0
+0x0000b4fc   24    496 method.vendor::qti::hardware::data::connection::V1_1.static_destructor__
+0x0000b014   30    536 method.vendor::qti::hardware::data::connection::V1_1.static_constructor__
+0x0000b22c   18    360 method.android::hardware::ConcurrentMap_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::function_android::sp_android::hardware.IBinder___void____::set_std::__1::basic_string_char__std::__1::char_traits_cha
+0x0000b394   18    360 method.android::hardware::ConcurrentMap_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::function_android::sp_android::hidl::base::V1_0.IBase___void____::set_std::__1::basic_string_char__std::__1::char_trai
+0x00011cc0    1     16 fcn.00011cc0
+0x00011cd0    1     16 fcn.00011cd0
+0x00011cf0    1     16 fcn.00011cf0
+0x00011d00    1     16 fcn.00011d00
+0x00011d10    1     16 fcn.00011d10
+0x00011d20    1     16 fcn.00011d20
+0x00011d30    1     16 fcn.00011d30
+0x000112a4   16    268 method.android::hardware::hidl_vec_android::hardware::hidl_string_.operator_std::initializer_list_android::hardware::hidl_string__
+0x0000b998   11    232 method.android::hardware::hidl_vec_android::hardware::hidl_array_unsigned_char__32ul___.hidl_vec_std::initializer_list_android::hardware::hidl_array_unsigned_char__32ul____
+0x00011dd0    1     16 fcn.00011dd0
+0x00011e20    1     16 fcn.00011e20
+0x00011e50    1     16 fcn.00011e50
+0x00011f80    1     16 fcn.00011f80
+0x00012010    1     16 fcn.00012010
+0x0000d93c   18    288 method.android::hardware::ConcurrentMap_android::hidl::base::V1_0::IBase_const__android::wp_android::hardware::BHwBinder___.eraseIfEqual_android::hidl::base::V1_0::IBase_const_const__android::wp_android::hardware::BHwBinder__const_
+0x000120f0    1     16 fcn.000120f0
+0x000121b0    1     16 fcn.000121b0
+0x0000ea60   10    228 sym.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection::BpHwDataConnection__
+0x00012300    1     16 fcn.00012300
+0x00012320    1     16 fcn.00012320
+0x00012330    1     16 fcn.00012330
+0x00012360    1     16 fcn.00012360
+0x00012370    1     16 fcn.00012370
+0x0000e9c8    1      8 method.vendor::qti::hardware::data::connection::V1_0::IDataConnection.isRemote___const
+0x0000e9d0    1      4 method.vendor::qti::hardware::data::connection::V1_0::IDataConnection.IDataConnection__
+0x0000e9dc    1     40 method.android::hidl::base::V1_0::IBase.IBase__
+0x0000ea18    1     48 method.virtual_thunk_to_android::hidl::base::V1_0::IBase.IBase__
+0x0000ea48    1      8 method.android::hardware::BpInterface_vendor::qti::hardware::data::connection::V1_1::IDataConnection_.onAsBinder__
+0x0000ea50    1      8 method.non_virtual_thunk_to_android::hardware::BpInterface_vendor::qti::hardware::data::connection::V1_1::IDataConnection_.onAsBinder__
+0x0000ea58    1      8 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.isRemote___const
+0x0000eb44    1     36 method.vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.BpHwDataConnection__
+0x0000eba0    1     40 method.non_virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.BpHwDataConnection__
+0x0000ec08    1     48 method.virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BpHwDataConnection.BpHwDataConnection__
+0x0000ec38   15    332 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.interfaceChain_std::__1::function_void__android::hardware::hidl_vec_android::hardware::hidl_string__const___
+0x0000ed84   12    308 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.debug_android::hardware::hidl_handle_const__android::hardware::hidl_vec_android::hardware::hidl_string__const_
+0x0000eeb8   15    332 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.interfaceDescriptor_std::__1::function_void__android::hardware::hidl_string_const___
+0x0000f004   15    332 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.getHashChain_std::__1::function_void__android::hardware::hidl_vec_android::hardware::hidl_array_unsigned_char__32ul____const___
+0x0000f150    1     52 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.setHALInstrumentation__
+0x0000f184   14    392 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.linkToDeath_android::sp_android::hardware::hidl_death_recipient__const__unsigned_long_
+0x0000f30c   12    284 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.ping__
+0x0000f428   15    332 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.getDebugInfo_std::__1::function_void__android::hidl::base::V1_0::DebugInfo_const___
+0x0000f574   17    308 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.notifySyspropsChanged__
+0x0000f6a8   14    376 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.unlinkToDeath_android::sp_android::hardware::hidl_death_recipient__const_
+0x0000f890    3    120 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.BsDataConnection__
+0x0000f908   38    728 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.getBearerAllocation_int__android::sp_vendor::qti::hardware::data::connection::V1_0::IDataConnectionResponse__const_
+0x0000fbe0   38    720 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.getAllBearerAllocations_android::sp_vendor::qti::hardware::data::connection::V1_0::IDataConnectionResponse__const_
+0x0000feb0   38    720 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.registerForAllBearerAllocationUpdates_android::sp_vendor::qti::hardware::data::connection::V1_0::IDataConnectionIndication__const_
+0x00010180   15    356 method.vendor::qti::hardware::data::connection::V1_1::BsDataConnection.getConfig_android::hardware::hidl_string_const__android::hardware::hidl_string_const__std::__1::function_void__android::hardware::hidl_string_const___
+0x00010350    3    128 method.non_virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BsDataConnection.BsDataConnection__
+0x00010454    3    140 method.virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BsDataConnection.BsDataConnection__
+0x000107a8    1      4 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1.static_constructor__::__1__std::__1::allocator_vendor::qti::hardware::data::connection::V1_1::static_constructor__::__1___android::sp_android::hardware::IBinder___void__::
+0x000107ac    1     36 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1.static_constructor__::__1__std::__1::allocator_vendor::qti::hardware::data::connection::V1_1::static_constructor__::__1___android::sp_android::hardware::IBinder___void__::_
+0x000107e0    1      4 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1.static_constructor__::__1__std::__1::allocator_vendor::qti::hardware::data::connection::V1_1::static_constructor__::__1___android::sp_android::hardware::IBinder___void__::d
+0x000107e4   11    216 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1.static_constructor__::__1__std::__1::allocator_vendor::qti::hardware::data::connection::V1_1::static_constructor__::__1___android::sp_android::hardware::IBinder___void__::o
+0x00010a0c   11    216 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1.static_constructor__::__2__std::__1::allocator_vendor::qti::hardware::data::connection::V1_1::static_constructor__::__2___android::sp_android::hidl::base::V1_0::IBase___void
+0x00011688   16    328 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection._hidl_getConfig_android::hidl::base::V1_0::BnHwBase__android::hardware::Parcel_const__android::hardware::Parcel__std::__1::function_void__android::har
+0x0001181c    5     84 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1::BsDataConnection.getDebugInfo_std::__1::function_void__android::hidl::base::V1_0::DebugInfo_const___::lambda_auto:1_const_1__std::__1::allocator_lambda_auto:1_const_
+0x00011870    3     44 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1::BsDataConnection.notifySyspropsChanged__::lambda__1__std::__1::allocator_lambda__1___void____::__func__
+0x000118e4    3     88 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1::BsDataConnection.notifySyspropsChanged__::lambda__1__std::__1::allocator_lambda__1___void____::__clone___const
+0x0001193c    3     44 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1::BsDataConnection.notifySyspropsChanged__::lambda__1__std::__1::allocator_lambda__1___void____::__clone_std::__1::__function::__base_std::__1::allocator_lambda__1__
+0x00011968    3     32 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1::BsDataConnection.notifySyspropsChanged__::lambda__1__std::__1::allocator_lambda__1___void____::destroy__
+0x00011988    3     60 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1::BsDataConnection.notifySyspropsChanged__::lambda__1__std::__1::allocator_lambda__1___void____::destroy_deallocate__
+0x000119c4    5    120 method.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1::BsDataConnection.notifySyspropsChanged__::lambda__1__std::__1::allocator_lambda__1___void____::operator____
+0x00011410   10    236 sym._ZNSt3__110__function6__funcIZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection15_hidl_getConfigEPN7android8hard
+0x0000eb70    1     40 fcn.0000eb70
+0x0000ebd0    1     40 fcn.0000ebd0
+0x0000f820    3    112 sym.vendor::qti::hardware::data::connection::V1_1::BsDataConnection::BsDataConnection__
+0x000102e4    3    108 sym.non_virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BsDataConnection::BsDataConnection__
+0x000103d0    3    132 sym.virtual_thunk_to_vendor::qti::hardware::data::connection::V1_1::BsDataConnection::BsDataConnection__
+0x000109d8    1     36 sym.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1::static_constructor__::__2__std::__1::allocator_vendor::qti::hardware::data::connection::V1_1::static_constructor__::__2___android::sp_android::hidl::base::V1_0::IBase___void__::__clone___const
+0x000113b0    1     64 sym._ZNKSt3__110__function6__funcIZN6vendor3qti8hardware4data10connection4V1_118BpHwDataConnection15_hidl_getConfigEPN7android8har
+0x00011628    1     64 sym.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::_hidl_getConfig_android::hidl::base::V1_0::BnHwBase__android::hardware::Parcel_const__android::hardware::Parcel__std::__1::function_void__android::hardware::Parcel___::__0__std::__1::allocator_vendor::qti::hardware::data::connection::V1_1::BnHwDataConnection::_hidl_getConfig_android::hidl::base::V1_0::BnHwBase__android::hardware::Parcel_const__android::hardware::Parcel__std::__1::function_void__android::hardware::Parcel___::__0___void__android::hardware::hidl_string_const__::__clone___const
+0x000117d0    1     52 sym.std::__1::__function::__func_vendor::qti::hardware::data::connection::V1_1::BsDataConnection::getDebugInfo_std::__1::function_void__android::hidl::base::V1_0::DebugInfo_const___::lambda_auto:1_const_1__std::__1::allocator_lambda_auto:1_const_1___void__android::hidl::base::V1_0::DebugInfo_const__::__clone___const
+0x0001189c    3     72 fcn.0001189c
+0x00011c00    1     20 section..plt

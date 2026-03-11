@@ -1,0 +1,192 @@
+arch     arm
+baddr    0x0
+binsz    9799
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name               demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+15  0x00001444 0x00001444 GLOBAL FUNC 4        qrtr_bye
+16  0x00001170 0x00001170 GLOBAL FUNC 4        qrtr_close
+17  0x00001214 0x00001214 GLOBAL FUNC 192      qrtr_new_server
+18  0x00001620 0x00001620 GLOBAL FUNC 104      qrtr_recv
+19  0x00001688 0x00001688 GLOBAL FUNC 200      qrtr_recvfrom
+20  0x00001174 0x00001174 GLOBAL FUNC 160      qrtr_sendto
+21  0x00001448 0x00001448 GLOBAL FUNC 188      qrtr_new_lookup
+22  0x00001014 0x00001014 GLOBAL FUNC 348      qrtr_open
+23  0x00001380 0x00001380 GLOBAL FUNC 192      qrtr_remove_server
+24  0x00001750 0x00001750 GLOBAL FUNC 208      qrtr_decode
+25  0x000015c4 0x000015c4 GLOBAL FUNC 92       qrtr_poll
+26  0x00001440 0x00001440 GLOBAL FUNC 4        qrtr_publish
+27  0x00001504 0x00001504 GLOBAL FUNC 192      qrtr_remove_lookup
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000238   0x18 0x00000238   0x18 -r-- NOTE        .note.android.ident
+2   0x00000250   0x20 0x00000250   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270  0x2a0 0x00000270  0x2a0 -r-- DYNSYM      .dynsym
+4   0x00000510   0x38 0x00000510   0x38 -r-- GNU_VERSYM  .gnu.version
+5   0x00000548   0x20 0x00000548   0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000568   0x70 0x00000568   0x70 -r-- GNU_HASH    .gnu.hash
+7   0x000005d8  0x15d 0x000005d8  0x15d -r-- STRTAB      .dynstr
+8   0x00000738   0x12 0x00000738   0x12 -r-- ----        .rela.dyn
+9   0x00000750   0x10 0x00000750   0x10 -r-- ----        .relr.dyn
+10  0x00000760  0x180 0x00000760  0x180 -r-- RELA        .rela.plt
+11  0x000008e0   0xd0 0x000008e0   0xd0 -r-- PROGBITS    .rodata
+12  0x000009b0   0x94 0x000009b0   0x94 -r-- PROGBITS    .eh_frame_hdr
+13  0x00000a48  0x234 0x00000a48  0x234 -r-- PROGBITS    .eh_frame
+14  0x00001000  0x820 0x00001000  0x820 -r-x PROGBITS    .text
+15  0x00001820  0x120 0x00001820  0x120 -r-x PROGBITS    .plt
+16  0x00002000    0x8 0x00002000    0x8 -rw- PROGBITS    .data.rel.ro
+17  0x00002008   0x10 0x00002008   0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00002018  0x1c0 0x00002018  0x1c0 -rw- DYNAMIC     .dynamic
+19  0x000021d8    0x8 0x000021d8    0x8 -rw- PROGBITS    .got
+20  0x000021e0   0x98 0x000021e0   0x98 -rw- PROGBITS    .got.plt
+21  0x00002278   0xeb 0x00000000   0xeb ---- STRTAB      .shstrtab
+22  0x00002363  0x2e4 0x00000000  0x2e4 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x000005a5 0x000005a5 5   6    .gnu.hash           ascii   j\f#"s
+3   0x000005ba 0x000005ba 7   8    .gnu.hash           ascii   =8p_;h>
+4   0x000005d9 0x000005d9 14  15   .dynstr             ascii   __cxa_finalize
+5   0x000005e8 0x000005e8 7   8    .dynstr             ascii   __errno
+6   0x000005f0 0x000005f0 16  17   .dynstr             ascii   __stack_chk_fail
+7   0x00000601 0x00000601 4   5    .dynstr             ascii   bind
+8   0x00000606 0x00000606 5   6    .dynstr             ascii   close
+9   0x0000060c 0x0000060c 7   8    .dynstr             ascii   fprintf
+10  0x00000614 0x00000614 11  12   .dynstr             ascii   getsockname
+11  0x00000620 0x00000620 4   5    .dynstr             ascii   poll
+12  0x00000625 0x00000625 8   9    .dynstr             ascii   qrtr_bye
+13  0x0000062e 0x0000062e 10  11   .dynstr             ascii   qrtr_close
+14  0x00000639 0x00000639 11  12   .dynstr             ascii   qrtr_decode
+15  0x00000645 0x00000645 15  16   .dynstr             ascii   qrtr_new_lookup
+16  0x00000655 0x00000655 15  16   .dynstr             ascii   qrtr_new_server
+17  0x00000665 0x00000665 9   10   .dynstr             ascii   qrtr_open
+18  0x0000066f 0x0000066f 9   10   .dynstr             ascii   qrtr_poll
+19  0x00000679 0x00000679 12  13   .dynstr             ascii   qrtr_publish
+20  0x00000686 0x00000686 9   10   .dynstr             ascii   qrtr_recv
+21  0x00000690 0x00000690 13  14   .dynstr             ascii   qrtr_recvfrom
+22  0x0000069e 0x0000069e 18  19   .dynstr             ascii   qrtr_remove_lookup
+23  0x000006b1 0x000006b1 18  19   .dynstr             ascii   qrtr_remove_server
+24  0x000006c4 0x000006c4 11  12   .dynstr             ascii   qrtr_sendto
+25  0x000006d0 0x000006d0 8   9    .dynstr             ascii   recvfrom
+26  0x000006d9 0x000006d9 6   7    .dynstr             ascii   sendto
+27  0x000006e0 0x000006e0 10  11   .dynstr             ascii   setsockopt
+28  0x000006eb 0x000006eb 6   7    .dynstr             ascii   socket
+29  0x000006f2 0x000006f2 6   7    .dynstr             ascii   stderr
+30  0x000006f9 0x000006f9 8   9    .dynstr             ascii   strerror
+31  0x00000702 0x00000702 7   8    .dynstr             ascii   libc.so
+32  0x0000070a 0x0000070a 4   5    .dynstr             ascii   LIBC
+33  0x0000070f 0x0000070f 9   10   .dynstr             ascii   libc++.so
+34  0x00000719 0x00000719 7   8    .dynstr             ascii   libm.so
+35  0x00000721 0x00000721 8   9    .dynstr             ascii   libdl.so
+36  0x0000072a 0x0000072a 10  11   .dynstr             ascii   libqrtr.so
+37  0x00000738 0x00000738 4   5    .rela.dyn           ascii   APS2
+38  0x000008f8 0x000008f8 19  20   .rodata             ascii   E|qrtr: recv(): %s\n
+39  0x0000090c 0x0000090c 21  22   .rodata             ascii   E|qrtr: bind(%d): %s\n
+40  0x00000922 0x00000922 26  27   .rodata             ascii   E|qrtr: getsockname(): %s\n
+41  0x0000093d 0x0000093d 36  37   .rodata             ascii   E|qrtr: setsockopt(SO_RCVTIMEO): %s\n
+42  0x00000962 0x00000962 31  32   .rodata             ascii   E|qrtr: socket(AF_QIPCRTR): %s\n
+43  0x00000982 0x00000982 23  24   .rodata             ascii   E|qrtr: recvfrom(): %s\n
+44  0x0000099a 0x0000099a 21  22   .rodata             ascii   E|qrtr: sendto(): %s\n
+45  0x00000b04 0x00000b04 5   24   .eh_frame           utf32le \b$Ä܄À
+46  0x00001280 0x00001280 4   5    .text               ascii   \b!\t*
+47  0x000013ec 0x000013ec 4   5    .text               ascii   \b!\t*
+48  0x000014b4 0x000014b4 4   5    .text               ascii   \b!\t*
+49  0x00001570 0x00001570 4   5    .text               ascii   \b!\t*
+50  0x000017e4 0x000017e4 5   6    .text               ascii   ) @9\t
+51  0x000017f0 0x000017f0 5   6    .text               ascii   )}\bS\t
+52  0x00002279 0x00000001 11  12   .shstrtab           ascii   .fini_array
+53  0x00002285 0x0000000d 5   6    .shstrtab           ascii   .text
+54  0x0000228b 0x00000013 4   5    .shstrtab           ascii   .got
+55  0x00002290 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+56  0x000022a4 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+57  0x000022ad 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+58  0x000022b7 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+59  0x000022bf 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+60  0x000022cd 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+61  0x000022dc 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+62  0x000022e9 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+63  0x000022f3 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+64  0x000022fd 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+65  0x0000230a 0x00000092 7   8    .shstrtab           ascii   .dynsym
+66  0x00002312 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+67  0x0000231c 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+68  0x00002326 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+69  0x00002339 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+70  0x00002342 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+71  0x0000234c 0x000000d4 7   8    .shstrtab           ascii   .rodata
+72  0x00002354 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+73  0x00002364 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+74  0x0000239a 0x00000037 4   5    .gnu_debugdata      ascii   vXF,
+75  0x00002421 0x000000be 5   6    .gnu_debugdata      ascii   A\\vja
+76  0x00002486 0x00000123 8   11   .gnu_debugdata      utf8    Qiέ:̑ux`
+77  0x000024ab 0x00000148 4   5    .gnu_debugdata      ascii   xpXt
+78  0x000024fd 0x0000019a 4   5    .gnu_debugdata      ascii   zwBz
+79  0x00002506 0x000001a3 4   5    .gnu_debugdata      ascii   uJ'1
+80  0x0000250d 0x000001aa 9   11   .gnu_debugdata      utf8    ::و_7B4Lc
+81  0x00002518 0x000001b5 7   9    .gnu_debugdata      utf8    RatُeS_
+82  0x0000256b 0x00000208 4   7    .gnu_debugdata      utf8    9밄\n%
+83  0x00002586 0x00000223 4   5    .gnu_debugdata      ascii   |*GW
+84  0x000025a6 0x00000243 5   6    .gnu_debugdata      ascii   <G#GC
+85  0x000025b0 0x0000024d 5   7    .gnu_debugdata      utf8    #T\eјu
+86  0x00002610 0x000002ad 4   6    .gnu_debugdata      utf8    JαU_
+0x00001840    1     16 sym.imp.__cxa_finalize
+0x00001880    1     16 sym.imp.__errno
+0x000018c0    1     16 sym.imp.__stack_chk_fail
+0x00001870    1     16 sym.imp.bind
+0x000018b0    1     16 sym.imp.close
+0x000018a0    1     16 sym.imp.fprintf
+0x000018f0    1     16 sym.imp.getsockname
+0x00001920    1     16 sym.imp.poll
+0x00001930    1     16 sym.imp.recvfrom
+0x000018d0    1     16 sym.imp.sendto
+0x00001860    1     16 sym.imp.setsockopt
+0x00001850    1     16 sym.imp.socket
+0x00001890    1     16 sym.imp.strerror
+0x00001000    1     12 entry0
+0x00001444    2     20 sym.qrtr_bye
+0x00001170    1      4 sym.qrtr_close
+0x00001214    6    192 sym.qrtr_new_server
+0x00001620    3    104 sym.qrtr_recv
+0x00001688    9    200 sym.qrtr_recvfrom
+0x00001174    5    160 sym.qrtr_sendto
+0x00001448    6    188 sym.qrtr_new_lookup
+0x00001014   12    348 sym.qrtr_open
+0x00001380    6    192 sym.qrtr_remove_server
+0x00001750   11    208 sym.qrtr_decode
+0x000015c4    3     92 sym.qrtr_poll
+0x00001440    2     20 sym.qrtr_publish
+0x00001504    6    192 sym.qrtr_remove_lookup
+0x00001010    1      4 entry.fini0
+0x000012d4    6    172 sym.qrtr_getname
+0x000018e0    1     16 fcn.000018e0
+0x00001820    1     20 section..plt

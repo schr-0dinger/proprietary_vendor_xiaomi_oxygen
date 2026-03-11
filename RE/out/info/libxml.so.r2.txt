@@ -1,0 +1,299 @@
+arch     arm
+baddr    0x0
+binsz    36673
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                 demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+8   0x00007118 0x00007118 GLOBAL FUNC 288      xmllib_tok_generate
+9   0x000042c0 0x000042c0 GLOBAL FUNC 776      xmllibi_tok_ascii_comment
+10  0x00005f60 0x00005f60 GLOBAL FUNC 280      xmllibi_decl_ascii_check_value_const
+11  0x000041c4 0x000041c4 GLOBAL FUNC 252      xmllibi_tok_ascii_pi
+12  0x00006a44 0x00006a44 GLOBAL FUNC 544      xmllibi_tok_utf8_cdata
+13  0x000063cc 0x000063cc GLOBAL FUNC 972      xmllibi_tok_utf8_entity
+14  0x00006f80 0x00006f80 GLOBAL FUNC 288      xmllibi_tok_utf8_xmldecl
+15  0x000024bc 0x000024bc GLOBAL FUNC 172      xmllibi_utf8_decod_test
+16  0x000021a0 0x000021a0 GLOBAL FUNC 168      xmllibi_utf8_is_seq_valid
+17  0x00003008 0x00003008 GLOBAL FUNC 340      xmllib_generator_generate
+18  0x00003658 0x00003658 GLOBAL FUNC 1204     xmllibi_tok_ascii_entity
+19  0x000047ec 0x000047ec GLOBAL FUNC 1812     xmllib_parser_parse
+20  0x00003eb0 0x00003eb0 GLOBAL FUNC 788      xmllibi_tok_ascii_cdata
+21  0x00003390 0x00003390 GLOBAL FUNC 712      xmllibi_tok_ascii_dtd
+22  0x00003224 0x00003224 GLOBAL FUNC 364      xmllibi_tok_ascii_start_token
+23  0x00003b0c 0x00003b0c GLOBAL FUNC 932      xmllibi_tok_ascii_tag
+24  0x000080d8 0x000080d8 GLOBAL OBJ  648      xmllibi_tok_gen_ascii_table
+25  0x000070a0 0x000070a0 GLOBAL FUNC 120      xmllib_tok_tokenize
+26  0x00006d70 0x00006d70 GLOBAL FUNC 528      xmllibi_tok_utf8_comment
+27  0x00006078 0x00006078 GLOBAL FUNC 392      xmllibi_tok_utf8_start_token
+28  0x00002014 0x00002014 GLOBAL FUNC 116      xmllib_decl_check_value
+29  0x00006200 0x00006200 GLOBAL FUNC 460      xmllibi_tok_utf8_dtd
+30  0x00006798 0x00006798 GLOBAL FUNC 684      xmllibi_tok_utf8_tag
+31  0x00002088 0x00002088 GLOBAL FUNC 280      xmllibi_decl_utf8_check_value_const
+32  0x00002248 0x00002248 GLOBAL FUNC 628      xmllibi_utf8_peekbytes
+33  0x000045c8 0x000045c8 GLOBAL FUNC 548      xmllibi_tok_ascii_xmldecl
+34  0x00008438 0x00008438 GLOBAL OBJ  648      xmllibi_tok_gen_utf8_table
+35  0x00006c64 0x00006c64 GLOBAL FUNC 268      xmllibi_tok_utf8_pi
+36  0x00007238 0x00007238 GLOBAL FUNC 160      xmllib_common_format_log_msg
+37  0x000089e0 0x000099e0 GLOBAL OBJ  48       xmllibi_gen_fptr_tbl
+38  0x00004f00 0x00004f00 GLOBAL FUNC 448      xmllib_parser_free
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x3a8 0x000002a8   0x3a8 -r-- DYNSYM      .dynsym
+4   0x00000650    0x4e 0x00000650    0x4e -r-- GNU_VERSYM  .gnu.version
+5   0x000006a0    0x20 0x000006a0    0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x000006c0    0xe8 0x000006c0    0xe8 -r-- GNU_HASH    .gnu.hash
+7   0x000007a8   0x3aa 0x000007a8   0x3aa -r-- STRTAB      .dynstr
+8   0x00000b58    0xa4 0x00000b58    0xa4 -r-- ----        .rela.dyn
+9   0x00000c00    0x38 0x00000c00    0x38 -r-- ----        .relr.dyn
+10  0x00000c38   0x180 0x00000c38   0x180 -r-- RELA        .rela.plt
+11  0x00000db8   0x246 0x00000db8   0x246 -r-- PROGBITS    .rodata
+12  0x00001000   0x15c 0x00001000   0x15c -r-- PROGBITS    .eh_frame_hdr
+13  0x00001160   0x684 0x00001160   0x684 -r-- PROGBITS    .eh_frame
+14  0x00002000  0x52d8 0x00002000  0x52d8 -r-x PROGBITS    .text
+15  0x000072e0   0x120 0x000072e0   0x120 -r-x PROGBITS    .plt
+16  0x00008000   0x740 0x00008000   0x740 -rw- PROGBITS    .data.rel.ro
+17  0x00008740    0x10 0x00008740    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00008750   0x1f0 0x00008750   0x1f0 -rw- DYNAMIC     .dynamic
+19  0x00008940     0x8 0x00008940     0x8 -rw- PROGBITS    .got
+20  0x00008948    0x98 0x00008948    0x98 -rw- PROGBITS    .got.plt
+21  0x000089e0    0x30 0x000099e0    0x30 -rw- PROGBITS    .data
+22  0x00008a10    0xf1 0x00000000    0xf1 ---- STRTAB      .shstrtab
+23  0x00008b01   0x440 0x00000000   0x440 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00000733 0x00000733 4   5    .gnu.hash           ascii   I4\f"
+3   0x00000758 0x00000758 4   5    .gnu.hash           ascii   s)5%
+4   0x000007a9 0x000007a9 14  15   .dynstr             ascii   __cxa_finalize
+5   0x000007b8 0x000007b8 23  24   .dynstr             ascii   xmllib_decl_check_value
+6   0x000007d0 0x000007d0 36  37   .dynstr             ascii   xmllibi_decl_ascii_check_value_const
+7   0x000007f5 0x000007f5 35  36   .dynstr             ascii   xmllibi_decl_utf8_check_value_const
+8   0x00000819 0x00000819 12  13   .dynstr             ascii   __strlen_chk
+9   0x00000826 0x00000826 7   8    .dynstr             ascii   strncmp
+10  0x0000082e 0x0000082e 16  17   .dynstr             ascii   __stack_chk_fail
+11  0x0000083f 0x0000083f 23  24   .dynstr             ascii   xmllibi_utf8_decod_test
+12  0x00000857 0x00000857 25  26   .dynstr             ascii   xmllibi_utf8_is_seq_valid
+13  0x00000871 0x00000871 22  23   .dynstr             ascii   xmllibi_utf8_peekbytes
+14  0x00000888 0x00000888 11  12   .dynstr             ascii   msg_sprintf
+15  0x00000894 0x00000894 28  29   .dynstr             ascii   xmllib_common_format_log_msg
+16  0x000008b1 0x000008b1 25  26   .dynstr             ascii   xmllib_generator_generate
+17  0x000008cb 0x000008cb 19  20   .dynstr             ascii   xmllib_tok_generate
+18  0x000008df 0x000008df 20  21   .dynstr             ascii   xmllibi_gen_fptr_tbl
+19  0x000008f4 0x000008f4 23  24   .dynstr             ascii   xmllibi_tok_ascii_cdata
+20  0x0000090c 0x0000090c 25  26   .dynstr             ascii   xmllibi_tok_ascii_comment
+21  0x00000926 0x00000926 21  22   .dynstr             ascii   xmllibi_tok_ascii_dtd
+22  0x0000093c 0x0000093c 24  25   .dynstr             ascii   xmllibi_tok_ascii_entity
+23  0x00000955 0x00000955 20  21   .dynstr             ascii   xmllibi_tok_ascii_pi
+24  0x0000096a 0x0000096a 29  30   .dynstr             ascii   xmllibi_tok_ascii_start_token
+25  0x00000988 0x00000988 21  22   .dynstr             ascii   xmllibi_tok_ascii_tag
+26  0x0000099e 0x0000099e 25  26   .dynstr             ascii   xmllibi_tok_ascii_xmldecl
+27  0x000009b8 0x000009b8 27  28   .dynstr             ascii   xmllibi_tok_gen_ascii_table
+28  0x000009d4 0x000009d4 13  14   .dynstr             ascii   Diag_LSM_Init
+29  0x000009e2 0x000009e2 18  19   .dynstr             ascii   xmllib_parser_free
+30  0x000009f5 0x000009f5 19  20   .dynstr             ascii   xmllib_parser_parse
+31  0x00000a09 0x00000a09 19  20   .dynstr             ascii   xmllib_tok_tokenize
+32  0x00000a1d 0x00000a1d 26  27   .dynstr             ascii   xmllibi_tok_gen_utf8_table
+33  0x00000a38 0x00000a38 22  23   .dynstr             ascii   xmllibi_tok_utf8_cdata
+34  0x00000a4f 0x00000a4f 24  25   .dynstr             ascii   xmllibi_tok_utf8_comment
+35  0x00000a68 0x00000a68 20  21   .dynstr             ascii   xmllibi_tok_utf8_dtd
+36  0x00000a7d 0x00000a7d 23  24   .dynstr             ascii   xmllibi_tok_utf8_entity
+37  0x00000a95 0x00000a95 19  20   .dynstr             ascii   xmllibi_tok_utf8_pi
+38  0x00000aa9 0x00000aa9 28  29   .dynstr             ascii   xmllibi_tok_utf8_start_token
+39  0x00000ac6 0x00000ac6 20  21   .dynstr             ascii   xmllibi_tok_utf8_tag
+40  0x00000adb 0x00000adb 24  25   .dynstr             ascii   xmllibi_tok_utf8_xmldecl
+41  0x00000af4 0x00000af4 9   10   .dynstr             ascii   vsnprintf
+42  0x00000afe 0x00000afe 7   8    .dynstr             ascii   libc.so
+43  0x00000b06 0x00000b06 4   5    .dynstr             ascii   LIBC
+44  0x00000b0b 0x00000b0b 9   10   .dynstr             ascii   liblog.so
+45  0x00000b15 0x00000b15 10  11   .dynstr             ascii   libdiag.so
+46  0x00000b20 0x00000b20 12  13   .dynstr             ascii   libcutils.so
+47  0x00000b2d 0x00000b2d 9   10   .dynstr             ascii   libc++.so
+48  0x00000b37 0x00000b37 7   8    .dynstr             ascii   libm.so
+49  0x00000b3f 0x00000b3f 8   9    .dynstr             ascii   libdl.so
+50  0x00000b48 0x00000b48 9   10   .dynstr             ascii   libxml.so
+51  0x00000b58 0x00000b58 4   5    .rela.dyn           ascii   APS2
+52  0x00000dba 0x00000dba 37  38   .rodata             ascii   xmllib_parser_parse: Diag init failed
+53  0x00000deb 0x00000deb 5   6    .rodata             ascii   ascii
+54  0x00000df6 0x00000df6 7   8    .rodata             ascii   [CDATA[
+55  0x00000e02 0x00000e02 5   6    .rodata             ascii   <?xml
+56  0x00000e08 0x00000e08 8   9    .rodata             ascii   encoding
+57  0x00000e11 0x00000e11 10  11   .rodata             ascii   iso-8859-1
+58  0x00000e1f 0x00000e1f 9   10   .rodata             ascii   <![CDATA[
+59  0x00000e29 0x00000e29 7   8    .rodata             ascii   version
+60  0x00000e36 0x00000e36 50  51   .rodata             ascii   vendor/qcom/proprietary/xmllib/src/xmllib_parser.c
+61  0x00000e6e 0x00000e6e 10  11   .rodata             ascii   standalone
+62  0x00000e80 0x00000e80 5   6    .rodata             ascii   UTF-8
+63  0x00000e86 0x00000e86 4   5    .rodata             ascii   <!--
+64  0x00000e8d 0x00000e8d 20  21   .rodata             ascii   Invalid node type %d
+65  0x00000ea2 0x00000ea2 53  54   .rodata             ascii   vendor/qcom/proprietary/xmllib/src/xmllib_generator.c
+66  0x00000ed8 0x00000ed8 7   8    .rodata             ascii   DOCTYPE
+67  0x00000ee0 0x00000ee0 29  30   .rodata             ascii   Invalid occurance of token %d
+68  0x00000f01 0x00000f01 26  27   .rodata             ascii   xmldecl node with child %p
+69  0x00000f1e 0x00000f1e 38  39   .rodata             ascii   Unexpected node-type: %d in node: 0x%p
+70  0x000021b6 0x000021b6 4   5    .text               ascii   \t\v?\t
+71  0x000021e2 0x000021e2 4   5    .text               ascii   \t\v?\t
+72  0x0000227f 0x0000227f 4   5    .text               ascii   9\b\f@
+73  0x0000240a 0x0000240a 4   5    .text               ascii   \t\v?\t
+74  0x0000245a 0x0000245a 4   5    .text               ascii   \t\v?\t
+75  0x0000249b 0x0000249b 4   5    .text               ascii   TI\r\t
+76  0x0000329c 0x0000329c 4   6    .text               utf8    *!Ț+
+77  0x0000340c 0x0000340c 4   6    .text               utf8    *!Ț+
+78  0x000036d8 0x000036d8 4   6    .text               utf8    *!Ț+
+79  0x00003a2f 0x00003a2f 5   7    .text               utf8    R(!Ți
+80  0x00003b8c 0x00003b8c 4   6    .text               utf8    *!Ț+
+81  0x00003cc8 0x00003cc8 7   8    .text               ascii   +ih8J\t\v
+82  0x00003dd5 0x00003dd5 4   5    .text               ascii   #@9\t
+83  0x00003e7e 0x00003e7e 5   7    .text               utf8    ?֨C_8
+84  0x00003e89 0x00003e89 4   5    .text               ascii   \b@zH
+85  0x00003f30 0x00003f30 4   6    .text               utf8    *!Ț+
+86  0x00004340 0x00004340 4   6    .text               utf8    *!Ț+
+87  0x00004644 0x00004644 4   6    .text               utf8    *!Ț+
+88  0x00004978 0x00004978 7   8    .text               ascii   jyhx)\t\n
+89  0x00004fe4 0x00004fe4 7   8    .text               ascii   *kh8)\t\n
+90  0x0000536d 0x0000536d 6   7    .text               ascii   {hx)\t\n
+91  0x0000580d 0x0000580d 6   14   .text               utf16le \v´ä桯耀
+92  0x00006108 0x00006108 4   6    .text               utf8    *!Ț+
+93  0x000066b7 0x000066b7 5   7    .text               utf8    R(!Ți
+94  0x00006878 0x00006878 7   8    .text               ascii   +ih8J\t\v
+95  0x000069ad 0x000069ad 4   5    .text               ascii   \b@zH
+96  0x00007163 0x00007163 4   5    .text               ascii   R)|)
+97  0x0000716f 0x0000716f 4   5    .text               ascii   48|@
+98  0x00007177 0x00007177 4   5    .text               ascii   R\t_\t
+99  0x0000718f 0x0000718f 4   5    .text               ascii   R\t_\t
+100 0x000071af 0x000071af 4   5    .text               ascii   R\b_\b
+101 0x000071b4 0x000071b4 4   5    .text               ascii   \bQ@9
+102 0x00008a11 0x00000001 11  12   .shstrtab           ascii   .fini_array
+103 0x00008a1d 0x0000000d 5   6    .shstrtab           ascii   .text
+104 0x00008a23 0x00000013 4   5    .shstrtab           ascii   .got
+105 0x00008a28 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+106 0x00008a3c 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+107 0x00008a45 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+108 0x00008a4f 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+109 0x00008a57 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+110 0x00008a65 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+111 0x00008a74 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+112 0x00008a81 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+113 0x00008a8b 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+114 0x00008a95 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+115 0x00008aa2 0x00000092 7   8    .shstrtab           ascii   .dynsym
+116 0x00008aaa 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+117 0x00008ab4 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+118 0x00008abe 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+119 0x00008ad1 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+120 0x00008ada 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+121 0x00008ae4 0x000000d4 7   8    .shstrtab           ascii   .rodata
+122 0x00008aec 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+123 0x00008afb 0x000000eb 5   6    .shstrtab           ascii   .data
+124 0x00008b02 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+125 0x00008b5c 0x0000005b 4   5    .gnu_debugdata      ascii   LCD.
+126 0x00008b66 0x00000065 4   5    .gnu_debugdata      ascii   i^&k
+127 0x00008b85 0x00000084 4   5    .gnu_debugdata      ascii   OMT^
+128 0x00008ba2 0x000000a1 4   5    .gnu_debugdata      ascii   \e:GS
+129 0x00008bdf 0x000000de 5   6    .gnu_debugdata      ascii   z/13D
+130 0x00008bed 0x000000ec 4   5    .gnu_debugdata      ascii   }ZEJ
+131 0x00008c02 0x00000101 5   6    .gnu_debugdata      ascii   .942O
+132 0x00008c1a 0x00000119 5   6    .gnu_debugdata      ascii   yJQ\b_
+133 0x00008cc5 0x000001c4 4   5    .gnu_debugdata      ascii   0}#w
+134 0x00008cf3 0x000001f2 4   6    .gnu_debugdata      utf8    DڇrD
+135 0x00008db6 0x000002b5 6   7    .gnu_debugdata      ascii   \r8N\eT7
+136 0x00008df7 0x000002f6 4   6    .gnu_debugdata      utf8    \<טC
+137 0x00008e47 0x00000346 4   6    .gnu_debugdata      utf8    `A֙[
+138 0x00008e4d 0x0000034c 5   6    .gnu_debugdata      ascii   f :B&
+139 0x00008e64 0x00000363 4   6    .gnu_debugdata      utf8    ֽ|:r
+140 0x00008e7f 0x0000037e 5   6    .gnu_debugdata      ascii   w&J/D
+141 0x00008e95 0x00000394 5   6    .gnu_debugdata      ascii   #\tSMY
+142 0x00008eab 0x000003aa 5   8    .gnu_debugdata      utf8    9D`bၯ
+143 0x00008f09 0x00000408 5   6    .gnu_debugdata      ascii   VwB>j
+0x00007300    1     16 sym.imp.__cxa_finalize
+0x00007330    1     16 sym.imp.__strlen_chk
+0x00007340    1     16 sym.imp.strncmp
+0x00007350    1     16 sym.imp.__stack_chk_fail
+0x00007390    1     16 sym.imp.msg_sprintf
+0x000073a0    1     16 sym.imp.Diag_LSM_Init
+0x000073f0    1     16 sym.imp.vsnprintf
+0x00002000    1     12 entry0
+0x00007118   21    288 sym.xmllib_tok_generate
+0x000042c0   39    776 sym.xmllibi_tok_ascii_comment
+0x00005f60   22    280 sym.xmllibi_decl_ascii_check_value_const
+0x000041c4   12    252 sym.xmllibi_tok_ascii_pi
+0x00006a44   23    544 sym.xmllibi_tok_utf8_cdata
+0x000063cc   49    972 sym.xmllibi_tok_utf8_entity
+0x00006f80   14    288 sym.xmllibi_tok_utf8_xmldecl
+0x000024bc    8    172 sym.xmllibi_utf8_decod_test
+0x000021a0   12    168 sym.xmllibi_utf8_is_seq_valid
+0x00003008   16    340 sym.xmllib_generator_generate
+0x00003658   66   1204 sym.xmllibi_tok_ascii_entity
+0x000047ec   35    684 sym.xmllib_parser_parse
+0x00003eb0   39    788 sym.xmllibi_tok_ascii_cdata
+0x00003390   41    712 sym.xmllibi_tok_ascii_dtd
+0x00003224   19    364 sym.xmllibi_tok_ascii_start_token
+0x00003b0c   40    740 sym.xmllibi_tok_ascii_tag
+0x000070a0   13    120 sym.xmllib_tok_tokenize
+0x00006d70   23    528 sym.xmllibi_tok_utf8_comment
+0x00006078   20    392 sym.xmllibi_tok_utf8_start_token
+0x00002014   13    148 sym.xmllib_decl_check_value
+0x00006200   26    460 sym.xmllibi_tok_utf8_dtd
+0x00006798   24    484 sym.xmllibi_tok_utf8_tag
+0x00002088   22    280 sym.xmllibi_decl_utf8_check_value_const
+0x00002248   39    628 sym.xmllibi_utf8_peekbytes
+0x000045c8   31    548 sym.xmllibi_tok_ascii_xmldecl
+0x00006c64   12    268 sym.xmllibi_tok_utf8_pi
+0x00007238    3    160 sym.xmllib_common_format_log_msg
+0x00004f00    9    292 sym.xmllib_parser_free
+0x00002010    1      4 entry.fini0
+0x00007360    1     16 fcn.00007360
+0x00007370    1     16 fcn.00007370
+0x0000315c    8    200 sym.xmllibi_generator_attribute
+0x00007380    1     16 fcn.00007380
+0x000073b0    1     16 fcn.000073b0
+0x000050c0   38    732 sym.xmllibi_parser_element
+0x00005be8   47    888 sym.xmllibi_parser_attribute
+0x000073c0    1     16 fcn.000073c0
+0x000057c4   33    608 sym.xmllibi_parser_pi
+0x00005a24   24    452 sym.xmllibi_parser_comment
+0x000073d0    1     16 fcn.000073d0
+0x000073e0    1     16 fcn.000073e0
+0x00002584   20    648 fcn.00002584
+0x00002824   12    380 fcn.00002824
+0x000029b8    9    296 fcn.000029b8
+0x00002af8   13    424 fcn.00002af8
+0x00002cb8   10    348 fcn.00002cb8
+0x00002e2c   13    476 fcn.00002e2c
+0x00002568    1     28 sym.xmllibi_generator_element
+0x0000280c    1     24 sym.xmllibi_generator_emptyelement
+0x000029a0    1     24 sym.xmllibi_generator_content
+0x00002ae0    1     24 sym.xmllibi_generator_pi
+0x00002ca0    1     24 sym.xmllibi_generator_comment
+0x00002e14    1     24 sym.xmllibi_generator_xmldecl
+0x000072e0    1     20 section..plt

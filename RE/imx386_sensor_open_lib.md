@@ -333,6 +333,16 @@ Index -> value (IMX386) -> proposed meaning:
 The IMX-only packed words likely encode extra sensor-specific registers or
 PDAF-related hooks; OV12A and S5K5E8 set these to zero.
 
+#### Evidence from `libmmcamera2_sensor_modules.so`
+
+`libmmcamera2_sensor_modules.so` reads the first word of this block as two
+packed `u16` values and uses the next word (`0x22c`) as a comparison/subtraction
+reference. It also treats `0x230` (word 2) as a float and computes `1.0 / value`,
+which aligns with the pixel size interpretation.
+
+See `RE/mmcamera2_sensor_modules_offsets.md` for the exact disassembly
+addresses and notes.
+
 ### `0x1e8` looks like gain/exposure limits (inferred)
 
 The `0x1e8` block is consistent across sensors:
@@ -353,6 +363,19 @@ Tentative interpretation:
 
 This mapping is provisional; it matches patterns but still needs validation
 against a known sensor-lib header or CAF source.
+
+#### Evidence from `libmmcamera2_sensor_modules.so`
+
+The Qualcomm sensor modules library consumes these fields directly. The key
+accesses are documented in `RE/mmcamera2_sensor_modules_offsets.md`, but the
+two most important references for this block are:
+
+- `0x1f4` (word 3) is copied as a float into an output struct (likely max gain).
+- `0x20c` (word 9) is copied as a raw `u32` limit (likely max coarse integration
+  or linecount limit).
+
+This strengthens the interpretation of the `0x1e8` block as gain/exposure
+limits, with word 3 as `max_gain` and word 9 as an exposure ceiling.
 
 ### `0x62b8` is IMX386-only (PDAF?)
 

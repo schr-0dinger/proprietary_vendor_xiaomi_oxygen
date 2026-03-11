@@ -1,0 +1,241 @@
+arch     arm
+baddr    0x0
+binsz    17900
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                 demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+9   0x000010ec 0x000010ec GLOBAL FUNC 260      qmi_idl_decode_find_tlv
+10  0x00002e68 0x00002e68 GLOBAL FUNC 32       qmi_idl_get_inherited_service_object
+11  0x00002c40 0x00002c40 GLOBAL FUNC 76       qmi_idl_get_idl_minor_version
+12  0x00002c08 0x00002c08 GLOBAL FUNC 56       qmi_idl_get_idl_version
+13  0x00002f98 0x00002f98 GLOBAL FUNC 360      qmi_idl_get_max_c_struct_len
+14  0x00003100 0x00003100 GLOBAL FUNC 104      qmi_idl_inherit_service_object
+15  0x000011f0 0x000011f0 GLOBAL FUNC 240      qmi_idl_decode_verify_mandatory
+16  0x000023d4 0x000023d4 GLOBAL FUNC 8        qmi_idl_get_std_resp_tlv_len
+17  0x000020a4 0x000020a4 GLOBAL FUNC 744      qmi_idl_message_encode
+18  0x00001014 0x00001014 GLOBAL FUNC 216      qmi_idl_find_msg
+19  0x000012e0 0x000012e0 GLOBAL FUNC 1024     qmi_idl_message_decode_v6
+20  0x00002cfc 0x00002cfc GLOBAL FUNC 364      qmi_idl_get_max_message_len
+21  0x00002cc4 0x00002cc4 GLOBAL FUNC 56       qmi_idl_get_max_service_len
+22  0x0000238c 0x0000238c GLOBAL FUNC 72       qmi_idl_encode_resp_tlv
+23  0x00001f70 0x00001f70 GLOBAL FUNC 308      qmi_idl_message_decode
+24  0x00002e88 0x00002e88 GLOBAL FUNC 272      qmi_idl_get_message_c_struct_len
+25  0x00002c8c 0x00002c8c GLOBAL FUNC 56       qmi_idl_get_service_id
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000238    0x18 0x00000238    0x18 -r-- NOTE        .note.android.ident
+2   0x00000250    0x20 0x00000250    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270   0x270 0x00000270   0x270 -r-- DYNSYM      .dynsym
+4   0x000004e0    0x34 0x000004e0    0x34 -r-- GNU_VERSYM  .gnu.version
+5   0x00000514    0x20 0x00000514    0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000538    0x84 0x00000538    0x84 -r-- GNU_HASH    .gnu.hash
+7   0x000005bc   0x251 0x000005bc   0x251 -r-- STRTAB      .dynstr
+8   0x00000810    0x10 0x00000810    0x10 -r-- ----        .relr.dyn
+9   0x00000820   0x120 0x00000820   0x120 -r-- RELA        .rela.plt
+10  0x00000940    0x38 0x00000940    0x38 -r-- PROGBITS    .rodata
+11  0x00000978    0xc4 0x00000978    0xc4 -r-- PROGBITS    .eh_frame_hdr
+12  0x00000a40   0x30c 0x00000a40   0x30c -r-- PROGBITS    .eh_frame
+13  0x00001000  0x2168 0x00001000  0x2168 -r-x PROGBITS    .text
+14  0x00003170    0xe0 0x00003170    0xe0 -r-x PROGBITS    .plt
+15  0x00004000     0x8 0x00004000     0x8 -rw- PROGBITS    .data.rel.ro
+16  0x00004008    0x10 0x00004008    0x10 -rw- FINI_ARRAY  .fini_array
+17  0x00004018   0x190 0x00004018   0x190 -rw- DYNAMIC     .dynamic
+18  0x000041a8    0x78 0x000041a8    0x78 -rw- PROGBITS    .got.plt
+19  0x00004220    0xdc 0x00000000    0xdc ---- STRTAB      .shstrtab
+20  0x000042fc   0x2f0 0x00000000   0x2f0 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x00000265 0x00000265 7   8    .note.gnu.build-id  ascii   \tt\aD,s\n
+3   0x0000059a 0x0000059a 4   5    .gnu.hash           ascii   0 *\e
+4   0x000005bd 0x000005bd 14  15   .dynstr             ascii   __cxa_finalize
+5   0x000005cc 0x000005cc 12  13   .dynstr             ascii   __memcpy_chk
+6   0x000005d9 0x000005d9 16  17   .dynstr             ascii   __stack_chk_fail
+7   0x000005ea 0x000005ea 7   8    .dynstr             ascii   longjmp
+8   0x000005f2 0x000005f2 6   7    .dynstr             ascii   memcpy
+9   0x000005f9 0x000005f9 6   7    .dynstr             ascii   memset
+10  0x00000600 0x00000600 23  24   .dynstr             ascii   qmi_idl_decode_find_tlv
+11  0x00000618 0x00000618 31  32   .dynstr             ascii   qmi_idl_decode_verify_mandatory
+12  0x00000638 0x00000638 23  24   .dynstr             ascii   qmi_idl_encode_resp_tlv
+13  0x00000650 0x00000650 16  17   .dynstr             ascii   qmi_idl_find_msg
+14  0x00000661 0x00000661 36  37   .dynstr             ascii   qmi_idl_get_inherited_service_object
+15  0x00000686 0x00000686 28  29   .dynstr             ascii   qmi_idl_get_std_resp_tlv_len
+16  0x000006a3 0x000006a3 22  23   .dynstr             ascii   qmi_idl_message_decode
+17  0x000006ba 0x000006ba 25  26   .dynstr             ascii   qmi_idl_message_decode_v6
+18  0x000006d4 0x000006d4 22  23   .dynstr             ascii   qmi_idl_message_encode
+19  0x000006eb 0x000006eb 6   7    .dynstr             ascii   setjmp
+20  0x000006f2 0x000006f2 6   7    .dynstr             ascii   strlen
+21  0x000006f9 0x000006f9 29  30   .dynstr             ascii   qmi_idl_get_idl_minor_version
+22  0x00000717 0x00000717 23  24   .dynstr             ascii   qmi_idl_get_idl_version
+23  0x0000072f 0x0000072f 28  29   .dynstr             ascii   qmi_idl_get_max_c_struct_len
+24  0x0000074c 0x0000074c 27  28   .dynstr             ascii   qmi_idl_get_max_message_len
+25  0x00000768 0x00000768 27  28   .dynstr             ascii   qmi_idl_get_max_service_len
+26  0x00000784 0x00000784 32  33   .dynstr             ascii   qmi_idl_get_message_c_struct_len
+27  0x000007a5 0x000007a5 22  23   .dynstr             ascii   qmi_idl_get_service_id
+28  0x000007bc 0x000007bc 30  31   .dynstr             ascii   qmi_idl_inherit_service_object
+29  0x000007db 0x000007db 7   8    .dynstr             ascii   libc.so
+30  0x000007e3 0x000007e3 4   5    .dynstr             ascii   LIBC
+31  0x000007e8 0x000007e8 9   10   .dynstr             ascii   libc++.so
+32  0x000007f2 0x000007f2 7   8    .dynstr             ascii   libm.so
+33  0x000007fa 0x000007fa 8   9    .dynstr             ascii   libdl.so
+34  0x00000803 0x00000803 9   10   .dynstr             ascii   libidl.so
+35  0x00001048 0x00001048 4   5    .text               ascii   \b!@y
+36  0x0000105e 0x0000105e 6   7    .text               ascii   _x_!5k
+37  0x0000111e 0x0000111e 4   5    .text               ascii   !k\b\b
+38  0x00001224 0x00001224 5   6    .text               ascii   .hm8.
+39  0x00001244 0x00001244 4   5    .text               ascii   \r\b@9
+40  0x00001370 0x00001370 4   5    .text               ascii   \b!@y
+41  0x00001386 0x00001386 6   7    .text               ascii   _x_!6k
+42  0x000013a6 0x000013a6 5   6    .text               ascii   @y\b\r@
+43  0x0000147c 0x0000147c 5   6    .text               ascii   J\t@9W
+44  0x0000149a 0x0000149a 4   5    .text               ascii   07j\r
+45  0x000014b2 0x000014b2 4   5    .text               ascii   \tkL\t
+46  0x0000174e 0x0000174e 4   5    .text               ascii   @9(\t
+47  0x00001766 0x00001766 4   5    .text               ascii   @9\t\t
+48  0x00001802 0x00001802 4   5    .text               ascii   @9\t\t
+49  0x0000194f 0x0000194f 5   6    .text               ascii   To\f`7
+50  0x00001980 0x00001980 7   8    .text               ascii   +il8J\t\v
+51  0x000019e0 0x000019e0 5   6    .text               ascii   I\a@70
+52  0x00001ac6 0x00001ac6 5   6    .text               ascii   @6\bC5
+53  0x00001b46 0x00001b46 4   5    .text               ascii   @9\n\t
+54  0x00001b63 0x00001b63 4   5    .text               ascii   *J\r@
+55  0x00001b6f 0x00001b6f 4   5    .text               ascii   S\b\rx
+56  0x00001c9b 0x00001c9b 7   8    .text               ascii   T/\nP7P\v
+57  0x00001cc2 0x00001cc2 4   5    .text               ascii   \n*\nG
+58  0x00001d3a 0x00001d3a 4   5    .text               ascii   @9\nG
+59  0x00002174 0x00002174 5   6    .text               ascii   \b!@yH
+60  0x00002186 0x00002186 4   5    .text               ascii   \b*)\t
+61  0x00002196 0x00002196 6   7    .text               ascii   _x_!7k
+62  0x000021b6 0x000021b6 5   6    .text               ascii   @y)\r@
+63  0x00002293 0x00002293 5   6    .text               ascii   9*}\bS
+64  0x0000229a 0x0000229a 4   5    .text               ascii   \t\v)\r
+65  0x000023c6 0x000023c6 4   5    .text               ascii   @yHP
+66  0x00002462 0x00002462 4   5    .text               ascii   @9(\t
+67  0x000024b9 0x000024b9 5   6    .text               ascii   \v07\b\v
+68  0x00002547 0x00002547 6   7    .text               ascii   R(5H*(
+69  0x0000256b 0x0000256b 5   6    .text               ascii   *8\n`7
+70  0x000025ee 0x000025ee 4   5    .text               ascii   @y+\t
+71  0x00002605 0x00002605 5   6    .text               ascii   .@x9\a
+72  0x00002612 0x00002612 4   5    .text               ascii   \bk\b&
+73  0x000026ca 0x000026ca 4   5    .text               ascii   \bkH
+74  0x00002708 0x00002708 7   8    .text               ascii   +ih8J\t\v
+75  0x00002817 0x00002817 5   6    .text               ascii   *x\b`6
+76  0x0000286d 0x0000286d 4   5    .text               ascii   \a@9J
+77  0x00002877 0x00002877 4   5    .text               ascii   *+\r@
+78  0x00002883 0x00002883 4   5    .text               ascii   S)\rx
+79  0x00002b2a 0x00002b2a 4   5    .text               ascii   (7?\f
+80  0x00002b38 0x00002b38 4   5    .text               ascii   i|\bS
+81  0x00002b98 0x00002b98 4   5    .text               ascii   i|\bS
+82  0x00002c73 0x00002c73 4   5    .text               ascii   T\b9@
+83  0x00002cab 0x00002cab 4   5    .text               ascii   T\b\t@
+84  0x00002ce3 0x00002ce3 4   5    .text               ascii   T\b\r@
+85  0x00002d98 0x00002d98 4   5    .text               ascii   J!@y
+86  0x00002d9f 0x00002d9f 4   5    .text               ascii   4+\r\b
+87  0x00002ddb 0x00002ddb 4   5    .text               ascii   T*!@
+88  0x00003024 0x00003024 13  14   .text               ascii   \v)@y\t!@y\n%@yI
+89  0x00003097 0x00003097 4   5    .text               ascii   T\t!@
+90  0x00004221 0x00000001 11  12   .shstrtab           ascii   .fini_array
+91  0x0000422d 0x0000000d 5   6    .shstrtab           ascii   .text
+92  0x00004233 0x00000013 19  20   .shstrtab           ascii   .note.android.ident
+93  0x00004247 0x00000027 8   9    .shstrtab           ascii   .got.plt
+94  0x00004250 0x00000030 9   10   .shstrtab           ascii   .rela.plt
+95  0x0000425a 0x0000003a 7   8    .shstrtab           ascii   .dynstr
+96  0x00004262 0x00000042 13  14   .shstrtab           ascii   .eh_frame_hdr
+97  0x00004270 0x00000050 14  15   .shstrtab           ascii   .gnu.version_r
+98  0x0000427f 0x0000005f 12  13   .shstrtab           ascii   .data.rel.ro
+99  0x0000428c 0x0000006c 9   10   .shstrtab           ascii   .relr.dyn
+100 0x00004296 0x00000076 12  13   .shstrtab           ascii   .gnu.version
+101 0x000042a3 0x00000083 7   8    .shstrtab           ascii   .dynsym
+102 0x000042ab 0x0000008b 9   10   .shstrtab           ascii   .gnu.hash
+103 0x000042b5 0x00000095 9   10   .shstrtab           ascii   .eh_frame
+104 0x000042bf 0x0000009f 18  19   .shstrtab           ascii   .note.gnu.build-id
+105 0x000042d2 0x000000b2 8   9    .shstrtab           ascii   .dynamic
+106 0x000042db 0x000000bb 9   10   .shstrtab           ascii   .shstrtab
+107 0x000042e5 0x000000c5 7   8    .shstrtab           ascii   .rodata
+108 0x000042ed 0x000000cd 14  15   .shstrtab           ascii   .gnu_debugdata
+109 0x000042fd 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+110 0x00004333 0x00000037 6   8    .gnu_debugdata      utf8    a\u܆qA
+111 0x00004369 0x0000006d 4   5    .gnu_debugdata      ascii   IH\a+
+112 0x000043b6 0x000000ba 4   6    .gnu_debugdata      utf8    ԕ`r>
+113 0x000043d4 0x000000d8 4   5    .gnu_debugdata      ascii   >v7l
+114 0x0000440d 0x00000111 4   5    .gnu_debugdata      ascii   ]43}
+115 0x00004473 0x00000177 4   5    .gnu_debugdata      ascii   qZ{H
+116 0x00004481 0x00000185 6   8    .gnu_debugdata      utf8    \tD9#JƄ
+117 0x000044b3 0x000001b7 5   6    .gnu_debugdata      ascii   wzNHV
+118 0x000044c1 0x000001c5 4   5    .gnu_debugdata      ascii   U(v.
+119 0x000044c6 0x000001ca 4   5    .gnu_debugdata      ascii   >}Ke
+120 0x000044e6 0x000001ea 7   8    .gnu_debugdata      ascii   :9S\a>o6
+121 0x00004549 0x0000024d 4   6    .gnu_debugdata      utf8    AĢFp
+122 0x0000455c 0x00000260 4   5    .gnu_debugdata      ascii   cq2v
+123 0x00004572 0x00000276 7   9    .gnu_debugdata      utf8    ʇ,u=1\e
+124 0x0000457b 0x0000027f 5   6    .gnu_debugdata      ascii   zK.Nl
+125 0x00004586 0x0000028a 4   5    .gnu_debugdata      ascii   zUD%
+126 0x00004595 0x00000299 4   5    .gnu_debugdata      ascii   Q$x0
+127 0x000045a3 0x000002a7 4   6    .gnu_debugdata      utf8    DM9ņ
+0x00003190    1     16 sym.imp.__cxa_finalize
+0x00003200    1     16 sym.imp.__memcpy_chk
+0x000031e0    1     16 sym.imp.__stack_chk_fail
+0x000031b0    1     16 sym.imp.longjmp
+0x000031f0    1     16 sym.imp.memcpy
+0x000031c0    1     16 sym.imp.memset
+0x00003210    1     16 sym.imp.setjmp
+0x00003230    1     16 sym.imp.strlen
+0x00001000    1     12 entry0
+0x000010ec   16    260 sym.qmi_idl_decode_find_tlv
+0x00002e68    5     32 sym.qmi_idl_get_inherited_service_object
+0x00002c40    8     76 sym.qmi_idl_get_idl_minor_version
+0x00002c08    6     56 sym.qmi_idl_get_idl_version
+0x00002f98   18    360 sym.qmi_idl_get_max_c_struct_len
+0x00003100   12    104 sym.qmi_idl_inherit_service_object
+0x000011f0   15    240 sym.qmi_idl_decode_verify_mandatory
+0x000023d4    1      8 sym.qmi_idl_get_std_resp_tlv_len
+0x000020a4   37    744 sym.qmi_idl_message_encode
+0x00001014   13    216 sym.qmi_idl_find_msg
+0x000012e0   53   1024 sym.qmi_idl_message_decode_v6
+0x00002cfc   19    364 sym.qmi_idl_get_max_message_len
+0x00002cc4    6     56 sym.qmi_idl_get_max_service_len
+0x0000238c    4     72 sym.qmi_idl_encode_resp_tlv
+0x00001f70   14    308 sym.qmi_idl_message_decode
+0x00002e88   11    272 sym.qmi_idl_get_message_c_struct_len
+0x00002c8c    6     56 sym.qmi_idl_get_service_id
+0x00001010    1      4 entry.fini0
+0x000031a0    1     16 fcn.000031a0
+0x000016e0   59    912 sym.qmi_idl_decode_element
+0x000031d0    1     16 fcn.000031d0
+0x00003220    1     16 fcn.00003220
+0x000023dc   56   1004 sym.qmi_idl_encode_element
+0x00002b14   13    244 sym.qmi_idl_encode_length
+0x00003240    1     16 fcn.00003240
+0x00001bc8    5     96 fcn.00001bc8
+0x00001c54    6    112 fcn.00001c54
+0x00003170    1     20 section..plt

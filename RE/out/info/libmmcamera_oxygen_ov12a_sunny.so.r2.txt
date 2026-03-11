@@ -1,0 +1,368 @@
+arch     arm
+baddr    0x0
+binsz    584779
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+compiler Snapdragon LLVM ARM Compiler 3.8.2 for Android NDK (based on LLVM 3.8.0)
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+intrp    /system/bin/linker
+laddr    0x0
+lang     c++
+linenum  false
+lsyms    false
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   false
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped true
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type   size lib name                                   demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+24  0x00000b74 0x00000b74 GLOBAL FUNC   356      oxygen_ov12a_sunny_calculate_exposure
+25  0x00000cd8 0x00000cd8 GLOBAL FUNC   488      oxygen_ov12a_sunny_fill_exposure_array
+26  ---------- 0x0008fa25 GLOBAL NOTYPE 0        _end
+27  ---------- 0x0008fa24 GLOBAL NOTYPE 0        _edata
+28  ---------- 0x0008fa24 GLOBAL NOTYPE 0        __bss_start
+29  0x00000954 0x00000954 GLOBAL FUNC   320      __ae_r
+30  0x00000f70 0x00000f70 GLOBAL FUNC   12       sensor_open_lib
+[Sections]
+
+nth paddr          size vaddr         vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000      0x0 0x00000000      0x0 ---- NULL
+1   0x00000154     0x13 0x00000154     0x13 -r-- PROGBITS    .interp
+2   0x00000168     0x18 0x00000168     0x18 -r-- NOTE        .note.android.ident
+3   0x00000180     0x20 0x00000180     0x20 -r-- NOTE        .note.gnu.build-id
+4   0x000001a0    0x1f0 0x000001a0    0x1f0 -r-- DYNSYM      .dynsym
+5   0x00000390    0x1e3 0x00000390    0x1e3 -r-- STRTAB      .dynstr
+6   0x00000574     0x40 0x00000574     0x40 -r-- GNU_HASH    .gnu.hash
+7   0x000005b4     0x3e 0x000005b4     0x3e -r-- GNU_VERSYM  .gnu.version
+8   0x000005f4     0x1c 0x000005f4     0x1c -r-- GNU_VERDEF  .gnu.version_d
+9   0x00000610     0x50 0x00000610     0x50 -r-- GNU_VERNEED .gnu.version_r
+10  0x00000660     0xd8 0x00000660     0xd8 -r-- REL         .rel.dyn
+11  0x00000738     0xb8 0x00000738     0xb8 -r-- REL         .rel.plt
+12  0x000007f0    0x128 0x000007f0    0x128 -r-x PROGBITS    .plt
+13  0x00000918   0x1cb4 0x00000918   0x1cb4 -r-x PROGBITS    .text
+14  0x000025cc    0x168 0x000025cc    0x168 -r-- ----        .ARM.exidx
+15  0x00002734    0x904 0x00002734    0x904 -r-- PROGBITS    .rodata
+16  0x00003038     0x30 0x00003038     0x30 -r-- PROGBITS    .ARM.extab
+17  0x00003e10      0x4 0x00004e10      0x4 -rw- INIT_ARRAY  .init_array
+18  0x00003e14      0x4 0x00004e14      0x4 -rw- FINI_ARRAY  .fini_array
+19  0x00003e18     0x48 0x00004e18     0x48 -rw- PROGBITS    .data.rel.ro
+20  0x00003e60    0x120 0x00004e60    0x120 -rw- DYNAMIC     .dynamic
+21  0x00003f80     0x80 0x00004f80     0x80 -rw- PROGBITS    .got
+22  0x00004000  0x8aa24 0x00005000  0x8aa24 -rw- PROGBITS    .data
+23  0x0008ea24      0x0 0x0008fa24      0x1 -rw- NOBITS      .bss
+24  0x0008ea24     0xac 0x00000000     0xac ---- PROGBITS    .comment
+25  0x0008ead0     0x1c 0x00000000     0x1c ---- NOTE        .note.gnu.gold-version
+26  0x0008eaec     0x3c 0x00000000     0x3c ---- ----        .ARM.attributes
+27  0x0008eb28    0x123 0x00000000    0x123 ---- STRTAB      .shstrtab
+
+[Strings]
+nth paddr      vaddr      len size section                type    string
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                          utf16le 4 \t(
+1   0x00000038 0x00000038 5   24                          utf32le 444ĠĠ
+2   0x00000154 0x00000154 18  19   .interp                ascii   /system/bin/linker
+3   0x00000174 0x00000174 7   8    .note.android.ident    ascii   Android
+4   0x00000391 0x00000391 6   7    .dynstr                ascii   __ae_r
+5   0x00000398 0x00000398 5   6    .dynstr                ascii   _ae_p
+6   0x0000039e 0x0000039e 7   8    .dynstr                ascii   __errno
+7   0x000003a6 0x000003a6 4   5    .dynstr                ascii   LIBC
+8   0x000003ab 0x000003ab 7   8    .dynstr                ascii   libc.so
+9   0x000003b3 0x000003b3 33  34   .dynstr                ascii   libmmcamera_oxygen_ov12a_sunny.so
+10  0x000003d5 0x000003d5 6   7    .dynstr                ascii   fclose
+11  0x000003dc 0x000003dc 5   6    .dynstr                ascii   fgetc
+12  0x000003e2 0x000003e2 5   6    .dynstr                ascii   fopen
+13  0x000003e8 0x000003e8 5   6    .dynstr                ascii   fread
+14  0x000003ee 0x000003ee 7   8    .dynstr                ascii   strncmp
+15  0x000003f6 0x000003f6 14  15   .dynstr                ascii   __cxa_finalize
+16  0x00000405 0x00000405 12  13   .dynstr                ascii   __cxa_atexit
+17  0x00000412 0x00000412 17  18   .dynstr                ascii   __register_atfork
+18  0x00000424 0x00000424 19  20   .dynstr                ascii   __android_log_print
+19  0x00000438 0x00000438 16  17   .dynstr                ascii   __stack_chk_fail
+20  0x00000449 0x00000449 17  18   .dynstr                ascii   __stack_chk_guard
+21  0x0000045b 0x0000045b 4   5    .dynstr                ascii   atoi
+22  0x00000460 0x00000460 37  38   .dynstr                ascii   oxygen_ov12a_sunny_calculate_exposure
+23  0x00000486 0x00000486 38  39   .dynstr                ascii   oxygen_ov12a_sunny_fill_exposure_array
+24  0x000004ad 0x000004ad 12  13   .dynstr                ascii   property_get
+25  0x000004ba 0x000004ba 15  16   .dynstr                ascii   sensor_open_lib
+26  0x000004ca 0x000004ca 5   6    .dynstr                ascii   abort
+27  0x000004d0 0x000004d0 7   8    .dynstr                ascii   fprintf
+28  0x000004d8 0x000004d8 6   7    .dynstr                ascii   stderr
+29  0x000004df 0x000004df 14  15   .dynstr                ascii   __aeabi_memcpy
+30  0x000004ee 0x000004ee 6   7    .dynstr                ascii   LIBC_N
+31  0x000004f5 0x000004f5 23  24   .dynstr                ascii   __gnu_Unwind_Find_exidx
+32  0x0000050d 0x0000050d 6   7    .dynstr                ascii   dladdr
+33  0x00000514 0x00000514 8   9    .dynstr                ascii   libdl.so
+34  0x0000051d 0x0000051d 14  15   .dynstr                ascii   __snprintf_chk
+35  0x0000052c 0x0000052c 15  16   .dynstr                ascii   __aeabi_memclr8
+36  0x0000053c 0x0000053c 4   5    .dynstr                ascii   _end
+37  0x00000541 0x00000541 6   7    .dynstr                ascii   _edata
+38  0x00000548 0x00000548 11  12   .dynstr                ascii   __bss_start
+39  0x00000554 0x00000554 12  13   .dynstr                ascii   libcutils.so
+40  0x00000561 0x00000561 9   10   .dynstr                ascii   libc++.so
+41  0x0000056b 0x0000056b 7   8    .dynstr                ascii   libm.so
+42  0x00000acf 0x00000ace 4   5    .text                  ascii   \n\b0\e
+43  0x00000b7d 0x00000b7c 4   5    .text                  ascii   F\rF$
+44  0x00000bbb 0x00000bba 7   8    .text                  ascii    yDzD{D
+45  0x00000c19 0x00000c18 5   6    .text                  ascii   |+J+K
+46  0x00000c27 0x00000c26 7   8    .text                  ascii    yDzD{D
+47  0x00000cf4 0x00000cf4 5   7    .text                  utf8    ȀnHxD
+48  0x00000d20 0x00000d20 4   5    .text                  ascii   1`>h
+49  0x00000d55 0x00000d54 5   6    .text                  ascii   F;h6\n
+50  0x00000d66 0x00000d66 4   5    .text                  ascii   X`>h
+51  0x00000d72 0x00000d72 5   6    .text                  ascii   50;h_
+52  0x00000d8a 0x00000d8a 4   5    .text                  ascii   X`;h
+53  0x00000d94 0x00000d94 4   5    .text                  ascii   5`;h
+54  0x00000dae 0x00000dae 4   5    .text                  ascii   X`<h
+55  0x00000dba 0x00000dba 4   5    .text                  ascii   50;h
+56  0x00000df7 0x00000df6 5   6    .text                  ascii   F;h6\n
+57  0x00000e0c 0x00000e0c 6   7    .text                  ascii   \a1X`>h
+58  0x00000e1a 0x00000e1a 5   6    .text                  ascii   50;h_
+59  0x00000e32 0x00000e32 6   8    .text                  utf8    \f ұ!JO
+60  0x00000e50 0x00000e50 4   5    .text                  ascii   60;h
+61  0x00000e89 0x00000e88 5   6    .text                  ascii    \aJ\aK
+62  0x00000e95 0x00000e94 7   8    .text                  ascii    yDzD{D
+63  0x00000ec4 0x00000ec4 8   9    .text                  ascii   !H"IxDyD
+64  0x00000edf 0x00000ede 9   10   .text                  ascii   H1F}DxD*F
+65  0x00000ef7 0x00000ef6 5   6    .text                  ascii   H*FxD
+66  0x00000f17 0x00000f16 5   6    .text                  ascii   2\b1\a*
+67  0x00000f25 0x00000f24 4   6    .text                  utf8    Bؿ\bF
+68  0x00000f2b 0x00000f2a 7   8    .text                  ascii   IyD\b`\rH
+69  0x00000f33 0x00000f32 5   6    .text                  ascii   IxDyD
+70  0x00000f71 0x00000f70 5   6    .text                  ascii   HxDpG
+71  0x00001008 0x00001008 6   7    .text                  ascii    F\r!BF
+72  0x0000102b 0x0000102a 11  15   .text                  utf8    )$܀)6А)OР)@
+73  0x0000106e 0x0000106e 4   5    .text                  ascii    F\r!
+74  0x0000109b 0x0000109a 4   5    .text                  ascii   " Fw
+75  0x000010e4 0x000010e4 4   5    .text                  ascii    FBF
+76  0x00001156 0x00001156 6   7    .text                  ascii    F\r!BF
+77  0x0000117e 0x0000117e 5   6    .text                  ascii   E[--\n
+78  0x0000118c 0x0000118c 4   5    .text                  ascii    " F
+79  0x0000125c 0x0000125c 4   5    .text                  ascii   \b \aI
+80  0x00001262 0x00001262 6   7    .text                  ascii   yD\th\th
+81  0x0000129e 0x0000129e 4   5    .text                  ascii   (F1F
+82  0x000012c2 0x000012c2 4   5    .text                  ascii   (F"F
+83  0x000012eb 0x000012ea 5   6    .text                  ascii   q(F"F
+84  0x00001303 0x00001302 5   6    .text                  ascii   JxDzD
+85  0x00001332 0x00001332 6   7    .text                  ascii   2h F)F
+86  0x0000139f 0x0000139e 5   6    .text                  ascii   JxDzD
+87  0x000013b7 0x000013b6 5   6    .text                  ascii   FIH\rF
+88  0x000013de 0x000013de 4   5    .text                  ascii   @F\r!
+89  0x0000144e 0x0000144e 4   5    .text                  ascii   @F\r!
+90  0x00001476 0x00001476 4   5    .text                  ascii   )F@h
+91  0x0000147d 0x0000147c 5   6    .text                  ascii    @F"F
+92  0x000014a4 0x000014a4 6   7    .text                  ascii   yD\th\th
+93  0x000014be 0x000014be 4   5    .text                  ascii   @F\r!
+94  0x000014d5 0x000014d4 5   6    .text                  ascii   JxDzD
+95  0x0000153a 0x0000153a 6   7    .text                  ascii   yD\th\th
+96  0x0000156d 0x0000156c 4   5    .text                  ascii   F&H\n
+97  0x00001589 0x00001588 5   6    .text                  ascii   `)F0F
+98  0x00001592 0x00001592 4   5    .text                  ascii   iF0F
+99  0x000015ad 0x000015ac 4   5    .text                  ascii   d2F\b
+100 0x000015c0 0x000015c0 4   5    .text                  ascii   0F9F
+101 0x0000161b 0x0000161a 4   5    .text                  ascii   F3H\f
+102 0x0000164e 0x0000164e 5   6    .text                  ascii   "i(FO
+103 0x0000165d 0x0000165c 4   5    .text                  ascii   \n(Fo
+104 0x0000166a 0x0000166a 4   5    .text                  ascii   (FIF
+105 0x0000167f 0x0000167e 4   5    .text                  ascii   d*F\t
+106 0x00001688 0x00001688 4   5    .text                  ascii    e8F
+107 0x000016a5 0x000016a4 5   6    .text                  ascii   JxDzD
+108 0x000016c6 0x000016c6 4   5    .text                  ascii    a(F
+109 0x00001710 0x00001710 4   5    .text                  ascii   (F!F
+110 0x00001721 0x00001720 5   6    .text                  ascii   JxDzD
+111 0x00001740 0x00001740 4   5    .text                  ascii   xD\bK
+112 0x00001750 0x00001750 4   5    .text                  ascii   aFrF
+113 0x0000176c 0x0000176c 9   10   .text                  ascii   \vIyD\th\th\v
+114 0x0000178c 0x0000178c 4   5    .text                  ascii   \th\th
+115 0x000017a8 0x000017a8 9   10   .text                  ascii   \vIyD\th\th\v
+116 0x000017c8 0x000017c8 4   5    .text                  ascii   \th\th
+117 0x0000188d 0x0000188c 9   10   .text                  ascii   F\rHzDxD\b0
+118 0x000018d1 0x000018d0 5   6    .text                  ascii   F0h\rF
+119 0x000018e0 0x000018e0 4   5    .text                  ascii   0h)F
+120 0x000018ff 0x000018fe 5   6    .text                  ascii   F h\rF
+121 0x0000190e 0x0000190e 6   7    .text                  ascii    h)F2F
+122 0x00001933 0x00001932 5   6    .text                  ascii   %Bk F
+123 0x00001939 0x00001938 4   5    .text                  ascii   G(Fp
+124 0x00001943 0x00001942 9   10   .text                  ascii   F0h\rFBi0F
+125 0x00001952 0x00001952 4   5    .text                  ascii   0h)F
+126 0x0000197b 0x0000197a 5   6    .text                  ascii   FBi8F
+127 0x00001986 0x00001986 8   9    .text                  ascii   8h1F*FCF
+128 0x000019a7 0x000019a6 5   6    .text                  ascii   h\tj\bG
+129 0x000019b1 0x000019b0 5   6    .text                  ascii   hJj!F
+130 0x000019df 0x000019de 4   5    .text                  ascii   k\bG!
+131 0x00001a77 0x00001a76 7   8    .text                  ascii   KxDyD{D
+132 0x00001a97 0x00001a96 4   5    .text                  ascii   F\f.\b
+133 0x00001af5 0x00001af4 4   5    .text                  ascii   qDPp
+134 0x00001b03 0x00001b02 7   8    .text                  ascii   KxDyD{D
+135 0x00001b21 0x00001b20 4   5    .text                  ascii   "p(O
+136 0x00001bc9 0x00001bc8 7   8    .text                  ascii   KxDyD{D
+137 0x00001be5 0x00001be4 4   5    .text                  ascii   F\aF&
+138 0x00001c3b 0x00001c3a 4   5    .text                  ascii   qEPO
+139 0x00001c63 0x00001c62 4   5    .text                  ascii   qEPO
+140 0x00001c7b 0x00001c7a 4   5    .text                  ascii   qEPO
+141 0x00001c95 0x00001c94 7   8    .text                  ascii   KxDyD{D
+142 0x00001cc5 0x00001cc4 5   6    .text                  ascii   !Bk F
+143 0x00001d3b 0x00001d3a 7   8    .text                  ascii   FyD\th\th
+144 0x00001d6a 0x00001d6a 4   5    .text                  ascii   0F)F
+145 0x00001d82 0x00001d82 6   7    .text                  ascii   yD\th\th
+146 0x00001de0 0x00001de0 6   7    .text                  ascii   jF F)F
+147 0x00001e29 0x00001e28 7   8    .text                  ascii   F\aIxDyD
+148 0x00001e37 0x00001e36 5   6    .text                  ascii   #rFcF
+149 0x00001e7a 0x00001e7a 5   6    .text                  ascii   \b(\aH\b
+150 0x00001f14 0x00001f14 4   5    .text                  ascii   bh^h
+151 0x00001f2d 0x00001f2c 5   7    .text                  utf8    (~аB|
+152 0x00001f3c 0x00001f3c 5   6    .text                  ascii   (F)FP
+153 0x00001fc6 0x00001fc6 4   5    .text                  ascii   +N~D
+154 0x00001fd2 0x00001fd2 4   5    .text                  ascii   )N~D
+155 0x00002051 0x00002050 7   8    .text                  ascii   KxDyD{D
+156 0x00002061 0x00002060 11  12   .text                  ascii   2\aI\aKxDyD{D
+157 0x000020cf 0x000020ce 5   6    .text                  ascii   \a'Dl\b
+158 0x000021ba 0x000021ba 4   5    .text                  ascii   xDpG
+159 0x00002734 0x00002734 18  19   .rodata                ascii   ro.board.platform=
+160 0x00002747 0x00002747 18  19   .rodata                ascii   /system/build.prop
+161 0x00002768 0x00002768 9   10   .rodata                ascii   mm-camera
+162 0x00002772 0x00002772 86  87   .rodata                ascii   <SENSOR><  LOW> %s: %d: oxygen_ov12a_sunny_fill_exposure_array:frame_length_lines=%d\n\n
+163 0x000027c9 0x000027c9 38  39   .rodata                ascii   oxygen_ov12a_sunny_fill_exposure_array
+164 0x000027f0 0x000027f0 99  100  .rodata                ascii   <SENSOR>< HIGH> %s: %d: OXYGEN_OV12A_SUNNY Requested gain(%f) is lower than the sensor minimum(%f)\n
+165 0x00002854 0x00002854 40  41   .rodata                ascii   oxygen_ov12a_sunny_real_to_register_gain
+166 0x0000287d 0x0000287d 99  100  .rodata                ascii   <SENSOR>< HIGH> %s: %d: OXYGEN_OV12A_SUNNY Requested gain(%d) is lower than the sensor minimum(%f)\n
+167 0x000028e1 0x000028e1 40  41   .rodata                ascii   oxygen_ov12a_sunny_register_to_real_gain
+168 0x0000290a 0x0000290a 27  28   .rodata                ascii   persist.camera.global.debug
+169 0x00002928 0x00002928 27  28   .rodata                ascii   persist.camera.sensor.debug
+170 0x00002944 0x00002944 40  41   .rodata                ascii   void _Unwind_Resume(_Unwind_Exception *)
+171 0x0000296d 0x0000296d 44  45   .rodata                ascii   external/libunwind_llvm/src/Unwind-EHABI.cpp
+172 0x0000299a 0x0000299a 29  30   .rodata                ascii   _Unwind_Resume() can't return
+173 0x000029b8 0x000029b8 125 126  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Set(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+174 0x00002a36 0x00002a36 26  27   .rodata                ascii   unsupported register class
+175 0x00002a51 0x00002a51 117 118  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Pop(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation)
+176 0x00002ac7 0x00002ac7 77  78   .rodata                ascii   _Unwind_Reason_Code unwind_phase2(unw_context_t *, _Unwind_Exception *, bool)
+177 0x00002b15 0x00002b15 98  99   .rodata                ascii   during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+178 0x00002b78 0x00002b78 25  26   .rodata                ascii   libunwind: %s %s:%d - %s\n
+179 0x00002b92 0x00002b92 134 135  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Get_Internal(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+180 0x00002c19 0x00002c19 44  45   .rodata                ascii   external/libunwind_llvm/src/UnwindCursor.hpp
+181 0x00002c46 0x00002c46 51  52   .rodata                ascii   uint32_t libunwind::Registers_arm::getRegister(int)
+182 0x00002c7a 0x00002c7a 41  42   .rodata                ascii   external/libunwind_llvm/src/Registers.hpp
+183 0x00002ca4 0x00002ca4 24  25   .rodata                ascii   unsupported arm register
+184 0x00002cbd 0x00002cbd 57  58   .rodata                ascii   void libunwind::Registers_arm::setRegister(int, uint32_t)
+185 0x00002cf7 0x00002cf7 59  60   .rodata                ascii   unw_fpreg_t libunwind::Registers_arm::getFloatRegister(int)
+186 0x00002d33 0x00002d33 26  27   .rodata                ascii   Unknown ARM float register
+187 0x00002d4e 0x00002d4e 65  66   .rodata                ascii   void libunwind::Registers_arm::setFloatRegister(int, unw_fpreg_t)
+188 0x00002d93 0x00002d93 221 222  .rodata                ascii   bool libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getInfoFromEHABISection(pint_t, const libunwind::UnwindInfoSections &) [A = libunwind::LocalAddressSpace, R = libunwind::Registers_arm]
+189 0x00002e71 0x00002e71 27  28   .rodata                ascii   unknown personality routine
+190 0x00002e8d 0x00002e8d 65  66   .rodata                ascii   index inlined table detected but pr function requires extra words
+191 0x00002fee 0x00002fee 16  17   .rodata                ascii   unknown register
+192 0x00004008 0x00005008 18  19   .data                  ascii   oxygen_ov12a_sunny
+193 0x000041dc 0x000051dc 6   7    .data                  ascii   \b8\n8\f8
+194 0x0000424c 0x0000524c 4   9    .data                  utf16le \b\b\b\b
+195 0x00004256 0x00005256 4   10   .data                  utf16le @@@@
+196 0x0007800f 0x0007900f 4   5    .data                  ascii   \r *_
+197 0x0008ea25 0x00000001 72  73   .comment               ascii   Snapdragon LLVM ARM Compiler 3.8.2 for Android NDK (based on LLVM 3.8.0)
+198 0x0008ea6e 0x0000004a 36  37   .comment               ascii   GCC: (GNU) 4.9 20150123 (prerelease)
+199 0x0008ea93 0x0000006f 60  61   .comment               ascii   Android clang version 3.8.256229  (based on LLVM 3.8.256229)
+200 0x0008eae0 0x00000010 9   10   .note.gnu.gold-version ascii   gold 1.11
+201 0x0008eaf1 0x00000005 5   6    .ARM.attributes        ascii   aeabi
+202 0x0008eafd 0x00000011 6   7    .ARM.attributes        ascii   ARM v7
+203 0x0008eb05 0x00000019 4   5    .ARM.attributes        ascii   \n\aA\b
+204 0x0008eb29 0x00000001 9   10   .shstrtab              ascii   .shstrtab
+205 0x0008eb33 0x0000000b 7   8    .shstrtab              ascii   .interp
+206 0x0008eb3b 0x00000013 19  20   .shstrtab              ascii   .note.android.ident
+207 0x0008eb4f 0x00000027 18  19   .shstrtab              ascii   .note.gnu.build-id
+208 0x0008eb62 0x0000003a 7   8    .shstrtab              ascii   .dynsym
+209 0x0008eb6a 0x00000042 7   8    .shstrtab              ascii   .dynstr
+210 0x0008eb72 0x0000004a 9   10   .shstrtab              ascii   .gnu.hash
+211 0x0008eb7c 0x00000054 12  13   .shstrtab              ascii   .gnu.version
+212 0x0008eb89 0x00000061 14  15   .shstrtab              ascii   .gnu.version_d
+213 0x0008eb98 0x00000070 14  15   .shstrtab              ascii   .gnu.version_r
+214 0x0008eba7 0x0000007f 8   9    .shstrtab              ascii   .rel.dyn
+215 0x0008ebb0 0x00000088 8   9    .shstrtab              ascii   .rel.plt
+216 0x0008ebb9 0x00000091 5   6    .shstrtab              ascii   .text
+217 0x0008ebbf 0x00000097 10  11   .shstrtab              ascii   .ARM.exidx
+218 0x0008ebca 0x000000a2 7   8    .shstrtab              ascii   .rodata
+219 0x0008ebd2 0x000000aa 10  11   .shstrtab              ascii   .ARM.extab
+220 0x0008ebdd 0x000000b5 11  12   .shstrtab              ascii   .init_array
+221 0x0008ebe9 0x000000c1 11  12   .shstrtab              ascii   .fini_array
+222 0x0008ebf5 0x000000cd 12  13   .shstrtab              ascii   .data.rel.ro
+223 0x0008ec02 0x000000da 8   9    .shstrtab              ascii   .dynamic
+224 0x0008ec0b 0x000000e3 4   5    .shstrtab              ascii   .got
+225 0x0008ec10 0x000000e8 5   6    .shstrtab              ascii   .data
+226 0x0008ec16 0x000000ee 4   5    .shstrtab              ascii   .bss
+227 0x0008ec1b 0x000000f3 8   9    .shstrtab              ascii   .comment
+228 0x0008ec24 0x000000fc 22  23   .shstrtab              ascii   .note.gnu.gold-version
+229 0x0008ec3b 0x00000113 15  16   .shstrtab              ascii   .ARM.attributes
+0x00000810    1     12 sym.imp.__errno
+0x00000840    1     12 sym.imp.fclose
+0x00000828    1     12 sym.imp.fgetc
+0x0000081c    1     12 sym.imp.fopen
+0x00000834    1     12 sym.imp.fread
+0x0000084c    1     12 sym.imp.strncmp
+0x00000858    1     12 sym.imp.__cxa_finalize
+0x00000864    1     12 sym.imp.__cxa_atexit
+0x00000870    1     12 sym.imp.__register_atfork
+0x0000087c    1     12 sym.imp.__android_log_print
+0x000008a0    1     12 sym.imp.__stack_chk_fail
+0x00000894    1     12 sym.imp.atoi
+0x00000888    1     12 sym.imp.property_get
+0x000008c4    1     12 sym.imp.abort
+0x000008d0    1     12 sym.imp.fprintf
+0x000008dc    1     12 sym.imp.__aeabi_memcpy
+0x0000090c    1     12 sym.imp.__gnu_Unwind_Find_exidx
+0x000008f4    1     12 sym.imp.dladdr
+0x00000900    1     12 sym.imp.__snprintf_chk
+0x000008e8    1     12 sym.imp.__aeabi_memclr8
+0x00000918    1     52 entry0
+0x00000804    1     12 rsym.__ae_r
+0x00000b74   12    318 sym.oxygen_ov12a_sunny_calculate_exposure
+0x00000cd8   12    458 sym.oxygen_ov12a_sunny_fill_exposure_array
+0x00000954   13    292 sym.__ae_r
+0x00000f70    1      6 sym.sensor_open_lib
+0x00000a94    1     28 entry.fini0
+0x00000ec0    8    136 fcn.00000ec0
+0x000018cc    3     46 fcn.000018cc
+0x000018fa    6     68 fcn.000018fa
+0x000013b0   25    292 fcn.000013b0
+0x00001314   21    132 fcn.00001314
+0x000019dc    1      6 fcn.000019dc
+0x0000196e    3     56 fcn.0000196e
+0x00001734    1     40 fcn.00001734
+0x000019ac    1     30 fcn.000019ac
+0x000019a6    1      6 fcn.000019a6
+0x0000193e    3     48 fcn.0000193e
+0x00001800    1      6 fcn.00001800
+0x00001888    1     60 fcn.00001888
+0x00001da0    5    100 fcn.00001da0
+0x00001610   15    214 fcn.00001610
+0x000019ca    1     18 fcn.000019ca
+0x00001874    3     38 fcn.00001874
+0x00001e20    1     36 fcn.00001e20
+0x00001820   10     72 fcn.00001820
+0x00001830    6    114 fcn.00001830
+0x00001828    1      8 fcn.00001828
+0x00001818    2     12 fcn.00001818
+0x00001e4c    1     72 fcn.00001e4c
+0x00000f7c    5     64 fcn.00000f7c
+0x00000fd0   56    656 fcn.00000fd0
+0x00001ea0   13     88 fcn.00001ea0
+0x00001ef8   23    372 fcn.00001ef8
+0x00002544    1      8 fcn.00002544
+0x0000253c    1      8 fcn.0000253c
+0x0000254c    1      8 fcn.0000254c
+0x00002554    1     68 fcn.00002554
+0x0000221a    1      2 fcn.0000221a
+0x00002434    2    252 fcn.00002434
+0x000025c0    1      8 fcn.000025c0

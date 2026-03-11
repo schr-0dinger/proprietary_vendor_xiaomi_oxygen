@@ -1,0 +1,243 @@
+arch     arm
+baddr    0x0
+binsz    17154
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                     demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+23  0x00001014 0x00001014 GLOBAL FUNC 688      __netmgr_rmnet_ext_init
+24  0x00003410 0x00004410 GLOBAL OBJ  2600     rmnetctl_error_code_text
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x258 0x000002a8   0x258 -r-- DYNSYM      .dynsym
+4   0x00000500    0x32 0x00000500    0x32 -r-- GNU_VERSYM  .gnu.version
+5   0x00000534    0x40 0x00000534    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000578    0x24 0x00000578    0x24 -r-- GNU_HASH    .gnu.hash
+7   0x0000059c   0x231 0x0000059c   0x231 -r-- STRTAB      .dynstr
+8   0x000007d0    0x22 0x000007d0    0x22 -r-- ----        .rela.dyn
+9   0x000007f8    0x10 0x000007f8    0x10 -r-- ----        .relr.dyn
+10  0x00000808   0x1c8 0x00000808   0x1c8 -r-- RELA        .rela.plt
+11  0x000009d0   0x236 0x000009d0   0x236 -r-- PROGBITS    .rodata
+12  0x00000c08    0x64 0x00000c08    0x64 -r-- PROGBITS    .eh_frame_hdr
+13  0x00000c70   0x19c 0x00000c70   0x19c -r-- PROGBITS    .eh_frame
+14  0x00001000  0x16a0 0x00001000  0x16a0 -r-x PROGBITS    .text
+15  0x000026a0   0x150 0x000026a0   0x150 -r-x PROGBITS    .plt
+16  0x00003000    0xf8 0x00003000    0xf8 -rw- PROGBITS    .data.rel.ro
+17  0x000030f8    0x10 0x000030f8    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00003108   0x240 0x00003108   0x240 -rw- DYNAMIC     .dynamic
+19  0x00003348    0x18 0x00003348    0x18 -rw- PROGBITS    .got
+20  0x00003360    0xb0 0x00003360    0xb0 -rw- PROGBITS    .got.plt
+21  0x00003410   0xa28 0x00004410   0xa28 -rw- PROGBITS    .data
+22  0x00003e38     0x0 0x00004e38     0x4 -rw- NOBITS      .bss
+23  0x00003e38    0xf6 0x00000000    0xf6 ---- STRTAB      .shstrtab
+24  0x00003f2e   0x3d4 0x00000000   0x3d4 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00000594 0x00000594 5   6    .gnu.hash           ascii   8/dM5
+3   0x0000059d 0x0000059d 14  15   .dynstr             ascii   __cxa_finalize
+4   0x000005ac 0x000005ac 19  20   .dynstr             ascii   __android_log_print
+5   0x000005c0 0x000005c0 23  24   .dynstr             ascii   __netmgr_rmnet_ext_init
+6   0x000005d8 0x000005d8 16  17   .dynstr             ascii   __stack_chk_fail
+7   0x000005e9 0x000005e9 15  16   .dynstr             ascii   __vsnprintf_chk
+8   0x000005f9 0x000005f9 17  18   .dynstr             ascii   ds_format_log_msg
+9   0x0000060b 0x0000060b 11  12   .dynstr             ascii   ds_log_mask
+10  0x00000617 0x00000617 6   7    .dynstr             ascii   fflush
+11  0x0000061e 0x0000061e 7   8    .dynstr             ascii   fprintf
+12  0x00000626 0x00000626 5   6    .dynstr             ascii   fputc
+13  0x0000062c 0x0000062c 12  13   .dynstr             ascii   gettimeofday
+14  0x00000639 0x00000639 9   10   .dynstr             ascii   localtime
+15  0x00000643 0x00000643 11  12   .dynstr             ascii   log_to_file
+16  0x0000064f 0x0000064f 10  11   .dynstr             ascii   logging_fd
+17  0x0000065a 0x0000065a 11  12   .dynstr             ascii   msg_sprintf
+18  0x00000666 0x00000666 19  20   .dynstr             ascii   netmgr_cb_insert_cb
+19  0x0000067a 0x0000067a 24  25   .dynstr             ascii   rmnetctl_error_code_text
+20  0x00000693 0x00000693 21  22   .dynstr             ascii   rtrmnet_activate_flow
+21  0x000006a9 0x000006a9 18  19   .dynstr             ascii   rtrmnet_ctl_deinit
+22  0x000006bc 0x000006bc 16  17   .dynstr             ascii   rtrmnet_ctl_init
+23  0x000006cd 0x000006cd 19  20   .dynstr             ascii   rtrmnet_delete_flow
+24  0x000006e1 0x000006e1 23  24   .dynstr             ascii   rtrmnet_flow_state_down
+25  0x000006f9 0x000006f9 21  22   .dynstr             ascii   rtrmnet_flow_state_up
+26  0x0000070f 0x0000070f 8   9    .dynstr             ascii   strftime
+27  0x00000718 0x00000718 9   10   .dynstr             ascii   liblog.so
+28  0x00000722 0x00000722 6   7    .dynstr             ascii   LIBLOG
+29  0x00000729 0x00000729 7   8    .dynstr             ascii   libc.so
+30  0x00000731 0x00000731 4   5    .dynstr             ascii   LIBC
+31  0x00000736 0x00000736 13  14   .dynstr             ascii   libdsutils.so
+32  0x00000744 0x00000744 14  15   .dynstr             ascii   libconfigdb.so
+33  0x00000753 0x00000753 10  11   .dynstr             ascii   libdiag.so
+34  0x0000075e 0x0000075e 12  13   .dynstr             ascii   libcutils.so
+35  0x0000076b 0x0000076b 12  13   .dynstr             ascii   libnetmgr.so
+36  0x00000778 0x00000778 19  20   .dynstr             ascii   libnetmgr_common.so
+37  0x0000078c 0x0000078c 14  15   .dynstr             ascii   librmnetctl.so
+38  0x0000079b 0x0000079b 9   10   .dynstr             ascii   libc++.so
+39  0x000007a5 0x000007a5 7   8    .dynstr             ascii   libm.so
+40  0x000007ad 0x000007ad 8   9    .dynstr             ascii   libdl.so
+41  0x000007b6 0x000007b6 22  23   .dynstr             ascii   libnetmgr_rmnet_ext.so
+42  0x000007d0 0x000007d0 4   5    .rela.dyn           ascii   APS2
+43  0x000009d0 0x000009d0 5   6    .rodata             ascii   %s.%u
+44  0x000009d6 0x000009d6 9   10   .rodata             ascii   RMNET_EXT
+45  0x000009e0 0x000009e0 11  12   .rodata             ascii   FLOW_DELETE
+46  0x000009ec 0x000009ec 18  19   .rodata             ascii   %s(): NULL params\n
+47  0x00000a09 0x00000a09 17  18   .rodata             ascii   %s(): null params
+48  0x00000a1b 0x00000a1b 27  28   .rodata             ascii   netmgr_rmnet_ext_ep_closing
+49  0x00000a37 0x00000a37 9   10   .rodata             ascii   EP_OPENED
+50  0x00000a41 0x00000a41 27  28   .rodata             ascii   %s(): done with flags 0x%x\n
+51  0x00000a5d 0x00000a5d 10  11   .rodata             ascii   rmnet_data
+52  0x00000a68 0x00000a68 27  28   .rodata             ascii   netmgr_rmnet_ext_ep_up_down
+53  0x00000a84 0x00000a84 31  32   .rodata             ascii   %s(): Error (%d:%d) on lib init
+54  0x00000aa4 0x00000aa4 28  29   .rodata             ascii   %25s %70s %40s():%3u (HIGH):
+55  0x00000ac1 0x00000ac1 13  14   .rodata             ascii   QC-NETMGR-LIB
+56  0x00000acf 0x00000acf 36  37   .rodata             ascii   %s(): Error (%d:%d) on modem up/down
+57  0x00000af4 0x00000af4 23  24   .rodata             ascii   __netmgr_rmnet_ext_init
+58  0x00000b0c 0x00000b0c 75  76   .rodata             ascii   vendor/qcom/proprietary/data-binary/netmgr_ext/rmnet_ext/netmgr_rmnet_ext.c
+59  0x00000b58 0x00000b58 14  15   .rodata             ascii   %s(): ret = %d
+60  0x00000b67 0x00000b67 13  14   .rodata             ascii   FLOW_ACTIVATE
+61  0x00000b75 0x00000b75 10  11   .rodata             ascii   EP_CLOSING
+62  0x00000b80 0x00000b80 26  27   .rodata             ascii   netmgr_rmnet_ext_ep_opened
+63  0x00000b9b 0x00000b9b 4   5    .rodata             ascii   %s%d
+64  0x00000ba0 0x00000ba0 43  44   .rodata             ascii   %s(): Error (%d:%d) (%d:%d) on flow act/del
+65  0x00000bcc 0x00000bcc 27  28   .rodata             ascii   %25s %70s %40s():%3u (ERR):
+66  0x00000be8 0x00000be8 29  30   .rodata             ascii   netmgr_rmnet_ext_flow_act_del
+67  0x00001873 0x00001873 4   5    .text               ascii   ocl.
+68  0x00001bdb 0x00001bdb 4   5    .text               ascii   oB<+
+69  0x00001c86 0x00001c86 4   5    .text               ascii   @9h\a
+70  0x00001d87 0x00001d87 4   5    .text               ascii   oB`-
+71  0x000021b3 0x000021b3 4   5    .text               ascii   oB$(
+72  0x000022e3 0x000022e3 6   7    .text               ascii   *\b%@)?
+73  0x000024ca 0x000024ca 4   5    .text               ascii   @9h\a
+74  0x000025cb 0x000025cb 4   5    .text               ascii   oB`-
+75  0x00003410 0x00004410 21  22   .data               ascii   ERROR: API succeeded\n
+76  0x00003474 0x00004474 53  54   .data               ascii   ERROR: Unable to allocate the buffer to send message\n
+77  0x000034d8 0x000044d8 56  57   .data               ascii   ERROR: Unable to allocate the buffer to receive message\n
+78  0x0000353c 0x0000453c 44  45   .data               ascii   ERROR: Could not send the message to kernel\n
+79  0x000035a0 0x000045a0 49  50   .data               ascii   ERROR: Unable to receive message from the kernel\n
+80  0x00003604 0x00004604 26  27   .data               ascii   ERROR: Invalid process id\n
+81  0x00003668 0x00004668 36  37   .data               ascii   ERROR: Invalid socket descriptor id\n
+82  0x000036cc 0x000046cc 40  41   .data               ascii   ERROR: Could not bind to netlink socket\n
+83  0x00003730 0x00004730 37  38   .data               ascii   ERROR: Only root can access this API\n
+84  0x00003794 0x00004794 49  50   .data               ascii   ERROR: RmNet handle for the transaction was NULL\n
+85  0x000037f8 0x000047f8 51  52   .data               ascii   ERROR: Request buffer for the transaction was NULL\n
+86  0x0000385c 0x0000485c 52  53   .data               ascii   ERROR: Response buffer for the transaction was NULL\n
+87  0x000038c0 0x000048c0 46  47   .data               ascii   ERROR: Request and response type do not match\n
+88  0x00003924 0x00004924 30  31   .data               ascii   ERROR: Return type is invalid\n
+89  0x00003988 0x00004988 28  29   .data               ascii   ERROR: String was truncated\n
+90  0x000039ec 0x000049ec 29  30   .data               ascii   ERROR: Kernel call succeeded\n
+91  0x00003a50 0x00004a50 39  40   .data               ascii   ERROR: Invalid / Unsupported directive\n
+92  0x00003ab4 0x00004ab4 45  46   .data               ascii   ERROR: Internal problem in the kernel module\n
+93  0x00003b18 0x00004b18 47  48   .data               ascii   ERROR: The kernel is temporarily out of memory\n
+94  0x00003b7c 0x00004b7c 44  45   .data               ascii   ERROR: Device already exists / Still in use\n
+95  0x00003be0 0x00004be0 46  47   .data               ascii   ERROR: Invalid request / Unsupported scenario\n
+96  0x00003c44 0x00004c44 28  29   .data               ascii   ERROR: Device doesn't exist\n
+97  0x00003ca8 0x00004ca8 47  48   .data               ascii   ERROR: One or more of the arguments is invalid\n
+98  0x00003d0c 0x00004d0c 32  33   .data               ascii   ERROR: Egress device is invalid\n
+99  0x00003d70 0x00004d70 25  26   .data               ascii   ERROR: TC handle is full\n
+100 0x00003dd4 0x00004dd4 53  54   .data               ascii   ERROR: Netlink message is too small to hold all data\n
+101 0x00003e39 0x00000001 11  12   .shstrtab           ascii   .fini_array
+102 0x00003e45 0x0000000d 5   6    .shstrtab           ascii   .text
+103 0x00003e4b 0x00000013 4   5    .shstrtab           ascii   .got
+104 0x00003e50 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+105 0x00003e64 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+106 0x00003e6d 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+107 0x00003e77 0x0000003f 4   5    .shstrtab           ascii   .bss
+108 0x00003e7c 0x00000044 7   8    .shstrtab           ascii   .dynstr
+109 0x00003e84 0x0000004c 13  14   .shstrtab           ascii   .eh_frame_hdr
+110 0x00003e92 0x0000005a 14  15   .shstrtab           ascii   .gnu.version_r
+111 0x00003ea1 0x00000069 12  13   .shstrtab           ascii   .data.rel.ro
+112 0x00003eae 0x00000076 9   10   .shstrtab           ascii   .relr.dyn
+113 0x00003eb8 0x00000080 9   10   .shstrtab           ascii   .rela.dyn
+114 0x00003ec2 0x0000008a 12  13   .shstrtab           ascii   .gnu.version
+115 0x00003ecf 0x00000097 7   8    .shstrtab           ascii   .dynsym
+116 0x00003ed7 0x0000009f 9   10   .shstrtab           ascii   .gnu.hash
+117 0x00003ee1 0x000000a9 9   10   .shstrtab           ascii   .eh_frame
+118 0x00003eeb 0x000000b3 18  19   .shstrtab           ascii   .note.gnu.build-id
+119 0x00003efe 0x000000c6 8   9    .shstrtab           ascii   .dynamic
+120 0x00003f07 0x000000cf 9   10   .shstrtab           ascii   .shstrtab
+121 0x00003f11 0x000000d9 7   8    .shstrtab           ascii   .rodata
+122 0x00003f19 0x000000e1 14  15   .shstrtab           ascii   .gnu_debugdata
+123 0x00003f28 0x000000f0 5   6    .shstrtab           ascii   .data
+124 0x00003f2f 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+125 0x00003f73 0x00000045 5   6    .gnu_debugdata      ascii   \rf+(S
+126 0x00003f82 0x00000054 4   5    .gnu_debugdata      ascii   V/%2
+127 0x00003f90 0x00000062 4   5    .gnu_debugdata      ascii   \e\rzP
+128 0x00003fa4 0x00000076 4   5    .gnu_debugdata      ascii   xEL\a
+129 0x00003fda 0x000000ac 5   6    .gnu_debugdata      ascii   kxx&E
+130 0x0000401f 0x000000f1 4   5    .gnu_debugdata      ascii   [R/#
+131 0x00004044 0x00000116 4   5    .gnu_debugdata      ascii   w'M0
+132 0x00004062 0x00000134 4   6    .gnu_debugdata      utf8    >8_ْ
+133 0x000040a3 0x00000175 5   6    .gnu_debugdata      ascii   e5\a!+
+134 0x000040a9 0x0000017b 5   6    .gnu_debugdata      ascii   $PZ8u
+135 0x000040b2 0x00000184 5   6    .gnu_debugdata      ascii   GmNoT
+136 0x000040c7 0x00000199 4   5    .gnu_debugdata      ascii   *.[\v
+137 0x000040f4 0x000001c6 5   6    .gnu_debugdata      ascii   y('f\r
+138 0x0000413b 0x0000020d 5   7    .gnu_debugdata      utf8    \!]Yܲ
+139 0x00004142 0x00000214 6   8    .gnu_debugdata      utf8    'uHL_א
+140 0x00004161 0x00000233 4   5    .gnu_debugdata      ascii   `@bS
+141 0x000041af 0x00000281 9   11   .gnu_debugdata      utf8    | $wň+jWC
+142 0x000041e0 0x000002b2 6   8    .gnu_debugdata      utf8    FϾ~DR\a
+143 0x0000422e 0x00000300 5   7    .gnu_debugdata      utf8    -"ÂUn
+144 0x000042c8 0x0000039a 5   8    .gnu_debugdata      utf8    ƵwC˜\
+145 0x000042e4 0x000003b6 5   6    .gnu_debugdata      ascii   .ziP`
+0x000026c0    1     16 sym.imp.__cxa_finalize
+0x00002760    1     16 sym.imp.__android_log_print
+0x00002770    1     16 sym.imp.__stack_chk_fail
+0x00002780    1     16 sym.imp.__vsnprintf_chk
+0x00002740    1     16 sym.imp.ds_format_log_msg
+0x00002730    1     16 sym.imp.fflush
+0x00002710    1     16 sym.imp.fprintf
+0x00002720    1     16 sym.imp.fputc
+0x000026e0    1     16 sym.imp.gettimeofday
+0x000026f0    1     16 sym.imp.localtime
+0x00002750    1     16 sym.imp.msg_sprintf
+0x000026d0    1     16 sym.imp.netmgr_cb_insert_cb
+0x000027d0    1     16 sym.imp.rtrmnet_activate_flow
+0x000027c0    1     16 sym.imp.rtrmnet_ctl_deinit
+0x00002790    1     16 sym.imp.rtrmnet_ctl_init
+0x000027e0    1     16 sym.imp.rtrmnet_delete_flow
+0x000027b0    1     16 sym.imp.rtrmnet_flow_state_down
+0x000027a0    1     16 sym.imp.rtrmnet_flow_state_up
+0x00002700    1     16 sym.imp.strftime
+0x00001000    1     12 entry0
+0x00001014   14    688 sym.__netmgr_rmnet_ext_init
+0x00001010    1      4 entry.fini0
+0x00001784    3    168 sym.snprintf_char__unsigned_long_pass_object_size1__char_const__::_
+0x0000182c   33   1572 sym.netmgr_rmnet_ext_ep_up_down
+0x00001e50   48   2128 sym.netmgr_rmnet_ext_flow_act_del
+0x000012d4   12    512 fcn.000012d4
+0x000014e4   12    512 fcn.000014e4
+0x000016e4    3     80 sym.netmgr_rmnet_ext_flow_activate
+0x00001734    3     80 sym.netmgr_rmnet_ext_flow_delete
+0x000012c4    1     16 sym.netmgr_rmnet_ext_ep_opened
+0x000014d4    1     16 sym.netmgr_rmnet_ext_ep_closing
+0x000026a0    1     20 section..plt

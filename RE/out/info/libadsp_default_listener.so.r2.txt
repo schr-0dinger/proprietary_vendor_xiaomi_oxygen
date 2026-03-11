@@ -1,0 +1,149 @@
+arch     arm
+baddr    0x0
+binsz    9842
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                        demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+14  0x00001014 0x00001014 GLOBAL FUNC 528      adsp_default_listener_start
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000270   0x18 0x00000270   0x18 -r-- NOTE        .note.android.ident
+2   0x00000288   0x20 0x00000288   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8  0x168 0x000002a8  0x168 -r-- DYNSYM      .dynsym
+4   0x00000410   0x1e 0x00000410   0x1e -r-- GNU_VERSYM  .gnu.version
+5   0x00000430   0x20 0x00000430   0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000450   0x20 0x00000450   0x20 -r-- GNU_HASH    .gnu.hash
+7   0x00000470  0x115 0x00000470  0x115 -r-- STRTAB      .dynstr
+8   0x00000588   0x10 0x00000588   0x10 -r-- ----        .relr.dyn
+9   0x00000598  0x138 0x00000598  0x138 -r-- RELA        .rela.plt
+10  0x000006d0   0x79 0x000006d0   0x79 -r-- PROGBITS    .rodata
+11  0x0000074c   0x4c 0x0000074c   0x4c -r-- PROGBITS    .eh_frame_hdr
+12  0x00000798  0x124 0x00000798  0x124 -r-- PROGBITS    .eh_frame
+13  0x00001000  0x444 0x00001000  0x444 -r-x PROGBITS    .text
+14  0x00001450   0xf0 0x00001450   0xf0 -r-x PROGBITS    .plt
+15  0x00002000    0x8 0x00002000    0x8 -rw- PROGBITS    .data.rel.ro
+16  0x00002008   0x10 0x00002008   0x10 -rw- FINI_ARRAY  .fini_array
+17  0x00002018  0x1b0 0x00002018  0x1b0 -rw- DYNAMIC     .dynamic
+18  0x000021c8   0x80 0x000021c8   0x80 -rw- PROGBITS    .got.plt
+19  0x00002248    0x4 0x00003248    0x4 -rw- PROGBITS    .data
+20  0x0000224c   0xe2 0x00000000   0xe2 ---- STRTAB      .shstrtab
+21  0x0000232e  0x344 0x00000000  0x344 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00000471 0x00000471 14  15   .dynstr             ascii   __cxa_finalize
+3   0x00000480 0x00000480 16  17   .dynstr             ascii   __stack_chk_fail
+4   0x00000491 0x00000491 12  13   .dynstr             ascii   __strlen_chk
+5   0x0000049e 0x0000049e 5   6    .dynstr             ascii   abort
+6   0x000004a4 0x000004a4 27  28   .dynstr             ascii   adsp_default_listener_start
+7   0x000004c0 0x000004c0 12  13   .dynstr             ascii   eventfd_read
+8   0x000004cd 0x000004cd 4   5    .dynstr             ascii   free
+9   0x000004d2 0x000004d2 6   7    .dynstr             ascii   malloc
+10  0x000004d9 0x000004d9 4   5    .dynstr             ascii   poll
+11  0x000004de 0x000004de 18  19   .dynstr             ascii   remote_handle_open
+12  0x000004f1 0x000004f1 6   7    .dynstr             ascii   setenv
+13  0x000004f8 0x000004f8 19  20   .dynstr             ascii   remote_handle_close
+14  0x0000050c 0x0000050c 20  21   .dynstr             ascii   remote_handle_invoke
+15  0x00000521 0x00000521 7   8    .dynstr             ascii   memmove
+16  0x00000529 0x00000529 7   8    .dynstr             ascii   libc.so
+17  0x00000531 0x00000531 4   5    .dynstr             ascii   LIBC
+18  0x00000536 0x00000536 9   10   .dynstr             ascii   liblog.so
+19  0x00000540 0x00000540 13  14   .dynstr             ascii   libadsprpc.so
+20  0x0000054e 0x0000054e 9   10   .dynstr             ascii   libc++.so
+21  0x00000558 0x00000558 7   8    .dynstr             ascii   libm.so
+22  0x00000560 0x00000560 8   9    .dynstr             ascii   libdl.so
+23  0x00000569 0x00000569 27  28   .dynstr             ascii   libadsp_default_listener.so
+24  0x000006d0 0x000006d0 28  29   .rodata             ascii   ADSP_LISTENER_MEM_CACHE_SIZE
+25  0x000006ed 0x000006ed 22  23   .rodata             ascii   '":;./\createstaticpd:
+26  0x00000704 0x00000704 21  22   .rodata             ascii   adsp_default_listener
+27  0x0000071a 0x0000071a 7   8    .rodata             ascii   1048576
+28  0x00000722 0x00000722 20  21   .rodata             ascii   '":;./\attachguestos
+29  0x00000737 0x00000737 17  18   .rodata             ascii   '":;./\geteventfd
+30  0x0000138f 0x0000138f 5   6    .text               ascii   Tijv8
+31  0x0000224d 0x00000001 11  12   .shstrtab           ascii   .fini_array
+32  0x00002259 0x0000000d 5   6    .shstrtab           ascii   .text
+33  0x0000225f 0x00000013 19  20   .shstrtab           ascii   .note.android.ident
+34  0x00002273 0x00000027 8   9    .shstrtab           ascii   .got.plt
+35  0x0000227c 0x00000030 9   10   .shstrtab           ascii   .rela.plt
+36  0x00002286 0x0000003a 7   8    .shstrtab           ascii   .dynstr
+37  0x0000228e 0x00000042 13  14   .shstrtab           ascii   .eh_frame_hdr
+38  0x0000229c 0x00000050 14  15   .shstrtab           ascii   .gnu.version_r
+39  0x000022ab 0x0000005f 12  13   .shstrtab           ascii   .data.rel.ro
+40  0x000022b8 0x0000006c 9   10   .shstrtab           ascii   .relr.dyn
+41  0x000022c2 0x00000076 12  13   .shstrtab           ascii   .gnu.version
+42  0x000022cf 0x00000083 7   8    .shstrtab           ascii   .dynsym
+43  0x000022d7 0x0000008b 9   10   .shstrtab           ascii   .gnu.hash
+44  0x000022e1 0x00000095 9   10   .shstrtab           ascii   .eh_frame
+45  0x000022eb 0x0000009f 18  19   .shstrtab           ascii   .note.gnu.build-id
+46  0x000022fe 0x000000b2 8   9    .shstrtab           ascii   .dynamic
+47  0x00002307 0x000000bb 9   10   .shstrtab           ascii   .shstrtab
+48  0x00002311 0x000000c5 7   8    .shstrtab           ascii   .rodata
+49  0x00002319 0x000000cd 14  15   .shstrtab           ascii   .gnu_debugdata
+50  0x00002328 0x000000dc 5   6    .shstrtab           ascii   .data
+51  0x0000232f 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+52  0x00002362 0x00000034 4   5    .gnu_debugdata      ascii   d\f7_
+53  0x000023e7 0x000000b9 5   6    .gnu_debugdata      ascii   \tLi<\r
+54  0x00002411 0x000000e3 4   5    .gnu_debugdata      ascii   $-\P
+55  0x00002428 0x000000fa 4   5    .gnu_debugdata      ascii   ;`oT
+56  0x0000245e 0x00000130 4   5    .gnu_debugdata      ascii   P M+
+57  0x0000248a 0x0000015c 4   5    .gnu_debugdata      ascii   `3qc
+58  0x000024e4 0x000001b6 6   7    .gnu_debugdata      ascii   _emJNd
+59  0x000024f2 0x000001c4 4   6    .gnu_debugdata      utf8    ><ڣ=
+60  0x000024fc 0x000001ce 4   5    .gnu_debugdata      ascii   x&^~
+61  0x00002513 0x000001e5 4   5    .gnu_debugdata      ascii   w'1_
+62  0x000025c2 0x00000294 4   5    .gnu_debugdata      ascii   /XSI
+63  0x000025e2 0x000002b4 4   5    .gnu_debugdata      ascii   [A]f
+64  0x000025fb 0x000002cd 4   5    .gnu_debugdata      ascii   RCL-
+65  0x00002601 0x000002d3 6   8    .gnu_debugdata      utf8    ӈ{^H\f;
+66  0x00002621 0x000002f3 6   7    .gnu_debugdata      ascii   /?\t\n=S
+0x00001470    1     16 sym.imp.__cxa_finalize
+0x00001500    1     16 sym.imp.__stack_chk_fail
+0x00001480    1     16 sym.imp.__strlen_chk
+0x000014f0    1     16 sym.imp.abort
+0x000014e0    1     16 sym.imp.eventfd_read
+0x000014c0    1     16 sym.imp.free
+0x00001490    1     16 sym.imp.malloc
+0x000014d0    1     16 sym.imp.poll
+0x000014b0    1     16 sym.imp.remote_handle_open
+0x000014a0    1     16 sym.imp.setenv
+0x00001510    1     16 sym.imp.remote_handle_close
+0x00001520    1     16 sym.imp.remote_handle_invoke
+0x00001530    1     16 sym.imp.memmove
+0x00001000    1     12 entry0
+0x00001014   29    528 sym.adsp_default_listener_start
+0x00001010    1      4 entry.fini0
+0x000012fc    3    100 sym.std_strlcpy
+0x00001410    3     52 sym.std_memmove
+0x00001360   10    176 sym.std_strlcat
+0x00001224   14    216 sym.adsp_default_listener_register
+0x00001450    1     20 section..plt

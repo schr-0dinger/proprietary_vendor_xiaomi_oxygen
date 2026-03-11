@@ -1,0 +1,221 @@
+arch     arm
+baddr    0x0
+binsz    10002
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                                                   demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+16  ---------- 0x000032e0 GLOBAL OBJ  672      _ZN14OperatorLookup12IINInfoArrayE                                                                     OperatorLookup::IINInfoArray
+17  0x00001aec 0x00001aec GLOBAL FUNC 576      _ZN14OperatorLookup14lookupOperatorERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE OperatorLookup::lookupOperator(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+18  0x000022c0 0x000032c0 GLOBAL OBJ  8        default_operator
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000270   0x18 0x00000270   0x18 -r-- NOTE        .note.android.ident
+2   0x00000288   0x20 0x00000288   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8  0x1c8 0x000002a8  0x1c8 -r-- DYNSYM      .dynsym
+4   0x00000470   0x26 0x00000470   0x26 -r-- GNU_VERSYM  .gnu.version
+5   0x00000498   0x40 0x00000498   0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x000004d8   0x28 0x000004d8   0x28 -r-- GNU_HASH    .gnu.hash
+7   0x00000500  0x350 0x00000500  0x350 -r-- STRTAB      .dynstr
+8   0x00000850   0x22 0x00000850   0x22 -r-- ----        .rela.dyn
+9   0x00000878   0x18 0x00000878   0x18 -r-- ----        .relr.dyn
+10  0x00000890  0x150 0x00000890  0x150 -r-- RELA        .rela.plt
+11  0x000009e0   0xae 0x000009e0   0xae -r-- PROGBITS    .rodata
+12  0x00000a90   0x3c 0x00000a90   0x3c -r-- PROGBITS    .eh_frame_hdr
+13  0x00000ad0   0xdc 0x00000ad0   0xdc -r-- PROGBITS    .eh_frame
+14  0x00001000  0xd2c 0x00001000  0xd2c -r-x PROGBITS    .text
+15  0x00001d30  0x100 0x00001d30  0x100 -r-x PROGBITS    .plt
+16  0x00002000    0x8 0x00002000    0x8 -rw- PROGBITS    .data.rel.ro
+17  0x00002008   0x10 0x00002008   0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00002018    0x8 0x00002018    0x8 -rw- INIT_ARRAY  .init_array
+19  0x00002020  0x200 0x00002020  0x200 -rw- DYNAMIC     .dynamic
+20  0x00002220   0x18 0x00002220   0x18 -rw- PROGBITS    .got
+21  0x00002238   0x88 0x00002238   0x88 -rw- PROGBITS    .got.plt
+22  0x000022c0    0x8 0x000032c0    0x8 -rw- PROGBITS    .data
+23  0x000022c8    0x0 0x000032c8  0x2b8 -rw- NOBITS      .bss
+24  0x000022c8  0x102 0x00000000  0x102 ---- STRTAB      .shstrtab
+25  0x000023ca  0x348 0x00000000  0x348 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00000501 0x00000501 12  13   .dynstr             ascii   __cxa_atexit
+3   0x0000050e 0x0000050e 14  15   .dynstr             ascii   __cxa_finalize
+4   0x0000051d 0x0000051d 34  35   .dynstr             ascii   _ZN14OperatorLookup12IINInfoArrayE
+5   0x00000540 0x00000540 102 103  .dynstr             ascii   _ZN14OperatorLookup14lookupOperatorERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+6   0x000005a7 0x000005a7 76  77   .dynstr             ascii   _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEPKc
+7   0x000005f4 0x000005f4 78  79   .dynstr             ascii   _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEmmPKc
+8   0x00000643 0x00000643 79  80   .dynstr             ascii   _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEmmPKcm
+9   0x00000693 0x00000693 63  64   .dynstr             ascii   _ZNKSt3__121__basic_string_commonILb1EE20__throw_length_errorEv
+10  0x000006d3 0x000006d3 71  72   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+11  0x0000071b 0x0000071b 67  68   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev
+12  0x0000075f 0x0000075f 71  72   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_
+13  0x000007a7 0x000007a7 6   7    .dynstr             ascii   _ZdlPv
+14  0x000007ae 0x000007ae 5   6    .dynstr             ascii   _Znwm
+15  0x000007b4 0x000007b4 19  20   .dynstr             ascii   __android_log_print
+16  0x000007c8 0x000007c8 16  17   .dynstr             ascii   __stack_chk_fail
+17  0x000007d9 0x000007d9 16  17   .dynstr             ascii   default_operator
+18  0x000007ea 0x000007ea 6   7    .dynstr             ascii   memcpy
+19  0x000007f1 0x000007f1 6   7    .dynstr             ascii   strlen
+20  0x000007f8 0x000007f8 9   10   .dynstr             ascii   liblog.so
+21  0x00000802 0x00000802 6   7    .dynstr             ascii   LIBLOG
+22  0x00000809 0x00000809 7   8    .dynstr             ascii   libc.so
+23  0x00000811 0x00000811 4   5    .dynstr             ascii   LIBC
+24  0x00000816 0x00000816 12  13   .dynstr             ascii   libcutils.so
+25  0x00000823 0x00000823 9   10   .dynstr             ascii   libc++.so
+26  0x0000082d 0x0000082d 7   8    .dynstr             ascii   libm.so
+27  0x00000835 0x00000835 8   9    .dynstr             ascii   libdl.so
+28  0x0000083e 0x0000083e 17  18   .dynstr             ascii   libcneoplookup.so
+29  0x00000850 0x00000850 4   5    .rela.dyn           ascii   APS2
+30  0x000009e0 0x000009e0 59  60   .rodata             ascii   OperatorLookup:  match found for iin [%s] and oper_str [%s]
+31  0x00000a24 0x00000a24 74  75   .rodata             ascii   OperatorLookup: No Match Found for iccid: Returning default operator: [%s]
+32  0x00000a73 0x00000a73 4   5    .rodata             ascii   OEM_
+33  0x00000a78 0x00000a78 21  22   .rodata             ascii    OperatorLookup Enter
+34  0x00001028 0x00001028 6   7    .text               ascii   h"J9H\a
+35  0x00001037 0x00001037 5   6    .text               ascii   7hbI9
+36  0x00001042 0x00001042 4   5    .text               ascii   I9\b\b
+37  0x0000104a 0x0000104a 4   5    .text               ascii   H9H\b
+38  0x0000104f 0x0000104f 5   6    .text               ascii   7hBH9
+39  0x00001062 0x00001062 4   5    .text               ascii   G9\b\t
+40  0x00001067 0x00001067 7   8    .text               ascii   7h"G9H\t
+41  0x00001077 0x00001077 5   6    .text               ascii   7hbF9
+42  0x00001082 0x00001082 4   5    .text               ascii   F9\b\n
+43  0x0000108a 0x0000108a 4   5    .text               ascii   E9H\n
+44  0x0000108f 0x0000108f 5   6    .text               ascii   7hBE9
+45  0x000010a2 0x000010a2 4   5    .text               ascii   D9\b\v
+46  0x000010a7 0x000010a7 7   8    .text               ascii   7h"D9H\v
+47  0x000010b7 0x000010b7 5   6    .text               ascii   7hbC9
+48  0x000010c2 0x000010c2 4   5    .text               ascii   C9\b\f
+49  0x000010ca 0x000010ca 4   5    .text               ascii   B9H\f
+50  0x000010cf 0x000010cf 5   6    .text               ascii   7hBB9
+51  0x000010e2 0x000010e2 4   5    .text               ascii   A9\b\r
+52  0x000010e7 0x000010e7 7   8    .text               ascii   7h"A9H\r
+53  0x000010f7 0x000010f7 5   6    .text               ascii   7hb@9
+54  0x00001122 0x00001122 5   6    .text               ascii   \a6`BA
+55  0x0000112c 0x0000112c 4   5    .text               ascii   hbI9
+56  0x00001132 0x00001132 5   6    .text               ascii   \a6`6A
+57  0x00001142 0x00001142 5   6    .text               ascii   \a6`*A
+58  0x0000115c 0x0000115c 4   5    .text               ascii   hBH9
+59  0x0000118c 0x0000118c 5   6    .text               ascii   h"G9\b
+60  0x000011ac 0x000011ac 4   5    .text               ascii   hbF9
+61  0x000011dc 0x000011dc 4   5    .text               ascii   hBE9
+62  0x0000120c 0x0000120c 5   6    .text               ascii   h"D9\b
+63  0x0000122c 0x0000122c 4   5    .text               ascii   hbC9
+64  0x00001232 0x00001232 5   6    .text               ascii   \a6`v@
+65  0x00001242 0x00001242 5   6    .text               ascii   \a6`j@
+66  0x00001252 0x00001252 5   6    .text               ascii   \a6`^@
+67  0x0000125c 0x0000125c 4   5    .text               ascii   hBB9
+68  0x00001262 0x00001262 5   6    .text               ascii   \a6`R@
+69  0x00001272 0x00001272 5   6    .text               ascii   \a6`F@
+70  0x00001282 0x00001282 5   6    .text               ascii   \a6`:@
+71  0x0000128c 0x0000128c 5   6    .text               ascii   h"A9\b
+72  0x00001292 0x00001292 5   6    .text               ascii   \a6`.@
+73  0x000012a2 0x000012a2 5   6    .text               ascii   \a6`"@
+74  0x000012ac 0x000012ac 4   5    .text               ascii   hb@9
+75  0x000012c2 0x000012c2 5   6    .text               ascii   \a6`\n@
+76  0x00001366 0x00001366 4   5    .text               ascii   \rx\b'
+77  0x00001664 0x00001664 4   6    .text               utf8    (ƆR`
+78  0x00001805 0x00001805 5   6    .text               ascii   #@9h\t
+79  0x0000181d 0x0000181d 5   6    .text               ascii   CA9(\n
+80  0x00001826 0x00001826 4   5    .text               ascii   A9h\n
+81  0x0000183e 0x0000183e 4   5    .text               ascii   B9(\v
+82  0x00001845 0x00001845 5   6    .text               ascii   #C9h\v
+83  0x0000185d 0x0000185d 5   6    .text               ascii   CD9(\f
+84  0x00001866 0x00001866 4   5    .text               ascii   D9h\f
+85  0x0000187e 0x0000187e 4   5    .text               ascii   E9(\r
+86  0x00001885 0x00001885 5   6    .text               ascii   #F9h\r
+87  0x0000195d 0x0000195d 4   5    .text               ascii   CA9(
+88  0x0000198d 0x0000198d 4   5    .text               ascii   cB9h
+89  0x000019dd 0x000019dd 4   5    .text               ascii   CD9(
+90  0x00001a0d 0x00001a0d 4   5    .text               ascii   cE9h
+91  0x00001b40 0x00001b40 5   6    .text               ascii   (a@9h
+92  0x00001bf9 0x00001bf9 4   5    .text               ascii   b@9H
+93  0x000022c9 0x00000001 11  12   .shstrtab           ascii   .init_array
+94  0x000022d5 0x0000000d 11  12   .shstrtab           ascii   .fini_array
+95  0x000022e1 0x00000019 5   6    .shstrtab           ascii   .text
+96  0x000022e7 0x0000001f 4   5    .shstrtab           ascii   .got
+97  0x000022ec 0x00000024 19  20   .shstrtab           ascii   .note.android.ident
+98  0x00002300 0x00000038 8   9    .shstrtab           ascii   .got.plt
+99  0x00002309 0x00000041 9   10   .shstrtab           ascii   .rela.plt
+100 0x00002313 0x0000004b 4   5    .shstrtab           ascii   .bss
+101 0x00002318 0x00000050 7   8    .shstrtab           ascii   .dynstr
+102 0x00002320 0x00000058 13  14   .shstrtab           ascii   .eh_frame_hdr
+103 0x0000232e 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+104 0x0000233d 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+105 0x0000234a 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+106 0x00002354 0x0000008c 9   10   .shstrtab           ascii   .rela.dyn
+107 0x0000235e 0x00000096 12  13   .shstrtab           ascii   .gnu.version
+108 0x0000236b 0x000000a3 7   8    .shstrtab           ascii   .dynsym
+109 0x00002373 0x000000ab 9   10   .shstrtab           ascii   .gnu.hash
+110 0x0000237d 0x000000b5 9   10   .shstrtab           ascii   .eh_frame
+111 0x00002387 0x000000bf 18  19   .shstrtab           ascii   .note.gnu.build-id
+112 0x0000239a 0x000000d2 8   9    .shstrtab           ascii   .dynamic
+113 0x000023a3 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+114 0x000023ad 0x000000e5 7   8    .shstrtab           ascii   .rodata
+115 0x000023b5 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+116 0x000023c4 0x000000fc 5   6    .shstrtab           ascii   .data
+117 0x000023cb 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+118 0x0000240e 0x00000044 4   5    .gnu_debugdata      ascii   QA%J
+119 0x00002431 0x00000067 4   6    .gnu_debugdata      utf8    ɥ"DB
+120 0x00002485 0x000000bb 4   5    .gnu_debugdata      ascii   x|&G
+121 0x000024a5 0x000000db 5   7    .gnu_debugdata      utf8    ?r4~̸
+122 0x00002531 0x00000167 6   9    .gnu_debugdata      utf8    xO3jZን
+123 0x0000254a 0x00000180 4   5    .gnu_debugdata      ascii   I}tU
+124 0x00002561 0x00000197 4   5    .gnu_debugdata      ascii   Z(hr
+125 0x00002598 0x000001ce 4   5    .gnu_debugdata      ascii   3$Z\v
+126 0x000025aa 0x000001e0 7   8    .gnu_debugdata      ascii   0]\ah8\v%
+127 0x000025cc 0x00000202 4   5    .gnu_debugdata      ascii   [7Wa
+128 0x000025f7 0x0000022d 5   6    .gnu_debugdata      ascii   "Uk%;
+129 0x00002612 0x00000248 5   6    .gnu_debugdata      ascii   lr4!1
+130 0x00002618 0x0000024e 4   5    .gnu_debugdata      ascii   ^{.u
+131 0x0000266a 0x000002a0 5   6    .gnu_debugdata      ascii   J|]$\a
+132 0x00002670 0x000002a6 7   8    .gnu_debugdata      ascii   yW!q \eL
+133 0x000026b3 0x000002e9 4   6    .gnu_debugdata      utf8    &6Gߌ
+0x00001d70    1     16 sym.imp.__cxa_atexit
+0x00001d50    1     16 sym.imp.__cxa_finalize
+0x00001da0    1     16 sym.imp.__android_log_print
+0x00001d90    1     16 sym.imp.__stack_chk_fail
+0x00001e10    1     16 sym.imp.memcpy
+0x00001dc0    1     16 sym.imp.strlen
+0x00001000    1     12 entry0
+0x00001aec   26    576 method.OperatorLookup.lookupOperator_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00001de0    1     16 sym.imp.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___::compare_char_const__const
+0x00001df0    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.compare_unsigned_long__unsigned_long__char_const__const
+0x00001db0    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.compare_unsigned_long__unsigned_long__char_const__unsigned_long__const
+0x00001e20    1     16 sym.imp.std::__1::__basic_string_common_true_::__throw_length_error___const
+0x00001dd0    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.basic_string_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00001d80    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.operator_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00001d60    1     16 sym.imp.operator_delete_void_
+0x00001e00    1     16 sym.imp.operator_new_unsigned_long_
+0x00001010    1      4 entry.fini0
+0x000012d4   60   2072 entry.init0
+0x00001014   57    704 sym.__cxx_global_array_dtor
+0x00001d30    1     20 section..plt

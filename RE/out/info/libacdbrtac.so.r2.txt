@@ -1,0 +1,542 @@
+arch     arm
+baddr    0x0
+binsz    17084
+bintype  elf
+bits     16
+canary   false
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                            demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+11  0x00001644 0x00002644 GLOBAL FUNC 68       get_adm_info
+12  0x0000262c 0x0000362c GLOBAL FUNC 768      get_rtac
+13  0x00001d08 0x00002d08 GLOBAL FUNC 180      get_voc_topology
+14  0x00001f24 0x00002f24 GLOBAL FUNC 160      get_voc_vc_devices
+15  0x000021dc 0x000031dc GLOBAL FUNC 84       pack_afe_set_instance_rtac_data
+16  0x000023f0 0x000033f0 GLOBAL FUNC 156      pack_afe_sidetone_instance_set_rtac_enable_data
+17  0x00002114 0x00003114 GLOBAL FUNC 60       pack_audio_set_rtac_data
+18  0x00001968 0x00002968 GLOBAL FUNC 152      get_aud_device
+19  0x00001e6c 0x00002e6c GLOBAL FUNC 184      get_voc_afe_port_id_v2
+20  0x00002034 0x00003034 GLOBAL FUNC 48       pack_afe_get_rtac_data
+21  0x00002150 0x00003150 GLOBAL FUNC 60       pack_audio_set_instance_rtac_data
+22  0x000024c8 0x000034c8 GLOBAL FUNC 60       pack_voice_set_instance_rtac_data
+23  0x00002554 0x00003554 GLOBAL FUNC 216      send_get_rtac
+24  0x000037ac 0x000047ac GLOBAL FUNC 60       acdb_rtac_exit
+25  0x00003738 0x00004738 GLOBAL FUNC 116      acdb_rtac_init
+26  0x00001688 0x00002688 GLOBAL FUNC 164      get_audio_copp_id
+27  0x00001bd0 0x00002bd0 GLOBAL FUNC 132      get_voc_streams
+28  0x00001a00 0x00002a00 GLOBAL FUNC 276      get_aud_streams
+29  0x0000218c 0x0000318c GLOBAL FUNC 80       pack_afe_set_rtac_data
+30  0x0000248c 0x0000348c GLOBAL FUNC 60       pack_voice_set_rtac_data
+31  0x000018d4 0x000028d4 GLOBAL FUNC 148      get_aud_topology
+32  0x0000172c 0x0000272c GLOBAL FUNC 352      get_audio_popp_id
+33  0x00002064 0x00003064 GLOBAL FUNC 56       pack_afe_get_instance_rtac_data
+34  0x000022c0 0x000032c0 GLOBAL FUNC 140      pack_afe_sidetone_instance_set_rtac_gain_data
+35  0x00002350 0x00003350 GLOBAL FUNC 156      pack_afe_sidetone_set_rtac_enable_data
+36  0x00001b14 0x00002b14 GLOBAL FUNC 188      get_aud_afe_port_id
+37  0x00001dbc 0x00002dbc GLOBAL FUNC 176      get_voc_afe_port_id
+38  0x00002230 0x00003230 GLOBAL FUNC 140      pack_afe_sidetone_set_rtac_gain_data
+39  0x00001ff4 0x00002ff4 GLOBAL FUNC 64       pack_audio_get_instance_rtac_data
+40  0x000020d0 0x000030d0 GLOBAL FUNC 68       pack_voice_get_instance_rtac_data
+41  0x0000209c 0x0000309c GLOBAL FUNC 52       pack_voice_get_rtac_data
+42  0x00002504 0x00003504 GLOBAL FUNC 80       send_rtac
+43  0x0000292c 0x0000392c GLOBAL FUNC 616      set_rtac
+44  0x00001c54 0x00002c54 GLOBAL FUNC 180      get_voc_copp_handles
+45  0x00001fc4 0x00002fc4 GLOBAL FUNC 48       pack_audio_get_rtac_data
+46  0x00002ba0 0x00003ba0 GLOBAL FUNC 2968     acdb_rtac_callback
+47  0x0000188c 0x0000288c GLOBAL FUNC 72       get_voice_info
+[Sections]
+
+nth paddr         size vaddr         vsize perm type        name
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000      0x0 ---- NULL
+1   0x00000174    0x18 0x00000174     0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c    0x20 0x0000018c     0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0x300 0x000001ac    0x300 -r-- DYNSYM      .dynsym
+4   0x000004ac    0x60 0x000004ac     0x60 -r-- GNU_VERSYM  .gnu.version
+5   0x0000050c    0x40 0x0000050c     0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x0000054c   0x108 0x0000054c    0x108 -r-- GNU_HASH    .gnu.hash
+7   0x00000654   0x448 0x00000654    0x448 -r-- STRTAB      .dynstr
+8   0x00000a9c     0xe 0x00000a9c      0xe -r-- ----        .rel.dyn
+9   0x00000aac     0x8 0x00000aac      0x8 -r-- ----        .relr.dyn
+10  0x00000ab4    0xf0 0x00000ab4     0xf0 -r-- ----        .ARM.exidx
+11  0x00000ba4    0xc8 0x00000ba4     0xc8 -r-- REL         .rel.plt
+12  0x00000c6c     0xc 0x00000c6c      0xc -r-- PROGBITS    .ARM.extab
+13  0x00000c78   0x9ad 0x00000c78    0x9ad -r-- PROGBITS    .rodata
+14  0x00001630  0x2270 0x00002630   0x2270 -r-x PROGBITS    .text
+15  0x000038a0   0x1b0 0x000048a0    0x1b0 -r-x PROGBITS    .plt
+16  0x00003a50     0x4 0x00005a50      0x4 -rw- PROGBITS    .data.rel.ro
+17  0x00003a54     0x8 0x00005a54      0x8 -rw- FINI_ARRAY  .fini_array
+18  0x00003a5c   0x100 0x00005a5c    0x100 -rw- DYNAMIC     .dynamic
+19  0x00003b5c     0x4 0x00005b5c      0x4 -rw- PROGBITS    .got
+20  0x00003b60    0x70 0x00005b60     0x70 -rw- PROGBITS    .got.plt
+21  0x00003bd0     0x4 0x00006bd0      0x4 -rw- PROGBITS    .data
+22  0x00003bd4     0x0 0x00006bd8  0x1e798 -rw- NOBITS      .bss
+23  0x00003bd4    0x4e 0x00000000     0x4e ---- ----        .ARM.attributes
+24  0x00003c22   0x102 0x00000000    0x102 ---- STRTAB      .shstrtab
+25  0x00003d24   0x598 0x00000000    0x598 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x000000f6 0x000000f6 4   5                        ascii   tdP:
+3   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+4   0x000005b0 0x000005b0 4   20   .gnu.hash           utf32le !$,.
+5   0x000005dc 0x000005dc 4   6    .gnu.hash           utf8    L݇o.
+6   0x000005ec 0x000005ec 4   6    .gnu.hash           utf8    zmpƗ
+7   0x00000608 0x00000608 4   5    .gnu.hash           ascii   \wT>
+8   0x00000617 0x00000617 4   5    .gnu.hash           ascii   pD]#
+9   0x0000064c 0x0000064c 4   5    .gnu.hash           ascii   D]G\a
+10  0x00000655 0x00000655 14  15   .dynstr             ascii   __cxa_finalize
+11  0x00000664 0x00000664 19  20   .dynstr             ascii   __android_log_print
+12  0x00000678 0x00000678 7   8    .dynstr             ascii   __errno
+13  0x00000680 0x00000680 12  13   .dynstr             ascii   __memcpy_chk
+14  0x0000068d 0x0000068d 8   9    .dynstr             ascii   __open_2
+15  0x00000696 0x00000696 18  19   .dynstr             ascii   acdb_rtac_callback
+16  0x000006a9 0x000006a9 14  15   .dynstr             ascii   acdb_rtac_exit
+17  0x000006b8 0x000006b8 14  15   .dynstr             ascii   acdb_rtac_init
+18  0x000006c7 0x000006c7 23  24   .dynstr             ascii   acph_deregister_command
+19  0x000006df 0x000006df 21  22   .dynstr             ascii   acph_register_command
+20  0x000006f5 0x000006f5 5   6    .dynstr             ascii   close
+21  0x000006fb 0x000006fb 12  13   .dynstr             ascii   get_adm_info
+22  0x00000708 0x00000708 19  20   .dynstr             ascii   get_aud_afe_port_id
+23  0x0000071c 0x0000071c 14  15   .dynstr             ascii   get_aud_device
+24  0x0000072b 0x0000072b 15  16   .dynstr             ascii   get_aud_streams
+25  0x0000073b 0x0000073b 16  17   .dynstr             ascii   get_aud_topology
+26  0x0000074c 0x0000074c 17  18   .dynstr             ascii   get_audio_copp_id
+27  0x0000075e 0x0000075e 17  18   .dynstr             ascii   get_audio_popp_id
+28  0x00000770 0x00000770 8   9    .dynstr             ascii   get_rtac
+29  0x00000779 0x00000779 19  20   .dynstr             ascii   get_voc_afe_port_id
+30  0x0000078d 0x0000078d 22  23   .dynstr             ascii   get_voc_afe_port_id_v2
+31  0x000007a4 0x000007a4 20  21   .dynstr             ascii   get_voc_copp_handles
+32  0x000007b9 0x000007b9 15  16   .dynstr             ascii   get_voc_streams
+33  0x000007c9 0x000007c9 16  17   .dynstr             ascii   get_voc_topology
+34  0x000007da 0x000007da 18  19   .dynstr             ascii   get_voc_vc_devices
+35  0x000007ed 0x000007ed 14  15   .dynstr             ascii   get_voice_info
+36  0x000007fc 0x000007fc 5   6    .dynstr             ascii   ioctl
+37  0x00000802 0x00000802 31  32   .dynstr             ascii   pack_afe_get_instance_rtac_data
+38  0x00000822 0x00000822 22  23   .dynstr             ascii   pack_afe_get_rtac_data
+39  0x00000839 0x00000839 31  32   .dynstr             ascii   pack_afe_set_instance_rtac_data
+40  0x00000859 0x00000859 22  23   .dynstr             ascii   pack_afe_set_rtac_data
+41  0x00000870 0x00000870 47  48   .dynstr             ascii   pack_afe_sidetone_instance_set_rtac_enable_data
+42  0x000008a0 0x000008a0 45  46   .dynstr             ascii   pack_afe_sidetone_instance_set_rtac_gain_data
+43  0x000008ce 0x000008ce 38  39   .dynstr             ascii   pack_afe_sidetone_set_rtac_enable_data
+44  0x000008f5 0x000008f5 36  37   .dynstr             ascii   pack_afe_sidetone_set_rtac_gain_data
+45  0x0000091a 0x0000091a 33  34   .dynstr             ascii   pack_audio_get_instance_rtac_data
+46  0x0000093c 0x0000093c 24  25   .dynstr             ascii   pack_audio_get_rtac_data
+47  0x00000955 0x00000955 33  34   .dynstr             ascii   pack_audio_set_instance_rtac_data
+48  0x00000977 0x00000977 24  25   .dynstr             ascii   pack_audio_set_rtac_data
+49  0x00000990 0x00000990 33  34   .dynstr             ascii   pack_voice_get_instance_rtac_data
+50  0x000009b2 0x000009b2 24  25   .dynstr             ascii   pack_voice_get_rtac_data
+51  0x000009cb 0x000009cb 33  34   .dynstr             ascii   pack_voice_set_instance_rtac_data
+52  0x000009ed 0x000009ed 24  25   .dynstr             ascii   pack_voice_set_rtac_data
+53  0x00000a06 0x00000a06 13  14   .dynstr             ascii   send_get_rtac
+54  0x00000a14 0x00000a14 9   10   .dynstr             ascii   send_rtac
+55  0x00000a1e 0x00000a1e 8   9    .dynstr             ascii   set_rtac
+56  0x00000a27 0x00000a27 6   7    .dynstr             ascii   memcpy
+57  0x00000a2e 0x00000a2e 9   10   .dynstr             ascii   liblog.so
+58  0x00000a38 0x00000a38 6   7    .dynstr             ascii   LIBLOG
+59  0x00000a3f 0x00000a3f 7   8    .dynstr             ascii   libc.so
+60  0x00000a47 0x00000a47 4   5    .dynstr             ascii   LIBC
+61  0x00000a4c 0x00000a4c 12  13   .dynstr             ascii   libcutils.so
+62  0x00000a59 0x00000a59 11  12   .dynstr             ascii   libutils.so
+63  0x00000a65 0x00000a65 12  13   .dynstr             ascii   libaudcal.so
+64  0x00000a72 0x00000a72 9   10   .dynstr             ascii   libc++.so
+65  0x00000a7c 0x00000a7c 7   8    .dynstr             ascii   libm.so
+66  0x00000a84 0x00000a84 8   9    .dynstr             ascii   libdl.so
+67  0x00000a8d 0x00000a8d 14  15   .dynstr             ascii   libacdbrtac.so
+68  0x00000a9c 0x00000a9c 4   5    .rel.dyn            ascii   APS2
+69  0x00000c78 0x00000c78 47  48   .rodata             ascii   ACDB RTAC -> ERROR: ioctl not recognized: 0x%x\n
+70  0x00000ca8 0x00000ca8 38  39   .rodata             ascii   %s,Rx port ID:0x%x,Gain to be set:0x%x
+71  0x00000ccf 0x00000ccf 87  88   .rodata             ascii   ACDB RTAC -> ERROR: get_voc_copp_handles, popp 0x%x does not match 0x%x in rtac driver\n
+72  0x00000d27 0x00000d27 70  71   .rodata             ascii   ACDB RTAC -> Error: set_rtac, ADSP_CVS_SERVICE handle 0x%x not found!\n
+73  0x00000d6e 0x00000d6e 45  46   .rodata             ascii   ACDB RTAC -> acph register failed error = %d\n
+74  0x00000d9c 0x00000d9c 21  22   .rodata             ascii   set_afe_sidetone_rtac
+75  0x00000db2 0x00000db2 25  26   .rodata             ascii   [%s] topo 0x%x, app 0x%x\n
+76  0x00000dcc 0x00000dcc 70  71   .rodata             ascii   ACDB RTAC -> Error: get_rtac, ADSP_ADM_SERVICE handle 0x%x not found!\n
+77  0x00000e13 0x00000e13 13  14   .rodata             ascii   /dev/msm_rtac
+78  0x00000e21 0x00000e21 89  90   .rodata             ascii   ACDB RTAC -> ERROR: get_voc_afe_port_id_v2, copp 0x%x does not match 0x%x in rtac driver\n
+79  0x00000e7b 0x00000e7b 17  18   .rodata             ascii   get_audio_popp_id
+80  0x00000e8d 0x00000e8d 60  61   .rodata             ascii   ACDB RTAC -> ERROR: get_rtac buffer size of %d is too small\n
+81  0x00000eca 0x00000eca 54  55   .rodata             ascii   ACDB RTAC -> ERROR: AUDIO_GET_RTAC_ADM_INFO errno: %d\n
+82  0x00000f01 0x00000f01 15  16   .rodata             ascii   [%s] acdb 0x%x\n
+83  0x00000f11 0x00000f11 45  46   .rodata             ascii   pack_afe_sidetone_instance_set_rtac_gain_data
+84  0x00000f3f 0x00000f3f 64  65   .rodata             ascii   [%s] finding active popp id failed, apptype %d, acdb %d, topo %d
+85  0x00000f80 0x00000f80 70  71   .rodata             ascii   ACDB RTAC -> Error: set_rtac, ADSP_ASM_SERVICE handle 0x%x not found!\n
+86  0x00000fc7 0x00000fc7 56  57   .rodata             ascii   ACDB RTAC -> ERROR: AUDIO_GET_RTAC_VOICE_INFO errno: %d\n
+87  0x00001000 0x00001000 70  71   .rodata             ascii   ACDB RTAC -> Error: get_rtac, ADSP_CVS_SERVICE handle 0x%x not found!\n
+88  0x00001047 0x00001047 29  30   .rodata             ascii   %s,Rx port ID:0x%x, Enable:%d
+89  0x00001065 0x00001065 36  37   .rodata             ascii   pack_afe_sidetone_set_rtac_gain_data
+90  0x0000108a 0x0000108a 70  71   .rodata             ascii   ACDB RTAC -> Error: set_rtac, ADSP_CVP_SERVICE handle 0x%x not found!\n
+91  0x000010d1 0x000010d1 75  76   .rodata             ascii   ACDB RTAC -> ERROR: acdb_rtac_exit, acph_deregister_command failed err =%d\n
+92  0x0000111d 0x0000111d 39  40   .rodata             ascii   %s -> Error: AFE port ID %d not found!\n
+93  0x00001145 0x00001145 59  60   .rodata             ascii   %s Error: set_afe_sidetone_rtac, AFE port ID %d not found!\n
+94  0x00001181 0x00001181 60  61   .rodata             ascii   ACDB RTAC -> Error: get_afe_rtac, AFE port ID %d not found!\n
+95  0x000011be 0x000011be 86  87   .rodata             ascii   ACDB RTAC -> ERROR: get_voc_afe_port_id, copp 0x%x does not match 0x%x in rtac driver\n
+96  0x00001215 0x00001215 63  64   .rodata             ascii   ACDB RTAC -> ERROR: send_rtac opcode 0x%x, port 0x%x errno: %d\n
+97  0x00001255 0x00001255 54  55   .rodata             ascii   ACDB RTAC -> Error: get_rtac, unrecognized service %d\n
+98  0x0000128c 0x0000128c 60  61   .rodata             ascii   ACDB RTAC -> Error: set_afe_rtac, AFE port ID %d not found!\n
+99  0x000012c9 0x000012c9 69  70   .rodata             ascii   ACDB RTAC -> ERROR: %s, copp 0x%x does not match 0x%x in rtac driver\n
+100 0x0000130f 0x0000130f 36  37   .rodata             ascii   Cannot open /dev/msm_rtac errno: %d\n
+101 0x00001334 0x00001334 47  48   .rodata             ascii   pack_afe_sidetone_instance_set_rtac_enable_data
+102 0x00001364 0x00001364 79  80   .rodata             ascii   ACDB RTAC -> ERROR: send_get_rtac bytes filled = %d greater than buf_size = %d\n
+103 0x000013b4 0x000013b4 54  55   .rodata             ascii   ACDB RTAC -> Error: set_rtac, unrecognized service %d\n
+104 0x000013eb 0x000013eb 19  20   .rodata             ascii   get_aud_afe_port_id
+105 0x000013ff 0x000013ff 83  84   .rodata             ascii   ACDB RTAC -> ERROR: get_voc_topology, copp 0x%x does not match 0x%x in rtac driver\n
+106 0x00001453 0x00001453 38  39   .rodata             ascii   pack_afe_sidetone_set_rtac_enable_data
+107 0x0000147a 0x0000147a 106 107  .rodata             ascii   ACDB RTAC -> ERROR: Either cvp handle (0x%x) do not match in rtac driver or there is no active voice call.
+108 0x000014e5 0x000014e5 70  71   .rodata             ascii   ACDB RTAC -> Error: get_rtac, ADSP_CVP_SERVICE handle 0x%x not found!\n
+109 0x0000152c 0x0000152c 53  54   .rodata             ascii   %s sidetone_rsp.gain = 0x%x sidetone_rsp.enable = %d\n
+110 0x00001562 0x00001562 70  71   .rodata             ascii   ACDB RTAC -> Error: set_rtac, ADSP_ADM_SERVICE handle 0x%x not found!\n
+111 0x000015a9 0x000015a9 70  71   .rodata             ascii   ACDB RTAC -> Error: get_rtac, ADSP_ASM_SERVICE handle 0x%x not found!\n
+112 0x000015f0 0x000015f0 30  31   .rodata             ascii   %s ERROR param id=0x%x ret=%d\n
+113 0x0000160f 0x0000160f 21  22   .rodata             ascii   get_afe_sidetone_rtac
+114 0x00001653 0x00002652 5   6    .text               ascii   h\nJzD
+115 0x0000168e 0x0000268e 4   5    .text               ascii   \aF#H
+116 0x000016a5 0x000026a4 5   6    .text               ascii   L|D"F
+117 0x00001747 0x00002746 7   8    .text               ascii   hIL|D"F
+118 0x00001772 0x00002772 4   5    .text               ascii   AHxD
+119 0x00001778 0x00002778 4   5    .text               ascii   @OAM
+120 0x0000177f 0x0000277e 4   5    .text               ascii   D}D\b
+121 0x0000178b 0x0000278a 4   5    .text               ascii   \t|0\a
+122 0x000017db 0x000027da 7   8    .text               ascii   \f!h*F;F
+123 0x00001857 0x00002856 9   10   .text               ascii    \nJ\vKzD{D
+124 0x00001893 0x00002892 6   7    .text               ascii   h\rIyD\n
+125 0x000018eb 0x000028ea 5   6    .text               ascii   N~D2F
+126 0x00001910 0x00002910 9   11   .text               utf8    \v 1h)`1hѱ
+127 0x00001937 0x00002936 11  12   .text               ascii   h'aWh|2ga7h
+128 0x0000197f 0x0000297e 5   6    .text               ascii   N~D2F
+129 0x000019a4 0x000029a4 8   9    .text               ascii   \v 1h)`1h
+130 0x000019bd 0x000029bc 4   5    .text               ascii   3g`R
+131 0x000019cf 0x000029ce 7   8    .text               ascii   hgaWh|2
+132 0x00001a09 0x00002a08 4   5    .text               ascii   F\rFF
+133 0x00001a19 0x00002a18 7   8    .text               ascii   h<L|D"F
+134 0x00001a57 0x00002a56 5   7    .text               utf8    .LРFO
+135 0x00001a69 0x00002a68 4   5    .text               ascii   `AF\f
+136 0x00001a7b 0x00002a7a 4   5    .text               ascii   0BF\b
+137 0x00001ae2 0x00002ae2 4   5    .text               ascii   Q`yj
+138 0x00001b1b 0x00002b1a 6   7    .text               ascii   F'H\rFF
+139 0x00001b2d 0x00002b2c 7   8    .text               ascii   h$N~D2F
+140 0x00001b53 0x00002b52 4   6    .text               utf8    B"УB
+141 0x00001b7a 0x00002b7a 4   5    .text               ascii   \v\t0h
+142 0x00001b93 0x00002b92 5   6    .text               ascii   KzD{D
+143 0x00001ba9 0x00002ba8 5   6    .text               ascii   hh`\b
+144 0x00001be7 0x00002be6 4   5    .text               ascii   N~D2
+145 0x00001c0c 0x00002c0c 8   9    .text               ascii   \f qh)`qh
+146 0x00001c20 0x00002c20 5   6    .text               ascii   lP\b12
+147 0x00001c5a 0x00002c5a 7   8    .text               ascii   \aF&H\rFF
+148 0x00001c6d 0x00002c6c 6   7    .text               ascii   h#L|D"
+149 0x00001cba 0x00002cba 4   5    .text               ascii   \f\t`h
+150 0x00001ccd 0x00002ccc 5   6    .text               ascii   '\rJzD
+151 0x00001cd7 0x00002cd6 4   5    .text               ascii    (`\a
+152 0x00001d0e 0x00002d0e 7   8    .text               ascii   \aF&H\rFF
+153 0x00001d21 0x00002d20 6   7    .text               ascii   h#L|D"
+154 0x00001d6e 0x00002d6e 4   5    .text               ascii   \f\t`h
+155 0x00001d81 0x00002d80 5   6    .text               ascii   '\rJzD
+156 0x00001d8b 0x00002d8a 4   5    .text               ascii    (`\a
+157 0x00001dc2 0x00002dc2 7   8    .text               ascii   \aF%H\rFF
+158 0x00001dd5 0x00002dd4 6   7    .text               ascii   h"L|D"
+159 0x00001e22 0x00002e22 4   5    .text               ascii   \f\t`h
+160 0x00001e35 0x00002e34 5   6    .text               ascii   '\fJzD
+161 0x00001e4b 0x00002e4a 5   6    .text               ascii   ih`\b
+162 0x00001e72 0x00002e72 7   8    .text               ascii   \aF'H\rFF
+163 0x00001e85 0x00002e84 6   7    .text               ascii   h$L|D"
+164 0x00001ed2 0x00002ed2 4   5    .text               ascii   \f\t`h
+165 0x00001f27 0x00002f26 8   9    .text               ascii   A\aF"H\rFF
+166 0x00001f3d 0x00002f3c 4   5    .text               ascii   L|D"
+167 0x00001f4d 0x00002f4c 6   7    .text               ascii   &ah;hi
+168 0x00001f68 0x00002f68 7   8    .text               ascii   \f&ah;hI
+169 0x00001f92 0x00002f92 4   5    .text               ascii   l`,`
+170 0x00001f9d 0x00002f9c 4   5    .text               ascii   hi`P
+171 0x00002025 0x00003024 7   8    .text               ascii   #@iS`Qb
+172 0x00002037 0x00003036 5   6    .text               ascii   #zDS`
+173 0x00002064 0x00003064 8   9    .text               ascii   \fJ #zDS`
+174 0x00002091 0x00003090 5   6    .text               ascii   bPbpG
+175 0x000020a9 0x000030a8 4   5    .text               ascii   aZaO
+176 0x000020de 0x000030de 4   5    .text               ascii   `CzD
+177 0x00002105 0x00003104 5   6    .text               ascii   #@iS`
+178 0x00002279 0x00003278 4   5    .text               ascii   \nAh@
+179 0x00002285 0x00003284 9   10   .text               ascii   !\vJ\vKzD{D
+180 0x00002307 0x00003306 4   6    .text               utf8    \nMb́
+181 0x0000231b 0x0000331a 9   10   .text               ascii   !\tJ\nKzD{D
+182 0x00002387 0x00003386 6   7    .text               ascii   b\f$Lb@
+183 0x000023b1 0x000033b0 9   10   .text               ascii   !\fJ\fKzD{D
+184 0x0000242a 0x0000342a 7   8    .text               ascii   \n`\rc\f%D
+185 0x00002455 0x00003454 9   10   .text               ascii   !\vJ\vKzD{D
+186 0x0000250b 0x0000350a 5   6    .text               ascii   H!FxD
+187 0x00002513 0x00003512 5   6    .text               ascii   M}D*F
+188 0x0000255b 0x0000355a 5   6    .text               ascii   F-H\rF
+189 0x00002569 0x00003568 7   8    .text               ascii   h+N~D2F
+190 0x000025e6 0x000035e6 4   5    .text               ascii   %`(F
+191 0x000025fc 0x000035fc 4   5    .text               ascii   \nI@F
+192 0x00002634 0x00003634 7   9    .text               utf8    \v+\tجJzD
+193 0x00002667 0x00003666 6   7    .text               ascii   L|D`h8
+194 0x0000267d 0x0000367c 5   7    .text               utf8    ѣJzDH
+195 0x00002685 0x00003684 4   5    .text               ascii   JzDE
+196 0x0000268f 0x0000368e 6   7    .text               ascii   L|D`h@
+197 0x000026a7 0x000036a6 5   7    .text               utf8    іJzD3
+198 0x000026c7 0x000036c6 6   7    .text               ascii   5QFuEI
+199 0x000026fa 0x000036fa 7   8    .text               ascii   ~IyD\bh8
+200 0x00002711 0x00003710 4   6    .text               utf8    сJzD
+201 0x00002728 0x00003728 4   5    .text               ascii   |HxD
+202 0x0000272d 0x0000372c 7   8    .text               ascii   `|IyD\tx
+203 0x00002764 0x00003764 7   8    .text               ascii   \b0oJzDg
+204 0x0000276c 0x0000376c 6   7    .text               ascii   fH!xxD
+205 0x000027a4 0x000037a4 6   7    .text               ascii   VH!xxD
+206 0x000027dc 0x000037dc 4   5    .text               ascii   LHxD
+207 0x000027e1 0x000037e0 8   9    .text               ascii   `LIyD\txa
+208 0x000028db 0x000038da 7   8    .text               ascii   F`FBFsF
+209 0x0000294f 0x0000394e 6   7    .text               ascii   JzDPh8
+210 0x00002965 0x00003964 5   7    .text               utf8    уJzDm
+211 0x0000296d 0x0000396c 4   5    .text               ascii   JzDj
+212 0x00002974 0x00003974 9   10   .text               ascii   \b0xJzDPh@
+213 0x00002990 0x00003990 5   6    .text               ascii   uJzDX
+214 0x00002996 0x00003996 4   5    .text               ascii   mIyD
+215 0x000029af 0x000039ae 4   5    .text               ascii   4tEE
+216 0x000029dc 0x000039dc 6   7    .text               ascii   \b0\JzD
+217 0x000029f6 0x000039f6 5   6    .text               ascii   bJzD%
+218 0x00002a10 0x00003a10 4   5    .text               ascii   2F}D
+219 0x00002a1a 0x00003a1a 4   5    .text               ascii   la,a
+220 0x00002a23 0x00003a22 4   6    .text               utf8    .ah`
+221 0x00002a42 0x00003a42 6   7    .text               ascii   \b0QJzD
+222 0x00002a6c 0x00003a6c 4   5    .text               ascii   2F}D
+223 0x00002a7c 0x00003a7c 4   5    .text               ascii   la,a
+224 0x00002ab0 0x00003ab0 4   5    .text               ascii   2F}D
+225 0x00002ac0 0x00003ac0 4   5    .text               ascii   la,a
+226 0x00002af4 0x00003af4 4   5    .text               ascii   2F}D
+227 0x00002b04 0x00003b04 4   5    .text               ascii   la,a
+228 0x00002b25 0x00003b24 5   6    .text               ascii   h1F*F
+229 0x00002b43 0x00003b42 5   6    .text               ascii    \aJzD
+230 0x00002bca 0x00003bca 7   16   .text               utf16le #WcnWwW
+231 0x00002bf2 0x00003bf2 6   7    .text               ascii   xh9F3F
+232 0x00002c08 0x00003c08 6   7    .text               ascii   xh9F"F
+233 0x00002c2d 0x00003c2c 4   5    .text               ascii   M}D/
+234 0x00002c44 0x00003c44 6   7    .text               ascii   8F1FRF
+235 0x00002c5a 0x00003c5a 6   7    .text               ascii   8F1FRF
+236 0x00002c88 0x00003c88 6   7    .text               ascii   8F1FRF
+237 0x00002ca5 0x00003ca4 5   6    .text               ascii    0`\b
+238 0x00002cb0 0x00003cb0 6   7    .text               ascii   8F1FRF
+239 0x00002cd4 0x00003cd4 4   5    .text               ascii   }D*F
+240 0x00002d33 0x00003d32 5   6    .text               ascii   \n~D2F
+241 0x00002d4c 0x00003d4c 4   5    .text               ascii   \b!}X
+242 0x00002d51 0x00003d50 5   6    .text               ascii   HQFxD
+243 0x00002d93 0x00003d92 4   5    .text               ascii    =hF
+244 0x00002da1 0x00003da0 5   6    .text               ascii   HYFxD
+245 0x00002dab 0x00003daa 4   5    .text               ascii   L|D"
+246 0x00002dbc 0x00003dbc 4   5    .text               ascii   `h#F
+247 0x00002de2 0x00003de2 5   6    .text               ascii   >h{HF
+248 0x00002dee 0x00003dee 4   5    .text               ascii   !FxD
+249 0x00002df5 0x00003df4 6   7    .text               ascii   hxM}D*
+250 0x00002e2c 0x00003e2c 4   5    .text               ascii   0FQF
+251 0x00002e40 0x00003e40 4   5    .text               ascii   0FQF
+252 0x00002e54 0x00003e54 6   7    .text               ascii   8F1FRF
+253 0x00002e6a 0x00003e6a 6   7    .text               ascii   8F1FRF
+254 0x00002e80 0x00003e80 6   7    .text               ascii   8F1FRF
+255 0x00002ea4 0x00003ea4 4   5    .text               ascii   }D*F
+256 0x00002eb3 0x00003eb2 7   8    .text               ascii   F<hJHxD
+257 0x00002f03 0x00003f02 5   6    .text               ascii   \n~D2F
+258 0x00002f1c 0x00003f1c 10  11   .text               ascii   \b!}X1HQFxD
+259 0x00002f74 0x00003f74 8   9    .text               ascii   \f$hh0`hh
+260 0x0000308c 0x0000408c 6   7    .text               ascii   XF!FBF
+261 0x000030b7 0x000040b6 5   6    .text               ascii   9|D"F
+262 0x00003124 0x00004124 7   8    .text               ascii   hb  h`F
+263 0x00003138 0x00004138 4   5    .text               ascii   0F#F
+264 0x00003150 0x00004150 6   7    .text               ascii   AFRF#F
+265 0x00003164 0x00004164 4   6    .text               utf8    ϊh`O
+266 0x0000317e 0x0000417e 4   5    .text               ascii   hb0F
+267 0x000031ab 0x000041aa 5   6    .text               ascii   L|D"F
+268 0x000031d8 0x000041d8 5   6    .text               ascii   wJ.xy
+269 0x00003209 0x00004208 6   8    .text               utf8    #(&SbӁ
+270 0x00003225 0x00004224 6   7    .text               ascii   \neK{D~
+271 0x0000325c 0x0000425c 4   6    .text               utf8    8hȱ\a
+272 0x00003278 0x00004278 4   5    .text               ascii   HFAF
+273 0x00003294 0x00004294 4   5    .text               ascii   MJzD
+274 0x000032f1 0x000042f0 5   6    .text               ascii   !+FzD
+275 0x00003300 0x00004300 6   7    .text               ascii   XF!FBF
+276 0x00003319 0x00004318 5   6    .text               ascii   "xDA`
+277 0x0000334a 0x0000434a 4   5    .text               ascii   AFRF
+278 0x00003385 0x00004384 5   6    .text               ascii   KzD{D
+279 0x000033f3 0x000043f2 5   6    .text               ascii   KzD{D
+280 0x000033fa 0x000043fa 6   7    .text               ascii   HF!FBF
+281 0x00003413 0x00004412 5   6    .text               ascii   M}D*F
+282 0x00003478 0x00004478 4   5    .text               ascii   )bAF
+283 0x00003482 0x00004482 5   6    .text               ascii   0F#F\t
+284 0x000034a4 0x000044a4 6   7    .text               ascii   AFRF#F
+285 0x000034e9 0x000044e8 5   6    .text               ascii   KzD{D
+286 0x0000350f 0x0000450e 5   6    .text               ascii   \n &V`
+287 0x00003525 0x00004524 6   7    .text               ascii   \n|K{D1
+288 0x00003539 0x00004538 5   6    .text               ascii   !xJzD
+289 0x0000354f 0x0000454e 7   8    .text               ascii   \tIF|D"F
+290 0x00003587 0x00004586 5   6    .text               ascii    0"`b
+291 0x000035ac 0x000045ac 7   8    .text               ascii   04_K{D<
+292 0x000035b4 0x000045b4 6   7    .text               ascii   HF!FBF
+293 0x000035cb 0x000045ca 7   8    .text               ascii   hFM}D*F
+294 0x00003609 0x00004608 5   6    .text               ascii   \n(" b
+295 0x00003612 0x00004612 6   7    .text               ascii   b`\f"bb
+296 0x00003628 0x00004628 6   7    .text               ascii   (4?K{D
+297 0x0000364b 0x0000464a 5   6    .text               ascii   !8JzD
+298 0x00003658 0x00004658 8   9    .text               ascii   6NIF~D2F
+299 0x0000367b 0x0000467a 5   6    .text               ascii    )JzD
+300 0x00003693 0x00004692 5   6    .text               ascii   !zD{D
+301 0x0000373b 0x0000473a 5   6    .text               ascii   IyD\bp
+302 0x00003761 0x00004760 7   9    .text               utf8    ?yD\b`\t݀
+303 0x00003781 0x00004780 5   6    .text               ascii   h\tJzD
+304 0x000037c9 0x000047c8 6   7    .text               ascii   L|D hA
+305 0x000037f5 0x000047f4 4   5    .text               ascii   D`G@
+306 0x00003801 0x00004800 4   5    .text               ascii   D`G@
+307 0x0000380d 0x0000480c 4   5    .text               ascii   D`G@
+308 0x00003819 0x00004818 4   5    .text               ascii   D`G@
+309 0x00003825 0x00004824 4   5    .text               ascii   D`G@
+310 0x00003831 0x00004830 4   5    .text               ascii   D`G@
+311 0x0000383d 0x0000483c 4   5    .text               ascii   D`G@
+312 0x00003849 0x00004848 4   5    .text               ascii   D`G@
+313 0x00003855 0x00004854 4   5    .text               ascii   D`G@
+314 0x00003861 0x00004860 4   5    .text               ascii   D`G@
+315 0x0000386d 0x0000486c 4   5    .text               ascii   D`G@
+316 0x00003879 0x00004878 4   5    .text               ascii   D`G@
+317 0x00003885 0x00004884 4   5    .text               ascii   D`G@
+318 0x00003891 0x00004890 4   5    .text               ascii   D`G@
+319 0x00003bd9 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+320 0x00003be4 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+321 0x00003beb 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+322 0x00003c23 0x00000001 11  12   .shstrtab           ascii   .fini_array
+323 0x00003c2f 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+324 0x00003c3a 0x00000018 5   6    .shstrtab           ascii   .text
+325 0x00003c40 0x0000001e 4   5    .shstrtab           ascii   .got
+326 0x00003c45 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+327 0x00003c59 0x00000037 8   9    .shstrtab           ascii   .got.plt
+328 0x00003c62 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+329 0x00003c6b 0x00000049 4   5    .shstrtab           ascii   .bss
+330 0x00003c70 0x0000004e 15  16   .shstrtab           ascii   .ARM.attributes
+331 0x00003c80 0x0000005e 7   8    .shstrtab           ascii   .dynstr
+332 0x00003c88 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+333 0x00003c97 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+334 0x00003ca4 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+335 0x00003cae 0x0000008c 8   9    .shstrtab           ascii   .rel.dyn
+336 0x00003cb7 0x00000095 12  13   .shstrtab           ascii   .gnu.version
+337 0x00003cc4 0x000000a2 7   8    .shstrtab           ascii   .dynsym
+338 0x00003ccc 0x000000aa 9   10   .shstrtab           ascii   .gnu.hash
+339 0x00003cd6 0x000000b4 18  19   .shstrtab           ascii   .note.gnu.build-id
+340 0x00003ce9 0x000000c7 8   9    .shstrtab           ascii   .dynamic
+341 0x00003cf2 0x000000d0 10  11   .shstrtab           ascii   .ARM.extab
+342 0x00003cfd 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+343 0x00003d07 0x000000e5 7   8    .shstrtab           ascii   .rodata
+344 0x00003d0f 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+345 0x00003d1e 0x000000fc 5   6    .shstrtab           ascii   .data
+346 0x00003d25 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+347 0x00003d6a 0x00000046 4   5    .gnu_debugdata      ascii   .<Bw
+348 0x00003d71 0x0000004d 4   5    .gnu_debugdata      ascii   ?Z-4
+349 0x00003dc2 0x0000009e 4   6    .gnu_debugdata      utf8    mtBǙ
+350 0x00003df4 0x000000d0 5   6    .gnu_debugdata      ascii   c-W\ea
+351 0x00003e10 0x000000ec 4   5    .gnu_debugdata      ascii   RQ>b
+352 0x00003e2f 0x0000010b 4   6    .gnu_debugdata      utf8    ×I6i
+353 0x00003e35 0x00000111 4   5    .gnu_debugdata      ascii   P%uW
+354 0x00003e3d 0x00000119 5   7    .gnu_debugdata      utf8    \tǽr8*
+355 0x00003e4c 0x00000128 8   10   .gnu_debugdata      utf8    u˙+`ga.'
+356 0x00003e5b 0x00000137 4   8    .gnu_debugdata      utf8    Oқ©q
+357 0x00003e9a 0x00000176 5   8    .gnu_debugdata      utf8    Pr;牍(
+358 0x00003eae 0x0000018a 4   5    .gnu_debugdata      ascii   4z"8
+359 0x00003ec5 0x000001a1 4   8    .gnu_debugdata      utf8    \tf磩؞
+360 0x00003f8a 0x00000266 6   7    .gnu_debugdata      ascii   Lv,H].
+361 0x00004049 0x00000325 5   8    .gnu_debugdata      utf8    Gl醃2+
+362 0x0000406f 0x0000034b 4   5    .gnu_debugdata      ascii   p\vZc
+363 0x0000407e 0x0000035a 4   5    .gnu_debugdata      ascii   Cr~S
+364 0x000040d5 0x000003b1 4   6    .gnu_debugdata      utf8    ͑V|M
+365 0x000040ea 0x000003c6 4   5    .gnu_debugdata      ascii   zm~i
+366 0x000040f3 0x000003cf 4   6    .gnu_debugdata      utf8    'cȔy
+367 0x00004115 0x000003f1 4   5    .gnu_debugdata      ascii   g*FQ
+368 0x0000411a 0x000003f6 4   6    .gnu_debugdata      utf8    m۰}t
+369 0x000041e5 0x000004c1 5   6    .gnu_debugdata      ascii   tgQ/?
+370 0x000041f3 0x000004cf 5   6    .gnu_debugdata      ascii   r65j&
+371 0x00004205 0x000004e1 4   6    .gnu_debugdata      utf8    \ep6ή
+372 0x00004240 0x0000051c 4   5    .gnu_debugdata      ascii   0jpf
+373 0x00004272 0x0000054e 6   7    .gnu_debugdata      ascii   ^N1L&O
+374 0x00004288 0x00000564 4   5    .gnu_debugdata      ascii   \fh+7
+375 0x00004474 0x00000750 6   28                       utf32le @\tBததÈ
+0x000048b4    1     12 sym.imp.__cxa_finalize
+0x000048d8    1      4 sym.imp.__android_log_print
+0x000048cc    1      4 sym.imp.__errno
+0x000048e4    1      8 sym.imp.__memcpy_chk
+0x000049b0    1     12 sym.imp.__open_2
+0x000049bc    1     12 sym.imp.acph_deregister_command
+0x000049a4    1      8 sym.imp.acph_register_command
+0x000049c8    1      4 sym.imp.close
+0x000048c0    1     12 sym.imp.ioctl
+0x000049d4    1      8 sym.imp.memcpy
+0x00002630    2     20 entry0
+0x00002644    3     56 sym.get_adm_info
+0x000048d0    1      8 fcn.000048d0
+0x000048e0    1      4 fcn.000048e0
+0x000048f0    1     12 fcn.000048f0
+0x0000362c   48    698 sym.get_rtac
+0x00002d08   11    164 sym.get_voc_topology
+0x00002f24   10    142 sym.get_voc_vc_devices
+0x000031dc    2     90 sym.pack_afe_set_instance_rtac_data
+0x000033f0    1    118 sym.pack_afe_sidetone_instance_set_rtac_enable_data
+0x00003114    1     54 sym.pack_audio_set_rtac_data
+0x00002968    8    138 sym.get_aud_device
+0x00002e6c   11    168 sym.get_voc_afe_port_id_v2
+0x00003034    1     42 sym.pack_afe_get_rtac_data
+0x00003150    1     54 sym.pack_audio_set_instance_rtac_data
+0x000034c8    1     54 sym.pack_voice_set_instance_rtac_data
+0x00003554   10    190 sym.send_get_rtac
+0x000047ac    5     50 sym.acdb_rtac_exit
+0x00004738    6    102 sym.acdb_rtac_init
+0x00004a00    1     12 fcn.00004a00
+0x00004a10    1     12 fcn.00004a10
+0x00002688   10    152 sym.get_audio_copp_id
+0x00002bd0    8    120 sym.get_voc_streams
+0x00002a00   21    264 sym.get_aud_streams
+0x0000318c    1     74 sym.pack_afe_set_rtac_data
+0x0000348c    1     54 sym.pack_voice_set_rtac_data
+0x000028d4    8    134 sym.get_aud_topology
+0x0000272c   16    320 sym.get_audio_popp_id
+0x00003064    1     50 sym.pack_afe_get_instance_rtac_data
+0x000032c0    1    108 sym.pack_afe_sidetone_instance_set_rtac_gain_data
+0x00003350    1    114 sym.pack_afe_sidetone_set_rtac_enable_data
+0x00002b14   11    166 sym.get_aud_afe_port_id
+0x00002dbc   11    160 sym.get_voc_afe_port_id
+0x00003230    1    102 sym.pack_afe_sidetone_set_rtac_gain_data
+0x00002ff4    1     60 sym.pack_audio_get_instance_rtac_data
+0x000030d0    1     64 sym.pack_voice_get_instance_rtac_data
+0x0000309c    1     46 sym.pack_voice_get_rtac_data
+0x00003504    3     68 sym.send_rtac
+0x0000392c   36    538 sym.set_rtac
+0x00004900    1     12 fcn.00004900
+0x00002c54   11    164 sym.get_voc_copp_handles
+0x00002fc4    1     42 sym.pack_audio_get_rtac_data
+0x00003ba0  170   2774 sym.acdb_rtac_callback
+0x000049d0    1      4 fcn.000049d0
+0x00004910    1     12 fcn.00004910
+0x000049e0    1     12 fcn.000049e0
+0x00004804    1     12 fcn.00004804
+0x000049f0    1     12 fcn.000049f0
+0x0000288c    3     58 sym.get_voice_info
+0x0000263e    2      6 entry.fini0
+0x000047e8    2     16 sym.__aeabi_memcpy
+0x00004a20    1     12 fcn.00004a20
+0x00004a30    1     12 fcn.00004a30

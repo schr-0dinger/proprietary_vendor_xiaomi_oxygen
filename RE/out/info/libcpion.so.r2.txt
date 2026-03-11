@@ -1,0 +1,209 @@
+arch     arm
+baddr    0x0
+binsz    14048
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name         demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+14  0x000021e0 0x000021e0 GLOBAL FUNC 8        cp_ion_open
+15  0x000021c0 0x000021c0 GLOBAL FUNC 4        cp_mmap
+16  0x000021c8 0x000021c8 GLOBAL FUNC 4        cp_unmap
+17  0x000021d0 0x000021d0 GLOBAL FUNC 4        cp_ion_free
+18  0x000021d8 0x000021d8 GLOBAL FUNC 4        cp_ion_close
+19  0x000021f8 0x000021f8 GLOBAL FUNC 4        cp_qce_unmap
+20  0x00002000 0x00002000 GLOBAL FUNC 436      __cfi_check
+21  0x000021b8 0x000021b8 GLOBAL FUNC 4        cp_ion_alloc
+22  0x000021e4 0x000021e4 GLOBAL FUNC 8        cp_qce_open
+23  0x000021e8 0x000021e8 GLOBAL FUNC 4        cp_qce_close
+24  0x000021f0 0x000021f0 GLOBAL FUNC 4        cp_qce_map
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000238    0x18 0x00000238    0x18 -r-- NOTE        .note.android.ident
+2   0x00000250    0x20 0x00000250    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270   0x258 0x00000270   0x258 -r-- DYNSYM      .dynsym
+4   0x000004c8    0x32 0x000004c8    0x32 -r-- GNU_VERSYM  .gnu.version
+5   0x000004fc    0x40 0x000004fc    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000540    0x64 0x00000540    0x64 -r-- GNU_HASH    .gnu.hash
+7   0x000005a4   0x153 0x000005a4   0x153 -r-- STRTAB      .dynstr
+8   0x000006f8    0x10 0x000006f8    0x10 -r-- ----        .relr.dyn
+9   0x00000708   0x138 0x00000708   0x138 -r-- RELA        .rela.plt
+10  0x00000840   0x348 0x00000840   0x348 -r-- PROGBITS    .rodata
+11  0x00000b88    0xcc 0x00000b88    0xcc -r-- PROGBITS    .eh_frame_hdr
+12  0x00000c58   0x2bc 0x00000c58   0x2bc -r-- PROGBITS    .eh_frame
+13  0x00001000  0x11fc 0x00001000  0x11fc -r-x PROGBITS    .text
+14  0x00002200    0xf0 0x00002200    0xf0 -r-x PROGBITS    .plt
+15  0x00003000     0x8 0x00003000     0x8 -rw- PROGBITS    .data.rel.ro
+16  0x00003008    0x10 0x00003008    0x10 -rw- FINI_ARRAY  .fini_array
+17  0x00003018   0x1b0 0x00003018   0x1b0 -rw- DYNAMIC     .dynamic
+18  0x000031c8    0x80 0x000031c8    0x80 -rw- PROGBITS    .got.plt
+19  0x00003248    0xdc 0x00000000    0xdc ---- STRTAB      .shstrtab
+20  0x00003324   0x3bc 0x00000000   0x3bc ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x00000559 0x00000559 4   5    .gnu.hash           ascii   \f\r\b\b
+3   0x00000587 0x00000587 5   7    .gnu.hash           utf8    ̒x-OP
+4   0x00000594 0x00000594 5   6    .gnu.hash           ascii   F:\tO
+5   0x000005a5 0x000005a5 14  15   .dynstr             ascii   __cxa_finalize
+6   0x000005b4 0x000005b4 11  12   .dynstr             ascii   cp_ion_open
+7   0x000005c0 0x000005c0 8   9    .dynstr             ascii   ion_open
+8   0x000005c9 0x000005c9 19  20   .dynstr             ascii   __android_log_print
+9   0x000005dd 0x000005dd 7   8    .dynstr             ascii   __errno
+10  0x000005e5 0x000005e5 12  13   .dynstr             ascii   cp_ion_alloc
+11  0x000005f2 0x000005f2 12  13   .dynstr             ascii   ion_alloc_fd
+12  0x000005ff 0x000005ff 7   8    .dynstr             ascii   cp_mmap
+13  0x00000607 0x00000607 4   5    .dynstr             ascii   mmap
+14  0x0000060c 0x0000060c 5   6    .dynstr             ascii   ioctl
+15  0x00000612 0x00000612 6   7    .dynstr             ascii   munmap
+16  0x00000619 0x00000619 8   9    .dynstr             ascii   cp_unmap
+17  0x00000622 0x00000622 11  12   .dynstr             ascii   cp_ion_free
+18  0x0000062e 0x0000062e 5   6    .dynstr             ascii   close
+19  0x00000634 0x00000634 12  13   .dynstr             ascii   cp_ion_close
+20  0x00000641 0x00000641 9   10   .dynstr             ascii   ion_close
+21  0x0000064b 0x0000064b 11  12   .dynstr             ascii   cp_qce_open
+22  0x00000657 0x00000657 12  13   .dynstr             ascii   cp_qce_close
+23  0x00000664 0x00000664 10  11   .dynstr             ascii   cp_qce_map
+24  0x0000066f 0x0000066f 12  13   .dynstr             ascii   cp_qce_unmap
+25  0x0000067c 0x0000067c 8   9    .dynstr             ascii   __open_2
+26  0x00000685 0x00000685 11  12   .dynstr             ascii   __cfi_check
+27  0x00000691 0x00000691 16  17   .dynstr             ascii   __stack_chk_fail
+28  0x000006a2 0x000006a2 5   6    .dynstr             ascii   abort
+29  0x000006a8 0x000006a8 9   10   .dynstr             ascii   liblog.so
+30  0x000006b2 0x000006b2 6   7    .dynstr             ascii   LIBLOG
+31  0x000006b9 0x000006b9 7   8    .dynstr             ascii   libc.so
+32  0x000006c1 0x000006c1 4   5    .dynstr             ascii   LIBC
+33  0x000006c6 0x000006c6 9   10   .dynstr             ascii   libion.so
+34  0x000006d0 0x000006d0 9   10   .dynstr             ascii   libc++.so
+35  0x000006da 0x000006da 7   8    .dynstr             ascii   libm.so
+36  0x000006e2 0x000006e2 8   9    .dynstr             ascii   libdl.so
+37  0x000006eb 0x000006eb 11  12   .dynstr             ascii   libcpion.so
+38  0x00000840 0x00000840 44  45   .rodata             ascii   cp_qce_map : Not implemented for this target
+39  0x0000086d 0x0000086d 62  63   .rodata             ascii   Error:: DMA_BUF_IOCTL_SYNC start failed, ret = %d, errno = %d\n
+40  0x000008ac 0x000008ac 74  75   .rodata             ascii   Error: cp_ion_free failed %s , ret = %d, errno = %x , ion_fd_data->fd = %d
+41  0x000008f7 0x000008f7 8   9    .rodata             ascii   /dev/qce
+42  0x00000900 0x00000900 12  13   .rodata             ascii   cp_ion_alloc
+43  0x0000090d 0x0000090d 50  51   .rodata             ascii   Error: cp_ion_close failed, ret = %d, errno = %x,
+44  0x00000940 0x00000940 53  54   .rodata             ascii   Opening ION device for allocation failed, errno = %x
+45  0x00000976 0x00000976 51  52   .rodata             ascii   %s - error invalid parameters, fd = %d ,v_addr = %p
+46  0x000009aa 0x000009aa 8   9    .rodata             ascii   cp_unmap
+47  0x000009b3 0x000009b3 11  12   .rodata             ascii   cp_qce_open
+48  0x000009bf 0x000009bf 44  45   .rodata             ascii   %s - error invalid parameters , ion_fd = %d
+49  0x000009ec 0x000009ec 43  44   .rodata             ascii   Error::ION MMAP failed: len %zu, errno = %d
+50  0x00000a18 0x00000a18 49  50   .rodata             ascii   %s - Error invalid parameters vaddr = %p, fd = %d
+51  0x00000a4a 0x00000a4a 46  47   .rodata             ascii   cp_qce_unmap : Not implemented for this target
+52  0x00000a79 0x00000a79 46  47   .rodata             ascii   Error: ion munmap failed, ret = %d, errno = %x
+53  0x00000aa8 0x00000aa8 8   9    .rodata             ascii   CP_ION:
+54  0x00000ab1 0x00000ab1 11  12   .rodata             ascii   cp_ion_free
+55  0x00000abd 0x00000abd 59  60   .rodata             ascii   Error: ion_alloc_fd failed, ret = %d, errno = %x, len = %zu
+56  0x00000af9 0x00000af9 7   8    .rodata             ascii   cp_mmap
+57  0x00000b01 0x00000b01 28  29   .rodata             ascii   %s - failed to open /dev/qce
+58  0x00000b1e 0x00000b1e 43  44   .rodata             ascii   %s - error invalid parameters, ion_fd = %d
+59  0x00000b4a 0x00000b4a 61  62   .rodata             ascii   Error:: DMA_BUF_IOCTL_SYNC start failed, ret = %d, errno = %d
+60  0x00003249 0x00000001 11  12   .shstrtab           ascii   .fini_array
+61  0x00003255 0x0000000d 5   6    .shstrtab           ascii   .text
+62  0x0000325b 0x00000013 19  20   .shstrtab           ascii   .note.android.ident
+63  0x0000326f 0x00000027 8   9    .shstrtab           ascii   .got.plt
+64  0x00003278 0x00000030 9   10   .shstrtab           ascii   .rela.plt
+65  0x00003282 0x0000003a 7   8    .shstrtab           ascii   .dynstr
+66  0x0000328a 0x00000042 13  14   .shstrtab           ascii   .eh_frame_hdr
+67  0x00003298 0x00000050 14  15   .shstrtab           ascii   .gnu.version_r
+68  0x000032a7 0x0000005f 12  13   .shstrtab           ascii   .data.rel.ro
+69  0x000032b4 0x0000006c 9   10   .shstrtab           ascii   .relr.dyn
+70  0x000032be 0x00000076 12  13   .shstrtab           ascii   .gnu.version
+71  0x000032cb 0x00000083 7   8    .shstrtab           ascii   .dynsym
+72  0x000032d3 0x0000008b 9   10   .shstrtab           ascii   .gnu.hash
+73  0x000032dd 0x00000095 9   10   .shstrtab           ascii   .eh_frame
+74  0x000032e7 0x0000009f 18  19   .shstrtab           ascii   .note.gnu.build-id
+75  0x000032fa 0x000000b2 8   9    .shstrtab           ascii   .dynamic
+76  0x00003303 0x000000bb 9   10   .shstrtab           ascii   .shstrtab
+77  0x0000330d 0x000000c5 7   8    .shstrtab           ascii   .rodata
+78  0x00003315 0x000000cd 14  15   .shstrtab           ascii   .gnu_debugdata
+79  0x00003325 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+80  0x00003356 0x00000032 4   5    .gnu_debugdata      ascii   )>\et
+81  0x00003368 0x00000044 4   6    .gnu_debugdata      utf8    ߵn:-
+82  0x0000339c 0x00000078 4   5    .gnu_debugdata      ascii   cD3_
+83  0x00003406 0x000000e2 6   8    .gnu_debugdata      utf8    c\at6DÈ
+84  0x0000343a 0x00000116 4   6    .gnu_debugdata      utf8    ]֤[A
+85  0x00003460 0x0000013c 4   6    .gnu_debugdata      utf8    V/ɢ\r
+86  0x000034aa 0x00000186 4   5    .gnu_debugdata      ascii   <+\fL
+87  0x000034c3 0x0000019f 4   5    .gnu_debugdata      ascii   cY9X
+88  0x000034db 0x000001b7 6   7    .gnu_debugdata      ascii   h~\fA8(
+89  0x000034ea 0x000001c6 4   5    .gnu_debugdata      ascii   v/,\e
+90  0x00003510 0x000001ec 4   5    .gnu_debugdata      ascii   9uU6
+91  0x00003515 0x000001f1 4   5    .gnu_debugdata      ascii   8,^J
+92  0x0000354c 0x00000228 5   6    .gnu_debugdata      ascii   i.~U>
+93  0x00003572 0x0000024e 4   5    .gnu_debugdata      ascii   MW0\r
+94  0x000035ae 0x0000028a 6   7    .gnu_debugdata      ascii   n,<O4T
+95  0x000035dc 0x000002b8 4   5    .gnu_debugdata      ascii   oL0\n
+96  0x00003606 0x000002e2 4   5    .gnu_debugdata      ascii   b"Wg
+97  0x0000360b 0x000002e7 4   6    .gnu_debugdata      utf8    ¨6+,
+98  0x00003638 0x00000314 5   7    .gnu_debugdata      utf8    h"?oR
+99  0x0000364f 0x0000032b 4   5    .gnu_debugdata      ascii   +\v\nb
+100 0x0000368e 0x0000036a 4   5    .gnu_debugdata      ascii   BtF#
+0x00002220    1     16 sym.imp.__cxa_finalize
+0x00002240    1     16 sym.imp.ion_open
+0x00002260    1     16 sym.imp.__android_log_print
+0x00002250    1     16 sym.imp.__errno
+0x00002270    1     16 sym.imp.ion_alloc_fd
+0x00002280    1     16 sym.imp.mmap
+0x00002290    1     16 sym.imp.ioctl
+0x000022a0    1     16 sym.imp.munmap
+0x000022c0    1     16 sym.imp.close
+0x000022d0    1     16 sym.imp.ion_close
+0x000022e0    1     16 sym.imp.__open_2
+0x000022b0    1     16 sym.imp.__stack_chk_fail
+0x00002230    1     16 sym.imp.abort
+0x00001000    1     12 entry0
+0x000021e0    1      4 sym.cp_ion_open
+0x000021c0    1      4 sym.cp_mmap
+0x000021c8    1      4 sym.cp_unmap
+0x000021d0    1      4 sym.cp_ion_free
+0x000021d8    1      4 sym.cp_ion_close
+0x000021f8    1      4 sym.cp_qce_unmap
+0x00002000   24    436 sym.__cfi_check
+0x000021b8    1      4 sym.cp_ion_alloc
+0x000021e4    1      4 sym.cp_qce_open
+0x000021e8    1      4 sym.cp_qce_close
+0x000021f0    1      4 sym.cp_qce_map
+0x00001010    1      4 entry.fini0
+0x00001014    4     36 sym.__cfi_check_fail
+0x00001128   11    316 sym.cp_mmap.cfi
+0x00001264   11    256 sym.cp_unmap.cfi
+0x00001038    3     72 sym.cp_ion_open.cfi
+0x00001080    6    168 sym.cp_ion_alloc.cfi
+0x00001364    9    172 sym.cp_ion_free.cfi
+0x00001410    3     76 sym.cp_ion_close.cfi
+0x0000145c    3     88 sym.cp_qce_open.cfi
+0x000014b8    1     44 fcn.000014b8
+0x000014e4    1     44 sym.cp_qce_map.cfi
+0x00001510    1     44 sym.cp_qce_unmap.cfi
+0x00002200    1     20 section..plt

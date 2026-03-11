@@ -1,0 +1,1128 @@
+arch     arm
+baddr    0x0
+binsz    50143
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+compiler Snapdragon LLVM ARM Compiler 3.8.2 for Android NDK (based on LLVM 3.8.0)
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+intrp    /system/bin/linker
+laddr    0x0
+lang     c++
+linenum  false
+lsyms    false
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   false
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped true
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type   size  lib name                                  demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+53  0x00006378 0x00006378 GLOBAL FUNC   220       sce40_init
+54  0x00002870 0x00002870 GLOBAL FUNC   12940     sce40_trigger_update
+55  0x0000759c 0x0000759c GLOBAL FUNC   2         sce40_copy_triangles_from_chromatix
+56  0x000075a0 0x000075a0 GLOBAL FUNC   1824      sce_adjust_dest_triangle_by_adrc
+57  ---------- 0x0000d1b8 GLOBAL NOTYPE 0         __bss_start
+58  ---------- 0x0000d1b9 GLOBAL NOTYPE 0         _end
+59  0x000060b8 0x000060b8 GLOBAL FUNC   464       sce40_set_chromatix_ptr
+60  0x00002010 0x00002010 GLOBAL FUNC   54        trigger_interpolate_sce_triangles
+61  0x00001de4 0x00001de4 GLOBAL FUNC   292       sce_copy_triangles_from_chromatix
+62  0x000017fc 0x000017fc GLOBAL FUNC   12        module_open
+63  ---------- 0x0000d1b8 GLOBAL NOTYPE 0         _edata
+64  0x00006004 0x00006004 GLOBAL FUNC   180       sce40_stats_asd_update
+65  0x00006288 0x00006288 GLOBAL FUNC   240       sce40_streamoff
+66  0x00002086 0x00002086 GLOBAL FUNC   54        trigger_interpolate_sce_vectors
+67  0x00007208 0x00007208 GLOBAL FUNC   916       sce40_select_table
+68  0x000015dc 0x000015dc GLOBAL FUNC   320       __ae_r
+69  0x00001c78 0x00001c78 GLOBAL FUNC   362       sce_copy_triangle_float
+70  0x00006454 0x00006454 GLOBAL FUNC   80        sce40_destroy
+71  0x00002046 0x00002046 GLOBAL FUNC   64        trigger_interpolate_sce_triangles_int
+72  0x000020c0 0x000020c0 GLOBAL FUNC   1960      trigger_sce_get_triangles
+73  0x00001f08 0x00001f08 GLOBAL FUNC   264       sce40_set_sce_factor
+74  0x00005b00 0x00005b00 GLOBAL FUNC   248       sce40_stats_aec_update
+75  0x00005bf8 0x00005bf8 GLOBAL FUNC   1036      sce40_stats_awb_update
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000154    0x13 0x00000154    0x13 -r-- PROGBITS    .interp
+2   0x00000168    0x18 0x00000168    0x18 -r-- NOTE        .note.android.ident
+3   0x00000180    0x20 0x00000180    0x20 -r-- NOTE        .note.gnu.build-id
+4   0x000001a0   0x4c0 0x000001a0   0x4c0 -r-- DYNSYM      .dynsym
+5   0x00000660   0x69c 0x00000660   0x69c -r-- STRTAB      .dynstr
+6   0x00000cfc    0xc0 0x00000cfc    0xc0 -r-- GNU_HASH    .gnu.hash
+7   0x00000dbc    0x98 0x00000dbc    0x98 -r-- GNU_VERSYM  .gnu.version
+8   0x00000e54    0x1c 0x00000e54    0x1c -r-- GNU_VERDEF  .gnu.version_d
+9   0x00000e70    0x70 0x00000e70    0x70 -r-- GNU_VERNEED .gnu.version_r
+10  0x00000ee0   0x180 0x00000ee0   0x180 -r-- REL         .rel.dyn
+11  0x00001060   0x210 0x00001060   0x210 -r-- REL         .rel.plt
+12  0x00001270   0x32c 0x00001270   0x32c -r-x PROGBITS    .plt
+13  0x000015a0  0x7e0c 0x000015a0  0x7e0c -r-x PROGBITS    .text
+14  0x000093ac   0x218 0x000093ac   0x218 -r-- ----        .ARM.exidx
+15  0x000095c4  0x1c47 0x000095c4  0x1c47 -r-- PROGBITS    .rodata
+16  0x0000b20c    0x7c 0x0000b20c    0x7c -r-- PROGBITS    .ARM.extab
+17  0x0000bd44     0x4 0x0000cd44     0x4 -rw- INIT_ARRAY  .init_array
+18  0x0000bd48     0x4 0x0000cd48     0x4 -rw- FINI_ARRAY  .fini_array
+19  0x0000bd4c    0x48 0x0000cd4c    0x48 -rw- PROGBITS    .data.rel.ro
+20  0x0000bd94   0x138 0x0000cd94   0x138 -rw- DYNAMIC     .dynamic
+21  0x0000becc   0x134 0x0000cecc   0x134 -rw- PROGBITS    .got
+22  0x0000c000   0x1b8 0x0000d000   0x1b8 -rw- PROGBITS    .data
+23  0x0000c1b8     0x0 0x0000d1b8     0x1 -rw- NOBITS      .bss
+24  0x0000c1b8    0xac 0x00000000    0xac ---- PROGBITS    .comment
+25  0x0000c264    0x1c 0x00000000    0x1c ---- NOTE        .note.gnu.gold-version
+26  0x0000c280    0x3c 0x00000000    0x3c ---- ----        .ARM.attributes
+27  0x0000c2bc   0x123 0x00000000   0x123 ---- STRTAB      .shstrtab
+
+[Strings]
+nth paddr      vaddr      len size section                type    string
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                          utf16le 4 \t(
+1   0x00000038 0x00000038 5   24                          utf32le 444ĠĠ
+2   0x00000154 0x00000154 18  19   .interp                ascii   /system/bin/linker
+3   0x00000174 0x00000174 7   8    .note.android.ident    ascii   Android
+4   0x00000193 0x00000193 4   5    .note.gnu.build-id     ascii   n\n `
+5   0x0000019a 0x0000019a 4   5    .note.gnu.build-id     ascii   I*/!
+6   0x00000661 0x00000661 6   7    .dynstr                ascii   __ae_r
+7   0x00000668 0x00000668 5   6    .dynstr                ascii   _ae_p
+8   0x0000066e 0x0000066e 7   8    .dynstr                ascii   __errno
+9   0x00000676 0x00000676 4   5    .dynstr                ascii   LIBC
+10  0x0000067b 0x0000067b 7   8    .dynstr                ascii   libc.so
+11  0x00000683 0x00000683 24  25   .dynstr                ascii   libmmcamera_isp_sce40.so
+12  0x0000069c 0x0000069c 6   7    .dynstr                ascii   fclose
+13  0x000006a3 0x000006a3 5   6    .dynstr                ascii   fgetc
+14  0x000006a9 0x000006a9 6   7    .dynstr                ascii   dladdr
+15  0x000006b0 0x000006b0 8   9    .dynstr                ascii   libdl.so
+16  0x000006b9 0x000006b9 5   6    .dynstr                ascii   fopen
+17  0x000006bf 0x000006bf 5   6    .dynstr                ascii   fread
+18  0x000006c5 0x000006c5 7   8    .dynstr                ascii   strncmp
+19  0x000006cd 0x000006cd 14  15   .dynstr                ascii   __snprintf_chk
+20  0x000006dc 0x000006dc 14  15   .dynstr                ascii   __cxa_finalize
+21  0x000006eb 0x000006eb 12  13   .dynstr                ascii   __cxa_atexit
+22  0x000006f8 0x000006f8 17  18   .dynstr                ascii   __register_atfork
+23  0x0000070a 0x0000070a 12  13   .dynstr                ascii   __strlen_chk
+24  0x00000717 0x00000717 13  14   .dynstr                ascii   cam_debug_log
+25  0x00000725 0x00000725 9   10   .dynstr                ascii   g_cam_log
+26  0x0000072f 0x0000072f 20  21   .dynstr                ascii   isp_modules_loglevel
+27  0x00000744 0x00000744 21  22   .dynstr                ascii   isp_sub_module_deinit
+28  0x0000075a 0x0000075a 19  20   .dynstr                ascii   isp_sub_module_init
+29  0x0000076e 0x0000076e 34  35   .dynstr                ascii   isp_sub_module_port_disable_module
+30  0x00000791 0x00000791 26  27   .dynstr                ascii   isp_sub_module_port_enable
+31  0x000007ac 0x000007ac 37  38   .dynstr                ascii   isp_sub_module_port_isp_private_event
+32  0x000007d2 0x000007d2 33  34   .dynstr                ascii   isp_sub_module_port_set_log_level
+33  0x000007f4 0x000007f4 29  30   .dynstr                ascii   isp_sub_module_port_set_param
+34  0x00000812 0x00000812 14  15   .dynstr                ascii   __aeabi_memcpy
+35  0x00000821 0x00000821 6   7    .dynstr                ascii   LIBC_N
+36  0x00000828 0x00000828 35  36   .dynstr                ascii   isp_sub_module_port_set_vfe_command
+37  0x0000084c 0x0000084c 23  24   .dynstr                ascii   __gnu_Unwind_Find_exidx
+38  0x00000864 0x00000864 28  29   .dynstr                ascii   isp_sub_module_port_streamon
+39  0x00000881 0x00000881 34  35   .dynstr                ascii   isp_sub_module_port_trigger_enable
+40  0x000008a4 0x000008a4 34  35   .dynstr                ascii   isp_sub_module_set_manual_controls
+41  0x000008c7 0x000008c7 18  19   .dynstr                ascii   mct_module_destroy
+42  0x000008da 0x000008da 11  12   .dynstr                ascii   module_open
+43  0x000008e6 0x000008e6 13  14   .dynstr                ascii   sce40_destroy
+44  0x000008f4 0x000008f4 10  11   .dynstr                ascii   sce40_init
+45  0x000008ff 0x000008ff 23  24   .dynstr                ascii   sce40_set_chromatix_ptr
+46  0x00000917 0x00000917 20  21   .dynstr                ascii   sce40_set_sce_factor
+47  0x0000092c 0x0000092c 22  23   .dynstr                ascii   sce40_stats_aec_update
+48  0x00000943 0x00000943 22  23   .dynstr                ascii   sce40_stats_asd_update
+49  0x0000095a 0x0000095a 22  23   .dynstr                ascii   sce40_stats_awb_update
+50  0x00000971 0x00000971 15  16   .dynstr                ascii   sce40_streamoff
+51  0x00000981 0x00000981 20  21   .dynstr                ascii   sce40_trigger_update
+52  0x00000996 0x00000996 15  16   .dynstr                ascii   __aeabi_memclr8
+53  0x000009a6 0x000009a6 15  16   .dynstr                ascii   __aeabi_memcpy4
+54  0x000009b6 0x000009b6 15  16   .dynstr                ascii   __aeabi_memcpy8
+55  0x000009c6 0x000009c6 16  17   .dynstr                ascii   __stack_chk_fail
+56  0x000009d7 0x000009d7 17  18   .dynstr                ascii   __stack_chk_guard
+57  0x000009e9 0x000009e9 4   5    .dynstr                ascii   free
+58  0x000009ee 0x000009ee 41  42   .dynstr                ascii   isp_sub_module_util_append_hw_update_list
+59  0x00000a18 0x00000a18 48  49   .dynstr                ascii   isp_sub_module_util_configure_from_chromatix_bit
+60  0x00000a49 0x00000a49 43  44   .dynstr                ascii   isp_sub_module_util_get_awb_cct_with_H_type
+61  0x00000a75 0x00000a75 35  36   .dynstr                ascii   isp_sub_module_util_store_hw_update
+62  0x00000a9d 0x00000a9d 7   8    .dynstr                ascii   libm.so
+63  0x00000aa5 0x00000aa5 6   7    .dynstr                ascii   malloc
+64  0x00000aac 0x00000aac 6   7    .dynstr                ascii   memcmp
+65  0x00000ab3 0x00000ab3 18  19   .dynstr                ascii   pthread_mutex_lock
+66  0x00000ac6 0x00000ac6 20  21   .dynstr                ascii   pthread_mutex_unlock
+67  0x00000adb 0x00000adb 5   6    .dynstr                ascii   round
+68  0x00000ae1 0x00000ae1 35  36   .dynstr                ascii   sce40_copy_triangles_from_chromatix
+69  0x00000b05 0x00000b05 18  19   .dynstr                ascii   sce40_select_table
+70  0x00000b18 0x00000b18 23  24   .dynstr                ascii   sce_copy_triangle_float
+71  0x00000b30 0x00000b30 33  34   .dynstr                ascii   sce_copy_triangles_from_chromatix
+72  0x00000b52 0x00000b52 33  34   .dynstr                ascii   trigger_interpolate_sce_triangles
+73  0x00000b74 0x00000b74 37  38   .dynstr                ascii   trigger_interpolate_sce_triangles_int
+74  0x00000b9a 0x00000b9a 31  32   .dynstr                ascii   trigger_interpolate_sce_vectors
+75  0x00000bba 0x00000bba 25  26   .dynstr                ascii   trigger_sce_get_triangles
+76  0x00000bd4 0x00000bd4 42  43   .dynstr                ascii   isp_sub_module_util_get_aec_ratio_lowlight
+77  0x00000bff 0x00000bff 36  37   .dynstr                ascii   isp_sub_module_util_is_adrc_gain_set
+78  0x00000c24 0x00000c24 32  33   .dynstr                ascii   sce_adjust_dest_triangle_by_adrc
+79  0x00000c45 0x00000c45 45  46   .dynstr                ascii   isp_sub_module_util_find_region_index_spatial
+80  0x00000c73 0x00000c73 5   6    .dynstr                ascii   abort
+81  0x00000c79 0x00000c79 7   8    .dynstr                ascii   fprintf
+82  0x00000c81 0x00000c81 6   7    .dynstr                ascii   stderr
+83  0x00000c88 0x00000c88 4   5    .dynstr                ascii   _end
+84  0x00000c8d 0x00000c8d 6   7    .dynstr                ascii   _edata
+85  0x00000c94 0x00000c94 11  12   .dynstr                ascii   __bss_start
+86  0x00000ca0 0x00000ca0 12  13   .dynstr                ascii   libcutils.so
+87  0x00000cad 0x00000cad 19  20   .dynstr                ascii   libmmcamera2_mct.so
+88  0x00000cc1 0x00000cc1 29  30   .dynstr                ascii   libmmcamera_isp_sub_module.so
+89  0x00000cdf 0x00000cdf 18  19   .dynstr                ascii   libmmcamera_dbg.so
+90  0x00000cf2 0x00000cf2 9   10   .dynstr                ascii   libc++.so
+91  0x00000d24 0x00000d24 8   36   .gnu.hash              utf32le 69:;=>@C
+92  0x00000d68 0x00000d68 5   6    .gnu.hash              ascii   &Nb*a
+93  0x00000d7f 0x00000d7f 4   5    .gnu.hash              ascii   `Cp?
+94  0x00000d86 0x00000d86 4   5    .gnu.hash              ascii   J[CE
+95  0x00001757 0x00001756 4   5    .text                  ascii   \n\b0\e
+96  0x000017fd 0x000017fc 5   6    .text                  ascii   HxDpG
+97  0x0000180d 0x0000180c 9   10   .text                  ascii   FBHBIxDyD
+98  0x00001825 0x00001824 4   5    .text                  ascii   !>J@
+99  0x00001849 0x00001848 5   6    .text                  ascii   F FyD
+100 0x00001854 0x00001854 4   5    .text                  ascii   5HxD
+101 0x00001866 0x00001866 8   9    .text                  ascii   4I2JyDxD
+102 0x00001877 0x00001876 4   5    .text                  ascii    zDG
+103 0x0000188d 0x0000188c 4   5    .text                  ascii   !4JO
+104 0x000018b6 0x000018b6 4   5    .text                  ascii    F{D
+105 0x000018cd 0x000018cc 4   5    .text                  ascii   h@oP
+106 0x000018f5 0x000018f4 4   5    .text                  ascii   h@oP
+107 0x0000196e 0x0000196e 4   5    .text                  ascii   \vHxD
+108 0x0000197f 0x0000197e 4   5    .text                  ascii   !\aJ@
+109 0x000019b0 0x000019b0 4   5    .text                  ascii   \vHxD
+110 0x000019c1 0x000019c0 7   8    .text                  ascii   !\bJo#xD
+111 0x000019f4 0x000019f4 4   5    .text                  ascii   \nHxD
+112 0x000019f9 0x000019f8 4   5    .text                  ascii   h@ox
+113 0x00001a32 0x00001a32 4   5    .text                  ascii   Ri\bF
+114 0x00001a3c 0x00001a3c 8   9    .text                  ascii   \rK{D\eh[o
+115 0x00001a86 0x00001a86 4   5    .text                  ascii   Ri\bF
+116 0x00001a90 0x00001a90 8   9    .text                  ascii   \rK{D\eh[o
+117 0x00001ada 0x00001ada 4   5    .text                  ascii   Ri\bF
+118 0x00001ae4 0x00001ae4 8   9    .text                  ascii   \rK{D\eh[o
+119 0x00001b2e 0x00001b2e 4   5    .text                  ascii   Ri\bF
+120 0x00001b38 0x00001b38 8   9    .text                  ascii   \rK{D\eh[o
+121 0x00001b82 0x00001b82 4   5    .text                  ascii   Ri\bF
+122 0x00001b8c 0x00001b8c 8   9    .text                  ascii   \rK{D\eh[o
+123 0x00001bd6 0x00001bd6 4   5    .text                  ascii   Ri\bF
+124 0x00001bde 0x00001bde 9   11   .text                  utf8    ƻ\rK{D\eh[o
+125 0x00001c03 0x00001c02 4   5    .text                  ascii    bFO
+126 0x00001c2a 0x00001c2a 4   5    .text                  ascii   Ri\bF
+127 0x00001c34 0x00001c34 8   9    .text                  ascii   \rK{D\eh[o
+128 0x00001e02 0x00001e02 4   5    .text                  ascii   Vq(F
+129 0x00001e3d 0x00001e3c 5   6    .text                  ascii   gXF9F
+130 0x00001e5a 0x00001e5a 4   5    .text                  ascii   8qPF
+131 0x00001e62 0x00001e62 4   5    .text                  ascii    F1F
+132 0x00001e6c 0x00001e6c 4   5    .text                  ascii   )Fx"
+133 0x00001e75 0x00001e74 7   8    .text                  ascii   FHFYFx"
+134 0x00001e8d 0x00001e8c 7   8    .text                  ascii   C@FQFx"
+135 0x00001ea5 0x00001ea4 5   6    .text                  ascii   IxDyD
+136 0x00001ec2 0x00001ec2 4   5    .text                  ascii   z#xD
+137 0x00001ed0 0x00001ed0 4   5    .text                  ascii   9F/F
+138 0x00001ee7 0x00001ee6 5   6    .text                  ascii   `9Fx"
+139 0x00001f16 0x00001f16 13  15   .text                  utf8    %Xų6H6JxDIhzD
+140 0x00001f39 0x00001f38 4   5    .text                  ascii   !0J@
+141 0x00001f64 0x00001f64 4   5    .text                  ascii    HxD
+142 0x00001f69 0x00001f68 4   5    .text                  ascii   h@o`
+143 0x00001fa0 0x00001fa0 4   5    .text                  ascii   vsxD
+144 0x00001fd8 0x00001fd8 4   5    .text                  ascii   ef(F
+145 0x000020d5 0x000020d4 5   6    .text                  ascii   F\t-xD
+146 0x000023b6 0x000023b6 4   5    .text                  ascii   (vx"
+147 0x000023d2 0x000023d2 4   5    .text                  ascii   xDyD
+148 0x00002528 0x00002528 5   6    .text                  ascii   "FxD@
+149 0x0000261c 0x0000261c 5   6    .text                  ascii   "FxD@
+150 0x0000264f 0x0000264e 4   5    .text                  ascii   !}J@
+151 0x00002656 0x00002656 4   5    .text                  ascii   xDzD
+152 0x000026a4 0x000026a4 5   6    .text                  ascii   S+`I`
+153 0x000026ab 0x000026aa 8   9    .text                  ascii   \v]HyDxDa
+154 0x000026f9 0x000026f8 6   7    .text                  ascii   ZzDxDa
+155 0x00002732 0x00002732 4   5    .text                  ascii   @HxD
+156 0x00002737 0x00002736 4   5    .text                  ascii   h@o\b
+157 0x0000273f 0x0000273e 4   5    .text                  ascii   !>H@
+158 0x00002745 0x00002744 5   6    .text                  ascii   #zDxD
+159 0x0000276b 0x0000276a 4   5    .text                  ascii   !)HO
+160 0x00002771 0x00002770 5   6    .text                  ascii   szDxD
+161 0x00002780 0x00002780 8   9    .text                  ascii   2H3IxDyD
+162 0x0000279b 0x0000279a 4   5    .text                  ascii   !-H@
+163 0x000027a1 0x000027a0 5   6    .text                  ascii   CzDxD
+164 0x000027c0 0x000027c0 4   5    .text                  ascii   &HxD
+165 0x000027ef 0x000027ee 7   8    .text                  ascii   ?UUUUUU
+166 0x00002899 0x00002898 4   5    .text                  ascii   h@op
+167 0x000028a8 0x000028a8 4   5    .text                  ascii   h/xD
+168 0x00002966 0x00002966 5   6    .text                  ascii   qh\bDB
+169 0x00002998 0x00002998 4   5    .text                  ascii   @FIF
+170 0x000029fa 0x000029fa 4   5    .text                  ascii   xDyD
+171 0x00002a31 0x00002a30 5   6    .text                  ascii   CzDxD
+172 0x00002a55 0x00002a54 7   8    .text                  ascii   (yD\th\tn
+173 0x00002a6f 0x00002a6e 5   6    .text                  ascii   CzDxD
+174 0x00002a93 0x00002a92 7   8    .text                  ascii   (yD\th\tn
+175 0x00002aad 0x00002aac 5   6    .text                  ascii   czDxD
+176 0x00002ad5 0x00002ad4 4   5    .text                  ascii   hyD\a
+177 0x00002ada 0x00002ada 4   5    .text                  ascii   \th\tn
+178 0x00002b95 0x00002b94 6   7    .text                  ascii   61CNF\a
+179 0x00002c0f 0x00002c0e 4   5    .text                  ascii   C!`\v
+180 0x00002c28 0x00002c28 6   7    .text                  ascii   _@yD\nh
+181 0x00002c38 0x00002c38 5   6    .text                  ascii    <\bC'
+182 0x00002c3e 0x00002c3e 5   6    .text                  ascii   {D\eh\t
+183 0x00002c48 0x00002c48 4   5    .text                  ascii   \bC0`
+184 0x00002cb1 0x00002cb0 4   5    .text                  ascii   p\aF\a
+185 0x00002d1c 0x00002d1c 4   5    .text                  ascii   ph1i
+186 0x00002d2e 0x00002d2e 5   6    .text                  ascii   !igi.
+187 0x00002d48 0x00002d48 4   5    .text                  ascii   ga!a
+188 0x00002d53 0x00002d52 4   5    .text                  ascii   `\nF\b
+189 0x00002d5c 0x00002d5c 5   6    .text                  ascii   _@\bCO
+190 0x00002d6e 0x00002d6e 5   6    .text                  ascii   %```\n
+191 0x00002d90 0x00002d90 4   5    .text                  ascii   _CxD
+192 0x00002e85 0x00002e84 4   5    .text                  ascii   h1i\r
+193 0x00002ec2 0x00002ec2 5   6    .text                  ascii   _@\bCO
+194 0x00002ef6 0x00002ef6 4   5    .text                  ascii   _CxD
+195 0x00002efb 0x00002efa 4   5    .text                  ascii   hq`'
+196 0x0000302a 0x0000302a 5   6    .text                  ascii   _G8C?
+197 0x00003058 0x00003058 4   5    .text                  ascii   _CxD
+198 0x0000305d 0x0000305c 4   5    .text                  ascii   hq`'
+199 0x0000308c 0x0000308c 4   5    .text                  ascii   !SxD
+200 0x000030e2 0x000030e2 5   6    .text                  ascii   \b \nFo
+201 0x0000317e 0x0000317e 7   9    .text                  utf8    \f%`g`\aF
+202 0x000031bc 0x000031bc 5   6    .text                  ascii   _C8@\t
+203 0x000032f6 0x000032f6 4   5    .text                  ascii   ai a
+204 0x00003343 0x00003342 4   5    .text                  ascii   hq`'
+205 0x00003386 0x00003386 4   5    .text                  ascii   0hqh
+206 0x0000338d 0x0000338c 5   6    .text                  ascii   h7ivi
+207 0x000033fd 0x000033fc 4   5    .text                  ascii   `yD%
+208 0x0000341a 0x0000341a 4   5    .text                  ascii   \thjb
+209 0x00003431 0x00003430 5   6    .text                  ascii   C `\bn
+210 0x0000344c 0x0000344c 4   5    .text                  ascii   \SxD
+211 0x0000345c 0x0000345c 4   5    .text                  ascii   8hyh
+212 0x000034c7 0x000034c6 10  11   .text                  ascii   `.`*ah`yD%
+213 0x000034e8 0x000034e8 4   5    .text                  ascii   \th"`
+214 0x00003501 0x00003500 5   6    .text                  ascii   C``\bn
+215 0x00003528 0x00003528 4   5    .text                  ascii   8hyh
+216 0x00003577 0x00003576 4   5    .text                  ascii   A9CO
+217 0x00003592 0x00003592 4   5    .text                  ascii   .`*a
+218 0x00003597 0x00003596 4   5    .text                  ascii   `yD%
+219 0x000035b0 0x000035b0 4   5    .text                  ascii   \th"`
+220 0x000035e0 0x000035e0 4   5    .text                  ascii   uSxD
+221 0x000035f0 0x000035f0 4   5    .text                  ascii   8hyh
+222 0x0000363f 0x0000363e 4   5    .text                  ascii   A9CO
+223 0x0000365a 0x0000365a 4   5    .text                  ascii   .`+a
+224 0x0000365f 0x0000365e 4   5    .text                  ascii   `yD%
+225 0x00003678 0x00003678 4   5    .text                  ascii   \th"`
+226 0x000036b8 0x000036b8 4   5    .text                  ascii   8hyh
+227 0x000036e6 0x000036e6 4   5    .text                  ascii   /hnh
+228 0x0000371d 0x0000371c 9   10   .text                  ascii   `n`\bC/`(a
+229 0x0000374a 0x0000374a 4   5    .text                  ascii   \bC a
+230 0x0000379b 0x0000379a 5   6    .text                  ascii   F0FIF
+231 0x000037af 0x000037ae 8   9    .text                  ascii   \nLHMIxDJ
+232 0x000037e9 0x000037e8 4   5    .text                  ascii   !AJO
+233 0x000037fc 0x000037fc 4   5    .text                  ascii   =HxD
+234 0x00003c46 0x00003c46 4   5    .text                  ascii   \vcxD
+235 0x00003c66 0x00003c66 8   9    .text                  ascii   T#yDzD\vh
+236 0x00003c99 0x00003c98 4   5    .text                  ascii    zD@
+237 0x00003cc6 0x00003cc6 4   5    .text                  ascii   .cxD
+238 0x00003d79 0x00003d78 7   8    .text                  ascii   (yD\th\tn
+239 0x00003db1 0x00003db0 7   8    .text                  ascii   (yD\th\tn
+240 0x00003dd9 0x00003dd8 4   5    .text                  ascii    zD@
+241 0x00003df5 0x00003df4 8   9    .text                  ascii   (yD\th\tn$
+242 0x00003e06 0x00003e06 6   7    .text                  ascii   sixD1h
+243 0x00003e4d 0x00003e4c 8   9    .text                  ascii   (yD\th\tn$
+244 0x00003e5e 0x00003e5e 6   7    .text                  ascii   sixD1h
+245 0x00003ea5 0x00003ea4 7   8    .text                  ascii   (yD\th\tn
+246 0x00003ee5 0x00003ee4 7   8    .text                  ascii   (yD\th\tn
+247 0x00003f2d 0x00003f2c 7   8    .text                  ascii   (yD\th\tn
+248 0x00003f6d 0x00003f6c 7   8    .text                  ascii   (yD\th\tn
+249 0x00003f82 0x00003f82 4   5    .text                  ascii   1lxD
+250 0x00003fb5 0x00003fb4 7   8    .text                  ascii   (yD\th\tn
+251 0x00003ff5 0x00003ff4 7   8    .text                  ascii   (yD\th\tn
+252 0x00004035 0x00004034 7   8    .text                  ascii   (yD\th\tn
+253 0x00004075 0x00004074 7   8    .text                  ascii   (yD\th\tn
+254 0x000040b5 0x000040b4 7   8    .text                  ascii   (yD\th\tn
+255 0x000040ed 0x000040ec 8   9    .text                  ascii   (yD\th\tn(
+256 0x0000414d 0x0000414c 8   9    .text                  ascii   (yD\th\tn&
+257 0x0000419a 0x0000419a 4   5    .text                  ascii   `\axD
+258 0x000041a9 0x000041a8 8   9    .text                  ascii   (yD\th\tn&
+259 0x000041c4 0x000041c4 4   5    .text                  ascii   \a qh
+260 0x00004205 0x00004204 7   8    .text                  ascii   (yD\th\tn
+261 0x0000422f 0x0000422e 4   5    .text                  ascii   \rzD@
+262 0x00004251 0x00004250 7   8    .text                  ascii   (yD\th\tn
+263 0x0000427b 0x0000427a 4   5    .text                  ascii   \rzD@
+264 0x0000428e 0x0000428e 4   5    .text                  ascii   $\bxD
+265 0x0000429d 0x0000429c 7   8    .text                  ascii   (yD\th\tn
+266 0x000042ac 0x000042ac 8   9    .text                  ascii   8\bsl1lxD
+267 0x000042c7 0x000042c6 4   5    .text                  ascii   \rzD@
+268 0x000042da 0x000042da 4   5    .text                  ascii   `\bxD
+269 0x000042e9 0x000042e8 7   8    .text                  ascii   (yD\th\tn
+270 0x000042f8 0x000042f8 8   9    .text                  ascii   t\bsl1lxD
+271 0x00004313 0x00004312 4   5    .text                  ascii   \rzD@
+272 0x00004335 0x00004334 7   8    .text                  ascii   (yD\th\tn
+273 0x0000435f 0x0000435e 4   5    .text                  ascii   \vzD@
+274 0x00004381 0x00004380 7   8    .text                  ascii   (yD\th\tn
+275 0x000043b2 0x000043b2 4   5    .text                  ascii   \b\txD
+276 0x000043c1 0x000043c0 7   8    .text                  ascii   (yD\th\tn
+277 0x000043d1 0x000043d0 7   8    .text                  ascii   \tso1oxD
+278 0x000043eb 0x000043ea 4   5    .text                  ascii   \vzD@
+279 0x000043fe 0x000043fe 4   5    .text                  ascii   D\txD
+280 0x0000440d 0x0000440c 7   8    .text                  ascii   (yD\th\tn
+281 0x0000443e 0x0000443e 4   5    .text                  ascii   t\txD
+282 0x0000444d 0x0000444c 7   8    .text                  ascii   (yD\th\tn
+283 0x00004485 0x00004484 8   9    .text                  ascii   (yD\th\tn(
+284 0x000044e5 0x000044e4 8   9    .text                  ascii   (yD\th\tn&
+285 0x00004532 0x00004532 4   5    .text                  ascii   8\nxD
+286 0x00004541 0x00004540 8   9    .text                  ascii   (yD\th\tn&
+287 0x0000459d 0x0000459c 7   8    .text                  ascii   (yD\th\tn
+288 0x000045af 0x000045ae 5   6    .text                  ascii   j3kxD
+289 0x000045c7 0x000045c6 4   5    .text                  ascii   \rzD@
+290 0x000045e9 0x000045e8 7   8    .text                  ascii   (yD\th\tn
+291 0x000045fb 0x000045fa 5   6    .text                  ascii   j3kxD
+292 0x00004613 0x00004612 4   5    .text                  ascii   \rzD@
+293 0x00004635 0x00004634 7   8    .text                  ascii   (yD\th\tn
+294 0x0000465f 0x0000465e 4   5    .text                  ascii   \rzD@
+295 0x00004672 0x00004672 4   5    .text                  ascii   8\vxD
+296 0x00004681 0x00004680 7   8    .text                  ascii   (yD\th\tn
+297 0x00004690 0x00004690 4   5    .text                  ascii   L\vql
+298 0x000046ab 0x000046aa 4   5    .text                  ascii   \rzD@
+299 0x000046be 0x000046be 4   5    .text                  ascii   t\vxD
+300 0x000046cd 0x000046cc 7   8    .text                  ascii   (yD\th\tn
+301 0x000046df 0x000046de 5   6    .text                  ascii   m3nxD
+302 0x000046f7 0x000046f6 4   5    .text                  ascii   \vzD@
+303 0x00004719 0x00004718 7   8    .text                  ascii   (yD\th\tn
+304 0x00004759 0x00004758 7   8    .text                  ascii   (yD\th\tn
+305 0x00004783 0x00004782 4   5    .text                  ascii   \vzD@
+306 0x000047a5 0x000047a4 7   8    .text                  ascii   (yD\th\tn
+307 0x000047d6 0x000047d6 4   5    .text                  ascii   L\fxD
+308 0x000047e5 0x000047e4 7   8    .text                  ascii   (yD\th\tn
+309 0x0000480e 0x0000480e 4   5    .text                  ascii   t\fxD
+310 0x0000481d 0x0000481c 8   9    .text                  ascii   (yD\th\tn(
+311 0x0000482f 0x0000482e 5   6    .text                  ascii   i5jxD
+312 0x0000487d 0x0000487c 8   9    .text                  ascii   (yD\th\tn&
+313 0x000048d9 0x000048d8 8   9    .text                  ascii   (yD\th\tn&
+314 0x000048e8 0x000048e8 4   5    .text                  ascii   $\r7j
+315 0x00004926 0x00004926 4   5    .text                  ascii   \\rxD
+316 0x00004935 0x00004934 7   8    .text                  ascii   (yD\th\tn
+317 0x00004944 0x00004944 8   9    .text                  ascii   p\rsk1kxD
+318 0x0000495f 0x0000495e 4   5    .text                  ascii   \rzD@
+319 0x00004981 0x00004980 7   8    .text                  ascii   (yD\th\tn
+320 0x00004991 0x00004990 7   8    .text                  ascii   \rsk1kxD
+321 0x000049ab 0x000049aa 4   5    .text                  ascii   \rzD@
+322 0x000049cd 0x000049cc 7   8    .text                  ascii   (yD\th\tn
+323 0x000049f7 0x000049f6 4   5    .text                  ascii   \rzD@
+324 0x00004a19 0x00004a18 7   8    .text                  ascii   (yD\th\tn
+325 0x00004a43 0x00004a42 4   5    .text                  ascii   \rzD@
+326 0x00004a65 0x00004a64 7   8    .text                  ascii   (yD\th\tn
+327 0x00004a76 0x00004a76 6   7    .text                  ascii   sn1nxD
+328 0x00004a8f 0x00004a8e 4   5    .text                  ascii   \vzD@
+329 0x00004ab1 0x00004ab0 7   8    .text                  ascii   (yD\th\tn
+330 0x00004af1 0x00004af0 7   8    .text                  ascii   (yD\th\tn
+331 0x00004b1b 0x00004b1a 4   5    .text                  ascii   \vzD@
+332 0x00004b3d 0x00004b3c 7   8    .text                  ascii   (yD\th\tn
+333 0x00004b7d 0x00004b7c 7   8    .text                  ascii   (yD\th\tn
+334 0x00004bb5 0x00004bb4 8   9    .text                  ascii   (yD\th\tn(
+335 0x00004bc5 0x00004bc4 7   8    .text                  ascii   \ruj7jxD
+336 0x00004c15 0x00004c14 8   9    .text                  ascii   (yD\th\tn&
+337 0x00004c25 0x00004c24 4   5    .text                  ascii   \rsju
+338 0x00004c62 0x00004c62 4   5    .text                  ascii   P\rxD
+339 0x00004c71 0x00004c70 8   9    .text                  ascii   (yD\th\tn'
+340 0x00004c80 0x00004c80 4   5    .text                  ascii   <\rwj
+341 0x00004c86 0x00004c86 4   5    .text                  ascii   #PxD
+342 0x00004c8e 0x00004c8e 4   5    .text                  ascii   \a 1i
+343 0x00004ccf 0x00004cce 8   9    .text                  ascii   (yD\th\tn\a
+344 0x00004ce3 0x00004ce2 5   6    .text                  ascii   kqkxD
+345 0x00004cfb 0x00004cfa 4   5    .text                  ascii   \rzD@
+346 0x00004d1d 0x00004d1c 7   8    .text                  ascii   (yD\th\tn
+347 0x00004d2f 0x00004d2e 5   6    .text                  ascii   kqkxD
+348 0x00004d47 0x00004d46 4   5    .text                  ascii   \rzD@
+349 0x00004d69 0x00004d68 7   8    .text                  ascii   (yD\th\tn
+350 0x00004d78 0x00004d78 4   5    .text                  ascii   t\f3m
+351 0x00004d93 0x00004d92 4   5    .text                  ascii   \rzD@
+352 0x00004da6 0x00004da6 4   5    .text                  ascii   L\fxD
+353 0x00004db5 0x00004db4 7   8    .text                  ascii   (yD\th\tn
+354 0x00004dc4 0x00004dc4 4   5    .text                  ascii   8\f3m
+355 0x00004ddf 0x00004dde 4   5    .text                  ascii   \rzD@
+356 0x00004e01 0x00004e00 7   8    .text                  ascii   (yD\th\tn
+357 0x00004e13 0x00004e12 5   6    .text                  ascii   nqnxD
+358 0x00004e2b 0x00004e2a 4   5    .text                  ascii   \vzD@
+359 0x00004e4d 0x00004e4c 7   8    .text                  ascii   (yD\th\tn
+360 0x00004e8d 0x00004e8c 7   8    .text                  ascii   (yD\th\tn
+361 0x00004eb9 0x00004eb8 4   5    .text                  ascii   \vzD@
+362 0x00004ecc 0x00004ecc 4   5    .text                  ascii   h\vxD
+363 0x00004edb 0x00004eda 7   8    .text                  ascii   (yD\th\tn
+364 0x00004f0e 0x00004f0e 4   5    .text                  ascii   4\vxD
+365 0x00004f1d 0x00004f1c 7   8    .text                  ascii   (yD\th\tn
+366 0x00004f46 0x00004f46 4   5    .text                  ascii   \f\vxD
+367 0x00004f55 0x00004f54 7   8    .text                  ascii   (yD\th\tn
+368 0x00004f7f 0x00004f7e 4   5    .text                  ascii   \rzD@
+369 0x00004fa1 0x00004fa0 7   8    .text                  ascii   (yD\th\tn
+370 0x00004fcb 0x00004fca 4   5    .text                  ascii   \rzD@
+371 0x00004fed 0x00004fec 7   8    .text                  ascii   (yD\th\tn
+372 0x00004ffd 0x00004ffc 7   8    .text                  ascii   \nsm1mxD
+373 0x00005017 0x00005016 4   5    .text                  ascii   \rzD@
+374 0x0000502a 0x0000502a 4   5    .text                  ascii   X\nxD
+375 0x00005039 0x00005038 7   8    .text                  ascii   (yD\th\tn
+376 0x00005048 0x00005048 8   9    .text                  ascii   D\nsm1mxD
+377 0x00005063 0x00005062 4   5    .text                  ascii   \rzD@
+378 0x00005085 0x00005084 7   8    .text                  ascii   (yD\th\tn
+379 0x000050af 0x000050ae 4   5    .text                  ascii   \vzD@
+380 0x000050d1 0x000050d0 7   8    .text                  ascii   (yD\th\tn
+381 0x00005111 0x00005110 8   9    .text                  ascii   (yD\th\tn
+382 0x0000513f 0x0000513e 4   5    .text                  ascii   \vzD@
+383 0x00005152 0x00005152 4   5    .text                  ascii   p\txD
+384 0x00005161 0x00005160 7   8    .text                  ascii   (yD\th\tn
+385 0x00005192 0x00005192 4   5    .text                  ascii   @FYF
+386 0x000051a8 0x000051a8 4   5    .text                  ascii   @F1F
+387 0x000052c1 0x000052c0 4   5    .text                  ascii    \t\nA
+388 0x00005311 0x00005310 4   5    .text                  ascii    \t\nA
+389 0x00005424 0x00005424 5   6    .text                  ascii   \b \t\nA
+390 0x00005475 0x00005474 4   5    .text                  ascii    \t\nA
+391 0x000054c4 0x000054c4 5   6    .text                  ascii   0 \t\vA
+392 0x000054fc 0x000054fc 5   6    .text                  ascii   ` I\fA
+393 0x00005526 0x00005526 5   6    .text                  ascii   H \t\vA
+394 0x0000555e 0x0000555e 5   6    .text                  ascii   x I\fA
+395 0x00005588 0x00005588 5   6    .text                  ascii   \f \t\nA
+396 0x000055d8 0x000055d8 5   6    .text                  ascii     \t\nA
+397 0x000058a7 0x000058a6 4   5    .text                  ascii    zD&
+398 0x000058b1 0x000058b0 4   5    .text                  ascii   h@oP
+399 0x000058e3 0x000058e2 4   5    .text                  ascii   h@oP
+400 0x00005906 0x00005906 4   5    .text                  ascii   |HxD
+401 0x00005b6d 0x00005b6c 6   7    .text                  ascii   !if!FO
+402 0x00005b89 0x00005b88 4   5    .text                  ascii   h@o`
+403 0x00005bb3 0x00005bb2 4   5    .text                  ascii   h@oX
+404 0x00005bbb 0x00005bba 4   5    .text                  ascii   !\fJO
+405 0x00005c47 0x00005c46 4   5    .text                  ascii   h@oX
+406 0x00005c9d 0x00005c9c 4   5    .text                  ascii   h@o`
+407 0x00005cbd 0x00005cbc 4   5    .text                  ascii   %efM
+408 0x00005cc7 0x00005cc6 4   5    .text                  ascii   h@o`
+409 0x00005cf4 0x00005cf4 5   6    .text                  ascii   xp(XP
+410 0x00005d15 0x00005d14 4   5    .text                  ascii   h@o`
+411 0x00005d40 0x00005d40 5   6    .text                  ascii   |p(X`
+412 0x00005d65 0x00005d64 4   5    .text                  ascii   h@o`
+413 0x00005d93 0x00005d92 4   5    .text                  ascii   @(X`
+414 0x00005db2 0x00005db2 4   5    .text                  ascii   zHxD
+415 0x00005db7 0x00005db6 4   5    .text                  ascii   h@o`
+416 0x00005dbf 0x00005dbe 4   5    .text                  ascii   !wJ@
+417 0x00005de5 0x00005de4 4   5    .text                  ascii   p(X`
+418 0x00005e04 0x00005e04 4   5    .text                  ascii   hHxD
+419 0x00005e09 0x00005e08 4   5    .text                  ascii   h@o`
+420 0x00005e11 0x00005e10 4   5    .text                  ascii   !fJ@
+421 0x00005e36 0x00005e36 5   6    .text                  ascii   pp(X`
+422 0x00005e56 0x00005e56 4   5    .text                  ascii   WHxD
+423 0x00005e5b 0x00005e5a 4   5    .text                  ascii   h@o`
+424 0x00005e63 0x00005e62 4   5    .text                  ascii   !TJ@
+425 0x00005e88 0x00005e88 5   6    .text                  ascii   tp(X`
+426 0x00005ea8 0x00005ea8 4   5    .text                  ascii   EHxD
+427 0x00005ead 0x00005eac 4   5    .text                  ascii   h@o`
+428 0x00005eb5 0x00005eb4 4   5    .text                  ascii   !CJ@
+429 0x00005eec 0x00005eec 10  11   .text                  ascii   7I8JyDzD\vh
+430 0x00005f09 0x00005f08 5   6    .text                  ascii   c2JyD
+431 0x00005f1f 0x00005f1e 11  12   .text                  ascii    `f.H.IxDyD
+432 0x00005f41 0x00005f40 4   5    .text                  ascii   !(J@
+433 0x00005f75 0x00005f74 5   6    .text                  ascii   $tI\fr
+434 0x00006053 0x00006052 4   5    .text                  ascii   h@oX
+435 0x0000607b 0x0000607a 4   5    .text                  ascii   h@oX
+436 0x00006083 0x00006082 4   5    .text                  ascii   !\nJO
+437 0x000060e1 0x000060e0 7   8    .text                  ascii   \a!F8FH"
+438 0x000060f1 0x000060f0 5   8    .text                  utf8    鐹UHxD
+439 0x000060f9 0x000060f8 4   5    .text                  ascii   h@oh
+440 0x00006108 0x00006108 4   5    .text                  ascii   QJyD
+441 0x00006147 0x00006146 6   8    .text                  utf8    g8hس)m
+442 0x00006174 0x00006174 4   5    .text                  ascii   2HxD
+443 0x00006183 0x00006182 4   5    .text                  ascii   !/J@
+444 0x00006188 0x00006188 4   5    .text                  ascii   NsxD
+445 0x000061ad 0x000061ac 4   5    .text                  ascii   !4J@
+446 0x000061b2 0x000061b2 4   5    .text                  ascii   ZsxD
+447 0x000061c4 0x000061c4 4   5    .text                  ascii   'HxD
+448 0x000061c9 0x000061c8 4   5    .text                  ascii   h@ox
+449 0x000061d1 0x000061d0 4   5    .text                  ascii   !%J@
+450 0x000061d6 0x000061d6 4   5    .text                  ascii   ucxD
+451 0x000061f8 0x000061f8 4   5    .text                  ascii   }cxD
+452 0x0000620f 0x0000620e 4   5    .text                  ascii   h@o`
+453 0x0000621c 0x0000621c 4   5    .text                  ascii   ssxD
+454 0x00006307 0x00006306 4   5    .text                  ascii   h@o`
+455 0x00006339 0x00006338 4   5    .text                  ascii   !\rJ@
+456 0x000063ab 0x000063aa 5   6    .text                  ascii   $x"4P
+457 0x00006417 0x00006416 4   5    .text                  ascii   h@oX
+458 0x0000641f 0x0000641e 4   5    .text                  ascii   !\aJ@
+459 0x00006470 0x00006470 9   10   .text                  ascii   \tIyD\thIoY
+460 0x00006522 0x00006522 4   5    .text                  ascii   xDyD
+461 0x00006542 0x00006542 4   5    .text                  ascii   =3xD
+462 0x00006555 0x00006554 4   5    .text                  ascii   h@o`
+463 0x00006566 0x00006566 4   5    .text                  ascii   \a3xD
+464 0x00006698 0x00006698 5   8    .text                  utf8    )+{x
+465 0x000066d8 0x000066d8 4   7    .text                  utf8    $K}
+466 0x0000673f 0x0000673e 5   6    .text                  ascii   IxDyD
+467 0x00006760 0x00006760 4   5    .text                  ascii   N3xD
+468 0x00006791 0x00006790 5   6    .text                  ascii   IxDyD
+469 0x000067ba 0x000067ba 4   5    .text                  ascii   R3xD
+470 0x000067e3 0x000067e2 7   8    .text                  ascii   (yD\th\tn
+471 0x000067fc 0x000067fc 4   5    .text                  ascii   S3xD
+472 0x00006827 0x00006826 7   8    .text                  ascii   (yD\th\tn
+473 0x00006844 0x00006844 4   5    .text                  ascii   \b\vxD
+474 0x0000686f 0x0000686e 8   9    .text                  ascii   (yD\th\tn\e
+475 0x0000689b 0x0000689a 4   5    .text                  ascii    zD@
+476 0x000068b3 0x000068b2 7   8    .text                  ascii   (yD\th\tn
+477 0x000068c3 0x000068c2 4   5    .text                  ascii   !}J@
+478 0x000068c8 0x000068c8 4   5    .text                  ascii   W3xD
+479 0x000068d6 0x000068d6 4   5    .text                  ascii   zHxD
+480 0x000068e3 0x000068e2 7   8    .text                  ascii   (yD\th\tn
+481 0x000068f3 0x000068f2 4   5    .text                  ascii   !tJO
+482 0x000068f8 0x000068f8 4   5    .text                  ascii   VsxD
+483 0x00006912 0x00006912 4   5    .text                  ascii   oHxD
+484 0x0000691f 0x0000691e 7   8    .text                  ascii   (yD\th\tn
+485 0x00006934 0x00006934 4   5    .text                  ascii   Y3xD
+486 0x00006948 0x00006948 4   5    .text                  ascii   eHxD
+487 0x00006955 0x00006954 8   9    .text                  ascii   (yD\th\tn\e
+488 0x00006981 0x00006980 4   5    .text                  ascii    zD@
+489 0x0000698c 0x0000698c 4   5    .text                  ascii   XHxD
+490 0x00006999 0x00006998 7   8    .text                  ascii   (yD\th\tn
+491 0x000069a9 0x000069a8 4   5    .text                  ascii   !TJO
+492 0x000069ae 0x000069ae 4   5    .text                  ascii   WsxD
+493 0x000069bc 0x000069bc 4   5    .text                  ascii   PHxD
+494 0x000069c9 0x000069c8 7   8    .text                  ascii   (yD\th\tn
+495 0x000069f8 0x000069f8 4   5    .text                  ascii   EHxD
+496 0x00006a08 0x00006a08 6   7    .text                  ascii   yD\th\tn
+497 0x00006a38 0x00006a38 6   7    .text                  ascii   )F"F3F
+498 0x00006a42 0x00006a42 4   5    .text                  ascii   AHxD
+499 0x00006bf9 0x00006bf8 5   6    .text                  ascii   \vxDyD
+500 0x00006c1d 0x00006c1c 4   6    .text                  utf8    (\nхH
+501 0x00006c47 0x00006c46 4   5    .text                  ascii   !zJ@
+502 0x00006c5d 0x00006c5c 11  12   .text                  ascii    xIxJyDzD\th
+503 0x00006c7d 0x00006c7c 4   5    .text                  ascii   !rJ@
+504 0x00006c92 0x00006c92 4   5    .text                  ascii   oHxD
+505 0x00006c9f 0x00006c9e 7   8    .text                  ascii   (yD\th\tn
+506 0x00006caf 0x00006cae 4   5    .text                  ascii   !iJ@
+507 0x00006cc8 0x00006cc8 4   5    .text                  ascii   eHxD
+508 0x00006cd5 0x00006cd4 7   8    .text                  ascii   %yD\th\tn
+509 0x00006ce8 0x00006ce8 6   7    .text                  ascii   _J!h{D
+510 0x00006cf7 0x00006cf6 4   5    .text                  ascii    zD@
+511 0x00006d22 0x00006d22 8   9    .text                  ascii   SHSIxDyD
+512 0x00006d3d 0x00006d3c 4   5    .text                  ascii   !NJO
+513 0x00006d42 0x00006d42 4   5    .text                  ascii   _sxD
+514 0x00006db2 0x00006db2 4   5    .text                  ascii   !h\bD
+515 0x00006eaf 0x00006eae 4   6    .text                  utf8    яHxD
+516 0x00006eb5 0x00006eb4 4   5    .text                  ascii   h@oH
+517 0x00006ebf 0x00006ebe 5   6    .text                  ascii   J8#xD
+518 0x00006eef 0x00006eee 4   6    .text                  utf8    тHxD
+519 0x00006ef5 0x00006ef4 4   5    .text                  ascii   h@oH
+520 0x00006eff 0x00006efe 5   6    .text                  ascii   J<#xD
+521 0x00006f4e 0x00006f4e 8   9    .text                  ascii   vHvIxDyD
+522 0x00006f69 0x00006f68 7   8    .text                  ascii   !qJJ#xD
+523 0x00006f80 0x00006f80 4   5    .text                  ascii   mHxD
+524 0x00006f8a 0x00006f8a 8   9    .text                  ascii   lIyD\th\tn
+525 0x00006f9b 0x00006f9a 7   8    .text                  ascii   !iJX#xD
+526 0x00006fb3 0x00006fb2 6   9    .text                  utf8    ܹEXݵBV
+527 0x00006fbc 0x00006fbc 8   9    .text                  ascii   fHgIxDyD
+528 0x00006fd7 0x00006fd6 7   8    .text                  ascii   !bJ[#xD
+529 0x00006fe8 0x00006fe8 7   8    .text                  ascii   (FAF4Fn
+530 0x00007038 0x00007038 8   9    .text                  ascii   7H8IxDyD
+531 0x00007053 0x00007052 7   8    .text                  ascii   !3JR#xD
+532 0x00007064 0x00007064 5   6    .text                  ascii   (FAF1
+533 0x0000706a 0x0000706a 8   9    .text                  ascii   7H7IxDyD
+534 0x00007085 0x00007084 7   8    .text                  ascii   !3J^#xD
+535 0x0000709a 0x0000709a 8   9    .text                  ascii   \eH\eIxDyD
+536 0x000070b7 0x000070b6 5   6    .text                  ascii   JU#xD
+537 0x000070c6 0x000070c6 8   9    .text                  ascii    F9F,FGF
+538 0x000071ed 0x000071ec 5   6    .text                  ascii   \npG-C
+539 0x0000721b 0x0000721a 7   8    .text                  ascii   IyD\th\th
+540 0x00007243 0x00007242 4   6    .text                  utf8    h@oȱ
+541 0x0000724d 0x0000724c 5   6    .text                  ascii   JY#xD
+542 0x0000725b 0x0000725a 8   9    .text                  ascii   IyD\thIoY
+543 0x000072b5 0x000072b4 7   8    .text                  ascii   JO#xDzD
+544 0x000072d5 0x000072d4 7   8    .text                  ascii   #8\*F9D
+545 0x00007396 0x00007396 6   7    .text                  ascii   *h Fkh
+546 0x000073a2 0x000073a2 4   5    .text                  ascii   eHxD
+547 0x000073b3 0x000073b2 7   8    .text                  ascii   !bJu#xD
+548 0x000073bd 0x000073bc 4   5    .text                  ascii    zDZ
+549 0x000073c4 0x000073c4 4   5    .text                  ascii   \( F
+550 0x000073d4 0x000073d4 4   5    .text                  ascii   x!(F
+551 0x000073e3 0x000073e2 7   8    .text                  ascii   a8F*F3F
+552 0x000073ee 0x000073ee 6   7    .text                  ascii   8F)Fx"
+553 0x000073f8 0x000073f8 4   5    .text                  ascii   RHSI
+554 0x0000740f 0x0000740e 5   6    .text                  ascii   bxDyD
+555 0x0000744c 0x0000744c 4   5    .text                  ascii   AHxD
+556 0x00007456 0x00007456 8   9    .text                  ascii   @IyD\th\tn
+557 0x0000746a 0x0000746a 6   7    .text                  ascii   \\b;JyD
+558 0x0000747e 0x0000747e 4   5    .text                  ascii   9HxD
+559 0x0000748b 0x0000748a 7   8    .text                  ascii   $yD\th\tn
+560 0x000074be 0x000074be 4   5    .text                  ascii   -HxD
+561 0x000074cf 0x000074ce 7   8    .text                  ascii   !*J{#xD
+562 0x000074e3 0x000074e2 5   6    .text                  ascii   IxDyD
+563 0x00007501 0x00007500 7   8    .text                  ascii   !\fJl#xD
+564 0x000075be 0x000075be 4   5    .text                  ascii   \fAxD
+565 0x00007621 0x00007620 4   5    .text                  ascii   h@oh
+566 0x0000762e 0x0000762e 6   7    .text                  ascii   <&7#xD
+567 0x0000764a 0x0000764a 5   6    .text                  ascii   0`hi`
+568 0x00007671 0x00007670 4   5    .text                  ascii   h@oh
+569 0x0000767f 0x0000767e 5   6    .text                  ascii   %7#xD
+570 0x000076c3 0x000076c2 4   5    .text                  ascii   h@oh
+571 0x000076d1 0x000076d0 5   6    .text                  ascii   %:#xD
+572 0x00007715 0x00007714 4   5    .text                  ascii   h@oh
+573 0x00007722 0x00007722 6   7    .text                  ascii   l%:#xD
+574 0x00007767 0x00007766 4   5    .text                  ascii   h@oh
+575 0x00007774 0x00007774 6   7    .text                  ascii   (%=#xD
+576 0x000077b9 0x000077b8 4   5    .text                  ascii   h@oh
+577 0x000077c7 0x000077c6 5   6    .text                  ascii   $=#xD
+578 0x0000784e 0x0000784e 5   6    .text                  ascii   \\b\t(?
+579 0x0000785a 0x0000785a 6   7    .text                  ascii   >St>>>
+580 0x000079d8 0x000079d8 4   7    .text                  utf8    \f\eӑҐ
+581 0x00007a43 0x00007a42 5   6    .text                  ascii   r0FAF
+582 0x00007a8b 0x00007a8a 5   6    .text                  ascii   r0FAF
+583 0x00007ae5 0x00007ae4 5   6    .text                  ascii   r0FAF
+584 0x00007c15 0x00007c14 5   8    .text                  utf8    쀹%HxD
+585 0x00007c1d 0x00007c1c 4   5    .text                  ascii   h@oP
+586 0x00007c25 0x00007c24 4   5    .text                  ascii   !$J@
+587 0x00007c39 0x00007c38 7   8    .text                  ascii     IyD\th
+588 0x00007c42 0x00007c42 4   5    .text                  ascii   $,\th
+589 0x00007d4c 0x00007d4c 6   7    .text                  ascii    F\r!BF
+590 0x00007d6f 0x00007d6e 11  15   .text                  utf8    )$܀)6А)OР)@
+591 0x00007db2 0x00007db2 4   5    .text                  ascii    F\r!
+592 0x00007ddf 0x00007dde 4   5    .text                  ascii   " Fw
+593 0x00007e28 0x00007e28 4   5    .text                  ascii    FBF
+594 0x00007e9a 0x00007e9a 6   7    .text                  ascii    F\r!BF
+595 0x00007ec2 0x00007ec2 5   6    .text                  ascii   E[--\n
+596 0x00007ed0 0x00007ed0 4   5    .text                  ascii    " F
+597 0x00007fa0 0x00007fa0 4   5    .text                  ascii   \b \aI
+598 0x00007fa6 0x00007fa6 6   7    .text                  ascii   yD\th\th
+599 0x00007fe2 0x00007fe2 4   5    .text                  ascii   (F1F
+600 0x00008006 0x00008006 4   5    .text                  ascii   (F"F
+601 0x0000802f 0x0000802e 5   6    .text                  ascii   q(F"F
+602 0x00008047 0x00008046 5   6    .text                  ascii   JxDzD
+603 0x00008076 0x00008076 6   7    .text                  ascii   2h F)F
+604 0x000080e3 0x000080e2 5   6    .text                  ascii   JxDzD
+605 0x000080fb 0x000080fa 5   6    .text                  ascii   FIH\rF
+606 0x00008122 0x00008122 4   5    .text                  ascii   @F\r!
+607 0x00008192 0x00008192 4   5    .text                  ascii   @F\r!
+608 0x000081ba 0x000081ba 4   5    .text                  ascii   )F@h
+609 0x000081c1 0x000081c0 5   6    .text                  ascii    @F"F
+610 0x000081e8 0x000081e8 6   7    .text                  ascii   yD\th\th
+611 0x00008202 0x00008202 4   5    .text                  ascii   @F\r!
+612 0x00008219 0x00008218 5   6    .text                  ascii   JxDzD
+613 0x0000827e 0x0000827e 6   7    .text                  ascii   yD\th\th
+614 0x000082b1 0x000082b0 4   5    .text                  ascii   F&H\n
+615 0x000082cd 0x000082cc 5   6    .text                  ascii   `)F0F
+616 0x000082d6 0x000082d6 4   5    .text                  ascii   iF0F
+617 0x000082f1 0x000082f0 4   5    .text                  ascii   d2F\b
+618 0x00008304 0x00008304 4   5    .text                  ascii   0F9F
+619 0x0000835f 0x0000835e 4   5    .text                  ascii   F3H\f
+620 0x00008392 0x00008392 5   6    .text                  ascii   "i(FO
+621 0x000083a1 0x000083a0 4   5    .text                  ascii   \n(Fo
+622 0x000083ae 0x000083ae 4   5    .text                  ascii   (FIF
+623 0x000083c3 0x000083c2 4   5    .text                  ascii   d*F\t
+624 0x000083cc 0x000083cc 4   5    .text                  ascii    e8F
+625 0x000083e9 0x000083e8 5   6    .text                  ascii   JxDzD
+626 0x0000840a 0x0000840a 4   5    .text                  ascii    a(F
+627 0x00008450 0x00008450 4   5    .text                  ascii   (F!F
+628 0x00008461 0x00008460 5   6    .text                  ascii   JxDzD
+629 0x00008480 0x00008480 4   5    .text                  ascii   xD\bK
+630 0x00008490 0x00008490 4   5    .text                  ascii   aFrF
+631 0x000084ac 0x000084ac 9   10   .text                  ascii   \vIyD\th\th\v
+632 0x000084cc 0x000084cc 4   5    .text                  ascii   \th\th
+633 0x000084e8 0x000084e8 9   10   .text                  ascii   \vIyD\th\th\v
+634 0x00008508 0x00008508 4   5    .text                  ascii   \th\th
+635 0x000085cd 0x000085cc 9   10   .text                  ascii   F\rHzDxD\b0
+636 0x00008611 0x00008610 5   6    .text                  ascii   F0h\rF
+637 0x00008620 0x00008620 4   5    .text                  ascii   0h)F
+638 0x0000863f 0x0000863e 5   6    .text                  ascii   F h\rF
+639 0x0000864e 0x0000864e 6   7    .text                  ascii    h)F2F
+640 0x00008673 0x00008672 5   6    .text                  ascii   %Bk F
+641 0x00008679 0x00008678 4   5    .text                  ascii   G(Fp
+642 0x00008683 0x00008682 9   10   .text                  ascii   F0h\rFBi0F
+643 0x00008692 0x00008692 4   5    .text                  ascii   0h)F
+644 0x000086bb 0x000086ba 5   6    .text                  ascii   FBi8F
+645 0x000086c6 0x000086c6 8   9    .text                  ascii   8h1F*FCF
+646 0x000086e7 0x000086e6 5   6    .text                  ascii   h\tj\bG
+647 0x000086f1 0x000086f0 5   6    .text                  ascii   hJj!F
+648 0x0000871f 0x0000871e 4   5    .text                  ascii   k\bG!
+649 0x000087b7 0x000087b6 7   8    .text                  ascii   KxDyD{D
+650 0x000087d7 0x000087d6 4   5    .text                  ascii   F\f.\b
+651 0x00008835 0x00008834 4   5    .text                  ascii   qDPp
+652 0x00008843 0x00008842 7   8    .text                  ascii   KxDyD{D
+653 0x00008861 0x00008860 4   5    .text                  ascii   "p(O
+654 0x00008909 0x00008908 7   8    .text                  ascii   KxDyD{D
+655 0x00008925 0x00008924 4   5    .text                  ascii   F\aF&
+656 0x0000897b 0x0000897a 4   5    .text                  ascii   qEPO
+657 0x000089a3 0x000089a2 4   5    .text                  ascii   qEPO
+658 0x000089bb 0x000089ba 4   5    .text                  ascii   qEPO
+659 0x000089d5 0x000089d4 7   8    .text                  ascii   KxDyD{D
+660 0x00008a05 0x00008a04 5   6    .text                  ascii   !Bk F
+661 0x00008a7b 0x00008a7a 7   8    .text                  ascii   FyD\th\th
+662 0x00008aaa 0x00008aaa 4   5    .text                  ascii   0F)F
+663 0x00008ac2 0x00008ac2 6   7    .text                  ascii   yD\th\th
+664 0x00008b20 0x00008b20 6   7    .text                  ascii   jF F)F
+665 0x00008b69 0x00008b68 7   8    .text                  ascii   F\aIxDyD
+666 0x00008b77 0x00008b76 5   6    .text                  ascii   #rFcF
+667 0x00008bba 0x00008bba 5   6    .text                  ascii   \b(\aH\b
+668 0x00008c54 0x00008c54 4   5    .text                  ascii   bh^h
+669 0x00008c6d 0x00008c6c 5   7    .text                  utf8    (~аB|
+670 0x00008c7c 0x00008c7c 5   6    .text                  ascii   (F)FP
+671 0x00008d06 0x00008d06 4   5    .text                  ascii   +N~D
+672 0x00008d12 0x00008d12 4   5    .text                  ascii   )N~D
+673 0x00008d91 0x00008d90 7   8    .text                  ascii   KxDyD{D
+674 0x00008da1 0x00008da0 11  12   .text                  ascii   2\aI\aKxDyD{D
+675 0x00008e0f 0x00008e0e 5   6    .text                  ascii   \a'Dl\b
+676 0x00008efa 0x00008efa 4   5    .text                  ascii   xDpG
+677 0x000095c4 0x000095c4 18  19   .rodata                ascii   ro.board.platform=
+678 0x000095d7 0x000095d7 18  19   .rodata                ascii   /system/build.prop
+679 0x000095f8 0x000095f8 17  18   .rodata                ascii   module_sce40_init
+680 0x0000960a 0x0000960a 7   8    .rodata                ascii   name %s
+681 0x00009612 0x00009612 15  16   .rodata                ascii   failed: name %s
+682 0x00009622 0x00009622 5   6    .rodata                ascii   sce40
+683 0x00009628 0x00009628 35  36   .rodata                ascii   failed: invalid name %s expected %s
+684 0x00009650 0x00009650 6   7    .rodata                ascii   failed
+685 0x00009657 0x00009657 22  23   .rodata                ascii   module_sce40_init_data
+686 0x0000966e 0x0000966e 17  18   .rodata                ascii   failed: module %p
+687 0x00009680 0x00009680 20  21   .rodata                ascii   module_sce40_destroy
+688 0x00009695 0x00009695 22  23   .rodata                ascii   module_sce40_streamoff
+689 0x000096ac 0x000096ac 16  17   .rodata                ascii   failed: %p %p %p
+690 0x000096bd 0x000096bd 30  31   .rodata                ascii   module_sce40_set_chromatix_ptr
+691 0x000096dc 0x000096dc 29  30   .rodata                ascii   module_sce40_stats_aec_update
+692 0x000096fa 0x000096fa 29  30   .rodata                ascii   module_sce40_stats_awb_update
+693 0x00009718 0x00009718 29  30   .rodata                ascii   module_sce40_stats_asd_update
+694 0x00009736 0x00009736 27  28   .rodata                ascii   module_sce40_trigger_update
+695 0x00009752 0x00009752 44  45   .rodata                ascii   failed: module %p isp_sub_module %p event %p
+696 0x0000977f 0x0000977f 27  28   .rodata                ascii   module_sce40_set_sce_factor
+697 0x0000979b 0x0000979b 19  20   .rodata                ascii   module_sce40_deinit
+698 0x000097af 0x000097af 33  34   .rodata                ascii   sce_copy_triangles_from_chromatix
+699 0x000097d1 0x000097d1 38  39   .rodata                ascii   all destination traingle match orignal
+700 0x000097f8 0x000097f8 20  21   .rodata                ascii   sce40_set_sce_factor
+701 0x0000980d 0x0000980d 13  14   .rodata                ascii   failed: %p %p
+702 0x0000981b 0x0000981b 14  15   .rodata                ascii   failed: sce %p
+703 0x0000982a 0x0000982a 15  16   .rodata                ascii    sce_factor %d
+704 0x0000983a 0x0000983a 25  26   .rodata                ascii   trigger_sce_get_triangles
+705 0x00009854 0x00009854 34  35   .rodata                ascii   %s: AWB cct type: %d awb ratio %f\n
+706 0x00009877 0x00009877 53  54   .rodata                ascii   %s: Interpolation parameter range -  %6.4lf to %6.4lf
+707 0x000098ad 0x000098ad 20  21   .rodata                ascii   sce40_trigger_update
+708 0x000098c2 0x000098c2 17  18   .rodata                ascii   failed: output %p
+709 0x000098d4 0x000098d4 53  54   .rodata                ascii   no trigger update for SCE, enabled %d, trig_enable %d
+710 0x0000990a 0x0000990a 26  27   .rodata                ascii   failed: sce40_select_table
+711 0x00009925 0x00009925 29  30   .rodata                ascii   failed: sce40_store_hw_update
+712 0x00009943 0x00009943 49  50   .rodata                ascii   failed: isp_sub_module_util_append_hw_update_list
+713 0x00009975 0x00009975 22  23   .rodata                ascii   sce40_stats_aec_update
+714 0x0000998c 0x0000998c 22  23   .rodata                ascii   sce40_stats_awb_update
+715 0x000099a3 0x000099a3 24  25   .rodata                ascii   failed: chromatix_ptr %p
+716 0x000099bc 0x000099bc 21  22   .rodata                ascii   invalid color temp %d
+717 0x000099d2 0x000099d2 23  24   .rodata                ascii   AWB type prev %d new %d
+718 0x000099ea 0x000099ea 15  16   .rodata                ascii   cur_cct_type %d
+719 0x000099fa 0x000099fa 22  23   .rodata                ascii   sce40_stats_asd_update
+720 0x00009a11 0x00009a11 23  24   .rodata                ascii   sce40_set_chromatix_ptr
+721 0x00009a29 0x00009a29 44  45   .rodata                ascii   failed: updating module enable bit for hw %d
+722 0x00009a56 0x00009a56 27  28   .rodata                ascii   failed: sce40_config ret %d
+723 0x00009a72 0x00009a72 15  16   .rodata                ascii   sce40_streamoff
+724 0x00009a82 0x00009a82 10  11   .rodata                ascii   sce40_init
+725 0x00009a8d 0x00009a8d 25  26   .rodata                ascii   failed: isp_sub_module %p
+726 0x00009aa7 0x00009aa7 13  14   .rodata                ascii   sce40_destroy
+727 0x00009ab5 0x00009ab5 20  21   .rodata                ascii   sce_found_boundaries
+728 0x00009aca 0x00009aca 33  34   .rodata                ascii   %s: Error: too many intersections
+729 0x00009aec 0x00009aec 41  42   .rodata                ascii   %s: Error: less than two intersections %d
+730 0x00009b16 0x00009b16 62  63   .rodata                ascii   %s: Error: intersections are on the same side of central point
+731 0x00009b55 0x00009b55 34  35   .rodata                ascii   %s: Boundaries %lf,%lf and %lf,%lf
+732 0x00009b78 0x00009b78 21  22   .rodata                ascii   sce_find_intersection
+733 0x00009b8e 0x00009b8e 18  19   .rodata                ascii   %s: parallel lines
+734 0x00009ba1 0x00009ba1 24  25   .rodata                ascii   %s: outside intersection
+735 0x00009bba 0x00009bba 16  17   .rodata                ascii   sce40_config_cmd
+736 0x00009bcb 0x00009bcb 25  26   .rodata                ascii   %s: Portrait severity :%f
+737 0x00009be5 0x00009be5 27  28   .rodata                ascii   %s: Portrait adj factor :%f
+738 0x00009c01 0x00009c01 22  23   .rodata                ascii   %s: sce_adj_factor :%f
+739 0x00009c18 0x00009c18 20  21   .rodata                ascii   affine_dbg triangle1
+740 0x00009c2d 0x00009c2d 20  21   .rodata                ascii   affine_dbg triangle2
+741 0x00009c42 0x00009c42 20  21   .rodata                ascii   affine_dbg triangle3
+742 0x00009c57 0x00009c57 20  21   .rodata                ascii   affine_dbg triangle4
+743 0x00009c6c 0x00009c6c 21  22   .rodata                ascii   affine_dbg2 triangle5
+744 0x00009c82 0x00009c82 19  20   .rodata                ascii   order_dbg triangle1
+745 0x00009c96 0x00009c96 19  20   .rodata                ascii   order_dbg triangle2
+746 0x00009caa 0x00009caa 19  20   .rodata                ascii   order_dbg triangle3
+747 0x00009cbe 0x00009cbe 19  20   .rodata                ascii   order_dbg triangle4
+748 0x00009cd2 0x00009cd2 19  20   .rodata                ascii   order_dbg triangle5
+749 0x00009ce6 0x00009ce6 22  23   .rodata                ascii   calc_sce_affine_params
+750 0x00009cfd 0x00009cfd 41  42   .rodata                ascii   failed,  sce40_calc_sce_affine_transform!
+751 0x00009d27 0x00009d27 31  32   .rodata                ascii   sce40_calc_sce_affine_transform
+752 0x00009d47 0x00009d47 47  48   .rodata                ascii   failed! Null pointer! in vfe_util_sce_transform
+753 0x00009d77 0x00009d77 15  16   .rodata                ascii   failed det = 0!
+754 0x00009d87 0x00009d87 18  19   .rodata                ascii   failed! Tx[8] = -1
+755 0x00009d9a 0x00009d9a 31  32   .rodata                ascii   affine_dbg === dest matrix ====
+756 0x00009dba 0x00009dba 30  31   .rodata                ascii   affine_dbg dest: %lf, %lf, %lf
+757 0x00009dd9 0x00009dd9 31  32   .rodata                ascii   affine_dbg === orig matrix ====
+758 0x00009df9 0x00009df9 30  31   .rodata                ascii   affine_dbg orig: %lf, %lf, %lf
+759 0x00009e18 0x00009e18 29  30   .rodata                ascii   affine_dbg === tx matrix ====
+760 0x00009e36 0x00009e36 42  43   .rodata                ascii   affine_dbg affine: A %.9lf, B %.9f, C %.9f
+761 0x00009e61 0x00009e61 44  45   .rodata                ascii   affine_dbg affine: D %.9lf, E %.9lf, F %.9lf
+762 0x00009e8e 0x00009e8e 27  28   .rodata                ascii   calc_sce_shift_affine_coeff
+763 0x00009eaa 0x00009eaa 44  45   .rodata                ascii   affine_dbg  matrix shift %d, offset shift %d
+764 0x00009ed7 0x00009ed7 27  28   .rodata                ascii   affine_dbg3 coeff 6 = %.9lf
+765 0x00009ef3 0x00009ef3 20  21   .rodata                ascii   sce40_calc_shiftbits
+766 0x00009f08 0x00009f08 35  36   .rodata                ascii   affine_dbg use offset shift Q1 + Q2
+767 0x00009f2c 0x00009f2c 23  24   .rodata                ascii   affine_dbg use shift Q2
+768 0x00009f44 0x00009f44 59  60   .rodata                ascii   affine_dbg Q1_Q2 coeff(ABDE) bit_shift = %d bit_of_coeff %d
+769 0x00009f80 0x00009f80 54  55   .rodata                ascii   affine_dbg Q2 coeff(CF) bit_shift = %d bit_of_coeff %d
+770 0x00009fb7 0x00009fb7 20  21   .rodata                ascii   sce_reorder_vertices
+771 0x00009fcc 0x00009fcc 19  20   .rodata                ascii   Points are colinear
+772 0x00009fe0 0x00009fe0 57  58   .rodata                ascii   x coordinate verte0.x = %d, vertex1.x = %d vertex2.x = %d
+773 0x0000a01a 0x0000a01a 15  16   .rodata                ascii   clokwise, swap!
+774 0x0000a02a 0x0000a02a 27  28   .rodata                ascii    counter clockwise, no swap
+775 0x0000a046 0x0000a046 16  17   .rodata                ascii   infinite slope!!
+776 0x0000a057 0x0000a057 26  27   .rodata                ascii   counter clok wise, no swap
+777 0x0000a072 0x0000a072 21  22   .rodata                ascii   sce40_store_hw_update
+778 0x0000a088 0x0000a088 20  21   .rodata                ascii   failed: hw_update %p
+779 0x0000a09d 0x0000a09d 22  23   .rodata                ascii   failed: reg_cfg_cmd %p
+780 0x0000a0b4 0x0000a0b4 18  19   .rodata                ascii   failed: sce_cmd %p
+781 0x0000a0c7 0x0000a0c7 43  44   .rodata                ascii   failed: isp_sub_module_util_store_hw_update
+782 0x0000a0f3 0x0000a0f3 18  19   .rodata                ascii   sce40_print_config
+783 0x0000a106 0x0000a106 28  29   .rodata                ascii   ==== Sce configurations ====
+784 0x0000a123 0x0000a123 16  17   .rodata                ascii   == Triangle 1 ==
+785 0x0000a134 0x0000a134 26  27   .rodata                ascii   vertex00:(Cr, Cb) (%d, %d)
+786 0x0000a14f 0x0000a14f 26  27   .rodata                ascii   vertex01:(Cr, Cb) (%d, %d)
+787 0x0000a16a 0x0000a16a 26  27   .rodata                ascii   vertex02:(Cr, Cb) (%d, %d)
+788 0x0000a185 0x0000a185 36  37   .rodata                ascii   crcoeff.coef00 (affine coeff A) : %d
+789 0x0000a1aa 0x0000a1aa 36  37   .rodata                ascii   crcoeff.coef01 (affine coeff B) : %d
+790 0x0000a1cf 0x0000a1cf 36  37   .rodata                ascii   cbcoeff.coef00 (affine coeff D) : %d
+791 0x0000a1f4 0x0000a1f4 36  37   .rodata                ascii   cbcoeff.coef01 (affine coeff E) : %d
+792 0x0000a219 0x0000a219 37  38   .rodata                ascii   croffset.offset0: (affine coeff C) %d
+793 0x0000a23f 0x0000a23f 35  36   .rodata                ascii   croffset.shift0 : (Matrix shift) %d
+794 0x0000a263 0x0000a263 37  38   .rodata                ascii   cboffset.offset0: (affine coeff F) %d
+795 0x0000a289 0x0000a289 35  36   .rodata                ascii   cboffset.shift0 : (Offset shift) %d
+796 0x0000a2ad 0x0000a2ad 16  17   .rodata                ascii   == Triangle 2 ==
+797 0x0000a2be 0x0000a2be 26  27   .rodata                ascii   vertex10:(Cr, Cb) (%d, %d)
+798 0x0000a2d9 0x0000a2d9 26  27   .rodata                ascii   vertex11:(Cr, Cb) (%d, %d)
+799 0x0000a2f4 0x0000a2f4 26  27   .rodata                ascii   vertex12:(Cr, Cb) (%d, %d)
+800 0x0000a30f 0x0000a30f 36  37   .rodata                ascii   crcoeff.coef10 (affine coeff A) : %d
+801 0x0000a334 0x0000a334 36  37   .rodata                ascii   crcoeff.coef11 (affine coeff B) : %d
+802 0x0000a359 0x0000a359 36  37   .rodata                ascii   cbcoeff.coef10 (affine coeff D) : %d
+803 0x0000a37e 0x0000a37e 36  37   .rodata                ascii   cbcoeff.coef11 (affine coeff E) : %d
+804 0x0000a3a3 0x0000a3a3 37  38   .rodata                ascii   croffset.offset1: (affine coeff C) %d
+805 0x0000a3c9 0x0000a3c9 35  36   .rodata                ascii   croffset.shift1 : (Matrix shift) %d
+806 0x0000a3ed 0x0000a3ed 37  38   .rodata                ascii   cboffset.offset1: (affine coeff F) %d
+807 0x0000a413 0x0000a413 35  36   .rodata                ascii   cboffset.shift1 : (Offset shift) %d
+808 0x0000a437 0x0000a437 16  17   .rodata                ascii   == Triangle 3 ==
+809 0x0000a448 0x0000a448 26  27   .rodata                ascii   vertex20:(Cr, Cb) (%d, %d)
+810 0x0000a463 0x0000a463 26  27   .rodata                ascii   vertex21:(Cr, Cb) (%d, %d)
+811 0x0000a47e 0x0000a47e 26  27   .rodata                ascii   vertex22:(Cr, Cb) (%d, %d)
+812 0x0000a499 0x0000a499 36  37   .rodata                ascii   crcoeff.coef20 (affine coeff A) : %d
+813 0x0000a4be 0x0000a4be 36  37   .rodata                ascii   crcoeff.coef21 (affine coeff B) : %d
+814 0x0000a4e3 0x0000a4e3 36  37   .rodata                ascii   cbcoeff.coef20 (affine coeff D) : %d
+815 0x0000a508 0x0000a508 36  37   .rodata                ascii   cbcoeff.coef21 (affine coeff E) : %d
+816 0x0000a52d 0x0000a52d 37  38   .rodata                ascii   croffset.offset2: (affine coeff C) %d
+817 0x0000a553 0x0000a553 35  36   .rodata                ascii   croffset.shift2 : (Matrix shift) %d
+818 0x0000a577 0x0000a577 37  38   .rodata                ascii   cboffset.offset2: (affine coeff F) %d
+819 0x0000a59d 0x0000a59d 35  36   .rodata                ascii   cboffset.shift2 : (Offset shift) %d
+820 0x0000a5c1 0x0000a5c1 16  17   .rodata                ascii   == Triangle 4 ==
+821 0x0000a5d2 0x0000a5d2 26  27   .rodata                ascii   vertex30:(Cr, Cb) (%d, %d)
+822 0x0000a5ed 0x0000a5ed 26  27   .rodata                ascii   vertex31:(Cr, Cb) (%d, %d)
+823 0x0000a608 0x0000a608 26  27   .rodata                ascii   vertex32:(Cr, Cb) (%d, %d)
+824 0x0000a623 0x0000a623 36  37   .rodata                ascii   crcoeff.coef30 (affine coeff A) : %d
+825 0x0000a648 0x0000a648 36  37   .rodata                ascii   crcoeff.coef31 (affine coeff B) : %d
+826 0x0000a66d 0x0000a66d 36  37   .rodata                ascii   cbcoeff.coef30 (affine coeff D) : %d
+827 0x0000a692 0x0000a692 36  37   .rodata                ascii   cbcoeff.coef31 (affine coeff E) : %d
+828 0x0000a6b7 0x0000a6b7 37  38   .rodata                ascii   croffset.offset3: (affine coeff C) %d
+829 0x0000a6dd 0x0000a6dd 34  35   .rodata                ascii   croffset.shift3 : (Matix shift) %d
+830 0x0000a700 0x0000a700 37  38   .rodata                ascii   cboffset.offset3: (affine coeff F) %d
+831 0x0000a726 0x0000a726 35  36   .rodata                ascii   cboffset.shift3 : (Offset shift) %d
+832 0x0000a74a 0x0000a74a 16  17   .rodata                ascii   == Triangle 5 ==
+833 0x0000a75b 0x0000a75b 26  27   .rodata                ascii   vertex40:(Cr, Cb) (%d, %d)
+834 0x0000a776 0x0000a776 26  27   .rodata                ascii   vertex41:(Cr, Cb) (%d, %d)
+835 0x0000a791 0x0000a791 26  27   .rodata                ascii   vertex42:(Cr, Cb) (%d, %d)
+836 0x0000a7ac 0x0000a7ac 36  37   .rodata                ascii   crcoeff.coef40 (affine coeff A) : %d
+837 0x0000a7d1 0x0000a7d1 36  37   .rodata                ascii   crcoeff.coef41 (affine coeff B) : %d
+838 0x0000a7f6 0x0000a7f6 36  37   .rodata                ascii   cbcoeff.coef40 (affine coeff D) : %d
+839 0x0000a81b 0x0000a81b 36  37   .rodata                ascii   cbcoeff.coef41 (affine coeff E) : %d
+840 0x0000a840 0x0000a840 37  38   .rodata                ascii   croffset.offset4: (affine coeff C) %d
+841 0x0000a866 0x0000a866 35  36   .rodata                ascii   croffset.shift4 : (Matrix shift) %d
+842 0x0000a88a 0x0000a88a 37  38   .rodata                ascii   cboffset.offset4: (affine coeff F) %d
+843 0x0000a8b0 0x0000a8b0 35  36   .rodata                ascii   cboffset.shift4 : (Offset shift) %d
+844 0x0000a8d4 0x0000a8d4 18  19   .rodata                ascii   == outside area ==
+845 0x0000a8e7 0x0000a8e7 36  37   .rodata                ascii   crcoeff.coef50 (affine coeff A) : %d
+846 0x0000a90c 0x0000a90c 36  37   .rodata                ascii   crcoeff.coef51 (affine coeff B) : %d
+847 0x0000a931 0x0000a931 36  37   .rodata                ascii   cbcoeff.coef50 (affine coeff D) : %d
+848 0x0000a956 0x0000a956 36  37   .rodata                ascii   cbcoeff.coef51 (affine coeff E) : %d
+849 0x0000a97b 0x0000a97b 37  38   .rodata                ascii   croffset.offset5: (affine coeff C) %d
+850 0x0000a9a1 0x0000a9a1 35  36   .rodata                ascii   croffset.shift5 : (Matrix shift) %d
+851 0x0000a9c5 0x0000a9c5 37  38   .rodata                ascii   cboffset.offset5: (affine coeff F) %d
+852 0x0000a9eb 0x0000a9eb 35  36   .rodata                ascii   cboffset.shift5 : (Offset shift) %d
+853 0x0000aa0f 0x0000aa0f 12  13   .rodata                ascii   sce40_config
+854 0x0000aa1c 0x0000aa1c 22  23   .rodata                ascii   failed: cpchromatix %p
+855 0x0000aa33 0x0000aa33 27  28   .rodata                ascii   failed: chromatix_3a_ptr %p
+856 0x0000aa4f 0x0000aa4f 18  19   .rodata                ascii   sce40_select_table
+857 0x0000aa62 0x0000aa62 21  22   .rodata                ascii   %s: Null Pointer: %p\n
+858 0x0000aa78 0x0000aa78 26  27   .rodata                ascii   SCE zero color temperature
+859 0x0000aa93 0x0000aa93 23  24   .rodata                ascii   no updates on SCE table
+860 0x0000aaab 0x0000aaab 40  41   .rodata                ascii   failed, sce_adjust_dest_triangle_by_adrc
+861 0x0000aad4 0x0000aad4 33  34   .rodata                ascii   failed, trigger_sce_get_triangles
+862 0x0000aaf6 0x0000aaf6 16  17   .rodata                ascii   new aec ratio %f
+863 0x0000ab07 0x0000ab07 15  16   .rodata                ascii   new cct type %d
+864 0x0000ab17 0x0000ab17 23  24   .rodata                ascii   new SCE Adj factor: %lf
+865 0x0000ab2f 0x0000ab2f 32  33   .rodata                ascii   sce_adjust_dest_triangle_by_adrc
+866 0x0000ab50 0x0000ab50 40  41   .rodata                ascii   void _Unwind_Resume(_Unwind_Exception *)
+867 0x0000ab79 0x0000ab79 44  45   .rodata                ascii   external/libunwind_llvm/src/Unwind-EHABI.cpp
+868 0x0000aba6 0x0000aba6 29  30   .rodata                ascii   _Unwind_Resume() can't return
+869 0x0000abc4 0x0000abc4 125 126  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Set(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+870 0x0000ac42 0x0000ac42 26  27   .rodata                ascii   unsupported register class
+871 0x0000ac5d 0x0000ac5d 117 118  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Pop(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation)
+872 0x0000acd3 0x0000acd3 77  78   .rodata                ascii   _Unwind_Reason_Code unwind_phase2(unw_context_t *, _Unwind_Exception *, bool)
+873 0x0000ad21 0x0000ad21 98  99   .rodata                ascii   during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+874 0x0000ad84 0x0000ad84 25  26   .rodata                ascii   libunwind: %s %s:%d - %s\n
+875 0x0000ad9e 0x0000ad9e 134 135  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Get_Internal(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+876 0x0000ae25 0x0000ae25 44  45   .rodata                ascii   external/libunwind_llvm/src/UnwindCursor.hpp
+877 0x0000ae52 0x0000ae52 51  52   .rodata                ascii   uint32_t libunwind::Registers_arm::getRegister(int)
+878 0x0000ae86 0x0000ae86 41  42   .rodata                ascii   external/libunwind_llvm/src/Registers.hpp
+879 0x0000aeb0 0x0000aeb0 24  25   .rodata                ascii   unsupported arm register
+880 0x0000aec9 0x0000aec9 57  58   .rodata                ascii   void libunwind::Registers_arm::setRegister(int, uint32_t)
+881 0x0000af03 0x0000af03 59  60   .rodata                ascii   unw_fpreg_t libunwind::Registers_arm::getFloatRegister(int)
+882 0x0000af3f 0x0000af3f 26  27   .rodata                ascii   Unknown ARM float register
+883 0x0000af5a 0x0000af5a 65  66   .rodata                ascii   void libunwind::Registers_arm::setFloatRegister(int, unw_fpreg_t)
+884 0x0000af9f 0x0000af9f 221 222  .rodata                ascii   bool libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getInfoFromEHABISection(pint_t, const libunwind::UnwindInfoSections &) [A = libunwind::LocalAddressSpace, R = libunwind::Registers_arm]
+885 0x0000b07d 0x0000b07d 27  28   .rodata                ascii   unknown personality routine
+886 0x0000b099 0x0000b099 65  66   .rodata                ascii   index inlined table detected but pr function requires extra words
+887 0x0000b1fa 0x0000b1fa 16  17   .rodata                ascii   unknown register
+888 0x0000c1b9 0x00000001 72  73   .comment               ascii   Snapdragon LLVM ARM Compiler 3.8.2 for Android NDK (based on LLVM 3.8.0)
+889 0x0000c202 0x0000004a 36  37   .comment               ascii   GCC: (GNU) 4.9 20150123 (prerelease)
+890 0x0000c227 0x0000006f 60  61   .comment               ascii   Android clang version 3.8.256229  (based on LLVM 3.8.256229)
+891 0x0000c274 0x00000010 9   10   .note.gnu.gold-version ascii   gold 1.11
+892 0x0000c285 0x00000005 5   6    .ARM.attributes        ascii   aeabi
+893 0x0000c291 0x00000011 6   7    .ARM.attributes        ascii   ARM v7
+894 0x0000c299 0x00000019 4   5    .ARM.attributes        ascii   \n\aA\b
+895 0x0000c2bd 0x00000001 9   10   .shstrtab              ascii   .shstrtab
+896 0x0000c2c7 0x0000000b 7   8    .shstrtab              ascii   .interp
+897 0x0000c2cf 0x00000013 19  20   .shstrtab              ascii   .note.android.ident
+898 0x0000c2e3 0x00000027 18  19   .shstrtab              ascii   .note.gnu.build-id
+899 0x0000c2f6 0x0000003a 7   8    .shstrtab              ascii   .dynsym
+900 0x0000c2fe 0x00000042 7   8    .shstrtab              ascii   .dynstr
+901 0x0000c306 0x0000004a 9   10   .shstrtab              ascii   .gnu.hash
+902 0x0000c310 0x00000054 12  13   .shstrtab              ascii   .gnu.version
+903 0x0000c31d 0x00000061 14  15   .shstrtab              ascii   .gnu.version_d
+904 0x0000c32c 0x00000070 14  15   .shstrtab              ascii   .gnu.version_r
+905 0x0000c33b 0x0000007f 8   9    .shstrtab              ascii   .rel.dyn
+906 0x0000c344 0x00000088 8   9    .shstrtab              ascii   .rel.plt
+907 0x0000c34d 0x00000091 5   6    .shstrtab              ascii   .text
+908 0x0000c353 0x00000097 10  11   .shstrtab              ascii   .ARM.exidx
+909 0x0000c35e 0x000000a2 7   8    .shstrtab              ascii   .rodata
+910 0x0000c366 0x000000aa 10  11   .shstrtab              ascii   .ARM.extab
+911 0x0000c371 0x000000b5 11  12   .shstrtab              ascii   .init_array
+912 0x0000c37d 0x000000c1 11  12   .shstrtab              ascii   .fini_array
+913 0x0000c389 0x000000cd 12  13   .shstrtab              ascii   .data.rel.ro
+914 0x0000c396 0x000000da 8   9    .shstrtab              ascii   .dynamic
+915 0x0000c39f 0x000000e3 4   5    .shstrtab              ascii   .got
+916 0x0000c3a4 0x000000e8 5   6    .shstrtab              ascii   .data
+917 0x0000c3aa 0x000000ee 4   5    .shstrtab              ascii   .bss
+918 0x0000c3af 0x000000f3 8   9    .shstrtab              ascii   .comment
+919 0x0000c3b8 0x000000fc 22  23   .shstrtab              ascii   .note.gnu.gold-version
+920 0x0000c3cf 0x00000113 15  16   .shstrtab              ascii   .ARM.attributes
+0x00001290    1     12 sym.imp.__errno
+0x000012c0    1     12 sym.imp.fclose
+0x000012a8    1     12 sym.imp.fgetc
+0x00001578    1     12 sym.imp.dladdr
+0x0000129c    1     12 sym.imp.fopen
+0x000012b4    1     12 sym.imp.fread
+0x000012cc    1     12 sym.imp.strncmp
+0x00001584    1     12 sym.imp.__snprintf_chk
+0x000012d8    1     12 sym.imp.__cxa_finalize
+0x000012e4    1     12 sym.imp.__cxa_atexit
+0x000012f0    1     12 sym.imp.__register_atfork
+0x00001308    1     12 sym.imp.__strlen_chk
+0x000012fc    1     12 sym.imp.cam_debug_log
+0x0000132c    1     12 sym.imp.isp_sub_module_deinit
+0x00001314    1     12 sym.imp.isp_sub_module_init
+0x000013c8    1     12 sym.imp.isp_sub_module_port_disable_module
+0x000013d4    1     12 sym.imp.isp_sub_module_port_enable
+0x000013bc    1     12 sym.imp.isp_sub_module_port_isp_private_event
+0x00001404    1     12 sym.imp.isp_sub_module_port_set_log_level
+0x000013b0    1     12 sym.imp.isp_sub_module_port_set_param
+0x0000156c    1     12 sym.imp.__aeabi_memcpy
+0x000013f8    1     12 sym.imp.isp_sub_module_port_set_vfe_command
+0x00001590    1     12 sym.imp.__gnu_Unwind_Find_exidx
+0x000013a4    1     12 sym.imp.isp_sub_module_port_streamon
+0x000013e0    1     12 sym.imp.isp_sub_module_port_trigger_enable
+0x000013ec    1     12 sym.imp.isp_sub_module_set_manual_controls
+0x00001320    1     12 sym.imp.mct_module_destroy
+0x000014d0    1     12 sym.imp.__aeabi_memclr8
+0x00001470    1     12 sym.imp.__aeabi_memcpy4
+0x00001434    1     12 sym.imp.__aeabi_memcpy8
+0x00001440    1     12 sym.imp.__stack_chk_fail
+0x000014a0    1     12 sym.imp.free
+0x00001494    1     12 sym.imp.isp_sub_module_util_append_hw_update_list
+0x000014b8    1     12 sym.imp.isp_sub_module_util_configure_from_chromatix_bit
+0x000014ac    1     12 sym.imp.isp_sub_module_util_get_awb_cct_with_H_type
+0x00001488    1     12 sym.imp.isp_sub_module_util_store_hw_update
+0x000014e8    1     12 sym.imp.log
+0x00001464    1     12 sym.imp.malloc
+0x00001428    1     12 sym.imp.memcmp
+0x0000144c    1     12 sym.imp.pthread_mutex_lock
+0x0000147c    1     12 sym.imp.pthread_mutex_unlock
+0x000014dc    1     12 sym.imp.round
+0x000014f4    1     12 sym.imp.isp_sub_module_util_get_aec_ratio_lowlight
+0x00001500    1     12 sym.imp.isp_sub_module_util_is_adrc_gain_set
+0x00001530    1     12 sym.imp.isp_sub_module_util_find_region_index_spatial
+0x00001554    1     12 sym.imp.abort
+0x00001560    1     12 sym.imp.fprintf
+0x000015a0    1     52 entry0
+0x00001284    1     12 rsym.__ae_r
+0x00006378    8    194 sym.sce40_init
+0x00002870  308  11434 sym.sce40_trigger_update
+0x0000759c    1      2 sym.sce40_copy_triangles_from_chromatix
+0x000075a0   63   1714 sym.sce_adjust_dest_triangle_by_adrc
+0x000060b8   26    390 sym.sce40_set_chromatix_ptr
+0x00002010    3     54 sym.trigger_interpolate_sce_triangles
+0x00001de4    6    274 sym.sce_copy_triangles_from_chromatix
+0x00001410    1     12 rsym.sce_copy_triangle_float
+0x0000141c    1     12 rsym.sce40_copy_triangles_from_chromatix
+0x000017fc    1      6 sym.module_open
+0x00006004   10    154 sym.sce40_stats_asd_update
+0x00006288   12    214 sym.sce40_streamoff
+0x00002086    1     54 sym.trigger_interpolate_sce_vectors
+0x00007208   43    772 sym.sce40_select_table
+0x000015dc   13    292 sym.__ae_r
+0x00001c78    1    362 sym.sce_copy_triangle_float
+0x00006454    6     66 sym.sce40_destroy
+0x00002046    3     64 sym.trigger_interpolate_sce_triangles_int
+0x000020c0   67   1796 sym.trigger_sce_get_triangles
+0x00001f08   18    216 sym.sce40_set_sce_factor
+0x00005b00   13    214 sym.sce40_stats_aec_update
+0x00005bf8   58    878 sym.sce40_stats_awb_update
+0x0000171c    1     28 entry.fini0
+0x00001458    1     12 rsym.sce40_select_table
+0x000064a4   53   1460 fcn.000064a4
+0x00006b4c   28    730 fcn.00006b4c
+0x00006e80   40    624 fcn.00006e80
+0x000014c4    1     12 rsym.sce_copy_triangles_from_chromatix
+0x00007168    7    136 fcn.00007168
+0x0000150c    1     12 rsym.sce_adjust_dest_triangle_by_adrc
+0x00001518    1     12 rsym.trigger_sce_get_triangles
+0x00001524    1     12 rsym.trigger_interpolate_sce_triangles
+0x0000153c    1     12 rsym.trigger_interpolate_sce_triangles_int
+0x00001548    1     12 rsym.trigger_interpolate_sce_vectors
+0x0000860c    3     46 fcn.0000860c
+0x0000863a    6     68 fcn.0000863a
+0x000080f4   25    292 fcn.000080f4
+0x00008058   21    132 fcn.00008058
+0x0000871c    1      6 fcn.0000871c
+0x000086ae    3     56 fcn.000086ae
+0x00008474    1     40 fcn.00008474
+0x000086ec    1     30 fcn.000086ec
+0x000086e6    1      6 fcn.000086e6
+0x0000867e    3     48 fcn.0000867e
+0x00008540    1      6 fcn.00008540
+0x000085c8    1     60 fcn.000085c8
+0x00008ae0    5    100 fcn.00008ae0
+0x00008354   15    214 fcn.00008354
+0x0000870a    1     18 fcn.0000870a
+0x000085b4    3     38 fcn.000085b4
+0x00008b60    1     36 fcn.00008b60
+0x00008560   10     72 fcn.00008560
+0x00008570    6    114 fcn.00008570
+0x00008568    1      8 fcn.00008568
+0x00008558    2     12 fcn.00008558
+0x00008b8c    1     72 fcn.00008b8c
+0x00007cc0    5     64 fcn.00007cc0
+0x00007d14   56    656 fcn.00007d14
+0x00008be0   13     88 fcn.00008be0
+0x00008c38   23    372 fcn.00008c38
+0x00009284    1      8 fcn.00009284
+0x0000927c    1      8 fcn.0000927c
+0x0000928c    1      8 fcn.0000928c
+0x00009294    1     68 fcn.00009294
+0x000093a0    1      8 fcn.000093a0

@@ -1,0 +1,711 @@
+arch     arm
+baddr    0x0
+binsz    23284
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                    demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+39  0x0000496c 0x0000596c GLOBAL FUNC 124      remove_from_list
+40  0x00004b44 0x00005b44 GLOBAL FUNC 72       send_to_fd
+41  0x000023e0 0x000033e0 GLOBAL FUNC 1396     thermal_client_config_query
+42  0x00002d2c 0x00003d2c GLOBAL FUNC 2308     thermal_client_config_set
+43  0x00003e84 0x00004e84 GLOBAL FUNC 224      thermal_client_unregister_callback
+44  0x00004b8c 0x00005b8c GLOBAL FUNC 68       recv_from_fd
+45  0x00001a6c 0x00002a6c GLOBAL FUNC 536      thermal_bandwidth_client_request
+46  0x00002c54 0x00003c54 GLOBAL FUNC 216      thermal_client_config_cleanup
+47  0x0000214c 0x0000314c GLOBAL FUNC 324      thermal_client_request
+48  0x000049e8 0x000059e8 GLOBAL FUNC 348      add_to_list
+49  0x0000494c 0x0000594c GLOBAL FUNC 32       get_callback_node_from_list
+50  ---------- 0x00008318 GLOBAL OBJ  4        list_head
+51  0x00002090 0x00003090 GLOBAL FUNC 188      thermal_bandwidth_client_cancel_request
+52  0x00003630 0x00004630 GLOBAL FUNC 372      thermal_client_register_callback
+53  0x00003da8 0x00004da8 GLOBAL FUNC 220      thermal_client_register_report_callback
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000174    0x18 0x00000174    0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c    0x20 0x0000018c    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0x360 0x000001ac   0x360 -r-- DYNSYM      .dynsym
+4   0x0000050c    0x6c 0x0000050c    0x6c -r-- GNU_VERSYM  .gnu.version
+5   0x00000578    0x40 0x00000578    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x000005b8    0x78 0x000005b8    0x78 -r-- GNU_HASH    .gnu.hash
+7   0x00000630   0x355 0x00000630   0x355 -r-- STRTAB      .dynstr
+8   0x00000988    0x11 0x00000988    0x11 -r-- ----        .rel.dyn
+9   0x0000099c    0x20 0x0000099c    0x20 -r-- ----        .relr.dyn
+10  0x000009bc    0xf0 0x000009bc    0xf0 -r-- ----        .ARM.exidx
+11  0x00000aac   0x158 0x00000aac   0x158 -r-- REL         .rel.plt
+12  0x00000c04    0x44 0x00000c04    0x44 -r-- PROGBITS    .ARM.extab
+13  0x00000c48   0xe10 0x00000c48   0xe10 -r-- PROGBITS    .rodata
+14  0x00001a58  0x31bc 0x00002a58  0x31bc -r-x PROGBITS    .text
+15  0x00004c20   0x2d0 0x00005c20   0x2d0 -r-x PROGBITS    .plt
+16  0x00004ef0    0x94 0x00006ef0    0x94 -rw- PROGBITS    .data.rel.ro
+17  0x00004f84     0x8 0x00006f84     0x8 -rw- FINI_ARRAY  .fini_array
+18  0x00004f8c    0xf0 0x00006f8c    0xf0 -rw- DYNAMIC     .dynamic
+19  0x0000507c     0x8 0x0000707c     0x8 -rw- PROGBITS    .got
+20  0x00005084    0xb8 0x00007084    0xb8 -rw- PROGBITS    .got.plt
+21  0x0000513c   0x1d8 0x0000813c   0x1d8 -rw- PROGBITS    .data
+22  0x00005314     0x0 0x00008318  0x7a64 -rw- NOBITS      .bss
+23  0x00005314    0x4e 0x00000000    0x4e ---- ----        .ARM.attributes
+24  0x00005362   0x102 0x00000000   0x102 ---- STRTAB      .shstrtab
+25  0x00005464   0x690 0x00000000   0x690 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+3   0x000001a0 0x000001a0 4   6    .note.gnu.build-id  utf8    dDMļ
+4   0x00000609 0x00000609 5   6    .gnu.hash           ascii   e,nl9
+5   0x00000631 0x00000631 14  15   .dynstr             ascii   __cxa_finalize
+6   0x00000640 0x00000640 12  13   .dynstr             ascii   __FD_CLR_chk
+7   0x0000064d 0x0000064d 14  15   .dynstr             ascii   __FD_ISSET_chk
+8   0x0000065c 0x0000065c 12  13   .dynstr             ascii   __FD_SET_chk
+9   0x00000669 0x00000669 19  20   .dynstr             ascii   __android_log_print
+10  0x0000067d 0x0000067d 7   8    .dynstr             ascii   __errno
+11  0x00000685 0x00000685 16  17   .dynstr             ascii   __stack_chk_fail
+12  0x00000696 0x00000696 17  18   .dynstr             ascii   __stack_chk_guard
+13  0x000006a8 0x000006a8 13  14   .dynstr             ascii   __strlcpy_chk
+14  0x000006b6 0x000006b6 11  12   .dynstr             ascii   add_to_list
+15  0x000006c2 0x000006c2 6   7    .dynstr             ascii   calloc
+16  0x000006c9 0x000006c9 5   6    .dynstr             ascii   close
+17  0x000006cf 0x000006cf 7   8    .dynstr             ascii   connect
+18  0x000006d7 0x000006d7 4   5    .dynstr             ascii   free
+19  0x000006dc 0x000006dc 27  28   .dynstr             ascii   get_callback_node_from_list
+20  0x000006f8 0x000006f8 9   10   .dynstr             ascii   list_head
+21  0x00000702 0x00000702 6   7    .dynstr             ascii   malloc
+22  0x00000709 0x00000709 6   7    .dynstr             ascii   memcmp
+23  0x00000710 0x00000710 4   5    .dynstr             ascii   pipe
+24  0x00000715 0x00000715 14  15   .dynstr             ascii   pthread_create
+25  0x00000724 0x00000724 12  13   .dynstr             ascii   pthread_join
+26  0x00000731 0x00000731 18  19   .dynstr             ascii   pthread_mutex_lock
+27  0x00000744 0x00000744 20  21   .dynstr             ascii   pthread_mutex_unlock
+28  0x00000759 0x00000759 4   5    .dynstr             ascii   read
+29  0x0000075e 0x0000075e 12  13   .dynstr             ascii   recv_from_fd
+30  0x0000076b 0x0000076b 8   9    .dynstr             ascii   recvfrom
+31  0x00000774 0x00000774 16  17   .dynstr             ascii   remove_from_list
+32  0x00000785 0x00000785 6   7    .dynstr             ascii   select
+33  0x0000078c 0x0000078c 10  11   .dynstr             ascii   send_to_fd
+34  0x00000797 0x00000797 10  11   .dynstr             ascii   setsockopt
+35  0x000007a2 0x000007a2 5   6    .dynstr             ascii   sleep
+36  0x000007a8 0x000007a8 6   7    .dynstr             ascii   socket
+37  0x000007af 0x000007af 6   7    .dynstr             ascii   strcmp
+38  0x000007b6 0x000007b6 8   9    .dynstr             ascii   strerror
+39  0x000007bf 0x000007bf 7   8    .dynstr             ascii   strlcat
+40  0x000007c7 0x000007c7 7   8    .dynstr             ascii   strlcpy
+41  0x000007cf 0x000007cf 6   7    .dynstr             ascii   strlen
+42  0x000007d6 0x000007d6 7   8    .dynstr             ascii   strncmp
+43  0x000007de 0x000007de 7   8    .dynstr             ascii   strnlen
+44  0x000007e6 0x000007e6 39  40   .dynstr             ascii   thermal_bandwidth_client_cancel_request
+45  0x0000080e 0x0000080e 32  33   .dynstr             ascii   thermal_bandwidth_client_request
+46  0x0000082f 0x0000082f 29  30   .dynstr             ascii   thermal_client_config_cleanup
+47  0x0000084d 0x0000084d 27  28   .dynstr             ascii   thermal_client_config_query
+48  0x00000869 0x00000869 25  26   .dynstr             ascii   thermal_client_config_set
+49  0x00000883 0x00000883 32  33   .dynstr             ascii   thermal_client_register_callback
+50  0x000008a4 0x000008a4 39  40   .dynstr             ascii   thermal_client_register_report_callback
+51  0x000008cc 0x000008cc 22  23   .dynstr             ascii   thermal_client_request
+52  0x000008e3 0x000008e3 34  35   .dynstr             ascii   thermal_client_unregister_callback
+53  0x00000906 0x00000906 9   10   .dynstr             ascii   vsnprintf
+54  0x00000910 0x00000910 5   6    .dynstr             ascii   write
+55  0x00000916 0x00000916 6   7    .dynstr             ascii   sendto
+56  0x0000091d 0x0000091d 6   7    .dynstr             ascii   memcpy
+57  0x00000924 0x00000924 6   7    .dynstr             ascii   memset
+58  0x0000092b 0x0000092b 9   10   .dynstr             ascii   liblog.so
+59  0x00000935 0x00000935 6   7    .dynstr             ascii   LIBLOG
+60  0x0000093c 0x0000093c 7   8    .dynstr             ascii   libc.so
+61  0x00000944 0x00000944 4   5    .dynstr             ascii   LIBC
+62  0x00000949 0x00000949 12  13   .dynstr             ascii   libcutils.so
+63  0x00000956 0x00000956 9   10   .dynstr             ascii   libc++.so
+64  0x00000960 0x00000960 7   8    .dynstr             ascii   libm.so
+65  0x00000968 0x00000968 8   9    .dynstr             ascii   libdl.so
+66  0x00000971 0x00000971 19  20   .dynstr             ascii   libthermalclient.so
+67  0x00000988 0x00000988 4   5    .rel.dyn            ascii   APS2
+68  0x00000c48 0x00000c48 10  11   .rodata             ascii   config_set
+69  0x00000c53 0x00000c53 20  21   .rodata             ascii   add_actions_to_field
+70  0x00000c68 0x00000c68 8   9    .rodata             ascii   set_temp
+71  0x00000c71 0x00000c71 61  62   .rodata             ascii   Thermal-Lib-Client:%s is not in supported thermal client list
+72  0x00000caf 0x00000caf 51  52   .rodata             ascii   Thermal-Lib-Client:%s: Could not connect to socket\n
+73  0x00000ce3 0x00000ce3 48  49   .rodata             ascii   Thermal-Lib-Client:%s Invalid number configs %d\n
+74  0x00000d14 0x00000d14 7   8    .rodata             ascii   disable
+75  0x00000d1c 0x00000d1c 34  35   .rodata             ascii   Thermal-Lib-Client:%s: recv failed
+76  0x00000d3f 0x00000d3f 49  50   .rodata             ascii   Thermal-Lib-Client: No Callback registered for %s
+77  0x00000d71 0x00000d71 39  40   .rodata             ascii   thermal_bandwidth_client_cancel_request
+78  0x00000d99 0x00000d99 25  26   .rodata             ascii   thermal_client_config_set
+79  0x00000db3 0x00000db3 24  25   .rodata             ascii   do_bw_request_to_thermal
+80  0x00000dcc 0x00000dcc 21  22   .rodata             ascii   do_request_to_thermal
+81  0x00000de2 0x00000de2 10  11   .rodata             ascii   thresholds
+82  0x00000ded 0x00000ded 16  17   .rodata             ascii   add_int_to_field
+83  0x00000dfe 0x00000dfe 75  76   .rodata             ascii   Thermal-Lib-Client: Unable to create pthread to send client request from %s
+84  0x00000e4a 0x00000e4a 51  52   .rodata             ascii   Thermal-Lib-Client:%s: could not connect to socket\n
+85  0x00000e7e 0x00000e7e 33  34   .rodata             ascii   %s: malloc failed for config_desc
+86  0x00000ea0 0x00000ea0 55  56   .rodata             ascii   Thermal-Lib-Client: %s: failed setup client send sockfd
+87  0x00000ed8 0x00000ed8 11  12   .rodata             ascii   action_info
+88  0x00000ee4 0x00000ee4 50  51   .rodata             ascii   Thermal-Lib-Client: %s: Client Registration failed
+89  0x00000f17 0x00000f17 6   7    .rodata             ascii   report
+90  0x00000f1e 0x00000f1e 22  23   .rodata             ascii   bw pipe read error:%d\n
+91  0x00000f35 0x00000f35 9   10   .rodata             ascii   set_point
+92  0x00000f3f 0x00000f3f 68  69   .rodata             ascii   Thermal-Lib: Unable to create pthread to send client request from %s
+93  0x00000f84 0x00000f84 64  65   .rodata             ascii   Thermal-Lib-Client: Unregisteration is successfull for handle:%d
+94  0x00000fc5 0x00000fc5 17  18   .rodata             ascii   %s: malloc failed
+95  0x00000fda 0x00000fda 22  23   .rodata             ascii   thermal_client_request
+96  0x00000ff1 0x00000ff1 31  32   .rodata             ascii   %s: malloc failed for algo_type
+97  0x00001011 0x00001011 37  38   .rodata             ascii   Thermal-Lib-Client:Unknown algo type\n
+98  0x00001037 0x00001037 43  44   .rodata             ascii   Thermal-Lib:Pipe error. Re-trying after 5s\n
+99  0x00001063 0x00001063 15  16   .rodata             ascii   validate_config
+100 0x00001073 0x00001073 28  29   .rodata             ascii   %s: Invalid input data: < 0\n
+101 0x00001090 0x00001090 50  51   .rodata             ascii   Thermal-Lib-Client:%s: request config is not valid
+102 0x000010c3 0x000010c3 31  32   .rodata             ascii   /dev/socket/thermal-recv-client
+103 0x000010e3 0x000010e3 27  28   .rodata             ascii   add_thresholds_clr_to_field
+104 0x000010ff 0x000010ff 32  33   .rodata             ascii   thermal_client_register_callback
+105 0x00001120 0x00001120 54  55   .rodata             ascii   Thermal-Lib: Client request sent for %s with val:0x%x\n
+106 0x00001157 0x00001157 39  40   .rodata             ascii   Thermal-Lib-Client: Client request sent
+107 0x0000117f 0x0000117f 54  55   .rodata             ascii   Thermal-Lib-Client:%s: recv failed, received byte %zd\n
+108 0x000011b6 0x000011b6 14  15   .rodata             ascii   thresholds_clr
+109 0x000011c5 0x000011c5 19  20   .rodata             ascii   add_string_to_field
+110 0x000011d9 0x000011d9 39  40   .rodata             ascii   No callback for report, stop listening\n
+111 0x00001201 0x00001201 8   9    .rodata             ascii   override
+112 0x0000120a 0x0000120a 23  24   .rodata             ascii   recv_and_extract_packet
+113 0x00001222 0x00001222 4   5    .rodata             ascii   exit
+114 0x00001227 0x00001227 38  39   .rodata             ascii   Thermal-Lib-Client:%s: unexpected NULL
+115 0x0000124e 0x0000124e 29  30   .rodata             ascii   /dev/socket/thermal-send-rule
+116 0x0000126c 0x0000126c 39  40   .rodata             ascii   /dev/socket/thermal-recv-passive-client
+117 0x00001298 0x00001298 11  12   .rodata             ascii   lower_limit
+118 0x000012a4 0x000012a4 4   5    .rodata             ascii   send
+119 0x000012ac 0x000012ac 9   10   .rodata             ascii   do_listen
+120 0x000012b6 0x000012b6 66  67   .rodata             ascii   Thermal-Lib-Client:%s: unexpected NULL client registration failed
+121 0x000012f9 0x000012f9 87  88   .rodata             ascii   Thermal-Lib-Client: Unable to create pthread to listen thermal events for report events
+122 0x00001354 0x00001354 31  32   .rodata             ascii   Thermal-Lib:%s: unexpected NULL
+123 0x00001374 0x00001374 65  66   .rodata             ascii   Thermal-Lib-Client:%s: unexpected NULL client registraion failed
+124 0x000013b6 0x000013b6 35  36   .rodata             ascii   %s: Removing all bw request for %s\n
+125 0x000013da 0x000013da 12  13   .rodata             ascii   config_query
+126 0x000013e7 0x000013e7 28  29   .rodata             ascii   %s: malloc failed for fields
+127 0x00001404 0x00001404 13  14   .rodata             ascii   passive_delay
+128 0x00001412 0x00001412 6   7    .rodata             ascii   camera
+129 0x00001419 0x00001419 39  40   .rodata             ascii   Thermal-Lib:%s:connect failure, err:%d\n
+130 0x00001441 0x00001441 49  50   .rodata             ascii   Thermal-Lib-Client:%s: Client received msg %s %d\n
+131 0x00001473 0x00001473 53  54   .rodata             ascii   Thermal-Lib-Client:%s: invalid config description %s\n
+132 0x000014a9 0x000014a9 13  14   .rodata             ascii   set_point_clr
+133 0x000014b7 0x000014b7 60  61   .rodata             ascii   Thermal-Lib-Client: Client config query request sent %s  %d\n
+134 0x000014f4 0x000014f4 39  40   .rodata             ascii   thermal_client_register_report_callback
+135 0x0000151c 0x0000151c 61  62   .rodata             ascii   Thermal-Lib-Client:%s: size of received message not matching\n
+136 0x0000155a 0x0000155a 23  24   .rodata             ascii   add_thresholds_to_field
+137 0x00001572 0x00001572 7   8    .rodata             ascii   monitor
+138 0x0000157a 0x0000157a 9   10   .rodata             ascii   step_wise
+139 0x00001586 0x00001586 37  38   .rodata             ascii   Thermal-Lib:%s No adjustment request\n
+140 0x000015ac 0x000015ac 65  66   .rodata             ascii   Thermal-Lib-Client: Registration successful for %s with handle:%d
+141 0x000015ee 0x000015ee 60  61   .rodata             ascii   Thermal-Lib-Client: thermal client unregister callback error
+142 0x0000162b 0x0000162b 9   10   .rodata             ascii   camcorder
+143 0x00001635 0x00001635 32  33   .rodata             ascii   %s: malloc failed for field_name
+144 0x00001656 0x00001656 8   9    .rodata             ascii   sampling
+145 0x0000165f 0x0000165f 34  35   .rodata             ascii   add_common_stepwise_entry_to_field
+146 0x00001682 0x00001682 7   8    .rodata             ascii   actions
+147 0x0000168a 0x0000168a 34  35   .rodata             ascii   Thermal-Client-Lib: Invalid input\n
+148 0x000016ad 0x000016ad 45  46   .rodata             ascii   Thermal-Lib-Client: Client received msg %s %d
+149 0x000016db 0x000016db 32  33   .rodata             ascii   thermal_bandwidth_client_request
+150 0x000016fc 0x000016fc 6   7    .rodata             ascii   device
+151 0x00001703 0x00001703 13  14   .rodata             ascii   polling_delay
+152 0x00001711 0x00001711 56  57   .rodata             ascii   Thermal-Lib-Client: Unable to send request data to fd %d
+153 0x0000174a 0x0000174a 9   10   .rodata             ascii   camera_bw
+154 0x00001754 0x00001754 10  11   .rodata             ascii   display_bw
+155 0x0000175f 0x0000175f 12  13   .rodata             ascii   errno %d:%s\n
+156 0x0000176c 0x0000176c 53  54   .rodata             ascii   Thermal-Client-Lib: Pipe error. Re-trying after 5sec\n
+157 0x000017a2 0x000017a2 27  28   .rodata             ascii   thermal_client_config_query
+158 0x000017be 0x000017be 46  47   .rodata             ascii   Thermal-Lib-Client:%s: config data is invalid\n
+159 0x000017ed 0x000017ed 31  32   .rodata             ascii   /dev/socket/thermal-send-client
+160 0x0000180d 0x0000180d 4   5    .rodata             ascii   spkr
+161 0x00001812 0x00001812 29  30   .rodata             ascii   add_settings_to_client_config
+162 0x00001830 0x00001830 50  51   .rodata             ascii   Thermal-Lib-Client:%s: invalid level %d unexpected
+163 0x00001863 0x00001863 48  49   .rodata             ascii   Thermal-Lib-Client: config %d data is not valid\n
+164 0x00001894 0x00001894 72  73   .rodata             ascii   Thermal-Lib-Client: Registration successful for thermal report events:%d
+165 0x000018dd 0x000018dd 44  45   .rodata             ascii   %s:Server is crashed,reconnect & send again\n
+166 0x0000190e 0x0000190e 23  24   .rodata             ascii   add_cdev_array_to_field
+167 0x00001926 0x00001926 46  47   .rodata             ascii   Thermal-Lib-Client:%s: invalid client name %s\n
+168 0x00001955 0x00001955 24  25   .rodata             ascii   add_action_info_to_field
+169 0x0000196e 0x0000196e 17  18   .rodata             ascii   %s: calloc failed
+170 0x00001980 0x00001980 11  12   .rodata             ascii   Thermal-Lib
+171 0x0000198c 0x0000198c 31  32   .rodata             ascii   %s: Invalid input data: > lim \n
+172 0x000019ac 0x000019ac 20  21   .rodata             ascii   pipe write error:%d\n
+173 0x000019c1 0x000019c1 76  77   .rodata             ascii   Thermal-Lib-Client: Unable to create pthread to listen thermal events for %s
+174 0x00001a0e 0x00001a0e 8   9    .rodata             ascii   clr_temp
+175 0x00001a17 0x00001a17 11  12   .rodata             ascii   upper_limit
+176 0x00001a23 0x00001a23 16  17   .rodata             ascii   %s:calloc failed
+177 0x00001a73 0x00002a72 5   6    .text               ascii   FjH\rF
+178 0x00001a79 0x00002a78 5   6    .text               ascii   "!FxD
+179 0x00001a81 0x00002a80 5   8    .text               utf8    訳jH!F
+180 0x00001a8f 0x00002a8e 5   8    .text               utf8    蠳vH!F
+181 0x00001a9d 0x00002a9c 5   8    .text               utf8    蘳sH!F
+182 0x00001aab 0x00002aaa 5   8    .text               utf8    萳qH!F
+183 0x00001ab9 0x00002ab8 5   8    .text               utf8    舳nH!F
+184 0x00001ace 0x00002ace 4   5    .text               ascii   kIkJ
+185 0x00001ad3 0x00002ad2 7   8    .text               ascii    #FyDzD
+186 0x00001ae6 0x00002ae6 8   9    .text               ascii   OIOJyDzD
+187 0x00001b4a 0x00002b4a 4   5    .text               ascii   8pPF
+188 0x00001b57 0x00002b56 5   6    .text               ascii   A~D0F
+189 0x00001b78 0x00002b78 6   7    .text               ascii   8HxD@h
+190 0x00001b97 0x00002b96 5   6    .text               ascii   h2I3J
+191 0x00001b9d 0x00002b9c 5   6    .text               ascii    yDzD
+192 0x00001ba8 0x00002ba8 9   10   .text               ascii   $I%JyDzD-
+193 0x00001bb2 0x00002bb2 4   5    .text               ascii   &H&J
+194 0x00001bb7 0x00002bb6 5   6    .text               ascii   !xDzD
+195 0x00001bcc 0x00002bcc 4   5    .text               ascii   !I"J
+196 0x00001bd3 0x00002bd2 7   8    .text               ascii    #FyDzD
+197 0x00001c06 0x00002c06 10  11   .text               ascii   \vI\vJyDzD\aK
+198 0x00001c9e 0x00002c9e 4   5    .text               ascii   ^"yD
+199 0x00001cb4 0x00002cb4 5   6    .text               ascii   xW9F\a
+200 0x00001d67 0x00002d66 5   6    .text               ascii   N~D1x
+201 0x00001d6f 0x00002d6e 4   5    .text               ascii   )}D@
+202 0x00001dab 0x00002daa 4   5    .text               ascii   HxD\v
+203 0x00001db1 0x00002db0 4   5    .text               ascii   HxD\n
+204 0x00001dd6 0x00002dd6 4   5    .text               ascii   OF0x
+205 0x00001e16 0x00002e16 4   5    .text               ascii   l"l#
+206 0x00001e1c 0x00002e1c 4   5    .text               ascii   xX@F
+207 0x00001e60 0x00002e60 4   5    .text               ascii   8FAF
+208 0x00001e6f 0x00002e6e 13  14   .text               ascii    zI{J{KyDzD{D
+209 0x00001e8e 0x00002e8e 4   5    .text               ascii   8h)F
+210 0x00001eb4 0x00002eb4 4   5    .text               ascii   8F)F
+211 0x00001edb 0x00002eda 5   6    .text               ascii   hbIcJ
+212 0x00001ee1 0x00002ee0 5   6    .text               ascii    yDzD
+213 0x00001f02 0x00002f02 4   5    .text               ascii   [LXF
+214 0x00001f09 0x00002f08 4   5    .text               ascii   #|D!
+215 0x00001f1c 0x00002f1c 5   6    .text               ascii   8FIFC
+216 0x00001f33 0x00002f32 9   10   .text               ascii    QIRJyDzD
+217 0x00001f4e 0x00002f4e 4   5    .text               ascii   PF)F
+218 0x00001f7a 0x00002f7a 4   5    .text               ascii   8FQF
+219 0x00001f88 0x00002f88 6   7    .text               ascii   >I?J?K
+220 0x00001f8f 0x00002f8e 7   8    .text               ascii    yDzD{D
+221 0x00001f9a 0x00002f9a 4   5    .text               ascii   8F)F
+222 0x00001fba 0x00002fba 6   7    .text               ascii   %I%J&K
+223 0x00001fc1 0x00002fc0 7   8    .text               ascii    yDzD{D
+224 0x00002025 0x00003024 7   8    .text               ascii    ;FyDzD
+225 0x000020bd 0x000030bc 9   10   .text               ascii    8p\eHxD@h
+226 0x000020f5 0x000030f4 7   8    .text               ascii   KyDzD{D
+227 0x00002111 0x00003110 5   6    .text               ascii   h\tI\tJ
+228 0x00002117 0x00003116 5   6    .text               ascii    yDzD
+229 0x00002153 0x00003152 9   10   .text               ascii   F=HxD\ah8h
+230 0x00002174 0x00003174 4   5    .text               ascii   :H!F
+231 0x00002182 0x00003182 4   5    .text               ascii   =H!F
+232 0x00002190 0x00003190 4   5    .text               ascii   :H!F
+233 0x0000219e 0x0000319e 4   5    .text               ascii   8H!F
+234 0x000021aa 0x000031aa 5   7    .text               utf8    ر5H!F
+235 0x000021ba 0x000031ba 9   10   .text               ascii   3I3JyDzD2
+236 0x000021c4 0x000031c4 6   7    .text               ascii   #I$J$K
+237 0x000021cb 0x000031ca 8   9    .text               ascii    yDzD{D,
+238 0x000021ef 0x000031ee 5   6    .text               ascii   A~D0F
+239 0x0000220d 0x0000320c 5   6    .text               ascii   JxDzD
+240 0x00002217 0x00003216 5   6    .text               ascii   %ChhF
+241 0x00002225 0x00003224 5   6    .text               ascii   JyDzD
+242 0x000022a4 0x000032a4 4   5    .text               ascii   ^!xD
+243 0x000022cc 0x000032cc 4   6    .text               utf8    ϊ(F\n
+244 0x000022e8 0x000032e8 4   5    .text               ascii   6HxD
+245 0x000022ee 0x000032ee 4   5    .text               ascii   6HxD
+246 0x000022f4 0x000032f4 4   5    .text               ascii   5HxD
+247 0x0000231f 0x0000331e 10  11   .text               ascii   F(F^!l"l#\n
+248 0x0000235c 0x0000335c 4   5    .text               ascii   0F)F
+249 0x0000236f 0x0000336e 4   5    .text               ascii   I0FC
+250 0x00002393 0x00003392 5   6    .text               ascii    3FzD
+251 0x000023fb 0x000033fa 7   8    .text               ascii   AxD\ah8h
+252 0x00002404 0x00003404 4   5    .text               ascii   t\nHF
+253 0x00002439 0x00003438 4   5    .text               ascii   \n^!@
+254 0x000024f7 0x000034f6 5   6    .text               ascii   JyDzD
+255 0x00002528 0x00003528 5   6    .text               ascii   0FIFC
+256 0x0000257b 0x0000357a 7   8    .text               ascii   KyDzD{D
+257 0x00002587 0x00003586 7   8    .text               ascii   H9F\a"xD
+258 0x00002595 0x00003594 7   8    .text               ascii   H9F\n"xD
+259 0x000025b1 0x000035b0 7   8    .text               ascii   H9F\r"xD
+260 0x0000262a 0x0000362a 4   5    .text               ascii    " #
+261 0x00002644 0x00003644 4   5    .text               ascii   \n"\n#
+262 0x00002659 0x00003658 6   8    .text               utf8    ҺJ@FIF
+263 0x00002671 0x00003670 5   6    .text               ascii   J@FIF
+264 0x0000267d 0x0000367c 9   10   .text               ascii   J@FIF\b#zD
+265 0x0000269a 0x0000369a 5   6    .text               ascii   0FIFC
+266 0x000026d9 0x000036d8 7   8    .text               ascii    yDzD{D
+267 0x000026ec 0x000036ec 8   9    .text               ascii   iIjJyDzD
+268 0x000026f6 0x000036f6 10  11   .text               ascii   jIjJyDzDgK
+269 0x0000270e 0x0000370e 4   5    .text               ascii   fIfJ
+270 0x00002713 0x00003712 7   8    .text               ascii    3FyDzD
+271 0x0000272f 0x0000372e 13  14   .text               ascii    bIcJcKyDzD{D
+272 0x00002755 0x00003754 11  12   .text               ascii    +F[I\JyDzD
+273 0x00002762 0x00003762 6   7    .text               ascii   SISJTK
+274 0x00002769 0x00003768 7   8    .text               ascii    yDzD{D
+275 0x00002784 0x00003784 8   9    .text               ascii   RISJyDzD
+276 0x00002792 0x00003792 10  11   .text               ascii   ]I]JyDzDOK
+277 0x000027d0 0x000037d0 8   9    .text               ascii   SITJyDzD
+278 0x000027da 0x000037da 10  11   .text               ascii   TITJyDzDQK
+279 0x000027f2 0x000037f2 6   7    .text               ascii   QIQJRK
+280 0x000027f9 0x000037f8 7   8    .text               ascii    yDzD{D
+281 0x00002826 0x00003826 4   5    .text               ascii   (FIF
+282 0x00002856 0x00003856 4   5    .text               ascii   0I0J
+283 0x0000285b 0x0000385a 7   8    .text               ascii    ;FyDzD
+284 0x00002864 0x00003864 4   5    .text               ascii   9I:J
+285 0x00002869 0x00003868 5   6    .text               ascii    yDzD
+286 0x00002877 0x00003876 13  14   .text               ascii     I!J!KyDzD{D
+287 0x00002970 0x00003970 7   8    .text               ascii   $I\n"yDQ
+288 0x00002978 0x00003978 7   8    .text               ascii    P#HxDP
+289 0x0000298f 0x0000398e 5   6    .text               ascii   H!FxD
+290 0x0000299b 0x0000399a 5   6    .text               ascii   H!FxD
+291 0x000029a6 0x000039a6 6   7    .text               ascii   \eH!FxD
+292 0x000029b3 0x000039b2 5   6    .text               ascii   H!FxD
+293 0x000029bf 0x000039be 5   6    .text               ascii   H!FxD
+294 0x000029cb 0x000039ca 5   6    .text               ascii   H!FxD
+295 0x000029f1 0x000039f0 5   6    .text               ascii   %\aHxD
+296 0x00002a2d 0x00003a2c 9   10   .text               ascii   F=H\fF)FxD
+297 0x00002a3c 0x00003a3c 6   7    .text               ascii   :H)FxD
+298 0x00002a48 0x00003a48 6   7    .text               ascii   9H)FxD
+299 0x00002a54 0x00003a54 6   7    .text               ascii   7H)FxD
+300 0x00002a5e 0x00003a5e 7   9    .text               utf8    б5H)FxD
+301 0x00002a69 0x00003a68 7   10   .text               utf8    鰱3H)FxD
+302 0x00002a75 0x00003a74 5   8    .text               utf8    鐱1I2J
+303 0x00002a7d 0x00003a7c 7   8    .text               ascii    +FyDzD
+304 0x00002abb 0x00003aba 4   5    .text               ascii   !l"@
+305 0x00002ae9 0x00003ae8 4   5    .text               ascii   \n F@
+306 0x00002af8 0x00003af8 4   5    .text               ascii   Nh1F
+307 0x00002b0a 0x00003b0a 4   5    .text               ascii   (F!F
+308 0x00002ba2 0x00003ba2 5   6    .text               ascii   :h``\n
+309 0x00002bc4 0x00003bc4 6   7    .text               ascii    I!J!K
+310 0x00002bcb 0x00003bca 7   8    .text               ascii    yDzD{D
+311 0x00002be5 0x00003be4 7   8    .text               ascii    yDzD{D
+312 0x00002cc1 0x00003cc0 4   5    .text               ascii   h1F2
+313 0x00002d7d 0x00003d7c 4   5    .text               ascii   \n^!@
+314 0x00002da5 0x00003da4 7   8    .text               ascii    yDzD{D
+315 0x00002dbb 0x00003dba 4   5    .text               ascii   \v(D\t
+316 0x00002e48 0x00003e48 4   5    .text               ascii    F)F
+317 0x00002e4f 0x00003e4e 5   8    .text               utf8    僧 F9F
+318 0x00002e59 0x00003e58 5   8    .text               utf8     F1F
+319 0x00002e66 0x00003e66 4   5    .text               ascii    FIF
+320 0x00002ec6 0x00003ec6 4   5    .text               ascii   zHxD
+321 0x00002ef4 0x00003ef4 4   5    .text               ascii   0F!F
+322 0x00002efe 0x00003efe 4   5    .text               ascii   0FAF
+323 0x00002f08 0x00003f08 4   5    .text               ascii   0FIF
+324 0x00002f3a 0x00003f3a 4   5    .text               ascii   0FQF
+325 0x00002f80 0x00003f80 4   5    .text               ascii   LHxD
+326 0x00002fa0 0x00003fa0 5   7    .text               utf8    Ƃ@F!F
+327 0x00002faa 0x00003faa 5   7    .text               utf8    б@F9F
+328 0x00002fb2 0x00003fb2 6   9    .text               utf8    F僧@F)F
+329 0x00002fd4 0x00003fd4 4   5    .text               ascii   @FQF
+330 0x00003012 0x00004012 4   6    .text               utf8    ۮ(H\r
+331 0x0000301c 0x0000401c 4   5    .text               ascii   tQxD
+332 0x00003052 0x00004052 5   6    .text               ascii   (F!FC
+333 0x000030c7 0x000040c6 5   6    .text               ascii    yDzD
+334 0x00003209 0x00004208 4   5    .text               ascii   l\rQO
+335 0x00003217 0x00004216 4   5    .text               ascii   t\rQO
+336 0x00003225 0x00004224 4   5    .text               ascii   t\rQO
+337 0x00003233 0x00004232 4   5    .text               ascii   t\rQO
+338 0x00003254 0x00004254 4   5    .text               ascii   $`Mb
+339 0x000032a7 0x000042a6 4   5    .text               ascii   f\f O
+340 0x00003476 0x00004476 4   5    .text               ascii    " #
+341 0x0000348a 0x0000448a 4   5    .text               ascii   ^JXF
+342 0x000034a7 0x000044a6 4   5    .text               ascii   #zD\b
+343 0x000034ba 0x000044ba 4   5    .text               ascii   \b#zD
+344 0x000034d1 0x000044d0 5   6    .text               ascii   B!FPF
+345 0x000034e3 0x000044e2 5   6    .text               ascii    KILJ
+346 0x000034ea 0x000044ea 4   5    .text               ascii   yDzD
+347 0x000034f8 0x000044f8 4   5    .text               ascii   DIEJ
+348 0x000034fd 0x000044fc 7   8    .text               ascii    SFyDzD
+349 0x0000351c 0x0000451c 6   7    .text               ascii   /I0J0K
+350 0x00003523 0x00004522 7   8    .text               ascii    yDzD{D
+351 0x0000352e 0x0000452e 10  11   .text               ascii   0I0JyDzD0K
+352 0x00003548 0x00004548 4   5    .text               ascii   @^ h
+353 0x00003578 0x00004578 6   7    .text               ascii   (F(IyD
+354 0x000035a1 0x000045a0 5   6    .text               ascii   JyDzD
+355 0x000035ad 0x000045ac 7   8    .text               ascii    +FyDzD
+356 0x000035c5 0x000045c4 7   8    .text               ascii    +FyDzD
+357 0x00003642 0x00004642 6   7    .text               ascii   KIKJLK
+358 0x00003649 0x00004648 7   8    .text               ascii    yDzD{D
+359 0x00003665 0x00004664 5   6    .text               ascii   "!FxD
+360 0x0000366e 0x0000466e 5   7    .text               utf8    ر:H!F
+361 0x0000367b 0x0000467a 5   8    .text               utf8    ꠱EH!F
+362 0x0000368c 0x0000468c 4   5    .text               ascii   BH!F
+363 0x0000369a 0x0000469a 4   5    .text               ascii   @I@J
+364 0x0000369f 0x0000469e 7   8    .text               ascii    #FyDzD
+365 0x000036a8 0x000046a8 4   5    .text               ascii   -M}D
+366 0x000036c4 0x000046c4 4   5    .text               ascii   (rHF
+367 0x000036cc 0x000046cc 6   7    .text               ascii    F9F2F
+368 0x000036e4 0x000046e4 4   5    .text               ascii   %J&K
+369 0x000036ed 0x000046ec 5   6    .text               ascii   !zD{D
+370 0x000036f8 0x000046f8 4   5    .text               ascii   "I#J
+371 0x000036fd 0x000046fc 7   8    .text               ascii    #FyDzD
+372 0x0000371d 0x0000471c 7   8    .text               ascii    yDzD{D
+373 0x0000373f 0x0000473e 5   6    .text               ascii   JyDzD
+374 0x00003813 0x00004812 4   5    .text               ascii   \np A
+375 0x00003891 0x00004890 4   5    .text               ascii   \nl A
+376 0x000038a2 0x000048a2 5   6    .text               ascii   lHxD\e
+377 0x000038ab 0x000048aa 5   6    .text               ascii   (jHxD
+378 0x000038d0 0x000048d0 4   5    .text               ascii   bIcJ
+379 0x000038d5 0x000048d4 5   6    .text               ascii    yDzD
+380 0x000038e0 0x000048e0 4   5    .text               ascii   @^ h
+381 0x00003908 0x00004908 5   6    .text               ascii   VHxD\a
+382 0x0000390e 0x0000490e 4   5    .text               ascii   VHxD
+383 0x00003914 0x00004914 4   5    .text               ascii   UHxD
+384 0x000039b6 0x000049b6 4   5    .text               ascii   @F)F
+385 0x000039c2 0x000049c2 4   5    .text               ascii   8Fp!
+386 0x00003a18 0x00004a18 4   5    .text               ascii   @F9F
+387 0x00003a75 0x00004a74 5   6    .text               ascii    yDzD
+388 0x00003aa0 0x00004aa0 4   5    .text               ascii    F9F
+389 0x00003aea 0x00004aea 5   6    .text               ascii   @F1FC
+390 0x00003b87 0x00004b86 5   6    .text               ascii    vIwJ
+391 0x00003b90 0x00004b90 6   7    .text               ascii   yDzDKF
+392 0x00003b9a 0x00004b9a 8   9    .text               ascii   tHIF\a"xD
+393 0x00003baa 0x00004baa 8   9    .text               ascii   qHIF\n"xD
+394 0x00003bba 0x00004bba 4   5    .text               ascii   uHIF
+395 0x00003bca 0x00004bca 8   9    .text               ascii   rHIF\r"xD
+396 0x00003bda 0x00004bda 4   5    .text               ascii   oIoJ
+397 0x00003bdf 0x00004bde 7   8    .text               ascii    KFyDzD
+398 0x00003c38 0x00004c38 4   5    .text               ascii    \tHF
+399 0x00003c40 0x00004c40 4   5    .text               ascii   CHxD
+400 0x00003c56 0x00004c56 4   5    .text               ascii   ?IyD
+401 0x00003c76 0x00004c76 6   7    .text               ascii   3I3J4K
+402 0x00003c7d 0x00004c7c 7   8    .text               ascii    yDzD{D
+403 0x00003cb9 0x00004cb8 13  14   .text               ascii    /I/J0KyDzD{D
+404 0x00003d15 0x00004d14 5   6    .text               ascii    yDzD
+405 0x00003d28 0x00004d28 6   7    .text               ascii   \vI\fJ\fK
+406 0x00003d2f 0x00004d2e 7   8    .text               ascii    yDzD{D
+407 0x00003dc0 0x00004dc0 8   9    .text               ascii   'H1F"FxD
+408 0x00003dd6 0x00004dd6 5   6    .text               ascii   &J&K\a
+409 0x00003ddf 0x00004dde 5   6    .text               ascii   !zD{D
+410 0x00003de8 0x00004de8 5   6    .text               ascii   #IyD0
+411 0x00003e09 0x00004e08 7   8    .text               ascii    yDzD{D
+412 0x00003e23 0x00004e22 7   8    .text               ascii    yDzD{D
+413 0x00003e3f 0x00004e3e 5   6    .text               ascii    #FzD
+414 0x00003ea8 0x00004ea8 4   5    .text               ascii   \aF0F
+415 0x00003eb6 0x00004eb6 4   5    .text               ascii   $HxD
+416 0x00003ec3 0x00004ec2 13  14   .text               ascii   "(r!HxD@h IyD
+417 0x00003ee9 0x00004ee8 5   6    .text               ascii    (s\eI
+418 0x00003ef1 0x00004ef0 7   8    .text               ascii    CFyDzD
+419 0x00003f0b 0x00004f0a 5   6    .text               ascii    yDzD
+420 0x00003f23 0x00004f22 5   6    .text               ascii   h\vI\fJ
+421 0x00003f29 0x00004f28 5   6    .text               ascii    yDzD
+422 0x00003f97 0x00004f96 7   8    .text               ascii    yDzD{D
+423 0x00003ff7 0x00004ff6 7   8    .text               ascii    yDzD{D
+424 0x00004059 0x00005058 7   8    .text               ascii    yDzD{D
+425 0x000040e6 0x000050e6 4   6    .text               utf8    س1F\a
+426 0x0000410a 0x0000510a 6   7    .text               ascii   %I2FyD
+427 0x0000411c 0x0000511c 4   5    .text               ascii   9F2F
+428 0x0000414b 0x0000514a 7   8    .text               ascii    yDzD{D
+429 0x00004160 0x00005160 6   7    .text               ascii   \fI\rJ\rK
+430 0x00004167 0x00005166 7   8    .text               ascii    yDzD{D
+431 0x0000423d 0x0000523c 5   6    .text               ascii   I\aJ\aK
+432 0x00004243 0x00005242 7   8    .text               ascii    yDzD{D
+433 0x00004282 0x00005282 6   7    .text               ascii   )F " #
+434 0x0000429f 0x0000529e 7   8    .text               ascii    yDzD{D
+435 0x00004301 0x00005300 7   8    .text               ascii    yDzD{D
+436 0x00004367 0x00005366 7   8    .text               ascii    yDzD{D
+437 0x000043b3 0x000053b2 4   6    .text               utf8    (KЀF
+438 0x000043d4 0x000053d4 5   6    .text               ascii   \fYUE3
+439 0x00004414 0x00005414 6   7    .text               ascii   !I2FyD
+440 0x00004426 0x00005426 4   5    .text               ascii   9F2F
+441 0x00004455 0x00005454 7   8    .text               ascii    yDzD{D
+442 0x00004462 0x00005462 6   7    .text               ascii   \vI\vJ\fK
+443 0x00004469 0x00005468 7   8    .text               ascii    yDzD{D
+444 0x000044f8 0x000054f8 4   5    .text               ascii   \fSJE
+445 0x00004541 0x00005540 7   8    .text               ascii    yDzD{D
+446 0x000045ac 0x000055ac 4   5    .text               ascii   \fSJE
+447 0x000045f5 0x000055f4 7   8    .text               ascii    yDzD{D
+448 0x000046f9 0x000056f8 5   6    .text               ascii   I8FyD
+449 0x00004706 0x00005706 6   7    .text               ascii   ~I8FyD
+450 0x00004744 0x00005744 6   7    .text               ascii   oI8FyD
+451 0x00004752 0x00005752 6   7    .text               ascii   mI8FyD
+452 0x00004789 0x00005788 4   5    .text               ascii   \nbF\b
+453 0x000047bf 0x000057be 4   5    .text               ascii   !PFR
+454 0x000047ca 0x000057ca 4   5    .text               ascii   $;#h
+455 0x000047f4 0x000057f4 4   5    .text               ascii   #p\n+
+456 0x00004835 0x00005834 4   5    .text               ascii   \nrF\a
+457 0x00004869 0x00005868 4   5    .text               ascii    QFR
+458 0x00004874 0x00005874 4   5    .text               ascii   (;#h
+459 0x00004897 0x00005896 4   5    .text               ascii   \nbF\a
+460 0x000048c2 0x000058c2 4   5    .text               ascii   \bE\bh
+461 0x000048cb 0x000058ca 4   5    .text               ascii   $PFR
+462 0x000048d6 0x000058d6 4   5    .text               ascii   (;\vh
+463 0x00004910 0x00005910 6   7    .text               ascii   \vHl!xD
+464 0x00004920 0x00005920 8   9    .text               ascii   \bH\tJxDzD
+465 0x00004953 0x00005952 5   6    .text               ascii   F`h)F
+466 0x000049a3 0x000059a2 6   7    .text               ascii   F%FdiD
+467 0x000049b4 0x000059b4 7   8    .text               ascii   `iha F\t
+468 0x00004b59 0x00005b58 4   5    .text               ascii   \e0FO
+469 0x00004b81 0x00005b80 5   6    .text               ascii   hDB F
+470 0x00004bc5 0x00005bc4 5   6    .text               ascii   hDB F
+471 0x00004bf9 0x00005bf8 4   5    .text               ascii   D`G@
+472 0x00004c05 0x00005c04 4   5    .text               ascii   D`G@
+473 0x000052fc 0x000082fc 4   20   .data               utf32le  D\b啡
+474 0x00005319 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+475 0x00005324 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+476 0x0000532b 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+477 0x00005363 0x00000001 11  12   .shstrtab           ascii   .fini_array
+478 0x0000536f 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+479 0x0000537a 0x00000018 5   6    .shstrtab           ascii   .text
+480 0x00005380 0x0000001e 4   5    .shstrtab           ascii   .got
+481 0x00005385 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+482 0x00005399 0x00000037 8   9    .shstrtab           ascii   .got.plt
+483 0x000053a2 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+484 0x000053ab 0x00000049 4   5    .shstrtab           ascii   .bss
+485 0x000053b0 0x0000004e 15  16   .shstrtab           ascii   .ARM.attributes
+486 0x000053c0 0x0000005e 7   8    .shstrtab           ascii   .dynstr
+487 0x000053c8 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+488 0x000053d7 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+489 0x000053e4 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+490 0x000053ee 0x0000008c 8   9    .shstrtab           ascii   .rel.dyn
+491 0x000053f7 0x00000095 12  13   .shstrtab           ascii   .gnu.version
+492 0x00005404 0x000000a2 7   8    .shstrtab           ascii   .dynsym
+493 0x0000540c 0x000000aa 9   10   .shstrtab           ascii   .gnu.hash
+494 0x00005416 0x000000b4 18  19   .shstrtab           ascii   .note.gnu.build-id
+495 0x00005429 0x000000c7 8   9    .shstrtab           ascii   .dynamic
+496 0x00005432 0x000000d0 10  11   .shstrtab           ascii   .ARM.extab
+497 0x0000543d 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+498 0x00005447 0x000000e5 7   8    .shstrtab           ascii   .rodata
+499 0x0000544f 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+500 0x0000545e 0x000000fc 5   6    .shstrtab           ascii   .data
+501 0x00005465 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+502 0x000054a2 0x0000003e 4   5    .gnu_debugdata      ascii   v>Wn
+503 0x000054f7 0x00000093 5   6    .gnu_debugdata      ascii   +Eou|
+504 0x0000551e 0x000000ba 8   9    .gnu_debugdata      ascii   ?nLr~S4\b
+505 0x00005527 0x000000c3 4   5    .gnu_debugdata      ascii   ZWF_
+506 0x00005540 0x000000dc 7   8    .gnu_debugdata      ascii   1xH.'So
+507 0x000055ab 0x00000147 5   6    .gnu_debugdata      ascii   Q.{%x
+508 0x00005612 0x000001ae 4   6    .gnu_debugdata      utf8    2C˩@
+509 0x0000562a 0x000001c6 4   6    .gnu_debugdata      utf8    Q;ذD
+510 0x00005634 0x000001d0 6   8    .gnu_debugdata      utf8    \ПK\e-U
+511 0x0000567f 0x0000021b 6   7    .gnu_debugdata      ascii   ,ubw\a
+512 0x00005709 0x000002a5 5   7    .gnu_debugdata      utf8    wMg8,
+513 0x0000571a 0x000002b6 4   5    .gnu_debugdata      ascii   _v.\n
+514 0x000057b3 0x0000034f 6   8    .gnu_debugdata      utf8    9̫cYPh
+515 0x000057f1 0x0000038d 4   5    .gnu_debugdata      ascii   r;an
+516 0x000057f6 0x00000392 4   6    .gnu_debugdata      utf8    OuoǕ
+517 0x00005803 0x0000039f 5   8    .gnu_debugdata      utf8    \e+滻`8
+518 0x0000580c 0x000003a8 6   7    .gnu_debugdata      ascii   yG-u$D
+519 0x00005822 0x000003be 4   5    .gnu_debugdata      ascii   IG{j
+520 0x00005872 0x0000040e 8   9    .gnu_debugdata      ascii   67_$-_o:
+521 0x000058b1 0x0000044d 5   6    .gnu_debugdata      ascii   Obdn2
+522 0x000058c7 0x00000463 5   6    .gnu_debugdata      ascii   )4(B"
+523 0x000058da 0x00000476 5   8    .gnu_debugdata      utf8     T3W
+524 0x00005900 0x0000049c 4   5    .gnu_debugdata      ascii   ~K>e
+525 0x00005915 0x000004b1 5   7    .gnu_debugdata      utf8    MGʙ38
+526 0x000059b5 0x00000551 4   5    .gnu_debugdata      ascii   7x9z
+527 0x000059d5 0x00000571 4   6    .gnu_debugdata      utf8    α;G_
+528 0x000059ee 0x0000058a 4   5    .gnu_debugdata      ascii   \fhAs
+529 0x00005a39 0x000005d5 4   5    .gnu_debugdata      ascii   \t><d
+530 0x00005a44 0x000005e0 8   9    .gnu_debugdata      ascii   sbnqa884
+531 0x00005a50 0x000005ec 5   7    .gnu_debugdata      utf8    CРC6%
+532 0x00005a6d 0x00000609 5   6    .gnu_debugdata      ascii   T_m^I
+533 0x00005a7b 0x00000617 4   6    .gnu_debugdata      utf8    ̘\e[}
+534 0x00005a90 0x0000062c 6   8    .gnu_debugdata      utf8    %imӊ@3
+535 0x00005a9c 0x00000638 4   6    .gnu_debugdata      utf8    gЦ`J
+536 0x00005ad7 0x00000673 5   6    .gnu_debugdata      ascii   d@iKU
+537 0x00005cac 0x00000848 6   28                       utf32le @\tBબબŘ
+0x00005c34    1     12 sym.imp.__cxa_finalize
+0x00005d24    1      8 sym.imp.__FD_CLR_chk
+0x00005d18    1      4 sym.imp.__FD_ISSET_chk
+0x00005cdc    1      4 sym.imp.__FD_SET_chk
+0x00005c4c    1      4 sym.imp.__android_log_print
+0x00005c88    1      4 sym.imp.__errno
+0x00005d30    1     12 sym.imp.__stack_chk_fail
+0x00005c64    1      8 sym.imp.__strlcpy_chk
+0x00005dfc    1      4 sym.imp.calloc
+0x00005cd0    1     12 sym.imp.close
+0x00005cc4    1      8 sym.imp.connect
+0x00005d90    1     12 sym.imp.free
+0x00005d78    1      4 sym.imp.malloc
+0x00005d6c    1      4 sym.imp.memcmp
+0x00005ca0    1     12 sym.imp.pipe
+0x00005c94    1      8 sym.imp.pthread_create
+0x00005d3c    1      4 sym.imp.pthread_join
+0x00005c58    1      4 sym.imp.pthread_mutex_lock
+0x00005c70    1     12 sym.imp.pthread_mutex_unlock
+0x00005cf4    1      8 sym.imp.read
+0x00005dd8    1      4 sym.imp.recvfrom
+0x00005d0c    1      4 sym.imp.select
+0x00005d48    1      4 sym.imp.setsockopt
+0x00005cac    1      4 sym.imp.sleep
+0x00005ce8    1      4 sym.imp.socket
+0x00005db4    1      8 sym.imp.strcmp
+0x00005d84    1      8 sym.imp.strerror
+0x00005df0    1     12 sym.imp.strlcat
+0x00005da8    1      4 sym.imp.strlcpy
+0x00005cb8    1      4 sym.imp.strlen
+0x00005c40    1     12 sym.imp.strncmp
+0x00005d60    1     12 sym.imp.strnlen
+0x00005e08    1      4 sym.imp.vsnprintf
+0x00005c7c    1      4 sym.imp.write
+0x00005e14    1      8 sym.imp.sendto
+0x00005e20    1     12 sym.imp.memcpy
+0x00005e2c    1      4 sym.imp.memset
+0x00002a58    2     20 entry0
+0x0000596c   14    116 sym.remove_from_list
+0x00005b44    5     72 sym.send_to_fd
+0x00005ec0    1     12 fcn.00005ec0
+0x00005cb0    1      8 fcn.00005cb0
+0x000033e0   94   1442 sym.thermal_client_config_query
+0x00003d2c   93   2142 sym.thermal_client_config_set
+0x00004e84   11    194 sym.thermal_client_unregister_callback
+0x00005b8c    5     68 sym.recv_from_fd
+0x00005e70    1     12 fcn.00005e70
+0x00002a6c   31    436 sym.thermal_bandwidth_client_request
+0x00005c50    1      8 fcn.00005c50
+0x00005c60    1      4 fcn.00005c60
+0x00005be4    2     24 sym.__aeabi_memclr
+0x00005c80    1      8 fcn.00005c80
+0x00005c90    1      4 fcn.00005c90
+0x00005cc0    1      4 fcn.00005cc0
+0x00003c54   27    228 sym.thermal_client_config_cleanup
+0x00005e10    1      4 fcn.00005e10
+0x0000314c   57    874 sym.thermal_client_request
+0x000059e8   66    338 sym.add_to_list
+0x0000594c    6     32 sym.get_callback_node_from_list
+0x00003090    7    152 sym.thermal_bandwidth_client_cancel_request
+0x00004630    6     82 sym.thermal_client_register_callback
+0x00004da8    7    166 sym.thermal_client_register_report_callback
+0x00005e50    1     12 fcn.00005e50
+0x00002a66    2      6 entry.fini0
+0x00005ce0    1      8 fcn.00005ce0
+0x00005cf0    1      4 fcn.00005cf0
+0x00005d00    1     12 fcn.00005d00
+0x00005d10    1      8 fcn.00005d10
+0x00005d20    1      4 fcn.00005d20
+0x00005d40    1      8 fcn.00005d40
+0x00005d50    1     12 fcn.00005d50
+0x00005bd0    2     16 sym.__aeabi_memcpy8
+0x00005d70    1      8 fcn.00005d70
+0x00005d80    1      4 fcn.00005d80
+0x00005da0    1      8 fcn.00005da0
+0x00003954   19    170 fcn.00003954
+0x00003a24   16    146 fcn.00003a24
+0x00005db0    1      4 fcn.00005db0
+0x00005dc0    1     12 fcn.00005dc0
+0x00005dd0    1      8 fcn.00005dd0
+0x00005de0    1     12 fcn.00005de0
+0x00003b48   19    242 fcn.00003b48
+0x00005e00    1      8 fcn.00005e00
+0x00005e30    1     12 fcn.00005e30
+0x00005e40    1     12 fcn.00005e40
+0x00005614   57    738 fcn.00005614
+0x00005e60    1     12 fcn.00005e60
+0x0000590c    3     64 fcn.0000590c
+0x00005eb0    1     12 fcn.00005eb0
+0x00005e80    1     12 fcn.00005e80
+0x00005e90    1     12 fcn.00005e90
+0x00005ea0    1     12 fcn.00005ea0

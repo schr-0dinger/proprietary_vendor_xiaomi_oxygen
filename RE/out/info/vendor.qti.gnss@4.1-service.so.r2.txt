@@ -1,0 +1,161 @@
+arch     arm
+baddr    0x0
+binsz    10019
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+12  0x00001014 0x00001014 GLOBAL FUNC 228      main
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000238   0x18 0x00000238   0x18 -r-- NOTE        .note.android.ident
+2   0x00000250   0x20 0x00000250   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270  0x138 0x00000270  0x138 -r-- DYNSYM      .dynsym
+4   0x000003a8   0x1a 0x000003a8   0x1a -r-- GNU_VERSYM  .gnu.version
+5   0x000003c4   0x40 0x000003c4   0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000408   0x24 0x00000408   0x24 -r-- GNU_HASH    .gnu.hash
+7   0x0000042c  0x3c0 0x0000042c  0x3c0 -r-- STRTAB      .dynstr
+8   0x000007f0   0x11 0x000007f0   0x11 -r-- ----        .rela.dyn
+9   0x00000808   0x10 0x00000808   0x10 -r-- ----        .relr.dyn
+10  0x00000818   0xf0 0x00000818   0xf0 -r-- RELA        .rela.plt
+11  0x00000908   0x70 0x00000908   0x70 -r-- PROGBITS    .rodata
+12  0x00000978   0x34 0x00000978   0x34 -r-- PROGBITS    .eh_frame_hdr
+13  0x000009b0   0xb4 0x000009b0   0xb4 -r-- PROGBITS    .eh_frame
+14  0x00001000  0x2a4 0x00001000  0x2a4 -r-x PROGBITS    .text
+15  0x000012b0   0xc0 0x000012b0   0xc0 -r-x PROGBITS    .plt
+16  0x00002000    0x8 0x00002000    0x8 -rw- PROGBITS    .data.rel.ro
+17  0x00002008   0x10 0x00002008   0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00002018  0x2e0 0x00002018  0x2e0 -rw- DYNAMIC     .dynamic
+19  0x000022f8    0x8 0x000022f8    0x8 -rw- PROGBITS    .got
+20  0x00002300   0x68 0x00002300   0x68 -rw- PROGBITS    .got.plt
+21  0x00002368   0xeb 0x00000000   0xeb ---- STRTAB      .shstrtab
+22  0x00002453  0x2d0 0x00000000  0x2d0 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x0000026b 0x0000026b 4   5    .note.gnu.build-id  ascii   w&z\b
+3   0x0000042d 0x0000042d 14  15   .dynstr             ascii   __cxa_finalize
+4   0x0000043c 0x0000043c 51  52   .dynstr             ascii   _ZN6vendor3qti4gnss4V4_112ILocHidlGnss10descriptorE
+5   0x00000470 0x00000470 135 136  .dynstr             ascii   _ZN7android8hardware40registerPassthroughServiceImplementationERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_S9_
+6   0x000004f8 0x000004f8 172 173  .dynstr             ascii   _ZN7android8hardware40registerPassthroughServiceImplementationIN6vendor3qti4gnss4V4_112ILocHidlGnssES6_EEiRKNSt3__112basic_stringIcNS7_11char_traitsIcEENS7_9allocatorIcEEEE
+7   0x000005a5 0x000005a5 63  64   .dynstr             ascii   _ZNKSt3__121__basic_string_commonILb1EE20__throw_length_errorEv
+8   0x000005e5 0x000005e5 6   7    .dynstr             ascii   _ZdlPv
+9   0x000005ec 0x000005ec 5   6    .dynstr             ascii   _Znwm
+10  0x000005f2 0x000005f2 19  20   .dynstr             ascii   __android_log_print
+11  0x00000606 0x00000606 16  17   .dynstr             ascii   __stack_chk_fail
+12  0x00000617 0x00000617 4   5    .dynstr             ascii   main
+13  0x0000061c 0x0000061c 6   7    .dynstr             ascii   memcpy
+14  0x00000623 0x00000623 6   7    .dynstr             ascii   strlen
+15  0x0000062a 0x0000062a 9   10   .dynstr             ascii   liblog.so
+16  0x00000634 0x00000634 6   7    .dynstr             ascii   LIBLOG
+17  0x0000063b 0x0000063b 7   8    .dynstr             ascii   libc.so
+18  0x00000643 0x00000643 4   5    .dynstr             ascii   LIBC
+19  0x00000648 0x00000648 12  13   .dynstr             ascii   libcutils.so
+20  0x00000655 0x00000655 10  11   .dynstr             ascii   libbase.so
+21  0x00000660 0x00000660 11  12   .dynstr             ascii   libutils.so
+22  0x0000066c 0x0000066c 15  16   .dynstr             ascii   libgps.utils.so
+23  0x0000067c 0x0000067c 23  24   .dynstr             ascii   libqti_vndfwk_detect.so
+24  0x00000694 0x00000694 14  15   .dynstr             ascii   libhidlbase.so
+25  0x000006a3 0x000006a3 28  29   .dynstr             ascii   android.hardware.gnss@1.0.so
+26  0x000006c0 0x000006c0 28  29   .dynstr             ascii   android.hardware.gnss@1.1.so
+27  0x000006dd 0x000006dd 28  29   .dynstr             ascii   android.hardware.gnss@2.0.so
+28  0x000006fa 0x000006fa 22  23   .dynstr             ascii   vendor.qti.gnss@1.0.so
+29  0x00000711 0x00000711 22  23   .dynstr             ascii   vendor.qti.gnss@1.1.so
+30  0x00000728 0x00000728 22  23   .dynstr             ascii   vendor.qti.gnss@1.2.so
+31  0x0000073f 0x0000073f 22  23   .dynstr             ascii   vendor.qti.gnss@2.0.so
+32  0x00000756 0x00000756 22  23   .dynstr             ascii   vendor.qti.gnss@2.1.so
+33  0x0000076d 0x0000076d 22  23   .dynstr             ascii   vendor.qti.gnss@3.0.so
+34  0x00000784 0x00000784 22  23   .dynstr             ascii   vendor.qti.gnss@4.0.so
+35  0x0000079b 0x0000079b 22  23   .dynstr             ascii   vendor.qti.gnss@4.1.so
+36  0x000007b2 0x000007b2 9   10   .dynstr             ascii   libc++.so
+37  0x000007bc 0x000007bc 7   8    .dynstr             ascii   libm.so
+38  0x000007c4 0x000007c4 8   9    .dynstr             ascii   libdl.so
+39  0x000007cd 0x000007cd 30  31   .dynstr             ascii   vendor.qti.gnss@4.1-service.so
+40  0x000007f0 0x000007f0 4   5    .rela.dyn           ascii   APS2
+41  0x0000090b 0x0000090b 11  12   .rodata             ascii   gnss_vendor
+42  0x00000917 0x00000917 4   5    .rodata             ascii   main
+43  0x0000091c 0x0000091c 51  52   .rodata             ascii   Error while registering gnss vendor hal service: %d
+44  0x00000950 0x00000950 39  40   .rodata             ascii   LocSvc_HIDL_vendor.qti.gnss@4.1-service
+45  0x0000121d 0x0000121d 4   5    .text               ascii   j58L
+46  0x00002369 0x00000001 11  12   .shstrtab           ascii   .fini_array
+47  0x00002375 0x0000000d 5   6    .shstrtab           ascii   .text
+48  0x0000237b 0x00000013 4   5    .shstrtab           ascii   .got
+49  0x00002380 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+50  0x00002394 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+51  0x0000239d 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+52  0x000023a7 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+53  0x000023af 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+54  0x000023bd 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+55  0x000023cc 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+56  0x000023d9 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+57  0x000023e3 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+58  0x000023ed 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+59  0x000023fa 0x00000092 7   8    .shstrtab           ascii   .dynsym
+60  0x00002402 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+61  0x0000240c 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+62  0x00002416 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+63  0x00002429 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+64  0x00002432 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+65  0x0000243c 0x000000d4 7   8    .shstrtab           ascii   .rodata
+66  0x00002444 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+67  0x00002454 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+68  0x00002498 0x00000045 4   5    .gnu_debugdata      ascii   \rf,R
+69  0x000024f0 0x0000009d 4   6    .gnu_debugdata      utf8    û:2\a
+70  0x00002516 0x000000c3 5   6    .gnu_debugdata      ascii   ?e),'
+71  0x0000251c 0x000000c9 7   10   .gnu_debugdata      utf8    څJ'"\bڎt
+72  0x00002538 0x000000e5 5   6    .gnu_debugdata      ascii   9,B>k
+73  0x00002573 0x00000120 4   6    .gnu_debugdata      utf8    Í7(`
+74  0x00002640 0x000001ed 4   7    .gnu_debugdata      utf8    'Ӗn٣
+75  0x0000264b 0x000001f8 4   5    .gnu_debugdata      ascii   06c%
+76  0x00002670 0x0000021d 4   5    .gnu_debugdata      ascii   |Ftu
+77  0x00002678 0x00000225 4   5    .gnu_debugdata      ascii   XHF}
+78  0x00002681 0x0000022e 5   6    .gnu_debugdata      ascii   Z+#VY
+79  0x0000268e 0x0000023b 4   5    .gnu_debugdata      ascii   Y'5m
+80  0x000026a3 0x00000250 4   5    .gnu_debugdata      ascii   f$V\e
+81  0x000026ab 0x00000258 4   6    .gnu_debugdata      utf8    D|\bݡ
+82  0x000026d5 0x00000282 4   5    .gnu_debugdata      ascii   >YEr
+83  0x000026da 0x00000287 4   5    .gnu_debugdata      ascii   ;{\ba
+0x000012d0    1     16 sym.imp.__cxa_finalize
+0x000012e0    1     16 sym.imp.__android_log_print
+0x00001310    1     16 sym.imp.__stack_chk_fail
+0x00001340    1     16 sym.imp.memcpy
+0x00001320    1     16 sym.imp.strlen
+0x00001000    1     12 entry0
+0x000010f8   21    432 method.int_android::hardware::registerPassthroughServiceImplementation_vendor::qti::gnss::V4_1::ILocHidlGnss__vendor::qti::gnss::V4_1.ILocHidlGnss__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00001014    7    228 main
+0x00001350    1     16 method.android::hardware.registerPassthroughServiceImplementation_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__s
+0x00001360    1     16 sym.imp.std::__1::__basic_string_common_true_::__throw_length_error___const
+0x00001300    1     16 sym.imp.operator_delete_void_
+0x00001330    1     16 sym.imp.operator_new_unsigned_long_
+0x00001010    1      4 entry.fini0
+0x000012f0    1     16 fcn.000012f0
+0x000012b0    1     20 section..plt

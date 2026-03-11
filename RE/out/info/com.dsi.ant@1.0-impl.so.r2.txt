@@ -1,0 +1,321 @@
+arch     arm
+baddr    0x0
+binsz    24436
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                                                                demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+57  0x00003384 0x00003384 GLOBAL FUNC 548      _ZN3com3qti3ant4V1_014implementation3Ant6enableEv                                                                   com::qti::ant::V1_0::implementation::Ant::enable()
+58  0x00003018 0x00003018 GLOBAL FUNC 332      _ZN3com3qti3ant4V1_014implementation3AntC2Ev                                                                        com::qti::ant::V1_0::implementation::Ant::Ant()
+59  0x00005278 0x00005278 GLOBAL OBJ  232      _ZTCN3com3qti3ant4V1_014implementation3AntE0_N7android4hidl4base4V1_05IBaseE                                        construction vtable for android::hidl::base::V1_0::IBase-in-com::qti::ant::V1_0::implementation::Ant
+60  0x00005128 0x00005128 GLOBAL OBJ  48       _ZTTN3com3qti3ant4V1_014implementation3AntE                                                                         VTT for com::qti::ant::V1_0::implementation::Ant
+62  0x00003c88 0x00003c88 GLOBAL FUNC 68       HIDL_FETCH_IAnt
+63  0x000039f8 0x000039f8 GLOBAL FUNC 552      _ZN3com3qti3ant4V1_014implementation3Ant15sendDataMessageERKN7android8hardware8hidl_vecIhEE                         com::qti::ant::V1_0::implementation::Ant::sendDataMessage(android::hardware::hidl_vec<unsigned char> const&)
+64  0x00003374 0x00003374 GLOBAL FUNC 16       _ZN3com3qti3ant4V1_014implementation3Ant15translateStatusEiNSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE com::qti::ant::V1_0::implementation::Ant::translateStatus(int, std::__1::function<void (android::hardware::hidl_string const&)>)
+65  0x000035a8 0x000035a8 GLOBAL FUNC 552      _ZN3com3qti3ant4V1_014implementation3Ant18sendCommandMessageERKN7android8hardware8hidl_vecIhEE                      com::qti::ant::V1_0::implementation::Ant::sendCommandMessage(android::hardware::hidl_vec<unsigned char> const&)
+66  0x000039b4 0x000039b4 GLOBAL FUNC 68       _ZN3com3qti3ant4V1_014implementation3Ant20sendDataToControllerE13HciPacketTypeRKN7android8hardware8hidl_vecIhEE     com::qti::ant::V1_0::implementation::Ant::sendDataToController(HciPacketType, android::hardware::hidl_vec<unsigned char> const&)
+67  0x00003c20 0x00003c20 GLOBAL FUNC 104      _ZN3com3qti3ant4V1_014implementation3Ant7disableEv                                                                  com::qti::ant::V1_0::implementation::Ant::disable()
+68  0x000032d8 0x000032d8 GLOBAL FUNC 156      _ZN3com3qti3ant4V1_014implementation3Ant12setCallbacksERKN7android2spINS_3dsi3ant4V1_013IAntCallbacksEEE            com::qti::ant::V1_0::implementation::Ant::setCallbacks(android::sp<com::dsi::ant::V1_0::IAntCallbacks> const&)
+69  0x00003290 0x00003290 GLOBAL FUNC 72       _ZN3com3qti3ant4V1_014implementation3Ant13getPropertiesENSt3__18functionIFvRKNS_3dsi3ant4V1_09ImplPropsEEEE         com::qti::ant::V1_0::implementation::Ant::getProperties(std::__1::function<void (com::dsi::ant::V1_0::ImplProps const&)>)
+70  0x00003164 0x00003164 GLOBAL FUNC 300      _ZN3com3qti3ant4V1_014implementation3AntC1Ev                                                                        com::qti::ant::V1_0::implementation::Ant::Ant()
+72  0x00005158 0x00005158 GLOBAL OBJ  288      _ZTCN3com3qti3ant4V1_014implementation3AntE0_NS_3dsi3ant4V1_04IAntE                                                 construction vtable for com::dsi::ant::V1_0::IAnt-in-com::qti::ant::V1_0::implementation::Ant
+73  0x00005008 0x00005008 GLOBAL OBJ  288      _ZTVN3com3qti3ant4V1_014implementation3AntE                                                                         vtable for com::qti::ant::V1_0::implementation::Ant
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x6f0 0x000002a8   0x6f0 -r-- DYNSYM      .dynsym
+4   0x00000998    0x94 0x00000998    0x94 -r-- GNU_VERSYM  .gnu.version
+5   0x00000a2c    0x40 0x00000a2c    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000a70    0x84 0x00000a70    0x84 -r-- GNU_HASH    .gnu.hash
+7   0x00000af4  0x1189 0x00000af4  0x1189 -r-- STRTAB      .dynstr
+8   0x00001c80   0x1c6 0x00001c80   0x1c6 -r-- ----        .rela.dyn
+9   0x00001e48    0x20 0x00001e48    0x20 -r-- ----        .relr.dyn
+10  0x00001e68   0x318 0x00001e68   0x318 -r-- RELA        .rela.plt
+11  0x00002180   0x1fa 0x00002180   0x1fa -r-- PROGBITS    .rodata
+12  0x0000237c   0x174 0x0000237c   0x174 -r-- PROGBITS    .eh_frame_hdr
+13  0x000024f0   0x594 0x000024f0   0x594 -r-- PROGBITS    .eh_frame
+14  0x00003000  0x1ad4 0x00003000  0x1ad4 -r-x PROGBITS    .text
+15  0x00004ae0   0x230 0x00004ae0   0x230 -r-x PROGBITS    .plt
+16  0x00005000   0x4d0 0x00005000   0x4d0 -rw- PROGBITS    .data.rel.ro
+17  0x000054d0    0x10 0x000054d0    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x000054e0     0x8 0x000054e0     0x8 -rw- INIT_ARRAY  .init_array
+19  0x000054e8   0x260 0x000054e8   0x260 -rw- DYNAMIC     .dynamic
+20  0x00005748    0x10 0x00005748    0x10 -rw- PROGBITS    .got
+21  0x00005758   0x120 0x00005758   0x120 -rw- PROGBITS    .got.plt
+22  0x00005878     0x0 0x00006878    0x19 -rw- NOBITS      .bss
+23  0x00005878    0xfc 0x00000000    0xfc ---- STRTAB      .shstrtab
+24  0x00005974   0x600 0x00000000   0x600 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00000aa0 0x00000aa0 4   20   .gnu.hash           utf32le 9;>D
+3   0x00000aba 0x00000aba 4   5    .gnu.hash           ascii   jA,+
+4   0x00000ae2 0x00000ae2 4   5    .gnu.hash           ascii   1Dnl
+5   0x00000af5 0x00000af5 12  13   .dynstr             ascii   __cxa_atexit
+6   0x00000b02 0x00000b02 14  15   .dynstr             ascii   __cxa_finalize
+7   0x00000b11 0x00000b11 15  16   .dynstr             ascii   HIDL_FETCH_IAnt
+8   0x00000b21 0x00000b21 93  94   .dynstr             ascii   _ZN3com3dsi3ant4V1_04IAnt11linkToDeathERKN7android2spINS4_8hardware20hidl_death_recipientEEEm
+9   0x00000b7f 0x00000b7f 99  100  .dynstr             ascii   _ZN3com3dsi3ant4V1_04IAnt12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE
+10  0x00000be3 0x00000be3 121 122  .dynstr             ascii   _ZN3com3dsi3ant4V1_04IAnt12getHashChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS7_10hidl_arrayIhLm32EJEEEEEEEE
+11  0x00000c5d 0x00000c5d 94  95   .dynstr             ascii   _ZN3com3dsi3ant4V1_04IAnt13unlinkToDeathERKN7android2spINS4_8hardware20hidl_death_recipientEEE
+12  0x00000cbc 0x00000cbc 114 115  .dynstr             ascii   _ZN3com3dsi3ant4V1_04IAnt14interfaceChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS7_11hidl_stringEEEEEE
+13  0x00000d2f 0x00000d2f 103 104  .dynstr             ascii   _ZN3com3dsi3ant4V1_04IAnt19interfaceDescriptorENSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE
+14  0x00000d97 0x00000d97 50  51   .dynstr             ascii   _ZN3com3dsi3ant4V1_04IAnt21notifySyspropsChangedEv
+15  0x00000dca 0x00000dca 50  51   .dynstr             ascii   _ZN3com3dsi3ant4V1_04IAnt21setHALInstrumentationEv
+16  0x00000dfd 0x00000dfd 32  33   .dynstr             ascii   _ZN3com3dsi3ant4V1_04IAnt4pingEv
+17  0x00000e1e 0x00000e1e 102 103  .dynstr             ascii   _ZN3com3dsi3ant4V1_04IAnt5debugERKN7android8hardware11hidl_handleERKNS5_8hidl_vecINS5_11hidl_stringEEE
+18  0x00000e85 0x00000e85 104 105  .dynstr             ascii   _ZN3com3qti3ant4V1_014implementation3Ant12setCallbacksERKN7android2spINS_3dsi3ant4V1_013IAntCallbacksEEE
+19  0x00000eee 0x00000eee 107 108  .dynstr             ascii   _ZN3com3qti3ant4V1_014implementation3Ant13getPropertiesENSt3__18functionIFvRKNS_3dsi3ant4V1_09ImplPropsEEEE
+20  0x00000f5a 0x00000f5a 91  92   .dynstr             ascii   _ZN3com3qti3ant4V1_014implementation3Ant15sendDataMessageERKN7android8hardware8hidl_vecIhEE
+21  0x00000fb6 0x00000fb6 115 116  .dynstr             ascii   _ZN3com3qti3ant4V1_014implementation3Ant15translateStatusEiNSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE
+22  0x0000102a 0x0000102a 94  95   .dynstr             ascii   _ZN3com3qti3ant4V1_014implementation3Ant18sendCommandMessageERKN7android8hardware8hidl_vecIhEE
+23  0x00001089 0x00001089 111 112  .dynstr             ascii   _ZN3com3qti3ant4V1_014implementation3Ant20sendDataToControllerE13HciPacketTypeRKN7android8hardware8hidl_vecIhEE
+24  0x000010f9 0x000010f9 49  50   .dynstr             ascii   _ZN3com3qti3ant4V1_014implementation3Ant6enableEv
+25  0x0000112b 0x0000112b 50  51   .dynstr             ascii   _ZN3com3qti3ant4V1_014implementation3Ant7disableEv
+26  0x0000115e 0x0000115e 44  45   .dynstr             ascii   _ZN3com3qti3ant4V1_014implementation3AntC1Ev
+27  0x0000118b 0x0000118b 44  45   .dynstr             ascii   _ZN3com3qti3ant4V1_014implementation3AntC2Ev
+28  0x000011b8 0x000011b8 29  30   .dynstr             ascii   _ZN7android14sp_report_raceEv
+29  0x000011d6 0x000011d6 38  39   .dynstr             ascii   _ZN7android23sp_report_stack_pointerEv
+30  0x000011fd 0x000011fd 93  94   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase11linkToDeathERKNS_2spINS_8hardware20hidl_death_recipientEEEm
+31  0x0000125b 0x0000125b 86  87   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase12getDebugInfoENSt3__18functionIFvRKNS2_9DebugInfoEEEE
+32  0x000012b2 0x000012b2 122 123  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase12getHashChainENSt3__18functionIFvRKNS_8hardware8hidl_vecINS6_10hidl_arrayIhLm32EJEEEEEEEE
+33  0x0000132d 0x0000132d 94  95   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase13unlinkToDeathERKNS_2spINS_8hardware20hidl_death_recipientEEE
+34  0x0000138c 0x0000138c 115 116  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase14interfaceChainENSt3__18functionIFvRKNS_8hardware8hidl_vecINS6_11hidl_stringEEEEEE
+35  0x00001400 0x00001400 104 105  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase19interfaceDescriptorENSt3__18functionIFvRKNS_8hardware11hidl_stringEEEE
+36  0x00001469 0x00001469 57  58   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase21notifySyspropsChangedEv
+37  0x000014a3 0x000014a3 57  58   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase21setHALInstrumentationEv
+38  0x000014dd 0x000014dd 39  40   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase4pingEv
+39  0x00001505 0x00001505 103 104  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase5debugERKNS_8hardware11hidl_handleERKNS4_8hidl_vecINS4_11hidl_stringEEE
+40  0x0000156d 0x0000156d 33  34   .dynstr             ascii   _ZN7android7RefBase10onFirstRefEv
+41  0x0000158f 0x0000158f 38  39   .dynstr             ascii   _ZN7android7RefBase13onLastWeakRefEPKv
+42  0x000015b6 0x000015b6 40  41   .dynstr             ascii   _ZN7android7RefBase15onLastStrongRefEPKv
+43  0x000015df 0x000015df 46  47   .dynstr             ascii   _ZN7android7RefBase20onIncStrongAttemptedEjPKv
+44  0x0000160e 0x0000160e 23  24   .dynstr             ascii   _ZN7android7RefBaseC2Ev
+45  0x00001626 0x00001626 23  24   .dynstr             ascii   _ZN7android7RefBaseD2Ev
+46  0x0000163e 0x0000163e 39  40   .dynstr             ascii   _ZN7android8hardware11hidl_stringC1EPKc
+47  0x00001666 0x00001666 37  38   .dynstr             ascii   _ZN7android8hardware11hidl_stringD1Ev
+48  0x0000168c 0x0000168c 47  48   .dynstr             ascii   _ZN7android8hardware7details13return_statusD2Ev
+49  0x000016bc 0x000016bc 96  97   .dynstr             ascii   _ZN7android8hardware9bluetooth4V1_014implementation11DataHandler15GetClientStatusE12ProtocolType
+50  0x0000171d 0x0000171d 97  98   .dynstr             ascii   _ZN7android8hardware9bluetooth4V1_014implementation11DataHandler15SetClientStatusEb12ProtocolType
+51  0x0000177f 0x0000177f 70  71   .dynstr             ascii   _ZN7android8hardware9bluetooth4V1_014implementation11DataHandler3GetEv
+52  0x000017c6 0x000017c6 151 152  .dynstr             ascii   _ZN7android8hardware9bluetooth4V1_014implementation11DataHandler4InitE12ProtocolTypeNSt3__18functionIFvbEEENS7_IFv13HciPacketTypePKNS0_8hidl_vecIhEEEEE
+53  0x0000185e 0x0000185e 87  88   .dynstr             ascii   _ZN7android8hardware9bluetooth4V1_014implementation11DataHandler7CleanUpE12ProtocolType
+54  0x000018b6 0x000018b6 107 108  .dynstr             ascii   _ZN7android8hardware9bluetooth4V1_014implementation11DataHandler8SendDataE12ProtocolType13HciPacketTypePKhm
+55  0x00001922 0x00001922 34  35   .dynstr             ascii   _ZNK7android7RefBase9decStrongEPKv
+56  0x00001945 0x00001945 34  35   .dynstr             ascii   _ZNK7android7RefBase9incStrongEPKv
+57  0x00001968 0x00001968 62  63   .dynstr             ascii   _ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+58  0x000019a7 0x000019a7 68  69   .dynstr             ascii   _ZNSt3__16vectorIhNS_9allocatorIhEEE6insertENS_11__wrap_iterIPKhEEOh
+59  0x000019ec 0x000019ec 76  77   .dynstr             ascii   _ZTCN3com3qti3ant4V1_014implementation3AntE0_N7android4hidl4base4V1_05IBaseE
+60  0x00001a39 0x00001a39 67  68   .dynstr             ascii   _ZTCN3com3qti3ant4V1_014implementation3AntE0_NS_3dsi3ant4V1_04IAntE
+61  0x00001a7d 0x00001a7d 43  44   .dynstr             ascii   _ZTTN3com3qti3ant4V1_014implementation3AntE
+62  0x00001aa9 0x00001aa9 58  59   .dynstr             ascii   _ZTVN3com3qti3ant4V1_014implementation17AntDeathRecipientE
+63  0x00001ae4 0x00001ae4 43  44   .dynstr             ascii   _ZTVN3com3qti3ant4V1_014implementation3AntE
+64  0x00001b10 0x00001b10 6   7    .dynstr             ascii   _ZdaPv
+65  0x00001b17 0x00001b17 6   7    .dynstr             ascii   _ZdlPv
+66  0x00001b1e 0x00001b1e 5   6    .dynstr             ascii   _Znam
+67  0x00001b24 0x00001b24 5   6    .dynstr             ascii   _Znwm
+68  0x00001b2a 0x00001b2a 19  20   .dynstr             ascii   __android_log_print
+69  0x00001b3e 0x00001b3e 18  19   .dynstr             ascii   __cxa_pure_virtual
+70  0x00001b51 0x00001b51 16  17   .dynstr             ascii   __stack_chk_fail
+71  0x00001b62 0x00001b62 5   6    .dynstr             ascii   abort
+72  0x00001b68 0x00001b68 6   7    .dynstr             ascii   memcpy
+73  0x00001b6f 0x00001b6f 7   8    .dynstr             ascii   memmove
+74  0x00001b77 0x00001b77 6   7    .dynstr             ascii   memset
+75  0x00001b7e 0x00001b7e 8   9    .dynstr             ascii   sem_init
+76  0x00001b87 0x00001b87 8   9    .dynstr             ascii   sem_post
+77  0x00001b90 0x00001b90 8   9    .dynstr             ascii   sem_wait
+78  0x00001b99 0x00001b99 9   10   .dynstr             ascii   liblog.so
+79  0x00001ba3 0x00001ba3 6   7    .dynstr             ascii   LIBLOG
+80  0x00001baa 0x00001baa 7   8    .dynstr             ascii   libc.so
+81  0x00001bb2 0x00001bb2 4   5    .dynstr             ascii   LIBC
+82  0x00001bb7 0x00001bb7 10  11   .dynstr             ascii   libbase.so
+83  0x00001bc2 0x00001bc2 12  13   .dynstr             ascii   libcutils.so
+84  0x00001bcf 0x00001bcf 14  15   .dynstr             ascii   libhidlbase.so
+85  0x00001bde 0x00001bde 11  12   .dynstr             ascii   libutils.so
+86  0x00001bea 0x00001bea 18  19   .dynstr             ascii   com.dsi.ant@1.0.so
+87  0x00001bfd 0x00001bfd 33  34   .dynstr             ascii   android.hardware.bluetooth@1.0.so
+88  0x00001c1f 0x00001c1f 42  43   .dynstr             ascii   android.hardware.bluetooth@1.0-impl-qti.so
+89  0x00001c4a 0x00001c4a 9   10   .dynstr             ascii   libc++.so
+90  0x00001c54 0x00001c54 7   8    .dynstr             ascii   libm.so
+91  0x00001c5c 0x00001c5c 8   9    .dynstr             ascii   libdl.so
+92  0x00001c65 0x00001c65 23  24   .dynstr             ascii   com.dsi.ant@1.0-impl.so
+93  0x00001c80 0x00001c80 4   5    .rela.dyn           ascii   APS2
+94  0x00001cd1 0x00001cd1 9   10   .rela.dyn           ascii   {\b\b\b\b\b\b-\b
+95  0x00002180 0x00002180 49  50   .rodata             ascii   AntDeathRecipient::serviceDied - Ant service died
+96  0x000021b2 0x000021b2 15  16   .rodata             ascii   HIDL_FETCH_IAnt
+97  0x000021c2 0x000021c2 19  20   .rodata             ascii   com.dsi.ant.qti.1.0
+98  0x000021d6 0x000021d6 60  61   .rodata             ascii   cb == nullptr! -> Unable to call initializationComplete(ERR)
+99  0x00002213 0x00002213 27  28   .rodata             ascii   %s Unexpected event type %d
+100 0x0000222f 0x0000222f 10  11   .rodata             ascii   operator()
+101 0x0000223a 0x0000223a 17  18   .rodata             ascii   Ant::setCallbacks
+102 0x0000224c 0x0000224c 12  13   .rodata             ascii   Ant::close()
+103 0x00002259 0x00002259 35  36   .rodata             ascii   Skipping unlink call, service died.
+104 0x0000227d 0x0000227d 28  29   .rodata             ascii    unlink  to death recipient
+105 0x0000229a 0x0000229a 13  14   .rodata             ascii   Ant::enable()
+106 0x000022a8 0x000022a8 26  27   .rodata             ascii   Ant::enable() returns now.
+107 0x000022c3 0x000022c3 17  18   .rodata             ascii   %s event type: %d
+108 0x000022d5 0x000022d5 51  52   .rodata             ascii   Ant::init status :%d and sending this to client now
+109 0x00002309 0x00002309 19  20   .rodata             ascii   com.dsi.ant@1.0-Ant
+110 0x0000231d 0x0000231d 47  48   .rodata             ascii   Client dead, callback antControlReceived failed
+111 0x0000234d 0x0000234d 44  45   .rodata             ascii   Client dead, callback antDataReceived failed
+112 0x00003564 0x00003564 4   5    .text               ascii   \bAb9
+113 0x000037b9 0x000037b9 4   5    .text               ascii   j*8J
+114 0x00003c09 0x00003c09 4   5    .text               ascii   j*8J
+115 0x00004279 0x00004279 6   7    .text               ascii   A"9`\n@
+116 0x0000454c 0x0000454c 5   6    .text               ascii   Lii8k
+117 0x00004718 0x00004718 5   6    .text               ascii   Lii8k
+118 0x00004850 0x00004850 4   5    .text               ascii   \tA@9
+119 0x00005879 0x00000001 11  12   .shstrtab           ascii   .init_array
+120 0x00005885 0x0000000d 11  12   .shstrtab           ascii   .fini_array
+121 0x00005891 0x00000019 5   6    .shstrtab           ascii   .text
+122 0x00005897 0x0000001f 4   5    .shstrtab           ascii   .got
+123 0x0000589c 0x00000024 19  20   .shstrtab           ascii   .note.android.ident
+124 0x000058b0 0x00000038 8   9    .shstrtab           ascii   .got.plt
+125 0x000058b9 0x00000041 9   10   .shstrtab           ascii   .rela.plt
+126 0x000058c3 0x0000004b 4   5    .shstrtab           ascii   .bss
+127 0x000058c8 0x00000050 7   8    .shstrtab           ascii   .dynstr
+128 0x000058d0 0x00000058 13  14   .shstrtab           ascii   .eh_frame_hdr
+129 0x000058de 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+130 0x000058ed 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+131 0x000058fa 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+132 0x00005904 0x0000008c 9   10   .shstrtab           ascii   .rela.dyn
+133 0x0000590e 0x00000096 12  13   .shstrtab           ascii   .gnu.version
+134 0x0000591b 0x000000a3 7   8    .shstrtab           ascii   .dynsym
+135 0x00005923 0x000000ab 9   10   .shstrtab           ascii   .gnu.hash
+136 0x0000592d 0x000000b5 9   10   .shstrtab           ascii   .eh_frame
+137 0x00005937 0x000000bf 18  19   .shstrtab           ascii   .note.gnu.build-id
+138 0x0000594a 0x000000d2 8   9    .shstrtab           ascii   .dynamic
+139 0x00005953 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+140 0x0000595d 0x000000e5 7   8    .shstrtab           ascii   .rodata
+141 0x00005965 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+142 0x00005975 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+143 0x00005a1c 0x000000a8 5   6    .gnu_debugdata      ascii   w_]pR
+144 0x00005a28 0x000000b4 5   6    .gnu_debugdata      ascii   \b8=>D
+145 0x00005a4b 0x000000d7 4   6    .gnu_debugdata      utf8    8ө[P
+146 0x00005a80 0x0000010c 5   6    .gnu_debugdata      ascii   ,u3h(
+147 0x00005a91 0x0000011d 5   6    .gnu_debugdata      ascii   &M\f7b
+148 0x00005ab9 0x00000145 5   8    .gnu_debugdata      utf8    0Ԓ]p~
+149 0x00005adf 0x0000016b 6   7    .gnu_debugdata      ascii   N%.bUQ
+150 0x00005b75 0x00000201 4   6    .gnu_debugdata      utf8    ۙu,!
+151 0x00005bd8 0x00000264 5   7    .gnu_debugdata      utf8    'd&oˋ
+152 0x00005bf4 0x00000280 5   7    .gnu_debugdata      utf8    &ޔj3'
+153 0x00005bfe 0x0000028a 5   6    .gnu_debugdata      ascii   ;>A\f|
+154 0x00005cbb 0x00000347 4   5    .gnu_debugdata      ascii   4K\n`
+155 0x00005ce2 0x0000036e 4   5    .gnu_debugdata      ascii   ^~s3
+156 0x00005d83 0x0000040f 4   5    .gnu_debugdata      ascii   lL4w
+157 0x00005d96 0x00000422 4   5    .gnu_debugdata      ascii   RGg%
+158 0x00005db3 0x0000043f 5   7    .gnu_debugdata      utf8    f=Ùem
+159 0x00005dc5 0x00000451 5   6    .gnu_debugdata      ascii   Q|E=O
+160 0x00005dfe 0x0000048a 7   9    .gnu_debugdata      utf8    `3^~t+6
+161 0x00005e17 0x000004a3 6   7    .gnu_debugdata      ascii   io(GmN
+162 0x00005e23 0x000004af 4   6    .gnu_debugdata      utf8    sSˤo
+163 0x00005e5e 0x000004ea 6   7    .gnu_debugdata      ascii   $ ,M9
+164 0x00005e92 0x0000051e 5   6    .gnu_debugdata      ascii   yj&?V
+165 0x00005ed2 0x0000055e 5   6    .gnu_debugdata      ascii   XZ\wF
+166 0x00005f1c 0x000005a8 5   7    .gnu_debugdata      utf8    ZȞ\fXi
+167 0x00005f55 0x000005e1 5   7    .gnu_debugdata      utf8    {ʒ"J!
+0x00004d00    1     16 sym.imp.__cxa_atexit
+0x00004b00    1     16 sym.imp.__cxa_finalize
+0x00004b80    1     16 sym.imp.__android_log_print
+0x00004b70    1     16 sym.imp.__stack_chk_fail
+0x00004cb0    1     16 sym.imp.abort
+0x00004c60    1     16 sym.imp.memcpy
+0x00004c50    1     16 sym.imp.memmove
+0x00004c00    1     16 sym.imp.memset
+0x00004bb0    1     16 sym.imp.sem_init
+0x00004cc0    1     16 sym.imp.sem_post
+0x00004bd0    1     16 sym.imp.sem_wait
+0x00003000    1     12 entry0
+0x00003384   24    548 method.com::qti::ant::V1_0::implementation::Ant.enable__
+0x00003018   11    332 fcn.00003018
+0x00003c88    1     68 sym.HIDL_FETCH_IAnt
+0x00004b20    1     16 sym.imp.operator_new_unsigned_long_
+0x00004c90    1     16 fcn.00004c90
+0x000039f8   38    552 method.com::qti::ant::V1_0::implementation::Ant.sendDataMessage_android::hardware::hidl_vec_unsigned_char__const_
+0x00003374    1     16 method.com::qti::ant::V1_0::implementation::Ant.translateStatus_int__std::__1::function_void__android::hardware::hidl_string_const___
+0x000035a8   38    552 method.com::qti::ant::V1_0::implementation::Ant.sendCommandMessage_android::hardware::hidl_vec_unsigned_char__const_
+0x000039b4    3     68 method.com::qti::ant::V1_0::implementation::Ant.sendDataToController_HciPacketType__android::hardware::hidl_vec_unsigned_char__const_
+0x00003c20    3    104 method.com::qti::ant::V1_0::implementation::Ant.disable__
+0x00004c80    1     16 sym.imp.android::hardware::bluetooth::V1_0::implementation::DataHandler::CleanUp_ProtocolType_
+0x000032d8    7    156 method.com::qti::ant::V1_0::implementation::Ant.setCallbacks_android::sp_com::dsi::ant::V1_0::IAntCallbacks__const_
+0x00003290    3     72 method.com::qti::ant::V1_0::implementation::Ant.getProperties_std::__1::function_void__com::dsi::ant::V1_0::ImplProps_const___
+0x000041d8    1     12 method.std::__1.__throw_bad_function_call__
+0x00003164   11    300 sym.com::qti::ant::V1_0::implementation::Ant::Ant__
+0x000037d0   27    484 method.std::__1::vector_unsigned_char__std::__1::allocator_unsigned_char___.insert_std::__1::__wrap_iter_unsigned_char_const___unsigned_char_
+0x00004b90    1     16 sym.imp.android::sp_report_race__
+0x00004b30    1     16 sym.imp.android::sp_report_stack_pointer__
+0x00004b50    1     16 fcn.00004b50
+0x00004ca0    1     16 sym.imp.android::RefBase::RefBase__
+0x00004cf0    1     16 sym.imp.android::hardware::hidl_string::hidl_string_char_const_
+0x00004b10    1     16 sym.imp.android::hardware::hidl_string::hidl_string__
+0x00004ba0    1     16 sym.imp.android::hardware::details::return_status::return_status__
+0x00004cd0    1     16 sym.imp.android::hardware::bluetooth::V1_0::implementation::DataHandler::GetClientStatus_ProtocolType_
+0x00004ce0    1     16 sym.imp.android::hardware::bluetooth::V1_0::implementation::DataHandler::SetClientStatus_bool__ProtocolType_
+0x00004c10    1     16 sym.imp.android::hardware::bluetooth::V1_0::implementation::DataHandler::Get__
+0x00004bc0    1     16 method.android::hardware::bluetooth::V1_0::implementation::DataHandler.Init_ProtocolType__std::__1::function_void__bool____std::__1::function_void__HciPacketType__android::hardware::hidl_vec_unsigned_char__const___
+0x00004b60    1     16 sym.imp.android::RefBase::decStrong_void_const__const
+0x00004b40    1     16 sym.imp.android::RefBase::incStrong_void_const__const
+0x00004c70    1     16 sym.imp.std::__1::__vector_base_common_true_::__throw_length_error___const
+0x00004c30    1     16 sym.imp.operator_delete___void_
+0x00004c40    1     16 sym.imp.operator_delete_void_
+0x00004bf0    1     16 sym.imp.operator_new___unsigned_long_
+0x00003010    1      4 entry.fini0
+0x00004a88    1     76 entry.init0
+0x00004904   13    388 method.std::__1::__function.__value_func_void__android::sp_com::qti::ant::V1_0::implementation::AntDeathRecipient___::swap_std::__1::__function::__value_func_void__android::sp_com::qti::ant::V1_0::implementation::AntDeathRecipient____
+0x00004be0    1     16 fcn.00004be0
+0x00004c20    1     16 method.android::hardware::bluetooth::V1_0::implementation::DataHandler.SendData_ProtocolType__HciPacketType__unsigned_char_const__unsigned_long_
+0x00003014    1      4 method.com::dsi::ant::V1_0::ImplProps.ImplProps__
+0x00003ccc    1      8 method.com::dsi::ant::V1_0::IAnt.isRemote___const
+0x00003cd4    1      4 method.com::dsi::ant::V1_0::IAnt.IAnt__
+0x00003ce0    1     40 method.android::hidl::base::V1_0::IBase.IBase__
+0x00003d1c    1     48 method.virtual_thunk_to_android::hidl::base::V1_0::IBase.IBase__
+0x00003de8   10    164 method.com::qti::ant::V1_0::implementation::Ant.Ant__
+0x00003f34   10    176 method.virtual_thunk_to_com::qti::ant::V1_0::implementation::Ant.Ant__
+0x00003fe4    3    128 method.com::qti::ant::V1_0::implementation::AntDeathRecipient.serviceDied_unsigned_long__android::wp_android::hidl::base::V1_0::IBase__const_
+0x000040b8    3     92 method.com::qti::ant::V1_0::implementation::AntDeathRecipient.AntDeathRecipient__
+0x00004170    3    104 method.virtual_thunk_to_com::qti::ant::V1_0::implementation::AntDeathRecipient.AntDeathRecipient__
+0x000041e4    1      4 method.std::__1::__function::__func_com::qti::ant::V1_0::implementation::Ant.enable__::__0__std::__1::allocator_com::qti::ant::V1_0::implementation::Ant::enable__::__0___void__bool__::destroy__
+0x000041e8    1      4 method.std::__1::__function::__func_com::qti::ant::V1_0::implementation::Ant.enable__::__0__std::__1::allocator_com::qti::ant::V1_0::implementation::Ant::enable__::__0___void__bool__::destroy_deallocate__
+0x000041ec    1     56 method.std::__1::__function::__func_com::qti::ant::V1_0::implementation::Ant.enable__::__0__std::__1::allocator_com::qti::ant::V1_0::implementation::Ant::enable__::__0___void__bool__::__clone___const
+0x00004224    1     24 method.std::__1::__function::__func_com::qti::ant::V1_0::implementation::Ant.enable__::__0__std::__1::allocator_com::qti::ant::V1_0::implementation::Ant::enable__::__0___void__bool__::__clone_std::__1::__function::__base_void__bool____const
+0x0000423c    1     80 method.std::__1::__function::__func_com::qti::ant::V1_0::implementation::Ant.enable__::__0__std::__1::allocator_com::qti::ant::V1_0::implementation::Ant::enable__::__0___void__bool__::operator___bool_
+0x0000428c    1     52 method.std::__1::__function::__func_com::qti::ant::V1_0::implementation::Ant.enable__::__1__std::__1::allocator_com::qti::ant::V1_0::implementation::Ant::enable__::__1___void__HciPacketType__android::hardware::hidl_vec_unsigned_char__const__::__clone___c
+0x000042c0    1     24 method.std::__1::__function::__func_com::qti::ant::V1_0::implementation::Ant.enable__::__1__std::__1::allocator_com::qti::ant::V1_0::implementation::Ant::enable__::__1___void__HciPacketType__android::hardware::hidl_vec_unsigned_char__const__::__clone_std
+0x000042d8   75   1292 method.std::__1::__function::__func_com::qti::ant::V1_0::implementation::Ant.enable__::__1__std::__1::allocator_com::qti::ant::V1_0::implementation::Ant::enable__::__1___void__HciPacketType__android::hardware::hidl_vec_unsigned_char__const__::operator___
+0x000047e4    1     52 method.std::__1::__function::__func_com::qti::ant::V1_0::implementation::Ant.enable__::__2__std::__1::allocator_com::qti::ant::V1_0::implementation::Ant::enable__::__2___void__android::sp_com::qti::ant::V1_0::implementation::AntDeathRecipient___::__clone
+0x00004830    8    212 method.std::__1::__function::__func_com::qti::ant::V1_0::implementation::Ant.enable__::__2__std::__1::allocator_com::qti::ant::V1_0::implementation::Ant::enable__::__2___void__android::sp_com::qti::ant::V1_0::implementation::AntDeathRecipient___::operato
+0x00003d4c   10    156 fcn.00003d4c
+0x00003e8c   10    168 sym.virtual_thunk_to_com::qti::ant::V1_0::implementation::Ant::Ant__
+0x00004064    3     84 sym.com::qti::ant::V1_0::implementation::AntDeathRecipient::AntDeathRecipient__
+0x00004114    3     92 sym.virtual_thunk_to_com::qti::ant::V1_0::implementation::AntDeathRecipient::AntDeathRecipient__
+0x00004ae0    1     20 section..plt

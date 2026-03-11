@@ -1,0 +1,158 @@
+arch     arm
+baddr    0x0
+binsz    10138
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                        demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+6   0x0000101c 0x0000101c GLOBAL FUNC 176      servreg_alloc_DLHandle
+7   0x00001170 0x00001170 GLOBAL FUNC 60       servreg_get_data_for_notifier
+8   0x00001014 0x00001014 GLOBAL FUNC 8        servreg_is_enabled
+9   0x00002350 0x00003350 GLOBAL OBJ  72       servreg_loc_qmi_idl_service_object_v01
+10  0x000010cc 0x000010cc GLOBAL FUNC 44       servreg_free_DLHandle
+11  0x000010f8 0x000010f8 GLOBAL FUNC 60       servreg_get_domainlist
+12  0x000011ac 0x000011ac GLOBAL FUNC 60       servreg_get_entry
+13  0x00001134 0x00001134 GLOBAL FUNC 60       servreg_get_numentries
+14  0x000011e8 0x000011e8 GLOBAL FUNC 28       servreg_loc_get_service_object_internal_v01
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000270   0x18 0x00000270   0x18 -r-- NOTE        .note.android.ident
+2   0x00000288   0x20 0x00000288   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8  0x168 0x000002a8  0x168 -r-- DYNSYM      .dynsym
+4   0x00000410   0x1e 0x00000410   0x1e -r-- GNU_VERSYM  .gnu.version
+5   0x00000430   0x40 0x00000430   0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000470   0x4c 0x00000470   0x4c -r-- GNU_HASH    .gnu.hash
+7   0x000004bc  0x1f7 0x000004bc  0x1f7 -r-- STRTAB      .dynstr
+8   0x000006b8   0x1b 0x000006b8   0x1b -r-- ----        .rela.dyn
+9   0x000006d8   0x20 0x000006d8   0x20 -r-- ----        .relr.dyn
+10  0x000006f8   0x60 0x000006f8   0x60 -r-- RELA        .rela.plt
+11  0x00000758   0xe4 0x00000758   0xe4 -r-- PROGBITS    .rodata
+12  0x0000083c   0x64 0x0000083c   0x64 -r-- PROGBITS    .eh_frame_hdr
+13  0x000008a0  0x14c 0x000008a0  0x14c -r-- PROGBITS    .eh_frame
+14  0x00001000  0x204 0x00001000  0x204 -r-x PROGBITS    .text
+15  0x00001210   0x60 0x00001210   0x60 -r-x PROGBITS    .plt
+16  0x00002000   0xd0 0x00002000   0xd0 -rw- PROGBITS    .data.rel.ro
+17  0x000020d0   0x10 0x000020d0   0x10 -rw- FINI_ARRAY  .fini_array
+18  0x000020e0  0x230 0x000020e0  0x230 -rw- DYNAMIC     .dynamic
+19  0x00002310    0x8 0x00002310    0x8 -rw- PROGBITS    .got
+20  0x00002318   0x38 0x00002318   0x38 -rw- PROGBITS    .got.plt
+21  0x00002350   0x58 0x00003350   0x58 -rw- PROGBITS    .data
+22  0x000023a8    0x0 0x000033a8    0x1 -rw- NOBITS      .bss
+23  0x000023a8   0xf6 0x00000000   0xf6 ---- STRTAB      .shstrtab
+24  0x0000249e  0x2fc 0x00000000  0x2fc ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x000004bd 0x000004bd 14  15   .dynstr             ascii   __cxa_finalize
+3   0x000004cc 0x000004cc 19  20   .dynstr             ascii   __android_log_print
+4   0x000004e0 0x000004e0 16  17   .dynstr             ascii   __stack_chk_fail
+5   0x000004f1 0x000004f1 12  13   .dynstr             ascii   property_get
+6   0x000004fe 0x000004fe 22  23   .dynstr             ascii   servreg_alloc_DLHandle
+7   0x00000515 0x00000515 21  22   .dynstr             ascii   servreg_free_DLHandle
+8   0x0000052b 0x0000052b 29  30   .dynstr             ascii   servreg_get_data_for_notifier
+9   0x00000549 0x00000549 22  23   .dynstr             ascii   servreg_get_domainlist
+10  0x00000560 0x00000560 17  18   .dynstr             ascii   servreg_get_entry
+11  0x00000572 0x00000572 22  23   .dynstr             ascii   servreg_get_numentries
+12  0x00000589 0x00000589 18  19   .dynstr             ascii   servreg_is_enabled
+13  0x0000059c 0x0000059c 36  37   .dynstr             ascii   common_qmi_idl_type_table_object_v01
+14  0x000005c1 0x000005c1 43  44   .dynstr             ascii   servreg_loc_get_service_object_internal_v01
+15  0x000005ed 0x000005ed 38  39   .dynstr             ascii   servreg_loc_qmi_idl_service_object_v01
+16  0x00000614 0x00000614 9   10   .dynstr             ascii   liblog.so
+17  0x0000061e 0x0000061e 6   7    .dynstr             ascii   LIBLOG
+18  0x00000625 0x00000625 7   8    .dynstr             ascii   libc.so
+19  0x0000062d 0x0000062d 4   5    .dynstr             ascii   LIBC
+20  0x00000632 0x00000632 12  13   .dynstr             ascii   libcutils.so
+21  0x0000063f 0x0000063f 11  12   .dynstr             ascii   libutils.so
+22  0x0000064b 0x0000064b 10  11   .dynstr             ascii   libjson.so
+23  0x00000656 0x00000656 13  14   .dynstr             ascii   libqmi_cci.so
+24  0x00000664 0x00000664 19  20   .dynstr             ascii   libqmi_common_so.so
+25  0x00000678 0x00000678 16  17   .dynstr             ascii   libqmi_encdec.so
+26  0x00000689 0x00000689 9   10   .dynstr             ascii   libc++.so
+27  0x00000693 0x00000693 7   8    .dynstr             ascii   libm.so
+28  0x0000069b 0x0000069b 8   9    .dynstr             ascii   libdl.so
+29  0x000006a4 0x000006a4 14  15   .dynstr             ascii   libpdmapper.so
+30  0x000006b8 0x000006b8 4   5    .rela.dyn           ascii   APS2
+31  0x00000758 0x00000758 5   6    .rodata             ascii   false
+32  0x0000075e 0x0000075e 13  14   .rodata             ascii   pd-mapper-lib
+33  0x0000076c 0x0000076c 43  44   .rodata             ascii   libpdmapper is not supported on this target
+34  0x00000798 0x00000798 31  32   .rodata             ascii   persist.vendor.pd_locater_debug
+35  0x000007e0 0x000007e0 5   12   .rodata             utf16le \a$\b\a#
+36  0x000011f3 0x000011f3 5   6    .text               ascii   q \bAz
+37  0x000023a9 0x00000001 11  12   .shstrtab           ascii   .fini_array
+38  0x000023b5 0x0000000d 5   6    .shstrtab           ascii   .text
+39  0x000023bb 0x00000013 4   5    .shstrtab           ascii   .got
+40  0x000023c0 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+41  0x000023d4 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+42  0x000023dd 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+43  0x000023e7 0x0000003f 4   5    .shstrtab           ascii   .bss
+44  0x000023ec 0x00000044 7   8    .shstrtab           ascii   .dynstr
+45  0x000023f4 0x0000004c 13  14   .shstrtab           ascii   .eh_frame_hdr
+46  0x00002402 0x0000005a 14  15   .shstrtab           ascii   .gnu.version_r
+47  0x00002411 0x00000069 12  13   .shstrtab           ascii   .data.rel.ro
+48  0x0000241e 0x00000076 9   10   .shstrtab           ascii   .relr.dyn
+49  0x00002428 0x00000080 9   10   .shstrtab           ascii   .rela.dyn
+50  0x00002432 0x0000008a 12  13   .shstrtab           ascii   .gnu.version
+51  0x0000243f 0x00000097 7   8    .shstrtab           ascii   .dynsym
+52  0x00002447 0x0000009f 9   10   .shstrtab           ascii   .gnu.hash
+53  0x00002451 0x000000a9 9   10   .shstrtab           ascii   .eh_frame
+54  0x0000245b 0x000000b3 18  19   .shstrtab           ascii   .note.gnu.build-id
+55  0x0000246e 0x000000c6 8   9    .shstrtab           ascii   .dynamic
+56  0x00002477 0x000000cf 9   10   .shstrtab           ascii   .shstrtab
+57  0x00002481 0x000000d9 7   8    .shstrtab           ascii   .rodata
+58  0x00002489 0x000000e1 14  15   .shstrtab           ascii   .gnu_debugdata
+59  0x00002498 0x000000f0 5   6    .shstrtab           ascii   .data
+60  0x0000249f 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+61  0x000024db 0x0000003d 4   6    .gnu_debugdata      utf8    )øW\a
+62  0x00002533 0x00000095 4   5    .gnu_debugdata      ascii   yaGk
+63  0x00002548 0x000000aa 4   5    .gnu_debugdata      ascii   B=_u
+64  0x00002574 0x000000d6 4   5    .gnu_debugdata      ascii   ?g\bo
+65  0x000025c0 0x00000122 6   7    .gnu_debugdata      ascii   M{\v\nPn
+66  0x00002668 0x000001ca 4   6    .gnu_debugdata      utf8    1]ޓ&
+67  0x00002679 0x000001db 4   6    .gnu_debugdata      utf8    \tbٕT
+68  0x000026d4 0x00000236 4   5    .gnu_debugdata      ascii   cI\t|
+69  0x00002742 0x000002a4 4   5    .gnu_debugdata      ascii   8KRJ
+70  0x00002753 0x000002b5 5   7    .gnu_debugdata      utf8    y"ƋXm
+0x00001230    1     16 sym.imp.__cxa_finalize
+0x00001250    1     16 sym.imp.__android_log_print
+0x00001260    1     16 sym.imp.__stack_chk_fail
+0x00001240    1     16 sym.imp.property_get
+0x00001000    1     12 entry0
+0x0000101c    5    176 sym.servreg_alloc_DLHandle
+0x00001170    3     60 sym.servreg_get_data_for_notifier
+0x00001014    1      8 sym.servreg_is_enabled
+0x000010cc    3     44 sym.servreg_free_DLHandle
+0x000010f8    3     60 sym.servreg_get_domainlist
+0x000011ac    3     60 sym.servreg_get_entry
+0x00001134    3     60 sym.servreg_get_numentries
+0x000011e8    1     28 sym.servreg_loc_get_service_object_internal_v01
+0x00001010    1      4 entry.fini0
+0x00001210    1     20 section..plt

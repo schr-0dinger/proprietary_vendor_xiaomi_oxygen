@@ -1,0 +1,189 @@
+arch     arm
+baddr    0x0
+binsz    8456
+bintype  elf
+bits     64
+canary   false
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  false
+lsyms    false
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   false
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped true
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type   size lib name            demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+3   0x00000c9c 0x00000c9c GLOBAL FUNC   60       _Z10addServicev addService()
+4   ---------- 0x00012108 GLOBAL NOTYPE 0        __bss_start__
+5   ---------- 0x00012118 GLOBAL NOTYPE 0        _bss_end__
+6   ---------- 0x00012108 GLOBAL NOTYPE 0        _edata
+8   0x00002010 0x00012010 GLOBAL OBJ    248      HMI
+10  ---------- 0x00012118 GLOBAL NOTYPE 0        __bss_end__
+16  ---------- 0x00012118 GLOBAL NOTYPE 0        _end
+18  ---------- 0x00012118 GLOBAL NOTYPE 0        __end__
+21  ---------- 0x00012108 GLOBAL NOTYPE 0        __bss_start
+24  ---------- 0x00012108 GLOBAL OBJ    8        g_device
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x000001c8   0x24 0x000001c8   0x24 -r-- NOTE        .note.gnu.build-id
+2   0x000001f0   0xc8 0x000001f0   0xc8 -r-- HASH        .hash
+3   0x000002b8  0x2e8 0x000002b8  0x2e8 -r-- DYNSYM      .dynsym
+4   0x000005a0  0x29b 0x000005a0  0x29b -r-- STRTAB      .dynstr
+5   0x0000083c   0x3e 0x0000083c   0x3e -r-- GNU_VERSYM  .gnu.version
+6   0x00000880   0x40 0x00000880   0x40 -r-- GNU_VERNEED .gnu.version_r
+7   0x000008c0   0xa8 0x000008c0   0xa8 -r-- RELA        .rela.dyn
+8   0x00000968  0x1b0 0x00000968  0x1b0 -r-- RELA        .rela.plt
+9   0x00000b20  0x140 0x00000b20  0x140 -r-x PROGBITS    .plt
+10  0x00000c60  0x82c 0x00000c60  0x82c -r-x PROGBITS    .text
+11  0x0000148c  0x1fd 0x0000148c  0x1fd -r-- PROGBITS    .rodata
+12  0x0000168c   0x74 0x0000168c   0x74 -r-- PROGBITS    .eh_frame_hdr
+13  0x00001700  0x1b8 0x00001700  0x1b8 -r-- PROGBITS    .eh_frame
+14  0x00001ca0    0x8 0x00011ca0    0x8 -rw- INIT_ARRAY  .init_array
+15  0x00001ca8   0x10 0x00011ca8   0x10 -rw- FINI_ARRAY  .fini_array
+16  0x00001cb8  0x290 0x00011cb8  0x290 -rw- DYNAMIC     .dynamic
+17  0x00001f48   0xb8 0x00011f48   0xb8 -rw- PROGBITS    .got
+18  0x00002000  0x108 0x00012000  0x108 -rw- PROGBITS    .data
+19  0x00002108    0x0 0x00012108   0x10 -rw- NOBITS      .bss
+20  0x00002108   0xc0 0x00000000   0xc0 ---- STRTAB      .shstrtab
+
+[Strings]
+nth paddr      vaddr      len size section   type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10             utf16le @8\a@
+1   0x000005a1 0x000005a1 14  15   .dynstr   ascii   __cxa_finalize
+2   0x000005b0 0x000005b0 12  13   .dynstr   ascii   __cxa_atexit
+3   0x000005c1 0x000005c1 15  16   .dynstr   ascii   _Z10addServicev
+4   0x000005d1 0x000005d1 55  56   .dynstr   ascii   _ZN7android17registerHwServiceEP21gf_fingerprint_device
+5   0x00000609 0x00000609 19  20   .dynstr   ascii   __android_log_print
+6   0x0000061d 0x0000061d 4   5    .dynstr   ascii   free
+7   0x00000622 0x00000622 8   9    .dynstr   ascii   g_device
+8   0x0000062b 0x0000062b 19  20   .dynstr   ascii   gf_hal_authenticate
+9   0x0000063f 0x0000063f 13  14   .dynstr   ascii   gf_hal_cancel
+10  0x0000064d 0x0000064d 12  13   .dynstr   ascii   gf_hal_close
+11  0x0000065a 0x0000065a 13  14   .dynstr   ascii   gf_hal_enroll
+12  0x00000668 0x00000668 30  31   .dynstr   ascii   gf_hal_enumerate_with_callback
+13  0x00000687 0x00000687 18  19   .dynstr   ascii   gf_hal_get_auth_id
+14  0x0000069a 0x0000069a 11  12   .dynstr   ascii   gf_hal_open
+15  0x000006a6 0x000006a6 18  19   .dynstr   ascii   gf_hal_post_enroll
+16  0x000006b9 0x000006b9 17  18   .dynstr   ascii   gf_hal_pre_enroll
+17  0x000006cb 0x000006cb 13  14   .dynstr   ascii   gf_hal_remove
+18  0x000006d9 0x000006d9 23  24   .dynstr   ascii   gf_hal_set_active_group
+19  0x000006f1 0x000006f1 6   7    .dynstr   ascii   malloc
+20  0x000006f8 0x000006f8 6   7    .dynstr   ascii   memset
+21  0x000006ff 0x000006ff 12  13   .dynstr   ascii   libcutils.so
+22  0x0000070c 0x0000070c 7   8    .dynstr   ascii   libc.so
+23  0x00000714 0x00000714 9   10   .dynstr   ascii   libc++.so
+24  0x0000071e 0x0000071e 10  11   .dynstr   ascii   libbase.so
+25  0x00000729 0x00000729 8   9    .dynstr   ascii   libdl.so
+26  0x00000732 0x00000732 14  15   .dynstr   ascii   libhardware.so
+27  0x00000741 0x00000741 12  13   .dynstr   ascii   libcrypto.so
+28  0x0000074e 0x0000074e 12  13   .dynstr   ascii   libgf_hal.so
+29  0x0000075b 0x0000075b 11  12   .dynstr   ascii   libgf_ca.so
+30  0x00000767 0x00000767 44  45   .dynstr   ascii   libvendor.goodix.hardware.fingerprint@1.0.so
+31  0x00000794 0x00000794 52  53   .dynstr   ascii   libvendor.goodix.hardware.fingerprint@1.0-service.so
+32  0x000007c9 0x000007c9 7   8    .dynstr   ascii   libm.so
+33  0x000007d1 0x000007d1 9   10   .dynstr   ascii   liblog.so
+34  0x000007db 0x000007db 6   7    .dynstr   ascii   _edata
+35  0x000007e2 0x000007e2 11  12   .dynstr   ascii   __bss_start
+36  0x000007ee 0x000007ee 13  14   .dynstr   ascii   __bss_start__
+37  0x000007fc 0x000007fc 11  12   .dynstr   ascii   __bss_end__
+38  0x00000808 0x00000808 7   8    .dynstr   ascii   __end__
+39  0x00000810 0x00000810 4   5    .dynstr   ascii   _end
+40  0x00000815 0x00000815 25  26   .dynstr   ascii   libfingerprint.default.so
+41  0x0000082f 0x0000082f 6   7    .dynstr   ascii   LIBLOG
+42  0x00000836 0x00000836 4   5    .dynstr   ascii   LIBC
+43  0x0000148c 0x0000148c 14  15   .rodata   ascii   FingerprintHal
+44  0x0000149b 0x0000149b 58  59   .rodata   ascii   no longer register GoodixFingerprintDaemon  binder service
+45  0x000014d6 0x000014d6 14  15   .rodata   ascii   gf_fingerprint
+46  0x000014e5 0x000014e5 22  23   .rodata   ascii   Goodix Fingerprint HAL
+47  0x000014fc 0x000014fc 6   7    .rodata   ascii   Goodix
+48  0x00001503 0x00001503 16  17   .rodata   ascii   fingerprint_open
+49  0x00001514 0x00001514 19  20   .rodata   ascii   NULL device on open
+50  0x00001528 0x00001528 13  14   .rodata   ascii   out of memory
+51  0x00001536 0x00001536 31  32   .rodata   ascii   out of memory, g_device is NULL
+52  0x00001556 0x00001556 22  23   .rodata   ascii   open goodix hal failed
+53  0x0000156d 0x0000156d 31  32   .rodata   ascii   registerGoodixHWService failed!
+54  0x0000158d 0x0000158d 17  18   .rodata   ascii   fingerprint_close
+55  0x0000159f 0x0000159f 9   10   .rodata   ascii   no device
+56  0x000015a9 0x000015a9 22  23   .rodata   ascii   fingerprint_pre_enroll
+57  0x000015c0 0x000015c0 18  19   .rodata   ascii   fingerprint_enroll
+58  0x000015d3 0x000015d3 23  24   .rodata   ascii   fingerprint_post_enroll
+59  0x000015eb 0x000015eb 23  24   .rodata   ascii   fingerprint_get_auth_id
+60  0x00001603 0x00001603 18  19   .rodata   ascii   fingerprint_cancel
+61  0x00001616 0x00001616 18  19   .rodata   ascii   fingerprint_remove
+62  0x00001629 0x00001629 28  29   .rodata   ascii   fingerprint_set_active_group
+63  0x00001646 0x00001646 24  25   .rodata   ascii   fingerprint_authenticate
+64  0x0000165f 0x0000165f 19  20   .rodata   ascii   set_notify_callback
+65  0x00001673 0x00001673 21  22   .rodata   ascii   fingerprint_enumerate
+66  0x00002010 0x00012010 4   5    .data     ascii   TMWH
+67  0x00002109 0x00000001 11  12   .shstrtab ascii   .init_array
+68  0x00002115 0x0000000d 11  12   .shstrtab ascii   .fini_array
+69  0x00002121 0x00000019 5   6    .shstrtab ascii   .text
+70  0x00002127 0x0000001f 4   5    .shstrtab ascii   .got
+71  0x0000212c 0x00000024 9   10   .shstrtab ascii   .rela.plt
+72  0x00002136 0x0000002e 4   5    .shstrtab ascii   .bss
+73  0x0000213b 0x00000033 7   8    .shstrtab ascii   .dynstr
+74  0x00002143 0x0000003b 13  14   .shstrtab ascii   .eh_frame_hdr
+75  0x00002151 0x00000049 14  15   .shstrtab ascii   .gnu.version_r
+76  0x00002160 0x00000058 9   10   .shstrtab ascii   .rela.dyn
+77  0x0000216a 0x00000062 12  13   .shstrtab ascii   .gnu.version
+78  0x00002177 0x0000006f 7   8    .shstrtab ascii   .dynsym
+79  0x0000217f 0x00000077 5   6    .shstrtab ascii   .hash
+80  0x00002185 0x0000007d 9   10   .shstrtab ascii   .eh_frame
+81  0x0000218f 0x00000087 18  19   .shstrtab ascii   .note.gnu.build-id
+82  0x000021a2 0x0000009a 8   9    .shstrtab ascii   .dynamic
+83  0x000021ab 0x000000a3 9   10   .shstrtab ascii   .shstrtab
+84  0x000021b5 0x000000ad 7   8    .shstrtab ascii   .rodata
+85  0x000021bd 0x000000b5 5   6    .shstrtab ascii   .data
+0x00000b40    1     16 sym.imp.free
+0x00000b50    1     16 sym.imp.malloc
+0x00000b60    1     16 sym.imp.gf_hal_pre_enroll
+0x00000b70    1     16 sym.imp.gf_hal_authenticate
+0x00000b80    1     16 sym.imp.gf_hal_get_auth_id
+0x00000b90    1     16 sym.imp.gf_hal_remove
+0x00000ba0    1     16 sym.imp.gf_hal_enumerate_with_callback
+0x00000bb0    1     16 sym.imp.memset
+0x00000bc0    1     16 sym.imp.__android_log_print
+0x00000bd0    1     16 sym.imp.gf_hal_close
+0x00000be0    1     16 sym.imp.__cxa_atexit
+0x00000c00    1     16 sym.imp.gf_hal_open
+0x00000c10    1     16 sym.imp.__cxa_finalize
+0x00000c20    1     16 sym.imp.gf_hal_enroll
+0x00000c30    1     16 sym.imp.gf_hal_post_enroll
+0x00000c40    1     16 sym.imp.gf_hal_cancel
+0x00000c50    1     16 sym.imp.gf_hal_set_active_group
+0x00000c60    1     12 entry0
+0x00000c9c    1     60 sym.addService__
+0x00000bf0    1     16 sym.imp.android::registerHwService_gf_fingerprint_device_
+0x00000cd8   12    852 fcn.00000cd8
+0x0000102c    6    200 fcn.0000102c
+0x000010f4    1     76 fcn.000010f4
+0x00001140    1    112 fcn.00001140
+0x000011b0    1     76 fcn.000011b0
+0x000011fc    1     76 fcn.000011fc
+0x00001248    1     76 fcn.00001248
+0x00001294    1     96 fcn.00001294
+0x000012f4    1    108 fcn.000012f4
+0x00001360    1    108 fcn.00001360
+0x000013cc    3    116 fcn.000013cc
+0x00001440    1     76 fcn.00001440
+0x00000b20    1     20 section..plt
+0x00000c6c    3     24 fcn.00000c6c

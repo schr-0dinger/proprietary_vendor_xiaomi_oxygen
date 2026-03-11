@@ -1,0 +1,965 @@
+arch     arm
+baddr    0x0
+binsz    25582
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                    demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+55  0x00003634 0x00004634 GLOBAL FUNC 88       _ZN10WFDMessageD2Ev                                                     WFDMessage::~WFDMessage()
+56  0x00004854 0x00005854 GLOBAL FUNC 84       _ZN5Queue3PopEPvi                                                       Queue::Pop(void*, int)
+57  0x000032f4 0x000042f4 GLOBAL FUNC 100      _ZN12WFDMMThreads9SetSignalEj                                           WFDMMThreads::SetSignal(unsigned int)
+58  0x00003064 0x00004064 GLOBAL FUNC 332      _ZN12WFDMMThreadsC2Ej                                                   WFDMMThreads::WFDMMThreads(unsigned int)
+59  0x00004688 0x00005688 GLOBAL FUNC 56       _ZN5MutexC1Ev                                                           Mutex::Mutex()
+60  0x0000476c 0x0000576c GLOBAL FUNC 44       _ZN5QueueC1Ev                                                           Queue::Queue()
+61  0x000051c4 0x000061c4 GLOBAL FUNC 4        __aeabi_memcpy
+62  0x000051c8 0x000061c8 GLOBAL FUNC 16       __aeabi_memset
+63  0x000051d8 0x000061d8 GLOBAL FUNC 12       __aeabi_memclr4
+64  0x00004de4 0x00005de4 GLOBAL FUNC 88       venc_mutex_unlock
+65  0x00003634 0x00004634 GLOBAL FUNC 88       _ZN10WFDMessageD1Ev                                                     WFDMessage::~WFDMessage()
+66  0x00004174 0x00005174 GLOBAL FUNC 144      _Z14MMIonCacheLockiiPc                                                  MMIonCacheLock(int, int, char*)
+67  0x00004298 0x00005298 GLOBAL FUNC 96       _ZN11SignalQueueC2Eii                                                   SignalQueue::SignalQueue(int, int)
+68  0x00004798 0x00005798 GLOBAL FUNC 104      _ZN5QueueC1Eii                                                          Queue::Queue(int, int)
+69  0x000046c0 0x000056c0 GLOBAL FUNC 52       _ZN5MutexD2Ev                                                           Mutex::~Mutex()
+70  0x00004800 0x00005800 GLOBAL FUNC 84       _ZN5QueueD2Ev                                                           Queue::~Queue()
+71  0x00004cac 0x00005cac GLOBAL FUNC 20       venc_queue_full
+72  0x00003064 0x00004064 GLOBAL FUNC 332      _ZN12WFDMMThreadsC1Ej                                                   WFDMMThreads::WFDMMThreads(unsigned int)
+73  0x000058e4 0x000078e4 GLOBAL OBJ  16       _ZTV16wfdmmsourcequeue                                                  vtable for wfdmmsourcequeue
+74  0x00004928 0x00005928 GLOBAL FUNC 56       _ZN6SignalC2Ev                                                          Signal::Signal()
+75  0x0000368c 0x0000468c GLOBAL FUNC 188      _ZN17WFDMessageServiceC2EPvPFvS0_P10WFDMessageE                         WFDMessageService::WFDMessageService(void*, void (*)(void*, WFDMessage*))
+76  0x00004d8c 0x00005d8c GLOBAL FUNC 88       venc_mutex_lock
+77  0x000034ea 0x000044ea GLOBAL FUNC 6        _ZN10WFDMessage13SetNoResponseEv                                        WFDMessage::SetNoResponse()
+78  0x0000368c 0x0000468c GLOBAL FUNC 188      _ZN17WFDMessageServiceC1EPvPFvS0_P10WFDMessageE                         WFDMessageService::WFDMessageService(void*, void (*)(void*, WFDMessage*))
+79  0x00003750 0x00004750 GLOBAL FUNC 112      _ZN17WFDMessageServiceD2Ev                                              WFDMessageService::~WFDMessageService()
+80  0x000046f4 0x000056f4 GLOBAL FUNC 60       _ZN5Mutex4LockEv                                                        Mutex::Lock()
+81  0x000046c0 0x000056c0 GLOBAL FUNC 52       _ZN5MutexD1Ev                                                           Mutex::~Mutex()
+82  0x00004800 0x00005800 GLOBAL FUNC 84       _ZN5QueueD1Ev                                                           Queue::~Queue()
+83  0x000051d8 0x000061d8 GLOBAL FUNC 12       __aeabi_memclr8
+84  0x00004730 0x00005730 GLOBAL FUNC 60       _ZN5Mutex6UnLockEv                                                      Mutex::UnLock()
+85  0x00004928 0x00005928 GLOBAL FUNC 56       _ZN6SignalC1Ev                                                          Signal::Signal()
+86  0x00004f28 0x00005f28 GLOBAL FUNC 68       venc_signal_destroy
+87  0x00004f6c 0x00005f6c GLOBAL FUNC 176      venc_signal_set
+88  0x00004d30 0x00005d30 GLOBAL FUNC 92       venc_mutex_destroy
+89  0x00004798 0x00005798 GLOBAL FUNC 104      _ZN5QueueC2Eii                                                          Queue::Queue(int, int)
+90  0x00004a80 0x00005a80 GLOBAL FUNC 64       venc_queue_destroy
+91  0x00003050 0x00004050 GLOBAL FUNC 20       _ZN20WFDMMThreadScopeLockD2Ev                                           WFDMMThreadScopeLock::~WFDMMThreadScopeLock()
+92  0x000034e4 0x000044e4 GLOBAL FUNC 6        _ZN10WFDMessage7AcquireEv                                               WFDMessage::Acquire()
+93  0x00003750 0x00004750 GLOBAL FUNC 112      _ZN17WFDMessageServiceD1Ev                                              WFDMessageService::~WFDMessageService()
+94  0x000048a8 0x000058a8 GLOBAL FUNC 60       _ZN5Queue4PeekEPvi                                                      Queue::Peek(void*, int)
+95  0x00004ac0 0x00005ac0 GLOBAL FUNC 80       venc_queue_pop
+96  0x00004960 0x00005960 GLOBAL FUNC 52       _ZN6SignalD2Ev                                                          Signal::~Signal()
+97  0x00004e3c 0x00005e3c GLOBAL FUNC 236      venc_signal_create
+98  0x000037c0 0x000047c0 GLOBAL FUNC 344      _ZN17WFDMessageService6ThreadEj                                         WFDMessageService::Thread(unsigned int)
+99  0x00004404 0x00005404 GLOBAL FUNC 72       _ZN11SignalQueue4PeekEPvi                                               SignalQueue::Peek(void*, int)
+100 0x000048e4 0x000058e4 GLOBAL FUNC 60       _ZN5Queue4PushEPvi                                                      Queue::Push(void*, int)
+101 0x000043d6 0x000053d6 GLOBAL FUNC 44       _ZN11SignalQueue4PushEPvi                                               SignalQueue::Push(void*, int)
+102 0x000049d0 0x000059d0 GLOBAL FUNC 68       _ZN6Signal4WaitEi                                                       Signal::Wait(int)
+103 0x000031b0 0x000041b0 GLOBAL FUNC 276      _ZN12WFDMMThreads5StartEPFvPvjEiiS0_PKcb                                WFDMMThreads::Start(void (*)(void*, unsigned int), int, int, void*, char const*, bool)
+104 0x00003050 0x00004050 GLOBAL FUNC 20       _ZN20WFDMMThreadScopeLockD1Ev                                           WFDMMThreadScopeLock::~WFDMMThreadScopeLock()
+105 0x000035a0 0x000045a0 GLOBAL FUNC 96       _ZN10WFDMessage14NotifyResponseEi                                       WFDMessage::NotifyResponse(int)
+106 0x000040e0 0x000050e0 GLOBAL FUNC 148      _Z15MMIonMemoryFreeiiPc                                                 MMIonMemoryFree(int, int, char*)
+107 0x00004960 0x00005960 GLOBAL FUNC 52       _ZN6SignalD1Ev                                                          Signal::~Signal()
+108 0x00004cc0 0x00005cc0 GLOBAL FUNC 112      venc_mutex_create
+109 0x000044e8 0x000054e8 GLOBAL FUNC 188      _ZN16wfdmmsourcequeue4PushEPv                                           wfdmmsourcequeue::Push(void*)
+110 0x00004c7c 0x00005c7c GLOBAL FUNC 48       venc_queue_size
+111 0x000051c4 0x000061c4 GLOBAL FUNC 4        __aeabi_memcpy4
+112 0x000051c8 0x000061c8 GLOBAL FUNC 16       __aeabi_memset4
+113 0x00003600 0x00004600 GLOBAL FUNC 52       _ZN10WFDMessageixEi                                                     WFDMessage::operator[](int)
+114 0x000043d0 0x000053d0 GLOBAL FUNC 6        _ZN11SignalQueue7GetSizeEv                                              SignalQueue::GetSize()
+115 0x00004064 0x00005064 GLOBAL FUNC 124      _Z26FreeVirtualAddressForIonFdPci                                       FreeVirtualAddressForIonFd(char*, int)
+116 0x0000444c 0x0000544c GLOBAL FUNC 84       _ZN16wfdmmsourcequeueC2Ev                                               wfdmmsourcequeue::wfdmmsourcequeue()
+117 0x0000426c 0x0000526c GLOBAL FUNC 44       _ZN11SignalQueueC2Ev                                                    SignalQueue::SignalQueue()
+118 0x00004204 0x00005204 GLOBAL FUNC 104      _Z16MMIonCacheUnlockiiPc                                                MMIonCacheUnlock(int, int, char*)
+119 0x0000501c 0x0000601c GLOBAL FUNC 424      venc_signal_wait
+120 0x000039b8 0x000049b8 GLOBAL FUNC 116      _ZN17WFDMessageService11recvMessageEPP10WFDMessagei                     WFDMessageService::recvMessage(WFDMessage**, int)
+121 0x0000444c 0x0000544c GLOBAL FUNC 84       _ZN16wfdmmsourcequeueC1Ev                                               wfdmmsourcequeue::wfdmmsourcequeue()
+122 0x000051c4 0x000061c4 GLOBAL FUNC 4        __aeabi_memcpy8
+123 0x000051c8 0x000061c8 GLOBAL FUNC 16       __aeabi_memset8
+124 0x000032c4 0x000042c4 GLOBAL FUNC 48       _ZN12WFDMMThreads11ThreadEntryEPv                                       WFDMMThreads::ThreadEntry(void*)
+125 0x000033e4 0x000043e4 GLOBAL FUNC 132      _ZN12WFDMMThreadsD2Ev                                                   WFDMMThreads::~WFDMMThreads()
+126 0x000034f8 0x000044f8 GLOBAL FUNC 168      _ZN10WFDMessage15WaitForResponseEPi                                     WFDMessage::WaitForResponse(int*)
+127 0x00003954 0x00004954 GLOBAL FUNC 100      _ZN17WFDMessageService11SendMessageEP10WFDMessage                       WFDMessageService::SendMessage(WFDMessage*)
+128 0x00003748 0x00004748 GLOBAL FUNC 8        _ZN17WFDMessageService11ThreadEntryEPvj                                 WFDMessageService::ThreadEntry(void*, unsigned int)
+129 0x00003ac8 0x00004ac8 GLOBAL FUNC 280      _ZN17WFDMessageService14sendCmdAndWaitEiPKyiPi                          WFDMessageService::sendCmdAndWait(int, unsigned long long const*, int, int*)
+130 0x0000426c 0x0000526c GLOBAL FUNC 44       _ZN11SignalQueueC1Ev                                                    SignalQueue::SignalQueue()
+131 0x00004a14 0x00005a14 GLOBAL FUNC 108      venc_queue_create
+132 0x000051d8 0x000061d8 GLOBAL FUNC 12       __aeabi_memclr
+133 0x00003358 0x00004358 GLOBAL FUNC 140      _ZN12WFDMMThreads10ThreadLoopEv                                         WFDMMThreads::ThreadLoop()
+134 0x00003010 0x00004010 GLOBAL FUNC 64       _ZN20WFDMMThreadScopeLockC1EPv                                          WFDMMThreadScopeLock::WFDMMThreadScopeLock(void*)
+135 0x000044a0 0x000054a0 GLOBAL FUNC 56       _ZN16wfdmmsourcequeueD2Ev                                               wfdmmsourcequeue::~wfdmmsourcequeue()
+136 0x00004348 0x00005348 GLOBAL FUNC 136      _ZN11SignalQueue3PopEPvii                                               SignalQueue::Pop(void*, int, int)
+138 0x000042f8 0x000052f8 GLOBAL FUNC 80       _ZN11SignalQueueD2Ev                                                    SignalQueue::~SignalQueue()
+139 0x00004bbc 0x00005bbc GLOBAL FUNC 192      venc_queue_push
+140 0x000033e4 0x000043e4 GLOBAL FUNC 132      _ZN12WFDMMThreadsD1Ev                                                   WFDMMThreads::~WFDMMThreads()
+141 0x00003468 0x00004468 GLOBAL FUNC 124      _ZN10WFDMessageC2Ev                                                     WFDMessage::WFDMessage()
+142 0x00003918 0x00004918 GLOBAL FUNC 60       _ZN17WFDMessageService16getMessageObjectEv                              WFDMessageService::getMessageObject()
+143 0x00004920 0x00005920 GLOBAL FUNC 6        _ZN5Queue7GetSizeEv                                                     Queue::GetSize()
+144 0x000045a4 0x000055a4 GLOBAL FUNC 224      _ZN16wfdmmsourcequeue9Pop_FrontEv                                       wfdmmsourcequeue::Pop_Front()
+145 0x000034f0 0x000044f0 GLOBAL FUNC 6        _ZN10WFDMessage7ReleaseEv                                               WFDMessage::Release()
+146 0x00004994 0x00005994 GLOBAL FUNC 60       _ZN6Signal3SetEv                                                        Signal::Set()
+147 0x000044a0 0x000054a0 GLOBAL FUNC 56       _ZN16wfdmmsourcequeueD1Ev                                               wfdmmsourcequeue::~wfdmmsourcequeue()
+148 0x000042f8 0x000052f8 GLOBAL FUNC 80       _ZN11SignalQueueD1Ev                                                    SignalQueue::~SignalQueue()
+149 0x00003be0 0x00004be0 GLOBAL FUNC 264      _ZN17WFDMessageService22executeInHandlerThreadENSt3__18functionIFvvEEEb WFDMessageService::executeInHandlerThread(std::__1::function<void ()>, bool)
+150 0x00003e48 0x00004e48 GLOBAL FUNC 340      _Z17MMIonMemoryMallocbj16WfdIonHeapIdTypei                              MMIonMemoryMalloc(bool, unsigned int, WfdIonHeapIdType, int)
+151 0x00004684 0x00005684 GLOBAL FUNC 4        _ZN16wfdmmsourcequeue10queue_sizeEv                                     wfdmmsourcequeue::queue_size()
+152 0x00003010 0x00004010 GLOBAL FUNC 64       _ZN20WFDMMThreadScopeLockC2EPv                                          WFDMMThreadScopeLock::WFDMMThreadScopeLock(void*)
+153 0x00003468 0x00004468 GLOBAL FUNC 124      _ZN10WFDMessageC1Ev                                                     WFDMessage::WFDMessage()
+154 0x00004298 0x00005298 GLOBAL FUNC 96       _ZN11SignalQueueC1Eii                                                   SignalQueue::SignalQueue(int, int)
+155 0x00003f9c 0x00004f9c GLOBAL FUNC 200      _Z25GetVirtualAddressForIonFdbji                                        GetVirtualAddressForIonFd(bool, unsigned int, int)
+156 0x00004688 0x00005688 GLOBAL FUNC 56       _ZN5MutexC2Ev                                                           Mutex::Mutex()
+157 0x0000476c 0x0000576c GLOBAL FUNC 44       _ZN5QueueC2Ev                                                           Queue::Queue()
+158 0x00003a2c 0x00004a2c GLOBAL FUNC 156      _ZN17WFDMessageService7sendCmdEiPKyi                                    WFDMessageService::sendCmd(int, unsigned long long const*, int)
+159 0x000044d8 0x000054d8 GLOBAL FUNC 14       _ZN16wfdmmsourcequeueD0Ev                                               wfdmmsourcequeue::~wfdmmsourcequeue()
+160 0x00004b10 0x00005b10 GLOBAL FUNC 172      venc_queue_peek
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000174    0x18 0x00000174    0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c    0x20 0x0000018c    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0xa10 0x000001ac   0xa10 -r-- DYNSYM      .dynsym
+4   0x00000bbc   0x142 0x00000bbc   0x142 -r-- GNU_VERSYM  .gnu.version
+5   0x00000d00    0x40 0x00000d00    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000d40   0x320 0x00000d40   0x320 -r-- GNU_HASH    .gnu.hash
+7   0x00001060   0xdb1 0x00001060   0xdb1 -r-- STRTAB      .dynstr
+8   0x00001e14    0x22 0x00001e14    0x22 -r-- ----        .rel.dyn
+9   0x00001e38     0x8 0x00001e38     0x8 -r-- ----        .relr.dyn
+10  0x00001e40   0x210 0x00001e40   0x210 -r-- ----        .ARM.exidx
+11  0x00002050   0x340 0x00002050   0x340 -r-- REL         .rel.plt
+12  0x00002390   0xc60 0x00002390   0xc60 -r-- PROGBITS    .rodata
+13  0x00002ff0     0xc 0x00002ff0     0xc -r-- PROGBITS    .ARM.extab
+14  0x00002ffc  0x223c 0x00003ffc  0x223c -r-x PROGBITS    .text
+15  0x00005240   0x6a0 0x00006240   0x6a0 -r-x PROGBITS    .plt
+16  0x000058e0    0x14 0x000078e0    0x14 -rw- PROGBITS    .data.rel.ro
+17  0x000058f4     0x8 0x000078f4     0x8 -rw- FINI_ARRAY  .fini_array
+18  0x000058fc   0x110 0x000078fc   0x110 -rw- DYNAMIC     .dynamic
+19  0x00005a0c    0x10 0x00007a0c    0x10 -rw- PROGBITS    .got
+20  0x00005a1c   0x1ac 0x00007a1c   0x1ac -rw- PROGBITS    .got.plt
+21  0x00005bc8     0x0 0x00008bc8     0x4 -rw- NOBITS      .bss
+22  0x00005bc8    0x4e 0x00000000    0x4e ---- ----        .ARM.attributes
+23  0x00005c16    0xfc 0x00000000    0xfc ---- STRTAB      .shstrtab
+24  0x00005d12   0x6dc 0x00000000   0x6dc ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+3   0x00000e50 0x00000e50 19  80   .gnu.hash           utf32le 79?AHKMTX[begmquvx|
+4   0x00000ed0 0x00000ed0 4   5    .gnu.hash           ascii   ^TnD
+5   0x00000edf 0x00000edf 5   7    .gnu.hash           utf8    |bӳ^$
+6   0x00000eef 0x00000eef 7   8    .gnu.hash           ascii   O$q`hV^
+7   0x00000f17 0x00000f17 4   5    .gnu.hash           ascii   X<;C
+8   0x00000f7f 0x00000f7f 4   5    .gnu.hash           ascii   MN\r6
+9   0x00000f8c 0x00000f8c 4   5    .gnu.hash           ascii   Wk<S
+10  0x00000fb1 0x00000fb1 12  15   .gnu.hash           utf8    y\bPj[ʼch0<vc
+11  0x00000fe1 0x00000fe1 8   9    .gnu.hash           ascii   A+C`u\bPH
+12  0x00000fed 0x00000fed 4   5    .gnu.hash           ascii   SnD"
+13  0x00001026 0x00001026 4   5    .gnu.hash           ascii   v3U_
+14  0x00001034 0x00001034 4   5    .gnu.hash           ascii   F0kz
+15  0x00001061 0x00001061 14  15   .dynstr             ascii   __cxa_finalize
+16  0x00001070 0x00001070 10  11   .dynstr             ascii   GetLogMask
+17  0x0000107b 0x0000107b 24  25   .dynstr             ascii   MM_CriticalSection_Enter
+18  0x00001094 0x00001094 24  25   .dynstr             ascii   MM_CriticalSection_Leave
+19  0x000010ad 0x000010ad 17  18   .dynstr             ascii   MM_SignalQ_Create
+20  0x000010bf 0x000010bf 18  19   .dynstr             ascii   MM_SignalQ_Release
+21  0x000010d2 0x000010d2 15  16   .dynstr             ascii   MM_SignalQ_Wait
+22  0x000010e2 0x000010e2 16  17   .dynstr             ascii   MM_Signal_Create
+23  0x000010f3 0x000010f3 17  18   .dynstr             ascii   MM_Signal_Release
+24  0x00001105 0x00001105 13  14   .dynstr             ascii   MM_Signal_Set
+25  0x00001113 0x00001113 18  19   .dynstr             ascii   MM_Thread_CreateEx
+26  0x00001126 0x00001126 14  15   .dynstr             ascii   MM_Thread_Exit
+27  0x00001135 0x00001135 14  15   .dynstr             ascii   MM_Thread_Join
+28  0x00001144 0x00001144 17  18   .dynstr             ascii   MM_Thread_Release
+29  0x00001156 0x00001156 7   8    .dynstr             ascii   MM_free
+30  0x0000115e 0x0000115e 9   10   .dynstr             ascii   MM_malloc
+31  0x00001168 0x00001168 31  32   .dynstr             ascii   _ZN12WFDMMThreads10ThreadLoopEv
+32  0x00001188 0x00001188 33  34   .dynstr             ascii   _ZN12WFDMMThreads11ThreadEntryEPv
+33  0x000011aa 0x000011aa 40  41   .dynstr             ascii   _ZN12WFDMMThreads5StartEPFvPvjEiiS0_PKcb
+34  0x000011d3 0x000011d3 29  30   .dynstr             ascii   _ZN12WFDMMThreads9SetSignalEj
+35  0x000011f1 0x000011f1 21  22   .dynstr             ascii   _ZN12WFDMMThreadsC1Ej
+36  0x00001207 0x00001207 21  22   .dynstr             ascii   _ZN12WFDMMThreadsC2Ej
+37  0x0000121d 0x0000121d 21  22   .dynstr             ascii   _ZN12WFDMMThreadsD1Ev
+38  0x00001233 0x00001233 21  22   .dynstr             ascii   _ZN12WFDMMThreadsD2Ev
+39  0x00001249 0x00001249 30  31   .dynstr             ascii   _ZN20WFDMMThreadScopeLockC1EPv
+40  0x00001268 0x00001268 30  31   .dynstr             ascii   _ZN20WFDMMThreadScopeLockC2EPv
+41  0x00001287 0x00001287 29  30   .dynstr             ascii   _ZN20WFDMMThreadScopeLockD1Ev
+42  0x000012a5 0x000012a5 29  30   .dynstr             ascii   _ZN20WFDMMThreadScopeLockD2Ev
+43  0x000012c3 0x000012c3 15  16   .dynstr             ascii   __aeabi_memclr4
+44  0x000012d3 0x000012d3 19  20   .dynstr             ascii   __android_log_print
+45  0x000012e7 0x000012e7 16  17   .dynstr             ascii   __stack_chk_fail
+46  0x000012f8 0x000012f8 17  18   .dynstr             ascii   __stack_chk_guard
+47  0x0000130a 0x0000130a 13  14   .dynstr             ascii   __strlcpy_chk
+48  0x00001318 0x00001318 12  13   .dynstr             ascii   __strlen_chk
+49  0x00001325 0x00001325 14  15   .dynstr             ascii   MM_Timer_Sleep
+50  0x00001334 0x00001334 9   10   .dynstr             ascii   MM_delete
+51  0x0000133e 0x0000133e 6   7    .dynstr             ascii   MM_new
+52  0x00001345 0x00001345 32  33   .dynstr             ascii   _ZN10WFDMessage13SetNoResponseEv
+53  0x00001366 0x00001366 33  34   .dynstr             ascii   _ZN10WFDMessage14NotifyResponseEi
+54  0x00001388 0x00001388 35  36   .dynstr             ascii   _ZN10WFDMessage15WaitForResponseEPi
+55  0x000013ac 0x000013ac 25  26   .dynstr             ascii   _ZN10WFDMessage7AcquireEv
+56  0x000013c6 0x000013c6 25  26   .dynstr             ascii   _ZN10WFDMessage7ReleaseEv
+57  0x000013e0 0x000013e0 19  20   .dynstr             ascii   _ZN10WFDMessageC1Ev
+58  0x000013f4 0x000013f4 19  20   .dynstr             ascii   _ZN10WFDMessageC2Ev
+59  0x00001408 0x00001408 19  20   .dynstr             ascii   _ZN10WFDMessageD1Ev
+60  0x0000141c 0x0000141c 19  20   .dynstr             ascii   _ZN10WFDMessageD2Ev
+61  0x00001430 0x00001430 19  20   .dynstr             ascii   _ZN10WFDMessageixEi
+62  0x00001444 0x00001444 25  26   .dynstr             ascii   _ZN11SignalQueue3PopEPvii
+63  0x0000145e 0x0000145e 25  26   .dynstr             ascii   _ZN11SignalQueue4PushEPvi
+64  0x00001478 0x00001478 26  27   .dynstr             ascii   _ZN11SignalQueue7GetSizeEv
+65  0x00001493 0x00001493 21  22   .dynstr             ascii   _ZN11SignalQueueC1Eii
+66  0x000014a9 0x000014a9 20  21   .dynstr             ascii   _ZN11SignalQueueD1Ev
+67  0x000014be 0x000014be 49  50   .dynstr             ascii   _ZN17WFDMessageService11SendMessageEP10WFDMessage
+68  0x000014f0 0x000014f0 39  40   .dynstr             ascii   _ZN17WFDMessageService11ThreadEntryEPvj
+69  0x00001518 0x00001518 51  52   .dynstr             ascii   _ZN17WFDMessageService11recvMessageEPP10WFDMessagei
+70  0x0000154c 0x0000154c 46  47   .dynstr             ascii   _ZN17WFDMessageService14sendCmdAndWaitEiPKyiPi
+71  0x0000157b 0x0000157b 42  43   .dynstr             ascii   _ZN17WFDMessageService16getMessageObjectEv
+72  0x000015a6 0x000015a6 71  72   .dynstr             ascii   _ZN17WFDMessageService22executeInHandlerThreadENSt3__18functionIFvvEEEb
+73  0x000015ee 0x000015ee 31  32   .dynstr             ascii   _ZN17WFDMessageService6ThreadEj
+74  0x0000160e 0x0000160e 36  37   .dynstr             ascii   _ZN17WFDMessageService7sendCmdEiPKyi
+75  0x00001633 0x00001633 47  48   .dynstr             ascii   _ZN17WFDMessageServiceC1EPvPFvS0_P10WFDMessageE
+76  0x00001663 0x00001663 47  48   .dynstr             ascii   _ZN17WFDMessageServiceC2EPvPFvS0_P10WFDMessageE
+77  0x00001693 0x00001693 26  27   .dynstr             ascii   _ZN17WFDMessageServiceD1Ev
+78  0x000016ae 0x000016ae 26  27   .dynstr             ascii   _ZN17WFDMessageServiceD2Ev
+79  0x000016c9 0x000016c9 32  33   .dynstr             ascii   _ZNSt3__18functionIFvvEEaSERKS2_
+80  0x000016ea 0x000016ea 6   7    .dynstr             ascii   _ZdlPv
+81  0x000016f1 0x000016f1 5   6    .dynstr             ascii   _Znwj
+82  0x000016f7 0x000016f7 5   6    .dynstr             ascii   abort
+83  0x000016fd 0x000016fd 22  23   .dynstr             ascii   _Z14MMIonCacheLockiiPc
+84  0x00001714 0x00001714 23  24   .dynstr             ascii   _Z15MMIonMemoryFreeiiPc
+85  0x0000172c 0x0000172c 24  25   .dynstr             ascii   _Z16MMIonCacheUnlockiiPc
+86  0x00001745 0x00001745 42  43   .dynstr             ascii   _Z17MMIonMemoryMallocbj16WfdIonHeapIdTypei
+87  0x00001770 0x00001770 32  33   .dynstr             ascii   _Z25GetVirtualAddressForIonFdbji
+88  0x00001791 0x00001791 33  34   .dynstr             ascii   _Z26FreeVirtualAddressForIonFdPci
+89  0x000017b3 0x000017b3 7   8    .dynstr             ascii   __errno
+90  0x000017bb 0x000017bb 5   6    .dynstr             ascii   close
+91  0x000017c1 0x000017c1 5   6    .dynstr             ascii   ioctl
+92  0x000017c7 0x000017c7 12  13   .dynstr             ascii   ion_alloc_fd
+93  0x000017d4 0x000017d4 9   10   .dynstr             ascii   ion_close
+94  0x000017de 0x000017de 8   9    .dynstr             ascii   ion_open
+95  0x000017e7 0x000017e7 4   5    .dynstr             ascii   mmap
+96  0x000017ec 0x000017ec 6   7    .dynstr             ascii   munmap
+97  0x000017f3 0x000017f3 8   9    .dynstr             ascii   strerror
+98  0x000017fc 0x000017fc 25  26   .dynstr             ascii   _ZN11SignalQueue4PeekEPvi
+99  0x00001816 0x00001816 20  21   .dynstr             ascii   _ZN11SignalQueueC1Ev
+100 0x0000182b 0x0000182b 21  22   .dynstr             ascii   _ZN11SignalQueueC2Eii
+101 0x00001841 0x00001841 20  21   .dynstr             ascii   _ZN11SignalQueueC2Ev
+102 0x00001856 0x00001856 20  21   .dynstr             ascii   _ZN11SignalQueueD2Ev
+103 0x0000186b 0x0000186b 16  17   .dynstr             ascii   _ZN5Mutex4LockEv
+104 0x0000187c 0x0000187c 18  19   .dynstr             ascii   _ZN5Mutex6UnLockEv
+105 0x0000188f 0x0000188f 13  14   .dynstr             ascii   _ZN5MutexC1Ev
+106 0x0000189d 0x0000189d 13  14   .dynstr             ascii   _ZN5MutexD1Ev
+107 0x000018ab 0x000018ab 17  18   .dynstr             ascii   _ZN5Queue3PopEPvi
+108 0x000018bd 0x000018bd 18  19   .dynstr             ascii   _ZN5Queue4PeekEPvi
+109 0x000018d0 0x000018d0 18  19   .dynstr             ascii   _ZN5Queue4PushEPvi
+110 0x000018e3 0x000018e3 19  20   .dynstr             ascii   _ZN5Queue7GetSizeEv
+111 0x000018f7 0x000018f7 14  15   .dynstr             ascii   _ZN5QueueC1Eii
+112 0x00001906 0x00001906 13  14   .dynstr             ascii   _ZN5QueueD1Ev
+113 0x00001914 0x00001914 16  17   .dynstr             ascii   _ZN6Signal3SetEv
+114 0x00001925 0x00001925 17  18   .dynstr             ascii   _ZN6Signal4WaitEi
+115 0x00001937 0x00001937 14  15   .dynstr             ascii   _ZN6SignalC1Ev
+116 0x00001946 0x00001946 14  15   .dynstr             ascii   _ZN6SignalD1Ev
+117 0x00001955 0x00001955 25  26   .dynstr             ascii   MM_CriticalSection_Create
+118 0x0000196f 0x0000196f 26  27   .dynstr             ascii   MM_CriticalSection_Release
+119 0x0000198a 0x0000198a 35  36   .dynstr             ascii   _ZN16wfdmmsourcequeue10queue_sizeEv
+120 0x000019ae 0x000019ae 29  30   .dynstr             ascii   _ZN16wfdmmsourcequeue4PushEPv
+121 0x000019cc 0x000019cc 33  34   .dynstr             ascii   _ZN16wfdmmsourcequeue9Pop_FrontEv
+122 0x000019ee 0x000019ee 25  26   .dynstr             ascii   _ZN16wfdmmsourcequeueC1Ev
+123 0x00001a08 0x00001a08 25  26   .dynstr             ascii   _ZN16wfdmmsourcequeueC2Ev
+124 0x00001a22 0x00001a22 25  26   .dynstr             ascii   _ZN16wfdmmsourcequeueD0Ev
+125 0x00001a3c 0x00001a3c 25  26   .dynstr             ascii   _ZN16wfdmmsourcequeueD1Ev
+126 0x00001a56 0x00001a56 25  26   .dynstr             ascii   _ZN16wfdmmsourcequeueD2Ev
+127 0x00001a70 0x00001a70 22  23   .dynstr             ascii   _ZTV16wfdmmsourcequeue
+128 0x00001a87 0x00001a87 6   7    .dynstr             ascii   _ZdaPv
+129 0x00001a8e 0x00001a8e 5   6    .dynstr             ascii   _Znaj
+130 0x00001a94 0x00001a94 13  14   .dynstr             ascii   _ZN5MutexC2Ev
+131 0x00001aa2 0x00001aa2 13  14   .dynstr             ascii   _ZN5MutexD2Ev
+132 0x00001ab0 0x00001ab0 17  18   .dynstr             ascii   venc_mutex_create
+133 0x00001ac2 0x00001ac2 18  19   .dynstr             ascii   venc_mutex_destroy
+134 0x00001ad5 0x00001ad5 15  16   .dynstr             ascii   venc_mutex_lock
+135 0x00001ae5 0x00001ae5 17  18   .dynstr             ascii   venc_mutex_unlock
+136 0x00001af7 0x00001af7 13  14   .dynstr             ascii   _ZN5QueueC1Ev
+137 0x00001b05 0x00001b05 14  15   .dynstr             ascii   _ZN5QueueC2Eii
+138 0x00001b14 0x00001b14 13  14   .dynstr             ascii   _ZN5QueueC2Ev
+139 0x00001b22 0x00001b22 13  14   .dynstr             ascii   _ZN5QueueD2Ev
+140 0x00001b30 0x00001b30 17  18   .dynstr             ascii   venc_queue_create
+141 0x00001b42 0x00001b42 18  19   .dynstr             ascii   venc_queue_destroy
+142 0x00001b55 0x00001b55 15  16   .dynstr             ascii   venc_queue_peek
+143 0x00001b65 0x00001b65 14  15   .dynstr             ascii   venc_queue_pop
+144 0x00001b74 0x00001b74 15  16   .dynstr             ascii   venc_queue_push
+145 0x00001b84 0x00001b84 15  16   .dynstr             ascii   venc_queue_size
+146 0x00001b94 0x00001b94 14  15   .dynstr             ascii   _ZN6SignalC2Ev
+147 0x00001ba3 0x00001ba3 14  15   .dynstr             ascii   _ZN6SignalD2Ev
+148 0x00001bb2 0x00001bb2 18  19   .dynstr             ascii   venc_signal_create
+149 0x00001bc5 0x00001bc5 19  20   .dynstr             ascii   venc_signal_destroy
+150 0x00001bd9 0x00001bd9 15  16   .dynstr             ascii   venc_signal_set
+151 0x00001be9 0x00001be9 16  17   .dynstr             ascii   venc_signal_wait
+152 0x00001bfa 0x00001bfa 14  15   .dynstr             ascii   __aeabi_memcpy
+153 0x00001c09 0x00001c09 4   5    .dynstr             ascii   free
+154 0x00001c0e 0x00001c0e 6   7    .dynstr             ascii   malloc
+155 0x00001c15 0x00001c15 15  16   .dynstr             ascii   venc_queue_full
+156 0x00001c25 0x00001c25 21  22   .dynstr             ascii   pthread_mutex_destroy
+157 0x00001c3b 0x00001c3b 18  19   .dynstr             ascii   pthread_mutex_init
+158 0x00001c4e 0x00001c4e 18  19   .dynstr             ascii   pthread_mutex_lock
+159 0x00001c61 0x00001c61 20  21   .dynstr             ascii   pthread_mutex_unlock
+160 0x00001c76 0x00001c76 13  14   .dynstr             ascii   clock_gettime
+161 0x00001c84 0x00001c84 20  21   .dynstr             ascii   pthread_cond_destroy
+162 0x00001c99 0x00001c99 17  18   .dynstr             ascii   pthread_cond_init
+163 0x00001cab 0x00001cab 19  20   .dynstr             ascii   pthread_cond_signal
+164 0x00001cbf 0x00001cbf 22  23   .dynstr             ascii   pthread_cond_timedwait
+165 0x00001cd6 0x00001cd6 17  18   .dynstr             ascii   pthread_cond_wait
+166 0x00001ce8 0x00001ce8 15  16   .dynstr             ascii   __aeabi_memcpy4
+167 0x00001cf8 0x00001cf8 15  16   .dynstr             ascii   __aeabi_memcpy8
+168 0x00001d08 0x00001d08 6   7    .dynstr             ascii   memcpy
+169 0x00001d0f 0x00001d0f 14  15   .dynstr             ascii   __aeabi_memclr
+170 0x00001d1e 0x00001d1e 15  16   .dynstr             ascii   __aeabi_memclr8
+171 0x00001d2e 0x00001d2e 14  15   .dynstr             ascii   __aeabi_memset
+172 0x00001d3d 0x00001d3d 15  16   .dynstr             ascii   __aeabi_memset4
+173 0x00001d4d 0x00001d4d 15  16   .dynstr             ascii   __aeabi_memset8
+174 0x00001d5d 0x00001d5d 6   7    .dynstr             ascii   memset
+175 0x00001d64 0x00001d64 9   10   .dynstr             ascii   liblog.so
+176 0x00001d6e 0x00001d6e 6   7    .dynstr             ascii   LIBLOG
+177 0x00001d75 0x00001d75 7   8    .dynstr             ascii   libc.so
+178 0x00001d7d 0x00001d7d 4   5    .dynstr             ascii   LIBC
+179 0x00001d82 0x00001d82 12  13   .dynstr             ascii   libmmosal.so
+180 0x00001d8f 0x00001d8f 11  12   .dynstr             ascii   libutils.so
+181 0x00001d9b 0x00001d9b 12  13   .dynstr             ascii   libcutils.so
+182 0x00001da8 0x00001da8 9   10   .dynstr             ascii   libion.so
+183 0x00001db2 0x00001db2 34  35   .dynstr             ascii   libwfddisplayconfig_proprietary.so
+184 0x00001dd5 0x00001dd5 9   10   .dynstr             ascii   libc++.so
+185 0x00001ddf 0x00001ddf 7   8    .dynstr             ascii   libm.so
+186 0x00001de7 0x00001de7 8   9    .dynstr             ascii   libdl.so
+187 0x00001df0 0x00001df0 32  33   .dynstr             ascii   libwfdcommonutils_proprietary.so
+188 0x00001e14 0x00001e14 4   5    .rel.dyn            ascii   APS2
+189 0x00002390 0x00002390 25  26   .rodata             ascii   Failed to create Signal Q
+190 0x000023aa 0x000023aa 38  39   .rodata             ascii   wfdmmsourcequeue::event queue is full.
+191 0x000023d1 0x000023d1 47  48   .rodata             ascii   Failed ION_IOC_ALLOC in MMIonMemoryMalloc %s \n
+192 0x00002401 0x00002401 23  24   .rodata             ascii   failed to destroy mutex
+193 0x00002419 0x00002419 34  35   .rodata             ascii   Secure case cannot get VirtAddress
+194 0x0000243c 0x0000243c 70  71   .rodata             ascii   wfdmmsourcequeue: event queue is                     empty, size = %d.
+195 0x00002483 0x00002483 25  26   .rodata             ascii   failed to push onto queue
+196 0x0000249d 0x0000249d 28  29   .rodata             ascii   Failed to create WFDMMThread
+197 0x000024ba 0x000024ba 59  60   .rodata             ascii   Success ION_IOC_FREE in MMIonMemoryFree fd=%d pVirtAdd=%p \n
+198 0x000024f6 0x000024f6 14  15   .rodata             ascii   Invalid nFd=%d
+199 0x00002505 0x00002505 22  23   .rodata             ascii   failed to alloc handle
+200 0x0000251c 0x0000251c 36  37   .rodata             ascii   recvMessage not allowed n async mode
+201 0x00002541 0x00002541 22  23   .rodata             ascii   failed to unlock mutex
+202 0x00002558 0x00002558 22  23   .rodata             ascii   failed to create mutex
+203 0x0000256f 0x0000256f 30  31   .rodata             ascii   Failed to allocate Exit Signal
+204 0x0000258e 0x0000258e 48  49   .rodata             ascii   Failed get VirtAddress  for nFd=%d,%s Error = %s
+205 0x000025bf 0x000025bf 53  54   .rodata             ascii   FreeVirtualAddressForIonFd nSize=%d,pVirtAddress=%p \n
+206 0x000025f5 0x000025f5 4   5    .rodata             ascii   Peek
+207 0x000025fa 0x000025fa 33  34   .rodata             ascii   Deleted thread for MessageService
+208 0x0000261c 0x0000261c 48  49   .rodata             ascii   default constructor should not be here (private)
+209 0x0000264d 0x0000264d 14  15   .rodata             ascii   messagehandler
+210 0x0000265c 0x0000265c 28  29   .rodata             ascii   Msg Service Thread code = %d
+211 0x00002679 0x00002679 29  30   .rodata             ascii   Failed DMA_BUF_IOCTL_SYNC end
+212 0x00002697 0x00002697 11  12   .rodata             ascii   WfdMMThread
+213 0x000026a3 0x000026a3 59  60   .rodata             ascii   GetVirtualAddressForIonFd inputs Fd=%d, Size=%d,Secure=%d \n
+214 0x000026df 0x000026df 53  54   .rodata             ascii   Success GetVirtualAddressForIonFd Fd=%d, pVirtAddr=%p
+215 0x00002715 0x00002715 35  36   .rodata             ascii   WFDMMThreads:SetSignal Invalid Args
+216 0x00002739 0x00002739 17  18   .rodata             ascii   init mutex failed
+217 0x0000274b 0x0000274b 64  65   .rodata             ascii   vendor/qcom/proprietary/wfd-framework/utils/src/WFDMMThreads.cpp
+218 0x0000278c 0x0000278c 23  24   .rodata             ascii   Failed to send response
+219 0x000027a4 0x000027a4 46  47   .rodata             ascii   nFd is %d to close device in MMIonMemoryFree \n
+220 0x000027d3 0x000027d3 21  22   .rodata             ascii   error creating signal
+221 0x000027e9 0x000027e9 20  21   .rodata             ascii   error setting signal
+222 0x000027fe 0x000027fe 61  62   .rodata             ascii   wfdmmsourcequeue: m_nRead pos                     error = %d.
+223 0x0000283c 0x0000283c 24  25   .rodata             ascii   error waiting for signal
+224 0x00002855 0x00002855 44  45   .rodata             ascii   error waiting for signal but its already set
+225 0x00002882 0x00002882 39  40   .rodata             ascii   Bad arugments to executeInHandlerThread
+226 0x000028aa 0x000028aa 7   8    .rodata             ascii   MM_OSAL
+227 0x000028b2 0x000028b2 22  23   .rodata             ascii   failed to create queue
+228 0x000028c9 0x000028c9 14  15   .rodata             ascii   invalid handle
+229 0x000028d8 0x000028d8 42  43   .rodata             ascii   Failed to create thread for MessageService
+230 0x00002903 0x00002903 31  32   .rodata             ascii   Bad arugments to sendCmdAndWait
+231 0x00002923 0x00002923 37  38   .rodata             ascii   Success for MMIonMemoryMalloc Fd= %d\n
+232 0x00002949 0x00002949 48  49   .rodata             ascii   MMIonMemoryFree Fd=%d,nSize=%d,pVirtAddress=%p \n
+233 0x0000297a 0x0000297a 14  15   .rodata             ascii   queue is empty
+234 0x00002989 0x00002989 17  18   .rodata             ascii   Wait for Response
+235 0x0000299b 0x0000299b 24  25   .rodata             ascii   Error waiting for signal
+236 0x000029b4 0x000029b4 14  15   .rodata             ascii   handle is null
+237 0x000029c3 0x000029c3 35  36   .rodata             ascii   WFDMMThreads Failed in Thread Entry
+238 0x000029e7 0x000029e7 35  36   .rodata             ascii   Failed to create Signal for Message
+239 0x00002a0b 0x00002a0b 19  20   .rodata             ascii   constructor %ld %ld
+240 0x00002a1f 0x00002a1f 20  21   .rodata             ascii   failed to init mutex
+241 0x00002a34 0x00002a34 22  23   .rodata             ascii   failed to delete queue
+242 0x00002a4b 0x00002a4b 17  18   .rodata             ascii   lock mutex failed
+243 0x00002a5d 0x00002a5d 30  31   .rodata             ascii   Failed munmap pVirtAdd=%d %s \n
+244 0x00002a7c 0x00002a7c 80  81   .rodata             ascii   wfdmmsourcequeue::Pop_Front         after read Queue size is %d read index is %i
+245 0x00002acd 0x00002acd 12  13   .rodata             ascii   Data is null
+246 0x00002ada 0x00002ada 45  46   .rodata             ascii   WFDMMThreads not ready. Somethng wrong fix it
+247 0x00002b08 0x00002b08 33  34   .rodata             ascii   WFDMMThreads Received Exit Signal
+248 0x00002b2a 0x00002b2a 37  38   .rodata             ascii   WFDMessage data index exceeded bounds
+249 0x00002b50 0x00002b50 20  21   .rodata             ascii   Not a valid instance
+250 0x00002b65 0x00002b65 30  31   .rodata             ascii   No memory to allocate messages
+251 0x00002b84 0x00002b84 78  79   .rodata             ascii   wfdmmsourcequeue::Push after write         Queue size is %d  write index is %i
+252 0x00002bd3 0x00002bd3 23  24   .rodata             ascii   error destroying signal
+253 0x00002beb 0x00002beb 18  19   .rodata             ascii   Data size is wrong
+254 0x00002bfe 0x00002bfe 65  66   .rodata             ascii   vendor/qcom/proprietary/wfd-framework/utils/src/wfd_util_signal.c
+255 0x00002c40 0x00002c40 19  20   .rodata             ascii   failed to pop queue
+256 0x00002c54 0x00002c54 21  22   .rodata             ascii   error unlocking mutex
+257 0x00002c6a 0x00002c6a 11  12   .rodata             ascii   MMIONMEMORY
+258 0x00002c76 0x00002c76 88  89   .rodata             ascii   MMIonMemoryMalloc() bSecure=%d, Size=%d, WfdIonHeapType=%d, nIonHeapType=%d, nFlags=0x%x
+259 0x00002ccf 0x00002ccf 10  11   .rodata             ascii   destructor
+260 0x00002cda 0x00002cda 41  42   .rodata             ascii   WFDMMThreads Num of signals exceeds limit
+261 0x00002d04 0x00002d04 25  26   .rodata             ascii   failed to peek into queue
+262 0x00002d1e 0x00002d1e 11  12   .rodata             ascii   WFDMESSAGES
+263 0x00002d2a 0x00002d2a 31  32   .rodata             ascii   nIonDevfd open Device failed %d
+264 0x00002d4a 0x00002d4a 51  52   .rodata             ascii   wfdmmsourcequeue: MM_CriticalSection_Create failed.
+265 0x00002d7e 0x00002d7e 81  82   .rodata             ascii   wfdmmsourcequeue::Pop_Front        before read Queue size is %d  read index is %i
+266 0x00002dd0 0x00002dd0 28  29   .rodata             ascii   Failed to allocate Signal %d
+267 0x00002ded 0x00002ded 20  21   .rodata             ascii   failed to lock mutex
+268 0x00002e02 0x00002e02 20  21   .rodata             ascii   destroy mutex failed
+269 0x00002e17 0x00002e17 19  20   .rodata             ascii   error locking mutex
+270 0x00002e2b 0x00002e2b 12  13   .rodata             ascii   WFDMMThreads
+271 0x00002e38 0x00002e38 31  32   .rodata             ascii   WFDMMThreads:Start Invalid Args
+272 0x00002e58 0x00002e58 63  64   .rodata             ascii   vendor/qcom/proprietary/wfd-framework/utils/src/WFDMessages.cpp
+273 0x00002e98 0x00002e98 31  32   .rodata             ascii   Failed DMA_BUF_IOCTL_SYNC start
+274 0x00002eb8 0x00002eb8 13  14   .rodata             ascii   Invalid Mutex
+275 0x00002ec6 0x00002ec6 24  25   .rodata             ascii   Bad arugments to sendCmd
+276 0x00002edf 0x00002edf 9   10   .rodata             ascii   Q is full
+277 0x00002ee9 0x00002ee9 27  28   .rodata             ascii   Failed to wait for response
+278 0x00002f05 0x00002f05 27  28   .rodata             ascii   Destructor Wait for release
+279 0x00002f21 0x00002f21 27  28   .rodata             ascii   error allocating data array
+280 0x00002f3d 0x00002f3d 26  27   .rodata             ascii   Failed to allocate Signals
+281 0x00002f58 0x00002f58 78  79   .rodata             ascii   wfdmmsourcequeue::Push before         write Queue size is %d write index is %i
+282 0x00002fa7 0x00002fa7 25  26   .rodata             ascii   failed to create cond var
+283 0x00002fc1 0x00002fc1 27  28   .rodata             ascii   No more Messages to process
+284 0x00003039 0x00004038 5   6    .text               ascii    yDzD
+285 0x0000306d 0x0000406c 5   6    .text               ascii    \rFI!
+286 0x0000309c 0x0000409c 8   9    .text               ascii   9I:JyDzD
+287 0x000030a7 0x000040a6 4   5    .text               ascii   -%eI
+288 0x000030ae 0x000040ae 4   5    .text               ascii   @\tHF
+289 0x000030c4 0x000040c4 8   9    .text               ascii   1I2JyDzD
+290 0x00003117 0x00004116 5   6    .text               ascii   "CF0h
+291 0x00003139 0x00004138 5   6    .text               ascii   JyDzD
+292 0x0000315d 0x0000415c 5   6    .text               ascii   JyDzD
+293 0x00003170 0x00004170 4   5    .text               ascii   \tI\nJ
+294 0x00003175 0x00004174 7   8    .text               ascii    ;FyDzD
+295 0x00003206 0x00004206 9   10   .text               ascii   &I&JyDzD=
+296 0x0000321c 0x0000421c 9   10   .text               ascii   "I#JyDzD2
+297 0x00003287 0x00004286 5   6    .text               ascii   JyDzD
+298 0x000032df 0x000042de 5   6    .text               ascii    yDzD
+299 0x0000331c 0x0000431c 9   10   .text               ascii   \nI\vJyDzD\t
+300 0x00003332 0x00004332 8   9    .text               ascii   \aI\aJyDzD
+301 0x00003372 0x00004372 4   5    .text               ascii    l)F
+302 0x00003380 0x00004380 4   5    .text               ascii    m\th
+303 0x000033ae 0x000043ae 4   5    .text               ascii   \vI\vJ
+304 0x000033b3 0x000043b2 5   6    .text               ascii    yDzD
+305 0x0000348f 0x0000448e 5   6    .text               ascii   JyDzD
+306 0x000034b4 0x000044b4 8   9    .text               ascii   \tI\nJyDzD
+307 0x000034c3 0x000044c2 5   6    .text               ascii    `v F
+308 0x000034fd 0x000044fc 5   6    .text               ascii   F!HxD
+309 0x00003523 0x00004522 5   6    .text               ascii    yDzD
+310 0x0000352c 0x0000452c 4   5    .text               ascii   (iiF
+311 0x00003545 0x00004544 6   7    .text               ascii   JyDzD\t
+312 0x00003558 0x00004558 8   9    .text               ascii   \vI\fJyDzD
+313 0x000035ba 0x000045ba 8   9    .text               ascii   \rI\rJyDzD
+314 0x000035dd 0x000045dc 7   8    .text               ascii   I\aJyDzD
+315 0x00003619 0x00004618 5   6    .text               ascii    yDzD
+316 0x0000363f 0x0000463e 6   7    .text               ascii   N}D~DA
+317 0x00003651 0x00004650 5   6    .text               ascii    )F2F
+318 0x00003695 0x00004694 7   8    .text               ascii   F\rF`r\f
+319 0x000036a8 0x000046a8 5   6    .text               ascii   !J\f!@
+320 0x000036cd 0x000046cc 4   5    .text               ascii   Jx!@
+321 0x000036f1 0x000046f0 5   6    .text               ascii   IyD\th
+322 0x00003716 0x00004716 4   5    .text               ascii   \bI\bJ
+323 0x0000371b 0x0000471a 5   6    .text               ascii    yDzD
+324 0x00003725 0x00004724 5   6    .text               ascii   !!r F
+325 0x00003755 0x00004754 6   7    .text               ascii    `r hX
+326 0x00003780 0x00004780 4   5    .text               ascii   \fI\rJ
+327 0x00003785 0x00004784 5   6    .text               ascii    yDzD
+328 0x000037cd 0x000047cc 7   8    .text               ascii   FJH\rFxD
+329 0x000037e0 0x000047e0 4   5    .text               ascii   }p&z
+330 0x000037e9 0x000047e8 5   7    .text               utf8    .lЀ\a\a
+331 0x000037f0 0x000047f0 4   5    .text               ascii   DIEJ
+332 0x000037f5 0x000047f4 7   8    .text               ascii    +FyDzD
+333 0x0000383b 0x0000483a 5   6    .text               ascii    IFRF
+334 0x00003844 0x00004844 4   5    .text               ascii   `hYF
+335 0x000038a2 0x000048a2 4   5    .text               ascii   \aryD
+336 0x000038ca 0x000048ca 4   5    .text               ascii   \fI\fJ
+337 0x000038cf 0x000048ce 5   6    .text               ascii    yDzD
+338 0x0000393f 0x0000493e 5   6    .text               ascii    yDzD
+339 0x0000398c 0x0000498c 4   5    .text               ascii   \bI\tJ
+340 0x00003991 0x00004990 5   6    .text               ascii    yDzD
+341 0x000039d3 0x000049d2 6   7    .text               ascii   JyDzD\t
+342 0x000039e6 0x000049e6 8   9    .text               ascii   \rI\rJyDzD
+343 0x00003a5f 0x00004a5e 5   6    .text               ascii   GPF)F
+344 0x00003a74 0x00004a74 4   5    .text               ascii   @FQF
+345 0x00003a8e 0x00004a8e 9   10   .text               ascii   \fI\fJyDzD\t
+346 0x00003aa7 0x00004aa6 5   6    .text               ascii   JyDzD
+347 0x00003ad5 0x00004ad4 5   6    .text               ascii   F\rFxD
+348 0x00003af1 0x00004af0 4   6    .text               utf8    (AЂF
+349 0x00003b07 0x00004b06 5   6    .text               ascii   FPF)F
+350 0x00003b1e 0x00004b1e 4   5    .text               ascii   @FQF
+351 0x00003b42 0x00004b42 4   5    .text               ascii   $I$J
+352 0x00003b47 0x00004b46 5   6    .text               ascii    yDzD
+353 0x00003b50 0x00004b50 5   6    .text               ascii   "IPF@
+354 0x00003b87 0x00004b86 6   7    .text               ascii   JyDzD\t
+355 0x00003b9a 0x00004b9a 8   9    .text               ascii   \nI\nJyDzD
+356 0x00003be7 0x00004be6 5   6    .text               ascii   F7HxD
+357 0x00003c0f 0x00004c0e 5   6    .text               ascii   F9F@F
+358 0x00003c2d 0x00004c2c 5   6    .text               ascii   v0F!F
+359 0x00003c54 0x00004c54 4   5    .text               ascii   !I"J
+360 0x00003c59 0x00004c58 5   6    .text               ascii    yDzD
+361 0x00003c62 0x00004c62 5   6    .text               ascii    I FO
+362 0x00003c68 0x00004c68 4   5    .text               ascii   WryD
+363 0x00003c8b 0x00004c8a 6   7    .text               ascii   JyDzD\t
+364 0x00003c9e 0x00004c9e 8   9    .text               ascii   \rI\rJyDzD
+365 0x00003ced 0x00004cec 7   8    .text               ascii   F\fHmFxD
+366 0x00003cf5 0x00004cf4 4   5    .text               ascii   h0h\a
+367 0x00003d2f 0x00004d2e 7   8    .text               ascii   BxD\ah8h
+368 0x00003d3a 0x00004d3a 4   5    .text               ascii   (i\fF
+369 0x00003d48 0x00004d48 5   6    .text               ascii   )a aA
+370 0x00003d63 0x00004d62 6   7    .text               ascii   G i(a2
+371 0x00003d6d 0x00004d6c 5   6    .text               ascii   h\bF)F
+372 0x00003d7b 0x00004d7a 8   9    .text               ascii   G(i a-a&
+373 0x00003da5 0x00004da4 5   6    .text               ascii   &.a i
+374 0x00003dbc 0x00004dbc 6   7    .text               ascii   &a-a!F
+375 0x00003dcf 0x00004dce 5   6    .text               ascii   G$a8h
+376 0x00003e07 0x00004e06 4   5    .text               ascii   F\bi(
+377 0x00003e1e 0x00004e1e 4   5    .text               ascii   $a\bi
+378 0x00003e68 0x00004e68 5   6    .text               ascii   CIyDQ
+379 0x00003e95 0x00004e94 11  12   .text               ascii    3F8I9JyDzD
+380 0x00003ef2 0x00004ef2 4   5    .text               ascii   &I&J
+381 0x00003ef9 0x00004ef8 5   6    .text               ascii    yDzD
+382 0x00003f25 0x00004f24 5   6    .text               ascii    yDzD
+383 0x00003f55 0x00004f54 5   6    .text               ascii    yDzD
+384 0x00003fb7 0x00004fb6 11  12   .text               ascii    #F"I"JyDzD
+385 0x00003fd9 0x00004fd8 5   6    .text               ascii    yDzD
+386 0x0000400f 0x0000500e 5   6    .text               ascii   JyDzD
+387 0x0000402b 0x0000502a 11  12   .text               ascii    #F\tI\tJyDzD
+388 0x0000406c 0x0000506c 4   5    .text               ascii   }p\rF
+389 0x00004081 0x00005080 5   6    .text               ascii   JyDzD
+390 0x0000408c 0x0000508c 4   5    .text               ascii    F)F
+391 0x000040b5 0x000050b4 11  12   .text               ascii    #F\aI\bJyDzD
+392 0x00004101 0x00005100 5   6    .text               ascii   JyDzD
+393 0x0000410a 0x0000510a 4   5    .text               ascii   (F1F
+394 0x00004127 0x00005126 7   8    .text               ascii    #FyDzD
+395 0x00004147 0x00005146 11  12   .text               ascii    #F\bI\bJyDzD
+396 0x000041b3 0x000051b2 5   6    .text               ascii    yDzD
+397 0x000041ca 0x000051ca 4   5    .text               ascii   \fI\fJ
+398 0x000041cf 0x000051ce 7   8    .text               ascii    +FyDzD
+399 0x0000420b 0x0000520a 7   8    .text               ascii   (yD\rh)h
+400 0x0000423a 0x0000523a 4   5    .text               ascii   \nI\nJ
+401 0x0000423f 0x0000523e 5   6    .text               ascii    yDzD
+402 0x00004281 0x00005280 5   6    .text               ascii    yDzD
+403 0x000042c0 0x000052c0 4   5    .text               ascii   )F2F
+404 0x000042df 0x000052de 5   6    .text               ascii   JyDzD
+405 0x0000430d 0x0000530c 5   6    .text               ascii    yDzD
+406 0x00004363 0x00005362 5   6    .text               ascii   h1FBF
+407 0x00004380 0x00005380 4   5    .text               ascii    h9F
+408 0x000043b9 0x000053b8 5   6    .text               ascii    yDzD
+409 0x000043e5 0x000053e4 5   6    .text               ascii   h1F*F
+410 0x00004418 0x00005418 4   5    .text               ascii   \nI\vJ
+411 0x0000441d 0x0000541c 5   6    .text               ascii    yDzD
+412 0x0000442d 0x0000542c 5   6    .text               ascii   h1F*F
+413 0x0000445d 0x0000545c 6   7    .text               ascii   h\b0 `O
+414 0x00004485 0x00005484 5   6    .text               ascii    yDzD
+415 0x000044a3 0x000054a2 7   8    .text               ascii   F\vH%FxD
+416 0x000044ab 0x000054aa 6   7    .text               ascii   h\b0 `U
+417 0x000044c5 0x000054c4 4   5    .text               ascii   \v`h\b
+418 0x00004509 0x00005508 9   10   .text               ascii     I JyDzD
+419 0x0000451b 0x0000551a 4   6    .text               utf8    ܠh!i
+420 0x00004528 0x00005528 4   5    .text               ascii   1 n`
+421 0x0000453d 0x0000553c 4   5    .text               ascii     a\r
+422 0x00004553 0x00005552 5   6    .text               ascii    yDzD
+423 0x00004571 0x00005570 9   10   .text               ascii    \nI\nJyDzD
+424 0x000045c3 0x000055c2 9   10   .text               ascii    'I(JyDzD
+425 0x000045e5 0x000055e4 4   5    .text               ascii   !aai
+426 0x000045ed 0x000055ec 4   6    .text               utf8    -ȿ\nF
+427 0x00004611 0x00005610 6   7    .text               ascii   JyDzD\n
+428 0x00004629 0x00005628 5   6    .text               ascii   JyDzD
+429 0x00004649 0x00005648 9   10   .text               ascii    \fI\fJyDzD
+430 0x0000468d 0x0000568c 5   6    .text               ascii     ` F
+431 0x000046a9 0x000056a8 5   6    .text               ascii    yDzD
+432 0x000046dd 0x000056dc 5   6    .text               ascii    yDzD
+433 0x00004717 0x00005716 5   6    .text               ascii    yDzD
+434 0x00004753 0x00005752 5   6    .text               ascii    yDzD
+435 0x00004781 0x00005780 5   6    .text               ascii    yDzD
+436 0x000047a3 0x000057a2 4   5    .text               ascii   F `A
+437 0x000047b5 0x000057b4 5   6    .text               ascii    3F\rI
+438 0x000047bb 0x000057ba 5   6    .text               ascii   JyDzD
+439 0x000047c4 0x000057c4 6   7    .text               ascii    F1F*F
+440 0x000047e1 0x000057e0 5   6    .text               ascii    yDzD
+441 0x00004810 0x00005810 4   5    .text               ascii   \fI\rJ
+442 0x00004815 0x00005814 5   6    .text               ascii    yDzD
+443 0x00004837 0x00005836 5   6    .text               ascii    yDzD
+444 0x0000486c 0x0000586c 6   7    .text               ascii   8h1F*F
+445 0x00004891 0x00005890 5   6    .text               ascii    yDzD
+446 0x000048cb 0x000058ca 5   6    .text               ascii    yDzD
+447 0x00004907 0x00005906 5   6    .text               ascii    yDzD
+448 0x0000492d 0x0000592c 5   6    .text               ascii     ` F
+449 0x00004949 0x00005948 5   6    .text               ascii    yDzD
+450 0x0000497d 0x0000597c 5   6    .text               ascii    yDzD
+451 0x000049b7 0x000059b6 5   6    .text               ascii    yDzD
+452 0x000049ff 0x000059fe 5   6    .text               ascii    yDzD
+453 0x00004a63 0x00005a62 5   6    .text               ascii    yDzD
+454 0x00004aa9 0x00005aa8 5   6    .text               ascii    yDzD
+455 0x00004ada 0x00005ada 4   5    .text               ascii   \vI\vJ
+456 0x00004adf 0x00005ade 5   6    .text               ascii    yDzD
+457 0x00004b2d 0x00005b2c 8   9    .text               ascii   I JyDzD\t
+458 0x00004b45 0x00005b44 5   6    .text               ascii   JyDzD
+459 0x00004b7c 0x00005b7c 8   9    .text               ascii   \tI\nJyDzD
+460 0x00004b95 0x00005b94 5   6    .text               ascii   JyDzD
+461 0x00004be2 0x00005be2 8   9    .text               ascii    I JyDzD
+462 0x00004bfb 0x00005bfa 6   7    .text               ascii   JyDzD\t
+463 0x00004c11 0x00005c10 5   6    .text               ascii   JyDzD
+464 0x00004c53 0x00005c52 5   6    .text               ascii   JyDzD
+465 0x00004c95 0x00005c94 5   6    .text               ascii    yDzD
+466 0x00004cb8 0x00005cb8 4   5    .text               ascii   @\tpG
+467 0x00004ceb 0x00005cea 5   6    .text               ascii    yDzD
+468 0x00004d08 0x00005d08 4   5    .text               ascii   \aI\bJ
+469 0x00004d0d 0x00005d0c 5   6    .text               ascii    yDzD
+470 0x00004d48 0x00005d48 9   10   .text               ascii   \fI\rJyDzD\t
+471 0x00004d5e 0x00005d5e 8   9    .text               ascii   \tI\tJyDzD
+472 0x00004da2 0x00005da2 4   5    .text               ascii   \fI\fJ
+473 0x00004da7 0x00005da6 5   6    .text               ascii    yDzD
+474 0x00004dc5 0x00005dc4 5   6    .text               ascii    yDzD
+475 0x00004dfa 0x00005dfa 4   5    .text               ascii   \fI\fJ
+476 0x00004dff 0x00005dfe 5   6    .text               ascii    yDzD
+477 0x00004e1d 0x00005e1c 5   6    .text               ascii    yDzD
+478 0x00004e43 0x00005e42 7   8    .text               ascii   F\f 9"yD
+479 0x00004e55 0x00005e54 5   6    .text               ascii    (r h
+480 0x00004e72 0x00005e72 4   5    .text               ascii   &I&J
+481 0x00004e77 0x00005e76 5   6    .text               ascii    yDzD
+482 0x00004e80 0x00005e80 9   10   .text               ascii    h$IO"yD2
+483 0x00004e96 0x00005e96 9   10   .text               ascii    I JyDzD\t
+484 0x00004eaf 0x00005eae 5   6    .text               ascii   JyDzD
+485 0x00004ed4 0x00005ed4 4   5    .text               ascii   \nI\vJ
+486 0x00004ed9 0x00005ed8 5   6    .text               ascii    yDzD
+487 0x00004ee8 0x00005ee8 8   9    .text               ascii    h\aIH"yD
+488 0x00004ef5 0x00005ef4 4   5    .text               ascii   &0Fp
+489 0x00004f55 0x00005f54 5   6    .text               ascii    yDzD
+490 0x00004f88 0x00005f88 9   10   .text               ascii    I!JyDzD.
+491 0x00004fa1 0x00005fa0 6   7    .text               ascii   JyDzD#
+492 0x00004fa9 0x00005fa8 5   6    .text               ascii    (r(F
+493 0x00004fc5 0x00005fc4 5   6    .text               ascii    yDzD
+494 0x00004fe9 0x00005fe8 7   8    .text               ascii   I\aJyDzD
+495 0x00005023 0x00006022 9   10   .text               ascii   F\HxD\ah8h
+496 0x0000504a 0x0000604a 8   9    .text               ascii   ZIZJyDzD
+497 0x00005062 0x00006062 8   9    .text               ascii   VIVJyDzD
+498 0x00005098 0x00006098 4   5    .text               ascii   \tRPC
+499 0x000050dd 0x000060dc 4   5    .text               ascii   &n(\b
+500 0x00005112 0x00006112 4   5    .text               ascii   "I"J
+501 0x00005117 0x00006116 5   6    .text               ascii    yDzD
+502 0x00005120 0x00006120 6   7    .text               ascii   jF(F!F
+503 0x0000512e 0x0000612e 4   5    .text               ascii   (F!F
+504 0x0000514d 0x0000614c 5   6    .text               ascii    yDzD
+505 0x00005177 0x00006176 5   6    .text               ascii   JyDzD
+506 0x000051ed 0x000061ec 4   5    .text               ascii   D`G@
+507 0x000051f9 0x000061f8 4   5    .text               ascii   D`G@
+508 0x00005205 0x00006204 4   5    .text               ascii   D`G@
+509 0x00005211 0x00006210 4   5    .text               ascii   D`G@
+510 0x0000521d 0x0000621c 4   5    .text               ascii   D`G@
+511 0x00005229 0x00006228 4   5    .text               ascii   D`G@
+512 0x00005bcd 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+513 0x00005bd8 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+514 0x00005bdf 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+515 0x00005c17 0x00000001 11  12   .shstrtab           ascii   .fini_array
+516 0x00005c23 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+517 0x00005c2e 0x00000018 5   6    .shstrtab           ascii   .text
+518 0x00005c34 0x0000001e 4   5    .shstrtab           ascii   .got
+519 0x00005c39 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+520 0x00005c4d 0x00000037 8   9    .shstrtab           ascii   .got.plt
+521 0x00005c56 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+522 0x00005c5f 0x00000049 4   5    .shstrtab           ascii   .bss
+523 0x00005c64 0x0000004e 15  16   .shstrtab           ascii   .ARM.attributes
+524 0x00005c74 0x0000005e 7   8    .shstrtab           ascii   .dynstr
+525 0x00005c7c 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+526 0x00005c8b 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+527 0x00005c98 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+528 0x00005ca2 0x0000008c 8   9    .shstrtab           ascii   .rel.dyn
+529 0x00005cab 0x00000095 12  13   .shstrtab           ascii   .gnu.version
+530 0x00005cb8 0x000000a2 7   8    .shstrtab           ascii   .dynsym
+531 0x00005cc0 0x000000aa 9   10   .shstrtab           ascii   .gnu.hash
+532 0x00005cca 0x000000b4 18  19   .shstrtab           ascii   .note.gnu.build-id
+533 0x00005cdd 0x000000c7 8   9    .shstrtab           ascii   .dynamic
+534 0x00005ce6 0x000000d0 10  11   .shstrtab           ascii   .ARM.extab
+535 0x00005cf1 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+536 0x00005cfb 0x000000e5 7   8    .shstrtab           ascii   .rodata
+537 0x00005d03 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+538 0x00005d13 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+539 0x00005dce 0x000000bc 4   5    .gnu_debugdata      ascii   3\b)K
+540 0x00005dd4 0x000000c2 4   5    .gnu_debugdata      ascii   H1M;
+541 0x00005de8 0x000000d6 4   5    .gnu_debugdata      ascii   2^_7
+542 0x00005e26 0x00000114 4   5    .gnu_debugdata      ascii   9`~R
+543 0x00005e35 0x00000123 4   5    .gnu_debugdata      ascii   Vy=c
+544 0x00005e49 0x00000137 4   5    .gnu_debugdata      ascii   mknD
+545 0x00005e78 0x00000166 4   6    .gnu_debugdata      utf8    φ B=
+546 0x00005ec7 0x000001b5 6   7    .gnu_debugdata      ascii   fy\O&N
+547 0x00005f0b 0x000001f9 5   6    .gnu_debugdata      ascii   ==\bNw
+548 0x00005f41 0x0000022f 5   6    .gnu_debugdata      ascii   m\f~1\f
+549 0x00005fbe 0x000002ac 4   6    .gnu_debugdata      utf8    W1b.
+550 0x00005fc5 0x000002b3 5   8    .gnu_debugdata      utf8    2Ө ~
+551 0x0000605d 0x0000034b 6   7    .gnu_debugdata      ascii   :]DH;z
+552 0x00006065 0x00000353 6   7    .gnu_debugdata      ascii   *;=,(/
+553 0x0000609b 0x00000389 6   7    .gnu_debugdata      ascii   k-hOW:
+554 0x000060c3 0x000003b1 4   5    .gnu_debugdata      ascii   _\nMb
+555 0x000060ee 0x000003dc 4   5    .gnu_debugdata      ascii   %&<x
+556 0x000060ff 0x000003ed 4   6    .gnu_debugdata      utf8    æ*T!
+557 0x0000614d 0x0000043b 5   6    .gnu_debugdata      ascii   GU-3h
+558 0x000061ad 0x0000049b 4   7    .gnu_debugdata      utf8    \e呠K3
+559 0x0000622a 0x00000518 5   6    .gnu_debugdata      ascii   SUGW8
+560 0x0000629c 0x0000058a 4   5    .gnu_debugdata      ascii   |@II
+561 0x000062c4 0x000005b2 4   5    .gnu_debugdata      ascii   7=H\e
+562 0x0000632b 0x00000619 4   6    .gnu_debugdata      utf8    )4Fő
+563 0x0000633e 0x0000062c 4   5    .gnu_debugdata      ascii   )S9
+564 0x0000634b 0x00000639 7   8    .gnu_debugdata      ascii   \ax5A+"%
+565 0x00006359 0x00000647 5   7    .gnu_debugdata      utf8    D\r'λ(
+566 0x00006399 0x00000687 6   7    .gnu_debugdata      ascii   &{z|H\a
+567 0x000063b9 0x000006a7 4   5    .gnu_debugdata      ascii   JaeK
+0x00006254    1     12 sym.imp.__cxa_finalize
+0x0000626c    1      4 sym.imp.GetLogMask
+0x00006260    1     12 sym.imp.MM_CriticalSection_Enter
+0x00006284    1      8 sym.imp.MM_CriticalSection_Leave
+0x0000629c    1      4 sym.imp.MM_SignalQ_Create
+0x00006338    1      4 sym.imp.MM_SignalQ_Release
+0x000062fc    1      4 sym.imp.MM_SignalQ_Wait
+0x000062b4    1      8 sym.imp.MM_Signal_Create
+0x0000632c    1      4 sym.imp.MM_Signal_Release
+0x000062f0    1     12 sym.imp.MM_Signal_Set
+0x000062d8    1      4 sym.imp.MM_Thread_CreateEx
+0x00006308    1      4 sym.imp.MM_Thread_Exit
+0x00006320    1     12 sym.imp.MM_Thread_Join
+0x00006350    1     12 sym.imp.MM_Thread_Release
+0x00006344    1      8 sym.imp.MM_free
+0x000062a8    1      4 sym.imp.MM_malloc
+0x00006278    1      4 sym.imp.__android_log_print
+0x00006314    1      8 sym.imp.__stack_chk_fail
+0x000062cc    1      4 sym.imp.__strlcpy_chk
+0x000062c0    1     12 sym.imp.__strlen_chk
+0x0000635c    1      4 sym.imp.MM_Timer_Sleep
+0x000063bc    1      4 sym.imp.MM_delete
+0x00006380    1     12 sym.imp.MM_new
+0x00006470    1     12 sym.imp.abort
+0x00006494    1      8 sym.imp.__errno
+0x000064dc    1      4 sym.imp.close
+0x000064e8    1      4 sym.imp.ioctl
+0x00006488    1      4 sym.imp.ion_alloc_fd
+0x000064ac    1      4 sym.imp.ion_close
+0x0000647c    1      4 sym.imp.ion_open
+0x000064b8    1      4 sym.imp.mmap
+0x000064c4    1      8 sym.imp.munmap
+0x000064a0    1     12 sym.imp.strerror
+0x000065a8    1      4 sym.imp.MM_CriticalSection_Create
+0x000065c0    1     12 sym.imp.MM_CriticalSection_Release
+0x0000668c    1      4 sym.imp.free
+0x00006680    1     12 sym.imp.malloc
+0x000066b0    1     12 sym.imp.pthread_mutex_destroy
+0x000066a4    1      8 sym.imp.pthread_mutex_init
+0x000066bc    1      4 sym.imp.pthread_mutex_lock
+0x000066c8    1      4 sym.imp.pthread_mutex_unlock
+0x000066f8    1      4 sym.imp.clock_gettime
+0x000066e0    1     12 sym.imp.pthread_cond_destroy
+0x000066d4    1      8 sym.imp.pthread_cond_init
+0x000066ec    1      4 sym.imp.pthread_cond_signal
+0x00006704    1      8 sym.imp.pthread_cond_timedwait
+0x00006710    1     12 sym.imp.pthread_cond_wait
+0x0000671c    1      4 sym.imp.memcpy
+0x00006728    1      4 sym.imp.memset
+0x00003ffc    2     20 entry0
+0x00004634   10     78 method.WFDMessage.WFDMessage__
+0x00005854    6     76 method.Queue.Pop_void__int_
+0x000042f4   11     94 method.WFDMMThreads.SetSignal_unsigned_int_
+0x00006280    1      4 fcn.00006280
+0x00006290    1     12 fcn.00006290
+0x00004064   21    286 method.WFDMMThreads.WFDMMThreads_unsigned_int_
+0x00005688    4     46 sym.Mutex::Mutex__
+0x0000576c    3     34 method.Queue.Queue__
+0x000061c4    2     16 sym.__aeabi_memcpy
+0x000061c8    2     28 sym.__aeabi_memset
+0x000061d8    1     12 sym.__aeabi_memclr4
+0x00005de4    8     70 sym.venc_mutex_unlock
+0x00006850    1     12 fcn.00006850
+0x00005174   27    304 sym.MMIonCacheLock_int__int__char_
+0x00005298    1     28 method.SignalQueue.SignalQueue_int__int_
+0x00005798    6     88 method.Queue.Queue_int__int_
+0x000056c0    4     42 method.Mutex.Mutex__
+0x00006720    1      8 fcn.00006720
+0x00005800    6     68 reloc.Queue::Queue__
+0x00005cac    3     20 sym.venc_queue_full
+0x00005928    4     46 fcn.00005928
+0x000067b0    1     12 fcn.000067b0
+0x0000468c    9    162 method.WFDMessageService.WFDMessageService_void__void____void__WFDMessage__
+0x00005d8c    8     70 sym.venc_mutex_lock
+0x00006840    1     12 fcn.00006840
+0x000044ea    1      6 method.WFDMessage.SetNoResponse__
+0x00004750    9     90 method.WFDMessageService.WFDMessageService__
+0x000056f4    5     52 method.Mutex.Lock__
+0x00005730    5     52 method.Mutex.UnLock__
+0x00005f28    6     60 sym.venc_signal_destroy
+0x00005f6c   17    144 sym.venc_signal_set
+0x00005d30    9     74 sym.venc_mutex_destroy
+0x00005a80    7     54 sym.venc_queue_destroy
+0x00006800    1     12 fcn.00006800
+0x00004050    4     20 method.WFDMMThreadScopeLock.WFDMMThreadScopeLock__
+0x000062a0    1      8 fcn.000062a0
+0x000044e4    1      6 method.WFDMessage.Acquire__
+0x000058a8    5     52 method.Queue.Peek_void__int_
+0x00005ac0    7     70 sym.venc_queue_pop
+0x00006780    1     12 fcn.00006780
+0x00005960    4     42 method.Signal.Signal__
+0x000067c0    1     12 fcn.000067c0
+0x00005e3c   19    190 sym.venc_signal_create
+0x000047c0   29    320 method.WFDMessageService.Thread_unsigned_int_
+0x00005404    3     62 method.SignalQueue.Peek_void__int_
+0x00006650    1     12 fcn.00006650
+0x00006670    1     12 fcn.00006670
+0x000058e4    5     52 method.Queue.Push_void__int_
+0x000053d6    3     44 method.SignalQueue.Push_void__int_
+0x00006690    1     12 fcn.00006690
+0x000066a0    1      4 fcn.000066a0
+0x000059d0    7     60 method.Signal.Wait_int_
+0x000041b0   19    238 method.WFDMMThreads.Start_void____void__unsigned_int___int__int__void__char_const__bool_
+0x000045a0   10     78 method.WFDMessage.NotifyResponse_int_
+0x000050e0    9    124 sym.MMIonMemoryFree_int__int__char_
+0x00005cc0   11     96 sym.venc_mutex_create
+0x000054e8   11    162 method.wfdmmsourcequeue.Push_void_
+0x00005c7c    5     38 sym.venc_queue_size
+0x00004600    5     44 method.WFDMessage.operator___int_
+0x000053d0    2     18 method.SignalQueue.GetSize__
+0x00005064    9    108 sym.FreeVirtualAddressForIonFd_char__int_
+0x0000544c    4     70 method.wfdmmsourcequeue.wfdmmsourcequeue__
+0x000066c0    1      8 fcn.000066c0
+0x000066d0    1      4 fcn.000066d0
+0x00005204    2     36 sym.MMIonCacheUnlock_int__int__char_
+0x0000601c   26    398 sym.venc_signal_wait
+0x000049b8   13     98 method.WFDMessageService.recvMessage_WFDMessage__int_
+0x000042c4    5     40 method.WFDMMThreads.ThreadEntry_void_
+0x000043e4   21    138 method.WFDMMThreads.WFDMMThreads__
+0x000044f8   17    146 method.WFDMessage.WaitForResponse_int_
+0x00004954   11     94 method.WFDMessageService.SendMessage_WFDMessage_
+0x00004748    4     20 method.WFDMessageService.ThreadEntry_void__unsigned_int_
+0x00004ac8   31    402 method.WFDMessageService.sendCmdAndWait_int__unsigned_long_long_const__int__int_
+0x00005a14   10     98 sym.venc_queue_create
+0x00004358   13    138 method.WFDMMThreads.ThreadLoop__
+0x00004010    5     54 method.WFDMMThreadScopeLock.WFDMMThreadScopeLock_void_
+0x000054a0    5     50 reloc.wfdmmsourcequeue::wfdmmsourcequeue__
+0x00005348   11    128 method.SignalQueue.Pop_void__int__int_
+0x00004ce8    3     61 method.std::__1.function_void____::operator_std::__1::function_void_____const_
+0x00004e04    1      1 fcn.00004e04
+0x00006360    1      8 fcn.00006360
+0x000052f8    9     70 sym.SignalQueue::SignalQueue__
+0x00005bbc   16    158 sym.venc_queue_push
+0x00004468   10    102 sym.WFDMessage::WFDMessage__
+0x00004918    6     64 method.WFDMessageService.getMessageObject__
+0x000063d0    1      4 fcn.000063d0
+0x00005920    2     18 method.Queue.GetSize__
+0x000055a4   17    190 method.wfdmmsourcequeue.Pop_Front__
+0x000044f0    1      6 method.WFDMessage.Release__
+0x00005994    5     52 method.Signal.Set__
+0x00004be0   19    238 method.WFDMessageService.executeInHandlerThread_std::__1::function_void______bool_
+0x00004e48   10    158 sym.MMIonMemoryMalloc_bool__unsigned_int__WfdIonHeapIdType__int_
+0x00005684    1      4 method.wfdmmsourcequeue.queue_size__
+0x00004f9c   12    166 sym.GetVirtualAddressForIonFd_bool__unsigned_int__int_
+0x00004a2c   13    136 method.WFDMessageService.sendCmd_int__unsigned_long_long_const__int_
+0x000054d8    2     26 sym.wfdmmsourcequeue::wfdmmsourcequeue__
+0x00006700    1      4 fcn.00006700
+0x00005b10   16    140 sym.venc_queue_peek
+0x000063d4    1      8 sym.imp.operator_delete_void_
+0x00006368    1      4 sym.imp.operator_new_unsigned_int_
+0x000065b4    1      8 sym.imp.operator_delete___void_
+0x0000659c    1      4 sym.imp.operator_new___unsigned_int_
+0x0000400a    2      6 entry.fini0
+0x00006270    1      8 fcn.00006270
+0x000062b0    1      4 fcn.000062b0
+0x000062d0    1      8 fcn.000062d0
+0x000062e0    1     12 fcn.000062e0
+0x00006300    1      8 fcn.00006300
+0x00006310    1      4 fcn.00006310
+0x00006340    1      4 fcn.00006340
+0x00006330    1      8 fcn.00006330
+0x00006370    1     12 fcn.00006370
+0x00006390    1     12 fcn.00006390
+0x000063a0    1     12 fcn.000063a0
+0x000063b0    1     12 fcn.000063b0
+0x000063c0    1     12 fcn.000063c0
+0x00004de8    1      1 fcn.00004de8
+0x000063e0    1     12 fcn.000063e0
+0x000063f0    1     12 elf_shdr
+0x00006400    1     12 fcn.00006400
+0x00006410    1     12 fcn.00006410
+0x00006420    1     12 fcn.00006420
+0x00006440    1     12 fcn.00006440
+0x00006450    1     12 fcn.00006450
+0x00006460    1     12 fcn.00006460
+0x00006480    1      8 fcn.00006480
+0x00006490    1      4 fcn.00006490
+0x00004e2e    1      1 fcn.00004e2e
+0x00006530    1     12 fcn.00006530
+0x000064b0    1      8 fcn.000064b0
+0x000064d0    1     12 fcn.000064d0
+0x000064e0    1      8 fcn.000064e0
+0x000064f0    1     12 fcn.000064f0
+0x00006500    1     12 fcn.00006500
+0x00006510    1     12 fcn.00006510
+0x00006520    1     12 fcn.00006520
+0x00006540    1     12 fcn.00006540
+0x00006550    1     12 fcn.00006550
+0x00006560    1     12 fcn.00006560
+0x00006570    1     12 fcn.00006570
+0x00006580    1     12 fcn.00006580
+0x00006590    1     12 fcn.00006590
+0x000065a0    1      8 fcn.000065a0
+0x000065b0    1      4 fcn.000065b0
+0x000065d0    1     12 fcn.000065d0
+0x000065e0    1     12 fcn.000065e0
+0x000065f0    1     12 fcn.000065f0
+0x00006600    1     12 fcn.00006600
+0x00006610    1     12 fcn.00006610
+0x00006620    1     12 fcn.00006620
+0x00006630    1     12 fcn.00006630
+0x00006640    1     12 fcn.00006640
+0x00006660    1     12 fcn.00006660
+0x000066f0    1      8 fcn.000066f0
+0x00006730    1     12 fcn.00006730
+0x00006740    1     12 fcn.00006740
+0x00006750    1     12 fcn.00006750
+0x00006760    1     12 fcn.00006760
+0x00006770    1     12 fcn.00006770
+0x00006790    1     12 fcn.00006790
+0x000067d0    1     12 fcn.000067d0
+0x000067e0    1     12 fcn.000067e0
+0x000067f0    1     12 fcn.000067f0
+0x00006810    1     12 fcn.00006810
+0x00006820    1     12 fcn.00006820
+0x00006830    1     12 fcn.00006830
+0x00006860    1     12 fcn.00006860
+0x00006870    1     12 fcn.00006870
+0x00006880    1     12 fcn.00006880
+0x00006890    1     12 fcn.00006890
+0x000068a0    1     12 fcn.000068a0
+0x000068b0    1     12 fcn.000068b0
+0x00004d25   12    195 method.std::__1::__function.__value_func_void____::swap_std::__1::__function::__value_func_void_____
+0x00004de9    7     27 method.std::__1::__function.__value_func_void____::__value_func__
+0x00004e05    7     41 method.std::__1::__function.__value_func_void____::__value_func_std::__1::__function::__value_func_void_____const_
+0x00004e2f    3     20 method.std::__1::__function.__value_func_void____::operator_____const
+0x00004e43    1      5 method.std::__1.__throw_bad_function_call__

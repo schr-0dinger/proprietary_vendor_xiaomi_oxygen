@@ -1,0 +1,202 @@
+arch     arm
+baddr    0x0
+binsz    4365
+bintype  elf
+bits     16
+canary   false
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name          demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+13  0x000006ec 0x000016ec GLOBAL FUNC 144      acdb_fts_init
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000174   0x18 0x00000174   0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c   0x20 0x0000018c   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0xe0 0x000001ac   0xe0 -r-- DYNSYM      .dynsym
+4   0x0000028c   0x1c 0x0000028c   0x1c -r-- GNU_VERSYM  .gnu.version
+5   0x000002a8   0x40 0x000002a8   0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x000002e8   0x1c 0x000002e8   0x1c -r-- GNU_HASH    .gnu.hash
+7   0x00000304  0x119 0x00000304  0x119 -r-- STRTAB      .dynstr
+8   0x00000420    0x8 0x00000420    0x8 -r-- ----        .relr.dyn
+9   0x00000428   0x20 0x00000428   0x20 -r-- ----        .ARM.exidx
+10  0x00000448   0x60 0x00000448   0x60 -r-- REL         .rel.plt
+11  0x000004a8  0x230 0x000004a8  0x230 -r-- PROGBITS    .rodata
+12  0x000006d8  0x33c 0x000016d8  0x33c -r-x PROGBITS    .text
+13  0x00000a20   0xe0 0x00001a20   0xe0 -r-x PROGBITS    .plt
+14  0x00000b00    0x4 0x00002b00    0x4 -rw- PROGBITS    .data.rel.ro
+15  0x00000b04    0x8 0x00002b04    0x8 -rw- FINI_ARRAY  .fini_array
+16  0x00000b0c   0xe8 0x00002b0c   0xe8 -rw- DYNAMIC     .dynamic
+17  0x00000bf4   0x3c 0x00002bf4   0x3c -rw- PROGBITS    .got.plt
+18  0x00000c30    0x0 0x00003c30    0x4 -rw- NOBITS      .bss
+19  0x00000c30   0x4e 0x00000000   0x4e ---- ----        .ARM.attributes
+20  0x00000c7e   0xe3 0x00000000   0xe3 ---- STRTAB      .shstrtab
+21  0x00000d61  0x3ac 0x00000000  0x3ac ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+3   0x00000305 0x00000305 14  15   .dynstr             ascii   __cxa_finalize
+4   0x00000314 0x00000314 19  20   .dynstr             ascii   __android_log_print
+5   0x00000328 0x00000328 7   8    .dynstr             ascii   __errno
+6   0x00000330 0x00000330 13  14   .dynstr             ascii   acdb_fts_init
+7   0x0000033e 0x0000033e 21  22   .dynstr             ascii   acph_register_command
+8   0x00000354 0x00000354 6   7    .dynstr             ascii   calloc
+9   0x0000035b 0x0000035b 6   7    .dynstr             ascii   fclose
+10  0x00000362 0x00000362 5   6    .dynstr             ascii   fopen
+11  0x00000368 0x00000368 4   5    .dynstr             ascii   free
+12  0x0000036d 0x0000036d 6   7    .dynstr             ascii   fwrite
+13  0x00000374 0x00000374 18  19   .dynstr             ascii   pthread_mutex_init
+14  0x00000387 0x00000387 18  19   .dynstr             ascii   pthread_mutex_lock
+15  0x0000039a 0x0000039a 20  21   .dynstr             ascii   pthread_mutex_unlock
+16  0x000003af 0x000003af 9   10   .dynstr             ascii   liblog.so
+17  0x000003b9 0x000003b9 6   7    .dynstr             ascii   LIBLOG
+18  0x000003c0 0x000003c0 7   8    .dynstr             ascii   libc.so
+19  0x000003c8 0x000003c8 4   5    .dynstr             ascii   LIBC
+20  0x000003cd 0x000003cd 12  13   .dynstr             ascii   libcutils.so
+21  0x000003da 0x000003da 11  12   .dynstr             ascii   libutils.so
+22  0x000003e6 0x000003e6 12  13   .dynstr             ascii   libaudcal.so
+23  0x000003f3 0x000003f3 9   10   .dynstr             ascii   libc++.so
+24  0x000003fd 0x000003fd 7   8    .dynstr             ascii   libm.so
+25  0x00000405 0x00000405 8   9    .dynstr             ascii   libdl.so
+26  0x0000040e 0x0000040e 14  15   .dynstr             ascii   libacdb-fts.so
+27  0x000004a8 0x000004a8 13  14   .rodata             ascii   acdb_fts_init
+28  0x000004b6 0x000004b6 34  35   .rodata             ascii   %s: Max number of files reached %d
+29  0x000004d9 0x000004d9 21  22   .rodata             ascii   process_write_request
+30  0x000004ef 0x000004ef 28  29   .rodata             ascii   %s: invalid file handle %zu.
+31  0x0000050c 0x0000050c 42  43   .rodata             ascii   %s: fail to close the file %zu (errno %d).
+32  0x00000537 0x00000537 20  21   .rodata             ascii   process_open_request
+33  0x0000054c 0x0000054c 46  47   .rodata             ascii   %s: can't update the response buffer. len = %d
+34  0x0000057b 0x0000057b 17  18   .rodata             ascii   acdb_fts_callback
+35  0x0000058d 0x0000058d 8   9    .rodata             ascii   ACDB-FTS
+36  0x00000596 0x00000596 40  41   .rodata             ascii   %s: failed to open file %s (errno = %d).
+37  0x000005bf 0x000005bf 23  24   .rodata             ascii   %s: unknown command %d.
+38  0x000005d7 0x000005d7 30  31   .rodata             ascii   %s: fwrite failure (errno %d).
+39  0x000005f6 0x000005f6 27  28   .rodata             ascii   %s: write %d bytes of data.
+40  0x00000612 0x00000612 29  30   .rodata             ascii   %s: memory allocation failed.
+41  0x00000630 0x00000630 31  32   .rodata             ascii   %s: invalid file handle %p:%zu.
+42  0x00000650 0x00000650 59  60   .rodata             ascii   %s: invalid date lenth. Total length = %d, Data length = %d
+43  0x0000068c 0x0000068c 36  37   .rodata             ascii   %s: acph register failed error = %d\n
+44  0x000006b4 0x000006b4 21  22   .rodata             ascii   process_close_request
+45  0x000006ca 0x000006ca 13  14   .rodata             ascii   %s: handle %p
+46  0x000006fb 0x000016fa 6   8    .text               utf8    N~D0`б
+47  0x00000729 0x00001728 7   8    .text               ascii   KyDzD{D
+48  0x00000738 0x00001738 6   7    .text               ascii   \tI\nJ\nK
+49  0x0000073f 0x0000173e 7   8    .text               ascii    yDzD{D
+50  0x00000782 0x00001782 4   5    .text               ascii   \aF|H
+51  0x00000789 0x00001788 5   6    .text               ascii   F\fFxD
+52  0x000007cc 0x000017cc 12  13   .text               ascii   kIlJlKyDzD{D
+53  0x000007da 0x000017da 5   6    .text               ascii    hd(<
+54  0x000007e2 0x000017e2 8   9    .text               ascii   sIsJyDzD
+55  0x000007ec 0x000017ec 5   6    .text               ascii   !hd)R
+56  0x000007f4 0x000017f4 8   9    .text               ascii   zI{JyDzD
+57  0x00000805 0x00001804 7   8    .text               ascii   KyDzD{D
+58  0x00000811 0x00001810 5   6    .text               ascii   4 FyD
+59  0x0000082f 0x0000182e 13  14   .text               ascii    YIZJZKyDzD{D
+60  0x00000883 0x00001882 13  14   .text               ascii    SITJTKyDzD{D
+61  0x000008b7 0x000018b6 9   10   .text               ascii   @NIOJyDzD
+62  0x000008cd 0x000018cc 13  14   .text               ascii    /I/J0KyDzD{D
+63  0x000008e8 0x000018e8 9   10   .text               ascii   4I5JyDzD0
+64  0x000008f8 0x000018f8 13  14   .text               ascii   <I=JyDzD9K{D(
+65  0x00000909 0x00001908 13  14   .text               ascii    &I&J'KyDzD{D
+66  0x00000929 0x00001928 9   10   .text               ascii   b&I&JyDzD
+67  0x00000934 0x00001934 4   5    .text               ascii   IF h
+68  0x0000094d 0x0000194c 7   8    .text               ascii   I JyDzD
+69  0x00000c35 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+70  0x00000c40 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+71  0x00000c47 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+72  0x00000c7f 0x00000001 11  12   .shstrtab           ascii   .fini_array
+73  0x00000c8b 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+74  0x00000c96 0x00000018 5   6    .shstrtab           ascii   .text
+75  0x00000c9c 0x0000001e 19  20   .shstrtab           ascii   .note.android.ident
+76  0x00000cb0 0x00000032 8   9    .shstrtab           ascii   .got.plt
+77  0x00000cb9 0x0000003b 8   9    .shstrtab           ascii   .rel.plt
+78  0x00000cc2 0x00000044 4   5    .shstrtab           ascii   .bss
+79  0x00000cc7 0x00000049 15  16   .shstrtab           ascii   .ARM.attributes
+80  0x00000cd7 0x00000059 7   8    .shstrtab           ascii   .dynstr
+81  0x00000cdf 0x00000061 14  15   .shstrtab           ascii   .gnu.version_r
+82  0x00000cee 0x00000070 12  13   .shstrtab           ascii   .data.rel.ro
+83  0x00000cfb 0x0000007d 9   10   .shstrtab           ascii   .relr.dyn
+84  0x00000d05 0x00000087 12  13   .shstrtab           ascii   .gnu.version
+85  0x00000d12 0x00000094 7   8    .shstrtab           ascii   .dynsym
+86  0x00000d1a 0x0000009c 9   10   .shstrtab           ascii   .gnu.hash
+87  0x00000d24 0x000000a6 18  19   .shstrtab           ascii   .note.gnu.build-id
+88  0x00000d37 0x000000b9 8   9    .shstrtab           ascii   .dynamic
+89  0x00000d40 0x000000c2 9   10   .shstrtab           ascii   .shstrtab
+90  0x00000d4a 0x000000cc 7   8    .shstrtab           ascii   .rodata
+91  0x00000d52 0x000000d4 14  15   .shstrtab           ascii   .gnu_debugdata
+92  0x00000d62 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+93  0x00000d9e 0x0000003d 4   7    .gnu_debugdata      utf8    ^q<䋙
+94  0x00000dc8 0x00000067 4   5    .gnu_debugdata      ascii   l*=l
+95  0x00000df6 0x00000095 4   7    .gnu_debugdata      utf8    h؎Ŝ-
+96  0x00000e2d 0x000000cc 4   5    .gnu_debugdata      ascii   <w\fz
+97  0x00000ece 0x0000016d 4   5    .gnu_debugdata      ascii   +:6d
+98  0x00000ee5 0x00000184 6   7    .gnu_debugdata      ascii   "+j^T\f
+99  0x00000f0e 0x000001ad 4   5    .gnu_debugdata      ascii   S:x\
+100 0x00000f23 0x000001c2 4   5    .gnu_debugdata      ascii   ~a~%
+101 0x00000f32 0x000001d1 4   5    .gnu_debugdata      ascii   |\TS
+102 0x00000f4a 0x000001e9 5   6    .gnu_debugdata      ascii   _N|,Y
+103 0x00000f75 0x00000214 4   5    .gnu_debugdata      ascii   OBC|
+104 0x00000fb0 0x0000024f 4   5    .gnu_debugdata      ascii   *d^F
+105 0x00000fc1 0x00000260 4   6    .gnu_debugdata      utf8    &|͇T
+106 0x00000fe9 0x00000288 5   7    .gnu_debugdata      utf8    ;=ߦR#
+107 0x0000102e 0x000002cd 4   5    .gnu_debugdata      ascii   \vMX:
+108 0x0000103e 0x000002dd 4   5    .gnu_debugdata      ascii   ["*C
+109 0x00001065 0x00000304 4   5    .gnu_debugdata      ascii   MSGl
+110 0x0000107c 0x0000031b 4   6    .gnu_debugdata      utf8    G\a2ܰ
+111 0x00001085 0x00000324 4   5    .gnu_debugdata      ascii   vy+E
+112 0x00001090 0x0000032f 6   8    .gnu_debugdata      utf8    C|Ѹ\n$v
+113 0x0000109f 0x0000033e 5   7    .gnu_debugdata      utf8    ם^/"Z
+114 0x000012a0 0x0000053f 6   28                       utf32le ;\tBшш`
+0x00001a34    1     12 sym.imp.__cxa_finalize
+0x00001a64    1      8 sym.imp.__android_log_print
+0x00001aac    1      4 sym.imp.__errno
+0x00001a58    1      4 sym.imp.acph_register_command
+0x00001a40    1     12 sym.imp.calloc
+0x00001a94    1      8 sym.imp.fclose
+0x00001a88    1      4 sym.imp.fopen
+0x00001a70    1     12 sym.imp.free
+0x00001aa0    1     12 sym.imp.fwrite
+0x00001a4c    1      4 sym.imp.pthread_mutex_init
+0x00001a7c    1      4 sym.imp.pthread_mutex_lock
+0x00001ab8    1      4 sym.imp.pthread_mutex_unlock
+0x000016d8    2     20 entry0
+0x000016ec    6    110 sym.acdb_fts_init
+0x000016e6    2      6 entry.fini0
+0x00001a50    1      8 fcn.00001a50
+0x00001a60    1      4 fcn.00001a60
+0x00001a80    1      8 fcn.00001a80
+0x00001a90    1      4 fcn.00001a90
+0x00001ab0    1      8 fcn.00001ab0
+0x00001ac0    1     12 fcn.00001ac0
+0x00001ad0    1     12 fcn.00001ad0
+0x00001ae0    1     12 fcn.00001ae0
+0x00001af0    1     12 fcn.00001af0

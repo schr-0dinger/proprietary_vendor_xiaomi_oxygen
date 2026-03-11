@@ -1,0 +1,575 @@
+arch     arm
+baddr    0x0
+binsz    14589
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                 demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+39  0x00002194 0x00003194 GLOBAL FUNC 112      ipc_register
+40  0x00001dde 0x00002dde GLOBAL FUNC 20       pktzr_data_cmd
+41  0x00001f04 0x00002f04 GLOBAL FUNC 276      ipc_resp_thread
+42  0x00002204 0x00003204 GLOBAL FUNC 68       ipc_deregister
+43  0x00002248 0x00003248 GLOBAL FUNC 412      ipc_init
+44  0x00002018 0x00003018 GLOBAL FUNC 216      ipc_send_msg
+45  0x00001db0 0x00002db0 GLOBAL FUNC 22       pktzr_load_data
+46  0x00001d80 0x00002d80 GLOBAL FUNC 24       pktzr_set_config
+47  0x000023e4 0x000033e4 GLOBAL FUNC 116      ipc_deinit
+48  0x00001d98 0x00002d98 GLOBAL FUNC 24       pktzr_get_config
+49  0x00001dc6 0x00002dc6 GLOBAL FUNC 24       pktzr_unload_data
+50  0x00002458 0x00003458 GLOBAL FUNC 184      platform_get_ch_name
+51  0x00002158 0x00003158 GLOBAL FUNC 60       ipc_ready_to_use
+52  0x00001ec8 0x00002ec8 GLOBAL FUNC 60       pktzr_deinit
+53  0x00001b3c 0x00002b3c GLOBAL FUNC 24       pktzr_graph_open
+54  0x00002900 0x00003900 GLOBAL FUNC 60       platform_info_deinit
+55  0x00002510 0x00003510 GLOBAL FUNC 1008     platform_info_init
+56  0x00001d68 0x00002d68 GLOBAL FUNC 24       pktzr_graph_close
+57  0x00001df4 0x00002df4 GLOBAL FUNC 212      pktzr_init
+58  0x00001b38 0x00002b38 GLOBAL FUNC 4        pktzr_ready_to_use
+59  0x00001918 0x00002918 GLOBAL FUNC 544      pktzr_resp_cb
+60  0x00003118 0x00006118 GLOBAL OBJ  392      cmd_ch_map
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000174    0x18 0x00000174    0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c    0x20 0x0000018c    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0x3d0 0x000001ac   0x3d0 -r-- DYNSYM      .dynsym
+4   0x0000057c    0x7a 0x0000057c    0x7a -r-- GNU_VERSYM  .gnu.version
+5   0x000005f8    0x40 0x000005f8    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000638    0xbc 0x00000638    0xbc -r-- GNU_HASH    .gnu.hash
+7   0x000006f4   0x3fb 0x000006f4   0x3fb -r-- STRTAB      .dynstr
+8   0x00000af0    0x19 0x00000af0    0x19 -r-- ----        .rel.dyn
+9   0x00000b0c     0x8 0x00000b0c     0x8 -r-- ----        .relr.dyn
+10  0x00000b14    0xb0 0x00000b14    0xb0 -r-- ----        .ARM.exidx
+11  0x00000bc4   0x170 0x00000bc4   0x170 -r-- REL         .rel.plt
+12  0x00000d34   0xbce 0x00000d34   0xbce -r-- PROGBITS    .rodata
+13  0x00001904  0x133c 0x00002904  0x133c -r-x PROGBITS    .text
+14  0x00002c40   0x300 0x00003c40   0x300 -r-x PROGBITS    .plt
+15  0x00002f40     0x4 0x00004f40     0x4 -rw- PROGBITS    .data.rel.ro
+16  0x00002f44     0x8 0x00004f44     0x8 -rw- FINI_ARRAY  .fini_array
+17  0x00002f4c    0xf8 0x00004f4c    0xf8 -rw- DYNAMIC     .dynamic
+18  0x00003044    0x10 0x00005044    0x10 -rw- PROGBITS    .got
+19  0x00003054    0xc4 0x00005054    0xc4 -rw- PROGBITS    .got.plt
+20  0x00003118   0x188 0x00006118   0x188 -rw- PROGBITS    .data
+21  0x000032a0     0x0 0x000062a0    0x20 -rw- NOBITS      .bss
+22  0x000032a0    0x4e 0x00000000    0x4e ---- ----        .ARM.attributes
+23  0x000032ee    0xf7 0x00000000    0xf7 ---- STRTAB      .shstrtab
+24  0x000033e5   0x518 0x00000000   0x518 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x000000f6 0x000000f6 4   5                        ascii   td@/
+3   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+4   0x00000688 0x00000688 5   24   .gnu.hash           utf32le '*/38
+5   0x000006cc 0x000006cc 4   5    .gnu.hash           ascii   bb"R
+6   0x000006f5 0x000006f5 14  15   .dynstr             ascii   __cxa_finalize
+7   0x00000704 0x00000704 19  20   .dynstr             ascii   __android_log_print
+8   0x00000718 0x00000718 16  17   .dynstr             ascii   __stack_chk_fail
+9   0x00000729 0x00000729 17  18   .dynstr             ascii   __stack_chk_guard
+10  0x0000073b 0x0000073b 10  11   .dynstr             ascii   ipc_deinit
+11  0x00000746 0x00000746 14  15   .dynstr             ascii   ipc_deregister
+12  0x00000755 0x00000755 8   9    .dynstr             ascii   ipc_init
+13  0x0000075e 0x0000075e 16  17   .dynstr             ascii   ipc_ready_to_use
+14  0x0000076f 0x0000076f 12  13   .dynstr             ascii   ipc_register
+15  0x0000077c 0x0000077c 12  13   .dynstr             ascii   ipc_send_msg
+16  0x00000789 0x00000789 16  17   .dynstr             ascii   osal_cond_create
+17  0x0000079a 0x0000079a 17  18   .dynstr             ascii   osal_cond_destroy
+18  0x000007ac 0x000007ac 16  17   .dynstr             ascii   osal_cond_signal
+19  0x000007bd 0x000007bd 19  20   .dynstr             ascii   osal_cond_timedwait
+20  0x000007d1 0x000007d1 17  18   .dynstr             ascii   osal_lock_acquire
+21  0x000007e3 0x000007e3 16  17   .dynstr             ascii   osal_lock_create
+22  0x000007f4 0x000007f4 17  18   .dynstr             ascii   osal_lock_destroy
+23  0x00000806 0x00000806 17  18   .dynstr             ascii   osal_lock_release
+24  0x00000818 0x00000818 14  15   .dynstr             ascii   osal_mem_alloc
+25  0x00000827 0x00000827 15  16   .dynstr             ascii   osal_mem_calloc
+26  0x00000837 0x00000837 12  13   .dynstr             ascii   osal_mem_cpy
+27  0x00000844 0x00000844 13  14   .dynstr             ascii   osal_mem_free
+28  0x00000852 0x00000852 14  15   .dynstr             ascii   pktzr_data_cmd
+29  0x00000861 0x00000861 12  13   .dynstr             ascii   pktzr_deinit
+30  0x0000086e 0x0000086e 16  17   .dynstr             ascii   pktzr_get_config
+31  0x0000087f 0x0000087f 17  18   .dynstr             ascii   pktzr_graph_close
+32  0x00000891 0x00000891 16  17   .dynstr             ascii   pktzr_graph_open
+33  0x000008a2 0x000008a2 10  11   .dynstr             ascii   pktzr_init
+34  0x000008ad 0x000008ad 15  16   .dynstr             ascii   pktzr_load_data
+35  0x000008bd 0x000008bd 18  19   .dynstr             ascii   pktzr_ready_to_use
+36  0x000008d0 0x000008d0 13  14   .dynstr             ascii   pktzr_resp_cb
+37  0x000008de 0x000008de 16  17   .dynstr             ascii   pktzr_set_config
+38  0x000008ef 0x000008ef 17  18   .dynstr             ascii   pktzr_unload_data
+39  0x00000901 0x00000901 15  16   .dynstr             ascii   ipc_resp_thread
+40  0x00000911 0x00000911 14  15   .dynstr             ascii   osal_dev_close
+41  0x00000920 0x00000920 13  14   .dynstr             ascii   osal_dev_open
+42  0x0000092e 0x0000092e 13  14   .dynstr             ascii   osal_dev_read
+43  0x0000093c 0x0000093c 14  15   .dynstr             ascii   osal_dev_write
+44  0x0000094b 0x0000094b 32  33   .dynstr             ascii   osal_thread_close_from_thread_fn
+45  0x0000096c 0x0000096c 18  19   .dynstr             ascii   osal_thread_create
+46  0x0000097f 0x0000097f 19  20   .dynstr             ascii   osal_thread_destroy
+47  0x00000993 0x00000993 20  21   .dynstr             ascii   platform_get_ch_name
+48  0x000009a8 0x000009a8 20  21   .dynstr             ascii   platform_info_deinit
+49  0x000009bd 0x000009bd 18  19   .dynstr             ascii   platform_info_init
+50  0x000009d0 0x000009d0 13  14   .dynstr             ascii   XML_GetBuffer
+51  0x000009de 0x000009de 15  16   .dynstr             ascii   XML_ParseBuffer
+52  0x000009ee 0x000009ee 16  17   .dynstr             ascii   XML_ParserCreate
+53  0x000009ff 0x000009ff 14  15   .dynstr             ascii   XML_ParserFree
+54  0x00000a0e 0x00000a0e 21  22   .dynstr             ascii   XML_SetElementHandler
+55  0x00000a24 0x00000a24 15  16   .dynstr             ascii   XML_SetUserData
+56  0x00000a34 0x00000a34 13  14   .dynstr             ascii   __strlcpy_chk
+57  0x00000a42 0x00000a42 4   5    .dynstr             ascii   atoi
+58  0x00000a47 0x00000a47 10  11   .dynstr             ascii   cmd_ch_map
+59  0x00000a52 0x00000a52 6   7    .dynstr             ascii   fclose
+60  0x00000a59 0x00000a59 5   6    .dynstr             ascii   fopen
+61  0x00000a5f 0x00000a5f 5   6    .dynstr             ascii   fread
+62  0x00000a65 0x00000a65 16  17   .dynstr             ascii   osal_mem_realloc
+63  0x00000a76 0x00000a76 6   7    .dynstr             ascii   strcmp
+64  0x00000a7d 0x00000a7d 8   9    .dynstr             ascii   strtok_r
+65  0x00000a86 0x00000a86 6   7    .dynstr             ascii   memset
+66  0x00000a8d 0x00000a8d 9   10   .dynstr             ascii   liblog.so
+67  0x00000a97 0x00000a97 6   7    .dynstr             ascii   LIBLOG
+68  0x00000a9e 0x00000a9e 7   8    .dynstr             ascii   libc.so
+69  0x00000aa6 0x00000aa6 4   5    .dynstr             ascii   LIBC
+70  0x00000aab 0x00000aab 11  12   .dynstr             ascii   libexpat.so
+71  0x00000ab7 0x00000ab7 14  15   .dynstr             ascii   libgcs-osal.so
+72  0x00000ac6 0x00000ac6 9   10   .dynstr             ascii   libc++.so
+73  0x00000ad0 0x00000ad0 7   8    .dynstr             ascii   libm.so
+74  0x00000ad8 0x00000ad8 8   9    .dynstr             ascii   libdl.so
+75  0x00000ae1 0x00000ae1 13  14   .dynstr             ascii   libgcs-ipc.so
+76  0x00000af0 0x00000af0 4   5    .rel.dyn            ascii   APS2
+77  0x00000d34 0x00000d34 20  21   .rodata             ascii   %s: payload is NULL\n
+78  0x00000d49 0x00000d49 31  32   .rodata             ascii   %s: Failed to get channel name\n
+79  0x00000d69 0x00000d69 16  17   .rodata             ascii   ipc_ready_to_use
+80  0x00000d7a 0x00000d7a 22  23   .rodata             ascii   %s: intents_size = %d\n
+81  0x00000d91 0x00000d91 33  34   .rodata             ascii   %s: Invalid no_of_glink_channels\n
+82  0x00000db3 0x00000db3 24  25   .rodata             ascii   %s: Already initialized\n
+83  0x00000dcc 0x00000dcc 39  40   .rodata             ascii   %s: Failed to allocate memory for resp\n
+84  0x00000df4 0x00000df4 5   6    .rodata             ascii   value
+85  0x00000dfa 0x00000dfa 35  36   .rodata             ascii   %s: read callback function is NULL\n
+86  0x00000e1e 0x00000e1e 40  41   .rodata             ascii   %s: Failed to allocate memory for wnode\n
+87  0x00000e47 0x00000e47 65  66   .rodata             ascii   %s: Invalid payload_size = %d, resp_buf size = %d, hdr_size = %d\n
+88  0x00000e89 0x00000e89 26  27   .rodata             ascii   %s: Invalid no_of_intents\n
+89  0x00000ea4 0x00000ea4 21  22   .rodata             ascii   %s: token %d matched\n
+90  0x00000eba 0x00000eba 59  60   .rodata             ascii   %s: received size %d is greater than requested buf size %d\n
+91  0x00000ef6 0x00000ef6 39  40   .rodata             ascii   %s: client_id is %d already registered\n
+92  0x00000f1e 0x00000f1e 55  56   .rodata             ascii   %s: Channel name g_glink_persistent_data_ild truncated\n
+93  0x00000f56 0x00000f56 26  27   .rodata             ascii   platform_get_info_from_xml
+94  0x00000f71 0x00000f71 26  27   .rodata             ascii   %s: Realloc failed for ch\n
+95  0x00000f8c 0x00000f8c 33  34   .rodata             ascii   %s: Failed to send pkt, ret = %d\n
+96  0x00000fae 0x00000fae 20  21   .rodata             ascii   %s: client_id is %d\n
+97  0x00000fc3 0x00000fc3 27  28   .rodata             ascii   g_glink_persistent_data_ild
+98  0x00000fdf 0x00000fdf 10  11   .rodata             ascii   ipc_deinit
+99  0x00000fea 0x00000fea 39  40   .rodata             ascii   %s: Memory allocation failed for pinfo\n
+100 0x00001012 0x00001012 22  23   .rodata             ascii   %s: Failed to open %s\n
+101 0x00001029 0x00001029 34  35   .rodata             ascii   %s: fread failed, bytes read = %d\n
+102 0x0000104c 0x0000104c 45  46   .rodata             ascii   %s: data_cmd_cb failed, ret = %d, token = %d\n
+103 0x0000107a 0x0000107a 36  37   .rodata             ascii   %s: Failed to close device ret = %d\n
+104 0x0000109f 0x0000109f 16  17   .rodata             ascii   %s: Invalid pkt\n
+105 0x000010b0 0x000010b0 42  43   .rodata             ascii   /vendor/etc/graphite_ipc_platform_info.xml
+106 0x000010db 0x000010db 20  21   .rodata             ascii   no_of_glink_channels
+107 0x000010f0 0x000010f0 37  38   .rodata             ascii   %s: Failed to send reg pkt, ret = %d\n
+108 0x00001116 0x00001116 25  26   .rodata             ascii   %s: Invalid channel name\n
+109 0x00001130 0x00001130 34  35   .rodata             ascii   %s: Failed to allocate cmd memory\n
+110 0x00001153 0x00001153 31  32   .rodata             ascii   %s: cb is NULL for client = %d\n
+111 0x00001173 0x00001173 12  13   .rodata             ascii   ipc_register
+112 0x00001180 0x00001180 28  29   .rodata             ascii   g_glink_persistent_data_nild
+113 0x0000119d 0x0000119d 10  11   .rodata             ascii   pktzr_init
+114 0x000011a8 0x000011a8 39  40   .rodata             ascii   %s: Failed to allocate memory for wpkt\n
+115 0x000011d0 0x000011d0 33  34   .rodata             ascii   %s: Failed to create XML parser!\n
+116 0x000011f2 0x000011f2 13  14   .rodata             ascii   pktzr_resp_cb
+117 0x00001200 0x00001200 20  21   .rodata             ascii   platform_info_deinit
+118 0x00001215 0x00001215 4   5    .rodata             ascii   name
+119 0x0000121a 0x0000121a 37  38   .rodata             ascii   %s: Failed to send cmd pkt, ret = %d\n
+120 0x00001240 0x00001240 47  48   .rodata             ascii   %s: Failed to initialize platform info, ret=%d\n
+121 0x00001270 0x00001270 12  13   .rodata             ascii   g_glink_ctrl
+122 0x0000127d 0x0000127d 8   9    .rodata             ascii   ipc_init
+123 0x00001286 0x00001286 37  38   .rodata             ascii   %s: incorrect intent size, iter = %d\n
+124 0x000012ac 0x000012ac 18  19   .rodata             ascii   g_glink_audio_data
+125 0x000012bf 0x000012bf 37  38   .rodata             ascii   %s: Memory allocation failed for pkt\n
+126 0x000012e5 0x000012e5 13  14   .rodata             ascii   no_of_intents
+127 0x000012f3 0x000012f3 25  26   .rodata             ascii   %s: XML_GetBuffer failed\n
+128 0x0000130d 0x0000130d 32  33   .rodata             ascii   %s: ch memory allocation failed\n
+129 0x0000132e 0x0000132e 30  31   .rodata             ascii   %s: Input parameters are NULL\n
+130 0x0000134d 0x0000134d 15  16   .rodata             ascii   ipc_resp_thread
+131 0x0000135d 0x0000135d 37  38   .rodata             ascii   %s: Response for unknown client = %d\n
+132 0x00001383 0x00001383 12  13   .rodata             ascii   ipc_send_msg
+133 0x00001390 0x00001390 21  22   .rodata             ascii   %s: Callback is NULL\n
+134 0x000013a6 0x000013a6 30  31   .rodata             ascii   %s: Channel name %s truncated\n
+135 0x000013c5 0x000013c5 22  23   .rodata             ascii   %s: Invalid arguments\n
+136 0x000013dc 0x000013dc 36  37   .rodata             ascii   %s: Memory allocation failed for ch\n
+137 0x00001401 0x00001401 28  29   .rodata             ascii   %s: Invalid response buffer\n
+138 0x0000141e 0x0000141e 14  15   .rodata             ascii   pktzr_send_cmd
+139 0x0000142d 0x0000142d 38  39   .rodata             ascii   %s: already initialized, ref_cnt = %d\n
+140 0x00001454 0x00001454 42  43   .rodata             ascii   %s: Failed to allocate memory for reg_pkt\n
+141 0x0000147f 0x0000147f 9   10   .rodata             ascii   start_tag
+142 0x00001489 0x00001489 26  27   .rodata             ascii   %s: incorrect intent size\n
+143 0x000014a4 0x000014a4 42  43   .rodata             ascii   %s: ch_cfg size = %d, copied ch_size = %d\n
+144 0x000014cf 0x000014cf 23  24   .rodata             ascii   %s: Done, ref_cnt = %d\n
+145 0x000014e9 0x000014e9 55  56   .rodata             ascii   %s: Failed to register audio client with ipc, ret = %d\n
+146 0x00001521 0x00001521 9   10   .rodata             ascii   ipc_write
+147 0x0000152b 0x0000152b 18  19   .rodata             ascii   platform_info_init
+148 0x0000153e 0x0000153e 22  23   .rodata             ascii   %s: Invalid client ID\n
+149 0x00001555 0x00001555 18  19   .rodata             ascii   %s: bytes_read %d\n
+150 0x00001568 0x00001568 46  47   .rodata             ascii   %s: Channel name g_glink_audio_data truncated\n
+151 0x00001597 0x00001597 19  20   .rodata             ascii   %s: read failed %d\n
+152 0x000015ab 0x000015ab 14  15   .rodata             ascii   ipc_deregister
+153 0x000015ba 0x000015ba 17  18   .rodata             ascii   %s: info is NULL\n
+154 0x000015cc 0x000015cc 30  31   .rodata             ascii   %s: dev open failed, ret = %d\n
+155 0x000015eb 0x000015eb 45  46   .rodata             ascii   %s: Failed to get info from xml, set default\n
+156 0x00001619 0x00001619 13  14   .rodata             ascii   glink_channel
+157 0x00001627 0x00001627 12  13   .rodata             ascii   intents_size
+158 0x00001634 0x00001634 56  57   .rodata             ascii   %s: Channel name g_glink_persistent_data_nild truncated\n
+159 0x0000166d 0x0000166d 36  37   .rodata             ascii   %s: event callback function is NULL\n
+160 0x00001692 0x00001692 36  37   .rodata             ascii   %s: Initialization failed, ret = %d\n
+161 0x000016b7 0x000016b7 54  55   .rodata             ascii   %s: opcode: 0x%x, payload_size: %d, resp_buf size: %d\n
+162 0x000016ee 0x000016ee 39  40   .rodata             ascii   %s: Failed to send ready pkt, ret = %d\n
+163 0x00001716 0x00001716 20  21   .rodata             ascii   %s: Invalid latency\n
+164 0x0000172e 0x0000172e 40  41   .rodata             ascii   %s: Channel name g_glink_ctrl truncated\n
+165 0x00001757 0x00001757 28  29   .rodata             ascii   %s: Exiting response thread\n
+166 0x00001774 0x00001774 20  21   .rodata             ascii   platform_get_ch_name
+167 0x00001789 0x00001789 39  40   .rodata             ascii   %s: opcode = 0x%x size = %d token = %d\n
+168 0x000017b1 0x000017b1 20  21   .rodata             ascii   %s: Invalid payload\n
+169 0x000017c6 0x000017c6 42  43   .rodata             ascii   %s: name = %s, latency = %d, intents = %d\n
+170 0x000017f1 0x000017f1 15  16   .rodata             ascii   glink_ch_config
+171 0x00001801 0x00001801 40  41   .rodata             ascii   %s: Failed to allocate memory for ppriv\n
+172 0x0000182a 0x0000182a 27  28   .rodata             ascii   %s: XML_ParseBuffer failed\n
+173 0x00001846 0x00001846 25  26   .rodata             ascii   platform_set_default_info
+174 0x00001860 0x00001860 41  42   .rodata             ascii   %s: opcode = 0x%x, size = %d, token = %d\n
+175 0x0000188a 0x0000188a 37  38   .rodata             ascii   %s: reg_pkt_size = %d,  ch_size = %d\n
+176 0x000018b0 0x000018b0 38  39   .rodata             ascii   %s: Failed to create thread, ret = %d\n
+177 0x000018d7 0x000018d7 9   10   .rodata             ascii   READY_PKT
+178 0x000018e1 0x000018e1 18  19   .rodata             ascii   /dev/wcd-dsp-glink
+179 0x000018f4 0x000018f4 13  14   .rodata             ascii   latency_in_us
+180 0x0000191f 0x0000291e 5   6    .text               ascii   FsHxD
+181 0x00001925 0x00002924 4   5    .text               ascii   h(h\b
+182 0x00001932 0x00002932 6   7    .text               ascii   rM}D(h
+183 0x00001955 0x00002954 9   10   .text               ascii   !jJjKzD{D
+184 0x00001971 0x00002970 4   6    .text               utf8    *jСh
+185 0x00001980 0x00002980 4   5    .text               ascii   \J]K
+186 0x00001987 0x00002986 5   6    .text               ascii   !zD{D
+187 0x000019ba 0x000029ba 4   5    .text               ascii   UIyD
+188 0x000019c0 0x000029c0 4   5    .text               ascii   TIyD
+189 0x000019c5 0x000029c4 5   6    .text               ascii   FTIyD
+190 0x000019e8 0x000029e8 5   6    .text               ascii    hDi<
+191 0x00001a33 0x00002a32 9   10   .text               ascii   !>J?KzD{D
+192 0x00001a4a 0x00002a4a 4   5    .text               ascii   /J/K
+193 0x00001a55 0x00002a54 5   6    .text               ascii   \tzD{D
+194 0x00001a63 0x00002a62 5   6    .text               ascii   \tDF h
+195 0x00001a9f 0x00002a9e 9   10   .text               ascii   !!J"KzD{D
+196 0x00001ac9 0x00002ac8 5   6    .text               ascii   !zD{D
+197 0x00001b96 0x00002b96 4   5    .text               ascii   lJlK
+198 0x00001b9d 0x00002b9c 5   6    .text               ascii   !zD{D
+199 0x00001bbd 0x00002bbc 10  11   .text               ascii    1F*F3F pO
+200 0x00001c13 0x00002c12 5   6    .text               ascii   `JF+F
+201 0x00001c21 0x00002c20 5   6    .text               ascii   ` FAF
+202 0x00001c84 0x00002c84 4   5    .text               ascii   -J.K
+203 0x00001c8b 0x00002c8a 5   6    .text               ascii   !zD{D
+204 0x00001c9a 0x00002c9a 4   5    .text               ascii   -J-K
+205 0x00001ca1 0x00002ca0 5   6    .text               ascii   !zD{D
+206 0x00001cb0 0x00002cb0 4   5    .text               ascii   )J*K
+207 0x00001cb7 0x00002cb6 5   6    .text               ascii   !zD{D
+208 0x00001ccf 0x00002cce 9   10   .text               ascii   \b#J$KzD{D
+209 0x00001ce6 0x00002ce6 4   5    .text               ascii   \b`0F
+210 0x00001cf8 0x00002cf8 4   5    .text               ascii   9hHh
+211 0x00001d01 0x00002d00 6   7    .text               ascii   %BiFhJ
+212 0x00001dff 0x00002dfe 4   5    .text               ascii   D8hh
+213 0x00001e04 0x00002e04 4   5    .text               ascii   *J+K
+214 0x00001e0b 0x00002e0a 5   6    .text               ascii   !zD{D
+215 0x00001e4e 0x00002e4e 4   5    .text               ascii   8h\f0
+216 0x00001e6d 0x00002e6c 5   6    .text               ascii   !zD{D
+217 0x00001e7f 0x00002e7e 5   6    .text               ascii   F\rJzD
+218 0x00001e88 0x00002e88 6   7    .text               ascii   \rJzD\rK
+219 0x00001eca 0x00002eca 6   7    .text               ascii   \rL|D h
+220 0x00001f2a 0x00002f2a 4   5    .text               ascii   9J9K
+221 0x00001f2f 0x00002f2e 5   6    .text               ascii    zD{D
+222 0x00001f36 0x00002f36 4   5    .text               ascii   4J4K
+223 0x00001f3b 0x00002f3a 5   6    .text               ascii    zD{D
+224 0x00001f4c 0x00002f4c 8   9    .text               ascii   (H)NxD~D
+225 0x00001f55 0x00002f54 5   6    .text               ascii   F(HxD
+226 0x00001f5b 0x00002f5a 5   6    .text               ascii   F'HxD
+227 0x00001f61 0x00002f60 5   6    .text               ascii   F'HxD
+228 0x00001f68 0x00002f68 4   5    .text               ascii   &HxD
+229 0x00001f6f 0x00002f6e 4   5    .text               ascii   h!FO
+230 0x00001f83 0x00002f82 5   6    .text               ascii   hZF3F
+231 0x00001fab 0x00002faa 4   5    .text               ascii   !JF\v
+232 0x00002022 0x00003022 6   7    .text               ascii   8\b\rF\aF
+233 0x00002037 0x00003036 7   8    .text               ascii   F F1FJF
+234 0x0000204c 0x0000304c 6   7    .text               ascii   )F:F+F
+235 0x0000205a 0x0000305a 4   5    .text               ascii   HFAF
+236 0x00002075 0x00003074 5   6    .text               ascii   KzD{D
+237 0x00002087 0x00003086 5   6    .text               ascii   !zD{D
+238 0x0000209d 0x0000309c 5   6    .text               ascii   !zD{D
+239 0x000020ac 0x000030ac 4   5    .text               ascii   \fJ\rK
+240 0x000020b3 0x000030b2 5   6    .text               ascii   !zD{D
+241 0x0000210b 0x0000310a 7   8    .text               ascii   {1FBF3F
+242 0x00002117 0x00003116 7   8    .text               ascii   H)F"FxD
+243 0x00002139 0x00003138 5   6    .text               ascii   !zD{D
+244 0x0000215c 0x0000315c 4   5    .text               ascii   \nH\n!
+245 0x00002179 0x00003178 5   6    .text               ascii   KzD{D
+246 0x000021b5 0x000031b4 5   6    .text               ascii   !zD{D
+247 0x000021cf 0x000031ce 7   8    .text               ascii   $\nJzD\nK
+248 0x0000220a 0x0000320a 4   5    .text               ascii   \fJ\fK
+249 0x00002211 0x00003210 5   6    .text               ascii   !zD{D
+250 0x0000225d 0x0000325c 9   10   .text               ascii    PJPKzD{D
+251 0x00002287 0x00003286 4   5    .text               ascii    8p\a
+252 0x000022a9 0x000032a8 9   10   .text               ascii   FDJDKzD{D
+253 0x000022c3 0x000032c2 5   6    .text               ascii   Fxi3F
+254 0x000022cf 0x000032ce 7   8    .text               ascii   \eyiJh1F
+255 0x000022da 0x000032da 4   5    .text               ascii   (F!F
+256 0x000022f4 0x000032f4 6   7    .text               ascii   6IyD\th
+257 0x0000231b 0x0000331a 9   10   .text               ascii    /J0KzD{D
+258 0x00002331 0x00003330 5   6    .text               ascii   KzD{D
+259 0x00002345 0x00003344 5   6    .text               ascii   KzD{D
+260 0x00002357 0x00003356 5   6    .text               ascii   !zD{D
+261 0x00002415 0x00003414 9   10   .text               ascii   !\fJ\fKzD{D
+262 0x0000242f 0x0000342e 9   10   .text               ascii   !\aJ\bKzD{D
+263 0x0000245e 0x0000345e 4   5    .text               ascii   \rF#I
+264 0x00002467 0x00003466 7   8    .text               ascii    yD\th\nX
+265 0x0000247e 0x0000347e 4   5    .text               ascii   "J"K
+266 0x00002485 0x00003484 5   6    .text               ascii   !zD{D
+267 0x00002498 0x00003498 7   8    .text               ascii   \bD2"2#\a
+268 0x000024a0 0x000034a0 4   5    .text               ascii    F9F
+269 0x000024b5 0x000034b4 5   6    .text               ascii   KzD{D
+270 0x000024c8 0x000034c8 10  11   .text               ascii   \fI F2"2#yD
+271 0x000024da 0x000034da 4   5    .text               ascii   \tJ\tK
+272 0x000024e3 0x000034e2 5   6    .text               ascii   'zD{D
+273 0x00002545 0x00003544 7   8    .text               ascii   F|DyD F
+274 0x00002551 0x00003550 4   6    .text               utf8    (MЁF
+275 0x0000256b 0x0000356a 7   8    .text               ascii   J FyDzD
+276 0x0000257b 0x0000357a 6   7    .text               ascii   D~D FO
+277 0x0000259f 0x0000359e 5   6    .text               ascii   !:F3F
+278 0x000025b2 0x000035b2 6   7    .text               ascii   )FB\t F
+279 0x000025f9 0x000035f8 5   6    .text               ascii   KzD{D
+280 0x0000260b 0x0000360a 5   6    .text               ascii   !zD{D
+281 0x00002657 0x00003656 5   6    .text               ascii   !zD{D
+282 0x0000266b 0x0000366a 9   10   .text               ascii   I8F2"2#yD
+283 0x00002678 0x00003678 5   7    .text               utf8    2(\aӇJ
+284 0x00002683 0x00003682 5   6    .text               ascii   !zD{D
+285 0x00002690 0x00003690 6   7    .text               ascii   <\t2"2#
+286 0x000026b3 0x000036b2 5   6    .text               ascii   !zD{D
+287 0x000026c6 0x000036c6 5   6    .text               ascii   2"2##
+288 0x000026ce 0x000036ce 6   7    .text               ascii    FwIyD
+289 0x000026dc 0x000036dc 4   5    .text               ascii   uJvK
+290 0x000026e3 0x000036e2 5   6    .text               ascii   !zD{D
+291 0x000026f4 0x000036f4 10  11   .text               ascii   2"2#pI0FyD
+292 0x00002706 0x00003706 4   5    .text               ascii   nJnK
+293 0x0000270d 0x0000370c 5   6    .text               ascii   !zD{D
+294 0x00002728 0x00003728 4   5    .text               ascii   CX<1
+295 0x00002752 0x00003752 4   5    .text               ascii   <!<#
+296 0x00002765 0x00003764 7   8    .text               ascii   `<!JF<#
+297 0x0000277a 0x0000377a 6   7    .text               ascii   <!"F<#
+298 0x00002788 0x00003788 6   7    .text               ascii   <!2F<#
+299 0x000027bf 0x000037be 13  14   .text               ascii   \tEhJHJNKOxD~D
+300 0x000027d4 0x000037d4 5   6    .text               ascii   RF3FO
+301 0x000027fb 0x000037fa 5   6    .text               ascii   !:F3F
+302 0x00002838 0x00003838 4   5    .text               ascii   /J0K
+303 0x0000283f 0x0000383e 5   6    .text               ascii   !zD{D
+304 0x0000290f 0x0000390e 5   6    .text               ascii    `` F
+305 0x00002923 0x00003922 5   6    .text               ascii   !zD{D
+306 0x00002945 0x00003944 7   8    .text               ascii   HxD\ah8h
+307 0x00002959 0x00003958 5   6    .text               ascii   I(FyD
+308 0x00002962 0x00003962 6   9    .text               utf8    豏I(FyD
+309 0x000029a6 0x000039a6 4   5    .text               ascii   |IyD
+310 0x000029ba 0x000039ba 4   5    .text               ascii   yJzD
+311 0x000029d5 0x000039d4 7   8    .text               ascii   F0huIyD
+312 0x000029e2 0x000039e2 6   7    .text               ascii   yJzDyK
+313 0x00002a04 0x00003a04 5   7    .text               utf8     p2<!
+314 0x00002a1e 0x00003a1e 4   5    .text               ascii   bJbK
+315 0x00002a25 0x00003a24 5   6    .text               ascii   !zD{D
+316 0x00002a36 0x00003a36 6   7    .text               ascii   (F2"2#
+317 0x00002a4b 0x00003a4a 9   10   .text               ascii    YJZKzD{D
+318 0x00002a59 0x00003a58 5   6    .text               ascii   hXIyD
+319 0x00002a64 0x00003a64 4   5    .text               ascii   ZJzD
+320 0x00002a74 0x00003a74 4   5    .text               ascii   IJzD
+321 0x00002a84 0x00003a84 8   9    .text               ascii   hc0iMIyD
+322 0x00002a92 0x00003a92 4   5    .text               ascii   LJzD
+323 0x00002aab 0x00003aaa 5   6    .text               ascii   \t(FIF
+324 0x00002ab9 0x00003ab8 5   6    .text               ascii   iGIyD
+325 0x00002ada 0x00003ada 4   5    .text               ascii   EF``
+326 0x00002ae4 0x00003ae4 12  13   .text               ascii   <\t!z*FKF\bDIF
+327 0x00002af4 0x00003af4 7   9    .text               utf8     zHD r2
+328 0x00002b01 0x00003b00 10  11   .text               ascii    <J<KzD{Do
+329 0x00002b0c 0x00003b0c 5   6    .text               ascii   1JzDi
+330 0x00002b62 0x00003b62 4   5    .text               ascii   #JzD
+331 0x00002b71 0x00003b70 5   6    .text               ascii   JzD\eK
+332 0x00002c25 0x00003c24 4   5    .text               ascii   D`G@
+333 0x00002c31 0x00003c30 4   5    .text               ascii   D`G@
+334 0x0000311c 0x0000611c 12  13   .data               ascii   g_glink_ctrl
+335 0x00003154 0x00006154 12  13   .data               ascii   g_glink_ctrl
+336 0x0000318c 0x0000618c 12  13   .data               ascii   g_glink_ctrl
+337 0x000031c4 0x000061c4 12  13   .data               ascii   g_glink_ctrl
+338 0x000031fc 0x000061fc 28  29   .data               ascii   g_glink_persistent_data_nild
+339 0x00003234 0x00006234 12  13   .data               ascii   g_glink_ctrl
+340 0x0000326c 0x0000626c 18  19   .data               ascii   g_glink_audio_data
+341 0x000032a5 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+342 0x000032b0 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+343 0x000032b7 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+344 0x000032ef 0x00000001 11  12   .shstrtab           ascii   .fini_array
+345 0x000032fb 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+346 0x00003306 0x00000018 5   6    .shstrtab           ascii   .text
+347 0x0000330c 0x0000001e 4   5    .shstrtab           ascii   .got
+348 0x00003311 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+349 0x00003325 0x00000037 8   9    .shstrtab           ascii   .got.plt
+350 0x0000332e 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+351 0x00003337 0x00000049 4   5    .shstrtab           ascii   .bss
+352 0x0000333c 0x0000004e 15  16   .shstrtab           ascii   .ARM.attributes
+353 0x0000334c 0x0000005e 7   8    .shstrtab           ascii   .dynstr
+354 0x00003354 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+355 0x00003363 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+356 0x00003370 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+357 0x0000337a 0x0000008c 8   9    .shstrtab           ascii   .rel.dyn
+358 0x00003383 0x00000095 12  13   .shstrtab           ascii   .gnu.version
+359 0x00003390 0x000000a2 7   8    .shstrtab           ascii   .dynsym
+360 0x00003398 0x000000aa 9   10   .shstrtab           ascii   .gnu.hash
+361 0x000033a2 0x000000b4 18  19   .shstrtab           ascii   .note.gnu.build-id
+362 0x000033b5 0x000000c7 8   9    .shstrtab           ascii   .dynamic
+363 0x000033be 0x000000d0 9   10   .shstrtab           ascii   .shstrtab
+364 0x000033c8 0x000000da 7   8    .shstrtab           ascii   .rodata
+365 0x000033d0 0x000000e2 14  15   .shstrtab           ascii   .gnu_debugdata
+366 0x000033df 0x000000f1 5   6    .shstrtab           ascii   .data
+367 0x000033e6 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+368 0x00003433 0x0000004e 4   5    .gnu_debugdata      ascii   ivA-
+369 0x0000344d 0x00000068 5   7    .gnu_debugdata      utf8    m\b=Q9
+370 0x00003455 0x00000070 4   5    .gnu_debugdata      ascii   w@s!
+371 0x0000346a 0x00000085 4   5    .gnu_debugdata      ascii   B~Ww
+372 0x00003476 0x00000091 6   10   .gnu_debugdata      utf8    W\vٺ1Ӑט
+373 0x000034ec 0x00000107 6   7    .gnu_debugdata      ascii   t0$N"0
+374 0x000034f8 0x00000113 4   5    .gnu_debugdata      ascii   5KOG
+375 0x00003510 0x0000012b 6   7    .gnu_debugdata      ascii   &NQ:v#
+376 0x0000358e 0x000001a9 8   9    .gnu_debugdata      ascii   \f\fGol]h
+377 0x0000365c 0x00000277 5   7    .gnu_debugdata      utf8    Ҽb7[W
+378 0x00003689 0x000002a4 4   5    .gnu_debugdata      ascii   <k+X
+379 0x000036df 0x000002fa 4   6    .gnu_debugdata      utf8    V<ش'
+380 0x00003703 0x0000031e 4   5    .gnu_debugdata      ascii    \t?4
+381 0x0000375a 0x00000375 5   6    .gnu_debugdata      ascii   P)dc9
+382 0x00003762 0x0000037d 4   6    .gnu_debugdata      utf8    Z"ýx
+383 0x000037a7 0x000003c2 4   6    .gnu_debugdata      utf8    WuÂ"
+384 0x000037c2 0x000003dd 6   10   .gnu_debugdata      utf8    -Ї\rE?蟗
+385 0x00003842 0x0000045d 4   5    .gnu_debugdata      ascii   3}8x
+386 0x0000384a 0x00000465 5   7    .gnu_debugdata      utf8    lO`ن-
+387 0x00003865 0x00000480 4   5    .gnu_debugdata      ascii   \vL}%
+388 0x0000387a 0x00000495 6   7    .gnu_debugdata      ascii   x\vX|=!
+389 0x000038bf 0x000004da 4   5    .gnu_debugdata      ascii   \aM8v
+390 0x000038c8 0x000004e3 7   9    .gnu_debugdata      utf8    'x @Ԙ2\
+391 0x000038e0 0x000004fb 4   5    .gnu_debugdata      ascii   =,-p
+0x00003c54    1     12 sym.imp.__cxa_finalize
+0x00003c6c    1      4 sym.imp.__android_log_print
+0x00003ca8    1      4 sym.imp.__stack_chk_fail
+0x00003ccc    1      4 sym.imp.osal_cond_create
+0x00003cf0    1     12 sym.imp.osal_cond_destroy
+0x00003c9c    1      4 sym.imp.osal_cond_signal
+0x00003ce4    1      8 sym.imp.osal_cond_timedwait
+0x00003c60    1     12 sym.imp.osal_lock_acquire
+0x00003d20    1     12 sym.imp.osal_lock_create
+0x00003d44    1      8 sym.imp.osal_lock_destroy
+0x00003c84    1      8 sym.imp.osal_lock_release
+0x00003cfc    1      4 sym.imp.osal_mem_alloc
+0x00003cc0    1     12 sym.imp.osal_mem_calloc
+0x00003c90    1     12 sym.imp.osal_mem_cpy
+0x00003c78    1      4 sym.imp.osal_mem_free
+0x00003da4    1      8 sym.imp.osal_dev_close
+0x00003d80    1     12 sym.imp.osal_dev_open
+0x00003d5c    1      4 sym.imp.osal_dev_read
+0x00003d74    1      8 sym.imp.osal_dev_write
+0x00003d50    1     12 sym.imp.osal_thread_close_from_thread_fn
+0x00003d98    1      4 sym.imp.osal_thread_create
+0x00003dbc    1      4 sym.imp.osal_thread_destroy
+0x00003e04    1      8 sym.imp.XML_GetBuffer
+0x00003e1c    1      4 sym.imp.XML_ParseBuffer
+0x00003de0    1     12 sym.imp.XML_ParserCreate
+0x00003e28    1      4 sym.imp.XML_ParserFree
+0x00003df8    1      4 sym.imp.XML_SetElementHandler
+0x00003dec    1      4 sym.imp.XML_SetUserData
+0x00003dc8    1      4 sym.imp.__strlcpy_chk
+0x00003e4c    1      4 sym.imp.atoi
+0x00003e34    1      8 sym.imp.fclose
+0x00003dd4    1      8 sym.imp.fopen
+0x00003e10    1     12 sym.imp.fread
+0x00003e58    1      4 sym.imp.osal_mem_realloc
+0x00003e40    1     12 sym.imp.strcmp
+0x00003e64    1      8 sym.imp.strtok_r
+0x00003e70    1     12 sym.imp.memset
+0x00002904    2     20 entry0
+0x00003194    9     86 sym.ipc_register
+0x00002dde    1     20 sym.pktzr_data_cmd
+0x00002b54   24    488 fcn.00002b54
+0x00002f04   20    244 sym.ipc_resp_thread
+0x00003204    3     54 sym.ipc_deregister
+0x00003c80    1      4 fcn.00003c80
+0x00003248   19    338 sym.ipc_init
+0x00003018   10    182 sym.ipc_send_msg
+0x00002db0    1     22 sym.pktzr_load_data
+0x00002d80    1     24 sym.pktzr_set_config
+0x000033e4    6     94 sym.ipc_deinit
+0x00002d98    1     24 sym.pktzr_get_config
+0x00002dc6    1     24 sym.pktzr_unload_data
+0x00003458   13    150 sym.platform_get_ch_name
+0x00003158    3     48 sym.ipc_ready_to_use
+0x000030f0    3     90 fcn.000030f0
+0x00003cb0    1     12 fcn.00003cb0
+0x00002ec8    3     56 sym.pktzr_deinit
+0x00003d90    1      8 fcn.00003d90
+0x00003da0    1      4 fcn.00003da0
+0x00002b3c    1     24 sym.pktzr_graph_open
+0x00003900    5     50 sym.platform_info_deinit
+0x00003510   44    866 sym.platform_info_init
+0x00002d68    1     24 sym.pktzr_graph_close
+0x00002df4   11    176 sym.pktzr_init
+0x00003d40    1      4 fcn.00003d40
+0x00003d60    1     12 fcn.00003d60
+0x00003d70    1      4 fcn.00003d70
+0x00002b38    2     16 sym.pktzr_ready_to_use
+0x00002918   30    478 sym.pktzr_resp_cb
+0x00002912    2      6 entry.fini0
+0x00003c70    1      8 fcn.00003c70
+0x00003ca0    1      8 fcn.00003ca0
+0x00003cd0    1     12 fcn.00003cd0
+0x00003d00    1     12 fcn.00003d00
+0x00003d10    1     12 fcn.00003d10
+0x00003d30    1     12 fcn.00003d30
+0x00003db0    1     12 fcn.00003db0
+0x00003dc0    1      8 fcn.00003dc0
+0x00003dd0    1      4 fcn.00003dd0
+0x00003df0    1      8 fcn.00003df0
+0x00003e00    1      4 fcn.00003e00
+0x00003e20    1      8 fcn.00003e20
+0x00003e30    1      4 fcn.00003e30
+0x00003e50    1      8 fcn.00003e50
+0x00003e60    1      4 fcn.00003e60
+0x00003e80    1     12 fcn.00003e80
+0x00003e90    1     12 fcn.00003e90
+0x00003ea0    1     12 fcn.00003ea0
+0x00003eb0    1     12 fcn.00003eb0
+0x00003ec0    1     12 fcn.00003ec0
+0x00003ed0    1     12 fcn.00003ed0
+0x00003ee0    1     12 fcn.00003ee0
+0x00003c10    2     24 sym.__aeabi_memclr8
+0x00003ef0    1     12 fcn.00003ef0
+0x00003f00    1     12 fcn.00003f00
+0x00003f10    1     12 fcn.00003f10
+0x00003f20    1     12 fcn.00003f20

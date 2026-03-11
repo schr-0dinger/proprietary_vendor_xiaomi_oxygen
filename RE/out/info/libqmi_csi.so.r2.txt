@@ -1,0 +1,438 @@
+arch     arm
+baddr    0x0
+binsz    35490
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+41  0x00004d30 0x00004d30 GLOBAL FUNC 40       qmi_csi_exit
+42  0x000044a8 0x000044a8 GLOBAL FUNC 12       qmi_csi_register
+43  0x00004b7c 0x00004b7c GLOBAL FUNC 8        qmi_csi_send_broadcast_ind
+44  0x00004ad4 0x00004ad4 GLOBAL FUNC 168      qmi_csi_send_broadcast_ind_internal
+45  0x00004a00 0x00004a00 GLOBAL FUNC 196      qmi_csi_send_ind_internal
+46  0x00003ad8 0x00003ad8 GLOBAL FUNC 176      qmi_csi_xport_resume_client
+47  0x000049f0 0x000049f0 GLOBAL FUNC 8        qmi_csi_send_resp
+48  0x00003378 0x00003378 GLOBAL FUNC 988      qmi_csi_xport_recv
+49  0x00008470 0x00009470 GLOBAL OBJ  72       qcsi_qrtr_ops
+50  0x000040c4 0x000040c4 GLOBAL FUNC 864      qmi_csi_register_with_options
+51  0x0000458c 0x0000458c GLOBAL FUNC 232      qmi_csi_send_resp_internal
+52  0x000049f8 0x000049f8 GLOBAL FUNC 8        qmi_csi_send_resp_raw
+53  0x00004b8c 0x00004b8c GLOBAL FUNC 164      qmi_csi_unregister
+54  0x00003edc 0x00003edc GLOBAL FUNC 488      qmi_csi_xport_stop
+55  0x00004acc 0x00004acc GLOBAL FUNC 8        qmi_csi_send_ind_raw
+56  0x00008468 0x00009468 GLOBAL OBJ  4        qmi_csi_debug_level
+57  0x00004b84 0x00004b84 GLOBAL FUNC 8        qmi_csi_send_broadcast_ind_raw
+58  0x00004ac4 0x00004ac4 GLOBAL FUNC 8        qmi_csi_send_ind
+59  0x00003e54 0x00003e54 GLOBAL FUNC 136      qmi_csi_xport_start
+60  0x00008420 0x00009420 GLOBAL OBJ  72       qcsi_ipc_router_ops
+61  0x000044b4 0x000044b4 GLOBAL FUNC 176      qmi_csi_handle_event
+62  0x00004c30 0x00004c30 GLOBAL FUNC 256      qmi_csi_init
+63  0x00003014 0x00003014 GLOBAL FUNC 356      qmi_csi_xport_connect
+64  0x00003b88 0x00003b88 GLOBAL FUNC 160      qmi_csi_xport_disconnect
+65  0x00005f28 0x00005f28 GLOBAL FUNC 248      qmi_csi_xport_qrtr_supported
+66  0x00005df4 0x00005df4 GLOBAL FUNC 292      qmi_csi_debug_init
+67  0x00004d58 0x00004d58 GLOBAL FUNC 104      qmi_csi_get_txn_id
+68  0x00003cc4 0x00003cc4 GLOBAL FUNC 284      qmi_csi_xport_closed
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x678 0x000002a8   0x678 -r-- DYNSYM      .dynsym
+4   0x00000920    0x8a 0x00000920    0x8a -r-- GNU_VERSYM  .gnu.version
+5   0x000009ac    0x40 0x000009ac    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x000009f0    0xdc 0x000009f0    0xdc -r-- GNU_HASH    .gnu.hash
+7   0x00000acc   0x538 0x00000acc   0x538 -r-- STRTAB      .dynstr
+8   0x00001008    0x33 0x00001008    0x33 -r-- ----        .rela.dyn
+9   0x00001040    0x20 0x00001040    0x20 -r-- ----        .relr.dyn
+10  0x00001060   0x4f8 0x00001060   0x4f8 -r-- RELA        .rela.plt
+11  0x00001558   0x6cb 0x00001558   0x6cb -r-- PROGBITS    .rodata
+12  0x00001c24   0x254 0x00001c24   0x254 -r-- PROGBITS    .eh_frame_hdr
+13  0x00001e78   0x96c 0x00001e78   0x96c -r-- PROGBITS    .eh_frame
+14  0x00003000  0x3fcc 0x00003000  0x3fcc -r-x PROGBITS    .text
+15  0x00006fd0   0x370 0x00006fd0   0x370 -r-x PROGBITS    .plt
+16  0x00008000     0x8 0x00008000     0x8 -rw- PROGBITS    .data.rel.ro
+17  0x00008008    0x18 0x00008008    0x18 -rw- FINI_ARRAY  .fini_array
+18  0x00008020     0x8 0x00008020     0x8 -rw- INIT_ARRAY  .init_array
+19  0x00008028   0x220 0x00008028   0x220 -rw- DYNAMIC     .dynamic
+20  0x00008248    0x18 0x00008248    0x18 -rw- PROGBITS    .got
+21  0x00008260   0x1c0 0x00008260   0x1c0 -rw- PROGBITS    .got.plt
+22  0x00008420    0x98 0x00009420    0x98 -rw- PROGBITS    .data
+23  0x000084b8     0x0 0x000094b8   0x174 -rw- NOBITS      .bss
+24  0x000084b8   0x102 0x00000000   0x102 ---- STRTAB      .shstrtab
+25  0x000085ba   0x4e8 0x00000000   0x4e8 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00000299 0x00000299 4   5    .note.gnu.build-id  ascii   ^uhL
+3   0x000002a4 0x000002a4 4   5    .note.gnu.build-id  ascii   khYv
+4   0x00000a40 0x00000a40 7   32   .gnu.hash           utf32le )/178<B
+5   0x00000a77 0x00000a77 5   9    .gnu.hash           utf8    Փ-bn܍
+6   0x00000a81 0x00000a81 4   5    .gnu.hash           ascii   JRD(
+7   0x00000a8f 0x00000a8f 9   10   .gnu.hash           ascii   +Ka.bwiB(
+8   0x00000ac0 0x00000ac0 5   8    .gnu.hash           utf8    Bp@ٮՙ
+9   0x00000acd 0x00000acd 14  15   .dynstr             ascii   __cxa_finalize
+10  0x00000adc 0x00000adc 23  24   .dynstr             ascii   __android_log_buf_print
+11  0x00000af4 0x00000af4 12  13   .dynstr             ascii   __memcpy_chk
+12  0x00000b01 0x00000b01 16  17   .dynstr             ascii   __stack_chk_fail
+13  0x00000b12 0x00000b12 6   7    .dynstr             ascii   calloc
+14  0x00000b19 0x00000b19 4   5    .dynstr             ascii   free
+15  0x00000b1e 0x00000b1e 6   7    .dynstr             ascii   malloc
+16  0x00000b25 0x00000b25 6   7    .dynstr             ascii   memcmp
+17  0x00000b2c 0x00000b2c 6   7    .dynstr             ascii   memcpy
+18  0x00000b33 0x00000b33 18  19   .dynstr             ascii   pthread_mutex_init
+19  0x00000b46 0x00000b46 18  19   .dynstr             ascii   pthread_mutex_lock
+20  0x00000b59 0x00000b59 20  21   .dynstr             ascii   pthread_mutex_unlock
+21  0x00000b6e 0x00000b6e 25  26   .dynstr             ascii   pthread_mutexattr_destroy
+22  0x00000b88 0x00000b88 22  23   .dynstr             ascii   pthread_mutexattr_init
+23  0x00000b9f 0x00000b9f 25  26   .dynstr             ascii   pthread_mutexattr_settype
+24  0x00000bb9 0x00000bb9 19  20   .dynstr             ascii   qcsi_ipc_router_ops
+25  0x00000bcd 0x00000bcd 13  14   .dynstr             ascii   qcsi_qrtr_ops
+26  0x00000bdb 0x00000bdb 18  19   .dynstr             ascii   qmi_csi_debug_init
+27  0x00000bee 0x00000bee 19  20   .dynstr             ascii   qmi_csi_debug_level
+28  0x00000c02 0x00000c02 12  13   .dynstr             ascii   qmi_csi_exit
+29  0x00000c0f 0x00000c0f 18  19   .dynstr             ascii   qmi_csi_get_txn_id
+30  0x00000c22 0x00000c22 20  21   .dynstr             ascii   qmi_csi_handle_event
+31  0x00000c37 0x00000c37 12  13   .dynstr             ascii   qmi_csi_init
+32  0x00000c44 0x00000c44 16  17   .dynstr             ascii   qmi_csi_register
+33  0x00000c55 0x00000c55 29  30   .dynstr             ascii   qmi_csi_register_with_options
+34  0x00000c73 0x00000c73 26  27   .dynstr             ascii   qmi_csi_send_broadcast_ind
+35  0x00000c8e 0x00000c8e 35  36   .dynstr             ascii   qmi_csi_send_broadcast_ind_internal
+36  0x00000cb2 0x00000cb2 30  31   .dynstr             ascii   qmi_csi_send_broadcast_ind_raw
+37  0x00000cd1 0x00000cd1 16  17   .dynstr             ascii   qmi_csi_send_ind
+38  0x00000ce2 0x00000ce2 25  26   .dynstr             ascii   qmi_csi_send_ind_internal
+39  0x00000cfc 0x00000cfc 20  21   .dynstr             ascii   qmi_csi_send_ind_raw
+40  0x00000d11 0x00000d11 17  18   .dynstr             ascii   qmi_csi_send_resp
+41  0x00000d23 0x00000d23 26  27   .dynstr             ascii   qmi_csi_send_resp_internal
+42  0x00000d3e 0x00000d3e 21  22   .dynstr             ascii   qmi_csi_send_resp_raw
+43  0x00000d54 0x00000d54 18  19   .dynstr             ascii   qmi_csi_unregister
+44  0x00000d67 0x00000d67 20  21   .dynstr             ascii   qmi_csi_xport_closed
+45  0x00000d7c 0x00000d7c 21  22   .dynstr             ascii   qmi_csi_xport_connect
+46  0x00000d92 0x00000d92 24  25   .dynstr             ascii   qmi_csi_xport_disconnect
+47  0x00000dab 0x00000dab 28  29   .dynstr             ascii   qmi_csi_xport_qrtr_supported
+48  0x00000dc8 0x00000dc8 18  19   .dynstr             ascii   qmi_csi_xport_recv
+49  0x00000ddb 0x00000ddb 27  28   .dynstr             ascii   qmi_csi_xport_resume_client
+50  0x00000df7 0x00000df7 19  20   .dynstr             ascii   qmi_csi_xport_start
+51  0x00000e0b 0x00000e0b 18  19   .dynstr             ascii   qmi_csi_xport_stop
+52  0x00000e1e 0x00000e1e 23  24   .dynstr             ascii   qmi_idl_encode_resp_tlv
+53  0x00000e36 0x00000e36 23  24   .dynstr             ascii   qmi_idl_get_idl_version
+54  0x00000e4e 0x00000e4e 27  28   .dynstr             ascii   qmi_idl_get_max_message_len
+55  0x00000e6a 0x00000e6a 27  28   .dynstr             ascii   qmi_idl_get_max_service_len
+56  0x00000e86 0x00000e86 32  33   .dynstr             ascii   qmi_idl_get_message_c_struct_len
+57  0x00000ea7 0x00000ea7 22  23   .dynstr             ascii   qmi_idl_get_service_id
+58  0x00000ebe 0x00000ebe 28  29   .dynstr             ascii   qmi_idl_get_std_resp_tlv_len
+59  0x00000edb 0x00000edb 22  23   .dynstr             ascii   qmi_idl_message_decode
+60  0x00000ef2 0x00000ef2 22  23   .dynstr             ascii   qmi_idl_message_encode
+61  0x00000f09 0x00000f09 14  15   .dynstr             ascii   __FD_ISSET_chk
+62  0x00000f18 0x00000f18 12  13   .dynstr             ascii   __FD_SET_chk
+63  0x00000f25 0x00000f25 19  20   .dynstr             ascii   __android_log_print
+64  0x00000f39 0x00000f39 7   8    .dynstr             ascii   __errno
+65  0x00000f41 0x00000f41 4   5    .dynstr             ascii   bind
+66  0x00000f46 0x00000f46 5   6    .dynstr             ascii   close
+67  0x00000f4c 0x00000f4c 5   6    .dynstr             ascii   fcntl
+68  0x00000f52 0x00000f52 5   6    .dynstr             ascii   ioctl
+69  0x00000f58 0x00000f58 8   9    .dynstr             ascii   recvfrom
+70  0x00000f61 0x00000f61 6   7    .dynstr             ascii   sendto
+71  0x00000f68 0x00000f68 6   7    .dynstr             ascii   socket
+72  0x00000f6f 0x00000f6f 4   5    .dynstr             ascii   atoi
+73  0x00000f74 0x00000f74 6   7    .dynstr             ascii   fclose
+74  0x00000f7b 0x00000f7b 5   6    .dynstr             ascii   fgets
+75  0x00000f81 0x00000f81 5   6    .dynstr             ascii   fopen
+76  0x00000f87 0x00000f87 11  12   .dynstr             ascii   getsockname
+77  0x00000f93 0x00000f93 9   10   .dynstr             ascii   liblog.so
+78  0x00000f9d 0x00000f9d 6   7    .dynstr             ascii   LIBLOG
+79  0x00000fa4 0x00000fa4 7   8    .dynstr             ascii   libc.so
+80  0x00000fac 0x00000fac 4   5    .dynstr             ascii   LIBC
+81  0x00000fb1 0x00000fb1 12  13   .dynstr             ascii   libcutils.so
+82  0x00000fbe 0x00000fbe 11  12   .dynstr             ascii   libutils.so
+83  0x00000fca 0x00000fca 16  17   .dynstr             ascii   libqmi_encdec.so
+84  0x00000fdb 0x00000fdb 9   10   .dynstr             ascii   libc++.so
+85  0x00000fe5 0x00000fe5 7   8    .dynstr             ascii   libm.so
+86  0x00000fed 0x00000fed 8   9    .dynstr             ascii   libdl.so
+87  0x00000ff6 0x00000ff6 13  14   .dynstr             ascii   libqmi_csi.so
+88  0x00001008 0x00001008 4   5    .rela.dyn           ascii   APS2
+89  0x00001560 0x00001560 47  48   .rodata             ascii   QCSI: Received REMOVE_CLIENT cmd for %08x:%08x\n
+90  0x00001590 0x00001590 16  17   .rodata             ascii   handle_resume_tx
+91  0x000015a1 0x000015a1 10  11   .rodata             ascii   xport_open
+92  0x000015ac 0x000015ac 21  22   .rodata             ascii   %s: xp calloc failed\n
+93  0x000015c2 0x000015c2 52  53   .rodata             ascii   %s Queue exceeded, Retry sending for port %08x:%08x\n
+94  0x000015f7 0x000015f7 25  26   .rodata             ascii   %s Invalid socket family\n
+95  0x00001611 0x00001611 34  35   .rodata             ascii   %s: recvfrom err, len:%d errno:%d\n
+96  0x00001634 0x00001634 43  44   .rodata             ascii   %s Error queuing packet for port %08x:%08x\n
+97  0x00001660 0x00001660 28  29   .rodata             ascii   %s Failed to getsockname %d\n
+98  0x0000167d 0x0000167d 45  46   .rodata             ascii   QCSI: %s: CONTROL PKT cmd %d node %d port %d\n
+99  0x000016ab 0x000016ab 9   10   .rodata             ascii   xport_reg
+100 0x000016b5 0x000016b5 23  24   .rodata             ascii   /vendor/etc/qmi_fw.conf
+101 0x000016cd 0x000016cd 50  51   .rodata             ascii   %s  QCSI Sendto failed for port %08x:%08x err[%d]\n
+102 0x00001700 0x00001700 22  23   .rodata             ascii   QCSI: xport_close[%d]\n
+103 0x00001717 0x00001717 41  42   .rodata             ascii   QCSI: %s Send Failed! for port %08x:%08x\n
+104 0x00001741 0x00001741 30  31   .rodata             ascii   %s: Invalid address parameter\n
+105 0x00001760 0x00001760 55  56   .rodata             ascii   QCSI: %s Sent [%d]: %d queued bytes for port %08x:%08x\n
+106 0x00001798 0x00001798 50  51   .rodata             ascii   QCSI: xport_reg[%d]: service_id=0x%x version=0x%x\n
+107 0x000017cb 0x000017cb 10  11   .rodata             ascii   xport_send
+108 0x000017d6 0x000017d6 25  26   .rodata             ascii   %s Invalid svc:%d ins:%d\n
+109 0x000017f0 0x000017f0 29  30   .rodata             ascii   QCSI: xport_handle_event[%d]\n
+110 0x0000180e 0x0000180e 54  55   .rodata             ascii   QCSI: %s Send Failed! for port %08x:%08x, Retry Later\n
+111 0x00001845 0x00001845 36  37   .rodata             ascii   QCSI: xport_open[%d]: max_rx_len=%d\n
+112 0x0000186a 0x0000186a 53  54   .rodata             ascii   %s: QCSI Received Resume_Tx from %08x:%08x on FD- %d\n
+113 0x000018a0 0x000018a0 32  33   .rodata             ascii   %s: socket creation failed - %d\n
+114 0x000018c1 0x000018c1 28  29   .rodata             ascii   qmi_csi_xport_qrtr_supported
+115 0x000018de 0x000018de 21  22   .rodata             ascii   %s: failed errno[%d]\n
+116 0x000018f6 0x000018f6 40  41   .rodata             ascii   %s: control socket creation failed - %d\n
+117 0x0000191f 0x0000191f 38  39   .rodata             ascii   %s: Unable to allocate memory for buf\n
+118 0x00001946 0x00001946 124 125  .rodata             ascii   QCSI: QMI_CSI_TX: cntl_flag - %02x, txn_id - %04x, msg_id - %04x, msg_len - %04x, svc_id - %08x, clnt_addr - %08x:%08x:%08x\n
+119 0x000019c3 0x000019c3 42  43   .rodata             ascii   QCSI: %s Packet queued for port %08x:%08x\n
+120 0x000019ee 0x000019ee 124 125  .rodata             ascii   QCSI: QMI_CSI_RX: cntl_flag - %02x, txn_id - %04x, msg_id - %04x, msg_len - %04x, svc_id - %08x, clnt_addr - %08x:%08x:%08x\n
+121 0x00001a6b 0x00001a6b 18  19   .rodata             ascii   xport_handle_event
+122 0x00001a7e 0x00001a7e 58  59   .rodata             ascii   %s Failed for service_id=0x%x version=0x%x on %d error %d\n
+123 0x00001ab9 0x00001ab9 35  36   .rodata             ascii   %s: failed to bind as control port\n
+124 0x00001add 0x00001add 11  12   .rodata             ascii   init_socket
+125 0x00001ae9 0x00001ae9 28  29   .rodata             ascii   QCSI: %s: QRTR IS SUPPORTED\n
+126 0x00001b06 0x00001b06 43  44   .rodata             ascii   QCSI: Sent[%d]: %d bytes to port %08x:%08x\n
+127 0x00001b32 0x00001b32 6   7    .rodata             ascii   QMI_FW
+128 0x00001b39 0x00001b39 49  50   .rodata             ascii   %s Failed for service_id=0x%x version=0x%x on %d\n
+129 0x00001b6b 0x00001b6b 54  55   .rodata             ascii   QCSI: %s: Received Resume_Tx from %08x:%08x on FD- %d\n
+130 0x00001ba2 0x00001ba2 44  45   .rodata             ascii   QCSI: %s: QRTR IS NOT SUPPORTED: errno[%d] \n
+131 0x00001bcf 0x00001bcf 46  47   .rodata             ascii   QCSI: xport_unreg[%d]: type=0x%x version=0x%x\n
+132 0x00001bfe 0x00001bfe 36  37   .rodata             ascii   %s Sendto failed for port %08x:%08x\n
+133 0x000032e3 0x000032e3 4   5    .text               ascii   T\b\r@
+134 0x0000341d 0x0000341d 6   7    .text               ascii   C@y\b\t@
+135 0x00003424 0x00003424 4   5    .text               ascii   i*@)
+136 0x00003763 0x00003763 6   7    .text               ascii   y\b0@xh
+137 0x0000376b 0x0000376b 5   6    .text               ascii   y\bP@x
+138 0x00003790 0x00003790 7   8    .text               ascii   +ih8J\t\v
+139 0x0000389b 0x0000389b 4   5    .text               ascii   T\b\r@
+140 0x00003930 0x00003930 5   6    .text               ascii   \bd@y(
+141 0x00003b81 0x00003b81 4   6    .text               utf8    {è#\r
+142 0x00003d0f 0x00003d0f 4   5    .text               ascii   4j6@
+143 0x00003d73 0x00003d73 4   5    .text               ascii   TKih
+144 0x00003d7f 0x00003d7f 4   5    .text               ascii   T_i(
+145 0x00003e4d 0x00003e4d 4   6    .text               utf8    {¨p\f
+146 0x00003eff 0x00003eff 4   5    .text               ascii   T\n\tE
+147 0x00003f2f 0x00003f2f 4   5    .text               ascii   T\n\tE
+148 0x00003f5f 0x00003f5f 4   5    .text               ascii   T\n\tE
+149 0x00003f8f 0x00003f8f 4   5    .text               ascii   T\n\tE
+150 0x00003fbf 0x00003fbf 4   5    .text               ascii   T\n\tE
+151 0x00003fef 0x00003fef 4   5    .text               ascii   T\n\tE
+152 0x0000401f 0x0000401f 4   5    .text               ascii   T\n\tE
+153 0x0000404f 0x0000404f 4   5    .text               ascii   T\n\tE
+154 0x0000407f 0x0000407f 4   5    .text               ascii   T\n\tE
+155 0x000040af 0x000040af 4   5    .text               ascii   T\n\tE
+156 0x00004219 0x00004219 8   9    .text               ascii   \f 7\b\r(7h
+157 0x000043ef 0x000043ef 4   5    .text               ascii   Th6@
+158 0x00004532 0x00004532 4   6    .text               utf8    ?֨\nE
+159 0x000045e5 0x000045e5 4   5    .text               ascii   "8k!
+160 0x00004615 0x00004615 4   5    .text               ascii   b@y"
+161 0x000048d6 0x000048d6 4   6    .text               utf8    ?֜\a@
+162 0x00004956 0x00004956 4   6    .text               utf8    ?֜\a@
+163 0x00004a54 0x00004a54 5   6    .text               ascii   cBCyB
+164 0x00004a7b 0x00004a7b 5   6    .text               ascii   5hBCy
+165 0x00004be7 0x00004be7 4   5    .text               ascii   Tizu
+166 0x00004d88 0x00004d88 4   5    .text               ascii   \b`@y
+167 0x0000512b 0x0000512b 4   5    .text               ascii   Tg\n@
+168 0x00005177 0x00005177 4   5    .text               ascii   Td\n@
+169 0x00005377 0x00005377 4   5    .text               ascii   Td\n@
+170 0x000054b7 0x000054b7 4   5    .text               ascii   7`\n@
+171 0x000054d6 0x000054d6 4   5    .text               ascii   \b*r\a
+172 0x000054fe 0x000054fe 4   6    .text               utf8    \tk\bI
+173 0x0000551a 0x0000551a 4   5    .text               ascii   \b*a\a
+174 0x0000553a 0x0000553a 4   6    .text               utf8    \tk\bI
+175 0x00005557 0x00005557 4   5    .text               ascii   Td\n@
+176 0x00005a78 0x00005a78 5   6    .text               ascii   \a!@)`
+177 0x00005cc3 0x00005cc3 4   5    .text               ascii   4h*@
+178 0x0000646f 0x0000646f 4   5    .text               ascii   T\b$@
+179 0x00006adc 0x00006adc 4   5    .text               ascii   a\nA)
+180 0x00006c40 0x00006c40 5   6    .text               ascii   \a!@)`
+181 0x00006f86 0x00006f86 4   6    .text               utf8    \tk\bI
+182 0x000084b9 0x00000001 11  12   .shstrtab           ascii   .init_array
+183 0x000084c5 0x0000000d 11  12   .shstrtab           ascii   .fini_array
+184 0x000084d1 0x00000019 5   6    .shstrtab           ascii   .text
+185 0x000084d7 0x0000001f 4   5    .shstrtab           ascii   .got
+186 0x000084dc 0x00000024 19  20   .shstrtab           ascii   .note.android.ident
+187 0x000084f0 0x00000038 8   9    .shstrtab           ascii   .got.plt
+188 0x000084f9 0x00000041 9   10   .shstrtab           ascii   .rela.plt
+189 0x00008503 0x0000004b 4   5    .shstrtab           ascii   .bss
+190 0x00008508 0x00000050 7   8    .shstrtab           ascii   .dynstr
+191 0x00008510 0x00000058 13  14   .shstrtab           ascii   .eh_frame_hdr
+192 0x0000851e 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+193 0x0000852d 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+194 0x0000853a 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+195 0x00008544 0x0000008c 9   10   .shstrtab           ascii   .rela.dyn
+196 0x0000854e 0x00000096 12  13   .shstrtab           ascii   .gnu.version
+197 0x0000855b 0x000000a3 7   8    .shstrtab           ascii   .dynsym
+198 0x00008563 0x000000ab 9   10   .shstrtab           ascii   .gnu.hash
+199 0x0000856d 0x000000b5 9   10   .shstrtab           ascii   .eh_frame
+200 0x00008577 0x000000bf 18  19   .shstrtab           ascii   .note.gnu.build-id
+201 0x0000858a 0x000000d2 8   9    .shstrtab           ascii   .dynamic
+202 0x00008593 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+203 0x0000859d 0x000000e5 7   8    .shstrtab           ascii   .rodata
+204 0x000085a5 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+205 0x000085b4 0x000000fc 5   6    .shstrtab           ascii   .data
+206 0x000085bb 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+207 0x00008604 0x0000004a 4   5    .gnu_debugdata      ascii   ,\nIx
+208 0x0000866e 0x000000b4 5   6    .gnu_debugdata      ascii   h{A/}
+209 0x0000867f 0x000000c5 6   7    .gnu_debugdata      ascii   ?0+XQE
+210 0x00008691 0x000000d7 4   6    .gnu_debugdata      utf8    \nKߑ-
+211 0x0000869e 0x000000e4 4   6    .gnu_debugdata      utf8    ˕aQ\b
+212 0x000086ef 0x00000135 6   9    .gnu_debugdata      utf8    FŘe=̘f
+213 0x000086f8 0x0000013e 4   5    .gnu_debugdata      ascii   Rv7,
+214 0x00008705 0x0000014b 5   6    .gnu_debugdata      ascii   ?6\eL`
+215 0x000087bf 0x00000205 4   6    .gnu_debugdata      utf8    δVks
+216 0x000087ed 0x00000233 5   6    .gnu_debugdata      ascii   3%$Nj
+217 0x00008886 0x000002cc 5   7    .gnu_debugdata      utf8    O}h\at
+218 0x000088a3 0x000002e9 5   6    .gnu_debugdata      ascii   ";4.o
+219 0x000088a9 0x000002ef 5   6    .gnu_debugdata      ascii   H0QhO
+220 0x000088b1 0x000002f7 6   7    .gnu_debugdata      ascii   cRV.ah
+221 0x000088d3 0x00000319 4   5    .gnu_debugdata      ascii   [Q_l
+222 0x000088ff 0x00000345 7   8    .gnu_debugdata      ascii   lPj"Vl(
+223 0x00008950 0x00000396 4   5    .gnu_debugdata      ascii   j["^
+224 0x000089af 0x000003f5 5   6    .gnu_debugdata      ascii   -:yNw
+225 0x000089e4 0x0000042a 5   8    .gnu_debugdata      utf8    緟|nkm
+226 0x00008a30 0x00000476 5   6    .gnu_debugdata      ascii   MEa$3
+0x00006ff0    1     16 sym.imp.__cxa_finalize
+0x00007070    1     16 sym.imp.__android_log_buf_print
+0x00007060    1     16 sym.imp.__memcpy_chk
+0x00007030    1     16 sym.imp.__stack_chk_fail
+0x00007050    1     16 sym.imp.calloc
+0x00007020    1     16 sym.imp.free
+0x000070a0    1     16 sym.imp.malloc
+0x00007040    1     16 sym.imp.memcmp
+0x00007140    1     16 sym.imp.memcpy
+0x000071a0    1     16 sym.imp.pthread_mutex_init
+0x00007000    1     16 sym.imp.pthread_mutex_lock
+0x00007010    1     16 sym.imp.pthread_mutex_unlock
+0x000071b0    1     16 sym.imp.pthread_mutexattr_destroy
+0x00007180    1     16 sym.imp.pthread_mutexattr_init
+0x00007190    1     16 sym.imp.pthread_mutexattr_settype
+0x000070d0    1     16 sym.imp.qmi_idl_encode_resp_tlv
+0x000070f0    1     16 sym.imp.qmi_idl_get_idl_version
+0x00007120    1     16 sym.imp.qmi_idl_get_max_message_len
+0x00007100    1     16 sym.imp.qmi_idl_get_max_service_len
+0x00007080    1     16 sym.imp.qmi_idl_get_message_c_struct_len
+0x000070e0    1     16 sym.imp.qmi_idl_get_service_id
+0x000070c0    1     16 sym.imp.qmi_idl_get_std_resp_tlv_len
+0x000070b0    1     16 sym.imp.qmi_idl_message_decode
+0x00007130    1     16 sym.imp.qmi_idl_message_encode
+0x00007220    1     16 sym.imp.__FD_ISSET_chk
+0x000072b0    1     16 sym.imp.__FD_SET_chk
+0x00007210    1     16 sym.imp.__android_log_print
+0x000072c0    1     16 sym.imp.__errno
+0x00007200    1     16 sym.imp.bind
+0x00007260    1     16 sym.imp.close
+0x000072a0    1     16 sym.imp.fcntl
+0x00007290    1     16 sym.imp.ioctl
+0x00007230    1     16 sym.imp.recvfrom
+0x000072d0    1     16 sym.imp.sendto
+0x00007280    1     16 sym.imp.socket
+0x00007310    1     16 sym.imp.atoi
+0x00007320    1     16 sym.imp.fclose
+0x00007300    1     16 sym.imp.fgets
+0x000072f0    1     16 sym.imp.fopen
+0x00007330    1     16 sym.imp.getsockname
+0x00003000    1     12 entry0
+0x00004d30    2     56 sym.qmi_csi_exit
+0x000044a8    2     28 sym.qmi_csi_register
+0x00004b7c    2     24 sym.qmi_csi_send_broadcast_ind
+0x00004ad4    4    168 sym.qmi_csi_send_broadcast_ind_internal
+0x00004a00    8    196 sym.qmi_csi_send_ind_internal
+0x00003ad8    8    176 sym.qmi_csi_xport_resume_client
+0x000049f0    2     24 sym.qmi_csi_send_resp
+0x00003378   51    988 sym.qmi_csi_xport_recv
+0x000040c4   52    864 sym.qmi_csi_register_with_options
+0x0000458c   12    232 sym.qmi_csi_send_resp_internal
+0x000049f8    1      8 sym.qmi_csi_send_resp_raw
+0x00004b8c    9    164 sym.qmi_csi_unregister
+0x00003edc   31    488 sym.qmi_csi_xport_stop
+0x00004acc    2     24 sym.qmi_csi_send_ind_raw
+0x00004b84    1      8 sym.qmi_csi_send_broadcast_ind_raw
+0x00004ac4    1      8 sym.qmi_csi_send_ind
+0x00003e54   12    136 sym.qmi_csi_xport_start
+0x000044b4   10    176 sym.qmi_csi_handle_event
+0x00004c30    3    256 sym.qmi_csi_init
+0x000071c0    1     16 fcn.000071c0
+0x000071d0    1     16 fcn.000071d0
+0x000071e0    1     16 fcn.000071e0
+0x00003014   20    356 sym.qmi_csi_xport_connect
+0x00003b88    8    160 sym.qmi_csi_xport_disconnect
+0x00005f28   11    248 sym.qmi_csi_xport_qrtr_supported
+0x00005df4   11    292 sym.qmi_csi_debug_init
+0x00004d58    7    104 sym.qmi_csi_get_txn_id
+0x00003cc4   15    284 sym.qmi_csi_xport_closed
+0x00003010    1      4 entry.fini0
+0x00003178   10    116 sym.find_client_by_addr
+0x000031ec    3    224 sym.create_client
+0x00004dc0    7    128 sym.add_client
+0x000032cc    4     40 sym.find_client
+0x000032f4    4    132 sym.remove_client
+0x00003754    1     36 sym.decode_header
+0x000037c0    5    196 sym.get_txn
+0x00007090    1     16 fcn.00007090
+0x00003778    3     48 sym.qmi_csi_err_translate
+0x00003884    4     40 sym.find_txn
+0x000038ac    4    132 sym.remove_txn
+0x00003930    6     72 sym.release_txn
+0x00003978    9    352 sym.encode_and_send_resp
+0x00004e40    7    132 sym.add_txn
+0x00004ec4    1     44 sym.encode_header
+0x00003c28    7    156 sym.clean_txns
+0x00003de0    4    116 sym.remove_service
+0x00004424    4    132 sym.add_service
+0x00004564    4     40 sym.find_service
+0x00004674   43    892 sym.internal_send
+0x00005920   29    712 sym.handle_resume_tx
+0x00007240    1     16 fcn.00007240
+0x00007250    1     16 fcn.00007250
+0x00005be8    4     40 sym.find_tx_q
+0x00005c10    3    136 sym.purge_tx_q
+0x00007270    1     16 fcn.00007270
+0x00005c98   13    224 sym.put_tx_q
+0x000072e0    1     16 fcn.000072e0
+0x00005d78    7    124 sym.get_tx_q
+0x00005f18    1     16 sym.isdigit
+0x00006af0   29    704 sym.handle_resume_tx_1
+0x00006db0   11    164 sym.add_conn_cli
+0x00006ac0    1     48 sym.xport_handle_net_reset
+0x00006e54    3     80 sym.purge_dest_s
+0x00006ea4    4    112 sym.purge_conn_cli
+0x00006f14    4    184 sym.init_socket
+0x00004ef0    8    248 sym.xport_reg
+0x00005038   29    736 sym.xport_handle_event
+0x000053c4   15    680 sym.xport_open
+0x0000566c   30    692 sym.xport_send
+0x00006020   17    480 sym.xport_reg_1
+0x00006250   43    992 sym.xport_handle_event_1
+0x000066a8    9    364 sym.xport_open_1
+0x00006814   30    684 sym.xport_send_1
+0x00004fe8    3     80 sym.xport_unreg
+0x00005318    5    164 sym.xport_close
+0x00006200    3     80 sym.xport_unreg_1
+0x00006630    3    112 sym.xport_close_1
+0x00006fd0    1     20 section..plt

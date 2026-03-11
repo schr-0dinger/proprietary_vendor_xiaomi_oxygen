@@ -1,0 +1,247 @@
+arch     arm
+baddr    0x0
+binsz    19217
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                                                                 demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+23  0x000020e4 0x000020e4 GLOBAL FUNC 92       _ZN8loc_util22createLocIpcQrtrRecverERKNSt3__110shared_ptrINS_15ILocIpcListenerEEEiiRKNS1_INS_17LocIpcQrtrWatcherEEE loc_util::createLocIpcQrtrRecver(std::__1::shared_ptr<loc_util::ILocIpcListener> const&, int, int, std::__1::shared_ptr<loc_util::LocIpcQrtrWatcher> const&)
+24  0x00002014 0x00002014 GLOBAL FUNC 208      _ZN8loc_util22createLocIpcQrtrSenderEii                                                                              loc_util::createLocIpcQrtrSender(int, int)
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x348 0x000002a8   0x348 -r-- DYNSYM      .dynsym
+4   0x000005f0    0x46 0x000005f0    0x46 -r-- GNU_VERSYM  .gnu.version
+5   0x00000638    0x40 0x00000638    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000678    0x6c 0x00000678    0x6c -r-- GNU_HASH    .gnu.hash
+7   0x000006e4   0x65a 0x000006e4   0x65a -r-- STRTAB      .dynstr
+8   0x00000d40    0x78 0x00000d40    0x78 -r-- ----        .rela.dyn
+9   0x00000db8    0x10 0x00000db8    0x10 -r-- ----        .relr.dyn
+10  0x00000dc8   0x1e0 0x00000dc8   0x1e0 -r-- RELA        .rela.plt
+11  0x00000fa8    0x9a 0x00000fa8    0x9a -r-- PROGBITS    .rodata
+12  0x00001044   0x164 0x00001044   0x164 -r-- PROGBITS    .eh_frame_hdr
+13  0x000011a8   0x53c 0x000011a8   0x53c -r-- PROGBITS    .eh_frame
+14  0x00002000  0x1264 0x00002000  0x1264 -r-x PROGBITS    .text
+15  0x00003270   0x160 0x00003270   0x160 -r-x PROGBITS    .plt
+16  0x00004000   0x1f0 0x00004000   0x1f0 -rw- PROGBITS    .data.rel.ro
+17  0x000041f0    0x10 0x000041f0    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00004200   0x210 0x00004200   0x210 -rw- DYNAMIC     .dynamic
+19  0x00004410    0x30 0x00004410    0x30 -rw- PROGBITS    .got
+20  0x00004440    0xb8 0x00004440    0xb8 -rw- PROGBITS    .got.plt
+21  0x000044f8     0x4 0x000054f8     0x4 -rw- PROGBITS    .data
+22  0x000044fc    0xf1 0x00000000    0xf1 ---- STRTAB      .shstrtab
+23  0x000045ed   0x524 0x00000000   0x524 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x000002a0 0x000002a0 4   7    .note.gnu.build-id  utf8    |ҳ\aB
+3   0x000006e5 0x000006e5 14  15   .dynstr             ascii   __cxa_finalize
+4   0x000006f4 0x000006f4 116 117  .dynstr             ascii   _ZN8loc_util22createLocIpcQrtrRecverERKNSt3__110shared_ptrINS_15ILocIpcListenerEEEiiRKNS1_INS_17LocIpcQrtrWatcherEEE
+5   0x00000769 0x00000769 39  40   .dynstr             ascii   _ZN8loc_util22createLocIpcQrtrSenderEii
+6   0x00000791 0x00000791 41  42   .dynstr             ascii   _ZN8loc_util4Sock9sendAbortEiPK8sockaddrj
+7   0x000007bb 0x000007bb 103 104  .dynstr             ascii   _ZNK8loc_util4Sock4recvERKNS_12LocIpcRecverERKNSt3__110shared_ptrINS_15ILocIpcListenerEEEiP8sockaddrPji
+8   0x00000823 0x00000823 41  42   .dynstr             ascii   _ZNK8loc_util4Sock4sendEPKvjiPK8sockaddrj
+9   0x0000084d 0x0000084d 61  62   .dynstr             ascii   _ZNKSt3__119__shared_weak_count13__get_deleterERKSt9type_info
+10  0x0000088b 0x0000088b 74  75   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+11  0x000008d6 0x000008d6 75  76   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+12  0x00000922 0x00000922 48  49   .dynstr             ascii   _ZNSt3__119__shared_weak_count14__release_weakEv
+13  0x00000953 0x00000953 34  35   .dynstr             ascii   _ZNSt3__119__shared_weak_countD2Ev
+14  0x00000976 0x00000976 102 103  .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN8loc_util17LocIpcQsockSenderENS_9allocatorIS2_EEE16__on_zero_sharedEv
+15  0x000009dd 0x000009dd 107 108  .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN8loc_util17LocIpcQsockSenderENS_9allocatorIS2_EEE21__on_zero_shared_weakEv
+16  0x00000a49 0x00000a49 88  89   .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN8loc_util4SockENS_9allocatorIS2_EEE16__on_zero_sharedEv
+17  0x00000aa2 0x00000aa2 93  94   .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN8loc_util4SockENS_9allocatorIS2_EEE21__on_zero_shared_weakEv
+18  0x00000b00 0x00000b00 21  22   .dynstr             ascii   _ZNSt3__19to_stringEi
+19  0x00000b16 0x00000b16 27  28   .dynstr             ascii   _ZTVN8loc_util10SockRecverE
+20  0x00000b32 0x00000b32 29  30   .dynstr             ascii   _ZTVN8loc_util12LocIpcRecverE
+21  0x00000b50 0x00000b50 34  35   .dynstr             ascii   _ZTVN8loc_util17LocIpcQsockRecverE
+22  0x00000b73 0x00000b73 34  35   .dynstr             ascii   _ZTVN8loc_util17LocIpcQsockSenderE
+23  0x00000b96 0x00000b96 85  86   .dynstr             ascii   _ZTVNSt3__120__shared_ptr_emplaceIN8loc_util17LocIpcQsockSenderENS_9allocatorIS2_EEEE
+24  0x00000bec 0x00000bec 71  72   .dynstr             ascii   _ZTVNSt3__120__shared_ptr_emplaceIN8loc_util4SockENS_9allocatorIS2_EEEE
+25  0x00000c34 0x00000c34 6   7    .dynstr             ascii   _ZdlPv
+26  0x00000c3b 0x00000c3b 5   6    .dynstr             ascii   _Znwm
+27  0x00000c41 0x00000c41 19  20   .dynstr             ascii   __android_log_print
+28  0x00000c55 0x00000c55 18  19   .dynstr             ascii   __cxa_pure_virtual
+29  0x00000c68 0x00000c68 7   8    .dynstr             ascii   __errno
+30  0x00000c70 0x00000c70 16  17   .dynstr             ascii   __stack_chk_fail
+31  0x00000c81 0x00000c81 4   5    .dynstr             ascii   bind
+32  0x00000c86 0x00000c86 5   6    .dynstr             ascii   close
+33  0x00000c8c 0x00000c8c 17  18   .dynstr             ascii   get_tag_log_level
+34  0x00000c9e 0x00000c9e 14  15   .dynstr             ascii   ipcr_find_name
+35  0x00000cad 0x00000cad 6   7    .dynstr             ascii   socket
+36  0x00000cb4 0x00000cb4 8   9    .dynstr             ascii   strerror
+37  0x00000cbd 0x00000cbd 9   10   .dynstr             ascii   liblog.so
+38  0x00000cc7 0x00000cc7 6   7    .dynstr             ascii   LIBLOG
+39  0x00000cce 0x00000cce 7   8    .dynstr             ascii   libc.so
+40  0x00000cd6 0x00000cd6 4   5    .dynstr             ascii   LIBC
+41  0x00000cdb 0x00000cdb 11  12   .dynstr             ascii   libutils.so
+42  0x00000ce7 0x00000ce7 12  13   .dynstr             ascii   libcutils.so
+43  0x00000cf4 0x00000cf4 15  16   .dynstr             ascii   libgps.utils.so
+44  0x00000d04 0x00000d04 13  14   .dynstr             ascii   libqsocket.so
+45  0x00000d12 0x00000d12 9   10   .dynstr             ascii   libc++.so
+46  0x00000d1c 0x00000d1c 7   8    .dynstr             ascii   libm.so
+47  0x00000d24 0x00000d24 8   9    .dynstr             ascii   libdl.so
+48  0x00000d2d 0x00000d2d 16  17   .dynstr             ascii   libloc_socket.so
+49  0x00000d40 0x00000d40 4   5    .rela.dyn           ascii   APS2
+50  0x00000d51 0x00000d51 4   5    .rela.dyn           ascii   (\b\f\b
+51  0x00000fa8 0x00000fa8 11  12   .rodata             ascii   LocSvc_Qrtr
+52  0x00000fb4 0x00000fb4 48  49   .rodata             ascii   %s:%d] bind socket error. sock fd: %d,reason: %s
+53  0x00000fe5 0x00000fe5 47  48   .rodata             ascii   %s:%d] serviceLookup, rc = %d, numEntries = %d\n
+54  0x00001015 0x00001015 13  14   .rodata             ascii   serviceLookup
+55  0x00001023 0x00001023 10  11   .rodata             ascii   SockRecver
+56  0x0000102e 0x0000102e 17  18   .rodata             ascii   LocIpcQsockRecver
+57  0x00002177 0x00002177 4   5    .text               ascii   6`&@
+58  0x0000220f 0x0000220f 4   5    .text               ascii   6`&@
+59  0x000022c3 0x000022c3 4   5    .text               ascii   =\b\b@
+60  0x00002335 0x00002335 4   5    .text               ascii   c@9H
+61  0x00002379 0x00002379 4   5    .text               ascii   c@9\b
+62  0x00002416 0x00002416 5   6    .text               ascii   @9)\rB
+63  0x00002492 0x00002492 5   6    .text               ascii   @9)\rB
+64  0x00002548 0x00002548 4   6    .text               utf8    *}\vȫ
+65  0x00002578 0x00002578 4   6    .text               utf8    *}\vȫ
+66  0x000025a4 0x000025a4 4   6    .text               utf8    \t}\nȪ
+67  0x000026e8 0x000026e8 6   7    .text               ascii   \b0A9(\a
+68  0x00002b10 0x00002b10 4   6    .text               utf8    l}_Ȍ
+69  0x00002b18 0x00002b18 4   6    .text               utf8    l}\rȭ
+70  0x00002c8a 0x00002c8a 5   6    .text               ascii   @9)\rB
+71  0x00002d4e 0x00002d4e 5   6    .text               ascii   @9)\rB
+72  0x00002ee0 0x00002ee0 5   6    .text               ascii   \t\rB8i
+73  0x0000300e 0x0000300e 5   6    .text               ascii   ]8)\rB
+74  0x000030da 0x000030da 5   6    .text               ascii   @9)\rB
+75  0x00003248 0x00003248 5   6    .text               ascii   \b\f]8h
+76  0x000044fd 0x00000001 11  12   .shstrtab           ascii   .fini_array
+77  0x00004509 0x0000000d 5   6    .shstrtab           ascii   .text
+78  0x0000450f 0x00000013 4   5    .shstrtab           ascii   .got
+79  0x00004514 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+80  0x00004528 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+81  0x00004531 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+82  0x0000453b 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+83  0x00004543 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+84  0x00004551 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+85  0x00004560 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+86  0x0000456d 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+87  0x00004577 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+88  0x00004581 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+89  0x0000458e 0x00000092 7   8    .shstrtab           ascii   .dynsym
+90  0x00004596 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+91  0x000045a0 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+92  0x000045aa 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+93  0x000045bd 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+94  0x000045c6 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+95  0x000045d0 0x000000d4 7   8    .shstrtab           ascii   .rodata
+96  0x000045d8 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+97  0x000045e7 0x000000eb 5   6    .shstrtab           ascii   .data
+98  0x000045ee 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+99  0x00004634 0x00000047 4   8    .gnu_debugdata      utf8    к<Ǹϋ
+100 0x00004660 0x00000073 6   8    .gnu_debugdata      utf8    2j-'JƖ
+101 0x00004668 0x0000007b 4   7    .gnu_debugdata      utf8    剗\f6Z
+102 0x000046d2 0x000000e5 4   5    .gnu_debugdata      ascii   \n8Wx
+103 0x00004729 0x0000013c 5   6    .gnu_debugdata      ascii   <\ebw6
+104 0x00004805 0x00000218 5   6    .gnu_debugdata      ascii   H|~jf
+105 0x00004812 0x00000225 4   6    .gnu_debugdata      utf8    T1\t՚
+106 0x00004828 0x0000023b 7   9    .gnu_debugdata      utf8    \vNECȑB1
+107 0x00004839 0x0000024c 4   5    .gnu_debugdata      ascii   \b_b]
+108 0x00004882 0x00000295 5   7    .gnu_debugdata      utf8    X20ٿw
+109 0x000048ae 0x000002c1 4   7    .gnu_debugdata      utf8    x!ҡȇ
+110 0x000048d8 0x000002eb 5   7    .gnu_debugdata      utf8    oigѧk
+111 0x000048eb 0x000002fe 4   7    .gnu_debugdata      utf8    MٽPú
+112 0x000049b0 0x000003c3 7   8    .gnu_debugdata      ascii   xv%p\aL8
+113 0x000049cc 0x000003df 4   6    .gnu_debugdata      utf8    sξV\v
+114 0x000049eb 0x000003fe 4   5    .gnu_debugdata      ascii   >\eDj
+115 0x00004a26 0x00000439 6   7    .gnu_debugdata      ascii   \)\r-4S
+116 0x00004a5c 0x0000046f 4   5    .gnu_debugdata      ascii   \nr*\n
+117 0x00004a72 0x00000485 4   5    .gnu_debugdata      ascii   3HaV
+118 0x00004aa9 0x000004bc 8   9    .gnu_debugdata      ascii   h_`59bwW
+119 0x00004acb 0x000004de 5   7    .gnu_debugdata      utf8    }G(¹L
+0x00003290    1     16 sym.imp.__cxa_finalize
+0x00003370    1     16 sym.imp.__android_log_print
+0x000033a0    1     16 sym.imp.__errno
+0x00003320    1     16 sym.imp.__stack_chk_fail
+0x00003390    1     16 sym.imp.bind
+0x00003340    1     16 sym.imp.close
+0x00003360    1     16 sym.imp.get_tag_log_level
+0x00003350    1     16 sym.imp.ipcr_find_name
+0x000032b0    1     16 sym.imp.socket
+0x000033b0    1     16 sym.imp.strerror
+0x00002000    1     12 entry0
+0x000020e4    1     92 method.loc_util.createLocIpcQrtrRecver_std::__1::shared_ptr_loc_util::ILocIpcListener__const__int__int__std::__1::shared_ptr_loc_util::LocIpcQrtrWatcher__const_
+0x000032a0    1     16 sym.imp.operator_new_unsigned_long_
+0x00002a28   16    516 method.loc_util::LocIpcQsockRecver.LocIpcQsockRecver_std::__1::shared_ptr_loc_util::ILocIpcListener__const__int__int_
+0x00002014    1    208 method.loc_util.createLocIpcQrtrSender_int__int_
+0x00002278    9    292 method.loc_util::ServiceInfo.ServiceInfo_int__int_
+0x00002268    1     12 method.std::__1::__shared_ptr_emplace_loc_util::LocIpcQsockSender__std::__1::allocator_loc_util::LocIpcQsockSender___.__on_zero_shared__
+0x00002690    3     52 method.std::__1::__shared_ptr_emplace_loc_util::Sock__std::__1::allocator_loc_util::Sock___.__on_zero_shared__
+0x000026c4    1      4 method.std::__1::__shared_ptr_emplace_loc_util::Sock__std::__1::allocator_loc_util::Sock___.__on_zero_shared_weak__
+0x00002274    1      4 method.std::__1::__shared_ptr_emplace_loc_util::LocIpcQsockSender__std::__1::allocator_loc_util::LocIpcQsockSender___.__on_zero_shared_weak__
+0x000033c0    1     16 sym.imp.loc_util::Sock::sendAbort_int__sockaddr_const__unsigned_int_
+0x00003380    1     16 method.loc_util::Sock.recv_loc_util::LocIpcRecver_const__std::__1::shared_ptr_loc_util::ILocIpcListener__const__int__sockaddr__unsigned_int__int__const
+0x00003330    1     16 sym.imp.loc_util::Sock::send_void_const__unsigned_int__int__sockaddr_const__unsigned_int__const
+0x00003300    1     16 sym.imp.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___::append_char_const_
+0x00003310    1     16 sym.imp.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___::append_char_const__unsigned_long_
+0x000032e0    1     16 sym.imp.std::__1::__shared_weak_count::__release_weak__
+0x000032d0    1     16 sym.imp.std::__1::__shared_weak_count::__shared_weak_count__
+0x000032f0    1     16 sym.imp.std::__1::to_string_int_
+0x000032c0    1     16 sym.imp.operator_delete_void_
+0x00002010    1      4 entry.fini0
+0x000026c8   16    304 method.loc_util::LocIpcQsockSender.serviceLookup___const
+0x00002140    8    152 method.std::__1::__shared_ptr_emplace_loc_util::LocIpcQsockSender__std::__1::allocator_loc_util::LocIpcQsockSender___.__shared_ptr_emplace__
+0x0000239c    3     32 method.loc_util::LocIpcQsockSender.isOperable___const
+0x000023bc    1     72 method.loc_util::LocIpcQsockSender.send_unsigned_char_const__unsigned_int__int__const
+0x00002480    8    136 method.loc_util::LocIpcQsockSender.LocIpcQsockSender__
+0x00002508   13    232 method.loc_util::LocIpcQsockSender.getRecver_std::__1::shared_ptr_loc_util::ILocIpcListener__const_
+0x000025f0    1      8 method.loc_util::LocIpcSender.copyDestAddrFrom_loc_util::LocIpcSender_const_
+0x00002640    3     80 method.std::__1::__shared_ptr_emplace_loc_util::Sock__std::__1::allocator_loc_util::Sock___.__shared_ptr_emplace__
+0x000027f8    1     32 method.loc_util::SockRecver.recv___const
+0x000028cc   11    192 method.loc_util::SockRecver.SockRecver__
+0x0000298c    3     24 method.loc_util::LocIpcRecver.onListenerReady__
+0x000029a4    1      8 method.loc_util::LocIpcRecver.getLastSender___const
+0x000029ac    1      4 method.loc_util::SockRecver.abort___const
+0x000029b0    1     12 method.loc_util::SockRecver.getName___const
+0x00002a24    1      4 method.loc_util::LocIpcRecver.LocIpcRecver__
+0x00002cf0   13    208 method.loc_util::LocIpcQsockRecver.LocIpcQsockRecver__
+0x00002dc0    3    108 method.loc_util::LocIpcQsockRecver.recv___const
+0x00002e2c    1    176 method.loc_util::LocIpcQsockRecver.getLastSender___const
+0x00002edc    3     28 method.loc_util::LocIpcQsockRecver.getName___const
+0x00002ef8    3     80 method.loc_util::LocIpcQsockRecver.abort___const
+0x00002f48    3    104 method.non_virtual_thunk_to_loc_util::LocIpcQsockRecver.recv___const
+0x00003074   13    204 method.non_virtual_thunk_to_loc_util::LocIpcQsockRecver.LocIpcQsockRecver__
+0x00003140    1    176 method.non_virtual_thunk_to_loc_util::LocIpcQsockRecver.getLastSender___const
+0x000031f0    3     88 method.non_virtual_thunk_to_loc_util::LocIpcQsockRecver.abort___const
+0x00003248    3     28 method.non_virtual_thunk_to_loc_util::LocIpcQsockRecver.getName___const
+0x000021d8    8    144 fcn.000021d8
+0x00002404    8    124 sym.loc_util::LocIpcQsockSender::LocIpcQsockSender__
+0x000025f8    3     72 sym.std::__1::__shared_ptr_emplace_loc_util::Sock__std::__1::allocator_loc_util::Sock___::__shared_ptr_emplace__
+0x00002818   11    180 sym.loc_util::SockRecver::SockRecver__
+0x000029bc    6    104 sym.loc_util::LocIpcRecver::LocIpcRecver__
+0x00002c2c   13    196 sym.loc_util::LocIpcQsockRecver::LocIpcQsockRecver__
+0x00002fb0   13    196 sym.non_virtual_thunk_to_loc_util::LocIpcQsockRecver::LocIpcQsockRecver__
+0x00003270    1     20 section..plt

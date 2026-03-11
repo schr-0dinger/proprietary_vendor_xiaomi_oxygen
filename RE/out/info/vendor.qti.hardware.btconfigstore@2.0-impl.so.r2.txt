@@ -1,0 +1,305 @@
+arch     arm
+baddr    0x0
+binsz    23363
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                                                                                                                                     demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+49  0x00004618 0x00004618 GLOBAL FUNC 88       HIDL_FETCH_IBTConfigStore
+50  0x000042d8 0x000042d8 GLOBAL FUNC 296      _ZN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStore17setVendorPropertyERKNS3_14VendorPropertyE                                                                    vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore::setVendorProperty(vendor::qti::hardware::btconfigstore::V2_0::VendorProperty const&)
+51  0x00004504 0x00004504 GLOBAL FUNC 276      _ZN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStore26getControllerAddOnFeaturesENSt3__18functionIFvNS3_6ResultERKNS3_23ControllerAddOnFeaturesEEEE                vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore::getControllerAddOnFeatures(std::__1::function<void (vendor::qti::hardware::btconfigstore::V2_0::Result, vendor::qti::hardware::btconfigstore::V2_0::ControllerAddOnFeatures const&)>)
+52  0x00005248 0x00005248 GLOBAL OBJ  232      _ZTCN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStoreE0_N7android4hidl4base4V1_05IBaseE                                                                           construction vtable for android::hidl::base::V1_0::IBase-in-vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore
+53  0x00005110 0x00005110 GLOBAL OBJ  48       _ZTTN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStoreE                                                                                                            VTT for vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore
+54  0x00005008 0x00005008 GLOBAL OBJ  264      _ZTVN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStoreE                                                                                                            vtable for vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore
+55  0x00003014 0x00003014 GLOBAL FUNC 4804     _ZN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStore19getVendorPropertiesEjNSt3__18functionIFvNS3_6ResultERKN7android8hardware8hidl_vecINS3_14VendorPropertyEEEEEE vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore::getVendorProperties(unsigned int, std::__1::function<void (vendor::qti::hardware::btconfigstore::V2_0::Result, android::hardware::hidl_vec<vendor::qti::hardware::btconfigstore::V2_0::VendorProperty> const&)>)
+56  0x00004400 0x00004400 GLOBAL FUNC 260      _ZN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStore20getHostAddOnFeaturesENSt3__18functionIFvNS3_6ResultERKNS3_17HostAddOnFeaturesEEEE                            vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore::getHostAddOnFeatures(std::__1::function<void (vendor::qti::hardware::btconfigstore::V2_0::Result, vendor::qti::hardware::btconfigstore::V2_0::HostAddOnFeatures const&)>)
+57  0x00005140 0x00005140 GLOBAL OBJ  264      _ZTCN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStoreE0_NS3_14IBTConfigStoreE                                                                                     construction vtable for vendor::qti::hardware::btconfigstore::V2_0::IBTConfigStore-in-vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000238    0x18 0x00000238    0x18 -r-- NOTE        .note.android.ident
+2   0x00000250    0x20 0x00000250    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270   0x570 0x00000270   0x570 -r-- DYNSYM      .dynsym
+4   0x000007e0    0x74 0x000007e0    0x74 -r-- GNU_VERSYM  .gnu.version
+5   0x00000854    0x40 0x00000854    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000898    0x4c 0x00000898    0x4c -r-- GNU_HASH    .gnu.hash
+7   0x000008e4  0x10bd 0x000008e4  0x10bd -r-- STRTAB      .dynstr
+8   0x000019a8   0x198 0x000019a8   0x198 -r-- ----        .rela.dyn
+9   0x00001b40    0x18 0x00001b40    0x18 -r-- ----        .relr.dyn
+10  0x00001b58   0x228 0x00001b58   0x228 -r-- RELA        .rela.plt
+11  0x00001d80   0x773 0x00001d80   0x773 -r-- PROGBITS    .rodata
+12  0x000024f4    0x8c 0x000024f4    0x8c -r-- PROGBITS    .eh_frame_hdr
+13  0x00002580   0x20c 0x00002580   0x20c -r-- PROGBITS    .eh_frame
+14  0x00003000  0x1844 0x00003000  0x1844 -r-x PROGBITS    .text
+15  0x00004850   0x190 0x00004850   0x190 -r-x PROGBITS    .plt
+16  0x00005000   0x330 0x00005000   0x330 -rw- PROGBITS    .data.rel.ro
+17  0x00005330    0x10 0x00005330    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00005340   0x230 0x00005340   0x230 -rw- DYNAMIC     .dynamic
+19  0x00005570     0x8 0x00005570     0x8 -rw- PROGBITS    .got
+20  0x00005578    0xd0 0x00005578    0xd0 -rw- PROGBITS    .got.plt
+21  0x00005648    0xeb 0x00000000    0xeb ---- STRTAB      .shstrtab
+22  0x00005733   0x410 0x00000000   0x410 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x000008c3 0x000008c3 7   9    .gnu.hash           utf8    W@3ݲV5o
+3   0x000008de 0x000008de 6   7    .gnu.hash           ascii   VzQN>q
+4   0x000008e5 0x000008e5 14  15   .dynstr             ascii   __cxa_finalize
+5   0x000008f4 0x000008f4 25  26   .dynstr             ascii   HIDL_FETCH_IBTConfigStore
+6   0x0000090e 0x0000090e 127 128  .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014IBTConfigStore11linkToDeathERKN7android2spINS5_8hardware20hidl_death_recipientEEEm
+7   0x0000098e 0x0000098e 133 134  .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014IBTConfigStore12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE
+8   0x00000a14 0x00000a14 155 156  .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014IBTConfigStore12getHashChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS8_10hidl_arrayIhLm32EJEEEEEEEE
+9   0x00000ab0 0x00000ab0 128 129  .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014IBTConfigStore13unlinkToDeathERKN7android2spINS5_8hardware20hidl_death_recipientEEE
+10  0x00000b31 0x00000b31 148 149  .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014IBTConfigStore14interfaceChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS8_11hidl_stringEEEEEE
+11  0x00000bc6 0x00000bc6 137 138  .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014IBTConfigStore19interfaceDescriptorENSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE
+12  0x00000c50 0x00000c50 84  85   .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014IBTConfigStore21notifySyspropsChangedEv
+13  0x00000ca5 0x00000ca5 84  85   .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014IBTConfigStore21setHALInstrumentationEv
+14  0x00000cfa 0x00000cfa 66  67   .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014IBTConfigStore4pingEv
+15  0x00000d3d 0x00000d3d 136 137  .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014IBTConfigStore5debugERKN7android8hardware11hidl_handleERKNS6_8hidl_vecINS6_11hidl_stringEEE
+16  0x00000dc6 0x00000dc6 117 118  .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStore17setVendorPropertyERKNS3_14VendorPropertyE
+17  0x00000e3c 0x00000e3c 184 185  .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStore19getVendorPropertiesEjNSt3__18functionIFvNS3_6ResultERKN7android8hardware8hidl_vecINS3_14VendorPropertyEEEEEE
+18  0x00000ef5 0x00000ef5 157 158  .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStore20getHostAddOnFeaturesENSt3__18functionIFvNS3_6ResultERKNS3_17HostAddOnFeaturesEEEE
+19  0x00000f93 0x00000f93 169 170  .dynstr             ascii   _ZN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStore26getControllerAddOnFeaturesENSt3__18functionIFvNS3_6ResultERKNS3_23ControllerAddOnFeaturesEEEE
+20  0x0000103d 0x0000103d 93  94   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase11linkToDeathERKNS_2spINS_8hardware20hidl_death_recipientEEEm
+21  0x0000109b 0x0000109b 86  87   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase12getDebugInfoENSt3__18functionIFvRKNS2_9DebugInfoEEEE
+22  0x000010f2 0x000010f2 122 123  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase12getHashChainENSt3__18functionIFvRKNS_8hardware8hidl_vecINS6_10hidl_arrayIhLm32EJEEEEEEEE
+23  0x0000116d 0x0000116d 94  95   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase13unlinkToDeathERKNS_2spINS_8hardware20hidl_death_recipientEEE
+24  0x000011cc 0x000011cc 115 116  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase14interfaceChainENSt3__18functionIFvRKNS_8hardware8hidl_vecINS6_11hidl_stringEEEEEE
+25  0x00001240 0x00001240 104 105  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase19interfaceDescriptorENSt3__18functionIFvRKNS_8hardware11hidl_stringEEEE
+26  0x000012a9 0x000012a9 57  58   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase21notifySyspropsChangedEv
+27  0x000012e3 0x000012e3 57  58   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase21setHALInstrumentationEv
+28  0x0000131d 0x0000131d 39  40   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase4pingEv
+29  0x00001345 0x00001345 103 104  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase5debugERKNS_8hardware11hidl_handleERKNS4_8hidl_vecINS4_11hidl_stringEEE
+30  0x000013ad 0x000013ad 33  34   .dynstr             ascii   _ZN7android7RefBase10onFirstRefEv
+31  0x000013cf 0x000013cf 38  39   .dynstr             ascii   _ZN7android7RefBase13onLastWeakRefEPKv
+32  0x000013f6 0x000013f6 40  41   .dynstr             ascii   _ZN7android7RefBase15onLastStrongRefEPKv
+33  0x0000141f 0x0000141f 46  47   .dynstr             ascii   _ZN7android7RefBase20onIncStrongAttemptedEjPKv
+34  0x0000144e 0x0000144e 23  24   .dynstr             ascii   _ZN7android7RefBaseC2Ev
+35  0x00001466 0x00001466 23  24   .dynstr             ascii   _ZN7android7RefBaseD2Ev
+36  0x0000147e 0x0000147e 39  40   .dynstr             ascii   _ZN7android8hardware11hidl_stringC1EPKc
+37  0x000014a6 0x000014a6 37  38   .dynstr             ascii   _ZN7android8hardware11hidl_stringC1Ev
+38  0x000014cc 0x000014cc 37  38   .dynstr             ascii   _ZN7android8hardware11hidl_stringD1Ev
+39  0x000014f2 0x000014f2 41  42   .dynstr             ascii   _ZN7android8hardware11hidl_stringaSERKS1_
+40  0x0000151c 0x0000151c 48  49   .dynstr             ascii   _ZN7android8hardware7details14logAlwaysFatalEPKc
+41  0x0000154d 0x0000154d 87  88   .dynstr             ascii   _ZN7android8hardware9bluetooth4V1_014implementation11DataHandler19GetSoCAddOnFeaturesEv
+42  0x000015a5 0x000015a5 88  89   .dynstr             ascii   _ZN7android8hardware9bluetooth4V1_014implementation11DataHandler20GetHostAddOnFeaturesEv
+43  0x000015fe 0x000015fe 89  90   .dynstr             ascii   _ZN7android8hardware9bluetooth4V1_014implementation11DataHandler21StackTimeoutTriggeredEv
+44  0x00001658 0x00001658 70  71   .dynstr             ascii   _ZN7android8hardware9bluetooth4V1_014implementation11DataHandler3GetEv
+45  0x0000169f 0x0000169f 42  43   .dynstr             ascii   _ZNK7android8hardware11hidl_string5c_strEv
+46  0x000016ca 0x000016ca 110 111  .dynstr             ascii   _ZTCN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStoreE0_N7android4hidl4base4V1_05IBaseE
+47  0x00001739 0x00001739 100 101  .dynstr             ascii   _ZTCN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStoreE0_NS3_14IBTConfigStoreE
+48  0x0000179e 0x0000179e 77  78   .dynstr             ascii   _ZTTN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStoreE
+49  0x000017ec 0x000017ec 77  78   .dynstr             ascii   _ZTVN6vendor3qti8hardware13btconfigstore4V2_014implementation13BTConfigStoreE
+50  0x0000183a 0x0000183a 6   7    .dynstr             ascii   _ZdaPv
+51  0x00001841 0x00001841 6   7    .dynstr             ascii   _ZdlPv
+52  0x00001848 0x00001848 5   6    .dynstr             ascii   _Znam
+53  0x0000184e 0x0000184e 5   6    .dynstr             ascii   _Znwm
+54  0x00001854 0x00001854 19  20   .dynstr             ascii   __android_log_print
+55  0x00001868 0x00001868 18  19   .dynstr             ascii   __cxa_pure_virtual
+56  0x0000187b 0x0000187b 16  17   .dynstr             ascii   __stack_chk_fail
+57  0x0000188c 0x0000188c 5   6    .dynstr             ascii   abort
+58  0x00001892 0x00001892 12  13   .dynstr             ascii   property_get
+59  0x0000189f 0x0000189f 12  13   .dynstr             ascii   property_set
+60  0x000018ac 0x000018ac 6   7    .dynstr             ascii   strcmp
+61  0x000018b3 0x000018b3 9   10   .dynstr             ascii   liblog.so
+62  0x000018bd 0x000018bd 6   7    .dynstr             ascii   LIBLOG
+63  0x000018c4 0x000018c4 7   8    .dynstr             ascii   libc.so
+64  0x000018cc 0x000018cc 4   5    .dynstr             ascii   LIBC
+65  0x000018d1 0x000018d1 10  11   .dynstr             ascii   libbase.so
+66  0x000018dc 0x000018dc 12  13   .dynstr             ascii   libcutils.so
+67  0x000018e9 0x000018e9 14  15   .dynstr             ascii   libhidlbase.so
+68  0x000018f8 0x000018f8 11  12   .dynstr             ascii   libutils.so
+69  0x00001904 0x00001904 40  41   .dynstr             ascii   vendor.qti.hardware.btconfigstore@2.0.so
+70  0x0000192d 0x0000192d 42  43   .dynstr             ascii   android.hardware.bluetooth@1.0-impl-qti.so
+71  0x00001958 0x00001958 9   10   .dynstr             ascii   libc++.so
+72  0x00001962 0x00001962 7   8    .dynstr             ascii   libm.so
+73  0x0000196a 0x0000196a 8   9    .dynstr             ascii   libdl.so
+74  0x00001973 0x00001973 45  46   .dynstr             ascii   vendor.qti.hardware.btconfigstore@2.0-impl.so
+75  0x000019a8 0x000019a8 5   6    .rela.dyn           ascii   APS29
+76  0x000019f0 0x000019f0 6   7    .rela.dyn           ascii   }\b\b\b)\b
+77  0x00001dac 0x00001dac 65  66   .rodata             ascii   !%s:: persist.vendor.qcom.bluetooth.a2dp_offload_cap: %s, ret: %d
+78  0x00001dee 0x00001dee 27  28   .rodata             ascii   ro.vendor.bluetooth.wipower
+79  0x00001e0a 0x00001e0a 38  39   .rodata             ascii   %s:: request not handled vPropType: %d
+80  0x00001e31 0x00001e31 29  30   .rodata             ascii   persist.vendor.fm_wan.ratconf
+81  0x00001e4f 0x00001e4f 50  51   .rodata             ascii   %s:: persist.vendor.btwlan.lpfenabler: %s, ret: %d
+82  0x00001e82 0x00001e82 47  48   .rodata             ascii   persist.vendor.qcom.bluetooth.max_power_support
+83  0x00001eb2 0x00001eb2 46  47   .rodata             ascii   persist.vendor.qcom.bluetooth.a2dp_offload_cap
+84  0x00001ee1 0x00001ee1 58  59   .rodata             ascii   %s:: persist.vendor.qcom.bluetooth.enable.swb: %s, ret: %d
+85  0x00001f1c 0x00001f1c 18  19   .rodata             ascii   vendor.notch.value
+86  0x00001f2f 0x00001f2f 36  37   .rodata             ascii   %s: a2dp_offload_cap string is empty
+87  0x00001f54 0x00001f54 17  18   .rodata             ascii   setVendorProperty
+88  0x00001f66 0x00001f66 5   6    .rodata             ascii   false
+89  0x00001f6c 0x00001f6c 71  72   .rodata             ascii   %s:: persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled: %s, ret: %d
+90  0x00001fb4 0x00001fb4 28  29   .rodata             ascii   %s:: type: 0x%04x, value: %s
+91  0x00001fd1 0x00001fd1 40  41   .rodata             ascii   persist.vendor.qcom.bluetooth.enable.swb
+92  0x00001ffa 0x00001ffa 8   9    .rodata             ascii   ctl.stop
+93  0x00002003 0x00002003 64  65   .rodata             ascii   %s:: persist.vendor.qcom.bluetooth.enable.splita2dp: %s, ret: %d
+94  0x00002044 0x00002044 36  37   .rodata             ascii   %s:: vendor.notch.value: %s, ret: %d
+95  0x00002069 0x00002069 17  18   .rodata             ascii   vendor.hw.fm.init
+96  0x0000207b 0x0000207b 23  24   .rodata             ascii   persist.vendor.fm.stats
+97  0x00002093 0x00002093 43  44   .rodata             ascii   %s:: Bluetooth soc type set to: %s, ret: %d
+98  0x000020c1 0x000020c1 20  21   .rodata             ascii   getHostAddOnFeatures
+99  0x000020d6 0x000020d6 19  20   .rodata             ascii   getVendorProperties
+100 0x000020ea 0x000020ea 6   7    .rodata             ascii   pronto
+101 0x000020f1 0x000020f1 4   5    .rodata             ascii   true
+102 0x000020f6 0x000020f6 49  50   .rodata             ascii   persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled
+103 0x00002128 0x00002128 66  67   .rodata             ascii   %s:: persist.vendor.qcom.bluetooth.twsp_state.enabled: %s, ret: %d
+104 0x0000216b 0x0000216b 17  18   .rodata             ascii   %s:: soc_name: %s
+105 0x0000217d 0x0000217d 9   10   .rodata             ascii   ctl.start
+106 0x00002187 0x00002187 51  52   .rodata             ascii   vendor.qti.hardware.btconfigstore@2.0-BTConfigStore
+107 0x000021bb 0x000021bb 32  33   .rodata             ascii   persist.vendor.btwlan.lpfenabler
+108 0x000021dc 0x000021dc 6   7    .rodata             ascii   %s: %p
+109 0x000021e3 0x000021e3 60  61   .rodata             ascii   %s:: persist.vendor.qcom.bluetooth.enable.swbpm: %s, ret: %d
+110 0x00002220 0x00002220 33  34   .rodata             ascii   persist.vendor.qcom.bluetooth.soc
+111 0x00002242 0x00002242 46  47   .rodata             ascii   persist.vendor.qcom.bluetooth.enable.splita2dp
+112 0x00002271 0x00002271 35  36   .rodata             ascii   %s:: vendor.hw.fm.init: %s, ret: %d
+113 0x00002295 0x00002295 35  36   .rodata             ascii   %s: timeout in stack informing HIDL
+114 0x000022b9 0x000022b9 44  45   .rodata             ascii   hidl_vec can't hold more than 2^32 elements.
+115 0x000022e6 0x000022e6 53  54   .rodata             ascii   persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled
+116 0x0000231c 0x0000231c 67  68   .rodata             ascii   %s:: persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled: %s, ret: %d
+117 0x00002361 0x00002361 42  43   .rodata             ascii   persist.vendor.qcom.bluetooth.enable.swbpm
+118 0x0000238c 0x0000238c 62  63   .rodata             ascii   %s:persist.vendor.qcom.bluetooth.a2dp_offload_cap: %s, ret: %d
+119 0x000023cb 0x000023cb 48  49   .rodata             ascii   persist.vendor.qcom.bluetooth.twsp_state.enabled
+120 0x000023fc 0x000023fc 17  18   .rodata             ascii   vendor.hw.fm.mode
+121 0x0000240e 0x0000240e 45  46   .rodata             ascii   %s:: ro.vendor.bluetooth.wipower: %s, ret: %d
+122 0x0000243c 0x0000243c 41  42   .rodata             ascii   %s:: persist.vendor.fm.stats: %s, ret: %d
+123 0x00002466 0x00002466 47  48   .rodata             ascii   %s:: persist.vendor.fm_wan.ratconf: %s, ret: %d
+124 0x00002496 0x00002496 26  27   .rodata             ascii   getControllerAddOnFeatures
+125 0x000024b1 0x000024b1 65  66   .rodata             ascii   %s:: persist.vendor.qcom.bluetooth.max_power_support: %s, ret: %d
+126 0x00003087 0x00003087 8   14   .text               utf8    <`J<ǁ=Á=
+127 0x0000309f 0x0000309f 4   6    .text               utf8    =`D<
+128 0x000030b7 0x000030b7 4   6    .text               utf8    =@J<
+129 0x000030cf 0x000030cf 4   6    .text               utf8    =@D<
+130 0x00003123 0x00003123 4   6    .text               utf8    = D<
+131 0x0000314c 0x0000314c 7   8    .text               ascii   +yhxJ\t\v
+132 0x0000355d 0x0000355d 4   5    .text               ascii   sA9h
+133 0x0000363c 0x0000363c 7   8    .text               ascii   Lyixk\t\f
+134 0x000036e1 0x000036e1 5   6    .text               ascii   sA9(Y
+135 0x00003799 0x00003799 5   6    .text               ascii   sA9hS
+136 0x00003d01 0x00003d01 5   6    .text               ascii   sA9((
+137 0x00003db9 0x00003db9 5   6    .text               ascii   sA9h"
+138 0x00003f65 0x00003f65 4   5    .text               ascii   sA9\b
+139 0x000040fd 0x000040fd 5   6    .text               ascii   sA9H\b
+140 0x00004340 0x00004340 7   8    .text               ascii   +ih8J\t\v
+141 0x00005649 0x00000001 11  12   .shstrtab           ascii   .fini_array
+142 0x00005655 0x0000000d 5   6    .shstrtab           ascii   .text
+143 0x0000565b 0x00000013 4   5    .shstrtab           ascii   .got
+144 0x00005660 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+145 0x00005674 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+146 0x0000567d 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+147 0x00005687 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+148 0x0000568f 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+149 0x0000569d 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+150 0x000056ac 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+151 0x000056b9 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+152 0x000056c3 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+153 0x000056cd 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+154 0x000056da 0x00000092 7   8    .shstrtab           ascii   .dynsym
+155 0x000056e2 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+156 0x000056ec 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+157 0x000056f6 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+158 0x00005709 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+159 0x00005712 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+160 0x0000571c 0x000000d4 7   8    .shstrtab           ascii   .rodata
+161 0x00005724 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+162 0x00005734 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+163 0x000057d4 0x000000a1 4   5    .gnu_debugdata      ascii   B8*w
+164 0x000057fd 0x000000ca 4   5    .gnu_debugdata      ascii   M@j;
+165 0x0000580a 0x000000d7 7   8    .gnu_debugdata      ascii   \a\e[\n\b8\a
+166 0x00005838 0x00000105 5   6    .gnu_debugdata      ascii   Lx+ p
+167 0x00005849 0x00000116 5   6    .gnu_debugdata      ascii   Xh7ry
+168 0x000058ec 0x000001b9 4   5    .gnu_debugdata      ascii   f?SI
+169 0x00005924 0x000001f1 5   6    .gnu_debugdata      ascii   E)\t,c
+170 0x0000592d 0x000001fa 4   6    .gnu_debugdata      utf8    >\eҒ{
+171 0x00005969 0x00000236 5   9    .gnu_debugdata      utf8    ǘ\n٬ɐ{
+172 0x00005981 0x0000024e 4   5    .gnu_debugdata      ascii   pvG\v
+173 0x000059bd 0x0000028a 4   5    .gnu_debugdata      ascii   HDvF
+174 0x00005a16 0x000002e3 4   5    .gnu_debugdata      ascii   >\n\\r
+175 0x00005a3f 0x0000030c 9   10   .gnu_debugdata      ascii   L[T])dBY\n
+176 0x00005a5d 0x0000032a 4   6    .gnu_debugdata      utf8    \Wtȼ
+177 0x00005a82 0x0000034f 4   5    .gnu_debugdata      ascii   .9\ee
+178 0x00005aa8 0x00000375 4   5    .gnu_debugdata      ascii   ef_S
+179 0x00005ace 0x0000039b 4   5    .gnu_debugdata      ascii   hd\vn
+180 0x00005ad3 0x000003a0 5   6    .gnu_debugdata      ascii   EOcF_
+181 0x00005af4 0x000003c1 4   5    .gnu_debugdata      ascii   \aU^1
+0x00004870    1     16 sym.imp.__cxa_finalize
+0x00004890    1     16 sym.imp.__android_log_print
+0x000048d0    1     16 sym.imp.__stack_chk_fail
+0x000049d0    1     16 sym.imp.abort
+0x00004880    1     16 sym.imp.property_get
+0x00004920    1     16 sym.imp.property_set
+0x000048f0    1     16 sym.imp.strcmp
+0x00003000    1     12 entry0
+0x00004618    1     88 sym.HIDL_FETCH_IBTConfigStore
+0x00004950    1     16 sym.imp.operator_new_unsigned_long_
+0x00004960    1     16 fcn.00004960
+0x000042d8    7    232 method.vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore.setVendorProperty_vendor::qti::hardware::btconfigstore::V2_0::VendorProperty_const_
+0x00004504   11    276 method.vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore.getControllerAddOnFeatures_std::__1::function_void__vendor::qti::hardware::btconfigstore::V2_0::Result__vendor::qti::hardware::btconfigstore::V2_0::ControllerAddOnFeatures_co
+0x00003014   16    576 method.vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore.getVendorProperties_unsigned_int__std::__1::function_void__vendor::qti::hardware::btconfigstore::V2_0::Result__android::hardware::hidl_vec_vendor::qti::hardware::btconfigstor
+0x00004400   12    260 method.vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore.getHostAddOnFeatures_std::__1::function_void__vendor::qti::hardware::btconfigstore::V2_0::Result__vendor::qti::hardware::btconfigstore::V2_0::HostAddOnFeatures_const___
+0x00004970    1     16 sym.imp.android::RefBase::RefBase__
+0x000048a0    1     16 sym.imp.android::hardware::hidl_string::hidl_string_char_const_
+0x000049b0    1     16 fcn.000049b0
+0x000048b0    1     16 sym.imp.android::hardware::hidl_string::hidl_string__
+0x000049c0    1     16 sym.imp.android::hardware::hidl_string::operator_android::hardware::hidl_string_const_
+0x00004990    1     16 sym.imp.android::hardware::details::logAlwaysFatal_char_const_
+0x00004940    1     16 sym.imp.android::hardware::bluetooth::V1_0::implementation::DataHandler::GetSoCAddOnFeatures__
+0x00004930    1     16 sym.imp.android::hardware::bluetooth::V1_0::implementation::DataHandler::GetHostAddOnFeatures__
+0x00004910    1     16 sym.imp.android::hardware::bluetooth::V1_0::implementation::DataHandler::StackTimeoutTriggered__
+0x00004900    1     16 sym.imp.android::hardware::bluetooth::V1_0::implementation::DataHandler::Get__
+0x000048e0    1     16 sym.imp.android::hardware::hidl_string::c_str___const
+0x000048c0    1     16 sym.imp.operator_delete___void_
+0x00004980    1     16 sym.imp.operator_delete_void_
+0x000049a0    1     16 sym.imp.operator_new___unsigned_long_
+0x00003010    1      4 entry.fini0
+0x000046f0   16    328 method.android::hardware::hidl_vec_vendor::qti::hardware::btconfigstore::V2_0::VendorProperty_.operator_std::initializer_list_vendor::qti::hardware::btconfigstore::V2_0::VendorProperty__
+0x00004838    1     12 method.std::__1.__throw_bad_function_call__
+0x00004670    1      8 method.vendor::qti::hardware::btconfigstore::V2_0::IBTConfigStore.isRemote___const
+0x00004678    1      4 method.vendor::qti::hardware::btconfigstore::V2_0::IBTConfigStore.IBTConfigStore__
+0x00004684    1     40 method.android::hidl::base::V1_0::IBase.IBase__
+0x000046c0    1     48 method.virtual_thunk_to_vendor::qti::hardware::btconfigstore::V2_0::implementation::BTConfigStore.BTConfigStore__
+0x00003554    7    208 fcn.00003554
+0x000036d8    9    116 fcn.000036d8
+0x00003790    6     68 fcn.00003790
+0x00003848    6     68 fcn.00003848
+0x00003900    6     68 fcn.00003900
+0x000039b0    7     92 fcn.000039b0
+0x00003a9c    7    120 fcn.00003a9c
+0x00003b88    6     68 fcn.00003b88
+0x00003c40    6     68 fcn.00003c40
+0x00003cf8    6     68 fcn.00003cf8
+0x00003db0    6     68 fcn.00003db0
+0x00003e68    6     68 fcn.00003e68
+0x00003f5c    6     68 fcn.00003f5c
+0x00004028    6     68 fcn.00004028
+0x000040f4    6     68 fcn.000040f4
+0x000041c0    5     64 fcn.000041c0
+0x00004850    1     20 section..plt

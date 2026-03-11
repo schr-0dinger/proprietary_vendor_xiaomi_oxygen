@@ -1,0 +1,128 @@
+arch     arm
+baddr    0x0
+binsz    9612
+bintype  elf
+bits     64
+canary   false
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                      demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+2   0x0000101c 0x0000101c GLOBAL FUNC 8        HdcpSrm_CheckDeviceIdList
+3   0x00001024 0x00001024 GLOBAL FUNC 8        HdcpSrm_GetSrmVersion
+4   0x0000102c 0x0000102c GLOBAL FUNC 8        HdcpSrm_InitSrm
+5   0x0000103c 0x0000103c GLOBAL FUNC 8        HdcpSrm_Initialize
+6   0x00001034 0x00001034 GLOBAL FUNC 8        HdcpSrm_RemoveSrm
+7   0x00001044 0x00001044 GLOBAL FUNC 8        HdcpSrm_Uninitialize
+8   0x00001014 0x00001014 GLOBAL FUNC 8        HdcpSrm_UpdateSrm
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000238   0x18 0x00000238   0x18 -r-- NOTE        .note.android.ident
+2   0x00000250   0x20 0x00000250   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270   0xd8 0x00000270   0xd8 -r-- DYNSYM      .dynsym
+4   0x00000348   0x12 0x00000348   0x12 -r-- GNU_VERSYM  .gnu.version
+5   0x0000035c   0x20 0x0000035c   0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000380   0x40 0x00000380   0x40 -r-- GNU_HASH    .gnu.hash
+7   0x000003c0   0xed 0x000003c0   0xed -r-- STRTAB      .dynstr
+8   0x000004b0   0x10 0x000004b0   0x10 -r-- ----        .relr.dyn
+9   0x000004c0   0x18 0x000004c0   0x18 -r-- RELA        .rela.plt
+10  0x000004d8   0x5c 0x000004d8   0x5c -r-- PROGBITS    .eh_frame_hdr
+11  0x00000538  0x10c 0x00000538  0x10c -r-- PROGBITS    .eh_frame
+12  0x00001000   0x4c 0x00001000   0x4c -r-x PROGBITS    .text
+13  0x00001050   0x30 0x00001050   0x30 -r-x PROGBITS    .plt
+14  0x00002000    0x8 0x00002000    0x8 -rw- PROGBITS    .data.rel.ro
+15  0x00002008   0x10 0x00002008   0x10 -rw- FINI_ARRAY  .fini_array
+16  0x00002018  0x1b0 0x00002018  0x1b0 -rw- DYNAMIC     .dynamic
+17  0x000021c8   0x20 0x000021c8   0x20 -rw- PROGBITS    .got.plt
+18  0x000021e8   0xd4 0x00000000   0xd4 ---- STRTAB      .shstrtab
+19  0x000022bc  0x2d0 0x00000000  0x2d0 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x000003c1 0x000003c1 14  15   .dynstr             ascii   __cxa_finalize
+3   0x000003d0 0x000003d0 25  26   .dynstr             ascii   HdcpSrm_CheckDeviceIdList
+4   0x000003ea 0x000003ea 21  22   .dynstr             ascii   HdcpSrm_GetSrmVersion
+5   0x00000400 0x00000400 15  16   .dynstr             ascii   HdcpSrm_InitSrm
+6   0x00000410 0x00000410 18  19   .dynstr             ascii   HdcpSrm_Initialize
+7   0x00000423 0x00000423 17  18   .dynstr             ascii   HdcpSrm_RemoveSrm
+8   0x00000435 0x00000435 20  21   .dynstr             ascii   HdcpSrm_Uninitialize
+9   0x0000044a 0x0000044a 17  18   .dynstr             ascii   HdcpSrm_UpdateSrm
+10  0x0000045c 0x0000045c 7   8    .dynstr             ascii   libc.so
+11  0x00000464 0x00000464 4   5    .dynstr             ascii   LIBC
+12  0x00000469 0x00000469 9   10   .dynstr             ascii   liblog.so
+13  0x00000473 0x00000473 16  17   .dynstr             ascii   libQSEEComAPI.so
+14  0x00000484 0x00000484 9   10   .dynstr             ascii   libc++.so
+15  0x0000048e 0x0000048e 7   8    .dynstr             ascii   libm.so
+16  0x00000496 0x00000496 8   9    .dynstr             ascii   libdl.so
+17  0x0000049f 0x0000049f 13  14   .dynstr             ascii   libhdcpsrm.so
+18  0x000021e9 0x00000001 11  12   .shstrtab           ascii   .fini_array
+19  0x000021f5 0x0000000d 5   6    .shstrtab           ascii   .text
+20  0x000021fb 0x00000013 19  20   .shstrtab           ascii   .note.android.ident
+21  0x0000220f 0x00000027 8   9    .shstrtab           ascii   .got.plt
+22  0x00002218 0x00000030 9   10   .shstrtab           ascii   .rela.plt
+23  0x00002222 0x0000003a 7   8    .shstrtab           ascii   .dynstr
+24  0x0000222a 0x00000042 13  14   .shstrtab           ascii   .eh_frame_hdr
+25  0x00002238 0x00000050 14  15   .shstrtab           ascii   .gnu.version_r
+26  0x00002247 0x0000005f 12  13   .shstrtab           ascii   .data.rel.ro
+27  0x00002254 0x0000006c 9   10   .shstrtab           ascii   .relr.dyn
+28  0x0000225e 0x00000076 12  13   .shstrtab           ascii   .gnu.version
+29  0x0000226b 0x00000083 7   8    .shstrtab           ascii   .dynsym
+30  0x00002273 0x0000008b 9   10   .shstrtab           ascii   .gnu.hash
+31  0x0000227d 0x00000095 9   10   .shstrtab           ascii   .eh_frame
+32  0x00002287 0x0000009f 18  19   .shstrtab           ascii   .note.gnu.build-id
+33  0x0000229a 0x000000b2 8   9    .shstrtab           ascii   .dynamic
+34  0x000022a3 0x000000bb 9   10   .shstrtab           ascii   .shstrtab
+35  0x000022ad 0x000000c5 14  15   .shstrtab           ascii   .gnu_debugdata
+36  0x000022bd 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+37  0x00002319 0x0000005d 4   5    .gnu_debugdata      ascii   \fCS\e
+38  0x0000234d 0x00000091 4   5    .gnu_debugdata      ascii    r[E
+39  0x00002398 0x000000dc 7   8    .gnu_debugdata      ascii   ZvUY&Ns
+40  0x000023e2 0x00000126 5   7    .gnu_debugdata      utf8    6bU£%
+41  0x000023f0 0x00000134 6   7    .gnu_debugdata      ascii   MAtt\vN
+42  0x0000245f 0x000001a3 4   5    .gnu_debugdata      ascii   $2W(
+43  0x00002488 0x000001cc 5   7    .gnu_debugdata      utf8     'Ƿ!O
+44  0x00002492 0x000001d6 4   5    .gnu_debugdata      ascii   *Fz@
+45  0x000024a2 0x000001e6 8   10   .gnu_debugdata      utf8    ĸmH}\r#3d
+46  0x00002503 0x00000247 6   7    .gnu_debugdata      ascii   X|(s\nN
+47  0x0000250d 0x00000251 4   6    .gnu_debugdata      utf8    w۶%k
+48  0x00002516 0x0000025a 4   5    .gnu_debugdata      ascii   e{Y\t
+49  0x0000251b 0x0000025f 5   6    .gnu_debugdata      ascii   \fqVZO
+50  0x00002526 0x0000026a 6   8    .gnu_debugdata      utf8    !Џiy1\
+51  0x00002543 0x00000287 7   9    .gnu_debugdata      utf8    P|\\r&o
+0x00001070    1     16 sym.imp.__cxa_finalize
+0x00001000    1     12 entry0
+0x0000101c    1      8 sym.HdcpSrm_CheckDeviceIdList
+0x00001024    1      8 sym.HdcpSrm_GetSrmVersion
+0x0000102c    1      8 sym.HdcpSrm_InitSrm
+0x0000103c    1      8 sym.HdcpSrm_Initialize
+0x00001034    1      8 sym.HdcpSrm_RemoveSrm
+0x00001044    1      8 sym.HdcpSrm_Uninitialize
+0x00001014    1      8 sym.HdcpSrm_UpdateSrm
+0x00001010    1      4 entry.fini0
+0x00001050    1     20 section..plt

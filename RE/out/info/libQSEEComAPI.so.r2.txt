@@ -1,0 +1,591 @@
+arch     arm
+baddr    0x0
+binsz    39280
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+32  0x00006360 0x00006360 GLOBAL FUNC 248      QSEECom_unload_external_elf
+33  0x000066f8 0x000066f8 GLOBAL FUNC 244      QSEECom_unregister_listener
+34  0x00005014 0x00005014 GLOBAL FUNC 1180     __QSEECom_get_handle
+35  0x00008108 0x00008108 GLOBAL FUNC 28       __ubsan_handle_alignment_assumption_minimal_abort
+36  0x00006028 0x00006028 GLOBAL FUNC 340      __QSEECom_dealloc_memory
+37  0x00008808 0x00008808 GLOBAL FUNC 28       __ubsan_handle_cfi_check_fail_minimal_abort
+38  0x000082c0 0x000082c0 GLOBAL FUNC 28       __ubsan_handle_divrem_overflow_minimal_abort
+39  0x0000845c 0x0000845c GLOBAL FUNC 60       __ubsan_handle_float_cast_overflow_minimal
+40  0x000085f8 0x000085f8 GLOBAL FUNC 28       __ubsan_handle_implicit_conversion_minimal_abort
+41  0x00008614 0x00008614 GLOBAL FUNC 60       __ubsan_handle_nonnull_arg_minimal
+42  0x00007f40 0x00007f40 GLOBAL FUNC 60       __ubsan_handle_type_mismatch_minimal
+43  0x00006880 0x00006880 GLOBAL FUNC 608      QSEECom_send_cmd
+44  0x00007bac 0x00007bac GLOBAL FUNC 396      __QSEECom_send_modified_resp
+45  0x000081b8 0x000081b8 GLOBAL FUNC 28       __ubsan_handle_sub_overflow_minimal_abort
+46  0x00008124 0x00008124 GLOBAL FUNC 60       __ubsan_handle_add_overflow_minimal
+47  0x00008404 0x00008404 GLOBAL FUNC 60       __ubsan_handle_vla_bound_not_positive_minimal
+48  0x00006dbc 0x00006dbc GLOBAL FUNC 344      QSEECom_receive_req
+49  0x00006458 0x00006458 GLOBAL FUNC 672      QSEECom_register_listener
+50  0x00005fe8 0x00005fe8 GLOBAL FUNC 32       QSEECom_start_app
+51  0x000067ec 0x000067ec GLOBAL FUNC 148      __QSEECom_validate_send_cmd_inputs
+52  0x00007e04 0x00007e04 GLOBAL FUNC 160      QSEECom_get_app_info
+53  0x000077b4 0x000077b4 GLOBAL FUNC 300      QSEECom_wipe_key
+54  0x0000838c 0x0000838c GLOBAL FUNC 60       __ubsan_handle_builtin_unreachable_minimal
+55  0x000085bc 0x000085bc GLOBAL FUNC 60       __ubsan_handle_implicit_conversion_minimal
+56  0x00007d40 0x00007d40 GLOBAL FUNC 8        QSEECom_send_modified_resp_64
+57  0x00007a08 0x00007a08 GLOBAL FUNC 420      QSEECom_update_key_user_info
+58  0x00008370 0x00008370 GLOBAL FUNC 28       __ubsan_handle_out_of_bounds_minimal_abort
+59  0x00008268 0x00008268 GLOBAL FUNC 28       __ubsan_handle_negate_overflow_minimal_abort
+60  0x00008564 0x00008564 GLOBAL FUNC 60       __ubsan_handle_function_type_mismatch_minimal
+61  0x00008650 0x00008650 GLOBAL FUNC 28       __ubsan_handle_nonnull_arg_minimal_abort
+62  0x0000871c 0x0000871c GLOBAL FUNC 60       __ubsan_handle_nullability_return_minimal
+63  0x00008098 0x00008098 GLOBAL FUNC 28       __ubsan_handle_type_mismatch_minimal_abort
+64  0x0000701c 0x0000701c GLOBAL FUNC 140      QSEECom_set_bandwidth
+65  0x0000617c 0x0000617c GLOBAL FUNC 8        QSEECom_shutdown_app
+66  0x0000866c 0x0000866c GLOBAL FUNC 60       __ubsan_handle_nonnull_return_minimal
+67  0x000087b0 0x000087b0 GLOBAL FUNC 28       __ubsan_handle_pointer_overflow_minimal_abort
+68  0x00007d48 0x00007d48 GLOBAL FUNC 188      QSEECom_scale_bus_bandwidth
+69  0x00006008 0x00006008 GLOBAL FUNC 32       QSEECom_start_app_V2
+70  0x000076cc 0x000076cc GLOBAL FUNC 232      __QSEECom_wipe_clear_key
+71  0x00008284 0x00008284 GLOBAL FUNC 60       __ubsan_handle_divrem_overflow_minimal
+72  0x000084b4 0x000084b4 GLOBAL FUNC 60       __ubsan_handle_load_invalid_value_minimal
+73  0x000086c4 0x000086c4 GLOBAL FUNC 60       __ubsan_handle_nullability_arg_minimal
+74  0x00008774 0x00008774 GLOBAL FUNC 60       __ubsan_handle_pointer_overflow_minimal
+75  0x000085a0 0x000085a0 GLOBAL FUNC 28       __ubsan_handle_function_type_mismatch_minimal_abort
+76  0x000081d4 0x000081d4 GLOBAL FUNC 60       __ubsan_handle_mul_overflow_minimal
+77  0x0000822c 0x0000822c GLOBAL FUNC 60       __ubsan_handle_negate_overflow_minimal
+78  0x000082dc 0x000082dc GLOBAL FUNC 60       __ubsan_handle_shift_out_of_bounds_minimal
+79  0x000078e0 0x000078e0 GLOBAL FUNC 296      QSEECom_clear_key
+80  0x000086a8 0x000086a8 GLOBAL FUNC 28       __ubsan_handle_nonnull_return_minimal_abort
+81  0x00008334 0x00008334 GLOBAL FUNC 60       __ubsan_handle_out_of_bounds_minimal
+82  0x00008318 0x00008318 GLOBAL FUNC 28       __ubsan_handle_shift_out_of_bounds_minimal_abort
+83  0x0000817c 0x0000817c GLOBAL FUNC 60       __ubsan_handle_sub_overflow_minimal
+84  0x000054b0 0x000054b0 GLOBAL FUNC 364      QSEECom_app_load_query
+85  0x00006dac 0x00006dac GLOBAL FUNC 8        QSEECom_send_modified_cmd
+86  0x00007d38 0x00007d38 GLOBAL FUNC 8        QSEECom_send_modified_resp
+87  0x00007288 0x00007288 GLOBAL FUNC 716      QSEECom_send_service_cmd
+88  0x00008498 0x00008498 GLOBAL FUNC 28       __ubsan_handle_float_cast_overflow_minimal_abort
+89  0x00008548 0x00008548 GLOBAL FUNC 28       __ubsan_handle_invalid_builtin_minimal_abort
+90  0x00008210 0x00008210 GLOBAL FUNC 28       __ubsan_handle_mul_overflow_minimal_abort
+91  0x00006db4 0x00006db4 GLOBAL FUNC 8        QSEECom_send_modified_cmd_64
+92  0x00008700 0x00008700 GLOBAL FUNC 28       __ubsan_handle_nullability_arg_minimal_abort
+93  0x00008440 0x00008440 GLOBAL FUNC 28       __ubsan_handle_vla_bound_not_positive_minimal_abort
+94  0x00007554 0x00007554 GLOBAL FUNC 376      QSEECom_create_key
+95  0x000080cc 0x000080cc GLOBAL FUNC 60       __ubsan_handle_alignment_assumption_minimal
+96  0x0000850c 0x0000850c GLOBAL FUNC 60       __ubsan_handle_invalid_builtin_minimal
+97  0x000083c8 0x000083c8 GLOBAL FUNC 60       __ubsan_handle_missing_return_minimal
+98  0x00006f14 0x00006f14 GLOBAL FUNC 264      QSEECom_send_resp
+99  0x000070a8 0x000070a8 GLOBAL FUNC 480      __QSEECom_issue_send_service_cmd
+100 0x00006ae0 0x00006ae0 GLOBAL FUNC 716      __QSEECom_send_modified_cmd
+101 0x000087cc 0x000087cc GLOBAL FUNC 60       __ubsan_handle_cfi_check_fail_minimal
+102 0x00006184 0x00006184 GLOBAL FUNC 476      QSEECom_load_external_elf
+103 0x00008160 0x00008160 GLOBAL FUNC 28       __ubsan_handle_add_overflow_minimal_abort
+104 0x000084f0 0x000084f0 GLOBAL FUNC 28       __ubsan_handle_load_invalid_value_minimal_abort
+105 0x00008758 0x00008758 GLOBAL FUNC 28       __ubsan_handle_nullability_return_minimal_abort
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x9f0 0x000002a8   0x9f0 -r-- DYNSYM      .dynsym
+4   0x00000c98    0xd4 0x00000c98    0xd4 -r-- GNU_VERSYM  .gnu.version
+5   0x00000d6c    0x50 0x00000d6c    0x50 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000dc0   0x200 0x00000dc0   0x200 -r-- GNU_HASH    .gnu.hash
+7   0x00000fc0   0xbd9 0x00000fc0   0xbd9 -r-- STRTAB      .dynstr
+8   0x00001ba0    0x12 0x00001ba0    0x12 -r-- ----        .rela.dyn
+9   0x00001bb8    0x10 0x00001bb8    0x10 -r-- ----        .relr.dyn
+10  0x00001bc8   0x3c0 0x00001bc8   0x3c0 -r-- RELA        .rela.plt
+11  0x00001f88  0x17c3 0x00001f88  0x17c3 -r-- PROGBITS    .rodata
+12  0x0000374c   0x2ac 0x0000374c   0x2ac -r-- PROGBITS    .eh_frame_hdr
+13  0x000039f8   0x984 0x000039f8   0x984 -r-- PROGBITS    .eh_frame
+14  0x00005000  0x3824 0x00005000  0x3824 -r-x PROGBITS    .text
+15  0x00008830   0x2a0 0x00008830   0x2a0 -r-x PROGBITS    .plt
+16  0x00009000     0x8 0x00009000     0x8 -rw- PROGBITS    .data.rel.ro
+17  0x00009008    0x10 0x00009008    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00009018   0x200 0x00009018   0x200 -rw- DYNAMIC     .dynamic
+19  0x00009218     0x8 0x00009218     0x8 -rw- PROGBITS    .got
+20  0x00009220   0x158 0x00009220   0x158 -rw- PROGBITS    .got.plt
+21  0x00009378     0x0 0x0000a378    0xa8 -rw- NOBITS      .bss
+22  0x00009378    0xf0 0x00000000    0xf0 ---- STRTAB      .shstrtab
+23  0x00009468   0x508 0x00000000   0x508 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00000e50 0x00000e50 14  60   .gnu.hash           utf32le  $+048;@DKOST[
+3   0x00000ec3 0x00000ec3 4   5    .gnu.hash           ascii   wNWo
+4   0x00000edd 0x00000edd 4   6    .gnu.hash           utf8    ,Ց>}
+5   0x00000f20 0x00000f20 4   6    .gnu.hash           utf8    0ӟ}7
+6   0x00000fc1 0x00000fc1 14  15   .dynstr             ascii   __cxa_finalize
+7   0x00000fd0 0x00000fd0 22  23   .dynstr             ascii   QSEECom_app_load_query
+8   0x00000fe7 0x00000fe7 17  18   .dynstr             ascii   QSEECom_clear_key
+9   0x00000ff9 0x00000ff9 18  19   .dynstr             ascii   QSEECom_create_key
+10  0x0000100c 0x0000100c 20  21   .dynstr             ascii   QSEECom_get_app_info
+11  0x00001021 0x00001021 25  26   .dynstr             ascii   QSEECom_load_external_elf
+12  0x0000103b 0x0000103b 19  20   .dynstr             ascii   QSEECom_receive_req
+13  0x0000104f 0x0000104f 25  26   .dynstr             ascii   QSEECom_register_listener
+14  0x00001069 0x00001069 27  28   .dynstr             ascii   QSEECom_scale_bus_bandwidth
+15  0x00001085 0x00001085 16  17   .dynstr             ascii   QSEECom_send_cmd
+16  0x00001096 0x00001096 25  26   .dynstr             ascii   QSEECom_send_modified_cmd
+17  0x000010b0 0x000010b0 28  29   .dynstr             ascii   QSEECom_send_modified_cmd_64
+18  0x000010cd 0x000010cd 26  27   .dynstr             ascii   QSEECom_send_modified_resp
+19  0x000010e8 0x000010e8 29  30   .dynstr             ascii   QSEECom_send_modified_resp_64
+20  0x00001106 0x00001106 17  18   .dynstr             ascii   QSEECom_send_resp
+21  0x00001118 0x00001118 24  25   .dynstr             ascii   QSEECom_send_service_cmd
+22  0x00001131 0x00001131 21  22   .dynstr             ascii   QSEECom_set_bandwidth
+23  0x00001147 0x00001147 20  21   .dynstr             ascii   QSEECom_shutdown_app
+24  0x0000115c 0x0000115c 17  18   .dynstr             ascii   QSEECom_start_app
+25  0x0000116e 0x0000116e 20  21   .dynstr             ascii   QSEECom_start_app_V2
+26  0x00001183 0x00001183 27  28   .dynstr             ascii   QSEECom_unload_external_elf
+27  0x0000119f 0x0000119f 27  28   .dynstr             ascii   QSEECom_unregister_listener
+28  0x000011bb 0x000011bb 28  29   .dynstr             ascii   QSEECom_update_key_user_info
+29  0x000011d8 0x000011d8 16  17   .dynstr             ascii   QSEECom_wipe_key
+30  0x000011e9 0x000011e9 24  25   .dynstr             ascii   __QSEECom_dealloc_memory
+31  0x00001202 0x00001202 20  21   .dynstr             ascii   __QSEECom_get_handle
+32  0x00001217 0x00001217 32  33   .dynstr             ascii   __QSEECom_issue_send_service_cmd
+33  0x00001238 0x00001238 27  28   .dynstr             ascii   __QSEECom_send_modified_cmd
+34  0x00001254 0x00001254 28  29   .dynstr             ascii   __QSEECom_send_modified_resp
+35  0x00001271 0x00001271 34  35   .dynstr             ascii   __QSEECom_validate_send_cmd_inputs
+36  0x00001294 0x00001294 24  25   .dynstr             ascii   __QSEECom_wipe_clear_key
+37  0x000012ad 0x000012ad 19  20   .dynstr             ascii   __android_log_print
+38  0x000012c1 0x000012c1 7   8    .dynstr             ascii   __errno
+39  0x000012c9 0x000012c9 8   9    .dynstr             ascii   __open_2
+40  0x000012d2 0x000012d2 10  11   .dynstr             ascii   __read_chk
+41  0x000012dd 0x000012dd 16  17   .dynstr             ascii   __stack_chk_fail
+42  0x000012ee 0x000012ee 13  14   .dynstr             ascii   __strlcpy_chk
+43  0x000012fc 0x000012fc 12  13   .dynstr             ascii   __strlen_chk
+44  0x00001309 0x00001309 41  42   .dynstr             ascii   __ubsan_handle_add_overflow_minimal_abort
+45  0x00001333 0x00001333 44  45   .dynstr             ascii   __ubsan_handle_negate_overflow_minimal_abort
+46  0x00001360 0x00001360 41  42   .dynstr             ascii   __ubsan_handle_sub_overflow_minimal_abort
+47  0x0000138a 0x0000138a 5   6    .dynstr             ascii   close
+48  0x00001390 0x00001390 6   7    .dynstr             ascii   fclose
+49  0x00001397 0x00001397 6   7    .dynstr             ascii   ferror
+50  0x0000139e 0x0000139e 5   6    .dynstr             ascii   fopen
+51  0x000013a4 0x000013a4 14  15   .dynstr             ascii   fread_unlocked
+52  0x000013b3 0x000013b3 4   5    .dynstr             ascii   free
+53  0x000013b8 0x000013b8 5   6    .dynstr             ascii   fstat
+54  0x000013be 0x000013be 5   6    .dynstr             ascii   ioctl
+55  0x000013c4 0x000013c4 12  13   .dynstr             ascii   ion_alloc_fd
+56  0x000013d1 0x000013d1 9   10   .dynstr             ascii   ion_close
+57  0x000013db 0x000013db 8   9    .dynstr             ascii   ion_open
+58  0x000013e4 0x000013e4 6   7    .dynstr             ascii   malloc
+59  0x000013eb 0x000013eb 6   7    .dynstr             ascii   memcpy
+60  0x000013f2 0x000013f2 6   7    .dynstr             ascii   memset
+61  0x000013f9 0x000013f9 4   5    .dynstr             ascii   mmap
+62  0x000013fe 0x000013fe 6   7    .dynstr             ascii   munmap
+63  0x00001405 0x00001405 6   7    .dynstr             ascii   perror
+64  0x0000140c 0x0000140c 7   8    .dynstr             ascii   strnlen
+65  0x00001414 0x00001414 9   10   .dynstr             ascii   vsnprintf
+66  0x0000141e 0x0000141e 35  36   .dynstr             ascii   __ubsan_handle_add_overflow_minimal
+67  0x00001442 0x00001442 43  44   .dynstr             ascii   __ubsan_handle_alignment_assumption_minimal
+68  0x0000146e 0x0000146e 49  50   .dynstr             ascii   __ubsan_handle_alignment_assumption_minimal_abort
+69  0x000014a0 0x000014a0 42  43   .dynstr             ascii   __ubsan_handle_builtin_unreachable_minimal
+70  0x000014cb 0x000014cb 37  38   .dynstr             ascii   __ubsan_handle_cfi_check_fail_minimal
+71  0x000014f1 0x000014f1 43  44   .dynstr             ascii   __ubsan_handle_cfi_check_fail_minimal_abort
+72  0x0000151d 0x0000151d 38  39   .dynstr             ascii   __ubsan_handle_divrem_overflow_minimal
+73  0x00001544 0x00001544 44  45   .dynstr             ascii   __ubsan_handle_divrem_overflow_minimal_abort
+74  0x00001571 0x00001571 42  43   .dynstr             ascii   __ubsan_handle_float_cast_overflow_minimal
+75  0x0000159c 0x0000159c 48  49   .dynstr             ascii   __ubsan_handle_float_cast_overflow_minimal_abort
+76  0x000015cd 0x000015cd 45  46   .dynstr             ascii   __ubsan_handle_function_type_mismatch_minimal
+77  0x000015fb 0x000015fb 51  52   .dynstr             ascii   __ubsan_handle_function_type_mismatch_minimal_abort
+78  0x0000162f 0x0000162f 42  43   .dynstr             ascii   __ubsan_handle_implicit_conversion_minimal
+79  0x0000165a 0x0000165a 48  49   .dynstr             ascii   __ubsan_handle_implicit_conversion_minimal_abort
+80  0x0000168b 0x0000168b 38  39   .dynstr             ascii   __ubsan_handle_invalid_builtin_minimal
+81  0x000016b2 0x000016b2 44  45   .dynstr             ascii   __ubsan_handle_invalid_builtin_minimal_abort
+82  0x000016df 0x000016df 41  42   .dynstr             ascii   __ubsan_handle_load_invalid_value_minimal
+83  0x00001709 0x00001709 47  48   .dynstr             ascii   __ubsan_handle_load_invalid_value_minimal_abort
+84  0x00001739 0x00001739 37  38   .dynstr             ascii   __ubsan_handle_missing_return_minimal
+85  0x0000175f 0x0000175f 35  36   .dynstr             ascii   __ubsan_handle_mul_overflow_minimal
+86  0x00001783 0x00001783 41  42   .dynstr             ascii   __ubsan_handle_mul_overflow_minimal_abort
+87  0x000017ad 0x000017ad 38  39   .dynstr             ascii   __ubsan_handle_negate_overflow_minimal
+88  0x000017d4 0x000017d4 34  35   .dynstr             ascii   __ubsan_handle_nonnull_arg_minimal
+89  0x000017f7 0x000017f7 40  41   .dynstr             ascii   __ubsan_handle_nonnull_arg_minimal_abort
+90  0x00001820 0x00001820 37  38   .dynstr             ascii   __ubsan_handle_nonnull_return_minimal
+91  0x00001846 0x00001846 43  44   .dynstr             ascii   __ubsan_handle_nonnull_return_minimal_abort
+92  0x00001872 0x00001872 38  39   .dynstr             ascii   __ubsan_handle_nullability_arg_minimal
+93  0x00001899 0x00001899 44  45   .dynstr             ascii   __ubsan_handle_nullability_arg_minimal_abort
+94  0x000018c6 0x000018c6 41  42   .dynstr             ascii   __ubsan_handle_nullability_return_minimal
+95  0x000018f0 0x000018f0 47  48   .dynstr             ascii   __ubsan_handle_nullability_return_minimal_abort
+96  0x00001920 0x00001920 36  37   .dynstr             ascii   __ubsan_handle_out_of_bounds_minimal
+97  0x00001945 0x00001945 42  43   .dynstr             ascii   __ubsan_handle_out_of_bounds_minimal_abort
+98  0x00001970 0x00001970 39  40   .dynstr             ascii   __ubsan_handle_pointer_overflow_minimal
+99  0x00001998 0x00001998 45  46   .dynstr             ascii   __ubsan_handle_pointer_overflow_minimal_abort
+100 0x000019c6 0x000019c6 42  43   .dynstr             ascii   __ubsan_handle_shift_out_of_bounds_minimal
+101 0x000019f1 0x000019f1 48  49   .dynstr             ascii   __ubsan_handle_shift_out_of_bounds_minimal_abort
+102 0x00001a22 0x00001a22 35  36   .dynstr             ascii   __ubsan_handle_sub_overflow_minimal
+103 0x00001a46 0x00001a46 36  37   .dynstr             ascii   __ubsan_handle_type_mismatch_minimal
+104 0x00001a6b 0x00001a6b 42  43   .dynstr             ascii   __ubsan_handle_type_mismatch_minimal_abort
+105 0x00001a96 0x00001a96 45  46   .dynstr             ascii   __ubsan_handle_vla_bound_not_positive_minimal
+106 0x00001ac4 0x00001ac4 51  52   .dynstr             ascii   __ubsan_handle_vla_bound_not_positive_minimal_abort
+107 0x00001af8 0x00001af8 5   6    .dynstr             ascii   abort
+108 0x00001afe 0x00001afe 25  26   .dynstr             ascii   android_set_abort_message
+109 0x00001b18 0x00001b18 6   7    .dynstr             ascii   strlen
+110 0x00001b1f 0x00001b1f 5   6    .dynstr             ascii   write
+111 0x00001b25 0x00001b25 9   10   .dynstr             ascii   liblog.so
+112 0x00001b2f 0x00001b2f 6   7    .dynstr             ascii   LIBLOG
+113 0x00001b36 0x00001b36 7   8    .dynstr             ascii   libc.so
+114 0x00001b3e 0x00001b3e 4   5    .dynstr             ascii   LIBC
+115 0x00001b43 0x00001b43 6   7    .dynstr             ascii   LIBC_P
+116 0x00001b4a 0x00001b4a 9   10   .dynstr             ascii   libion.so
+117 0x00001b54 0x00001b54 12  13   .dynstr             ascii   libcutils.so
+118 0x00001b61 0x00001b61 11  12   .dynstr             ascii   libutils.so
+119 0x00001b6d 0x00001b6d 9   10   .dynstr             ascii   libc++.so
+120 0x00001b77 0x00001b77 7   8    .dynstr             ascii   libm.so
+121 0x00001b7f 0x00001b7f 8   9    .dynstr             ascii   libdl.so
+122 0x00001b88 0x00001b88 16  17   .dynstr             ascii   libQSEEComAPI.so
+123 0x00001ba0 0x00001ba0 4   5    .rela.dyn           ascii   APS2
+124 0x00001f88 0x00001f88 24  25   .rodata             ascii   QSEECom_dealloc_memory \n
+125 0x00001fa1 0x00001fa1 71  72   .rodata             ascii   Error::unload external elf req. ioctl failed with ret = %d, errno = %d\n
+126 0x00001fe9 0x00001fe9 48  49   .rodata             ascii   Error::QSEOS version info. ret = %d, errno = %d\n
+127 0x0000201a 0x0000201a 74  75   .rodata             ascii   Error::ioctl call query if app is loaded failed with ret = %d, errno = %d\n
+128 0x00002065 0x00002065 55  56   .rodata             ascii   Error::send command ioctl failed. ret = %d, errno = %d\n
+129 0x0000209d 0x0000209d 49  50   .rodata             ascii   Error: cmd_req_len = %d > ion share buf_len = %d\n
+130 0x000020cf 0x000020cf 19  20   .rodata             ascii   ubsan: add-overflow
+131 0x000020e3 0x000020e3 21  22   .rodata             ascii   ubsan: out-of-bounds\n
+132 0x000020f9 0x000020f9 22  23   .rodata             ascii   ubsan: invalid-builtin
+133 0x00002110 0x00002110 27  28   .rodata             ascii   ubsan: implicit-conversion\n
+134 0x0000212c 0x0000212c 26  27   .rodata             ascii   ubsan: nullability-return\n
+135 0x00002147 0x00002147 41  42   .rodata             ascii   Error::QSEOS version info. ret value = %d
+136 0x00002171 0x00002171 28  29   .rodata             ascii   QSEECom_unload_external_elf\n
+137 0x0000218e 0x0000218e 46  47   .rodata             ascii   QSEECom_register_listener %d sb_length = 0x%x\n
+138 0x000021bd 0x000021bd 58  59   .rodata             ascii   Error::ION memalloc failed lstnr ID %d and ret value = %d\n
+139 0x000021f8 0x000021f8 86  87   .rodata             ascii   Error::ioctl call to scale bus bandwidth to level %d failed with ret = %d, errno = %d\n
+140 0x0000224f 0x0000224f 9   10   .rodata             ascii   tlen is 0
+141 0x00002259 0x00002259 62  63   .rodata             ascii   Error:: DMA_BUF_IOCTL_SYNC start failed, ret = %d, errno = %d\n
+142 0x00002298 0x00002298 29  30   .rodata             ascii   QSEECom_unload_external_elf \n
+143 0x000022b6 0x000022b6 30  31   .rodata             ascii   Error::opening QSEECom device\n
+144 0x000022d5 0x000022d5 21  22   .rodata             ascii   path or fname is NULL
+145 0x000022eb 0x000022eb 19  20   .rodata             ascii   ubsan: mul-overflow
+146 0x000022ff 0x000022ff 29  30   .rodata             ascii   Error:: unsupported usage %d\n
+147 0x0000231d 0x0000231d 30  31   .rodata             ascii   Error::Cannot open ION device\n
+148 0x0000233c 0x0000233c 20  21   .rodata             ascii   ubsan: type-mismatch
+149 0x00002351 0x00002351 23  24   .rodata             ascii   ubsan: nullability-arg\n
+150 0x00002369 0x00002369 23  24   .rodata             ascii   ubsan: too many errors\n
+151 0x00002381 0x00002381 25  26   .rodata             ascii   Error::Handle is NULL!!.\n
+152 0x0000239b 0x0000239b 30  31   .rodata             ascii   Error::Copy Image Addr failed\n
+153 0x000023ba 0x000023ba 23  24   .rodata             ascii   Cannot open the file %s
+154 0x000023d2 0x000023d2 22  23   .rodata             ascii   ubsan: missing-return\n
+155 0x000023e9 0x000023e9 22  23   .rodata             ascii   ubsan: nonnull-return\n
+156 0x00002400 0x00002400 39  40   .rodata             ascii   Warning::lstnr ID %d already registered
+157 0x00002428 0x00002428 68  69   .rodata             ascii   Error::send response request ioctl failed with ret = %d, errno = %d\n
+158 0x0000246d 0x0000246d 32  33   .rodata             ascii   QSEECom_Send_service_cmd passed\n
+159 0x0000248e 0x0000248e 38  39   .rodata             ascii   Error::Listener Handle is not null!!!\n
+160 0x000024b5 0x000024b5 18  19   .rodata             ascii   ubsan: nonnull-arg
+161 0x000024c8 0x000024c8 22  23   .rodata             ascii   ubsan: nullability-arg
+162 0x000024df 0x000024df 94  95   .rodata             ascii   Error::Invalid input parameters: send_buf = 0x%p, resp_buf = 0x%p,sbuf_len = %d, rbuf_len = %d
+163 0x0000253e 0x0000253e 89  90   .rodata             ascii   Error::ioctl call to create encryption key for usage %d failed with ret = %d, errno = %d\n
+164 0x00002598 0x00002598 57  58   .rodata             ascii   send modified resp 64 ioctl failed, ret = %d, errno = %d\n
+165 0x000025d2 0x000025d2 25  26   .rodata             ascii   trustlet or fname is NULL
+166 0x000025ec 0x000025ec 29  30   .rodata             ascii   ubsan: vla-bound-not-positive
+167 0x0000260a 0x0000260a 48  49   .rodata             ascii   Error::Cannot de-alloc memory. handle is NULL!!.
+168 0x0000263b 0x0000263b 49  50   .rodata             ascii   Error: failed to free memory for priv_handle =%x\n
+169 0x0000266d 0x0000266d 20  21   .rodata             ascii   ubsan: sub-overflow\n
+170 0x00002682 0x00002682 46  47   .rodata             ascii   Error::reading from image segment[%d] failed.\n
+171 0x000026b1 0x000026b1 20  21   .rodata             ascii   ubsan: add-overflow\n
+172 0x000026c6 0x000026c6 56  57   .rodata             ascii   Error::Invalid input parameters: rcv_buf = 0x%p,len = %d
+173 0x000026ff 0x000026ff 62  63   .rodata             ascii   Error::receive request ioctl failed with ret = %d, errno = %d\n
+174 0x0000273e 0x0000273e 30  31   .rodata             ascii   ubsan: function-type-mismatch\n
+175 0x0000275d 0x0000275d 29  30   .rodata             ascii   ubsan: function-type-mismatch
+176 0x0000277b 0x0000277b 52  53   .rodata             ascii   Error::Cannot unload external elf. handle is NULL!!.
+177 0x000027b0 0x000027b0 92  93   .rodata             ascii   Error::Invalid input parameters: send_buf = 0x%p,sbuf_len = %d,resp_buf = 0x%p,rbuf_len = %d
+178 0x0000280d 0x0000280d 37  38   .rodata             ascii   Error::Handle or app_name is NULL!!.\n
+179 0x00002833 0x00002833 32  33   .rodata             ascii   QSEECom_Send_service_cmd failed\n
+180 0x00002854 0x00002854 93  94   .rodata             ascii   Error::ioctl call to update the encryption key for usage %d failed with ret = %d, errno = %d\n
+181 0x000028b2 0x000028b2 26  27   .rodata             ascii   Loaded image: APP id = %u\n
+182 0x000028cd 0x000028cd 23  24   .rodata             ascii   ubsan: pointer-overflow
+183 0x000028e5 0x000028e5 35  36   .rodata             ascii   Error::invalid start_app version %d
+184 0x00002909 0x00002909 34  35   .rodata             ascii   QSEECom_shutdown_app, app_id = %u\n
+185 0x0000292c 0x0000292c 46  47   .rodata             ascii   Error::rbuf_len = %d >  available space= 0x%x\n
+186 0x0000295b 0x0000295b 28  29   .rodata             ascii   Invalid app arch type %d!!.\n
+187 0x00002978 0x00002978 38  39   .rodata             ascii   file %s 's total seg num %x is too big
+188 0x0000299f 0x0000299f 72  73   .rodata             ascii   Error:: Load image %s with tlen = %d request failed ret = %d, errno = %d
+189 0x000029e8 0x000029e8 55  56   .rodata             ascii   Invalid input parameters: send_buf = 0x%p,sbuf_len = %d
+190 0x00002a20 0x00002a20 27  28   .rodata             ascii   ubsan: alignment-assumption
+191 0x00002a3c 0x00002a3c 22  23   .rodata             ascii   ubsan: negate-overflow
+192 0x00002a53 0x00002a53 26  27   .rodata             ascii   ubsan: load-invalid-value\n
+193 0x00002a6e 0x00002a6e 62  63   .rodata             ascii   Error::unload App req. ioctl failed with ret = %d, errno = %d\n
+194 0x00002aad 0x00002aad 57  58   .rodata             ascii   Error::Cannot unload external elf. priv handle is NULL!!.
+195 0x00002ae7 0x00002ae7 32  33   .rodata             ascii   QSEECom_unregister_listener %u \n
+196 0x00002b08 0x00002b08 27  28   .rodata             ascii   Error::ION_memalloc failed\n
+197 0x00002b24 0x00002b24 23  24   .rodata             ascii   ubsan: divrem-overflow\n
+198 0x00002b3c 0x00002b3c 27  28   .rodata             ascii   ubsan: builtin-unreachable\n
+199 0x00002b58 0x00002b58 27  28   .rodata             ascii   ubsan: float-cast-overflow\n
+200 0x00002b74 0x00002b74 10  11   .rodata             ascii   QSEECOMAPI
+201 0x00002b7f 0x00002b7f 19  20   .rodata             ascii   ubsan: nonnull-arg\n
+202 0x00002b93 0x00002b93 42  43   .rodata             ascii   Error::Failed to open /dev/qseecom device\n
+203 0x00002bbe 0x00002bbe 41  42   .rodata             ascii   Error::Loading image failed with ret = %d
+204 0x00002be8 0x00002be8 41  42   .rodata             ascii   Error::ION mem alloc failed with ret = %d
+205 0x00002c12 0x00002c12 44  45   .rodata             ascii   ERROR: UNLOAD_APP: Invalid qsee version =%d\n
+206 0x00002c3f 0x00002c3f 36  37   .rodata             ascii   Error::qseecom file descriptor is 0\n
+207 0x00002c64 0x00002c64 37  38   .rodata             ascii   Error: len = %d > share buf_len = %d\n
+208 0x00002c8a 0x00002c8a 25  26   .rodata             ascii   App is not loaded in QSEE
+209 0x00002ca4 0x00002ca4 62  63   .rodata             ascii   Error::Invalid input parameters: send_buf = 0x%p,sbuf_len = %d
+210 0x00002ce3 0x00002ce3 32  33   .rodata             ascii   app_arch = %d, total_files = %d\n
+211 0x00002d04 0x00002d04 21  22   .rodata             ascii   file %s size overflow
+212 0x00002d1a 0x00002d1a 25  26   .rodata             ascii   ubsan: load-invalid-value
+213 0x00002d34 0x00002d34 81  82   .rodata             ascii   Error::ioctl call to enable/disable performance failed with ret = %d, errno = %d\n
+214 0x00002d86 0x00002d86 48  49   .rodata             ascii   Error::req.resp_len = %d >  available space= %d\n
+215 0x00002db7 0x00002db7 62  63   .rodata             ascii   Error::Invalid input parameters: resp_buf = 0x%p,rbuf_len = %d
+216 0x00002df6 0x00002df6 84  85   .rodata             ascii   SUCCESS::ioctl call to update the encryption key for usage %d success with ret = %d\n
+217 0x00002e4d 0x00002e4d 45  46   .rodata             ascii   Error::Eror in __QSEECom_get_img_file_size()\n
+218 0x00002e7b 0x00002e7b 28  29   .rodata             ascii   ubsan: alignment-assumption\n
+219 0x00002e98 0x00002e98 31  32   .rodata             ascii   priv handle or info is NULL!!.\n
+220 0x00002eb8 0x00002eb8 11  12   .rodata             ascii   %s/%s.b%02d
+221 0x00002ec4 0x00002ec4 53  54   .rodata             ascii   Error::Cannot de-alloc memory. priv handle is NULL!!.
+222 0x00002efa 0x00002efa 63  64   .rodata             ascii   Error::Register listener ioctl failed for lstnr ID %d & ret=%d\n
+223 0x00002f3a 0x00002f3a 82  83   .rodata             ascii   SUCCESS::ioctl call to wipe the encryption key for usage %d success with ret = %d\n
+224 0x00002f8d 0x00002f8d 49  50   .rodata             ascii   Error:: Error reading from %s.mdt file, ret = %d\n
+225 0x00002fbf 0x00002fbf 38  39   .rodata             ascii   Error:: Invalid tz app architecture %d
+226 0x00002fe6 0x00002fe6 19  20   .rodata             ascii   ubsan: sub-overflow
+227 0x00002ffa 0x00002ffa 23  24   .rodata             ascii   ubsan: negate-overflow\n
+228 0x00003012 0x00003012 20  21   .rodata             ascii   ubsan: out-of-bounds
+229 0x00003027 0x00003027 23  24   .rodata             ascii   ubsan: invalid-builtin\n
+230 0x0000303f 0x0000303f 21  22   .rodata             ascii   ubsan: nonnull-return
+231 0x00003055 0x00003055 25  26   .rodata             ascii   ubsan: nullability-return
+232 0x0000306f 0x0000306f 72  73   .rodata             ascii   Error::QSEECOM_IOCTL_SET_MEM_PARAM_REQ failed with ret = %d, errno = %d\n
+233 0x000030b8 0x000030b8 9   10   .rodata             ascii   %s/%s.mdt
+234 0x000030c2 0x000030c2 26  27   .rodata             ascii   ubsan: shift-out-of-bounds
+235 0x000030dd 0x000030dd 79  80   .rodata             ascii   SUCESS::ioctl call to create encryption key for usage %d success with ret = %d\n
+236 0x0000312d 0x0000312d 18  19   .rodata             ascii   Handle is NULL!!.\n
+237 0x00003140 0x00003140 20  21   .rodata             ascii   ubsan: mul-overflow\n
+238 0x00003155 0x00003155 22  23   .rodata             ascii   ubsan: cfi-check-fail\n
+239 0x0000316c 0x0000316c 21  22   .rodata             ascii   ubsan: cfi-check-fail
+240 0x00003182 0x00003182 58  59   .rodata             ascii   Error::receive req ioctl failed with ret = %d, errno = %d\n
+241 0x000031bd 0x000031bd 39  40   .rodata             ascii   QSEECom_get_ion_handle failed, exiting\n
+242 0x000031e5 0x000031e5 48  49   .rodata             ascii   length of path, fname and ext is too long (>%zu)
+243 0x00003216 0x00003216 52  53   .rodata             ascii   Error::ION MMAP failed: heap %d, len %d, errno = %d\n
+244 0x0000324b 0x0000324b 26  27   .rodata             ascii   ubsan: implicit-conversion
+245 0x00003266 0x00003266 26  27   .rodata             ascii   QSEECom_load_external_elf\n
+246 0x00003281 0x00003281 43  44   .rodata             ascii   Error::Cannot Unregister. Handle is NULL!!.
+247 0x000032ad 0x000032ad 68  69   .rodata             ascii   Error::send modified command ioctl failed wtih ret = %d, errno = %d\n
+248 0x000032f2 0x000032f2 54  55   .rodata             ascii   Error::Load image request failed ret = %d, errno = %d\n
+249 0x00003329 0x00003329 21  22   .rodata             ascii   ubsan: type-mismatch\n
+250 0x0000333f 0x0000333f 36  37   .rodata             ascii   QSEECom_get_handle sb_length = 0x%x\n
+251 0x00003364 0x00003364 71  72   .rodata             ascii   Error::send_modified_command_64 ioctl failed wtih ret = %d, errno = %d\n
+252 0x000033ac 0x000033ac 26  27   .rodata             ascii   Error::ION_memalloc failed
+253 0x000033c7 0x000033c7 24  25   .rodata             ascii   ubsan: pointer-overflow\n
+254 0x000033e0 0x000033e0 18  19   .rodata             ascii   ion fd is NULL!!.\n
+255 0x000033f3 0x000033f3 48  49   .rodata             ascii   Error::malloc failed. Could not allocate memory\n
+256 0x00003424 0x00003424 67  68   .rodata             ascii   Error::Unregister listener ioctl failed. with ret = %d, errno = %d\n
+257 0x00003468 0x00003468 42  43   .rodata             ascii   App is already loaded QSEE and app id = %u
+258 0x00003493 0x00003493 23  24   .rodata             ascii   priv handle is NULL!!.\n
+259 0x000034ab 0x000034ab 28  29   .rodata             ascii   Error: Unsupported CMD_ID %d
+260 0x000034c8 0x000034c8 91  92   .rodata             ascii   Error::ioctl call to wipe the encryption key for usage %d failed with ret = %d, errno = %d\n
+261 0x00003524 0x00003524 54  55   .rodata             ascii   send modified resp ioctl failed, ret = %d, errno = %d\n
+262 0x0000355b 0x0000355b 22  23   .rodata             ascii   ubsan: divrem-overflow
+263 0x00003572 0x00003572 30  31   .rodata             ascii   ubsan: vla-bound-not-positive\n
+264 0x00003591 0x00003591 36  37   .rodata             ascii   Error::Client handle is not null!!!\n
+265 0x000035b6 0x000035b6 58  59   .rodata             ascii   Error::Invalid input parameters: send_buf = 0x%p, len = %d
+266 0x000035f1 0x000035f1 42  43   .rodata             ascii   Error::Cannot open the file %s errno = %d\n
+267 0x0000361c 0x0000361c 20  21   .rodata             ascii   failure doing fstat\n
+268 0x00003631 0x00003631 64  65   .rodata             ascii   Error::ion_alloc_fd() from heap %d, len %d ret = %d, errno = %d\n
+269 0x00003672 0x00003672 12  13   .rodata             ascii   /dev/qseecom
+270 0x0000367f 0x0000367f 33  34   .rodata             ascii   Error::The app_name is not valid\n
+271 0x000036a1 0x000036a1 63  64   .rodata             ascii   Error::send service command ioctl failed. ret = %d, errno = %d\n
+272 0x000036e1 0x000036e1 50  51   .rodata             ascii   Number of files reported is %d, max allowed it %d\n
+273 0x00003714 0x00003714 27  28   .rodata             ascii   ubsan: shift-out-of-bounds\n
+274 0x00003730 0x00003730 26  27   .rodata             ascii   ubsan: float-cast-overflow
+275 0x0000557d 0x0000557d 4   5    .text               ascii   j 8`
+276 0x00005843 0x00005843 5   6    .text               ascii   TvZ@y
+277 0x0000584c 0x0000584c 4   5    .text               ascii   vr@y
+278 0x00005ab7 0x00005ab7 4   5    .text               ascii   T?A6
+279 0x000067ce 0x000067ce 4   5    .text               ascii   \b*<\b
+280 0x00006f33 0x00006f33 4   5    .text               ascii   4\b\b@
+281 0x000071af 0x000071af 4   5    .text               ascii   r\bA6
+282 0x000072d5 0x000072d5 4   5    .text               ascii   \n\bql
+283 0x00009379 0x00000001 11  12   .shstrtab           ascii   .fini_array
+284 0x00009385 0x0000000d 5   6    .shstrtab           ascii   .text
+285 0x0000938b 0x00000013 4   5    .shstrtab           ascii   .got
+286 0x00009390 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+287 0x000093a4 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+288 0x000093ad 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+289 0x000093b7 0x0000003f 4   5    .shstrtab           ascii   .bss
+290 0x000093bc 0x00000044 7   8    .shstrtab           ascii   .dynstr
+291 0x000093c4 0x0000004c 13  14   .shstrtab           ascii   .eh_frame_hdr
+292 0x000093d2 0x0000005a 14  15   .shstrtab           ascii   .gnu.version_r
+293 0x000093e1 0x00000069 12  13   .shstrtab           ascii   .data.rel.ro
+294 0x000093ee 0x00000076 9   10   .shstrtab           ascii   .relr.dyn
+295 0x000093f8 0x00000080 9   10   .shstrtab           ascii   .rela.dyn
+296 0x00009402 0x0000008a 12  13   .shstrtab           ascii   .gnu.version
+297 0x0000940f 0x00000097 7   8    .shstrtab           ascii   .dynsym
+298 0x00009417 0x0000009f 9   10   .shstrtab           ascii   .gnu.hash
+299 0x00009421 0x000000a9 9   10   .shstrtab           ascii   .eh_frame
+300 0x0000942b 0x000000b3 18  19   .shstrtab           ascii   .note.gnu.build-id
+301 0x0000943e 0x000000c6 8   9    .shstrtab           ascii   .dynamic
+302 0x00009447 0x000000cf 9   10   .shstrtab           ascii   .shstrtab
+303 0x00009451 0x000000d9 7   8    .shstrtab           ascii   .rodata
+304 0x00009459 0x000000e1 14  15   .shstrtab           ascii   .gnu_debugdata
+305 0x00009469 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+306 0x00009499 0x00000031 4   5    .gnu_debugdata      ascii   Yg\vU
+307 0x000094c2 0x0000005a 4   5    .gnu_debugdata      ascii   IoQ\f
+308 0x000094cd 0x00000065 5   6    .gnu_debugdata      ascii   t^%!&
+309 0x000094f0 0x00000088 4   6    .gnu_debugdata      utf8    -j̲X
+310 0x0000955e 0x000000f6 5   7    .gnu_debugdata      utf8    `8+ט-
+311 0x00009577 0x0000010f 4   5    .gnu_debugdata      ascii   \dAW
+312 0x0000957f 0x00000117 4   5    .gnu_debugdata      ascii   \bxrL
+313 0x0000958e 0x00000126 5   7    .gnu_debugdata      utf8    \nna3ܚ
+314 0x000095a7 0x0000013f 6   8    .gnu_debugdata      utf8    ݾ2}S)[
+315 0x000095b7 0x0000014f 5   6    .gnu_debugdata      ascii   Y+_[*
+316 0x00009616 0x000001ae 4   5    .gnu_debugdata      ascii   $!;i
+317 0x00009624 0x000001bc 6   7    .gnu_debugdata      ascii   G_\\nnI
+318 0x00009675 0x0000020d 5   6    .gnu_debugdata      ascii   l\e.Sr
+319 0x000096bf 0x00000257 4   5    .gnu_debugdata      ascii   \tV(%
+320 0x0000974d 0x000002e5 4   5    .gnu_debugdata      ascii   <]d7
+321 0x00009765 0x000002fd 5   6    .gnu_debugdata      ascii   xPO$9
+322 0x0000977f 0x00000317 5   6    .gnu_debugdata      ascii   Voo/w
+323 0x00009795 0x0000032d 4   5    .gnu_debugdata      ascii   !Ajv
+324 0x000097aa 0x00000342 6   7    .gnu_debugdata      ascii   Dz%Y/\b
+325 0x000097c8 0x00000360 5   9    .gnu_debugdata      utf8    o9绁Ԧg
+326 0x000097e8 0x00000380 4   6    .gnu_debugdata      utf8    S\t\aܵ
+327 0x0000983f 0x000003d7 5   7    .gnu_debugdata      utf8    Z!5<Ќ
+328 0x00009880 0x00000418 4   5    .gnu_debugdata      ascii   \vl/$
+329 0x00009889 0x00000421 4   5    .gnu_debugdata      ascii   Fi=L
+330 0x000098cb 0x00000463 4   6    .gnu_debugdata      utf8    Y%#\b
+331 0x000098fd 0x00000495 4   5    .gnu_debugdata      ascii   "8_w
+332 0x0000990a 0x000004a2 5   6    .gnu_debugdata      ascii   XXBgI
+0x00008850    1     16 sym.imp.__cxa_finalize
+0x00008860    1     16 sym.imp.__android_log_print
+0x000088e0    1     16 sym.imp.__errno
+0x00008890    1     16 sym.imp.__open_2
+0x000089b0    1     16 sym.imp.__read_chk
+0x000088f0    1     16 sym.imp.__stack_chk_fail
+0x00008910    1     16 sym.imp.__strlcpy_chk
+0x00008940    1     16 sym.imp.__strlen_chk
+0x000088c0    1     16 sym.imp.close
+0x00008980    1     16 sym.imp.fclose
+0x00008970    1     16 sym.imp.ferror
+0x00008950    1     16 sym.imp.fopen
+0x00008960    1     16 sym.imp.fread_unlocked
+0x00008870    1     16 sym.imp.free
+0x00008990    1     16 sym.imp.fstat
+0x000088a0    1     16 sym.imp.ioctl
+0x000089e0    1     16 sym.imp.ion_alloc_fd
+0x00008a10    1     16 sym.imp.ion_close
+0x000089d0    1     16 sym.imp.ion_open
+0x00008880    1     16 sym.imp.malloc
+0x00008900    1     16 sym.imp.memcpy
+0x000088d0    1     16 sym.imp.memset
+0x000089f0    1     16 sym.imp.mmap
+0x00008a00    1     16 sym.imp.munmap
+0x000089a0    1     16 sym.imp.perror
+0x00008920    1     16 sym.imp.strnlen
+0x00008a80    1     16 sym.imp.vsnprintf
+0x00008ac0    1     16 sym.imp.abort
+0x00008ab0    1     16 sym.imp.android_set_abort_message
+0x00008a90    1     16 sym.imp.strlen
+0x00008aa0    1     16 sym.imp.write
+0x00005000    1     12 entry0
+0x00006360   11    248 sym.QSEECom_unload_external_elf
+0x000066f8    8    244 sym.QSEECom_unregister_listener
+0x00005efc   13    236 sym.__QSEECom_ION_memfree
+0x00005014   52   1180 sym.__QSEECom_get_handle
+0x00008108    1     28 sym.__ubsan_handle_alignment_assumption_minimal_abort
+0x00008078    1     32 sym.message_char_const_
+0x000080b4    3     24 sym.abort_with_message_char_const_
+0x00006028   15    340 sym.__QSEECom_dealloc_memory
+0x00008808    1     28 sym.__ubsan_handle_cfi_check_fail_minimal_abort
+0x000082c0    1     28 sym.__ubsan_handle_divrem_overflow_minimal_abort
+0x0000845c    3     60 sym.__ubsan_handle_float_cast_overflow_minimal
+0x00007f7c   22    252 sym.report_this_error_void_
+0x000085f8    1     28 sym.__ubsan_handle_implicit_conversion_minimal_abort
+0x00008614    3     60 sym.__ubsan_handle_nonnull_arg_minimal
+0x00007f40    3     60 sym.__ubsan_handle_type_mismatch_minimal
+0x00006880   39    608 sym.QSEECom_send_cmd
+0x00007bac   21    396 sym.__QSEECom_send_modified_resp
+0x000081b8    1     28 sym.__ubsan_handle_sub_overflow_minimal_abort
+0x00008124    3     60 sym.__ubsan_handle_add_overflow_minimal
+0x00008404    3     60 sym.__ubsan_handle_vla_bound_not_positive_minimal
+0x00006dbc   17    344 sym.QSEECom_receive_req
+0x00006458   25    672 sym.QSEECom_register_listener
+0x00005fe8    1     32 sym.QSEECom_start_app
+0x000067ec   10    148 sym.__QSEECom_validate_send_cmd_inputs
+0x00007e04    8    160 sym.QSEECom_get_app_info
+0x000077b4   11    300 sym.QSEECom_wipe_key
+0x0000838c    3     60 sym.__ubsan_handle_builtin_unreachable_minimal
+0x000085bc    3     60 sym.__ubsan_handle_implicit_conversion_minimal
+0x00007d40    2     24 sym.QSEECom_send_modified_resp_64
+0x00007a08   16    420 sym.QSEECom_update_key_user_info
+0x00008370    1     28 sym.__ubsan_handle_out_of_bounds_minimal_abort
+0x00008268    1     28 sym.__ubsan_handle_negate_overflow_minimal_abort
+0x00008564    3     60 sym.__ubsan_handle_function_type_mismatch_minimal
+0x00008650    1     28 sym.__ubsan_handle_nonnull_arg_minimal_abort
+0x0000871c    3     60 sym.__ubsan_handle_nullability_return_minimal
+0x00008098    1     28 sym.__ubsan_handle_type_mismatch_minimal_abort
+0x0000701c    5    140 sym.QSEECom_set_bandwidth
+0x0000617c    1      8 sym.QSEECom_shutdown_app
+0x0000866c    3     60 sym.__ubsan_handle_nonnull_return_minimal
+0x000087b0    1     28 sym.__ubsan_handle_pointer_overflow_minimal_abort
+0x00007d48    7    188 sym.QSEECom_scale_bus_bandwidth
+0x00006008    1     32 sym.QSEECom_start_app_V2
+0x000076cc    8    232 sym.__QSEECom_wipe_clear_key
+0x00008284    3     60 sym.__ubsan_handle_divrem_overflow_minimal
+0x000084b4    3     60 sym.__ubsan_handle_load_invalid_value_minimal
+0x000086c4    3     60 sym.__ubsan_handle_nullability_arg_minimal
+0x00008774    3     60 sym.__ubsan_handle_pointer_overflow_minimal
+0x000085a0    1     28 sym.__ubsan_handle_function_type_mismatch_minimal_abort
+0x000081d4    3     60 sym.__ubsan_handle_mul_overflow_minimal
+0x0000822c    3     60 sym.__ubsan_handle_negate_overflow_minimal
+0x000082dc    3     60 sym.__ubsan_handle_shift_out_of_bounds_minimal
+0x000078e0   11    296 sym.QSEECom_clear_key
+0x000086a8    1     28 sym.__ubsan_handle_nonnull_return_minimal_abort
+0x00008334    3     60 sym.__ubsan_handle_out_of_bounds_minimal
+0x00008318    1     28 sym.__ubsan_handle_shift_out_of_bounds_minimal_abort
+0x0000817c    3     60 sym.__ubsan_handle_sub_overflow_minimal
+0x000054b0   15    364 sym.QSEECom_app_load_query
+0x00006dac    2     24 sym.QSEECom_send_modified_cmd
+0x00007d38    1      8 sym.QSEECom_send_modified_resp
+0x00007288   49    716 sym.QSEECom_send_service_cmd
+0x00008498    1     28 sym.__ubsan_handle_float_cast_overflow_minimal_abort
+0x00008548    1     28 sym.__ubsan_handle_invalid_builtin_minimal_abort
+0x00008210    1     28 sym.__ubsan_handle_mul_overflow_minimal_abort
+0x00006db4    1      8 sym.QSEECom_send_modified_cmd_64
+0x00008700    1     28 sym.__ubsan_handle_nullability_arg_minimal_abort
+0x00008440    1     28 sym.__ubsan_handle_vla_bound_not_positive_minimal_abort
+0x00007554   14    376 sym.QSEECom_create_key
+0x000080cc    3     60 sym.__ubsan_handle_alignment_assumption_minimal
+0x0000850c    3     60 sym.__ubsan_handle_invalid_builtin_minimal
+0x000083c8    3     60 sym.__ubsan_handle_missing_return_minimal
+0x00006f14   14    264 sym.QSEECom_send_resp
+0x000070a8   28    480 sym.__QSEECom_issue_send_service_cmd
+0x00006ae0   47    716 sym.__QSEECom_send_modified_cmd
+0x000087cc    3     60 sym.__ubsan_handle_cfi_check_fail_minimal
+0x00006184   19    476 sym.QSEECom_load_external_elf
+0x00008160    1     28 sym.__ubsan_handle_add_overflow_minimal_abort
+0x000084f0    1     28 sym.__ubsan_handle_load_invalid_value_minimal_abort
+0x00008758    1     28 sym.__ubsan_handle_nullability_return_minimal_abort
+0x00005010    1      4 entry.fini0
+0x000088b0    1     16 fcn.000088b0
+0x0000561c   84   1796 sym.__QSEECom_load_image
+0x00005d20   17    476 sym.__QSEECom_ION_memalloc
+0x00008930    1     16 fcn.00008930
+0x00007ea4    3    156 sym.snprintf_char__unsigned_long_pass_object_size1__char_const__::_
+0x000089c0    1     16 fcn.000089c0
+0x00008a40    1     16 fcn.00008a40
+0x00008a20    1     16 fcn.00008a20
+0x00008a60    1     16 fcn.00008a60
+0x00008a30    1     16 fcn.00008a30
+0x00008830    1     20 section..plt

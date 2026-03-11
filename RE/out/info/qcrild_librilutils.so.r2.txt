@@ -1,0 +1,135 @@
+arch     arm
+baddr    0x0
+binsz    9604
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                   demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+10  0x00001014 0x00001014 GLOBAL FUNC 96       ril_nano_time
+11  0x000010d0 0x000010d0 GLOBAL FUNC 40       record_stream_free
+12  0x000010f8 0x000010f8 GLOBAL FUNC 328      record_stream_get_next
+13  0x00001074 0x00001074 GLOBAL FUNC 92       record_stream_new
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000238   0x18 0x00000238   0x18 -r-- NOTE        .note.android.ident
+2   0x00000250   0x20 0x00000250   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270  0x150 0x00000270  0x150 -r-- DYNSYM      .dynsym
+4   0x000003c0   0x1c 0x000003c0   0x1c -r-- GNU_VERSYM  .gnu.version
+5   0x000003dc   0x20 0x000003dc   0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000400   0x2c 0x00000400   0x2c -r-- GNU_HASH    .gnu.hash
+7   0x0000042c   0xe5 0x0000042c   0xe5 -r-- STRTAB      .dynstr
+8   0x00000518   0x10 0x00000518   0x10 -r-- ----        .relr.dyn
+9   0x00000528   0xd8 0x00000528   0xd8 -r-- RELA        .rela.plt
+10  0x00000600   0x44 0x00000600   0x44 -r-- PROGBITS    .eh_frame_hdr
+11  0x00000648   0xec 0x00000648   0xec -r-- PROGBITS    .eh_frame
+12  0x00001000  0x240 0x00001000  0x240 -r-x PROGBITS    .text
+13  0x00001240   0xb0 0x00001240   0xb0 -r-x PROGBITS    .plt
+14  0x00002000    0x8 0x00002000    0x8 -rw- PROGBITS    .data.rel.ro
+15  0x00002008   0x10 0x00002008   0x10 -rw- FINI_ARRAY  .fini_array
+16  0x00002018  0x190 0x00002018  0x190 -rw- DYNAMIC     .dynamic
+17  0x000021a8   0x60 0x000021a8   0x60 -rw- PROGBITS    .got.plt
+18  0x00002208   0xd4 0x00000000   0xd4 ---- STRTAB      .shstrtab
+19  0x000022dc  0x2a8 0x00000000  0x2a8 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x0000042d 0x0000042d 14  15   .dynstr             ascii   __cxa_finalize
+3   0x0000043c 0x0000043c 16  17   .dynstr             ascii   __stack_chk_fail
+4   0x0000044d 0x0000044d 13  14   .dynstr             ascii   clock_gettime
+5   0x0000045b 0x0000045b 13  14   .dynstr             ascii   ril_nano_time
+6   0x00000469 0x00000469 7   8    .dynstr             ascii   __errno
+7   0x00000471 0x00000471 10  11   .dynstr             ascii   __read_chk
+8   0x0000047c 0x0000047c 6   7    .dynstr             ascii   calloc
+9   0x00000483 0x00000483 4   5    .dynstr             ascii   free
+10  0x00000488 0x00000488 6   7    .dynstr             ascii   malloc
+11  0x0000048f 0x0000048f 7   8    .dynstr             ascii   memmove
+12  0x00000497 0x00000497 18  19   .dynstr             ascii   record_stream_free
+13  0x000004aa 0x000004aa 22  23   .dynstr             ascii   record_stream_get_next
+14  0x000004c1 0x000004c1 17  18   .dynstr             ascii   record_stream_new
+15  0x000004d3 0x000004d3 7   8    .dynstr             ascii   libc.so
+16  0x000004db 0x000004db 4   5    .dynstr             ascii   LIBC
+17  0x000004e0 0x000004e0 9   10   .dynstr             ascii   libc++.so
+18  0x000004ea 0x000004ea 7   8    .dynstr             ascii   libm.so
+19  0x000004f2 0x000004f2 8   9    .dynstr             ascii   libdl.so
+20  0x000004fb 0x000004fb 21  22   .dynstr             ascii   qcrild_librilutils.so
+21  0x00002209 0x00000001 11  12   .shstrtab           ascii   .fini_array
+22  0x00002215 0x0000000d 5   6    .shstrtab           ascii   .text
+23  0x0000221b 0x00000013 19  20   .shstrtab           ascii   .note.android.ident
+24  0x0000222f 0x00000027 8   9    .shstrtab           ascii   .got.plt
+25  0x00002238 0x00000030 9   10   .shstrtab           ascii   .rela.plt
+26  0x00002242 0x0000003a 7   8    .shstrtab           ascii   .dynstr
+27  0x0000224a 0x00000042 13  14   .shstrtab           ascii   .eh_frame_hdr
+28  0x00002258 0x00000050 14  15   .shstrtab           ascii   .gnu.version_r
+29  0x00002267 0x0000005f 12  13   .shstrtab           ascii   .data.rel.ro
+30  0x00002274 0x0000006c 9   10   .shstrtab           ascii   .relr.dyn
+31  0x0000227e 0x00000076 12  13   .shstrtab           ascii   .gnu.version
+32  0x0000228b 0x00000083 7   8    .shstrtab           ascii   .dynsym
+33  0x00002293 0x0000008b 9   10   .shstrtab           ascii   .gnu.hash
+34  0x0000229d 0x00000095 9   10   .shstrtab           ascii   .eh_frame
+35  0x000022a7 0x0000009f 18  19   .shstrtab           ascii   .note.gnu.build-id
+36  0x000022ba 0x000000b2 8   9    .shstrtab           ascii   .dynamic
+37  0x000022c3 0x000000bb 9   10   .shstrtab           ascii   .shstrtab
+38  0x000022cd 0x000000c5 14  15   .shstrtab           ascii   .gnu_debugdata
+39  0x000022dd 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+40  0x00002338 0x0000005c 4   5    .gnu_debugdata      ascii   ==Lr
+41  0x0000234f 0x00000073 4   5    .gnu_debugdata      ascii   h9H9
+42  0x00002354 0x00000078 6   7    .gnu_debugdata      ascii   \f3I\rOo
+43  0x000023d6 0x000000fa 4   5    .gnu_debugdata      ascii   3v=X
+44  0x000023db 0x000000ff 6   8    .gnu_debugdata      utf8    |ƴ\n/uG
+45  0x00002417 0x0000013b 4   6    .gnu_debugdata      utf8    )\f˙8
+46  0x00002421 0x00000145 6   8    .gnu_debugdata      utf8    %ߡ/ARt
+47  0x00002433 0x00000157 4   5    .gnu_debugdata      ascii   <Z\\f
+48  0x0000246b 0x0000018f 4   5    .gnu_debugdata      ascii   ZDrq
+49  0x00002476 0x0000019a 5   6    .gnu_debugdata      ascii   jy9YG
+50  0x000024c5 0x000001e9 4   6    .gnu_debugdata      utf8    {=<ې
+51  0x000024cd 0x000001f1 4   5    .gnu_debugdata      ascii   XFZ9
+52  0x000024e6 0x0000020a 5   6    .gnu_debugdata      ascii   >GC\r0
+53  0x000024f1 0x00000215 4   5    .gnu_debugdata      ascii   bV g
+54  0x0000252e 0x00000252 9   10   .gnu_debugdata      ascii   SqT)kZME\v
+55  0x00002538 0x0000025c 6   9    .gnu_debugdata      utf8    ƤXm˹>v
+56  0x00002543 0x00000267 9   11   .gnu_debugdata      utf8    'lWvˢ1` a
+0x00001260    1     16 sym.imp.__cxa_finalize
+0x00001280    1     16 sym.imp.__stack_chk_fail
+0x00001270    1     16 sym.imp.clock_gettime
+0x000012e0    1     16 sym.imp.__errno
+0x000012d0    1     16 sym.imp.__read_chk
+0x00001290    1     16 sym.imp.calloc
+0x000012b0    1     16 sym.imp.free
+0x000012a0    1     16 sym.imp.malloc
+0x000012c0    1     16 sym.imp.memmove
+0x00001000    1     12 entry0
+0x00001014    3     96 sym.ril_nano_time
+0x000010d0    1     40 sym.record_stream_free
+0x000010f8   16    328 sym.record_stream_get_next
+0x00001074    1     92 sym.record_stream_new
+0x00001010    1      4 entry.fini0
+0x00001240    1     20 section..plt

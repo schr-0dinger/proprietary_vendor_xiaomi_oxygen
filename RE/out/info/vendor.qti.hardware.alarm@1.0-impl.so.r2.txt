@@ -1,0 +1,210 @@
+arch     arm
+baddr    0x0
+binsz    14987
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                                         demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+38  0x000024d8 0x000024d8 GLOBAL FUNC 88       HIDL_FETCH_IAlarm
+39  0x000023c4 0x000023c4 GLOBAL FUNC 276      _ZN6vendor3qti8hardware5alarm4V1_014implementation5Alarm10getRtcTimeEv                       vendor::qti::hardware::alarm::V1_0::implementation::Alarm::getRtcTime()
+40  0x00002294 0x00002294 GLOBAL FUNC 304      _ZN6vendor3qti8hardware5alarm4V1_014implementation5Alarm11cancelAlarmEv                      vendor::qti::hardware::alarm::V1_0::implementation::Alarm::cancelAlarm()
+41  0x00002164 0x00002164 GLOBAL FUNC 304      _ZN6vendor3qti8hardware5alarm4V1_014implementation5Alarm8getAlarmEv                          vendor::qti::hardware::alarm::V1_0::implementation::Alarm::getAlarm()
+42  0x00002014 0x00002014 GLOBAL FUNC 336      _ZN6vendor3qti8hardware5alarm4V1_014implementation5Alarm8setAlarmEl                          vendor::qti::hardware::alarm::V1_0::implementation::Alarm::setAlarm(long)
+43  0x00003248 0x00003248 GLOBAL OBJ  232      _ZTCN6vendor3qti8hardware5alarm4V1_014implementation5AlarmE0_N7android4hidl4base4V1_05IBaseE construction vtable for android::hidl::base::V1_0::IBase-in-vendor::qti::hardware::alarm::V1_0::implementation::Alarm
+44  0x00003140 0x00003140 GLOBAL OBJ  264      _ZTCN6vendor3qti8hardware5alarm4V1_014implementation5AlarmE0_NS3_6IAlarmE                    construction vtable for vendor::qti::hardware::alarm::V1_0::IAlarm-in-vendor::qti::hardware::alarm::V1_0::implementation::Alarm
+45  0x00003110 0x00003110 GLOBAL OBJ  48       _ZTTN6vendor3qti8hardware5alarm4V1_014implementation5AlarmE                                  VTT for vendor::qti::hardware::alarm::V1_0::implementation::Alarm
+46  0x00003008 0x00003008 GLOBAL OBJ  264      _ZTVN6vendor3qti8hardware5alarm4V1_014implementation5AlarmE                                  vtable for vendor::qti::hardware::alarm::V1_0::implementation::Alarm
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000238   0x18 0x00000238   0x18 -r-- NOTE        .note.android.ident
+2   0x00000250   0x20 0x00000250   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270  0x468 0x00000270  0x468 -r-- DYNSYM      .dynsym
+4   0x000006d8   0x5e 0x000006d8   0x5e -r-- GNU_VERSYM  .gnu.version
+5   0x00000738   0x40 0x00000738   0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000778   0x4c 0x00000778   0x4c -r-- GNU_HASH    .gnu.hash
+7   0x000007c4  0xbc9 0x000007c4  0xbc9 -r-- STRTAB      .dynstr
+8   0x00001390  0x198 0x00001390  0x198 -r-- ----        .rela.dyn
+9   0x00001528   0x18 0x00001528   0x18 -r-- ----        .relr.dyn
+10  0x00001540  0x120 0x00001540  0x120 -r-- RELA        .rela.plt
+11  0x00001660  0x190 0x00001660  0x190 -r-- PROGBITS    .rodata
+12  0x000017f0   0x7c 0x000017f0   0x7c -r-- PROGBITS    .eh_frame_hdr
+13  0x00001870  0x1c4 0x00001870  0x1c4 -r-- PROGBITS    .eh_frame
+14  0x00002000  0x5b0 0x00002000  0x5b0 -r-x PROGBITS    .text
+15  0x000025b0   0xe0 0x000025b0   0xe0 -r-x PROGBITS    .plt
+16  0x00003000  0x330 0x00003000  0x330 -rw- PROGBITS    .data.rel.ro
+17  0x00003330   0x10 0x00003330   0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00003340  0x230 0x00003340  0x230 -rw- DYNAMIC     .dynamic
+19  0x00003570    0x8 0x00003570    0x8 -rw- PROGBITS    .got
+20  0x00003578   0x78 0x00003578   0x78 -rw- PROGBITS    .got.plt
+21  0x000035f0   0xeb 0x00000000   0xeb ---- STRTAB      .shstrtab
+22  0x000036db  0x3b0 0x00000000  0x3b0 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x000007b2 0x000007b2 5   6    .gnu.hash           ascii   yILAM
+3   0x000007c5 0x000007c5 14  15   .dynstr             ascii   __cxa_finalize
+4   0x000007d4 0x000007d4 17  18   .dynstr             ascii   HIDL_FETCH_IAlarm
+5   0x000007e6 0x000007e6 70  71   .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_014implementation5Alarm10getRtcTimeEv
+6   0x0000082d 0x0000082d 71  72   .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_014implementation5Alarm11cancelAlarmEv
+7   0x00000875 0x00000875 67  68   .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_014implementation5Alarm8getAlarmEv
+8   0x000008b9 0x000008b9 67  68   .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_014implementation5Alarm8setAlarmEl
+9   0x000008fd 0x000008fd 109 110  .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_06IAlarm11linkToDeathERKN7android2spINS5_8hardware20hidl_death_recipientEEEm
+10  0x0000096b 0x0000096b 115 116  .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_06IAlarm12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE
+11  0x000009df 0x000009df 137 138  .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_06IAlarm12getHashChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS8_10hidl_arrayIhLm32EJEEEEEEEE
+12  0x00000a69 0x00000a69 110 111  .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_06IAlarm13unlinkToDeathERKN7android2spINS5_8hardware20hidl_death_recipientEEE
+13  0x00000ad8 0x00000ad8 130 131  .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_06IAlarm14interfaceChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS8_11hidl_stringEEEEEE
+14  0x00000b5b 0x00000b5b 119 120  .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_06IAlarm19interfaceDescriptorENSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE
+15  0x00000bd3 0x00000bd3 66  67   .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_06IAlarm21notifySyspropsChangedEv
+16  0x00000c16 0x00000c16 66  67   .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_06IAlarm21setHALInstrumentationEv
+17  0x00000c59 0x00000c59 48  49   .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_06IAlarm4pingEv
+18  0x00000c8a 0x00000c8a 118 119  .dynstr             ascii   _ZN6vendor3qti8hardware5alarm4V1_06IAlarm5debugERKN7android8hardware11hidl_handleERKNS6_8hidl_vecINS6_11hidl_stringEEE
+19  0x00000d01 0x00000d01 93  94   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase11linkToDeathERKNS_2spINS_8hardware20hidl_death_recipientEEEm
+20  0x00000d5f 0x00000d5f 86  87   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase12getDebugInfoENSt3__18functionIFvRKNS2_9DebugInfoEEEE
+21  0x00000db6 0x00000db6 122 123  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase12getHashChainENSt3__18functionIFvRKNS_8hardware8hidl_vecINS6_10hidl_arrayIhLm32EJEEEEEEEE
+22  0x00000e31 0x00000e31 94  95   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase13unlinkToDeathERKNS_2spINS_8hardware20hidl_death_recipientEEE
+23  0x00000e90 0x00000e90 115 116  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase14interfaceChainENSt3__18functionIFvRKNS_8hardware8hidl_vecINS6_11hidl_stringEEEEEE
+24  0x00000f04 0x00000f04 104 105  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase19interfaceDescriptorENSt3__18functionIFvRKNS_8hardware11hidl_stringEEEE
+25  0x00000f6d 0x00000f6d 57  58   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase21notifySyspropsChangedEv
+26  0x00000fa7 0x00000fa7 57  58   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase21setHALInstrumentationEv
+27  0x00000fe1 0x00000fe1 39  40   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase4pingEv
+28  0x00001009 0x00001009 103 104  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase5debugERKNS_8hardware11hidl_handleERKNS4_8hidl_vecINS4_11hidl_stringEEE
+29  0x00001071 0x00001071 33  34   .dynstr             ascii   _ZN7android7RefBase10onFirstRefEv
+30  0x00001093 0x00001093 38  39   .dynstr             ascii   _ZN7android7RefBase13onLastWeakRefEPKv
+31  0x000010ba 0x000010ba 40  41   .dynstr             ascii   _ZN7android7RefBase15onLastStrongRefEPKv
+32  0x000010e3 0x000010e3 46  47   .dynstr             ascii   _ZN7android7RefBase20onIncStrongAttemptedEjPKv
+33  0x00001112 0x00001112 23  24   .dynstr             ascii   _ZN7android7RefBaseC2Ev
+34  0x0000112a 0x0000112a 23  24   .dynstr             ascii   _ZN7android7RefBaseD2Ev
+35  0x00001142 0x00001142 92  93   .dynstr             ascii   _ZTCN6vendor3qti8hardware5alarm4V1_014implementation5AlarmE0_N7android4hidl4base4V1_05IBaseE
+36  0x0000119f 0x0000119f 73  74   .dynstr             ascii   _ZTCN6vendor3qti8hardware5alarm4V1_014implementation5AlarmE0_NS3_6IAlarmE
+37  0x000011e9 0x000011e9 59  60   .dynstr             ascii   _ZTTN6vendor3qti8hardware5alarm4V1_014implementation5AlarmE
+38  0x00001225 0x00001225 59  60   .dynstr             ascii   _ZTVN6vendor3qti8hardware5alarm4V1_014implementation5AlarmE
+39  0x00001261 0x00001261 6   7    .dynstr             ascii   _ZdlPv
+40  0x00001268 0x00001268 5   6    .dynstr             ascii   _Znwm
+41  0x0000126e 0x0000126e 19  20   .dynstr             ascii   __android_log_print
+42  0x00001282 0x00001282 18  19   .dynstr             ascii   __cxa_pure_virtual
+43  0x00001295 0x00001295 8   9    .dynstr             ascii   __open_2
+44  0x0000129e 0x0000129e 16  17   .dynstr             ascii   __stack_chk_fail
+45  0x000012af 0x000012af 5   6    .dynstr             ascii   close
+46  0x000012b5 0x000012b5 8   9    .dynstr             ascii   gmtime_r
+47  0x000012be 0x000012be 5   6    .dynstr             ascii   ioctl
+48  0x000012c4 0x000012c4 6   7    .dynstr             ascii   timegm
+49  0x000012cb 0x000012cb 9   10   .dynstr             ascii   liblog.so
+50  0x000012d5 0x000012d5 6   7    .dynstr             ascii   LIBLOG
+51  0x000012dc 0x000012dc 7   8    .dynstr             ascii   libc.so
+52  0x000012e4 0x000012e4 4   5    .dynstr             ascii   LIBC
+53  0x000012e9 0x000012e9 14  15   .dynstr             ascii   libhidlbase.so
+54  0x000012f8 0x000012f8 11  12   .dynstr             ascii   libutils.so
+55  0x00001304 0x00001304 12  13   .dynstr             ascii   libcutils.so
+56  0x00001311 0x00001311 14  15   .dynstr             ascii   libhardware.so
+57  0x00001320 0x00001320 10  11   .dynstr             ascii   libbase.so
+58  0x0000132b 0x0000132b 32  33   .dynstr             ascii   vendor.qti.hardware.alarm@1.0.so
+59  0x0000134c 0x0000134c 9   10   .dynstr             ascii   libc++.so
+60  0x00001356 0x00001356 7   8    .dynstr             ascii   libm.so
+61  0x0000135e 0x0000135e 8   9    .dynstr             ascii   libdl.so
+62  0x00001367 0x00001367 37  38   .dynstr             ascii   vendor.qti.hardware.alarm@1.0-impl.so
+63  0x00001390 0x00001390 5   6    .rela.dyn           ascii   APS29
+64  0x000013d8 0x000013d8 6   7    .rela.dyn           ascii   }\b\b\b)\b
+65  0x00001678 0x00001678 34  35   .rodata             ascii   Open rtc dev failed when get alarm
+66  0x0000169b 0x0000169b 23  24   .rodata             ascii   alarm hal setAlarm time
+67  0x000016b3 0x000016b3 20  21   .rodata             ascii   alarm hal getRtcTime
+68  0x000016c8 0x000016c8 37  38   .rodata             ascii   Open rtc dev failed when get rtc time
+69  0x000016ee 0x000016ee 25  26   .rodata             ascii   Get alarm from rtc failed
+70  0x00001708 0x00001708 19  20   .rodata             ascii   Get rtc time failed
+71  0x0000171c 0x0000171c 26  27   .rodata             ascii   Cancel alarm in rtc failed
+72  0x00001737 0x00001737 24  25   .rodata             ascii   Set alarm to rtc failed!
+73  0x00001750 0x00001750 9   10   .rodata             ascii   /dev/rtc0
+74  0x0000175a 0x0000175a 34  35   .rodata             ascii   vendor.qti.hardware.alarm@1.0-impl
+75  0x0000177d 0x0000177d 35  36   .rodata             ascii   Open rtc dev failed when set alarm!
+76  0x000017a1 0x000017a1 18  19   .rodata             ascii   alarm hal getAlarm
+77  0x000017b4 0x000017b4 21  22   .rodata             ascii   alarm hal cancelAlarm
+78  0x000017ca 0x000017ca 37  38   .rodata             ascii   Open rtc dev failed when cancel alarm
+79  0x000022ff 0x000022ff 4   5    .text               ascii   =!9C
+80  0x000035f1 0x00000001 11  12   .shstrtab           ascii   .fini_array
+81  0x000035fd 0x0000000d 5   6    .shstrtab           ascii   .text
+82  0x00003603 0x00000013 4   5    .shstrtab           ascii   .got
+83  0x00003608 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+84  0x0000361c 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+85  0x00003625 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+86  0x0000362f 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+87  0x00003637 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+88  0x00003645 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+89  0x00003654 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+90  0x00003661 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+91  0x0000366b 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+92  0x00003675 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+93  0x00003682 0x00000092 7   8    .shstrtab           ascii   .dynsym
+94  0x0000368a 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+95  0x00003694 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+96  0x0000369e 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+97  0x000036b1 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+98  0x000036ba 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+99  0x000036c4 0x000000d4 7   8    .shstrtab           ascii   .rodata
+100 0x000036cc 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+101 0x000036dc 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+102 0x0000377a 0x0000009f 4   5    .gnu_debugdata      ascii   ?cR/
+103 0x0000380b 0x00000130 5   6    .gnu_debugdata      ascii   fK\rZd
+104 0x0000384c 0x00000171 6   8    .gnu_debugdata      utf8    (\r5\ЊX
+105 0x00003885 0x000001aa 4   6    .gnu_debugdata      utf8    \r1ț4
+106 0x000038bd 0x000001e2 5   7    .gnu_debugdata      utf8    "vPE҇
+107 0x000038f2 0x00000217 4   5    .gnu_debugdata      ascii   }hD\v
+108 0x00003918 0x0000023d 4   5    .gnu_debugdata      ascii   w:Gf
+109 0x00003946 0x0000026b 5   8    .gnu_debugdata      utf8    \;YTb
+110 0x00003961 0x00000286 4   7    .gnu_debugdata      utf8    czj
+111 0x0000396c 0x00000291 7   8    .gnu_debugdata      ascii   Egogb}g
+112 0x00003977 0x0000029c 5   6    .gnu_debugdata      ascii   QIa!t
+113 0x0000399f 0x000002c4 4   5    .gnu_debugdata      ascii   >G^.
+114 0x00003a0a 0x0000032f 4   6    .gnu_debugdata      utf8    aBצz
+115 0x00003a5f 0x00000384 6   7    .gnu_debugdata      ascii   hsrLc\
+0x000025d0    1     16 sym.imp.__cxa_finalize
+0x000025e0    1     16 sym.imp.__android_log_print
+0x000025f0    1     16 sym.imp.__open_2
+0x00002630    1     16 sym.imp.__stack_chk_fail
+0x00002620    1     16 sym.imp.close
+0x00002600    1     16 sym.imp.gmtime_r
+0x00002610    1     16 sym.imp.ioctl
+0x00002640    1     16 sym.imp.timegm
+0x00002000    1     12 entry0
+0x000024d8    1     88 sym.HIDL_FETCH_IAlarm
+0x00002650    1     16 sym.imp.operator_new_unsigned_long_
+0x00002660    1     16 fcn.00002660
+0x000023c4    8    276 method.vendor::qti::hardware::alarm::V1_0::implementation::Alarm.getRtcTime__
+0x00002294    8    304 method.vendor::qti::hardware::alarm::V1_0::implementation::Alarm.cancelAlarm__
+0x00002164    8    304 method.vendor::qti::hardware::alarm::V1_0::implementation::Alarm.getAlarm__
+0x00002014    8    336 method.vendor::qti::hardware::alarm::V1_0::implementation::Alarm.setAlarm_long_
+0x00002670    1     16 sym.imp.android::RefBase::RefBase__
+0x00002680    1     16 sym.imp.operator_delete_void_
+0x00002010    1      4 entry.fini0
+0x00002530    1      8 method.vendor::qti::hardware::alarm::V1_0::IAlarm.isRemote___const
+0x00002538    1      4 method.vendor::qti::hardware::alarm::V1_0::IAlarm.IAlarm__
+0x00002544    1     40 method.android::hidl::base::V1_0::IBase.IBase__
+0x00002580    1     48 method.virtual_thunk_to_vendor::qti::hardware::alarm::V1_0::implementation::Alarm.Alarm__
+0x000025b0    1     20 section..plt

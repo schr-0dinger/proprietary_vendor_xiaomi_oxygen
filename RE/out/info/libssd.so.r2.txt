@@ -1,0 +1,181 @@
+arch     arm
+baddr    0x0
+binsz    9865
+bintype  elf
+bits     64
+canary   false
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name             demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+17  0x0000141c 0x0000141c GLOBAL FUNC 172      ssd_close
+18  0x00001014 0x00001014 GLOBAL FUNC 288      ssd_init_service
+19  0x00001134 0x00001134 GLOBAL FUNC 140      ssd_start
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000270   0x18 0x00000270   0x18 -r-- NOTE        .note.android.ident
+2   0x00000288   0x20 0x00000288   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8  0x1e0 0x000002a8  0x1e0 -r-- DYNSYM      .dynsym
+4   0x00000488   0x28 0x00000488   0x28 -r-- GNU_VERSYM  .gnu.version
+5   0x000004b0   0x40 0x000004b0   0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x000004f0   0x28 0x000004f0   0x28 -r-- GNU_HASH    .gnu.hash
+7   0x00000518  0x175 0x00000518  0x175 -r-- STRTAB      .dynstr
+8   0x00000690   0x10 0x00000690   0x10 -r-- ----        .relr.dyn
+9   0x000006a0  0x180 0x000006a0  0x180 -r-- RELA        .rela.plt
+10  0x00000820  0x1eb 0x00000820  0x1eb -r-- PROGBITS    .rodata
+11  0x00000a0c   0x44 0x00000a0c   0x44 -r-- PROGBITS    .eh_frame_hdr
+12  0x00000a50  0x10c 0x00000a50  0x10c -r-- PROGBITS    .eh_frame
+13  0x00001000  0x4c8 0x00001000  0x4c8 -r-x PROGBITS    .text
+14  0x000014d0  0x120 0x000014d0  0x120 -r-x PROGBITS    .plt
+15  0x00002000    0x8 0x00002000    0x8 -rw- PROGBITS    .data.rel.ro
+16  0x00002008   0x10 0x00002008   0x10 -rw- FINI_ARRAY  .fini_array
+17  0x00002018  0x1e0 0x00002018  0x1e0 -rw- DYNAMIC     .dynamic
+18  0x000021f8   0x98 0x000021f8   0x98 -rw- PROGBITS    .got.plt
+19  0x00002290    0x0 0x00003290   0x18 -rw- NOBITS      .bss
+20  0x00002290   0xe1 0x00000000   0xe1 ---- STRTAB      .shstrtab
+21  0x00002371  0x318 0x00000000  0x318 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00000519 0x00000519 14  15   .dynstr             ascii   __cxa_finalize
+3   0x00000528 0x00000528 19  20   .dynstr             ascii   QSEECom_receive_req
+4   0x0000053c 0x0000053c 25  26   .dynstr             ascii   QSEECom_register_listener
+5   0x00000556 0x00000556 17  18   .dynstr             ascii   QSEECom_send_resp
+6   0x00000568 0x00000568 27  28   .dynstr             ascii   QSEECom_unregister_listener
+7   0x00000584 0x00000584 19  20   .dynstr             ascii   __android_log_print
+8   0x00000598 0x00000598 7   8    .dynstr             ascii   __errno
+9   0x000005a0 0x000005a0 8   9    .dynstr             ascii   __open_2
+10  0x000005a9 0x000005a9 5   6    .dynstr             ascii   close
+11  0x000005af 0x000005af 5   6    .dynstr             ascii   lseek
+12  0x000005b5 0x000005b5 6   7    .dynstr             ascii   memset
+13  0x000005bc 0x000005bc 14  15   .dynstr             ascii   pthread_create
+14  0x000005cb 0x000005cb 12  13   .dynstr             ascii   pthread_exit
+15  0x000005d8 0x000005d8 12  13   .dynstr             ascii   pthread_join
+16  0x000005e5 0x000005e5 4   5    .dynstr             ascii   read
+17  0x000005ea 0x000005ea 9   10   .dynstr             ascii   ssd_close
+18  0x000005f4 0x000005f4 16  17   .dynstr             ascii   ssd_init_service
+19  0x00000605 0x00000605 9   10   .dynstr             ascii   ssd_start
+20  0x0000060f 0x0000060f 5   6    .dynstr             ascii   write
+21  0x00000615 0x00000615 9   10   .dynstr             ascii   liblog.so
+22  0x0000061f 0x0000061f 6   7    .dynstr             ascii   LIBLOG
+23  0x00000626 0x00000626 7   8    .dynstr             ascii   libc.so
+24  0x0000062e 0x0000062e 4   5    .dynstr             ascii   LIBC
+25  0x00000633 0x00000633 11  12   .dynstr             ascii   libutils.so
+26  0x0000063f 0x0000063f 12  13   .dynstr             ascii   libcutils.so
+27  0x0000064c 0x0000064c 10  11   .dynstr             ascii   libdiag.so
+28  0x00000657 0x00000657 16  17   .dynstr             ascii   libQSEEComAPI.so
+29  0x00000668 0x00000668 9   10   .dynstr             ascii   libc++.so
+30  0x00000672 0x00000672 7   8    .dynstr             ascii   libm.so
+31  0x0000067a 0x0000067a 8   9    .dynstr             ascii   libdl.so
+32  0x00000683 0x00000683 9   10   .dynstr             ascii   libssd.so
+33  0x00000840 0x00000840 38  39   .rodata             ascii   Error opening ssd part: %s (errno %d)\n
+34  0x00000867 0x00000867 34  35   .rodata             ascii   Error: ssd unregister call failed!
+35  0x0000088a 0x0000088a 28  29   .rodata             ascii   ssd_init_service succeeded!\n
+36  0x000008a7 0x000008a7 42  43   .rodata             ascii   /dev/block/platform/msm_sdcc.1/by-name/ssd
+37  0x000008d2 0x000008d2 34  35   .rodata             ascii   Error: close ssd partition failed!
+38  0x000008f5 0x000008f5 45  46   .rodata             ascii   ssd_write writing to ssd partition error! %d\n
+39  0x00000923 0x00000923 39  40   .rodata             ascii    QSEECom_rcv_req failed: ret value: %d\n
+40  0x0000094b 0x0000094b 29  30   .rodata             ascii   Error lseek() (error no: %d)\n
+41  0x00000969 0x00000969 46  47   .rodata             ascii   ssd_read reading from ssd partition error! %d\n
+42  0x00000998 0x00000998 49  50   .rodata             ascii   Error: Creating a pthread in ssd_start is failed!
+43  0x000009ca 0x000009ca 26  27   .rodata             ascii   /dev/disk/by-partlabel/ssd
+44  0x000009e9 0x000009e9 33  34   .rodata             ascii   /dev/block/bootdevice/by-name/ssd
+45  0x00001299 0x00001299 4   5    .text               ascii   \t\bq!
+46  0x00001348 0x00001348 4   5    .text               ascii   ?\v@q
+47  0x0000136c 0x0000136c 5   6    .text               ascii   ?\v@qa
+48  0x0000139f 0x0000139f 4   5    .text               ascii   *@\a@
+49  0x000013df 0x000013df 4   5    .text               ascii   *@\a@
+50  0x00002291 0x00000001 11  12   .shstrtab           ascii   .fini_array
+51  0x0000229d 0x0000000d 5   6    .shstrtab           ascii   .text
+52  0x000022a3 0x00000013 19  20   .shstrtab           ascii   .note.android.ident
+53  0x000022b7 0x00000027 8   9    .shstrtab           ascii   .got.plt
+54  0x000022c0 0x00000030 9   10   .shstrtab           ascii   .rela.plt
+55  0x000022ca 0x0000003a 4   5    .shstrtab           ascii   .bss
+56  0x000022cf 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+57  0x000022d7 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+58  0x000022e5 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+59  0x000022f4 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+60  0x00002301 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+61  0x0000230b 0x0000007b 12  13   .shstrtab           ascii   .gnu.version
+62  0x00002318 0x00000088 7   8    .shstrtab           ascii   .dynsym
+63  0x00002320 0x00000090 9   10   .shstrtab           ascii   .gnu.hash
+64  0x0000232a 0x0000009a 9   10   .shstrtab           ascii   .eh_frame
+65  0x00002334 0x000000a4 18  19   .shstrtab           ascii   .note.gnu.build-id
+66  0x00002347 0x000000b7 8   9    .shstrtab           ascii   .dynamic
+67  0x00002350 0x000000c0 9   10   .shstrtab           ascii   .shstrtab
+68  0x0000235a 0x000000ca 7   8    .shstrtab           ascii   .rodata
+69  0x00002362 0x000000d2 14  15   .shstrtab           ascii   .gnu_debugdata
+70  0x00002372 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+71  0x000023be 0x0000004d 4   6    .gnu_debugdata      utf8    ٛH7I
+72  0x000023d0 0x0000005f 6   7    .gnu_debugdata      ascii   ;\a7)kB
+73  0x000023d8 0x00000067 5   6    .gnu_debugdata      ascii   0v\xa
+74  0x000023f3 0x00000082 4   6    .gnu_debugdata      utf8    ўk-(
+75  0x000023fc 0x0000008b 5   6    .gnu_debugdata      ascii   bZqtB
+76  0x00002414 0x000000a3 6   7    .gnu_debugdata      ascii   ;Q.Cz[
+77  0x0000242b 0x000000ba 4   5    .gnu_debugdata      ascii   iC/P
+78  0x00002471 0x00000100 4   5    .gnu_debugdata      ascii   eP2+
+79  0x00002476 0x00000105 4   6    .gnu_debugdata      utf8    Ѓ9"^
+80  0x00002484 0x00000113 4   5    .gnu_debugdata      ascii   @=:K
+81  0x00002490 0x0000011f 5   6    .gnu_debugdata      ascii   B6K.b
+82  0x000024ae 0x0000013d 6   7    .gnu_debugdata      ascii   {Ht:[V
+83  0x000024bb 0x0000014a 5   6    .gnu_debugdata      ascii   4jVP<
+84  0x000024cd 0x0000015c 4   5    .gnu_debugdata      ascii   :=z\b
+85  0x0000251b 0x000001aa 5   6    .gnu_debugdata      ascii   }\ag5\b
+86  0x00002538 0x000001c7 4   5    .gnu_debugdata      ascii   vd0.
+87  0x000025a0 0x0000022f 5   6    .gnu_debugdata      ascii   o@}fg
+88  0x000025d0 0x0000025f 6   7    .gnu_debugdata      ascii   f!N$\v\n
+89  0x000025f1 0x00000280 5   6    .gnu_debugdata      ascii   XdL"y
+90  0x000025fd 0x0000028c 4   5    .gnu_debugdata      ascii   LfNl
+91  0x0000261f 0x000002ae 4   5    .gnu_debugdata      ascii   >~4J
+92  0x00002626 0x000002b5 4   5    .gnu_debugdata      ascii   (\b\x
+93  0x00002639 0x000002c8 4   5    .gnu_debugdata      ascii   f O8
+0x000014f0    1     16 sym.imp.__cxa_finalize
+0x00001560    1     16 sym.imp.QSEECom_receive_req
+0x00001530    1     16 sym.imp.QSEECom_register_listener
+0x000015a0    1     16 sym.imp.QSEECom_send_resp
+0x000015d0    1     16 sym.imp.QSEECom_unregister_listener
+0x00001520    1     16 sym.imp.__android_log_print
+0x00001510    1     16 sym.imp.__errno
+0x00001500    1     16 sym.imp.__open_2
+0x000015c0    1     16 sym.imp.close
+0x00001570    1     16 sym.imp.lseek
+0x00001550    1     16 sym.imp.memset
+0x00001540    1     16 sym.imp.pthread_create
+0x000015b0    1     16 sym.imp.pthread_exit
+0x000015e0    1     16 sym.imp.pthread_join
+0x00001580    1     16 sym.imp.read
+0x00001590    1     16 sym.imp.write
+0x00001000    1     12 entry0
+0x0000141c    5    172 sym.ssd_close
+0x00001014    5    288 sym.ssd_init_service
+0x00001134    6    140 sym.ssd_start
+0x00001010    1      4 entry.fini0
+0x000011e4   22    568 fcn.000011e4
+0x000011c8    1     28 fcn.000011c8
+0x000014d0    1     20 section..plt

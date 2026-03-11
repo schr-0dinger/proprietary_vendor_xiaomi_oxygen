@@ -1,0 +1,452 @@
+arch     arm
+baddr    0x0
+binsz    14389
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name               demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+35  0x00001bc0 0x00002bc0 GLOBAL FUNC 3908     adie_rtac_callback
+36  0x00002b34 0x00003b34 GLOBAL FUNC 40       adie_rtac_exit
+37  0x00002b04 0x00003b04 GLOBAL FUNC 48       adie_rtac_init
+38  0x00001b6c 0x00002b6c GLOBAL FUNC 84       find_codec_index
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000174    0x18 0x00000174    0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c    0x20 0x0000018c    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0x270 0x000001ac   0x270 -r-- DYNSYM      .dynsym
+4   0x0000041c    0x4e 0x0000041c    0x4e -r-- GNU_VERSYM  .gnu.version
+5   0x0000046c    0x50 0x0000046c    0x50 -r-- GNU_VERNEED .gnu.version_r
+6   0x000004bc    0x2c 0x000004bc    0x2c -r-- GNU_HASH    .gnu.hash
+7   0x000004e8   0x207 0x000004e8   0x207 -r-- STRTAB      .dynstr
+8   0x000006f0    0x11 0x000006f0    0x11 -r-- ----        .rel.dyn
+9   0x00000704     0xc 0x00000704     0xc -r-- ----        .relr.dyn
+10  0x00000710    0x48 0x00000710    0x48 -r-- ----        .ARM.exidx
+11  0x00000758   0x108 0x00000758   0x108 -r-- REL         .rel.plt
+12  0x00000860  0x12f8 0x00000860  0x12f8 -r-- PROGBITS    .rodata
+13  0x00001b58  0x1240 0x00002b58  0x1240 -r-x PROGBITS    .text
+14  0x00002da0   0x230 0x00003da0   0x230 -r-x PROGBITS    .plt
+15  0x00002fd0    0xf0 0x00004fd0    0xf0 -rw- PROGBITS    .data.rel.ro
+16  0x000030c0     0x8 0x000050c0     0x8 -rw- FINI_ARRAY  .fini_array
+17  0x000030c8   0x100 0x000050c8   0x100 -rw- DYNAMIC     .dynamic
+18  0x000031c8     0x8 0x000051c8     0x8 -rw- PROGBITS    .got
+19  0x000031d0    0x90 0x000051d0    0x90 -rw- PROGBITS    .got.plt
+20  0x00003260     0x4 0x00006260     0x4 -rw- PROGBITS    .data
+21  0x00003264     0x0 0x00006264  0x208c -rw- NOBITS      .bss
+22  0x00003264    0x4e 0x00000000    0x4e ---- ----        .ARM.attributes
+23  0x000032b2    0xf7 0x00000000    0xf7 ---- STRTAB      .shstrtab
+24  0x000033a9   0x48c 0x00000000   0x48c ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+3   0x000004e9 0x000004e9 14  15   .dynstr             ascii   __cxa_finalize
+4   0x000004f8 0x000004f8 19  20   .dynstr             ascii   __android_log_print
+5   0x0000050c 0x0000050c 7   8    .dynstr             ascii   __errno
+6   0x00000514 0x00000514 8   9    .dynstr             ascii   __open_2
+7   0x0000051d 0x0000051d 16  17   .dynstr             ascii   __stack_chk_fail
+8   0x0000052e 0x0000052e 17  18   .dynstr             ascii   __stack_chk_guard
+9   0x00000540 0x00000540 13  14   .dynstr             ascii   __strlcat_chk
+10  0x0000054e 0x0000054e 11  12   .dynstr             ascii   __write_chk
+11  0x0000055a 0x0000055a 23  24   .dynstr             ascii   acph_deregister_command
+12  0x00000572 0x00000572 21  22   .dynstr             ascii   acph_register_command
+13  0x00000588 0x00000588 18  19   .dynstr             ascii   adie_rtac_callback
+14  0x0000059b 0x0000059b 14  15   .dynstr             ascii   adie_rtac_exit
+15  0x000005aa 0x000005aa 14  15   .dynstr             ascii   adie_rtac_init
+16  0x000005b9 0x000005b9 8   9    .dynstr             ascii   asprintf
+17  0x000005c2 0x000005c2 4   5    .dynstr             ascii   atoi
+18  0x000005c7 0x000005c7 5   6    .dynstr             ascii   close
+19  0x000005cd 0x000005cd 8   9    .dynstr             ascii   closedir
+20  0x000005d6 0x000005d6 6   7    .dynstr             ascii   fclose
+21  0x000005dd 0x000005dd 5   6    .dynstr             ascii   fgets
+22  0x000005e3 0x000005e3 16  17   .dynstr             ascii   find_codec_index
+23  0x000005f4 0x000005f4 5   6    .dynstr             ascii   fopen
+24  0x000005fa 0x000005fa 4   5    .dynstr             ascii   free
+25  0x000005ff 0x000005ff 7   8    .dynstr             ascii   opendir
+26  0x00000607 0x00000607 4   5    .dynstr             ascii   read
+27  0x0000060c 0x0000060c 7   8    .dynstr             ascii   readdir
+28  0x00000614 0x00000614 7   8    .dynstr             ascii   realloc
+29  0x0000061c 0x0000061c 8   9    .dynstr             ascii   strerror
+30  0x00000625 0x00000625 7   8    .dynstr             ascii   strlcpy
+31  0x0000062d 0x0000062d 6   7    .dynstr             ascii   strlen
+32  0x00000634 0x00000634 7   8    .dynstr             ascii   strncmp
+33  0x0000063c 0x0000063c 6   7    .dynstr             ascii   strstr
+34  0x00000643 0x00000643 8   9    .dynstr             ascii   strtok_r
+35  0x0000064c 0x0000064c 6   7    .dynstr             ascii   strtol
+36  0x00000653 0x00000653 7   8    .dynstr             ascii   strtoul
+37  0x0000065b 0x0000065b 6   7    .dynstr             ascii   usleep
+38  0x00000662 0x00000662 9   10   .dynstr             ascii   vsnprintf
+39  0x0000066c 0x0000066c 6   7    .dynstr             ascii   memcpy
+40  0x00000673 0x00000673 6   7    .dynstr             ascii   memset
+41  0x0000067a 0x0000067a 9   10   .dynstr             ascii   liblog.so
+42  0x00000684 0x00000684 6   7    .dynstr             ascii   LIBLOG
+43  0x0000068b 0x0000068b 7   8    .dynstr             ascii   libc.so
+44  0x00000693 0x00000693 4   5    .dynstr             ascii   LIBC
+45  0x00000698 0x00000698 6   7    .dynstr             ascii   LIBC_N
+46  0x0000069f 0x0000069f 12  13   .dynstr             ascii   libcutils.so
+47  0x000006ac 0x000006ac 11  12   .dynstr             ascii   libutils.so
+48  0x000006b8 0x000006b8 12  13   .dynstr             ascii   libaudcal.so
+49  0x000006c5 0x000006c5 9   10   .dynstr             ascii   libc++.so
+50  0x000006cf 0x000006cf 7   8    .dynstr             ascii   libm.so
+51  0x000006d7 0x000006d7 8   9    .dynstr             ascii   libdl.so
+52  0x000006e0 0x000006e0 14  15   .dynstr             ascii   libadiertac.so
+53  0x000006f0 0x000006f0 4   5    .rel.dyn            ascii   APS2
+54  0x00000708 0x00000708 4   5    .relr.dyn           ascii   }UUU
+55  0x00000860 0x00000860 7   8    .rodata             ascii   WCD9360
+56  0x00000868 0x00000868 53  54   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->codec path is empty\n %d
+57  0x0000089e 0x0000089e 88  89   .rodata             ascii   [ACPH_CMD_GET_MULTIPLE_ADIE_REGISTERS]->ERROR! cannot open adie peek error: %d, path: %s
+58  0x000008f9 0x000008f9 50  51   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->reg[%08X],val[%08X]\n
+59  0x0000092c 0x0000092c 50  51   .rodata             ascii   SET_MULTI-Reg ==> Reg[%08X],Val[%08X], Mask[%08X]\n
+60  0x0000095f 0x0000095f 12  13   .rodata             ascii   %s%s/version
+61  0x0000096c 0x0000096c 17  18   .rodata             ascii   read_version_file
+62  0x0000097e 0x0000097e 47  48   .rodata             ascii   %s: strtok failed to get chipset major version\n
+63  0x000009ae 0x000009ae 76  77   .rodata             ascii   [ACPH_CMD_SET_ADIE_REGISTER]->insufficient length of req buffer to get data\n
+64  0x000009fb 0x000009fb 36  37   .rodata             ascii   ACPH_CMD_GET_MULTIPLE_ADIE_REGISTERS
+65  0x00000a20 0x00000a20 11  12   .rodata             ascii   find_codecs
+66  0x00000a2e 0x00000a2e 15  16   .rodata             ascii   get_codecs_info
+67  0x00000a3e 0x00000a3e 80  81   .rodata             ascii   [ACPH_CMD_SET_MULTIPLE_ADIE_REGISTERS]->could not find codec index for handle %d
+68  0x00000a8f 0x00000a8f 45  46   .rodata             ascii   ACDB RTAC -> acph register failed error = %d\n
+69  0x00000ac0 0x00000ac0 48  49   .rodata             ascii   %s: Error: get_reg_path failed, err %d, path %s\n
+70  0x00000af1 0x00000af1 7   8    .rodata             ascii   WCD937X
+71  0x00000af9 0x00000af9 30  31   .rodata             ascii   %s: %d (%s) opendir %s failed\n
+72  0x00000b18 0x00000b18 76  77   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->insufficient length of req buffer to get data\n
+73  0x00000b65 0x00000b65 17  18   .rodata             ascii   get_adie_register
+74  0x00000b77 0x00000b77 9   10   .rodata             ascii   0x%x 0x%x
+75  0x00000b81 0x00000b81 49  50   .rodata             ascii   [ACPH_CMD_GET_MULTIPLE_ADIE_REGISTERS]->handle %d
+76  0x00000bb3 0x00000bb3 48  49   .rodata             ascii   [ACPH_CMD_SET_MULTIPLE_ADIE_REGISTERS]->success\n
+77  0x00000be4 0x00000be4 76  77   .rodata             ascii   ACDB RTAC -> ERROR: adie_rtac_exit, acph_deregister_command failed err = %d\n
+78  0x00000c31 0x00000c31 7   8    .rodata             ascii   WCD938X
+79  0x00000c39 0x00000c39 7   8    .rodata             ascii   WSA883X
+80  0x00000c41 0x00000c41 9   10   .rodata             ascii   registers
+81  0x00000c4b 0x00000c4b 7   8    .rodata             ascii   WCD9306
+82  0x00000c53 0x00000c53 103 104  .rodata             ascii   [ACPH_CMD_SET_MULTIPLE_ADIE_REGISTERS]->Error in lengths of input or output buffers or total registers\n
+83  0x00000cbb 0x00000cbb 7   8    .rodata             ascii   WCD9340
+84  0x00000cc3 0x00000cc3 7   8    .rodata             ascii   WSA881X
+85  0x00000ccb 0x00000ccb 55  56   .rodata             ascii   %s: strtok failed to find register length : delimiter!\n
+86  0x00000d03 0x00000d03 27  28   .rodata             ascii   %s: register length is %d!\n
+87  0x00000d1f 0x00000d1f 6   7    .rodata             ascii   BOLERO
+88  0x00000d26 0x00000d26 7   8    .rodata             ascii   WCD9335
+89  0x00000d2e 0x00000d2e 103 104  .rodata             ascii   [ACPH_CMD_GET_MULTIPLE_ADIE_REGISTERS]->Error in lengths of input or output buffers or total registers\n
+90  0x00000d96 0x00000d96 95  96   .rodata             ascii   [ACPH_CMD_SET_ADIE_REGISTER]->ERROR! set adie register failed for Register[0x%X], numBytes[%zu]
+91  0x00000df6 0x00000df6 7   8    .rodata             ascii   WCD9330
+92  0x00000dfe 0x00000dfe 34  35   .rodata             ascii   %s: resp_buf_bytes_filled is NULL\n
+93  0x00000e21 0x00000e21 62  63   .rodata             ascii   [ACPH_CMD_GET_MULTIPLE_ADIE_REGISTERS]->codec path is empty %d
+94  0x00000e60 0x00000e60 97  98   .rodata             ascii   [ACPH_CMD_SET_MULTIPLE_ADIE_REGISTERS]->set multi register failed, numBytes1[%zu],numBytes2[%zu]\n
+95  0x00000ec2 0x00000ec2 43  44   .rodata             ascii   %s: get_chipset_id failed error %d path %s\n
+96  0x00000eee 0x00000eee 7   8    .rodata             ascii   MSM8X10
+97  0x00000ef6 0x00000ef6 32  33   .rodata             ascii   %s: valid register length is %d\n
+98  0x00000f17 0x00000f17 85  86   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->ERROR! get adie register[0x%x] failed Peek(%s) Poke(%s)
+99  0x00000f6d 0x00000f6d 71  72   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->could not find codec index for handle\n %d
+100 0x00000fb5 0x00000fb5 38  39   .rodata             ascii   %s: strtok failed to get chipset name\n
+101 0x00000fdc 0x00000fdc 7   8    .rodata             ascii   WCD9341
+102 0x00000fe4 0x00000fe4 7   8    .rodata             ascii   MSM8X52
+103 0x00000fec 0x00000fec 14  15   .rodata             ascii   WSA881X-ANALOG
+104 0x00000ffb 0x00000ffb 103 104  .rodata             ascii   [ACPH_CMD_GET_MULTIPLE_ADIE_REGISTERS]->ERROR! length of written bytes does not match expected value %d
+105 0x00001063 0x00001063 7   8    .rodata             ascii   WCD9310
+106 0x0000106b 0x0000106b 25  26   .rodata             ascii   %s: resp_buf_ptr is NULL\n
+107 0x00001085 0x00001085 78  79   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->ERROR! cannot open adie peek error: %d, path: %s
+108 0x000010d4 0x000010d4 16  17   .rodata             ascii   find_codec_index
+109 0x000010e5 0x000010e5 29  30   .rodata             ascii   failed to get register paths\n
+110 0x00001103 0x00001103 16  17   .rodata             ascii   find_codecs_info
+111 0x00001114 0x00001114 26  27   .rodata             ascii   /proc/asound/card0/codecs/
+112 0x0000112f 0x0000112f 83  84   .rodata             ascii   [ACPH_CMD_GET_MULTIPLE_ADIE_REGISTERS]->ERROR! cannot allocate memory: %d, path: %s
+113 0x00001183 0x00001183 57  58   .rodata             ascii   GetMultipleAdieReg failed because reg[%08x] is not found\n
+114 0x000011bd 0x000011bd 48  49   .rodata             ascii   [ACPH_CMD_GET_MULTIPLE_ADIE_REGISTERS]->Success\n
+115 0x000011f0 0x000011f0 47  48   .rodata             ascii   %s: strtok failed to get chipset minor version\n
+116 0x00001220 0x00001220 67  68   .rodata             ascii   set register request received for ==> reg[%X], val[%X], bytes[%zu]\n
+117 0x00001264 0x00001264 63  64   .rodata             ascii   [ACPH_CMD_GET_MULTIPLE_ADIE_REGISTERS]->codec_reg file size =%d
+118 0x000012a4 0x000012a4 61  62   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->reg[%08X],val[%08X], count[%d]\n
+119 0x000012e2 0x000012e2 86  87   .rodata             ascii   [ACPH_CMD_SET_MULTIPLE_ADIE_REGISTERS]->insufficient length of req buffer to get data\n
+120 0x00001339 0x00001339 62  63   .rodata             ascii   [ACPH_CMD_SET_MULTIPLE_ADIE_REGISTERS]->codec path is empty %d
+121 0x00001378 0x00001378 9   10   .rodata             ascii   -snd-card
+122 0x00001382 0x00001382 33  34   .rodata             ascii   %s: file open failed for path %s\n
+123 0x000013a4 0x000013a4 73  74   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->ERROR! cannot allocate memory: %d, path: %s
+124 0x000013ee 0x000013ee 71  72   .rodata             ascii   [ACPH_CMD_SET_ADIE_REGISTER]->could not find codec index for handle\n %d
+125 0x00001436 0x00001436 78  79   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->ERROR! cannot open adie poke error: %d, path: %s
+126 0x00001485 0x00001485 6   7    .rodata             ascii   regmap
+127 0x0000148c 0x0000148c 25  26   .rodata             ascii   %s: fgets failed path %s\n
+128 0x000014a6 0x000014a6 8   9    .rodata             ascii   DRAX-CDC
+129 0x000014af 0x000014af 94  95   .rodata             ascii   ACPH_CMD_GET_ADIE_REGISTER command success. Found the value for register = 0x%X, value = 0x%X\n
+130 0x0000150e 0x0000150e 43  44   .rodata             ascii   set register ==> actual bytes written[%zu]\n
+131 0x0000153a 0x0000153a 72  73   .rodata             ascii   %s: codec %s: handle %d, chipset id %d, major %d, minor %d, reg path %s\n
+132 0x00001583 0x00001583 7   8    .rodata             ascii   WCD9326
+133 0x0000158b 0x0000158b 52  53   .rodata             ascii   %s: resp_buf_len size %u to small for data size %zu\n
+134 0x000015c0 0x000015c0 26  27   .rodata             ascii   ACPH_CMD_GET_ADIE_REGISTER
+135 0x000015db 0x000015db 93  94   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->ERROR! length of written bytes does not match expected value %d
+136 0x00001639 0x00001639 6   7    .rodata             ascii   _codec
+137 0x00001640 0x00001640 7   8    .rodata             ascii   AQT1000
+138 0x00001648 0x00001648 17  18   .rodata             ascii   WSA881X-SOUNDWIRE
+139 0x0000165a 0x0000165a 86  87   .rodata             ascii   [ACPH_CMD_GET_MULTIPLE_ADIE_REGISTERS]->insufficient length of req buffer to get data\n
+140 0x000016b1 0x000016b1 39  40   .rodata             ascii   Cannot recognize the ACPH_ADIE command\n
+141 0x000016dd 0x000016dd 7   8    .rodata             ascii   ROULEUR
+142 0x000016e5 0x000016e5 26  27   .rodata             ascii   %d (%s) opendir %s failed\n
+143 0x00001700 0x00001700 7   8    .rodata             ascii   MSM8909
+144 0x00001708 0x00001708 40  41   .rodata             ascii   %s->could not find codec with handle %d\n
+145 0x00001731 0x00001731 39  40   .rodata             ascii   %s: Error: get_reg_path failed, err %d\n
+146 0x00001759 0x00001759 45  46   .rodata             ascii   %s: Error: snprintf failed: %s in %s, err %d\n
+147 0x00001787 0x00001787 7   8    .rodata             ascii   WCD9320
+148 0x0000178f 0x0000178f 10  11   .rodata             ascii   SDM660-CDC
+149 0x0000179a 0x0000179a 38  39   .rodata             ascii   [ACPH_CMD_SET_ADIE_REGISTER]->Success\n
+150 0x000017c1 0x000017c1 80  81   .rodata             ascii   [ACPH_CMD_GET_MULTIPLE_ADIE_REGISTERS]->could not find codec index for handle %d
+151 0x00001812 0x00001812 53  54   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->codec_reg file size =%d
+152 0x00001848 0x00001848 49  50   .rodata             ascii   [%s]->ERROR! cannot allocate memory: %d, path: %s
+153 0x0000187a 0x0000187a 78  79   .rodata             ascii   [ACPH_CMD_SET_ADIE_REGISTER]->ERROR! cannot open adie poke error: %d, path: %s
+154 0x000018c9 0x000018c9 27  28   .rodata             ascii   get_multiple_adie_registers
+155 0x000018e5 0x000018e5 4   5    .rodata             ascii   asoc
+156 0x000018ea 0x000018ea 52  53   .rodata             ascii   %s: Error: read_version_file failed, err %d path %s\n
+157 0x0000191f 0x0000191f 7   8    .rodata             ascii   MSM8X53
+158 0x00001927 0x00001927 7   8    .rodata             ascii   MSM8X16
+159 0x0000192f 0x0000192f 7   8    .rodata             ascii   SDW-CDC
+160 0x00001939 0x00001939 7   8    .rodata             ascii   WCD9302
+161 0x00001941 0x00001941 66  67   .rodata             ascii   [ACPH_CMD_GET_ADIE_REGISTER]->register[%08X] found from the file!\n
+162 0x00001984 0x00001984 39  40   .rodata             ascii   GET_MULTI-Reg ==> Reg[%08X],Mask[%08X]\n
+163 0x000019ac 0x000019ac 23  24   .rodata             ascii   %s: rtc_io_buf is NULL\n
+164 0x000019c8 0x000019c8 26  27   .rodata             ascii   /proc/asound/card0/codecs/
+165 0x00001a90 0x00001a90 17  18   .rodata             ascii   /sys/kernel/debug
+166 0x00001b99 0x00002b98 9   10   .text               ascii   !\aJ\aKzD{D
+167 0x00001bdf 0x00002bde 5   6    .text               ascii   M}D(x
+168 0x00001bfb 0x00002bfa 4   5    .text               ascii   `xD`
+169 0x00001c3f 0x00002c3e 4   5    .text               ascii   HxD\r
+170 0x00001c9f 0x00002c9e 5   6    .text               ascii   I@FyD
+171 0x00001cb9 0x00002cb8 6   8    .text               utf8    (NйI F
+172 0x00001cc9 0x00002cc8 5   7    .text               utf8    (KЃF\f
+173 0x00001cd9 0x00002cd8 8   9    .text               ascii   MXF"F}DU
+174 0x00001d01 0x00002d00 5   6    .text               ascii   KzD{D
+175 0x00001d33 0x00002d32 5   6    .text               ascii   KzD{D
+176 0x00001d4b 0x00002d4a 5   6    .text               ascii   KzD{D
+177 0x00001dae 0x00002dae 4   5    .text               ascii   IhA`
+178 0x00001db8 0x00002db8 4   5    .text               ascii   *FyD
+179 0x00001dc7 0x00002dc6 5   6    .text               ascii    *FyD
+180 0x00001de9 0x00002de8 5   6    .text               ascii   `(FUF
+181 0x00001e06 0x00002e06 4   5    .text               ascii   vJvK
+182 0x00001e0d 0x00002e0c 5   6    .text               ascii   !zD{D
+183 0x00001e1d 0x00002e1c 4   5    .text               ascii   $UF\v
+184 0x00001e2f 0x00002e2e 4   5    .text               ascii   qxDN
+185 0x00001e53 0x00002e52 5   7    .text               utf8    ?\bݨhO
+186 0x00001e6c 0x00002e6c 4   5    .text               ascii   `JzD
+187 0x00001e72 0x00002e72 4   5    .text               ascii   `J`K
+188 0x00001e79 0x00002e78 5   6    .text               ascii   !zD{D
+189 0x00001ead 0x00002eac 9   10   .text               ascii   !SJSKzD{D
+190 0x00001edf 0x00002ede 4   5    .text               ascii   0`PO
+191 0x00001ee7 0x00002ee6 4   5    .text               ascii   `)q\a
+192 0x00001efc 0x00002efc 4   5    .text               ascii   AHBN
+193 0x00001f05 0x00002f04 5   6    .text               ascii   'xD~D
+194 0x00001f25 0x00002f24 5   6    .text               ascii   !JF3F
+195 0x00002015 0x00003014 4   5    .text               ascii    \v,N
+196 0x0000201f 0x0000301e 4   5    .text               ascii   JzD/
+197 0x00002069 0x00003068 4   5    .text               ascii   JzD\n
+198 0x0000209f 0x0000309e 5   6    .text               ascii   !Q`\b
+199 0x000020d1 0x000030d0 5   6    .text               ascii   KzD{D
+200 0x000020e9 0x000030e8 5   6    .text               ascii   KzD{D
+201 0x000021d1 0x000031d0 5   6    .text               ascii   KzD{D
+202 0x000021db 0x000031da 4   5    .text               ascii   JzDO
+203 0x000021f0 0x000031f0 6   7    .text               ascii   >h~IyD
+204 0x00002213 0x00003212 9   10   .text               ascii   $vJwKzD{D
+205 0x00002220 0x00003220 5   6    .text               ascii   uJzD,
+206 0x00002230 0x00003230 6   7    .text               ascii   +FrJzD
+207 0x0000224c 0x0000324c 4   5    .text               ascii   lIyD
+208 0x0000226f 0x0000326e 9   10   .text               ascii   $dJeKzD{D
+209 0x0000227c 0x0000327c 4   5    .text               ascii   cJzD
+210 0x000022c5 0x000032c4 9   10   .text               ascii   %SJSKzD{D
+211 0x000022d2 0x000032d2 4   5    .text               ascii   RJzD
+212 0x000022f8 0x000032f8 6   7    .text               ascii   IJzDIK
+213 0x00002330 0x00003330 10  11   .text               ascii   =I'@JF;FyD
+214 0x00002347 0x00003346 7   8    .text               ascii   !KF8JzD
+215 0x00002366 0x00003366 5   6    .text               ascii   8F*FO
+216 0x0000237b 0x0000337a 5   6    .text               ascii   $3FzD
+217 0x000023a3 0x000033a2 5   6    .text               ascii   @#JzD
+218 0x00002469 0x00003468 5   6    .text               ascii   H\b7xD
+219 0x00002484 0x00003484 6   7    .text               ascii   ~h=hSF
+220 0x00002498 0x00003498 4   5    .text               ascii   IFRF
+221 0x000024b6 0x000034b6 5   6    .text               ascii   (F2FO
+222 0x00002539 0x00003538 5   6    .text               ascii   J+FzD
+223 0x0000257d 0x0000357c 5   6    .text               ascii   zxDzD
+224 0x00002695 0x00003694 6   7    .text               ascii   $xD\b0P
+225 0x00002709 0x00003708 5   6    .text               ascii   J3FzD
+226 0x0000272d 0x0000372c 5   6    .text               ascii   !#FzD
+227 0x00002766 0x00003766 4   5    .text               ascii   yD\b`
+228 0x00002773 0x00003772 5   6    .text               ascii   KzD{D
+229 0x00002815 0x00003814 4   5    .text               ascii   $zD2
+230 0x0000281d 0x0000381c 4   5    .text               ascii   $zD.
+231 0x00002825 0x00003824 4   5    .text               ascii   $zD*
+232 0x0000282d 0x0000382c 4   5    .text               ascii   %zDQ
+233 0x000028d5 0x000038d4 5   6    .text               ascii    ~JzD
+234 0x000028de 0x000038de 4   5    .text               ascii   }J}K
+235 0x000028e5 0x000038e4 5   6    .text               ascii   !zD{D
+236 0x00002919 0x00003918 5   6    .text               ascii   %VJzD
+237 0x00002933 0x00003932 5   6    .text               ascii   'QJzD
+238 0x0000295d 0x0000395c 7   8    .text               ascii   !+FXJzD
+239 0x00002971 0x00003970 7   8    .text               ascii   !+F_JzD
+240 0x00002993 0x00003992 7   8    .text               ascii   !3FXJzD
+241 0x000029ae 0x000039ae 6   7    .text               ascii   zcEJzD
+242 0x000029d7 0x000039d6 4   5    .text               ascii   'zD\e
+243 0x00002a0f 0x00003a0e 5   6    .text               ascii   ' JzD
+244 0x00002a42 0x00003a42 4   5    .text               ascii   &JzD
+245 0x00002a4a 0x00003a4a 6   7    .text               ascii   &JzD$K
+246 0x00002b06 0x00003b06 4   5    .text               ascii   \tHxD
+247 0x00002b78 0x00003b78 4   5    .text               ascii   DIyD
+248 0x00002b99 0x00003b98 4   5    .text               ascii   7GEg
+249 0x00002bee 0x00003bee 4   5    .text               ascii   ,IXF
+250 0x00002bfc 0x00003bfc 4   5    .text               ascii   XF!F
+251 0x00002c11 0x00003c10 5   6    .text               ascii   #(FyD
+252 0x00002c1a 0x00003c1a 4   5    .text               ascii   (F!F
+253 0x00002c43 0x00003c42 5   6    .text               ascii     p0F
+254 0x00002c63 0x00003c62 7   8    .text               ascii   !#F\rJzD
+255 0x00002cab 0x00003caa 7   8    .text               ascii   FyD\fh!h
+256 0x00002cdd 0x00003cdc 4   5    .text               ascii   h\fFO
+257 0x00002cf3 0x00003cf2 4   5    .text               ascii   %0`A
+258 0x00002d23 0x00003d22 10  11   .text               ascii   qCF5`\vHxD\a
+259 0x00002d39 0x00003d38 5   6    .text               ascii    \bJzD
+260 0x00002d89 0x00003d88 4   5    .text               ascii   D`G@
+261 0x00003269 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+262 0x00003274 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+263 0x0000327b 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+264 0x000032b3 0x00000001 11  12   .shstrtab           ascii   .fini_array
+265 0x000032bf 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+266 0x000032ca 0x00000018 5   6    .shstrtab           ascii   .text
+267 0x000032d0 0x0000001e 4   5    .shstrtab           ascii   .got
+268 0x000032d5 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+269 0x000032e9 0x00000037 8   9    .shstrtab           ascii   .got.plt
+270 0x000032f2 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+271 0x000032fb 0x00000049 4   5    .shstrtab           ascii   .bss
+272 0x00003300 0x0000004e 15  16   .shstrtab           ascii   .ARM.attributes
+273 0x00003310 0x0000005e 7   8    .shstrtab           ascii   .dynstr
+274 0x00003318 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+275 0x00003327 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+276 0x00003334 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+277 0x0000333e 0x0000008c 8   9    .shstrtab           ascii   .rel.dyn
+278 0x00003347 0x00000095 12  13   .shstrtab           ascii   .gnu.version
+279 0x00003354 0x000000a2 7   8    .shstrtab           ascii   .dynsym
+280 0x0000335c 0x000000aa 9   10   .shstrtab           ascii   .gnu.hash
+281 0x00003366 0x000000b4 18  19   .shstrtab           ascii   .note.gnu.build-id
+282 0x00003379 0x000000c7 8   9    .shstrtab           ascii   .dynamic
+283 0x00003382 0x000000d0 9   10   .shstrtab           ascii   .shstrtab
+284 0x0000338c 0x000000da 7   8    .shstrtab           ascii   .rodata
+285 0x00003394 0x000000e2 14  15   .shstrtab           ascii   .gnu_debugdata
+286 0x000033a3 0x000000f1 5   6    .shstrtab           ascii   .data
+287 0x000033aa 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+288 0x000033ec 0x00000043 4   5    .gnu_debugdata      ascii    A5T
+289 0x0000344e 0x000000a5 4   7    .gnu_debugdata      utf8    /ʣػH
+290 0x00003459 0x000000b0 5   7    .gnu_debugdata      utf8    Ϭ6+R\
+291 0x00003481 0x000000d8 4   5    .gnu_debugdata      ascii   cO#9
+292 0x00003486 0x000000dd 5   8    .gnu_debugdata      utf8    L$g矯U
+293 0x000034b0 0x00000107 5   6    .gnu_debugdata      ascii   5PchN
+294 0x000034dc 0x00000133 4   8    .gnu_debugdata      utf8    K\aƏ
+295 0x00003515 0x0000016c 8   9    .gnu_debugdata      ascii   I(=~P=$e
+296 0x00003533 0x0000018a 4   6    .gnu_debugdata      utf8    ޥVCW
+297 0x00003554 0x000001ab 4   5    .gnu_debugdata      ascii   Lebd
+298 0x0000355e 0x000001b5 4   6    .gnu_debugdata      utf8    ƼuA8
+299 0x0000356c 0x000001c3 4   6    .gnu_debugdata      utf8    yaڲ1
+300 0x0000357e 0x000001d5 4   5    .gnu_debugdata      ascii   YsAD
+301 0x000035f7 0x0000024e 5   8    .gnu_debugdata      utf8    ~bԲ«8
+302 0x0000366c 0x000002c3 10  12   .gnu_debugdata      utf8    *"\bYQ\arہ\f>
+303 0x00003687 0x000002de 5   7    .gnu_debugdata      utf8    SBإG_
+304 0x000036ac 0x00000303 4   5    .gnu_debugdata      ascii   %q$i
+305 0x00003710 0x00000367 5   6    .gnu_debugdata      ascii   S;t:}
+306 0x0000371c 0x00000373 5   6    .gnu_debugdata      ascii   RNnG3
+307 0x0000374f 0x000003a6 4   5    .gnu_debugdata      ascii   w A]
+308 0x00003758 0x000003af 4   6    .gnu_debugdata      utf8    *+oߏ
+309 0x0000377a 0x000003d1 4   5    .gnu_debugdata      ascii   \0ZG
+310 0x0000377f 0x000003d6 4   5    .gnu_debugdata      ascii   mE8;
+311 0x00003791 0x000003e8 6   7    .gnu_debugdata      ascii   .``"\e-
+312 0x00003798 0x000003ef 5   6    .gnu_debugdata      ascii   L>gpJ
+313 0x000037ca 0x00000421 4   5    .gnu_debugdata      ascii   \tXoD
+314 0x000039f0 0x00000647 6   28                       utf32le @\tBݘݘĈ
+0x00003db4    1     12 sym.imp.__cxa_finalize
+0x00003dc0    1     12 sym.imp.__android_log_print
+0x00003e44    1      8 sym.imp.__errno
+0x00003e80    1     12 sym.imp.__open_2
+0x00003ebc    1      4 sym.imp.__stack_chk_fail
+0x00003eec    1      4 sym.imp.__strlcat_chk
+0x00003e8c    1      4 sym.imp.__write_chk
+0x00003ed4    1      8 sym.imp.acph_deregister_command
+0x00003ec8    1      4 sym.imp.acph_register_command
+0x00003e74    1      8 sym.imp.asprintf
+0x00003e2c    1      4 sym.imp.atoi
+0x00003e5c    1      4 sym.imp.close
+0x00003e38    1      4 sym.imp.closedir
+0x00003e20    1     12 sym.imp.fclose
+0x00003df0    1     12 sym.imp.fgets
+0x00003de4    1      8 sym.imp.fopen
+0x00003e68    1      4 sym.imp.free
+0x00003dcc    1      4 sym.imp.opendir
+0x00003f1c    1      4 sym.imp.read
+0x00003dd8    1      4 sym.imp.readdir
+0x00003f10    1     12 sym.imp.realloc
+0x00003e50    1     12 sym.imp.strerror
+0x00003ef8    1      4 sym.imp.strlcpy
+0x00003e08    1      4 sym.imp.strlen
+0x00003e14    1      8 sym.imp.strncmp
+0x00003ee0    1     12 sym.imp.strstr
+0x00003dfc    1      4 sym.imp.strtok_r
+0x00003eb0    1     12 sym.imp.strtol
+0x00003ea4    1      8 sym.imp.strtoul
+0x00003e98    1      4 sym.imp.usleep
+0x00003f04    1      8 sym.imp.vsnprintf
+0x00003f28    1      4 sym.imp.memcpy
+0x00003f34    1      8 sym.imp.memset
+0x00002b58    2     20 entry0
+0x00002bc0   53   1034 sym.adie_rtac_callback
+0x00003b34    3     34 sym.adie_rtac_exit
+0x00003f40    1     12 fcn.00003f40
+0x00003b04    3     40 sym.adie_rtac_init
+0x00003f30    1      4 fcn.00003f30
+0x00003d8c    1     12 fcn.00003d8c
+0x00002b6c    6     68 sym.find_codec_index
+0x00002b66    2      6 entry.fini0
+0x00003dd0    1      8 fcn.00003dd0
+0x00003d60    2     16 sym.__aeabi_memcpy8
+0x00003de0    1      4 fcn.00003de0
+0x00003ca4    3     48 fcn.00003ca4
+0x00003f80    1     12 fcn.00003f80
+0x00003f20    1      8 fcn.00003f20
+0x00003f90    1     12 fcn.00003f90
+0x00003fa0    1     12 fcn.00003fa0
+0x00003d74    2     24 sym.__aeabi_memclr8
+0x00003e00    1      8 fcn.00003e00
+0x00003e10    1      4 fcn.00003e10
+0x00003e30    1      8 fcn.00003e30
+0x00003e40    1      4 fcn.00003e40
+0x00003e60    1      8 fcn.00003e60
+0x00003b5c   18    310 fcn.00003b5c
+0x00003e70    1      4 fcn.00003e70
+0x00003e90    1      8 fcn.00003e90
+0x00003ea0    1      4 fcn.00003ea0
+0x00003ec0    1      8 fcn.00003ec0
+0x00003ed0    1      4 fcn.00003ed0
+0x00003ef0    1      8 fcn.00003ef0
+0x00003cd4    6    132 fcn.00003cd4
+0x00003f00    1      4 fcn.00003f00
+0x00003f50    1     12 fcn.00003f50
+0x00003f60    1     12 fcn.00003f60
+0x00003f70    1     12 fcn.00003f70

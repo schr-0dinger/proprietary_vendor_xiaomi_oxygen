@@ -1,0 +1,222 @@
+arch     arm
+baddr    0x0
+binsz    10598
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+25  0x00001014 0x00001014 GLOBAL FUNC 80       dfc_get_service_object_internal_v01
+26  0x00002480 0x00003480 GLOBAL OBJ  72       dfc_qmi_idl_service_object_v01
+27  0x00001064 0x00001064 GLOBAL FUNC 1124     __netmgr_ext_target_init
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000270   0x18 0x00000270   0x18 -r-- NOTE        .note.android.ident
+2   0x00000288   0x20 0x00000288   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8  0x2a0 0x000002a8  0x2a0 -r-- DYNSYM      .dynsym
+4   0x00000548   0x38 0x00000548   0x38 -r-- GNU_VERSYM  .gnu.version
+5   0x00000580   0x40 0x00000580   0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x000005c0   0x28 0x000005c0   0x28 -r-- GNU_HASH    .gnu.hash
+7   0x000005e8  0x288 0x000005e8  0x288 -r-- STRTAB      .dynstr
+8   0x00000870   0x3a 0x00000870   0x3a -r-- ----        .rela.dyn
+9   0x000008b0   0x20 0x000008b0   0x20 -r-- ----        .relr.dyn
+10  0x000008d0  0x1e0 0x000008d0  0x1e0 -r-- RELA        .rela.plt
+11  0x00000ab0  0x27d 0x00000ab0  0x27d -r-- PROGBITS    .rodata
+12  0x00000d30   0x54 0x00000d30   0x54 -r-- PROGBITS    .eh_frame_hdr
+13  0x00000d88  0x14c 0x00000d88  0x14c -r-- PROGBITS    .eh_frame
+14  0x00001000  0xcb8 0x00001000  0xcb8 -r-x PROGBITS    .text
+15  0x00001cc0  0x160 0x00001cc0  0x160 -r-x PROGBITS    .plt
+16  0x00002000  0x158 0x00002000  0x158 -rw- PROGBITS    .data.rel.ro
+17  0x00002158   0x10 0x00002158   0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00002168  0x240 0x00002168  0x240 -rw- DYNAMIC     .dynamic
+19  0x000023a8   0x20 0x000023a8   0x20 -rw- PROGBITS    .got
+20  0x000023c8   0xb8 0x000023c8   0xb8 -rw- PROGBITS    .got.plt
+21  0x00002480   0x60 0x00003480   0x60 -rw- PROGBITS    .data
+22  0x000024e0    0x0 0x000034e0   0x7b -rw- NOBITS      .bss
+23  0x000024e0   0xf6 0x00000000   0xf6 ---- STRTAB      .shstrtab
+24  0x000025d6  0x390 0x00000000  0x390 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x000005e9 0x000005e9 14  15   .dynstr             ascii   __cxa_finalize
+3   0x000005f8 0x000005f8 16  17   .dynstr             ascii   __stack_chk_fail
+4   0x00000609 0x00000609 36  37   .dynstr             ascii   common_qmi_idl_type_table_object_v01
+5   0x0000062e 0x0000062e 41  42   .dynstr             ascii   data_common_qmi_idl_type_table_object_v01
+6   0x00000658 0x00000658 35  36   .dynstr             ascii   dfc_get_service_object_internal_v01
+7   0x0000067c 0x0000067c 30  31   .dynstr             ascii   dfc_qmi_idl_service_object_v01
+8   0x0000069b 0x0000069b 19  20   .dynstr             ascii   __android_log_print
+9   0x000006af 0x000006af 24  25   .dynstr             ascii   __netmgr_ext_target_init
+10  0x000006c8 0x000006c8 17  18   .dynstr             ascii   ds_format_log_msg
+11  0x000006da 0x000006da 11  12   .dynstr             ascii   ds_get_epid
+12  0x000006e6 0x000006e6 11  12   .dynstr             ascii   ds_log_mask
+13  0x000006f2 0x000006f2 6   7    .dynstr             ascii   fflush
+14  0x000006f9 0x000006f9 7   8    .dynstr             ascii   fprintf
+15  0x00000701 0x00000701 5   6    .dynstr             ascii   fputc
+16  0x00000707 0x00000707 6   7    .dynstr             ascii   fwrite
+17  0x0000070e 0x0000070e 12  13   .dynstr             ascii   gettimeofday
+18  0x0000071b 0x0000071b 9   10   .dynstr             ascii   localtime
+19  0x00000725 0x00000725 11  12   .dynstr             ascii   log_to_file
+20  0x00000731 0x00000731 10  11   .dynstr             ascii   logging_fd
+21  0x0000073c 0x0000073c 11  12   .dynstr             ascii   msg_sprintf
+22  0x00000748 0x00000748 19  20   .dynstr             ascii   netmgr_cb_insert_cb
+23  0x0000075c 0x0000075c 16  17   .dynstr             ascii   netmgr_cb_runall
+24  0x0000076d 0x0000076d 15  16   .dynstr             ascii   netmgr_ssr_init
+25  0x0000077d 0x0000077d 18  19   .dynstr             ascii   pthread_mutex_lock
+26  0x00000790 0x00000790 20  21   .dynstr             ascii   pthread_mutex_unlock
+27  0x000007a5 0x000007a5 8   9    .dynstr             ascii   strftime
+28  0x000007ae 0x000007ae 9   10   .dynstr             ascii   vsnprintf
+29  0x000007b8 0x000007b8 9   10   .dynstr             ascii   liblog.so
+30  0x000007c2 0x000007c2 6   7    .dynstr             ascii   LIBLOG
+31  0x000007c9 0x000007c9 7   8    .dynstr             ascii   libc.so
+32  0x000007d1 0x000007d1 4   5    .dynstr             ascii   LIBC
+33  0x000007d6 0x000007d6 13  14   .dynstr             ascii   libdsutils.so
+34  0x000007e4 0x000007e4 14  15   .dynstr             ascii   libconfigdb.so
+35  0x000007f3 0x000007f3 10  11   .dynstr             ascii   libdiag.so
+36  0x000007fe 0x000007fe 12  13   .dynstr             ascii   libcutils.so
+37  0x0000080b 0x0000080b 12  13   .dynstr             ascii   libnetmgr.so
+38  0x00000818 0x00000818 19  20   .dynstr             ascii   libnetmgr_common.so
+39  0x0000082c 0x0000082c 17  18   .dynstr             ascii   libqmiservices.so
+40  0x0000083e 0x0000083e 9   10   .dynstr             ascii   libc++.so
+41  0x00000848 0x00000848 7   8    .dynstr             ascii   libm.so
+42  0x00000850 0x00000850 8   9    .dynstr             ascii   libdl.so
+43  0x00000859 0x00000859 22  23   .dynstr             ascii   libnetmgr_nr_fusion.so
+44  0x00000870 0x00000870 4   5    .rela.dyn           ascii   APS2
+45  0x00000b3b 0x00000b3b 5   6    .rodata             ascii   %s.%u
+46  0x00000b41 0x00000b41 17  18   .rodata             ascii   LTE modem ready!\n
+47  0x00000b53 0x00000b53 9   10   .rodata             ascii   NR_FUSION
+48  0x00000b64 0x00000b64 32  33   .rodata             ascii   NR Fusion modem 0x%x in-service\n
+49  0x00000b85 0x00000b85 10  11   .rodata             ascii   rmnet_mhi0
+50  0x00000b93 0x00000b93 12  13   .rodata             ascii   MODEM_OOS_EX
+51  0x00000ba0 0x00000ba0 36  37   .rodata             ascii   NR Fusion modem 0x%x out-of-service\n
+52  0x00000bc5 0x00000bc5 30  31   .rodata             ascii   Unable to get DFC service obj\n
+53  0x00000be4 0x00000be4 9   10   .rodata             ascii   EP_OPENED
+54  0x00000bee 0x00000bee 17  18   .rodata             ascii   MODEM_IS_COMPLETE
+55  0x00000c00 0x00000c00 13  14   .rodata             ascii   QC-NETMGR-LIB
+56  0x00000c0e 0x00000c0e 28  29   .rodata             ascii   %25s %70s %40s():%3u (HIGH):
+57  0x00000c2b 0x00000c2b 28  29   .rodata             ascii   netmgr_nr_fusion_oos_handler
+58  0x00000c48 0x00000c48 23  24   .rodata             ascii   SSR module init failed\n
+59  0x00000c60 0x00000c60 24  25   .rodata             ascii   __netmgr_ext_target_init
+60  0x00000c79 0x00000c79 11  12   .rodata             ascii   MODEM_IS_EX
+61  0x00000c85 0x00000c85 10  11   .rodata             ascii   EP_CLOSING
+62  0x00000c90 0x00000c90 27  28   .rodata             ascii   netmgr_nr_fusion_is_handler
+63  0x00000cac 0x00000cac 24  25   .rodata             ascii   netmgr_lte_ready_handler
+64  0x00000cc5 0x00000cc5 75  76   .rodata             ascii   vendor/qcom/proprietary/data-binary/netmgr_ext/nr_fusion/netmgr_nr_fusion.c
+65  0x00000d11 0x00000d11 27  28   .rodata             ascii   %25s %70s %40s():%3u (ERR):
+66  0x0000102f 0x0000102f 5   6    .text               ascii   q \b@z
+67  0x000010b1 0x000010b1 4   5    .text               ascii   #C)\n
+68  0x00001196 0x00001196 4   5    .text               ascii   @9\b\a
+69  0x0000128f 0x0000128f 4   5    .text               ascii   oB 1
+70  0x000012f8 0x000012f8 4   5    .text               ascii   \b\r\b6
+71  0x0000131a 0x0000131a 4   5    .text               ascii   @9\b\a
+72  0x000016ac 0x000016ac 5   6    .text               ascii   \beU9\t
+73  0x000018ef 0x000018ef 4   6    .text               utf8    ЈjU9
+74  0x0000195c 0x0000195c 4   5    .text               ascii   hjU9
+75  0x000019f6 0x000019f6 4   5    .text               ascii   @9\b\a
+76  0x00001b9c 0x00001b9c 5   6    .text               ascii   hjU9\t
+77  0x00001bb4 0x00001bb4 5   6    .text               ascii   \baU9H
+78  0x000024e1 0x00000001 11  12   .shstrtab           ascii   .fini_array
+79  0x000024ed 0x0000000d 5   6    .shstrtab           ascii   .text
+80  0x000024f3 0x00000013 4   5    .shstrtab           ascii   .got
+81  0x000024f8 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+82  0x0000250c 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+83  0x00002515 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+84  0x0000251f 0x0000003f 4   5    .shstrtab           ascii   .bss
+85  0x00002524 0x00000044 7   8    .shstrtab           ascii   .dynstr
+86  0x0000252c 0x0000004c 13  14   .shstrtab           ascii   .eh_frame_hdr
+87  0x0000253a 0x0000005a 14  15   .shstrtab           ascii   .gnu.version_r
+88  0x00002549 0x00000069 12  13   .shstrtab           ascii   .data.rel.ro
+89  0x00002556 0x00000076 9   10   .shstrtab           ascii   .relr.dyn
+90  0x00002560 0x00000080 9   10   .shstrtab           ascii   .rela.dyn
+91  0x0000256a 0x0000008a 12  13   .shstrtab           ascii   .gnu.version
+92  0x00002577 0x00000097 7   8    .shstrtab           ascii   .dynsym
+93  0x0000257f 0x0000009f 9   10   .shstrtab           ascii   .gnu.hash
+94  0x00002589 0x000000a9 9   10   .shstrtab           ascii   .eh_frame
+95  0x00002593 0x000000b3 18  19   .shstrtab           ascii   .note.gnu.build-id
+96  0x000025a6 0x000000c6 8   9    .shstrtab           ascii   .dynamic
+97  0x000025af 0x000000cf 9   10   .shstrtab           ascii   .shstrtab
+98  0x000025b9 0x000000d9 7   8    .shstrtab           ascii   .rodata
+99  0x000025c1 0x000000e1 14  15   .shstrtab           ascii   .gnu_debugdata
+100 0x000025d0 0x000000f0 5   6    .shstrtab           ascii   .data
+101 0x000025d7 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+102 0x00002660 0x0000008a 4   5    .gnu_debugdata      ascii   9v*I
+103 0x0000266d 0x00000097 4   5    .gnu_debugdata      ascii   ;R]/
+104 0x00002681 0x000000ab 7   9    .gnu_debugdata      utf8    )\eSS>\rŀ
+105 0x000026a2 0x000000cc 4   5    .gnu_debugdata      ascii   FB@X
+106 0x000026bf 0x000000e9 4   6    .gnu_debugdata      utf8    b.,۵
+107 0x000026d0 0x000000fa 7   8    .gnu_debugdata      ascii   XSV26n\v
+108 0x00002726 0x00000150 5   6    .gnu_debugdata      ascii   Y=Up)
+109 0x0000273f 0x00000169 6   7    .gnu_debugdata      ascii   \fz?gUI
+110 0x0000274c 0x00000176 6   10   .gnu_debugdata      utf8    ũs䗊\f1A
+111 0x0000275e 0x00000188 4   5    .gnu_debugdata      ascii   /TF,
+112 0x00002791 0x000001bb 6   7    .gnu_debugdata      ascii   \rVWI[g
+113 0x000027ac 0x000001d6 9   11   .gnu_debugdata      utf8    פ-\vq.^d0\f
+114 0x000027b8 0x000001e2 4   5    .gnu_debugdata      ascii   JR\tN
+115 0x000027f0 0x0000021a 4   5    .gnu_debugdata      ascii   \vu;^
+116 0x000027fb 0x00000225 4   7    .gnu_debugdata      utf8    ᳁*zq
+117 0x00002820 0x0000024a 4   5    .gnu_debugdata      ascii   w'KT
+118 0x0000282d 0x00000257 4   5    .gnu_debugdata      ascii   3IHB
+119 0x000028cb 0x000002f5 4   6    .gnu_debugdata      utf8    /dқy
+120 0x000028f2 0x0000031c 8   9    .gnu_debugdata      ascii   ozR7~(73
+121 0x00002909 0x00000333 4   5    .gnu_debugdata      ascii   5A}`
+122 0x0000290e 0x00000338 4   5    .gnu_debugdata      ascii   j$x)
+123 0x0000292e 0x00000358 4   5    .gnu_debugdata      ascii   ejqe
+0x00001ce0    1     16 sym.imp.__cxa_finalize
+0x00001cf0    1     16 sym.imp.__stack_chk_fail
+0x00001dd0    1     16 sym.imp.__android_log_print
+0x00001db0    1     16 sym.imp.ds_format_log_msg
+0x00001d00    1     16 sym.imp.ds_get_epid
+0x00001da0    1     16 sym.imp.fflush
+0x00001d70    1     16 sym.imp.fprintf
+0x00001d90    1     16 sym.imp.fputc
+0x00001d80    1     16 sym.imp.fwrite
+0x00001d40    1     16 sym.imp.gettimeofday
+0x00001d50    1     16 sym.imp.localtime
+0x00001dc0    1     16 sym.imp.msg_sprintf
+0x00001d10    1     16 sym.imp.netmgr_cb_insert_cb
+0x00001df0    1     16 sym.imp.netmgr_cb_runall
+0x00001d30    1     16 sym.imp.netmgr_ssr_init
+0x00001de0    1     16 sym.imp.pthread_mutex_lock
+0x00001e00    1     16 sym.imp.pthread_mutex_unlock
+0x00001d60    1     16 sym.imp.strftime
+0x00001e10    1     16 sym.imp.vsnprintf
+0x00001000    1     12 entry0
+0x00001014    3     80 sym.dfc_get_service_object_internal_v01
+0x00001064   21   1124 sym.__netmgr_ext_target_init
+0x00001010    1      4 entry.fini0
+0x00001d20    1     16 fcn.00001d20
+0x00001c18    3    160 sym.snprintf_char__unsigned_long_pass_object_size1__char_const__::_
+0x000014dc   16    584 fcn.000014dc
+0x00001738   19    660 fcn.00001738
+0x000019dc   13    572 fcn.000019dc
+0x000014c8    1     20 sym.netmgr_nr_fusion_is_handler
+0x00001724    1     20 sym.netmgr_nr_fusion_oos_handler
+0x000019cc    1     16 sym.netmgr_lte_ready_handler
+0x00001cc0    1     20 section..plt

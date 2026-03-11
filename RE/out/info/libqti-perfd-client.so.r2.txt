@@ -1,0 +1,908 @@
+arch     arm
+baddr    0x0
+binsz    35722
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                       demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+86  0x0000669c 0x0000769c GLOBAL FUNC 172      _ZN14ThreadPoolData6signalEv                               ThreadPoolData::signal()
+88  0x000045c0 0x000055c0 GLOBAL FUNC 684      perf_get_feedback
+89  0x000064cc 0x000074cc GLOBAL FUNC 292      _ZN14ThreadPoolData4waitEv                                 ThreadPoolData::wait()
+90  0x00006458 0x00007458 GLOBAL FUNC 48       _ZN14ThreadPoolDataC1Ei                                    ThreadPoolData::ThreadPoolData(int)
+93  0x000042f4 0x000052f4 GLOBAL FUNC 24       perf_hint
+96  0x00004af0 0x00005af0 GLOBAL FUNC 552      perf_get_prop
+97  0x00004d18 0x00005d18 GLOBAL FUNC 524      perf_wait_get_prop
+98  0x00006b1c 0x00007b1c GLOBAL FUNC 672      _ZN14PerfThreadPool10addThreadsEi12ThreadType_t            PerfThreadPool::addThreads(int, ThreadType_t)
+99  0x00007410 0x00008410 GLOBAL FUNC 476      _ZN14PerfThreadPoolD2Ev                                    PerfThreadPool::~PerfThreadPool()
+100 0x00003fec 0x00004fec GLOBAL FUNC 504      perf_lock_rel
+101 0x000067a4 0x000077a4 GLOBAL FUNC 232      _ZN14PerfThreadPoolC2Ev                                    PerfThreadPool::PerfThreadPool()
+103 0x00006978 0x00007978 GLOBAL FUNC 420      _ZN14PerfThreadPool11executeTaskEPv                        PerfThreadPool::executeTask(void*)
+104 0x000070a4 0x000080a4 GLOBAL FUNC 336      _ZN14PerfThreadPool11placeTaskAtEONSt3__18functionIFvvEEEi PerfThreadPool::placeTaskAt(std::__1::function<void ()>&&, int)
+105 0x00006ed8 0x00007ed8 GLOBAL FUNC 140      _ZN14PerfThreadPool12getDedicatedEv                        PerfThreadPool::getDedicated()
+106 ---------- 0x0000b228 GLOBAL OBJ  64       _ZN14PerfThreadPool18singleton_pool_objE                   PerfThreadPool::singleton_pool_obj
+108 0x0000709c 0x0000809c GLOBAL FUNC 6        _ZN14PerfThreadPool6resizeEi                               PerfThreadPool::resize(int)
+109 0x000068d0 0x000078d0 GLOBAL FUNC 168      _ZN14PerfThreadPool8setNonRTEv                             PerfThreadPool::setNonRT()
+110 0x00007410 0x00008410 GLOBAL FUNC 476      _ZN14PerfThreadPoolD1Ev                                    PerfThreadPool::~PerfThreadPool()
+112 0x000067a4 0x000077a4 GLOBAL FUNC 232      _ZN14PerfThreadPoolC1Ev                                    PerfThreadPool::PerfThreadPool()
+114 0x000071f4 0x000081f4 GLOBAL FUNC 540      _ZN14PerfThreadPool9placeTaskEONSt3__18functionIFvvEEE     PerfThreadPool::placeTask(std::__1::function<void ()>&&)
+117 0x00003738 0x00004738 GLOBAL FUNC 608      perf_lock_acq
+118 0x0000486c 0x0000586c GLOBAL FUNC 332      perf_lock_use_profile
+119 0x00006f64 0x00007f64 GLOBAL FUNC 312      _ZN14PerfThreadPool6resizeEi12ThreadType_t                 PerfThreadPool::resize(int, ThreadType_t)
+121 0x00006dbc 0x00007dbc GLOBAL FUNC 284      _ZN14PerfThreadPool6createEi                               PerfThreadPool::create(int)
+122 0x00005804 0x00006804 GLOBAL FUNC 544      perf_hint_offload
+123 0x0000514c 0x0000614c GLOBAL FUNC 624      perf_lock_acq_rel
+124 0x00004f24 0x00005f24 GLOBAL FUNC 552      perf_sync_request
+125 0x00006488 0x00007488 GLOBAL FUNC 66       _ZN14ThreadPoolDataD2Ev                                    ThreadPoolData::~ThreadPoolData()
+130 0x0000553c 0x0000653c GLOBAL FUNC 20       perf_event
+131 0x000049b8 0x000059b8 GLOBAL FUNC 312      perf_lock_cmd
+132 0x00006748 0x00007748 GLOBAL FUNC 90       _ZN14ThreadPoolData14getIfAvailableE12ThreadType_t         ThreadPoolData::getIfAvailable(ThreadType_t)
+133 0x000065f0 0x000075f0 GLOBAL FUNC 172      _ZN14ThreadPoolData8setStateE13ThreadState_t               ThreadPoolData::setState(ThreadState_t)
+135 0x00006458 0x00007458 GLOBAL FUNC 48       _ZN14ThreadPoolDataC2Ei                                    ThreadPoolData::ThreadPoolData(int)
+138 0x00005a24 0x00006a24 GLOBAL FUNC 528      perf_event_offload
+139 0x00006488 0x00007488 GLOBAL FUNC 66       _ZN14ThreadPoolDataD1Ev                                    ThreadPoolData::~ThreadPoolData()
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000174    0x18 0x00000174    0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c    0x20 0x0000018c    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0x8c0 0x000001ac   0x8c0 -r-- DYNSYM      .dynsym
+4   0x00000a6c   0x118 0x00000a6c   0x118 -r-- GNU_VERSYM  .gnu.version
+5   0x00000b84    0x60 0x00000b84    0x60 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000be4   0x1a8 0x00000be4   0x1a8 -r-- GNU_HASH    .gnu.hash
+7   0x00000d8c  0x11dd 0x00000d8c  0x11dd -r-- STRTAB      .dynstr
+8   0x00001f6c    0x86 0x00001f6c    0x86 -r-- ----        .rel.dyn
+9   0x00001ff4    0x10 0x00001ff4    0x10 -r-- ----        .relr.dyn
+10  0x00002004   0x258 0x00002004   0x258 -r-- ----        .ARM.exidx
+11  0x0000225c   0x2d8 0x0000225c   0x2d8 -r-- REL         .rel.plt
+12  0x00002534   0xa34 0x00002534   0xa34 -r-- PROGBITS    .ARM.extab
+13  0x00002f68   0x767 0x00002f68   0x767 -r-- PROGBITS    .rodata
+14  0x000036d0  0x415c 0x000046d0  0x415c -r-x PROGBITS    .text
+15  0x00007830   0x5d0 0x00008830   0x5d0 -r-x PROGBITS    .plt
+16  0x00007e00   0x12c 0x00009e00   0x12c -rw- PROGBITS    .data.rel.ro
+17  0x00007f2c     0x8 0x00009f2c     0x8 -rw- FINI_ARRAY  .fini_array
+18  0x00007f34     0x8 0x00009f34     0x8 -rw- INIT_ARRAY  .init_array
+19  0x00007f3c   0x118 0x00009f3c   0x118 -rw- DYNAMIC     .dynamic
+20  0x00008054    0x3c 0x0000a054    0x3c -rw- PROGBITS    .got
+21  0x00008090   0x178 0x0000a090   0x178 -rw- PROGBITS    .got.plt
+22  0x00008208     0x0 0x0000b208    0x60 -rw- NOBITS      .bss
+23  0x00008208    0x4e 0x00000000    0x4e ---- ----        .ARM.attributes
+24  0x00008256   0x108 0x00000000   0x108 ---- STRTAB      .shstrtab
+25  0x0000835e   0x82c 0x00000000   0x82c ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+3   0x000006f4 0x000006f4 4   20   .dynsym             utf32le \f􀀡ॢ㚒
+4   0x00000864 0x00000864 4   20   .dynsym             utf32le \b􀀡ೡ肝
+5   0x00000934 0x00000934 5   24   .dynsym             utf32le X􀀡U綽Ĝ
+6   0x00000994 0x00000994 4   20   .dynsym             utf32le \f􀀡Ʌ氵
+7   0x00000c74 0x00000c74 11  48   .gnu.hash           utf32le TW\^dfjprxy
+8   0x00000d00 0x00000d00 7   8    .gnu.hash           ascii   %\fK@D\rq
+9   0x00000d46 0x00000d46 4   5    .gnu.hash           ascii   QjP|
+10  0x00000d6d 0x00000d6d 4   5    .gnu.hash           ascii   \b-E6
+11  0x00000d8d 0x00000d8d 12  13   .dynstr             ascii   __cxa_atexit
+12  0x00000d9a 0x00000d9a 14  15   .dynstr             ascii   __cxa_finalize
+13  0x00000da9 0x00000da9 14  15   .dynstr             ascii   _Unwind_Resume
+14  0x00000db8 0x00000db8 40  41   .dynstr             ascii   _ZN14PerfThreadPool18singleton_pool_objE
+15  0x00000de1 0x00000de1 28  29   .dynstr             ascii   _ZN14PerfThreadPool6createEi
+16  0x00000dfe 0x00000dfe 54  55   .dynstr             ascii   _ZN14PerfThreadPool9placeTaskEONSt3__18functionIFvvEEE
+17  0x00000e35 0x00000e35 119 120  .dynstr             ascii   _ZN6vendor3qti8hardware4perf4V2_25IPerf10getServiceERKNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEEb
+18  0x00000ead 0x00000ead 122 123  .dynstr             ascii   _ZN6vendor3qti8hardware4perf4V2_25IPerf13tryGetServiceERKNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEEb
+19  0x00000f28 0x00000f28 29  30   .dynstr             ascii   _ZN7android14sp_report_raceEv
+20  0x00000f46 0x00000f46 38  39   .dynstr             ascii   _ZN7android23sp_report_stack_pointerEv
+21  0x00000f6d 0x00000f6d 40  41   .dynstr             ascii   _ZN7android2spI18PerfDeathRecipientED2Ev
+22  0x00000f96 0x00000f96 58  59   .dynstr             ascii   _ZN7android2spIN6vendor3qti8hardware4perf4V2_25IPerfEED2Ev
+23  0x00000fd1 0x00000fd1 55  56   .dynstr             ascii   _ZN7android2spINS_8hardware20hidl_death_recipientEED2Ev
+24  0x00001009 0x00001009 33  34   .dynstr             ascii   _ZN7android7RefBase10onFirstRefEv
+25  0x0000102b 0x0000102b 38  39   .dynstr             ascii   _ZN7android7RefBase13onLastWeakRefEPKv
+26  0x00001052 0x00001052 40  41   .dynstr             ascii   _ZN7android7RefBase15onLastStrongRefEPKv
+27  0x0000107b 0x0000107b 46  47   .dynstr             ascii   _ZN7android7RefBase20onIncStrongAttemptedEjPKv
+28  0x000010aa 0x000010aa 23  24   .dynstr             ascii   _ZN7android7RefBaseC2Ev
+29  0x000010c2 0x000010c2 23  24   .dynstr             ascii   _ZN7android7RefBaseD2Ev
+30  0x000010da 0x000010da 39  40   .dynstr             ascii   _ZN7android8hardware11hidl_stringC1EPKc
+31  0x00001102 0x00001102 102 103  .dynstr             ascii   _ZN7android8hardware11hidl_stringC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+32  0x00001169 0x00001169 37  38   .dynstr             ascii   _ZN7android8hardware11hidl_stringD1Ev
+33  0x0000118f 0x0000118f 47  48   .dynstr             ascii   _ZN7android8hardware7details13return_statusD2Ev
+34  0x000011bf 0x000011bf 34  35   .dynstr             ascii   _ZNK7android7RefBase9decStrongEPKv
+35  0x000011e2 0x000011e2 34  35   .dynstr             ascii   _ZNK7android7RefBase9incStrongEPKv
+36  0x00001205 0x00001205 42  43   .dynstr             ascii   _ZNK7android8hardware11hidl_string5c_strEv
+37  0x00001230 0x00001230 64  65   .dynstr             ascii   _ZNK7android8hardware7details13return_status16onValueRetrievalEv
+38  0x00001271 0x00001271 62  63   .dynstr             ascii   _ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+39  0x000012b0 0x000012b0 63  64   .dynstr             ascii   _ZNKSt3__121__basic_string_commonILb1EE20__throw_length_errorEv
+40  0x000012f0 0x000012f0 24  25   .dynstr             ascii   _ZNSt11logic_errorC2EPKc
+41  0x00001309 0x00001309 23  24   .dynstr             ascii   _ZNSt12length_errorD1Ev
+42  0x00001321 0x00001321 73  74   .dynstr             ascii   _ZNSt3__114__split_bufferIiRNS_9allocatorIiEEE12emplace_backIJRiEEEvDpOT_
+43  0x0000136b 0x0000136b 72  73   .dynstr             ascii   _ZNSt3__114__split_bufferIiRNS_9allocatorIiEEE12emplace_backIJiEEEvDpOT_
+44  0x000013b4 0x000013b4 33  34   .dynstr             ascii   _ZNSt3__118condition_variableD1Ev
+45  0x000013d6 0x000013d6 44  45   .dynstr             ascii   _ZNSt3__118shared_timed_mutex11lock_sharedEv
+46  0x00001403 0x00001403 46  47   .dynstr             ascii   _ZNSt3__118shared_timed_mutex13unlock_sharedEv
+47  0x00001432 0x00001432 36  37   .dynstr             ascii   _ZNSt3__118shared_timed_mutex4lockEv
+48  0x00001457 0x00001457 38  39   .dynstr             ascii   _ZNSt3__118shared_timed_mutex6unlockEv
+49  0x0000147e 0x0000147e 33  34   .dynstr             ascii   _ZNSt3__118shared_timed_mutexC1Ev
+50  0x000014a0 0x000014a0 36  37   .dynstr             ascii   _ZNSt3__120__throw_system_errorEiPKc
+51  0x000014c5 0x000014c5 19  20   .dynstr             ascii   _ZNSt3__15mutexD1Ev
+52  0x000014d9 0x000014d9 67  68   .dynstr             ascii   _ZNSt3__16vectorIiNS_9allocatorIiEEE21__push_back_slow_pathIiEEvOT_
+53  0x0000151d 0x0000151d 182 183  .dynstr             ascii   _ZNSt3__16vectorIiNS_9allocatorIiEEE6assignIPiEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIiNS_15iterator_traitsIS7_E9referenceEEE5valueEvE4typeES7_S7_
+54  0x000015d4 0x000015d4 87  88   .dynstr             ascii   _ZNSt3__16vectorIiNS_9allocatorIiEEE7emplaceIJRiEEENS_11__wrap_iterIPiEENS6_IPKiEEDpOT_
+55  0x0000162c 0x0000162c 86  87   .dynstr             ascii   _ZNSt3__16vectorIiNS_9allocatorIiEEE7emplaceIJiEEENS_11__wrap_iterIPiEENS5_IPKiEEDpOT_
+56  0x00001683 0x00001683 12  13   .dynstr             ascii   _ZSt7nothrow
+57  0x00001690 0x00001690 15  16   .dynstr             ascii   _ZSt9terminatev
+58  0x000016a0 0x000016a0 19  20   .dynstr             ascii   _ZTISt11logic_error
+59  0x000016b4 0x000016b4 20  21   .dynstr             ascii   _ZTISt12length_error
+60  0x000016c9 0x000016c9 16  17   .dynstr             ascii   _ZTISt9exception
+61  0x000016da 0x000016da 19  20   .dynstr             ascii   _ZTSSt11logic_error
+62  0x000016ee 0x000016ee 20  21   .dynstr             ascii   _ZTSSt12length_error
+63  0x00001703 0x00001703 16  17   .dynstr             ascii   _ZTSSt9exception
+64  0x00001714 0x00001714 24  25   .dynstr             ascii   _ZTV18PerfDeathRecipient
+65  0x0000172d 0x0000172d 37  38   .dynstr             ascii   _ZTVN10__cxxabiv117__class_type_infoE
+66  0x00001753 0x00001753 40  41   .dynstr             ascii   _ZTVN10__cxxabiv120__si_class_type_infoE
+67  0x0000177c 0x0000177c 20  21   .dynstr             ascii   _ZTVSt12length_error
+68  0x00001791 0x00001791 6   7    .dynstr             ascii   _ZdaPv
+69  0x00001798 0x00001798 6   7    .dynstr             ascii   _ZdlPv
+70  0x0000179f 0x0000179f 20  21   .dynstr             ascii   _ZdlPvRKSt9nothrow_t
+71  0x000017b4 0x000017b4 5   6    .dynstr             ascii   _Znaj
+72  0x000017ba 0x000017ba 5   6    .dynstr             ascii   _Znwj
+73  0x000017c0 0x000017c0 19  20   .dynstr             ascii   _ZnwjRKSt9nothrow_t
+74  0x000017d4 0x000017d4 19  20   .dynstr             ascii   __android_log_print
+75  0x000017e8 0x000017e8 24  25   .dynstr             ascii   __cxa_allocate_exception
+76  0x00001801 0x00001801 17  18   .dynstr             ascii   __cxa_begin_catch
+77  0x00001813 0x00001813 15  16   .dynstr             ascii   __cxa_end_catch
+78  0x00001823 0x00001823 20  21   .dynstr             ascii   __cxa_free_exception
+79  0x00001838 0x00001838 19  20   .dynstr             ascii   __cxa_guard_acquire
+80  0x0000184c 0x0000184c 19  20   .dynstr             ascii   __cxa_guard_release
+81  0x00001860 0x00001860 11  12   .dynstr             ascii   __cxa_throw
+82  0x0000186c 0x0000186c 20  21   .dynstr             ascii   __gxx_personality_v0
+83  0x00001881 0x00001881 16  17   .dynstr             ascii   __stack_chk_fail
+84  0x00001892 0x00001892 17  18   .dynstr             ascii   __stack_chk_guard
+85  0x000018a4 0x000018a4 13  14   .dynstr             ascii   __strlcpy_chk
+86  0x000018b2 0x000018b2 6   7    .dynstr             ascii   calloc
+87  0x000018b9 0x000018b9 4   5    .dynstr             ascii   free
+88  0x000018be 0x000018be 6   7    .dynstr             ascii   getpid
+89  0x000018c5 0x000018c5 6   7    .dynstr             ascii   gettid
+90  0x000018cc 0x000018cc 6   7    .dynstr             ascii   malloc
+91  0x000018d3 0x000018d3 10  11   .dynstr             ascii   perf_event
+92  0x000018de 0x000018de 18  19   .dynstr             ascii   perf_event_offload
+93  0x000018f1 0x000018f1 17  18   .dynstr             ascii   perf_get_feedback
+94  0x00001903 0x00001903 13  14   .dynstr             ascii   perf_get_prop
+95  0x00001911 0x00001911 9   10   .dynstr             ascii   perf_hint
+96  0x0000191b 0x0000191b 17  18   .dynstr             ascii   perf_hint_offload
+97  0x0000192d 0x0000192d 13  14   .dynstr             ascii   perf_lock_acq
+98  0x0000193b 0x0000193b 17  18   .dynstr             ascii   perf_lock_acq_rel
+99  0x0000194d 0x0000194d 13  14   .dynstr             ascii   perf_lock_cmd
+100 0x0000195b 0x0000195b 13  14   .dynstr             ascii   perf_lock_rel
+101 0x00001969 0x00001969 21  22   .dynstr             ascii   perf_lock_use_profile
+102 0x0000197f 0x0000197f 17  18   .dynstr             ascii   perf_sync_request
+103 0x00001991 0x00001991 18  19   .dynstr             ascii   perf_wait_get_prop
+104 0x000019a4 0x000019a4 6   7    .dynstr             ascii   strdup
+105 0x000019ab 0x000019ab 7   8    .dynstr             ascii   strlcpy
+106 0x000019b3 0x000019b3 6   7    .dynstr             ascii   strlen
+107 0x000019ba 0x000019ba 47  48   .dynstr             ascii   _ZN14PerfThreadPool10addThreadsEi12ThreadType_t
+108 0x000019ea 0x000019ea 35  36   .dynstr             ascii   _ZN14PerfThreadPool11executeTaskEPv
+109 0x00001a0e 0x00001a0e 58  59   .dynstr             ascii   _ZN14PerfThreadPool11placeTaskAtEONSt3__18functionIFvvEEEi
+110 0x00001a49 0x00001a49 35  36   .dynstr             ascii   _ZN14PerfThreadPool12getDedicatedEv
+111 0x00001a6d 0x00001a6d 28  29   .dynstr             ascii   _ZN14PerfThreadPool6resizeEi
+112 0x00001a8a 0x00001a8a 42  43   .dynstr             ascii   _ZN14PerfThreadPool6resizeEi12ThreadType_t
+113 0x00001ab5 0x00001ab5 30  31   .dynstr             ascii   _ZN14PerfThreadPool8setNonRTEv
+114 0x00001ad4 0x00001ad4 23  24   .dynstr             ascii   _ZN14PerfThreadPoolC1Ev
+115 0x00001aec 0x00001aec 23  24   .dynstr             ascii   _ZN14PerfThreadPoolC2Ev
+116 0x00001b04 0x00001b04 23  24   .dynstr             ascii   _ZN14PerfThreadPoolD1Ev
+117 0x00001b1c 0x00001b1c 23  24   .dynstr             ascii   _ZN14PerfThreadPoolD2Ev
+118 0x00001b34 0x00001b34 50  51   .dynstr             ascii   _ZN14ThreadPoolData14getIfAvailableE12ThreadType_t
+119 0x00001b67 0x00001b67 26  27   .dynstr             ascii   _ZN14ThreadPoolData4waitEv
+120 0x00001b82 0x00001b82 28  29   .dynstr             ascii   _ZN14ThreadPoolData6signalEv
+121 0x00001b9f 0x00001b9f 44  45   .dynstr             ascii   _ZN14ThreadPoolData8setStateE13ThreadState_t
+122 0x00001bcc 0x00001bcc 23  24   .dynstr             ascii   _ZN14ThreadPoolDataC1Ei
+123 0x00001be4 0x00001be4 23  24   .dynstr             ascii   _ZN14ThreadPoolDataC2Ei
+124 0x00001bfc 0x00001bfc 23  24   .dynstr             ascii   _ZN14ThreadPoolDataD1Ev
+125 0x00001c14 0x00001c14 23  24   .dynstr             ascii   _ZN14ThreadPoolDataD2Ev
+126 0x00001c2c 0x00001c2c 23  24   .dynstr             ascii   _ZNKSt9exception4whatEv
+127 0x00001c44 0x00001c44 43  44   .dynstr             ascii   _ZNSt3__118condition_variable10notify_oneEv
+128 0x00001c70 0x00001c70 65  66   .dynstr             ascii   _ZNSt3__118condition_variable4waitERNS_11unique_lockINS_5mutexEEE
+129 0x00001cb2 0x00001cb2 22  23   .dynstr             ascii   _ZNSt3__15mutex4lockEv
+130 0x00001cc9 0x00001cc9 24  25   .dynstr             ascii   _ZNSt3__15mutex6unlockEv
+131 0x00001ce2 0x00001ce2 26  27   .dynstr             ascii   _ZNSt3__15mutex8try_lockEv
+132 0x00001cfd 0x00001cfd 89  90   .dynstr             ascii   _ZNSt3__16vectorIP14ThreadPoolDataNS_9allocatorIS2_EEE21__push_back_slow_pathIRKS2_EEvOT_
+133 0x00001d57 0x00001d57 69  70   .dynstr             ascii   _ZNSt3__16vectorIiNS_9allocatorIiEEE21__push_back_slow_pathIRKiEEvOT_
+134 0x00001d9d 0x00001d9d 19  20   .dynstr             ascii   _ZNSt9exceptionD2Ev
+135 0x00001db1 0x00001db1 31  32   .dynstr             ascii   _ZTINSt3__117bad_function_callE
+136 0x00001dd1 0x00001dd1 31  32   .dynstr             ascii   _ZTSNSt3__117bad_function_callE
+137 0x00001df1 0x00001df1 31  32   .dynstr             ascii   _ZTVNSt3__117bad_function_callE
+138 0x00001e11 0x00001e11 14  15   .dynstr             ascii   pthread_create
+139 0x00001e20 0x00001e20 18  19   .dynstr             ascii   pthread_getname_np
+140 0x00001e33 0x00001e33 21  22   .dynstr             ascii   pthread_getschedparam
+141 0x00001e49 0x00001e49 12  13   .dynstr             ascii   pthread_join
+142 0x00001e56 0x00001e56 12  13   .dynstr             ascii   pthread_self
+143 0x00001e63 0x00001e63 18  19   .dynstr             ascii   pthread_setname_np
+144 0x00001e76 0x00001e76 21  22   .dynstr             ascii   pthread_setschedparam
+145 0x00001e8c 0x00001e8c 22  23   .dynstr             ascii   sched_get_priority_min
+146 0x00001ea3 0x00001ea3 9   10   .dynstr             ascii   vsnprintf
+147 0x00001ead 0x00001ead 6   7    .dynstr             ascii   memcpy
+148 0x00001eb4 0x00001eb4 7   8    .dynstr             ascii   memmove
+149 0x00001ebc 0x00001ebc 6   7    .dynstr             ascii   memset
+150 0x00001ec3 0x00001ec3 9   10   .dynstr             ascii   liblog.so
+151 0x00001ecd 0x00001ecd 6   7    .dynstr             ascii   LIBLOG
+152 0x00001ed4 0x00001ed4 7   8    .dynstr             ascii   libc.so
+153 0x00001edc 0x00001edc 4   5    .dynstr             ascii   LIBC
+154 0x00001ee1 0x00001ee1 6   7    .dynstr             ascii   LIBC_O
+155 0x00001ee8 0x00001ee8 6   7    .dynstr             ascii   LIBC_R
+156 0x00001eef 0x00001eef 12  13   .dynstr             ascii   libcutils.so
+157 0x00001efc 0x00001efc 11  12   .dynstr             ascii   libutils.so
+158 0x00001f08 0x00001f08 31  32   .dynstr             ascii   vendor.qti.hardware.perf@2.2.so
+159 0x00001f28 0x00001f28 14  15   .dynstr             ascii   libhidlbase.so
+160 0x00001f37 0x00001f37 9   10   .dynstr             ascii   libc++.so
+161 0x00001f41 0x00001f41 7   8    .dynstr             ascii   libm.so
+162 0x00001f49 0x00001f49 8   9    .dynstr             ascii   libdl.so
+163 0x00001f52 0x00001f52 22  23   .dynstr             ascii   libqti-perfd-client.so
+164 0x00001f6c 0x00001f6c 5   6    .rel.dyn            ascii   APS2
+165 0x00002f68 0x00002f68 12  13   .rodata             ascii   St9exception
+166 0x00002f75 0x00002f75 46  47   .rodata             ascii   Invalid number of arguments %d Max Accepted %d
+167 0x00002fa4 0x00002fa4 16  17   .rodata             ascii   processIntReturn
+168 0x00002fb5 0x00002fb5 18  19   .rodata             ascii   perf_event_offload
+169 0x00002fc8 0x00002fc8 47  48   .rodata             ascii   Unable to link to gPerfHal death notifications!
+170 0x00002ff8 0x00002ff8 31  32   .rodata             ascii   %s() %d: Exception caught in %s
+171 0x00003018 0x00003018 12  13   .rodata             ascii   getDedicated
+172 0x00003025 0x00003025 60  61   .rodata             ascii   Unable to link to gPerfHal death notifications! memory error
+173 0x00003062 0x00003062 35  36   .rodata             ascii   %s() %d: Failed to get sched params
+174 0x00003086 0x00003086 53  54   .rodata             ascii   %s() %d: Failed to offload task all threads are busy.
+175 0x000030bc 0x000030bc 17  18   .rodata             ascii   perf_hint_private
+176 0x000030ce 0x000030ce 26  27   .rodata             ascii   Exception caught: %s in %s
+177 0x000030e9 0x000030e9 8   9    .rodata             ascii   setNonRT
+178 0x000030f2 0x000030f2 33  34   .rodata             ascii   %s() %d: Error in Thread Creation
+179 0x00003114 0x00003114 63  64   .rodata             ascii   %s() %d: Failed to offload task to %s%d Memory allocation error
+180 0x00003154 0x00003154 17  18   .rodata             ascii   perf_hint_offload
+181 0x00003166 0x00003166 67  68   .rodata             ascii   allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+182 0x000031aa 0x000031aa 30  31   .rodata             ascii   Invalid number of arguments %d
+183 0x000031c9 0x000031c9 11  12   .rodata             ascii   executeTask
+184 0x000031d5 0x000031d5 64  65   .rodata             ascii   %s() %d: Failed to offload task to %s%d, Memory allocation error
+185 0x00003216 0x00003216 35  36   .rodata             ascii   %s() %d: Exception caught: %s in %s
+186 0x0000323a 0x0000323a 18  19   .rodata             ascii   perf_event_private
+187 0x0000324d 0x0000324d 10  11   .rodata             ascii   addThreads
+188 0x00003258 0x00003258 11  12   .rodata             ascii   placeTaskAt
+189 0x00003264 0x00003264 13  14   .rodata             ascii   perf_get_prop
+190 0x00003272 0x00003272 6   7    .rodata             ascii   signal
+191 0x00003279 0x00003279 49  50   .rodata             ascii   %s() %d: Invalid Size creating %d Threads in Pool
+192 0x000032ab 0x000032ab 8   9    .rodata             ascii   %d-%.*s-
+193 0x000032b4 0x000032b4 41  42   .rodata             ascii   %s() %d: Failed to read Pool Creator Name
+194 0x000032de 0x000032de 15  16   .rodata             ascii   ~PerfThreadPool
+195 0x000032ee 0x000032ee 35  36   .rodata             ascii   %s() %d: Failed to set sched params
+196 0x00003312 0x00003312 52  53   .rodata             ascii   %s() %d: FAILED to create a Dedicated Thread in Pool
+197 0x00003347 0x00003347 24  25   .rodata             ascii   Memory alloc error in %s
+198 0x00003360 0x00003360 11  12   .rodata             ascii   serviceDied
+199 0x0000336c 0x0000336c 31  32   .rodata             ascii   perf HAL service not available.
+200 0x0000338c 0x0000338c 35  36   .rodata             ascii   %s() %d: Failed to name Thread:  %s
+201 0x000033b0 0x000033b0 44  45   .rodata             ascii   %s() %d: Failed to set priority of thread %s
+202 0x000033dd 0x000033dd 61  62   .rodata             ascii   %s() %d: Pool not created use resize() to add threads to pool
+203 0x0000341b 0x0000341b 12  13   .rodata             ascii   %s() %d: %s
+204 0x00003428 0x00003428 21  22   .rodata             ascii   perf_lock_use_profile
+205 0x0000343e 0x0000343e 17  18   .rodata             ascii   perf_lock_acq_rel
+206 0x00003450 0x00003450 8   9    .rodata             ascii   setState
+207 0x00003459 0x00003459 17  18   .rodata             ascii   perf_get_feedback
+208 0x0000346b 0x0000346b 17  18   .rodata             ascii   processVoidReturn
+209 0x0000347d 0x0000347d 31  32   .rodata             ascii   shared_lock::unlock: not locked
+210 0x0000349d 0x0000349d 12  13   .rodata             ascii   ANDR-PERF-TP
+211 0x000034aa 0x000034aa 14  15   .rodata             ascii   PerfThreadPool
+212 0x000034b9 0x000034b9 9   10   .rodata             ascii   placeTask
+213 0x000034c3 0x000034c3 17  18   .rodata             ascii   IPerf serviceDied
+214 0x000034d5 0x000034d5 16  17   .rodata             ascii   ANDR-PERF-CLIENT
+215 0x000034e6 0x000034e6 13  14   .rodata             ascii   perf_lock_cmd
+216 0x000034f4 0x000034f4 6   7    .rodata             ascii   resize
+217 0x000034fb 0x000034fb 13  14   .rodata             ascii   perf_lock_rel
+218 0x00003509 0x00003509 28  29   .rodata             ascii   Failed to Offload hint: 0x%X
+219 0x00003526 0x00003526 52  53   .rodata             ascii   %s() %d: Failed to offload task invalid thread index
+220 0x0000355b 0x0000355b 17  18   .rodata             ascii   perf_sync_request
+221 0x0000356d 0x0000356d 46  47   .rodata             ascii   IPerf:: Perf HAL Service 2.2 is not available.
+222 0x0000359c 0x0000359c 33  34   .rodata             ascii   %s() %d: Thread exiting NULL data
+223 0x000035be 0x000035be 4   5    .rodata             ascii   %s%d
+224 0x000035c4 0x000035c4 22  23   .rodata             ascii   Exception caught in %s
+225 0x000035db 0x000035db 13  14   .rodata             ascii   perf_lock_acq
+226 0x000035e9 0x000035e9 4   5    .rodata             ascii   wait
+227 0x000035ee 0x000035ee 46  47   .rodata             ascii   %s() %d: Failed to offload task, %s%d is busy.
+228 0x0000361d 0x0000361d 28  29   .rodata             ascii   getPerfServiceAndLinkToDeath
+229 0x0000363a 0x0000363a 29  30   .rodata             ascii   Failed to Offload event: 0x%X
+230 0x00003658 0x00003658 6   7    .rodata             ascii   create
+231 0x0000365f 0x0000365f 50  51   .rodata             ascii   %s() %d: Invalid size: %d Max Threads allowed = %d
+232 0x00003692 0x00003692 16  17   .rodata             ascii   St12length_error
+233 0x000036a3 0x000036a3 15  16   .rodata             ascii   St11logic_error
+234 0x000036b3 0x000036b3 27  28   .rodata             ascii   NSt3__117bad_function_callE
+235 0x000036f0 0x000046f0 4   5    .text               ascii   \bD!F
+236 0x00003728 0x00004728 4   5    .text               ascii   \bD!F
+237 0x00003745 0x00004744 5   6    .text               ascii   F\fFxD
+238 0x000037bc 0x000047bc 4   5    .text               ascii   nM}D
+239 0x000037f0 0x000047f0 4   5    .text               ascii   )hOk
+240 0x000037fa 0x000047fa 6   7    .text               ascii   )FBF#F
+241 0x00003927 0x00004926 5   6    .text               ascii   JyDzD
+242 0x00003939 0x00004938 7   8    .text               ascii    yDzD{D
+243 0x00003a52 0x00004a52 4   5    .text               ascii   \f\f D
+244 0x00003a87 0x00004a86 5   6    .text               ascii   h\f !F
+245 0x00003acc 0x00004acc 5   6    .text               ascii   \f\f(D1
+246 0x00003adf 0x00004ade 5   6    .text               ascii    yDzD
+247 0x00003af6 0x00004af6 5   6    .text               ascii   \f\f D1
+248 0x00003b0b 0x00004b0a 4   5    .text               ascii   -u`O
+249 0x00003b19 0x00004b18 4   5    .text               ascii   \t4hH
+250 0x00003b36 0x00004b36 4   5    .text               ascii   \f\f\bD
+251 0x00003b80 0x00004b80 8   9    .text               ascii   \f\f DQIyD
+252 0x00003b97 0x00004b96 7   8    .text               ascii   $4`MIMJ
+253 0x00003b9f 0x00004b9e 5   6    .text               ascii    yDzD
+254 0x00003bb8 0x00004bb8 8   9    .text               ascii   \f\f DFIyD
+255 0x00003bcf 0x00004bce 7   8    .text               ascii   $4`BIBJ
+256 0x00003bd7 0x00004bd6 5   6    .text               ascii    yDzD
+257 0x00003bf7 0x00004bf6 5   6    .text               ascii   F(F!F
+258 0x00003c5f 0x00004c5e 5   6    .text               ascii   F"HxD
+259 0x00003c67 0x00004c66 9   10   .text               ascii    !I"JyDzD
+260 0x00003c76 0x00004c76 6   7    .text               ascii    I J!K
+261 0x00003c7d 0x00004c7c 7   8    .text               ascii    yDzD{D
+262 0x00003d24 0x00004d24 4   5    .text               ascii   8Fg`
+263 0x00003d70 0x00004d70 4   5    .text               ascii   AFJF
+264 0x00003d78 0x00004d78 5   6    .text               ascii   `hHD"
+265 0x00003d9a 0x00004d9a 6   7    .text               ascii   8FAFJF
+266 0x00003da4 0x00004da4 4   6    .text               utf8    ^E\v٥
+267 0x00003db0 0x00004db0 6   7    .text               ascii   `hQF*F
+268 0x00003dba 0x00004dba 4   5    .text               ascii   `h(D
+269 0x00003e3f 0x00004e3e 4   5    .text               ascii   h1`!
+270 0x00003e75 0x00004e74 6   7    .text               ascii   !*h#hR
+271 0x00003e8f 0x00004e8e 5   6    .text               ascii     ` F
+272 0x00003e99 0x00004e98 4   5    .text               ascii   F h\b
+273 0x00003ea3 0x00004ea2 5   6    .text               ascii     `(F
+274 0x00003eb1 0x00004eb0 5   6    .text               ascii   F;HxD
+275 0x00003ebd 0x00004ebc 6   7    .text               ascii    !h ui
+276 0x00003ec6 0x00004ec6 4   5    .text               ascii   7L|D
+277 0x00003edc 0x00004edc 8   9    .text               ascii   \f\f(D1IyD
+278 0x00003ef3 0x00004ef2 7   8    .text               ascii     `-I-J
+279 0x00003efb 0x00004efa 5   6    .text               ascii    yDzD
+280 0x00003f65 0x00004f64 5   6    .text               ascii   JyDzD
+281 0x00003f77 0x00004f76 7   8    .text               ascii    yDzD{D
+282 0x00003ff3 0x00004ff2 5   6    .text               ascii   FrHxD
+283 0x00004060 0x00005060 4   5    .text               ascii   XN~D
+284 0x00004094 0x00005094 4   5    .text               ascii   1F"F
+285 0x0000417f 0x0000517e 5   6    .text               ascii   JyDzD
+286 0x00004191 0x00005190 7   8    .text               ascii    yDzD{D
+287 0x000041e8 0x000051e8 4   5    .text               ascii   7IyD
+288 0x000041fc 0x000051fc 4   5    .text               ascii   3L|D
+289 0x00004212 0x00005212 8   9    .text               ascii   \f\f(D.IyD
+290 0x00004229 0x00005228 7   8    .text               ascii     `)I*J
+291 0x00004231 0x00005230 5   6    .text               ascii    yDzD
+292 0x00004283 0x00005282 5   6    .text               ascii   JyDzD
+293 0x00004295 0x00005294 7   8    .text               ascii    yDzD{D
+294 0x00004319 0x00005318 5   6    .text               ascii   F\fFxD
+295 0x00004339 0x00005338 7   8    .text               ascii    [FyDzD
+296 0x0000436c 0x0000536c 4   5    .text               ascii   %F(F
+297 0x000043ac 0x000053ac 6   7    .text               ascii   0F)F"F
+298 0x000043f0 0x000053f0 4   5    .text               ascii   !F*F
+299 0x000043fc 0x000053fc 4   5    .text               ascii   hL|D
+300 0x0000440a 0x0000540a 5   7    .text               utf8    $h̳\f
+301 0x0000443a 0x0000543a 4   5    .text               ascii   !FBF
+302 0x00004553 0x00005552 5   6    .text               ascii   JyDzD
+303 0x00004565 0x00005564 7   8    .text               ascii    yDzD{D
+304 0x000045f8 0x000055f8 4   5    .text               ascii   5F(F
+305 0x00004636 0x00005636 6   7    .text               ascii   8F)F2F
+306 0x000046a6 0x000056a6 4   5    .text               ascii   iL|D
+307 0x000047e5 0x000057e4 5   6    .text               ascii   F\eHxD
+308 0x000047f1 0x000057f0 5   6    .text               ascii   JyDzD
+309 0x00004803 0x00005802 7   8    .text               ascii    yDzD{D
+310 0x00004873 0x00005872 7   8    .text               ascii   FGH\fFxD
+311 0x000048bd 0x000058bc 5   6    .text               ascii   l*F#F
+312 0x00004941 0x00005940 5   6    .text               ascii   JyDzD
+313 0x00004953 0x00005952 7   8    .text               ascii    yDzD{D
+314 0x000049bd 0x000059bc 5   6    .text               ascii   FCHxD
+315 0x000049c3 0x000059c2 4   5    .text               ascii   h0h\n
+316 0x000049fe 0x000059fe 8   9    .text               ascii   \nhWl"F+F
+317 0x00004a85 0x00005a84 5   6    .text               ascii   JyDzD
+318 0x00004a97 0x00005a96 7   8    .text               ascii    yDzD{D
+319 0x00004b01 0x00005b00 5   6    .text               ascii   F!FxD
+320 0x00004b2f 0x00005b2e 4   5    .text               ascii   \nL A
+321 0x00004b8e 0x00005b8e 6   7    .text               ascii   ZHxD\b0
+322 0x00004bb6 0x00005bb6 8   9    .text               ascii    F)F\"\#
+323 0x00004bd6 0x00005bd6 5   6    .text               ascii   )F\"O
+324 0x00004c16 0x00005c16 6   7    .text               ascii    F\"\#
+325 0x00004cb5 0x00005cb4 5   6    .text               ascii   JyDzD
+326 0x00004cc7 0x00005cc6 7   8    .text               ascii    yDzD{D
+327 0x00004d32 0x00005d32 4   5    .text               ascii   xN~D
+328 0x00004d80 0x00005d80 4   5    .text               ascii   \f\f(D
+329 0x00004dd1 0x00005dd0 4   5    .text               ascii   \nL A
+330 0x00004dd7 0x00005dd6 4   5    .text               ascii   \n\ A
+331 0x00004e14 0x00005e14 6   7    .text               ascii   BHxD\b0
+332 0x00004e40 0x00005e40 8   9    .text               ascii    FQF\"\#
+333 0x00004e54 0x00005e54 6   7    .text               ascii   QF\"\#
+334 0x00004e7a 0x00005e7a 6   7    .text               ascii    F\"\#
+335 0x00004ea5 0x00005ea4 4   5    .text               ascii    7FG
+336 0x00004ead 0x00005eac 9   10   .text               ascii   H\eJ9FxDzD
+337 0x00004f80 0x00005f80 4   5    .text               ascii   hN~D
+338 0x00004fa6 0x00005fa6 4   5    .text               ascii   `IyD
+339 0x00004fbe 0x00005fbe 6   7    .text               ascii   [IyD\b1
+340 0x00004fc6 0x00005fc6 4   5    .text               ascii   1hOm
+341 0x00004fd2 0x00005fd2 4   5    .text               ascii   1F"F
+342 0x000050e3 0x000060e2 5   6    .text               ascii   JyDzD
+343 0x000050f5 0x000060f4 7   8    .text               ascii    yDzD{D
+344 0x000051aa 0x000061aa 4   5    .text               ascii   9F*F
+345 0x000051dc 0x000061dc 4   5    .text               ascii   )F2F
+346 0x000051e8 0x000061e8 4   5    .text               ascii   lL|D
+347 0x00005226 0x00006226 6   7    .text               ascii   )FBFSF
+348 0x00005345 0x00006344 5   6    .text               ascii   JyDzD
+349 0x00005357 0x00006356 7   8    .text               ascii    yDzD{D
+350 0x000053c3 0x000063c2 5   6    .text               ascii   F[H\fF
+351 0x00005456 0x00006456 4   5    .text               ascii   &`hh
+352 0x0000545b 0x0000645a 4   5    .text               ascii   0h`=
+353 0x0000549a 0x0000649a 4   5    .text               ascii   !F2F
+354 0x000054a4 0x000064a4 4   5    .text               ascii   ih0D
+355 0x000054ac 0x000064ac 4   5    .text               ascii   h`(h
+356 0x0000558f 0x0000658e 8   9    .text               ascii    +FyDzD\e
+357 0x000055b6 0x000065b6 4   5    .text               ascii   'F8F
+358 0x000055f4 0x000065f4 6   7    .text               ascii   0F9F"F
+359 0x00005636 0x00006636 4   5    .text               ascii   !F*F
+360 0x00005642 0x00006642 4   5    .text               ascii   hL|D
+361 0x00005674 0x00006674 4   5    .text               ascii   !hOn
+362 0x0000567e 0x0000667e 4   5    .text               ascii   !FBF
+363 0x0000578d 0x0000678c 5   6    .text               ascii   JyDzD
+364 0x0000579f 0x0000679e 7   8    .text               ascii    yDzD{D
+365 0x00005810 0x00006810 4   5    .text               ascii   xD\a/
+366 0x00005827 0x00006826 9   10   .text               ascii    lImJyDzD
+367 0x00005846 0x00006846 4   5    .text               ascii   gHxD
+368 0x00005878 0x00006878 4   5    .text               ascii   !F2F
+369 0x000058ca 0x000068ca 4   5    .text               ascii   yD\b1
+370 0x000058da 0x000068da 4   5    .text               ascii   XF9F
+371 0x000058ed 0x000068ec 4   5    .text               ascii   hIi\t
+372 0x000058f2 0x000068f2 6   7    .text               ascii   =I=J>K
+373 0x000058f9 0x000068f8 7   8    .text               ascii    yDzD{D
+374 0x0000590c 0x0000690c 4   5    .text               ascii   @IAJ
+375 0x00005911 0x00006910 7   8    .text               ascii    3FyDzD
+376 0x0000592e 0x0000692e 6   7    .text               ascii   1I1J2K
+377 0x00005935 0x00006934 7   8    .text               ascii    yDzD{D
+378 0x00005999 0x00006998 9   10   .text               ascii    \eI\eJyDzD
+379 0x000059af 0x000069ae 7   8    .text               ascii    yDzD{D
+380 0x00005a2f 0x00006a2e 5   6    .text               ascii   F\a*xD
+381 0x00005a40 0x00006a40 4   5    .text               ascii   jIkJ
+382 0x00005a45 0x00006a44 7   8    .text               ascii    ;FyDzD
+383 0x00005a74 0x00006a74 4   5    .text               ascii   )F"F
+384 0x00005aab 0x00006aaa 5   6    .text               ascii   \bWHxD
+385 0x00005ad8 0x00006ad8 4   5    .text               ascii   yD\b1
+386 0x00005ae2 0x00006ae2 4   5    .text               ascii   (F!F
+387 0x00005af5 0x00006af4 4   5    .text               ascii   hIi\t
+388 0x00005afa 0x00006afa 6   7    .text               ascii   >I>J?K
+389 0x00005b01 0x00006b00 7   8    .text               ascii    yDzD{D
+390 0x00005b14 0x00006b14 4   5    .text               ascii   BICJ
+391 0x00005b19 0x00006b18 7   8    .text               ascii    SFyDzD
+392 0x00005b3a 0x00006b3a 6   7    .text               ascii   1I1J2K
+393 0x00005b41 0x00006b40 7   8    .text               ascii    yDzD{D
+394 0x00005b8d 0x00006b8c 5   6    .text               ascii   F\aF8F
+395 0x00005ba9 0x00006ba8 9   10   .text               ascii    \eI\eJyDzD
+396 0x00005bbf 0x00006bbe 7   8    .text               ascii    yDzD{D
+397 0x00005c42 0x00006c42 4   5    .text               ascii   \bD!F
+398 0x00005c6c 0x00006c6c 4   5    .text               ascii   6HxD
+399 0x00005c7a 0x00006c7a 4   5    .text               ascii   4L|D
+400 0x00005c90 0x00006c90 8   9    .text               ascii   \f\f(D.IyD
+401 0x00005ca7 0x00006ca6 7   8    .text               ascii     `*I*J
+402 0x00005caf 0x00006cae 5   6    .text               ascii    yDzD
+403 0x00005d01 0x00006d00 5   6    .text               ascii   JyDzD
+404 0x00005d13 0x00006d12 7   8    .text               ascii    yDzD{D
+405 0x00005dc7 0x00006dc6 5   6    .text               ascii   F[H\fF
+406 0x00005e5a 0x00006e5a 4   5    .text               ascii   &`hh
+407 0x00005e5f 0x00006e5e 4   5    .text               ascii   0h`=
+408 0x00005e9e 0x00006e9e 4   5    .text               ascii   !F2F
+409 0x00005ea8 0x00006ea8 4   5    .text               ascii   ih0D
+410 0x00005eb0 0x00006eb0 4   5    .text               ascii   h`(h
+411 0x00005f82 0x00006f82 6   7    .text               ascii   0F)FJF
+412 0x00005fea 0x00006fea 5   6    .text               ascii   [F/FW
+413 0x0000606a 0x0000706a 4   5    .text               ascii   \bHxD
+414 0x0000606f 0x0000706e 5   6    .text               ascii   h\aHxD
+415 0x0000609b 0x0000709a 7   8    .text               ascii   IyD\th\b1
+416 0x000060c3 0x000070c2 4   6    .text               utf8    O8҈F
+417 0x000060cc 0x000070cc 5   6    .text               ascii   @FI\eJ
+418 0x00006114 0x00007114 6   7    .text               ascii   8F)FJF
+419 0x0000618e 0x0000718e 6   7    .text               ascii   0F)FJF
+420 0x000061f6 0x000071f6 5   6    .text               ascii   [F/FW
+421 0x00006273 0x00007272 7   8    .text               ascii   IbhyD\b1
+422 0x00006285 0x00007284 13  14   .text               ascii   JzD\b2\n`@hH`pG
+423 0x000062a7 0x000072a6 5   6    .text               ascii   F F\"
+424 0x000062bf 0x000072be 7   8    .text               ascii   IbhyD\b1
+425 0x000062d1 0x000072d0 13  14   .text               ascii   JzD\b2\n`@hH`pG
+426 0x000062f2 0x000072f2 4   5    .text               ascii   ah\b`
+427 0x00006324 0x00007324 8   9    .text               ascii   \aJzD\b2\n`
+428 0x000063ab 0x000073aa 6   7    .text               ascii   0zD\b2A
+429 0x000063c9 0x000073c8 5   6    .text               ascii   F@h"i
+430 0x000063ff 0x000073fe 8   9    .text               ascii   '|D&F!FF
+431 0x0000640d 0x0000740c 5   6    .text               ascii   MxD}D
+432 0x00006420 0x00007420 8   9    .text               ascii   \vH1F*FxD
+433 0x00006430 0x00007430 8   9    .text               ascii   *F\bH!FxD
+434 0x00006464 0x00007464 6   7    .text               ascii   \a"BbBa
+435 0x00006516 0x00007516 4   5    .text               ascii    F)F
+436 0x00006551 0x00007550 5   6    .text               ascii   F(F\fF
+437 0x00006581 0x00007580 5   6    .text               ascii   JyDzD
+438 0x0000658d 0x0000758c 5   6    .text               ascii   KF {D
+439 0x0000659b 0x0000759a 5   6    .text               ascii   JyDzD
+440 0x0000663f 0x0000763e 5   6    .text               ascii   JyDzD
+441 0x0000664b 0x0000764a 5   6    .text               ascii   Kq {D
+442 0x00006659 0x00007658 5   6    .text               ascii   JyDzD
+443 0x000066eb 0x000076ea 5   6    .text               ascii   JyDzD
+444 0x000066f7 0x000076f6 5   6    .text               ascii   KR {D
+445 0x00006705 0x00007704 5   6    .text               ascii   JyDzD
+446 0x0000674f 0x0000774e 5   6    .text               ascii   F\rF F
+447 0x0000682d 0x0000782c 7   8    .text               ascii   KyDzD{D
+448 0x00006893 0x00007892 7   8    .text               ascii   FyD\fh!h
+449 0x000068d4 0x000078d4 4   5    .text               ascii   "HxD
+450 0x00006907 0x00007906 5   6    .text               ascii   JyDzD
+451 0x0000694c 0x0000794c 8   9    .text               ascii   \aI\bJyDzD
+452 0x00006986 0x00007986 7   8    .text               ascii   xD\ah8h\b
+453 0x0000699a 0x0000799a 4   5    .text               ascii   UHxD
+454 0x000069a6 0x000079a6 6   7    .text               ascii   SK(F{D
+455 0x000069c3 0x000079c2 13  14   .text               ascii    LIMJMKyDzD{D
+456 0x000069e0 0x000079e0 8   9    .text               ascii   LIMJyDzD
+457 0x000069ee 0x000079ee 10  11   .text               ascii   =I=JyDzD=K
+458 0x00006a1e 0x00007a1e 4   5    .text               ascii   :HxD
+459 0x00006a23 0x00007a22 5   6    .text               ascii   F9HxD
+460 0x00006a29 0x00007a28 5   6    .text               ascii   F9HxD
+461 0x00006aad 0x00007aac 5   6    .text               ascii    AFZF
+462 0x00006b57 0x00007b56 4   5    .text               ascii   HxD\b
+463 0x00006b5d 0x00007b5c 4   5    .text               ascii   HxD\a
+464 0x00006b63 0x00007b62 4   5    .text               ascii   HxD\t
+465 0x00006b90 0x00007b90 5   7    .text               utf8    Հ( 1F
+466 0x00006be9 0x00007be8 13  14   .text               ascii    qIqJrKyDzD{D
+467 0x00006ca2 0x00007ca2 8   9    .text               ascii   9I9JyDzD
+468 0x00006cb3 0x00007cb2 13  14   .text               ascii    6I7J7KyDzD{D
+469 0x00006cec 0x00007cec 8   9    .text               ascii   +I,JyDzD
+470 0x00006cfd 0x00007cfc 13  14   .text               ascii    )I)J*KyDzD{D
+471 0x00006e03 0x00007e02 13  14   .text               ascii    +I,J,KyDzD{D
+472 0x00006e14 0x00007e14 4   5    .text               ascii    F)F
+473 0x00006e39 0x00007e38 5   6    .text               ascii   F F\rF
+474 0x00006e6b 0x00007e6a 5   6    .text               ascii   JyDzD
+475 0x00006e87 0x00007e86 5   6    .text               ascii   JyDzD
+476 0x00006f0b 0x00007f0a 7   8    .text               ascii   KyDzD{D
+477 0x00006f32 0x00007f32 4   5    .text               ascii   \b``j
+478 0x00006faa 0x00007faa 6   7    .text               ascii    F)F2F
+479 0x00006fb8 0x00007fb8 4   5    .text               ascii    F)F
+480 0x00006fd3 0x00007fd2 13  14   .text               ascii    (I)J)KyDzD{D
+481 0x00006fe4 0x00007fe4 4   5    .text               ascii   EF F
+482 0x00006ff5 0x00007ff4 5   6    .text               ascii   F F\rF
+483 0x0000702b 0x0000802a 5   6    .text               ascii   JyDzD
+484 0x00007047 0x00008046 5   6    .text               ascii   JyDzD
+485 0x00007054 0x00008054 4   5    .text               ascii   EF(F
+486 0x00007100 0x00008100 4   5    .text               ascii   5HxD
+487 0x0000712c 0x0000812c 9   10   .text               ascii   (I)JyDzD\r
+488 0x0000714a 0x0000814a 10  11   .text               ascii   'I'JyDzD'K
+489 0x00007179 0x00008178 4   5    .text               ascii   GhiP
+490 0x00007180 0x00008180 5   6    .text               ascii   GahiP
+491 0x000071ad 0x000081ac 13  14   .text               ascii    \vI\vJ\fKyDzD{D
+492 0x000071c1 0x000081c0 5   6    .text               ascii   F8FAF
+493 0x0000721d 0x0000821c 13  14   .text               ascii    lIlJmKyDzD{D
+494 0x00007240 0x00008240 4   5    .text               ascii   fHxD
+495 0x00007266 0x00008266 4   5    .text               ascii   \e\n8F
+496 0x000072ed 0x000082ec 4   5    .text               ascii   GhiP
+497 0x000072f4 0x000082f4 5   6    .text               ascii   FahiP
+498 0x00007313 0x00008312 13  14   .text               ascii    2I3J3KyDzD{D
+499 0x00007357 0x00008356 4   5    .text               ascii   G$K@
+500 0x00007368 0x00008368 8   9    .text               ascii   !I"JyDzD
+501 0x00007383 0x00008382 9   10   .text               ascii     I!JyDzD
+502 0x000073a1 0x000083a0 7   8    .text               ascii   KyDzD{D
+503 0x00007417 0x00008416 4   5    .text               ascii   FmMO
+504 0x00007425 0x00008424 11  12   .text               ascii    +FjIkJyDzD
+505 0x000074be 0x000084be 4   5    .text               ascii   %`wi
+506 0x0000753a 0x0000853a 4   5    .text               ascii   \aF F
+507 0x00007567 0x00008566 5   6    .text               ascii   JyDzD
+508 0x00007587 0x00008586 5   6    .text               ascii   JyDzD
+509 0x000075f5 0x000085f4 7   8    .text               ascii   IyD\th\b1
+510 0x00007601 0x00008600 7   8    .text               ascii   JyDzD\th
+511 0x00007643 0x00008642 4   6    .text               utf8    O8҈F
+512 0x0000764c 0x0000864c 5   6    .text               ascii   @FI\eJ
+513 0x00007694 0x00008694 6   7    .text               ascii   8F)FJF
+514 0x000076e3 0x000086e2 4   6    .text               utf8    O8҈F
+515 0x000076ec 0x000086ec 5   6    .text               ascii   @FI\eJ
+516 0x00007734 0x00008734 6   7    .text               ascii   8F)FJF
+517 0x0000776e 0x0000876e 4   5    .text               ascii   \bHxD
+518 0x0000777d 0x0000877c 7   8    .text               ascii   J!FxDzD
+519 0x000077c9 0x000087c8 4   5    .text               ascii   D`G@
+520 0x000077d5 0x000087d4 4   5    .text               ascii   D`G@
+521 0x000077e1 0x000087e0 4   5    .text               ascii   D`G@
+522 0x000077ed 0x000087ec 4   5    .text               ascii   D`G@
+523 0x000077f9 0x000087f8 4   5    .text               ascii   D`G@
+524 0x00007805 0x00008804 4   5    .text               ascii   D`G@
+525 0x00007811 0x00008810 4   5    .text               ascii   D`G@
+526 0x0000781d 0x0000881c 4   5    .text               ascii   D`G@
+527 0x0000820d 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+528 0x00008218 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+529 0x0000821f 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+530 0x00008257 0x00000001 11  12   .shstrtab           ascii   .init_array
+531 0x00008263 0x0000000d 11  12   .shstrtab           ascii   .fini_array
+532 0x0000826f 0x00000019 10  11   .shstrtab           ascii   .ARM.exidx
+533 0x0000827a 0x00000024 5   6    .shstrtab           ascii   .text
+534 0x00008280 0x0000002a 4   5    .shstrtab           ascii   .got
+535 0x00008285 0x0000002f 19  20   .shstrtab           ascii   .note.android.ident
+536 0x00008299 0x00000043 8   9    .shstrtab           ascii   .got.plt
+537 0x000082a2 0x0000004c 8   9    .shstrtab           ascii   .rel.plt
+538 0x000082ab 0x00000055 4   5    .shstrtab           ascii   .bss
+539 0x000082b0 0x0000005a 15  16   .shstrtab           ascii   .ARM.attributes
+540 0x000082c0 0x0000006a 7   8    .shstrtab           ascii   .dynstr
+541 0x000082c8 0x00000072 14  15   .shstrtab           ascii   .gnu.version_r
+542 0x000082d7 0x00000081 12  13   .shstrtab           ascii   .data.rel.ro
+543 0x000082e4 0x0000008e 9   10   .shstrtab           ascii   .relr.dyn
+544 0x000082ee 0x00000098 8   9    .shstrtab           ascii   .rel.dyn
+545 0x000082f7 0x000000a1 12  13   .shstrtab           ascii   .gnu.version
+546 0x00008304 0x000000ae 7   8    .shstrtab           ascii   .dynsym
+547 0x0000830c 0x000000b6 9   10   .shstrtab           ascii   .gnu.hash
+548 0x00008316 0x000000c0 18  19   .shstrtab           ascii   .note.gnu.build-id
+549 0x00008329 0x000000d3 8   9    .shstrtab           ascii   .dynamic
+550 0x00008332 0x000000dc 10  11   .shstrtab           ascii   .ARM.extab
+551 0x0000833d 0x000000e7 9   10   .shstrtab           ascii   .shstrtab
+552 0x00008347 0x000000f1 7   8    .shstrtab           ascii   .rodata
+553 0x0000834f 0x000000f9 14  15   .shstrtab           ascii   .gnu_debugdata
+554 0x0000835f 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+555 0x000083b9 0x0000005b 8   9    .gnu_debugdata      ascii   b|YT\a"Hi
+556 0x000083e6 0x00000088 4   5    .gnu_debugdata      ascii   il'\v
+557 0x00008412 0x000000b4 4   5    .gnu_debugdata      ascii   6yw%
+558 0x0000841b 0x000000bd 4   5    .gnu_debugdata      ascii   m|vZ
+559 0x00008423 0x000000c5 4   5    .gnu_debugdata      ascii   |@)N
+560 0x0000844b 0x000000ed 5   7    .gnu_debugdata      utf8    ñDqpZ
+561 0x0000845a 0x000000fc 7   8    .gnu_debugdata      ascii   R\v\a?ne:
+562 0x0000848b 0x0000012d 6   7    .gnu_debugdata      ascii   WD3Dk!
+563 0x000084c9 0x0000016b 4   5    .gnu_debugdata      ascii   %mKU
+564 0x00008512 0x000001b4 4   5    .gnu_debugdata      ascii   \f\f\e3
+565 0x0000853d 0x000001df 10  11   .gnu_debugdata      ascii   "<\r^C;qW|*
+566 0x0000855f 0x00000201 6   8    .gnu_debugdata      utf8    OKUWߒZ
+567 0x00008575 0x00000217 7   9    .gnu_debugdata      utf8    ËQIa=\t@
+568 0x0000860f 0x000002b1 4   6    .gnu_debugdata      utf8    p¡a\n
+569 0x00008616 0x000002b8 4   6    .gnu_debugdata      utf8    HäY\a
+570 0x00008633 0x000002d5 4   5    .gnu_debugdata      ascii   \f.tX
+571 0x00008661 0x00000303 4   5    .gnu_debugdata      ascii   `GlO
+572 0x0000866d 0x0000030f 5   6    .gnu_debugdata      ascii   9K{3I
+573 0x0000868a 0x0000032c 4   5    .gnu_debugdata      ascii   \bO\y
+574 0x000086b2 0x00000354 7   8    .gnu_debugdata      ascii   W\b&\r"?4
+575 0x000086cb 0x0000036d 5   7    .gnu_debugdata      utf8    ڛ\f\t\t\t
+576 0x000086ee 0x00000390 4   7    .gnu_debugdata      utf8    [&χц
+577 0x000086f8 0x0000039a 4   5    .gnu_debugdata      ascii   4VP\
+578 0x00008728 0x000003ca 8   9    .gnu_debugdata      ascii   9A\rok4s|
+579 0x00008757 0x000003f9 4   5    .gnu_debugdata      ascii   ,\tt'
+580 0x00008775 0x00000417 4   6    .gnu_debugdata      utf8    OGѻ\r
+581 0x000087b6 0x00000458 5   7    .gnu_debugdata      utf8    ϩ#oV\t
+582 0x000087e3 0x00000485 4   5    .gnu_debugdata      ascii   +(8%
+583 0x000087f6 0x00000498 4   5    .gnu_debugdata      ascii   _N]\e
+584 0x00008849 0x000004eb 4   5    .gnu_debugdata      ascii   hL-&
+585 0x00008932 0x000005d4 5   8    .gnu_debugdata      utf8    \rwPqꙆ
+586 0x00008a18 0x000006ba 5   10   .gnu_debugdata      utf8    bɷ􃷸+E
+587 0x00008a48 0x000006ea 4   6    .gnu_debugdata      utf8    ĝn+N
+588 0x00008aac 0x0000074e 5   6    .gnu_debugdata      ascii   BcP`h
+589 0x00008ad8 0x0000077a 4   6    .gnu_debugdata      utf8    n(f֦
+590 0x00008b0a 0x000007ac 5   6    .gnu_debugdata      ascii   p\a-@K
+591 0x00008b11 0x000007b3 5   6    .gnu_debugdata      ascii   3mN{_
+592 0x00008b26 0x000007c8 8   9    .gnu_debugdata      ascii   =kxJ0[Pr
+593 0x00008b40 0x000007e2 4   5    .gnu_debugdata      ascii   4f*b
+594 0x00008d44 0x000009e6 6   28                       utf32le L\tB≜≜˘
+0x00008a78    1      4 sym.imp.__cxa_atexit
+0x00008844    1     12 sym.imp.__cxa_finalize
+0x00008928    1      4 sym.imp._Unwind_Resume
+0x00008904    1      8 sym.imp.__android_log_print
+0x00008ae4    1      8 sym.imp.__cxa_allocate_exception
+0x000088f8    1      4 sym.imp.__cxa_begin_catch
+0x00008910    1     12 sym.imp.__cxa_end_catch
+0x00008afc    1      4 sym.imp.__cxa_free_exception
+0x00008a6c    1      4 sym.imp.__cxa_guard_acquire
+0x00008a84    1      8 sym.imp.__cxa_guard_release
+0x00008af0    1     12 sym.imp.__cxa_throw
+0x0000885c    1      4 sym.imp.__gxx_personality_v0
+0x0000891c    1      4 sym.imp.__stack_chk_fail
+0x00008a48    1      4 sym.imp.__strlcpy_chk
+0x00008aa8    1      4 sym.imp.calloc
+0x00008a54    1      8 sym.imp.free
+0x00008898    1      4 sym.imp.getpid
+0x00008880    1     12 sym.imp.gettid
+0x00008a30    1     12 sym.imp.malloc
+0x00008b20    1     12 sym.imp.strdup
+0x00008ab4    1      8 sym.imp.strlcpy
+0x000089e8    1      4 sym.imp.strlen
+0x00008bec    1      4 sym.imp.pthread_create
+0x00008b8c    1      4 sym.imp.pthread_getname_np
+0x00008bb0    1     12 sym.imp.pthread_getschedparam
+0x00008c10    1     12 sym.imp.pthread_join
+0x00008b80    1     12 sym.imp.pthread_self
+0x00008bc8    1      4 sym.imp.pthread_setname_np
+0x00008bbc    1      4 sym.imp.pthread_setschedparam
+0x00008ba4    1      8 sym.imp.sched_get_priority_min
+0x00008b98    1      4 sym.imp.vsnprintf
+0x00008c64    1      8 sym.imp.memcpy
+0x00008c70    1     12 sym.imp.memmove
+0x00008c7c    1      4 sym.imp.memset
+0x000046d0    2     20 entry0
+0x0000769c    2     58 method.ThreadPoolData.signal__
+0x00008c40    1     12 fcn.00008c40
+0x00008c80    1     12 fcn.00008c80
+0x00004d04   16    206 sym._ZNSt3__16vectorIiNS_9allocatorIiEEE6assignIPiEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIiNS_
+0x000055c0   44    570 sym.perf_get_feedback
+0x000074cc    9    168 method.ThreadPoolData.wait__
+0x00007458    1     48 method.ThreadPoolData.ThreadPoolData_int_
+0x000086cc   15    206 method.void_std::__1::vector_int__std::__1::allocator_int___.__push_back_slow_path_int_const__int_const_
+0x000070ac   33    441 method.void_std::__1::vector_int__std::__1::allocator_int___.__push_back_slow_path_int__int_
+0x000052f4    1     24 sym.perf_hint
+0x0000530c   39    578 fcn.0000530c
+0x000046e2    3     26 method.android::sp_vendor::qti::hardware::perf::V2_2::IPerf_.sp__
+0x00008860    1      8 fcn.00008860
+0x00006f40   22    281 fcn.00006f40
+0x00005af0   32    460 sym.perf_get_prop
+0x00005d18   32    512 sym.perf_wait_get_prop
+0x00007b1c   26    432 method.PerfThreadPool.addThreads_int__ThreadType_t_
+0x00008410   26    304 method.PerfThreadPool.PerfThreadPool__
+0x00004fec   28    416 sym.perf_lock_rel
+0x000077a4    9    220 sym.PerfThreadPool::PerfThreadPool__
+0x00007978   27    300 method.PerfThreadPool.executeTask_void_
+0x000080a4   22    284 method.PerfThreadPool.placeTaskAt_std::__1::function_void______int_
+0x00007ed8    8    124 method.PerfThreadPool.getDedicated__
+0x0000809c    2     18 method.PerfThreadPool.resize_int_
+0x000078d0   11    154 method.PerfThreadPool.setNonRT__
+0x000081f4   24    352 method.PerfThreadPool.placeTask_std::__1::function_void_____
+0x00006dc0   33    388 reloc.std::__1::__wrap_iter_int__std::__1::vector_int__std::__1::allocator_int___::emplace_int__std::__1::__wrap_iter_int_const___int_
+0x00004738   38    542 sym.perf_lock_acq
+0x0000586c   24    366 sym.perf_lock_use_profile
+0x00007f64    9    144 method.PerfThreadPool.resize_int__ThreadType_t_
+0x00007dbc    8    124 method.PerfThreadPool.create_int_
+0x00006804   38    440 sym.perf_hint_offload
+0x0000614c   41    562 sym.perf_lock_acq_rel
+0x00005f24   35    448 sym.perf_sync_request
+0x00007488    8     66 method.ThreadPoolData.ThreadPoolData__
+0x00006c34    3     26 method.android::sp_android::hardware::hidl_death_recipient_.sp__
+0x0000714c    1      4 method.void_std::__1::__split_buffer_int__std::__1::allocator_int__.emplace_back_int__int_
+0x0000653c    1     20 sym.perf_event
+0x00006550   39    622 fcn.00006550
+0x00004998   46    638 fcn.00004998
+0x00008a80    1      4 fcn.00008a80
+0x00008a40    1      8 fcn.00008a40
+0x0000879c    2     16 sym.__aeabi_memcpy
+0x000088d0    1      4 fcn.000088d0
+0x00008a90    1     12 fcn.00008a90
+0x000088c0    1      8 fcn.000088c0
+0x00008aa0    1      8 fcn.00008aa0
+0x000088a0    1     12 fcn.000088a0
+0x000088e0    1     12 sym.imp.operator_delete_void_
+0x00008ab0    1      4 fcn.00008ab0
+0x00004dd2    1      1 fcn.00004dd2
+0x000088f0    1      8 fcn.000088f0
+0x00008ac0    1     12 fcn.00008ac0
+0x00008900    1      4 fcn.00008900
+0x000051e4   11    146 fcn.000051e4
+0x00008920    1      8 fcn.00008920
+0x00008ad0    1     12 fcn.00008ad0
+0x00008930    1      4 fcn.00008930
+0x00004fcc    1      1 fcn.00004fcc
+0x00008940    1     12 sym.imp.std::__1::shared_timed_mutex::unlock__
+0x00008950    1      8 fcn.00008950
+0x00008960    1      4 fcn.00008960
+0x00008970    1     12 fcn.00008970
+0x00008980    1      8 fcn.00008980
+0x00004fe2    2     34 fcn.00004fe2
+0x000059b8   10    198 sym.perf_lock_cmd
+0x00007748    7     90 method.ThreadPoolData.getIfAvailable_ThreadType_t_
+0x00008c90    1     12 fcn.00008c90
+0x000075f0    3     46 method.ThreadPoolData.setState_ThreadState_t_
+0x0000862c   12    164 method.void_std::__1::vector_ThreadPoolData__std::__1::allocator_ThreadPoolData___.__push_back_slow_path_ThreadPoolData_const__ThreadPoolData_const_
+0x0000471a    3     26 method.android::sp_PerfDeathRecipient_.sp__
+0x000063bc   33    386 method.std::__1::__wrap_iter_int__std::__1::vector_int__std::__1::allocator_int___.emplace_int__std::__1::__wrap_iter_int_const___int_
+0x00006a24   39    424 sym.perf_event_offload
+0x00008a60    1     12 method.vendor::qti::hardware::perf::V2_2::IPerf.getService_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__bool_
+0x0000894c    1      4 method.vendor::qti::hardware::perf::V2_2::IPerf.tryGetService_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__bool_
+0x00008958    1      4 sym.imp.android::sp_report_race__
+0x0000897c    1      4 sym.imp.android::sp_report_stack_pointer__
+0x00008acc    1      4 sym.imp.android::RefBase::RefBase__
+0x00008a3c    1      4 sym.imp.android::hardware::hidl_string::hidl_string_char_const_
+0x00008a0c    1      4 method.android::hardware::hidl_string.hidl_string_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00008a18    1      4 sym.imp.android::hardware::hidl_string::hidl_string__
+0x000088d4    1      8 sym.imp.android::hardware::details::return_status::return_status__
+0x00008850    1     12 sym.imp.android::RefBase::decStrong_void_const__const
+0x00008988    1      4 sym.imp.android::RefBase::incStrong_void_const__const
+0x00008b14    1      8 sym.imp.android::hardware::hidl_string::c_str___const
+0x00008994    1      8 sym.imp.android::hardware::details::return_status::onValueRetrieval___const
+0x000089c4    1      8 sym.imp.std::__1::__vector_base_common_true_::__throw_length_error___const
+0x00008a24    1      8 sym.imp.std::__1::__basic_string_common_true_::__throw_length_error___const
+0x00008b08    1      4 sym.imp.std::logic_error::logic_error_char_const_
+0x00008868    1      4 sym.imp.std::__1::condition_variable::condition_variable__
+0x000088b0    1     12 sym.imp.std::__1::shared_timed_mutex::lock_shared__
+0x000088c8    1      4 sym.imp.std::__1::shared_timed_mutex::unlock_shared__
+0x00008934    1      8 sym.imp.std::__1::shared_timed_mutex::lock__
+0x00008b2c    1      4 sym.imp.std::__1::shared_timed_mutex::shared_timed_mutex__
+0x000088ec    1      4 sym.imp.std::__1::__throw_system_error_int__char_const_
+0x00008874    1      8 sym.imp.std::__1::mutex::mutex__
+0x000089dc    1      4 sym.imp.std::terminate__
+0x000088bc    1      4 sym.imp.operator_delete___void_
+0x000089ac    1      4 sym.imp.operator_delete_void__std::nothrow_t_const_
+0x000089d0    1     12 sym.imp.operator_new___unsigned_int_
+0x000089b8    1      4 sym.imp.operator_new_unsigned_int_
+0x00008964    1      8 sym.imp.operator_new_unsigned_int__std::nothrow_t_const_
+0x00008b68    1      4 sym.imp.std::__1::condition_variable::notify_one__
+0x00008b50    1     12 sym.imp.std::__1::condition_variable::wait_std::__1::unique_lock_std::__1::mutex__
+0x00008b38    1      4 sym.imp.std::__1::mutex::lock__
+0x00008b5c    1      4 sym.imp.std::__1::mutex::unlock__
+0x00008b74    1      8 sym.imp.std::__1::mutex::try_lock__
+0x00008c4c    1      4 sym.imp.std::exception::exception__
+0x000046de    2      6 entry.fini0
+0x000073f8    1     76 entry.init0
+0x0000876c    1      2 entry.init1
+0x00004eac   15    210 fcn.00004eac
+0x00008990    1      4 fcn.00008990
+0x000089a0    1     12 fcn.000089a0
+0x000089b0    1      8 fcn.000089b0
+0x000089c0    1      4 fcn.000089c0
+0x000089e0    1      8 fcn.000089e0
+0x000089f0    1     12 fcn.000089f0
+0x00008a00    1     12 fcn.00008a00
+0x00008a10    1      8 fcn.00008a10
+0x00008a20    1      4 fcn.00008a20
+0x00006c52    1      1 fcn.00006c52
+0x000087a0    2     16 sym.__aeabi_memmove
+0x00008a50    1      4 fcn.00008a50
+0x000087b4    2     24 sym.__aeabi_memclr4
+0x00008a70    1      8 fcn.00008a70
+0x00008ae0    1      4 fcn.00008ae0
+0x00008b00    1      8 fcn.00008b00
+0x00008b10    1      4 fcn.00008b10
+0x00008b30    1      8 fcn.00008b30
+0x00008b40    1     12 fcn.00008b40
+0x00008b60    1      8 fcn.00008b60
+0x00007058    1      2 fcn.00007058
+0x00008b70    1      4 fcn.00008b70
+0x00008b90    1      8 fcn.00008b90
+0x00008ba0    1      4 fcn.00008ba0
+0x00008bc0    1      8 fcn.00008bc0
+0x00008bd0    1     12 fcn.00008bd0
+0x00008be0    1     12 fcn.00008be0
+0x00008bf0    1     12 fcn.00008bf0
+0x00008c00    1     12 fcn.00008c00
+0x00008c20    1     12 fcn.00008c20
+0x00008c30    1     12 fcn.00008c30
+0x00008890    1      8 fcn.00008890
+0x00008c50    1     12 fcn.00008c50
+0x00008c60    1      4 fcn.00008c60
+0x00008ca0    1     12 fcn.00008ca0
+0x00008cb0    1     12 fcn.00008cb0
+0x0000788c    3     48 fcn.0000788c
+0x00008cc0    1     12 fcn.00008cc0
+0x00008cd0    1     12 fcn.00008cd0
+0x00008ce0    1     12 fcn.00008ce0
+0x00008cf0    1     12 fcn.00008cf0
+0x00008d00    1     12 fcn.00008d00
+0x00008d10    1     12 fcn.00008d10
+0x00008d20    1     12 fcn.00008d20
+0x000085ec    1      1 fcn.000085ec
+0x00008d30    1     12 fcn.00008d30
+0x00008d40    1     12 fcn.00008d40
+0x00008d50    1     12 fcn.00008d50
+0x00008d60    1     12 fcn.00008d60
+0x00008d70    1     12 fcn.00008d70
+0x00008d80    1     12 fcn.00008d80
+0x00008d90    1     12 fcn.00008d90
+0x00008da0    1     12 fcn.00008da0
+0x000078bc    1      1 fcn.000078bc
+0x00008db0    1     12 fcn.00008db0
+0x00008dc0    1     12 fcn.00008dc0
+0x00004dd3   10    197 method.android::hardware::hidl_vec_int_.hidl_vec_std::__1::vector_int__std::__1::allocator_int____const_
+0x00004fcd    3     17 method.std::__1::shared_lock_std::__1::shared_timed_mutex_.shared_lock__
+0x00006c53    3     17 method.std::__1::unique_lock_std::__1::shared_timed_mutex_.unique_lock__
+0x00007059    2     60 method.std::__1.__throw_length_error_char_const_
+0x00007095    1     17 method.std::length_error.length_error_char_const_
+0x00007265    1      1 method.std::__1::__function::__func_perf_get_prop::__0__std::__1::allocator_perf_get_prop.__0___void__android::hardware::hidl_string_const__::destroy_deallocate__
+0x000078bd    3     17 method.std::__1::vector_ThreadPoolData__std::__1::allocator_ThreadPoolData___.vector__
+0x000085ed    1     48 method.std::__1.__throw_bad_function_call__
+0x0000861d    2     25 method.std::__1::bad_function_call.bad_function_call__

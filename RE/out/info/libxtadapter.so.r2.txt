@@ -1,0 +1,214 @@
+arch     arm
+baddr    0x0
+binsz    14530
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                           demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+32  0x000025ec 0x000025ec GLOBAL FUNC 364      _ZN9XtAdapter19handleEngineUpEventEv           XtAdapter::handleEngineUpEvent()
+33  0x00002508 0x00002508 GLOBAL FUNC 88       _ZN9XtAdapterC2Ev                              XtAdapter::XtAdapter()
+35  0x00003008 0x00003008 GLOBAL OBJ  160      _ZTV9XtAdapter                                 vtable for XtAdapter
+36  0x000022f0 0x000022f0 GLOBAL FUNC 536      setXtAdapterUserPref
+37  0x00002560 0x00002560 GLOBAL FUNC 84       _ZN9XtAdapter17setUserPreferenceEb             XtAdapter::setUserPreference(bool)
+38  0x000025b4 0x000025b4 GLOBAL FUNC 56       _ZN9XtAdapter21setUserPreferenceSyncENS_4PrefE XtAdapter::setUserPreferenceSync(XtAdapter::Pref)
+39  0x00002508 0x00002508 GLOBAL FUNC 88       _ZN9XtAdapterC1Ev                              XtAdapter::XtAdapter()
+40  0x00002014 0x00002014 GLOBAL FUNC 576      createXtAdapterInstance
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000270   0x18 0x00000270   0x18 -r-- NOTE        .note.android.ident
+2   0x00000288   0x20 0x00000288   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8  0x3d8 0x000002a8  0x3d8 -r-- DYNSYM      .dynsym
+4   0x00000680   0x52 0x00000680   0x52 -r-- GNU_VERSYM  .gnu.version
+5   0x000006d4   0x40 0x000006d4   0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000718   0x4c 0x00000718   0x4c -r-- GNU_HASH    .gnu.hash
+7   0x00000764  0x609 0x00000764  0x609 -r-- STRTAB      .dynstr
+8   0x00000d70   0xaa 0x00000d70   0xaa -r-- ----        .rela.dyn
+9   0x00000e20   0x10 0x00000e20   0x10 -r-- ----        .relr.dyn
+10  0x00000e30  0x180 0x00000e30  0x180 -r-- RELA        .rela.plt
+11  0x00000fb0  0x15a 0x00000fb0  0x15a -r-- PROGBITS    .rodata
+12  0x0000110c   0x7c 0x0000110c   0x7c -r-- PROGBITS    .eh_frame_hdr
+13  0x00001188  0x1bc 0x00001188  0x1bc -r-- PROGBITS    .eh_frame
+14  0x00002000  0x7c0 0x00002000  0x7c0 -r-x PROGBITS    .text
+15  0x000027c0  0x120 0x000027c0  0x120 -r-x PROGBITS    .plt
+16  0x00003000   0xd8 0x00003000   0xd8 -rw- PROGBITS    .data.rel.ro
+17  0x000030d8   0x10 0x000030d8   0x10 -rw- FINI_ARRAY  .fini_array
+18  0x000030e8  0x200 0x000030e8  0x200 -rw- DYNAMIC     .dynamic
+19  0x000032e8   0x20 0x000032e8   0x20 -rw- PROGBITS    .got
+20  0x00003308   0x98 0x00003308   0x98 -rw- PROGBITS    .got.plt
+21  0x000033a0    0x4 0x000043a0    0x4 -rw- PROGBITS    .data
+22  0x000033a4    0x0 0x000043a8    0x8 -rw- NOBITS      .bss
+23  0x000033a4   0xf6 0x00000000   0xf6 ---- STRTAB      .shstrtab
+24  0x0000349a  0x428 0x00000000  0x428 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x0000074c 0x0000074c 5   7    .gnu.hash           utf8    NԁH+>
+3   0x00000765 0x00000765 14  15   .dynstr             ascii   __cxa_finalize
+4   0x00000774 0x00000774 43  44   .dynstr             ascii   _ZN8loc_core10LocContext13getLocContextEPKc
+5   0x000007a0 0x000007a0 43  44   .dynstr             ascii   _ZN8loc_core10LocContext16mLocationHalNameE
+6   0x000007cc 0x000007cc 34  35   .dynstr             ascii   _ZN9XtAdapter17setUserPreferenceEb
+7   0x000007ef 0x000007ef 36  37   .dynstr             ascii   _ZN9XtAdapter19handleEngineUpEventEv
+8   0x00000814 0x00000814 46  47   .dynstr             ascii   _ZN9XtAdapter21setUserPreferenceSyncENS_4PrefE
+9   0x00000843 0x00000843 17  18   .dynstr             ascii   _ZN9XtAdapterC1Ev
+10  0x00000855 0x00000855 17  18   .dynstr             ascii   _ZN9XtAdapterC2Ev
+11  0x00000867 0x00000867 50  51   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase16onRequestNtpTimeEv
+12  0x0000089a 0x0000089a 51  52   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase17onRequestXtraDataEj
+13  0x000008ce 0x000008ce 55  56   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase19onGdtUploadEndEventEiii
+14  0x00000906 0x00000906 79  80   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase19onReceiveXtraConfigEjjjtmhtPKcS2_S2_S2_S2_S2_hh
+15  0x00000956 0x00000956 63  64   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase19onSendCsmConfigRespEibbhhthjPKh
+16  0x00000996 0x00000996 69  70   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase20onReceiveXtraServersEPKcS2_S2_jhmhjhj
+17  0x000009dc 0x000009dc 55  56   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase21handleEngineDownEventEv
+18  0x00000a14 0x00000a14 59  60   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase21handleGtpApStatusRespEithhh
+19  0x00000a50 0x00000a50 57  58   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase21onGdtDownloadEndEventEiji
+20  0x00000a8a 0x00000a8a 57  58   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase21onGdtReceiveDoneEventEiji
+21  0x00000ac4 0x00000ac4 60  61   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase21onGdtUploadBeginEventEiiPKcj
+22  0x00000b01 0x00000b01 77  78   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase23onGdtDownloadBeginEventEijjPKhjS2_jPKcjjajaja
+23  0x00000b4f 0x00000b4f 57  58   .dynstr             ascii   _ZN9izat_core15IzatAdapterBase23onQueryXtraInfoReqEventEv
+24  0x00000b89 0x00000b89 60  61   .dynstr             ascii   _ZN9izat_core15IzatAdapterBaseC2EmPN8loc_core11ContextBaseEb
+25  0x00000bc6 0x00000bc6 34  35   .dynstr             ascii   _ZN9izat_core15IzatAdapterBaseD2Ev
+26  0x00000be9 0x00000be9 43  44   .dynstr             ascii   _ZNK8loc_util7MsgTask7sendMsgEPKNS_6LocMsgE
+27  0x00000c15 0x00000c15 20  21   .dynstr             ascii   _ZTV14SetUserPrefMsg
+28  0x00000c2a 0x00000c2a 14  15   .dynstr             ascii   _ZTV9XtAdapter
+29  0x00000c39 0x00000c39 6   7    .dynstr             ascii   _ZdlPv
+30  0x00000c40 0x00000c40 5   6    .dynstr             ascii   _Znwm
+31  0x00000c46 0x00000c46 19  20   .dynstr             ascii   __android_log_print
+32  0x00000c5a 0x00000c5a 16  17   .dynstr             ascii   __stack_chk_fail
+33  0x00000c6b 0x00000c6b 23  24   .dynstr             ascii   createXtAdapterInstance
+34  0x00000c83 0x00000c83 17  18   .dynstr             ascii   get_tag_log_level
+35  0x00000c95 0x00000c95 13  14   .dynstr             ascii   get_timestamp
+36  0x00000ca3 0x00000ca3 6   7    .dynstr             ascii   getpid
+37  0x00000caa 0x00000caa 10  11   .dynstr             ascii   loc_logger
+38  0x00000cb5 0x00000cb5 17  18   .dynstr             ascii   log_buffer_insert
+39  0x00000cc7 0x00000cc7 6   7    .dynstr             ascii   memset
+40  0x00000cce 0x00000cce 20  21   .dynstr             ascii   setXtAdapterUserPref
+41  0x00000ce3 0x00000ce3 7   8    .dynstr             ascii   syscall
+42  0x00000ceb 0x00000ceb 9   10   .dynstr             ascii   vsnprintf
+43  0x00000cf5 0x00000cf5 9   10   .dynstr             ascii   liblog.so
+44  0x00000cff 0x00000cff 6   7    .dynstr             ascii   LIBLOG
+45  0x00000d06 0x00000d06 7   8    .dynstr             ascii   libc.so
+46  0x00000d0e 0x00000d0e 4   5    .dynstr             ascii   LIBC
+47  0x00000d13 0x00000d13 15  16   .dynstr             ascii   libgps.utils.so
+48  0x00000d23 0x00000d23 14  15   .dynstr             ascii   libloc_core.so
+49  0x00000d32 0x00000d32 15  16   .dynstr             ascii   libizat_core.so
+50  0x00000d42 0x00000d42 9   10   .dynstr             ascii   libc++.so
+51  0x00000d4c 0x00000d4c 7   8    .dynstr             ascii   libm.so
+52  0x00000d54 0x00000d54 8   9    .dynstr             ascii   libdl.so
+53  0x00000d5d 0x00000d5d 15  16   .dynstr             ascii   libxtadapter.so
+54  0x00000d70 0x00000d70 4   5    .rela.dyn           ascii   APS2
+55  0x00000fb0 0x00000fb0 45  46   .rodata             ascii   %s %d %ld %s :setXtAdapterUserPref() pref %d\n
+56  0x00000fde 0x00000fde 40  41   .rodata             ascii   %s %d %ld %s :createXtAdapterInstance()\n
+57  0x00001007 0x00001007 27  28   .rodata             ascii   XtAdapter instance exists !
+58  0x00001023 0x00001023 31  32   .rodata             ascii   %s %d %ld %s :%s] mUserPref:%d\n
+59  0x00001043 0x00001043 19  20   .rodata             ascii   handleEngineUpEvent
+60  0x00001057 0x00001057 42  43   .rodata             ascii   %s %d %ld %s :XtAdapter instance exists !\n
+61  0x00001082 0x00001082 30  31   .rodata             ascii   setXtAdapterUserPref() pref %d
+62  0x000010a1 0x000010a1 10  11   .rodata             ascii   Xt_Adapter
+63  0x000010ac 0x000010ac 16  17   .rodata             ascii   %s] mUserPref:%d
+64  0x000010bd 0x000010bd 25  26   .rodata             ascii   createXtAdapterInstance()
+65  0x000010d7 0x000010d7 32  33   .rodata             ascii   %s %d %ld %s :sXtAdapter NULL !\n
+66  0x000010f8 0x000010f8 17  18   .rodata             ascii   sXtAdapter NULL !
+67  0x0000122c 0x0000122c 5   24   .eh_frame           utf32le \b$¬ႸȘ
+68  0x00002094 0x00002094 5   6    .text               ascii   \bA@9h
+69  0x000021b8 0x000021b8 5   6    .text               ascii   \bA@9h
+70  0x00002380 0x00002380 4   5    .text               ascii   \bA@9
+71  0x00002490 0x00002490 4   5    .text               ascii   \bA@9
+72  0x00002684 0x00002684 4   5    .text               ascii   \bA@9
+73  0x000033a5 0x00000001 11  12   .shstrtab           ascii   .fini_array
+74  0x000033b1 0x0000000d 5   6    .shstrtab           ascii   .text
+75  0x000033b7 0x00000013 4   5    .shstrtab           ascii   .got
+76  0x000033bc 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+77  0x000033d0 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+78  0x000033d9 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+79  0x000033e3 0x0000003f 4   5    .shstrtab           ascii   .bss
+80  0x000033e8 0x00000044 7   8    .shstrtab           ascii   .dynstr
+81  0x000033f0 0x0000004c 13  14   .shstrtab           ascii   .eh_frame_hdr
+82  0x000033fe 0x0000005a 14  15   .shstrtab           ascii   .gnu.version_r
+83  0x0000340d 0x00000069 12  13   .shstrtab           ascii   .data.rel.ro
+84  0x0000341a 0x00000076 9   10   .shstrtab           ascii   .relr.dyn
+85  0x00003424 0x00000080 9   10   .shstrtab           ascii   .rela.dyn
+86  0x0000342e 0x0000008a 12  13   .shstrtab           ascii   .gnu.version
+87  0x0000343b 0x00000097 7   8    .shstrtab           ascii   .dynsym
+88  0x00003443 0x0000009f 9   10   .shstrtab           ascii   .gnu.hash
+89  0x0000344d 0x000000a9 9   10   .shstrtab           ascii   .eh_frame
+90  0x00003457 0x000000b3 18  19   .shstrtab           ascii   .note.gnu.build-id
+91  0x0000346a 0x000000c6 8   9    .shstrtab           ascii   .dynamic
+92  0x00003473 0x000000cf 9   10   .shstrtab           ascii   .shstrtab
+93  0x0000347d 0x000000d9 7   8    .shstrtab           ascii   .rodata
+94  0x00003485 0x000000e1 14  15   .shstrtab           ascii   .gnu_debugdata
+95  0x00003494 0x000000f0 5   6    .shstrtab           ascii   .data
+96  0x0000349b 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+97  0x00003535 0x0000009b 5   6    .gnu_debugdata      ascii   <mcxE
+98  0x00003548 0x000000ae 4   5    .gnu_debugdata      ascii   U_-C
+99  0x0000355c 0x000000c2 4   5    .gnu_debugdata      ascii   9h x
+100 0x00003572 0x000000d8 4   5    .gnu_debugdata      ascii   \n(!6
+101 0x000035d0 0x00000136 5   7    .gnu_debugdata      utf8    8ֆWG[
+102 0x000035e1 0x00000147 4   5    .gnu_debugdata      ascii   u]"[
+103 0x00003601 0x00000167 4   5    .gnu_debugdata      ascii   ^fI{
+104 0x0000365f 0x000001c5 4   6    .gnu_debugdata      utf8    ѿPGS
+105 0x000036c0 0x00000226 7   8    .gnu_debugdata      ascii   WqR:<o`
+106 0x000036e3 0x00000249 5   6    .gnu_debugdata      ascii   /RMHy
+107 0x00003740 0x000002a6 4   5    .gnu_debugdata      ascii   NT[$
+108 0x0000375a 0x000002c0 4   6    .gnu_debugdata      utf8    |[Ϗs
+109 0x0000377f 0x000002e5 5   9    .gnu_debugdata      utf8    ɀY䬍\b\t
+110 0x000037e1 0x00000347 4   5    .gnu_debugdata      ascii   ikcj
+111 0x0000381f 0x00000385 4   5    .gnu_debugdata      ascii   jdG<
+112 0x0000387e 0x000003e4 4   5    .gnu_debugdata      ascii   pPVc
+0x000027e0    1     16 sym.imp.__cxa_finalize
+0x00002800    1     16 sym.imp.__android_log_print
+0x00002890    1     16 sym.imp.__stack_chk_fail
+0x000027f0    1     16 sym.imp.get_tag_log_level
+0x00002810    1     16 sym.imp.get_timestamp
+0x00002830    1     16 sym.imp.getpid
+0x00002850    1     16 sym.imp.log_buffer_insert
+0x00002820    1     16 sym.imp.memset
+0x00002840    1     16 sym.imp.syscall
+0x000028a0    1     16 sym.imp.vsnprintf
+0x00002000    1     12 entry0
+0x000025ec   10    364 method.XtAdapter.handleEngineUpEvent__
+0x00002508    1     88 sym.XtAdapter::XtAdapter__
+0x00002870    1     16 sym.imp.loc_core::LocContext::getLocContext_char_const_
+0x00002880    1     16 sym.imp.izat_core::IzatAdapterBase::IzatAdapterBase_unsigned_long__loc_core::ContextBase__bool_
+0x000022f0   19    536 sym.setXtAdapterUserPref
+0x00002560    1     84 method.XtAdapter.setUserPreference_bool_
+0x00002860    1     16 sym.imp.operator_new_unsigned_long_
+0x000028b0    1     16 sym.imp.loc_util::MsgTask::sendMsg_loc_util::LocMsg_const__const
+0x000025b4    4     56 method.XtAdapter.setUserPreferenceSync_XtAdapter::Pref_
+0x00002014   19    576 sym.createXtAdapterInstance
+0x000028c0    1     16 sym.imp.izat_core::IzatAdapterBase::IzatAdapterBase__
+0x000028d0    1     16 sym.imp.operator_delete_void_
+0x00002010    1      4 entry.fini0
+0x00002254    3    156 sym.snprintf_char__unsigned_long_pass_object_size1__char_const__::_
+0x00002758    1     36 method.XtAdapter.XtAdapter__
+0x0000277c    1      4 method.loc_core::LocAdapterProxyBase.reportPositionEvent_UlpLocation__GpsLocationExtended__loc_sess_status__unsigned_int_
+0x00002780    1      4 method.SetUserPrefMsg.SetUserPrefMsg__
+0x00002784    4     60 method.SetUserPrefMsg.proc___const
+0x000027c0    1     20 section..plt

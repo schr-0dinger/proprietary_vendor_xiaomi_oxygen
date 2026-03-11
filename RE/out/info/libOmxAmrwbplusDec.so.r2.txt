@@ -1,0 +1,841 @@
+arch     arm
+baddr    0x0
+binsz    59803
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                          demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+49  0x0000adc4 0x0000adc4 GLOBAL FUNC 300      _ZN16COmxAmrwbplusDec10set_configEPv13OMX_INDEXTYPES0_                        COmxAmrwbplusDec::set_config(void*, OMX_INDEXTYPE, void*)
+50  0x0000727c 0x0000727c GLOBAL FUNC 616      _ZN16COmxAmrwbplusDec13frame_done_cbEP20OMX_BUFFERHEADERTYPEb                 COmxAmrwbplusDec::frame_done_cb(OMX_BUFFERHEADERTYPE*, bool)
+51  0x00009ca0 0x00009ca0 GLOBAL FUNC 228      _ZN16COmxAmrwbplusDec12post_commandEjjh                                       COmxAmrwbplusDec::post_command(unsigned int, unsigned int, unsigned char)
+52  0x00005040 0x00005040 GLOBAL FUNC 4        _ZN16COmxAmrwbplusDec13omx_cmd_queueD1Ev                                      COmxAmrwbplusDec::omx_cmd_queue::~omx_cmd_queue()
+53  0x00006b28 0x00006b28 GLOBAL FUNC 724      _ZN16COmxAmrwbplusDec15prepare_for_ebdEP20OMX_BUFFERHEADERTYPE                COmxAmrwbplusDec::prepare_for_ebd(OMX_BUFFERHEADERTYPE*)
+54  0x0000bd94 0x0000bd94 GLOBAL FUNC 816      _ZN16COmxAmrwbplusDec16use_input_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_jPh     COmxAmrwbplusDec::use_input_buffer(void*, OMX_BUFFERHEADERTYPE**, unsigned int, void*, unsigned int, unsigned char*)
+55  0x00005eb4 0x00005eb4 GLOBAL FUNC 1460     _ZN16COmxAmrwbplusDecC2Ev                                                     COmxAmrwbplusDec::COmxAmrwbplusDec()
+56  0x0000d2dc 0x0000d2dc GLOBAL FUNC 260      omx_amrwbplus_thread_create
+57  0x00005cf4 0x00005cf4 GLOBAL FUNC 448      _ZN16COmxAmrwbplusDec11post_outputEmmh                                        COmxAmrwbplusDec::post_output(unsigned long, unsigned long, unsigned char)
+58  0x0000506c 0x0000506c GLOBAL FUNC 148      _ZN16COmxAmrwbplusDec13omx_cmd_queue12insert_entryEmmh                        COmxAmrwbplusDec::omx_cmd_queue::insert_entry(unsigned long, unsigned long, unsigned char)
+59  0x00005100 0x00005100 GLOBAL FUNC 168      _ZN16COmxAmrwbplusDec13omx_cmd_queue9pop_entryEPmS1_Ph                        COmxAmrwbplusDec::omx_cmd_queue::pop_entry(unsigned long*, unsigned long*, unsigned char*)
+60  0x0000b3c8 0x0000b3c8 GLOBAL FUNC 540      _ZN16COmxAmrwbplusDec22allocate_output_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_j COmxAmrwbplusDec::allocate_output_buffer(void*, OMX_BUFFERHEADERTYPE**, unsigned int, void*, unsigned int)
+61  0x00005424 0x00005424 GLOBAL FUNC 96       _ZN16COmxAmrwbplusDec8in_sleepEv                                              COmxAmrwbplusDec::in_sleep()
+62  0x00005b38 0x00005b38 GLOBAL FUNC 444      _ZN16COmxAmrwbplusDec10post_inputEmmh                                         COmxAmrwbplusDec::post_input(unsigned long, unsigned long, unsigned char)
+63  0x0000ce68 0x0000ce68 GLOBAL FUNC 492      _ZN16COmxAmrwbplusDec16fill_this_bufferEPvP20OMX_BUFFERHEADERTYPE             COmxAmrwbplusDec::fill_this_buffer(void*, OMX_BUFFERHEADERTYPE*)
+64  0x00005660 0x00005660 GLOBAL FUNC 76       _ZN16COmxAmrwbplusDec20event_flush_completeEv                                 COmxAmrwbplusDec::event_flush_complete()
+65  0x0000e008 0x0000e008 GLOBAL OBJ  184      _ZTV16COmxAmrwbplusDec                                                        vtable for COmxAmrwbplusDec
+66  0x0000d618 0x0000d618 GLOBAL FUNC 88       omx_amrwbplus_post_msg
+67  0x000051a8 0x000051a8 GLOBAL FUNC 40       _ZN16COmxAmrwbplusDec13omx_cmd_queue10get_msg_idEPh                           COmxAmrwbplusDec::omx_cmd_queue::get_msg_id(unsigned char*)
+68  0x0000800c 0x0000800c GLOBAL FUNC 2860     _ZN16COmxAmrwbplusDec18send_command_proxyEPv15OMX_COMMANDTYPEjS0_             COmxAmrwbplusDec::send_command_proxy(void*, OMX_COMMANDTYPE, unsigned int, void*)
+69  0x00008b38 0x00008b38 GLOBAL FUNC 932      _ZN16COmxAmrwbplusDec19process_in_port_msgEPvh                                COmxAmrwbplusDec::process_in_port_msg(void*, unsigned char)
+70  0x0000b004 0x0000b004 GLOBAL FUNC 48       _ZN16COmxAmrwbplusDec24component_tunnel_requestEPvjS0_jP19OMX_TUNNELSETUPTYPE COmxAmrwbplusDec::component_tunnel_request(void*, unsigned int, void*, unsigned int, OMX_TUNNELSETUPTYPE*)
+71  0x00005eb4 0x00005eb4 GLOBAL FUNC 1460     _ZN16COmxAmrwbplusDecC1Ev                                                     COmxAmrwbplusDec::COmxAmrwbplusDec()
+72  0x00006ea4 0x00006ea4 GLOBAL FUNC 216      _ZN16COmxAmrwbplusDec15free_ion_bufferEPPv                                    COmxAmrwbplusDec::free_ion_buffer(void**)
+73  0x0000b034 0x0000b034 GLOBAL FUNC 364      _ZN16COmxAmrwbplusDec16alloc_ion_bufferEj                                     COmxAmrwbplusDec::alloc_ion_buffer(unsigned int)
+74  0x0000aef0 0x0000aef0 GLOBAL FUNC 256      _ZN16COmxAmrwbplusDec19get_extension_indexEPvPcP13OMX_INDEXTYPE               COmxAmrwbplusDec::get_extension_index(void*, char*, OMX_INDEXTYPE*)
+75  0x00005484 0x00005484 GLOBAL FUNC 92       _ZN16COmxAmrwbplusDec12in_th_wakeupEv                                         COmxAmrwbplusDec::in_th_wakeup()
+76  0x000056ac 0x000056ac GLOBAL FUNC 12       _ZN16COmxAmrwbplusDec16process_event_cbEPvh                                   COmxAmrwbplusDec::process_event_cb(void*, unsigned char)
+77  0x0000d168 0x0000d168 GLOBAL FUNC 52       _ZN16COmxAmrwbplusDec19component_role_enumEPvPhj                              COmxAmrwbplusDec::component_role_enum(void*, unsigned char*, unsigned int)
+78  0x00006f7c 0x00006f7c GLOBAL FUNC 240      _ZN16COmxAmrwbplusDec20audio_deregister_ionEPNS_9mmap_infoE                   COmxAmrwbplusDec::audio_deregister_ion(COmxAmrwbplusDec::mmap_info*)
+79  0x00009648 0x00009648 GLOBAL FUNC 636      _ZN16COmxAmrwbplusDec23execute_input_omx_flushEv                              COmxAmrwbplusDec::execute_input_omx_flush()
+80  0x00006468 0x00006468 GLOBAL FUNC 612      _ZN16COmxAmrwbplusDecD2Ev                                                     COmxAmrwbplusDec::~COmxAmrwbplusDec()
+81  0x000098c4 0x000098c4 GLOBAL FUNC 640      _ZN16COmxAmrwbplusDec14component_initEPc                                      COmxAmrwbplusDec::component_init(char*)
+82  0x0000b1a0 0x0000b1a0 GLOBAL FUNC 552      _ZN16COmxAmrwbplusDec21allocate_input_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_j  COmxAmrwbplusDec::allocate_input_buffer(void*, OMX_BUFFERHEADERTYPE**, unsigned int, void*, unsigned int)
+83  0x00005014 0x00005014 GLOBAL FUNC 44       get_omx_component_factory_fn
+84  0x00009b8c 0x00009b8c GLOBAL FUNC 276      _ZN16COmxAmrwbplusDec12send_commandEPv15OMX_COMMANDTYPEjS0_                   COmxAmrwbplusDec::send_command(void*, OMX_COMMANDTYPE, unsigned int, void*)
+85  0x00005348 0x00005348 GLOBAL FUNC 92       _ZN16COmxAmrwbplusDec14event_completeEv                                       COmxAmrwbplusDec::event_complete()
+86  0x0000d0b4 0x0000d0b4 GLOBAL FUNC 132      _ZN16COmxAmrwbplusDec16component_deinitEPv                                    COmxAmrwbplusDec::component_deinit(void*)
+87  0x000071b8 0x000071b8 GLOBAL FUNC 196      _ZN16COmxAmrwbplusDec9flush_ackEv                                             COmxAmrwbplusDec::flush_ack()
+88  0x00006468 0x00006468 GLOBAL FUNC 612      _ZN16COmxAmrwbplusDecD1Ev                                                     COmxAmrwbplusDec::~COmxAmrwbplusDec()
+89  0x0000d4a4 0x0000d4a4 GLOBAL FUNC 260      omx_amrwbplus_event_thread_create
+90  0x0000d3e0 0x0000d3e0 GLOBAL FUNC 196      omx_amrwbplus_msg
+91  0x0000a8ac 0x0000a8ac GLOBAL FUNC 1040     _ZN16COmxAmrwbplusDec13set_parameterEPv13OMX_INDEXTYPES0_                     COmxAmrwbplusDec::set_parameter(void*, OMX_INDEXTYPE, void*)
+92  0x0000d138 0x0000d138 GLOBAL FUNC 48       _ZN16COmxAmrwbplusDec13use_EGL_imageEPvPP20OMX_BUFFERHEADERTYPEjS0_S0_        COmxAmrwbplusDec::use_EGL_image(void*, OMX_BUFFERHEADERTYPE**, unsigned int, void*, void*)
+93  0x0000b9bc 0x0000b9bc GLOBAL FUNC 984      _ZN16COmxAmrwbplusDec10use_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_jPh           COmxAmrwbplusDec::use_buffer(void*, OMX_BUFFERHEADERTYPE**, unsigned int, void*, unsigned int, unsigned char*)
+94  0x000055c0 0x000055c0 GLOBAL FUNC 92       _ZN16COmxAmrwbplusDec13out_th_wakeupEv                                        COmxAmrwbplusDec::out_th_wakeup()
+95  0x000056b8 0x000056b8 GLOBAL FUNC 1152     _ZN16COmxAmrwbplusDec14process_eventsEPS_                                     COmxAmrwbplusDec::process_events(COmxAmrwbplusDec*)
+96  0x00006dfc 0x00006dfc GLOBAL FUNC 168      _ZN16COmxAmrwbplusDec18audio_register_ionEPNS_9mmap_infoE                     COmxAmrwbplusDec::audio_register_ion(COmxAmrwbplusDec::mmap_info*)
+97  0x0000c3e0 0x0000c3e0 GLOBAL FUNC 68       _ZN16COmxAmrwbplusDec19search_input_bufhdrEP20OMX_BUFFERHEADERTYPE            COmxAmrwbplusDec::search_input_bufhdr(OMX_BUFFERHEADERTYPE*)
+98  0x0000d5cc 0x0000d5cc GLOBAL FUNC 76       omx_amrwbplus_thread_stop
+99  0x000053a4 0x000053a4 GLOBAL FUNC 128      _ZN16COmxAmrwbplusDec11in_th_sleepEv                                          COmxAmrwbplusDec::in_th_sleep()
+100 0x00009e24 0x00009e24 GLOBAL FUNC 68       _ZN16COmxAmrwbplusDec12release_doneEj                                         COmxAmrwbplusDec::release_done(unsigned int)
+101 0x00005044 0x00005044 GLOBAL FUNC 40       _ZN16COmxAmrwbplusDec13omx_cmd_queueC2Ev                                      COmxAmrwbplusDec::omx_cmd_queue::omx_cmd_queue()
+102 0x00007b8c 0x00007b8c GLOBAL FUNC 516      _ZN16COmxAmrwbplusDec24execute_output_omx_flushEv                             COmxAmrwbplusDec::execute_output_omx_flush()
+103 0x00006a4c 0x00006a4c GLOBAL FUNC 36       _ZN16COmxAmrwbplusDecD0Ev                                                     COmxAmrwbplusDec::~COmxAmrwbplusDec()
+104 0x0000c468 0x0000c468 GLOBAL FUNC 1740     _ZN16COmxAmrwbplusDec11free_bufferEPvjP20OMX_BUFFERHEADERTYPE                 COmxAmrwbplusDec::free_buffer(void*, unsigned int, OMX_BUFFERHEADERTYPE*)
+105 0x0000706c 0x0000706c GLOBAL FUNC 332      _ZN16COmxAmrwbplusDec14buffer_done_cbEP20OMX_BUFFERHEADERTYPEb                COmxAmrwbplusDec::buffer_done_cb(OMX_BUFFERHEADERTYPE*, bool)
+106 0x0000b5e4 0x0000b5e4 GLOBAL FUNC 984      _ZN16COmxAmrwbplusDec15allocate_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_j        COmxAmrwbplusDec::allocate_buffer(void*, OMX_BUFFERHEADERTYPE**, unsigned int, void*, unsigned int)
+107 0x0000c0c4 0x0000c0c4 GLOBAL FUNC 796      _ZN16COmxAmrwbplusDec17use_output_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_jPh    COmxAmrwbplusDec::use_output_buffer(void*, OMX_BUFFERHEADERTYPE**, unsigned int, void*, unsigned int, unsigned char*)
+108 0x00009b44 0x00009b44 GLOBAL FUNC 72       _ZN16COmxAmrwbplusDec21get_component_versionEPvPcP15OMX_VERSIONTYPES3_PA128_h COmxAmrwbplusDec::get_component_version(void*, char*, OMX_VERSIONTYPE*, OMX_VERSIONTYPE*, unsigned char (*) [128])
+109 0x00009d84 0x00009d84 GLOBAL FUNC 160      _ZN16COmxAmrwbplusDec13allocate_doneEv                                        COmxAmrwbplusDec::allocate_done()
+110 0x0000d19c 0x0000d19c GLOBAL FUNC 320      _ZN16COmxAmrwbplusDec16is_platform_8960Ev                                     COmxAmrwbplusDec::is_platform_8960()
+111 0x0000cc6c 0x0000cc6c GLOBAL FUNC 448      _ZN16COmxAmrwbplusDec17empty_this_bufferEPvP20OMX_BUFFERHEADERTYPE            COmxAmrwbplusDec::empty_this_buffer(void*, OMX_BUFFERHEADERTYPE*)
+112 0x00006a70 0x00006a70 GLOBAL FUNC 92       _ZN16COmxAmrwbplusDec9aio_writeEP17msm_audio_aio_buf                          COmxAmrwbplusDec::aio_write(msm_audio_aio_buf*)
+113 0x0000aff0 0x0000aff0 GLOBAL FUNC 20       _ZN16COmxAmrwbplusDec9get_stateEPvP13OMX_STATETYPE                            COmxAmrwbplusDec::get_state(void*, OMX_STATETYPE*)
+114 0x00005044 0x00005044 GLOBAL FUNC 40       _ZN16COmxAmrwbplusDec13omx_cmd_queueC1Ev                                      COmxAmrwbplusDec::omx_cmd_queue::omx_cmd_queue()
+115 0x00009e68 0x00009e68 GLOBAL FUNC 1632     _ZN16COmxAmrwbplusDec17execute_omx_flushEjb                                   COmxAmrwbplusDec::execute_omx_flush(unsigned int, bool)
+117 0x000066cc 0x000066cc GLOBAL FUNC 896      _ZN16COmxAmrwbplusDec14deinit_decoderEv                                       COmxAmrwbplusDec::deinit_decoder()
+118 0x0000c424 0x0000c424 GLOBAL FUNC 68       _ZN16COmxAmrwbplusDec20search_output_bufhdrEP20OMX_BUFFERHEADERTYPE           COmxAmrwbplusDec::search_output_bufhdr(OMX_BUFFERHEADERTYPE*)
+119 0x000051d0 0x000051d0 GLOBAL FUNC 376      _ZN16COmxAmrwbplusDec14wait_for_eventEv                                       COmxAmrwbplusDec::wait_for_event()
+120 0x00007d90 0x00007d90 GLOBAL FUNC 636      _ZN16COmxAmrwbplusDec19process_command_msgEPvh                                COmxAmrwbplusDec::process_command_msg(void*, unsigned char)
+121 0x00006acc 0x00006acc GLOBAL FUNC 92       _ZN16COmxAmrwbplusDec8aio_readEP17msm_audio_aio_buf                           COmxAmrwbplusDec::aio_read(msm_audio_aio_buf*)
+122 0x0000d5a8 0x0000d5a8 GLOBAL FUNC 36       omx_amrwbplus_events
+123 0x0000acbc 0x0000acbc GLOBAL FUNC 264      _ZN16COmxAmrwbplusDec10get_configEPv13OMX_INDEXTYPES0_                        COmxAmrwbplusDec::get_config(void*, OMX_INDEXTYPE, void*)
+124 0x00005040 0x00005040 GLOBAL FUNC 4        _ZN16COmxAmrwbplusDec13omx_cmd_queueD2Ev                                      COmxAmrwbplusDec::omx_cmd_queue::~omx_cmd_queue()
+125 0x0000d090 0x0000d090 GLOBAL FUNC 36       _ZN16COmxAmrwbplusDec13set_callbacksEPvP16OMX_CALLBACKTYPES0_                 COmxAmrwbplusDec::set_callbacks(void*, OMX_CALLBACKTYPE*, void*)
+126 0x000074e4 0x000074e4 GLOBAL FUNC 1020     _ZN16COmxAmrwbplusDec20process_out_port_msgEPvh                               COmxAmrwbplusDec::process_out_port_msg(void*, unsigned char)
+127 0x0000561c 0x0000561c GLOBAL FUNC 68       _ZN16COmxAmrwbplusDec20wait_for_flush_eventEv                                 COmxAmrwbplusDec::wait_for_flush_event()
+128 0x000078e0 0x000078e0 GLOBAL FUNC 684      _ZN16COmxAmrwbplusDec22fill_this_buffer_proxyEPvP20OMX_BUFFERHEADERTYPE       COmxAmrwbplusDec::fill_this_buffer_proxy(void*, OMX_BUFFERHEADERTYPE*)
+129 0x000054e0 0x000054e0 GLOBAL FUNC 128      _ZN16COmxAmrwbplusDec12out_th_sleepEv                                         COmxAmrwbplusDec::out_th_sleep()
+130 0x0000a4c8 0x0000a4c8 GLOBAL FUNC 996      _ZN16COmxAmrwbplusDec13get_parameterEPv13OMX_INDEXTYPES0_                     COmxAmrwbplusDec::get_parameter(void*, OMX_INDEXTYPE, void*)
+131 0x00008edc 0x00008edc GLOBAL FUNC 1900     _ZN16COmxAmrwbplusDec23empty_this_buffer_proxyEPvP20OMX_BUFFERHEADERTYPE      COmxAmrwbplusDec::empty_this_buffer_proxy(void*, OMX_BUFFERHEADERTYPE*)
+132 0x00005560 0x00005560 GLOBAL FUNC 96       _ZN16COmxAmrwbplusDec9out_sleepEv                                             COmxAmrwbplusDec::out_sleep()
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000238    0x18 0x00000238    0x18 -r-- NOTE        .note.android.ident
+2   0x00000250    0x20 0x00000250    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270   0xc78 0x00000270   0xc78 -r-- DYNSYM      .dynsym
+4   0x00000ee8   0x10a 0x00000ee8   0x10a -r-- GNU_VERSYM  .gnu.version
+5   0x00000ff4    0x40 0x00000ff4    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00001038   0x234 0x00001038   0x234 -r-- GNU_HASH    .gnu.hash
+7   0x0000126c  0x1297 0x0000126c  0x1297 -r-- STRTAB      .dynstr
+8   0x00002508    0xeb 0x00002508    0xeb -r-- ----        .rela.dyn
+9   0x000025f8    0x10 0x000025f8    0x10 -r-- ----        .relr.dyn
+10  0x00002608   0x768 0x00002608   0x768 -r-- RELA        .rela.plt
+11  0x00002d70  0x11f5 0x00002d70  0x11f5 -r-- PROGBITS    .rodata
+12  0x00003f68   0x2ac 0x00003f68   0x2ac -r-- PROGBITS    .eh_frame_hdr
+13  0x00004218   0xb84 0x00004218   0xb84 -r-- PROGBITS    .eh_frame
+14  0x00005000  0x8670 0x00005000  0x8670 -r-x PROGBITS    .text
+15  0x0000d670   0x510 0x0000d670   0x510 -r-x PROGBITS    .plt
+16  0x0000e000    0xc0 0x0000e000    0xc0 -rw- PROGBITS    .data.rel.ro
+17  0x0000e0c0    0x10 0x0000e0c0    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x0000e0d0   0x1e0 0x0000e0d0   0x1e0 -rw- DYNAMIC     .dynamic
+19  0x0000e2b0    0x38 0x0000e2b0    0x38 -rw- PROGBITS    .got
+20  0x0000e2e8   0x290 0x0000e2e8   0x290 -rw- PROGBITS    .got.plt
+21  0x0000e578    0xeb 0x00000000    0xeb ---- STRTAB      .shstrtab
+22  0x0000e663   0x338 0x00000000   0x338 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x00000262 0x00000262 6   8    .note.gnu.build-id  utf8    \r:I:\bа
+3   0x000010c8 0x000010c8 20  84   .gnu.hash           utf32le 139>CHJKQTV[]chmruw{
+4   0x00001172 0x00001172 4   6    .gnu.hash           utf8    \npëB
+5   0x0000118e 0x0000118e 4   5    .gnu.hash           ascii   zdb~
+6   0x00001197 0x00001197 4   5    .gnu.hash           ascii   ue<C
+7   0x000011e9 0x000011e9 6   8    .gnu.hash           utf8    Z|pһ\rV
+8   0x000011fa 0x000011fa 4   5    .gnu.hash           ascii   l,\fp
+9   0x00001200 0x00001200 7   8    .gnu.hash           ascii   r\nwbD m
+10  0x00001228 0x00001228 4   5    .gnu.hash           ascii   %Rb$
+11  0x00001233 0x00001233 5   6    .gnu.hash           ascii   *nq)e
+12  0x00001246 0x00001246 4   5    .gnu.hash           ascii   8x2H
+13  0x0000126d 0x0000126d 14  15   .dynstr             ascii   __cxa_finalize
+14  0x0000127c 0x0000127c 54  55   .dynstr             ascii   _ZN16COmxAmrwbplusDec10get_configEPv13OMX_INDEXTYPES0_
+15  0x000012b3 0x000012b3 37  38   .dynstr             ascii   _ZN16COmxAmrwbplusDec10post_inputEmmh
+16  0x000012d9 0x000012d9 54  55   .dynstr             ascii   _ZN16COmxAmrwbplusDec10set_configEPv13OMX_INDEXTYPES0_
+17  0x00001310 0x00001310 67  68   .dynstr             ascii   _ZN16COmxAmrwbplusDec10use_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_jPh
+18  0x00001354 0x00001354 61  62   .dynstr             ascii   _ZN16COmxAmrwbplusDec11free_bufferEPvjP20OMX_BUFFERHEADERTYPE
+19  0x00001392 0x00001392 36  37   .dynstr             ascii   _ZN16COmxAmrwbplusDec11in_th_sleepEv
+20  0x000013b7 0x000013b7 38  39   .dynstr             ascii   _ZN16COmxAmrwbplusDec11post_outputEmmh
+21  0x000013de 0x000013de 37  38   .dynstr             ascii   _ZN16COmxAmrwbplusDec12in_th_wakeupEv
+22  0x00001404 0x00001404 37  38   .dynstr             ascii   _ZN16COmxAmrwbplusDec12out_th_sleepEv
+23  0x0000142a 0x0000142a 39  40   .dynstr             ascii   _ZN16COmxAmrwbplusDec12post_commandEjjh
+24  0x00001452 0x00001452 37  38   .dynstr             ascii   _ZN16COmxAmrwbplusDec12release_doneEj
+25  0x00001478 0x00001478 59  60   .dynstr             ascii   _ZN16COmxAmrwbplusDec12send_commandEPv15OMX_COMMANDTYPEjS0_
+26  0x000014b4 0x000014b4 38  39   .dynstr             ascii   _ZN16COmxAmrwbplusDec13allocate_doneEv
+27  0x000014db 0x000014db 61  62   .dynstr             ascii   _ZN16COmxAmrwbplusDec13frame_done_cbEP20OMX_BUFFERHEADERTYPEb
+28  0x00001519 0x00001519 57  58   .dynstr             ascii   _ZN16COmxAmrwbplusDec13get_parameterEPv13OMX_INDEXTYPES0_
+29  0x00001553 0x00001553 51  52   .dynstr             ascii   _ZN16COmxAmrwbplusDec13omx_cmd_queue10get_msg_idEPh
+30  0x00001587 0x00001587 54  55   .dynstr             ascii   _ZN16COmxAmrwbplusDec13omx_cmd_queue12insert_entryEmmh
+31  0x000015be 0x000015be 54  55   .dynstr             ascii   _ZN16COmxAmrwbplusDec13omx_cmd_queue9pop_entryEPmS1_Ph
+32  0x000015f5 0x000015f5 40  41   .dynstr             ascii   _ZN16COmxAmrwbplusDec13omx_cmd_queueC1Ev
+33  0x0000161e 0x0000161e 40  41   .dynstr             ascii   _ZN16COmxAmrwbplusDec13omx_cmd_queueC2Ev
+34  0x00001647 0x00001647 40  41   .dynstr             ascii   _ZN16COmxAmrwbplusDec13omx_cmd_queueD1Ev
+35  0x00001670 0x00001670 40  41   .dynstr             ascii   _ZN16COmxAmrwbplusDec13omx_cmd_queueD2Ev
+36  0x00001699 0x00001699 38  39   .dynstr             ascii   _ZN16COmxAmrwbplusDec13out_th_wakeupEv
+37  0x000016c0 0x000016c0 61  62   .dynstr             ascii   _ZN16COmxAmrwbplusDec13set_callbacksEPvP16OMX_CALLBACKTYPES0_
+38  0x000016fe 0x000016fe 57  58   .dynstr             ascii   _ZN16COmxAmrwbplusDec13set_parameterEPv13OMX_INDEXTYPES0_
+39  0x00001738 0x00001738 70  71   .dynstr             ascii   _ZN16COmxAmrwbplusDec13use_EGL_imageEPvPP20OMX_BUFFERHEADERTYPEjS0_S0_
+40  0x0000177f 0x0000177f 62  63   .dynstr             ascii   _ZN16COmxAmrwbplusDec14buffer_done_cbEP20OMX_BUFFERHEADERTYPEb
+41  0x000017be 0x000017be 40  41   .dynstr             ascii   _ZN16COmxAmrwbplusDec14component_initEPc
+42  0x000017e7 0x000017e7 39  40   .dynstr             ascii   _ZN16COmxAmrwbplusDec14deinit_decoderEv
+43  0x0000180f 0x0000180f 39  40   .dynstr             ascii   _ZN16COmxAmrwbplusDec14event_completeEv
+44  0x00001837 0x00001837 41  42   .dynstr             ascii   _ZN16COmxAmrwbplusDec14process_eventsEPS_
+45  0x00001861 0x00001861 39  40   .dynstr             ascii   _ZN16COmxAmrwbplusDec14wait_for_eventEv
+46  0x00001889 0x00001889 70  71   .dynstr             ascii   _ZN16COmxAmrwbplusDec15allocate_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_j
+47  0x000018d0 0x000018d0 42  43   .dynstr             ascii   _ZN16COmxAmrwbplusDec15free_ion_bufferEPPv
+48  0x000018fb 0x000018fb 62  63   .dynstr             ascii   _ZN16COmxAmrwbplusDec15prepare_for_ebdEP20OMX_BUFFERHEADERTYPE
+49  0x0000193a 0x0000193a 41  42   .dynstr             ascii   _ZN16COmxAmrwbplusDec16alloc_ion_bufferEj
+50  0x00001964 0x00001964 42  43   .dynstr             ascii   _ZN16COmxAmrwbplusDec16component_deinitEPv
+51  0x0000198f 0x0000198f 65  66   .dynstr             ascii   _ZN16COmxAmrwbplusDec16fill_this_bufferEPvP20OMX_BUFFERHEADERTYPE
+52  0x000019d1 0x000019d1 41  42   .dynstr             ascii   _ZN16COmxAmrwbplusDec16is_platform_8960Ev
+53  0x000019fb 0x000019fb 43  44   .dynstr             ascii   _ZN16COmxAmrwbplusDec16process_event_cbEPvh
+54  0x00001a27 0x00001a27 73  74   .dynstr             ascii   _ZN16COmxAmrwbplusDec16use_input_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_jPh
+55  0x00001a71 0x00001a71 66  67   .dynstr             ascii   _ZN16COmxAmrwbplusDec17empty_this_bufferEPvP20OMX_BUFFERHEADERTYPE
+56  0x00001ab4 0x00001ab4 43  44   .dynstr             ascii   _ZN16COmxAmrwbplusDec17execute_omx_flushEjb
+57  0x00001ae0 0x00001ae0 74  75   .dynstr             ascii   _ZN16COmxAmrwbplusDec17use_output_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_jPh
+58  0x00001b2b 0x00001b2b 57  58   .dynstr             ascii   _ZN16COmxAmrwbplusDec18audio_register_ionEPNS_9mmap_infoE
+59  0x00001b65 0x00001b65 65  66   .dynstr             ascii   _ZN16COmxAmrwbplusDec18send_command_proxyEPv15OMX_COMMANDTYPEjS0_
+60  0x00001ba7 0x00001ba7 48  49   .dynstr             ascii   _ZN16COmxAmrwbplusDec19component_role_enumEPvPhj
+61  0x00001bd8 0x00001bd8 63  64   .dynstr             ascii   _ZN16COmxAmrwbplusDec19get_extension_indexEPvPcP13OMX_INDEXTYPE
+62  0x00001c18 0x00001c18 46  47   .dynstr             ascii   _ZN16COmxAmrwbplusDec19process_command_msgEPvh
+63  0x00001c47 0x00001c47 46  47   .dynstr             ascii   _ZN16COmxAmrwbplusDec19process_in_port_msgEPvh
+64  0x00001c76 0x00001c76 66  67   .dynstr             ascii   _ZN16COmxAmrwbplusDec19search_input_bufhdrEP20OMX_BUFFERHEADERTYPE
+65  0x00001cb9 0x00001cb9 59  60   .dynstr             ascii   _ZN16COmxAmrwbplusDec20audio_deregister_ionEPNS_9mmap_infoE
+66  0x00001cf5 0x00001cf5 45  46   .dynstr             ascii   _ZN16COmxAmrwbplusDec20event_flush_completeEv
+67  0x00001d23 0x00001d23 47  48   .dynstr             ascii   _ZN16COmxAmrwbplusDec20process_out_port_msgEPvh
+68  0x00001d53 0x00001d53 67  68   .dynstr             ascii   _ZN16COmxAmrwbplusDec20search_output_bufhdrEP20OMX_BUFFERHEADERTYPE
+69  0x00001d97 0x00001d97 45  46   .dynstr             ascii   _ZN16COmxAmrwbplusDec20wait_for_flush_eventEv
+70  0x00001dc5 0x00001dc5 76  77   .dynstr             ascii   _ZN16COmxAmrwbplusDec21allocate_input_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_j
+71  0x00001e12 0x00001e12 77  78   .dynstr             ascii   _ZN16COmxAmrwbplusDec21get_component_versionEPvPcP15OMX_VERSIONTYPES3_PA128_h
+72  0x00001e60 0x00001e60 77  78   .dynstr             ascii   _ZN16COmxAmrwbplusDec22allocate_output_bufferEPvPP20OMX_BUFFERHEADERTYPEjS0_j
+73  0x00001eae 0x00001eae 71  72   .dynstr             ascii   _ZN16COmxAmrwbplusDec22fill_this_buffer_proxyEPvP20OMX_BUFFERHEADERTYPE
+74  0x00001ef6 0x00001ef6 72  73   .dynstr             ascii   _ZN16COmxAmrwbplusDec23empty_this_buffer_proxyEPvP20OMX_BUFFERHEADERTYPE
+75  0x00001f3f 0x00001f3f 48  49   .dynstr             ascii   _ZN16COmxAmrwbplusDec23execute_input_omx_flushEv
+76  0x00001f70 0x00001f70 77  78   .dynstr             ascii   _ZN16COmxAmrwbplusDec24component_tunnel_requestEPvjS0_jP19OMX_TUNNELSETUPTYPE
+77  0x00001fbe 0x00001fbe 49  50   .dynstr             ascii   _ZN16COmxAmrwbplusDec24execute_output_omx_flushEv
+78  0x00001ff0 0x00001ff0 51  52   .dynstr             ascii   _ZN16COmxAmrwbplusDec8aio_readEP17msm_audio_aio_buf
+79  0x00002024 0x00002024 32  33   .dynstr             ascii   _ZN16COmxAmrwbplusDec8in_sleepEv
+80  0x00002045 0x00002045 52  53   .dynstr             ascii   _ZN16COmxAmrwbplusDec9aio_writeEP17msm_audio_aio_buf
+81  0x0000207a 0x0000207a 33  34   .dynstr             ascii   _ZN16COmxAmrwbplusDec9flush_ackEv
+82  0x0000209c 0x0000209c 50  51   .dynstr             ascii   _ZN16COmxAmrwbplusDec9get_stateEPvP13OMX_STATETYPE
+83  0x000020cf 0x000020cf 33  34   .dynstr             ascii   _ZN16COmxAmrwbplusDec9out_sleepEv
+84  0x000020f1 0x000020f1 25  26   .dynstr             ascii   _ZN16COmxAmrwbplusDecC1Ev
+85  0x0000210b 0x0000210b 25  26   .dynstr             ascii   _ZN16COmxAmrwbplusDecC2Ev
+86  0x00002125 0x00002125 25  26   .dynstr             ascii   _ZN16COmxAmrwbplusDecD0Ev
+87  0x0000213f 0x0000213f 25  26   .dynstr             ascii   _ZN16COmxAmrwbplusDecD1Ev
+88  0x00002159 0x00002159 25  26   .dynstr             ascii   _ZN16COmxAmrwbplusDecD2Ev
+89  0x00002173 0x00002173 45  46   .dynstr             ascii   _ZN3MapIP20OMX_BUFFERHEADERTYPES1_E5eraseES1_
+90  0x000021a1 0x000021a1 22  23   .dynstr             ascii   _ZTV16COmxAmrwbplusDec
+91  0x000021b8 0x000021b8 6   7    .dynstr             ascii   _ZdlPv
+92  0x000021bf 0x000021bf 5   6    .dynstr             ascii   _Znwm
+93  0x000021c5 0x000021c5 19  20   .dynstr             ascii   __android_log_print
+94  0x000021d9 0x000021d9 7   8    .dynstr             ascii   __errno
+95  0x000021e1 0x000021e1 8   9    .dynstr             ascii   __open_2
+96  0x000021ea 0x000021ea 16  17   .dynstr             ascii   __stack_chk_fail
+97  0x000021fb 0x000021fb 13  14   .dynstr             ascii   __strlcpy_chk
+98  0x00002209 0x00002209 6   7    .dynstr             ascii   calloc
+99  0x00002210 0x00002210 13  14   .dynstr             ascii   clock_gettime
+100 0x0000221e 0x0000221e 5   6    .dynstr             ascii   close
+101 0x00002224 0x00002224 6   7    .dynstr             ascii   fclose
+102 0x0000222b 0x0000222b 5   6    .dynstr             ascii   fgets
+103 0x00002231 0x00002231 5   6    .dynstr             ascii   fopen
+104 0x00002237 0x00002237 4   5    .dynstr             ascii   free
+105 0x0000223c 0x0000223c 5   6    .dynstr             ascii   fsync
+106 0x00002242 0x00002242 28  29   .dynstr             ascii   get_omx_component_factory_fn
+107 0x0000225f 0x0000225f 5   6    .dynstr             ascii   ioctl
+108 0x00002265 0x00002265 6   7    .dynstr             ascii   memcpy
+109 0x0000226c 0x0000226c 6   7    .dynstr             ascii   memset
+110 0x00002273 0x00002273 4   5    .dynstr             ascii   mmap
+111 0x00002278 0x00002278 6   7    .dynstr             ascii   munmap
+112 0x0000227f 0x0000227f 33  34   .dynstr             ascii   omx_amrwbplus_event_thread_create
+113 0x000022a1 0x000022a1 22  23   .dynstr             ascii   omx_amrwbplus_post_msg
+114 0x000022b8 0x000022b8 27  28   .dynstr             ascii   omx_amrwbplus_thread_create
+115 0x000022d4 0x000022d4 25  26   .dynstr             ascii   omx_amrwbplus_thread_stop
+116 0x000022ee 0x000022ee 20  21   .dynstr             ascii   pthread_cond_destroy
+117 0x00002303 0x00002303 17  18   .dynstr             ascii   pthread_cond_init
+118 0x00002315 0x00002315 19  20   .dynstr             ascii   pthread_cond_signal
+119 0x00002329 0x00002329 22  23   .dynstr             ascii   pthread_cond_timedwait
+120 0x00002340 0x00002340 17  18   .dynstr             ascii   pthread_cond_wait
+121 0x00002352 0x00002352 21  22   .dynstr             ascii   pthread_condattr_init
+122 0x00002368 0x00002368 25  26   .dynstr             ascii   pthread_condattr_setclock
+123 0x00002382 0x00002382 21  22   .dynstr             ascii   pthread_mutex_destroy
+124 0x00002398 0x00002398 18  19   .dynstr             ascii   pthread_mutex_init
+125 0x000023ab 0x000023ab 18  19   .dynstr             ascii   pthread_mutex_lock
+126 0x000023be 0x000023be 20  21   .dynstr             ascii   pthread_mutex_unlock
+127 0x000023d3 0x000023d3 25  26   .dynstr             ascii   pthread_mutexattr_destroy
+128 0x000023ed 0x000023ed 22  23   .dynstr             ascii   pthread_mutexattr_init
+129 0x00002404 0x00002404 11  12   .dynstr             ascii   sem_destroy
+130 0x00002410 0x00002410 8   9    .dynstr             ascii   sem_init
+131 0x00002419 0x00002419 8   9    .dynstr             ascii   sem_post
+132 0x00002422 0x00002422 8   9    .dynstr             ascii   sem_wait
+133 0x0000242b 0x0000242b 10  11   .dynstr             ascii   strcasestr
+134 0x00002436 0x00002436 6   7    .dynstr             ascii   strcmp
+135 0x0000243d 0x0000243d 8   9    .dynstr             ascii   strerror
+136 0x00002446 0x00002446 7   8    .dynstr             ascii   strncmp
+137 0x0000244e 0x0000244e 6   7    .dynstr             ascii   usleep
+138 0x00002455 0x00002455 20  21   .dynstr             ascii   omx_amrwbplus_events
+139 0x0000246a 0x0000246a 17  18   .dynstr             ascii   omx_amrwbplus_msg
+140 0x0000247c 0x0000247c 4   5    .dynstr             ascii   pipe
+141 0x00002481 0x00002481 14  15   .dynstr             ascii   pthread_create
+142 0x00002490 0x00002490 12  13   .dynstr             ascii   pthread_join
+143 0x0000249d 0x0000249d 4   5    .dynstr             ascii   read
+144 0x000024a2 0x000024a2 5   6    .dynstr             ascii   write
+145 0x000024a8 0x000024a8 9   10   .dynstr             ascii   liblog.so
+146 0x000024b2 0x000024b2 6   7    .dynstr             ascii   LIBLOG
+147 0x000024b9 0x000024b9 7   8    .dynstr             ascii   libc.so
+148 0x000024c1 0x000024c1 4   5    .dynstr             ascii   LIBC
+149 0x000024c6 0x000024c6 11  12   .dynstr             ascii   libutils.so
+150 0x000024d2 0x000024d2 9   10   .dynstr             ascii   libc++.so
+151 0x000024dc 0x000024dc 7   8    .dynstr             ascii   libm.so
+152 0x000024e4 0x000024e4 8   9    .dynstr             ascii   libdl.so
+153 0x000024ed 0x000024ed 21  22   .dynstr             ascii   libOmxAmrwbplusDec.so
+154 0x00002508 0x00002508 4   5    .rela.dyn           ascii   APS2
+155 0x00002e28 0x00002e28 4   5    .rodata             ascii   z>gu
+156 0x00002e40 0x00002e40 38  39   .rodata             ascii   sError,[%s][%p]invalid use buf hdr[%p]
+157 0x00002e67 0x00002e67 18  19   .rodata             ascii   /dev/msm_amrwbplus
+158 0x00002e7a 0x00002e7a 35  36   .rodata             ascii   \n Error in Unmapping the buffer %p\n
+159 0x00002e9e 0x00002e9e 17  18   .rodata             ascii   dec_num_il_in_buf
+160 0x00002eb0 0x00002eb0 37  38   .rodata             ascii   %s:message pipe read n=%lu err=0x%8x\n
+161 0x00002ed6 0x00002ed6 15  16   .rodata             ascii   QC_AMRWBPLUSDEC
+162 0x00002ee6 0x00002ee6 27  28   .rodata             ascii   ERROR!!! Command Queue Full
+163 0x00002f02 0x00002f02 81  82   .rodata             ascii   Received less buffer with no pcm samples or at flush               data_len - %d\n
+164 0x00002f54 0x00002f54 27  28   .rodata             ascii   ERROR:OUT-->Invalid Id[%d]\n
+165 0x00002f70 0x00002f70 12  13   .rodata             ascii   EVENT_THREAD
+166 0x00002f7d 0x00002f7d 34  35   .rodata             ascii   SCP-->Enabling invalid port ID[%d]
+167 0x00002fa0 0x00002fa0 27  28   .rodata             ascii   Set Param in Invalid State\n
+168 0x00002fbc 0x00002fbc 17  18   .rodata             ascii   unknown param %d\n
+169 0x00002fce 0x00002fce 27  28   .rodata             ascii   ION_IOC_SHARE ioctl failed\n
+170 0x00002fea 0x00002fea 45  46   .rodata             ascii   Warning: rxed deInit, not in LOADED state[%d]
+171 0x00003018 0x00003018 24  25   .rodata             ascii   ion device open failed \n
+172 0x00003031 0x00003031 46  47   .rodata             ascii   ERROR!!! COMMAND THREAD failed to get created\n
+173 0x00003060 0x00003060 31  32   .rodata             ascii   set_parameter: Sampling rate %u
+174 0x00003080 0x00003080 19  20   .rodata             ascii   dec_num_drv_out_buf
+175 0x00003094 0x00003094 34  35   .rodata             ascii   FLush:ioctl flush failed errno=%d\n
+176 0x000030b7 0x000030b7 38  39   .rodata             ascii   set_parameter: OMX_IndexParamAudioPcm\n
+177 0x000030de 0x000030de 37  38   .rodata             ascii   Get Extension Index in Invalid State\n
+178 0x00003104 0x00003104 34  35   .rodata             ascii   OMX.Qualcomm.index.audio.sessionId
+179 0x00003127 0x00003127 38  39   .rodata             ascii   Error: Invalid Port Index received %d\n
+180 0x0000314e 0x0000314e 30  31   .rodata             ascii   %s: Input buffer count is zero
+181 0x0000316d 0x0000316d 31  32   .rodata             ascii   %s: Output buffer count is zero
+182 0x0000318d 0x0000318d 53  54   .rodata             ascii   Insufficient memory to initialise condition variable\n
+183 0x000031c3 0x000031c3 52  53   .rodata             ascii   %s[%p]W-D, Buf, DEREG-ION,fd[%d]         ion-buf[%p]
+184 0x000031f8 0x000031f8 44  45   .rodata             ascii   %s[%p]Invalid FilledLen[0x%x] AllocLen[0x%x]
+185 0x00003225 0x00003225 28  29   .rodata             ascii   Set Config in Invalid State\n
+186 0x00003242 0x00003242 37  38   .rodata             ascii   In invalid state..ignore all buffers\n
+187 0x00003268 0x00003268 44  45   .rodata             ascii   ERROR!!! EVENT THREAD failed to get created\n
+188 0x00003295 0x00003295 43  44   .rodata             ascii   \n free_ion_buffer: Invalid input parameter\n
+189 0x000032c1 0x000032c1 28  29   .rodata             ascii   AUDIO_GET_SESSION_ID FAILED\n
+190 0x000032de 0x000032de 36  37   .rodata             ascii   set_parameter: Number of channels %d
+191 0x00003303 0x00003303 16  17   .rodata             ascii   use_input_buffer
+192 0x00003314 0x00003314 43  44   .rodata             ascii   Post buffer done as no AUDIO_START success\n
+193 0x00003340 0x00003340 14  15   .rodata             ascii   process_events
+194 0x0000334f 0x0000334f 38  39   .rodata             ascii   Set Parameter called in Invalid State\n
+195 0x00003376 0x00003376 44  45   .rodata             ascii   pthread_cond_init returns non zero for cond\n
+196 0x000033a3 0x000033a3 14  15   .rodata             ascii   buffer_done_cb
+197 0x000033b2 0x000033b2 13  14   .rodata             ascii   OUTPUT_THREAD
+198 0x000033c0 0x000033c0 33  34   .rodata             ascii   set_parameter: Bad port index %d\n
+199 0x000033e2 0x000033e2 94  95   .rodata             ascii   get_parameter:OMX_IndexParamAudioPcm                                 OMX_ErrorBadPortIndex %d\n
+200 0x00003441 0x00003441 18  19   .rodata             ascii   dec_num_il_out_buf
+201 0x00003454 0x00003454 30  31   .rodata             ascii   Allocate Buf in Invalid State\n
+202 0x00003473 0x00003473 62  63   .rodata             ascii   allocate_buffer:Error--> Invalid Port       Index received %d\n
+203 0x000034b2 0x000034b2 16  17   .rodata             ascii   is_platform_8960
+204 0x000034c3 0x000034c3 35  36   .rodata             ascii   In SSR, post error to omx component
+205 0x000034e7 0x000034e7 96  97   .rodata             ascii   get_parameter:OMX_IndexParamAudioPcm                                   OMX_ErrorBadPortIndex %u\n
+206 0x00003548 0x00003548 32  33   .rodata             ascii   Returning OMX_ErrorBadParameter\n
+207 0x00003569 0x00003569 15  16   .rodata             ascii   Bad header %p \n
+208 0x00003579 0x00003579 32  33   .rodata             ascii   OMX.qcom.audio.decoder.amrwbplus
+209 0x0000359a 0x0000359a 8   9    .rodata             ascii   /dev/ion
+210 0x000035a3 0x000035a3 33  34   .rodata             ascii   omx_amrwbplus_event_thread_create
+211 0x000035c5 0x000035c5 35  36   .rodata             ascii   ERROR Delete!!! Command Queue Empty
+212 0x000035e9 0x000035e9 19  20   .rodata             ascii   ASYNC READ FAIL[%d]
+213 0x000035fd 0x000035fd 36  37   .rodata             ascii   \n Error in ioctl AUDIO_REGISTER_ION\n
+214 0x00003622 0x00003622 19  20   .rodata             ascii   unknown param %08x\n
+215 0x00003636 0x00003636 23  24   .rodata             ascii   ERROR: aio_write failed
+216 0x0000364e 0x0000364e 48  49   .rodata             ascii   Error: component_tunnel_request Not Implemented\n
+217 0x0000367f 0x0000367f 27  28   .rodata             ascii   %s[%p]ion allocation failed
+218 0x0000369b 0x0000369b 17  18   .rodata             ascii   use_output_buffer
+219 0x000036ad 0x000036ad 18  19   .rodata             ascii   dec_num_drv_in_buf
+220 0x000036c0 0x000036c0 4   5    .rodata             ascii   8960
+221 0x000036c5 0x000036c5 34  35   .rodata             ascii   Get Comp Version in Invalid State\n
+222 0x000036e8 0x000036e8 33  34   .rodata             ascii   SCP-->ERROR: Invali Command [%d]\n
+223 0x0000370a 0x0000370a 21  22   .rodata             ascii   allocate_input_buffer
+224 0x00003720 0x00003720 90  91   .rodata             ascii   Free_Buf:Error-->free_buffer,                                 Invalid Input buffer header\n
+225 0x0000377b 0x0000377b 28  29   .rodata             ascii   %s: cannot find the cputype\n
+226 0x00003798 0x00003798 36  37   .rodata             ascii   CMD:Error--> incorrect event posted\n
+227 0x000037bd 0x000037bd 29  30   .rodata             ascii   SCP: Idle --> %d Not Handled\n
+228 0x000037db 0x000037db 29  30   .rodata             ascii   SCP--> %d to %d(Not Handled)\n
+229 0x000037fb 0x000037fb 26  27   .rodata             ascii   \n%s: pipe creation failed\n
+230 0x00003816 0x00003816 47  48   .rodata             ascii   pthread_cond_init returns non zero for in_cond\n
+231 0x00003846 0x00003846 38  39   .rodata             ascii   SCP: Loaded-->Invalid(%d Not Handled)\n
+232 0x0000386d 0x0000386d 33  34   .rodata             ascii   get_parameter: Bad port index %d\n
+233 0x0000388f 0x0000388f 22  23   .rodata             ascii   %s register ion failed
+234 0x000038a6 0x000038a6 23  24   .rodata             ascii   audio_decoder.amrwbplus
+235 0x000038be 0x000038be 63  64   .rodata             ascii   %s[%p]W-D event,                             invalid bufHdr[%p]
+236 0x000038fe 0x000038fe 54  55   .rodata             ascii   The system lacked necessary resources(other than mem)\n
+237 0x00003935 0x00003935 14  15   .rodata             ascii   COMMAND_THREAD
+238 0x00003944 0x00003944 33  34   .rodata             ascii   %s: Output buffer counter is zero
+239 0x00003966 0x00003966 15  16   .rodata             ascii   %s[%p] ion null
+240 0x00003976 0x00003976 16  17   .rodata             ascii   Bad Port idx %d\n
+241 0x00003987 0x00003987 31  32   .rodata             ascii    set_parameter: Bad Port idx %d
+242 0x000039a7 0x000039a7 34  35   .rodata             ascii   Post invalid state change command\n
+243 0x000039ca 0x000039ca 27  28   .rodata             ascii   omx_amrwbplus_thread_create
+244 0x000039e6 0x000039e6 45  46   .rodata             ascii   config.sample_rate %d config.channel_count %d
+245 0x00003a14 0x00003a14 35  36   .rodata             ascii   SCP-->Disabling invalid port ID[%d]
+246 0x00003a38 0x00003a38 22  23   .rodata             ascii   allocate_output_buffer
+247 0x00003a4f 0x00003a4f 4   5    .rodata             ascii   8930
+248 0x00003a54 0x00003a54 52  53   .rodata             ascii   %s[%p]R-D, BufHdr                               Null
+249 0x00003a89 0x00003a89 31  32   .rodata             ascii   ERROR:CMD-->EventHandler NULL \n
+250 0x00003aa9 0x00003aa9 34  35   .rodata             ascii   OMX.Qualcomm.index.audio.amrwbplus
+251 0x00003acc 0x00003acc 47  48   .rodata             ascii   \n alloc_ion_buffer: ion_data allocation failed\n
+252 0x00003afc 0x00003afc 20  21   .rodata             ascii   ION_IOC_FREE failed\n
+253 0x00003b11 0x00003b11 12  13   .rodata             ascii   INPUT_THREAD
+254 0x00003b1e 0x00003b1e 34  35   .rodata             ascii   SCP: Executing --> %d Not Handled\n
+255 0x00003b41 0x00003b41 104 105  .rodata             ascii   get_parameter:QOMX_AUDIO_PARAM_AMRWBPLUSTYPE                                   OMX_ErrorBadPortIndex %d\n
+256 0x00003baa 0x00003baa 87  88   .rodata             ascii   Error: free_buffer,Port Index calculation                             came out Invalid\n
+257 0x00003c02 0x00003c02 48  49   .rodata             ascii   pthread_cond_init returns non zero for out_cond\n
+258 0x00003c33 0x00003c33 42  43   .rodata             ascii   IN:Error-->Input thread invalid msg id[%d]
+259 0x00003c5e 0x00003c5e 77  78   .rodata             ascii   component_init: device open fail                           Loaded -->Invalid\n
+260 0x00003cac 0x00003cac 43  44   .rodata             ascii   ERROR!!!INPUT THREAD failed to get created\n
+261 0x00003cd8 0x00003cd8 45  46   .rodata             ascii   ERROR!!! OUTPUT THREAD failed to get created\n
+262 0x00003d06 0x00003d06 41  42   .rodata             ascii   OMX.qcom.audio.decoder.tunneled.amrwbplus
+263 0x00003d30 0x00003d30 28  29   .rodata             ascii   Get Config in Invalid State\n
+264 0x00003d4d 0x00003d4d 4   5    .rodata             ascii   8064
+265 0x00003d52 0x00003d52 20  21   .rodata             ascii   audio_deregister_ion
+266 0x00003d67 0x00003d67 27  28   .rodata             ascii   ION_IOC_ALLOC ioctl failed\n
+267 0x00003d83 0x00003d83 41  42   .rodata             ascii   Error : use_EGL_image:  Not Implemented \n
+268 0x00003dad 0x00003dad 13  14   .rodata             ascii   /proc/cpuinfo
+269 0x00003dbb 0x00003dbb 56  57   .rodata             ascii   Flush:Input port, ioctl flush failed: rc:%d, %s, no:%d \n
+270 0x00003df4 0x00003df4 27  28   .rodata             ascii   Get Param in Invalid State\n
+271 0x00003e10 0x00003e10 31  32   .rodata             ascii   set_config:Ignore in Exe state\n
+272 0x00003e30 0x00003e30 14  15   .rodata             ascii   mmap() failed\n
+273 0x00003e3f 0x00003e3f 74  75   .rodata             ascii   AUDIO_START FAILED for Handle %p with error                        no.:%d\n
+274 0x00003e8a 0x00003e8a 46  47   .rodata             ascii   EventThread exiting rc[%d]           errno[%d]
+275 0x00003eb9 0x00003eb9 20  21   .rodata             ascii   ASYNC WRITE fail[%d]
+276 0x00003ece 0x00003ece 13  14   .rodata             ascii   frame_done_cb
+277 0x00003edc 0x00003edc 45  46   .rodata             ascii   IN:ERROR : Context is incorrect; bailing out\n
+278 0x00003f0a 0x00003f0a 56  57   .rodata             ascii   component in invalid state do not send flush cmpl event\n
+279 0x00003f43 0x00003f43 33  34   .rodata             ascii    amrwbplus device already closed\n
+280 0x0000507f 0x0000507f 4   5    .text               ascii   T\bdI
+281 0x000050af 0x000050af 4   5    .text               ascii   q\bd\t
+282 0x0000510f 0x0000510f 4   5    .text               ascii   4\b`I
+283 0x0000511c 0x0000511c 5   6    .text               ascii   \bA@9h
+284 0x00005123 0x00005123 4   5    .text               ascii   9\b`I
+285 0x0000515b 0x0000515b 4   5    .text               ascii   q\b`\t
+286 0x000051af 0x000051af 4   5    .text               ascii   4\t`I
+287 0x000051bc 0x000051bc 5   6    .text               ascii   )A@9)
+288 0x000052c3 0x000052c3 4   5    .text               ascii   Th2A
+289 0x00005559 0x00005559 4   6    .text               utf8    {èe
+290 0x000055b9 0x000055b9 4   6    .text               utf8    {èM
+291 0x000055f1 0x000055f1 4   6    .text               utf8    {¨?
+292 0x00005615 0x00005615 4   6    .text               utf8    {¨6
+293 0x00005659 0x00005659 4   6    .text               utf8    {¨I
+294 0x00005833 0x00005833 4   5    .text               ascii   R\b-\t
+295 0x000058a6 0x000058a6 4   5    .text               ascii   \t*\tI
+296 0x00005983 0x00005983 4   5    .text               ascii   R\b-\t
+297 0x00005a9c 0x00005a9c 4   5    .text               ascii   CD\fn
+298 0x00005aa1 0x00005aa1 4   5    .text               ascii   D\fn`
+299 0x00005c0b 0x00005c0b 4   5    .text               ascii   R))\v
+300 0x00005c5f 0x00005c5f 4   5    .text               ascii   R\b%\n
+301 0x00005dc3 0x00005dc3 4   5    .text               ascii   R)!\n
+302 0x00005f7f 0x00005f7f 4   5    .text               ascii   *`\n\n
+303 0x00006037 0x00006037 4   6    .text               utf8    <\bшR
+304 0x0000604b 0x0000604b 4   6    .text               utf8    <\bՈR
+305 0x0000605f 0x0000605f 4   6    .text               utf8    <\bوR
+306 0x00006073 0x00006073 4   6    .text               utf8    <\b݈R
+307 0x0000609f 0x0000609f 10  14   .text               utf8    =aʑ=aƑ=`Α=
+308 0x0000610c 0x0000610c 9   13   .text               utf8    \bňRaڑ=aޑ=
+309 0x0000613c 0x0000613c 4   6    .text               utf8    \bHRt
+310 0x0000615c 0x0000615c 4   6    .text               utf8    \bĈRt
+311 0x0000617c 0x0000617c 4   6    .text               utf8    \bÈRt
+312 0x0000619c 0x0000619c 4   6    .text               utf8    \b͈Rt
+313 0x000061dc 0x000061dc 4   6    .text               utf8    \bǈRt
+314 0x000061fc 0x000061fc 4   6    .text               utf8    \bɈRt
+315 0x0000621c 0x0000621c 4   6    .text               utf8    \bƈRt
+316 0x0000623c 0x0000623c 4   6    .text               utf8    \bȈRt
+317 0x0000625c 0x0000625c 4   6    .text               utf8    \bʈRt
+318 0x0000627c 0x0000627c 4   6    .text               utf8    \bˈRt
+319 0x0000629c 0x0000629c 4   6    .text               utf8    \b̈Rt
+320 0x000062ef 0x000062ef 4   5    .text               ascii   *!X;
+321 0x0000635b 0x0000635b 4   5    .text               ascii   *!X;
+322 0x000063c7 0x000063c7 4   5    .text               ascii   *!X;
+323 0x000064b8 0x000064b8 4   6    .text               utf8    \b͈R`
+324 0x00006524 0x00006524 4   6    .text               utf8    \bʈR`
+325 0x00006530 0x00006530 4   6    .text               utf8    \bˈR`
+326 0x00006554 0x00006554 4   6    .text               utf8    \bňR`
+327 0x00006560 0x00006560 4   6    .text               utf8    \bHR`
+328 0x0000656c 0x0000656c 4   6    .text               utf8    \bĈR`
+329 0x00006578 0x00006578 4   6    .text               utf8    \bÈR`
+330 0x00006590 0x00006590 4   6    .text               utf8    \bǈR`
+331 0x0000659c 0x0000659c 4   6    .text               utf8    \bɈR`
+332 0x000065a8 0x000065a8 4   6    .text               utf8    \bƈR`
+333 0x000065b4 0x000065b4 4   6    .text               utf8    \bȈR`
+334 0x000065c0 0x000065c0 4   6    .text               utf8    \b̈R`
+335 0x000066e3 0x000066e3 4   5    .text               ascii   R\bhh
+336 0x00006783 0x00006783 4   5    .text               ascii   R\b%\n
+337 0x0000689c 0x0000689c 4   5    .text               ascii   hzC9
+338 0x000068f4 0x000068f4 4   5    .text               ascii   h~C9
+339 0x00006ce7 0x00006ce7 4   5    .text               ascii   R))\v
+340 0x0000707f 0x0000707f 4   5    .text               ascii   R\bhh
+341 0x000070af 0x000070af 4   5    .text               ascii   7iZc
+342 0x000070c7 0x000070c7 4   5    .text               ascii   T)\r@
+343 0x000072da 0x000072da 5   6    .text               ascii   A)(}`
+344 0x00007307 0x00007307 4   5    .text               ascii   4hjc
+345 0x0000731f 0x0000731f 4   5    .text               ascii   T\b\r@
+346 0x00007346 0x00007346 4   5    .text               ascii   A9i\b
+347 0x00007383 0x00007383 4   5    .text               ascii   R)!\n
+348 0x0000761b 0x0000761b 6   7    .text               ascii   5ivC9i
+349 0x0000771b 0x0000771b 4   5    .text               ascii   R\tM\t
+350 0x00007720 0x00007720 5   6    .text               ascii   6ik87
+351 0x00007737 0x00007737 4   5    .text               ascii   qhb0
+352 0x0000775b 0x0000775b 4   5    .text               ascii   Q*M\n
+353 0x00007760 0x00007760 5   6    .text               ascii   Vik8W
+354 0x00007797 0x00007797 4   5    .text               ascii   Q\nM\n
+355 0x0000779c 0x0000779c 7   8    .text               ascii   Vik8W9X
+356 0x000077e0 0x000077e0 7   8    .text               ascii   +ih8J\t\v
+357 0x00007927 0x00007927 4   5    .text               ascii   4hjc
+358 0x0000793f 0x0000793f 4   5    .text               ascii   T\b\r@
+359 0x00007973 0x00007973 4   5    .text               ascii   T)\r@
+360 0x00007c78 0x00007c78 5   6    .text               ascii   \i{8X
+361 0x00007cb4 0x00007cb4 7   8    .text               ascii   \ik8X=X
+362 0x00007d0f 0x00007d0f 4   5    .text               ascii   R!X;
+363 0x00007df3 0x00007df3 4   5    .text               ascii   Q*M\n
+364 0x00007df8 0x00007df8 7   8    .text               ascii   ZAE9UQT
+365 0x00007e38 0x00007e38 7   8    .text               ascii   +ih8J\t\v
+366 0x00007f98 0x00007f98 4   5    .text               ascii   hzC9
+367 0x00007fc4 0x00007fc4 4   5    .text               ascii   h~C9
+368 0x00008044 0x00008044 7   8    .text               ascii   +iv8J\t\v
+369 0x0000806c 0x0000806c 7   8    .text               ascii   +yhxJ\t\v
+370 0x0000816f 0x0000816f 4   5    .text               ascii   R\b%\n
+371 0x0000821b 0x0000821b 4   5    .text               ascii   R\b%\n
+372 0x0000832f 0x0000832f 4   5    .text               ascii   R)!\n
+373 0x000084c3 0x000084c3 4   5    .text               ascii   R)!\n
+374 0x00008554 0x00008554 5   6    .text               ascii   hzC9\b
+375 0x00008570 0x00008570 4   5    .text               ascii   hzC9
+376 0x000085b0 0x000085b0 5   6    .text               ascii   h~C9(
+377 0x00008604 0x00008604 7   8    .text               ascii   +ih8J\t\v
+378 0x00008664 0x00008664 7   8    .text               ascii   +ih8J\t\v
+379 0x000086af 0x000086af 4   5    .text               ascii   *)y8
+380 0x000086b8 0x000086b8 7   8    .text               ascii   +ih8J\t\v
+381 0x000086e3 0x000086e3 5   6    .text               ascii   ThzC9
+382 0x000086f8 0x000086f8 4   5    .text               ascii   h~C9
+383 0x00008723 0x00008723 4   5    .text               ascii   *)a8
+384 0x0000872c 0x0000872c 7   8    .text               ascii   +ih8J\t\v
+385 0x00008753 0x00008753 4   5    .text               ascii   *)I8
+386 0x0000875c 0x0000875c 7   8    .text               ascii   +ih8J\t\v
+387 0x0000889f 0x0000889f 4   5    .text               ascii   R\b%\n
+388 0x000088b3 0x000088b3 4   5    .text               ascii   *\t%\n
+389 0x00008cf3 0x00008cf3 4   5    .text               ascii   R\tM\t
+390 0x00008cf8 0x00008cf8 5   6    .text               ascii   5ik87
+391 0x00008d40 0x00008d40 7   8    .text               ascii   +ih8J\t\v
+392 0x00008d94 0x00008d94 7   8    .text               ascii   UA@9WY@
+393 0x00008e93 0x00008e93 4   5    .text               ascii   Q*)\v
+394 0x00008e98 0x00008e98 7   8    .text               ascii   UA@9WY@
+395 0x00008f17 0x00008f17 4   5    .text               ascii   R\bhh
+396 0x00008f3f 0x00008f3f 4   5    .text               ascii   4hZc
+397 0x00008f4f 0x00008f4f 4   5    .text               ascii   Qhb#
+398 0x00008f63 0x00008f63 4   5    .text               ascii   T\b\r@
+399 0x00009027 0x00009027 4   5    .text               ascii   R))\v
+400 0x000090a0 0x000090a0 5   6    .text               ascii   h\nC9h
+401 0x00009168 0x00009168 4   5    .text               ascii   h\nC9
+402 0x0000925c 0x0000925c 4   5    .text               ascii   h~C9
+403 0x000092b4 0x000092b4 4   5    .text               ascii   hzC9
+404 0x0000935b 0x0000935b 5   6    .text               ascii   yhrC9
+405 0x00009388 0x00009388 4   5    .text               ascii   hrC9
+406 0x000094a3 0x000094a3 4   5    .text               ascii   R\b%\n
+407 0x000095e0 0x000095e0 4   5    .text               ascii   HSU9
+408 0x00009776 0x00009776 5   6    .text               ascii   k9Y]E
+409 0x000097b0 0x000097b0 5   6    .text               ascii   Zik8Y
+410 0x00009803 0x00009803 4   5    .text               ascii   R!X;
+411 0x00009873 0x00009873 4   5    .text               ascii   R!X;
+412 0x00009b4f 0x00009b4f 4   5    .text               ascii   R\bhh
+413 0x00009b9f 0x00009b9f 4   5    .text               ascii   R\bhh
+414 0x00009c0f 0x00009c0f 4   5    .text               ascii   R))\v
+415 0x00009c23 0x00009c23 4   5    .text               ascii   *\n)\v
+416 0x00009cef 0x00009cef 4   5    .text               ascii   *\b)\v
+417 0x00009d03 0x00009d03 4   5    .text               ascii   *\n)\v
+418 0x00009e0b 0x00009e0b 4   5    .text               ascii   T\t\t@
+419 0x00009eff 0x00009eff 4   5    .text               ascii   R)!\n
+420 0x00009f87 0x00009f87 4   5    .text               ascii   Tifp
+421 0x00009f9b 0x00009f9b 4   5    .text               ascii   R)!\n
+422 0x00009fc7 0x00009fc7 4   5    .text               ascii   qif0
+423 0x0000a037 0x0000a037 4   5    .text               ascii   R)!\n
+424 0x0000a20f 0x0000a20f 4   5    .text               ascii   Tifp
+425 0x0000a223 0x0000a223 4   5    .text               ascii   R)!\n
+426 0x0000a24f 0x0000a24f 4   5    .text               ascii   qif0
+427 0x0000a35f 0x0000a35f 4   5    .text               ascii   R9[;
+428 0x0000a4d7 0x0000a4d7 4   5    .text               ascii   R\thi
+429 0x0000a50a 0x0000a50a 4   5    .text               ascii   \n\v_!
+430 0x0000a520 0x0000a520 4   5    .text               ascii   mij8
+431 0x0000a5b6 0x0000a5b6 4   5    .text               ascii   \tk \t
+432 0x0000a606 0x0000a606 4   5    .text               ascii   \tk@\v
+433 0x0000a7d3 0x0000a7d3 4   5    .text               ascii   R\bhh
+434 0x0000a8bf 0x0000a8bf 4   5    .text               ascii   R\bhh
+435 0x0000aa2f 0x0000aa2f 4   5    .text               ascii   *\bh)
+436 0x0000accb 0x0000accb 4   5    .text               ascii   R\bhh
+437 0x0000acfb 0x0000acfb 4   5    .text               ascii   Th\b@
+438 0x0000add3 0x0000add3 4   5    .text               ascii   R\bhh
+439 0x0000ae47 0x0000ae47 4   5    .text               ascii   Th\b@
+440 0x0000af13 0x0000af13 4   5    .text               ascii   R\bhh
+441 0x0000af6f 0x0000af6f 4   5    .text               ascii   R!X;
+442 0x0000aff3 0x0000aff3 4   5    .text               ascii   R\bhh
+443 0x0000b0bb 0x0000b0bb 4   5    .text               ascii   7a\n@
+444 0x0000b1ea 0x0000b1ea 4   5    .text               ascii   \tkB\n
+445 0x0000b2d4 0x0000b2d4 6   8    .text               utf8    \bшRijh
+446 0x0000b4f0 0x0000b4f0 6   8    .text               utf8    \bՈRijh
+447 0x0000b5f7 0x0000b5f7 4   5    .text               ascii   R\bhh
+448 0x0000b633 0x0000b633 4   5    .text               ascii   R!X;
+449 0x0000b767 0x0000b767 4   5    .text               ascii   R\b%\n
+450 0x0000b77b 0x0000b77b 4   5    .text               ascii   R\t%\n
+451 0x0000b7e9 0x0000b7e9 5   6    .text               ascii   \r(6\by
+452 0x0000b7fc 0x0000b7fc 5   6    .text               ascii   h~C9i
+453 0x0000b840 0x0000b840 4   5    .text               ascii   hzC9
+454 0x0000b8af 0x0000b8af 4   5    .text               ascii   R)!\n
+455 0x0000b92f 0x0000b92f 4   5    .text               ascii   R\b%\n
+456 0x0000ba96 0x0000ba96 4   5    .text               ascii   \tka\a
+457 0x0000bb13 0x0000bb13 4   5    .text               ascii   R\b%\n
+458 0x0000bb27 0x0000bb27 4   5    .text               ascii   R\t%\n
+459 0x0000bbcf 0x0000bbcf 4   5    .text               ascii   R)!\n
+460 0x0000bc1c 0x0000bc1c 5   6    .text               ascii   (\v 6\t
+461 0x0000bc53 0x0000bc53 4   5    .text               ascii   R\b%\n
+462 0x0000bcd0 0x0000bcd0 5   6    .text               ascii   i~C9h
+463 0x0000bd14 0x0000bd14 5   6    .text               ascii   hzC9H
+464 0x0000c3f7 0x0000c3f7 4   5    .text               ascii   T\b\r@
+465 0x0000c43b 0x0000c43b 4   5    .text               ascii   T\b\r@
+466 0x0000c49f 0x0000c49f 4   5    .text               ascii   R\bhh
+467 0x0000c543 0x0000c543 4   5    .text               ascii   T)\r@
+468 0x0000c57b 0x0000c57b 4   5    .text               ascii   T)\r@
+469 0x0000c5a0 0x0000c5a0 4   6    .text               utf8    \t҈Ru
+470 0x0000c5b7 0x0000c5b7 4   5    .text               ascii   T\b\r@
+471 0x0000c5d4 0x0000c5d4 6   7    .text               ascii   )\r86\b\r
+472 0x0000c617 0x0000c617 4   5    .text               ascii   R)!\n
+473 0x0000c67c 0x0000c67c 4   6    .text               utf8    \tΈRu
+474 0x0000c693 0x0000c693 4   5    .text               ascii   T\b\r@
+475 0x0000c707 0x0000c707 4   5    .text               ascii   R\b%\n
+476 0x0000c80f 0x0000c80f 4   5    .text               ascii   R\b%\n
+477 0x0000c85f 0x0000c85f 4   5    .text               ascii   4ijc
+478 0x0000c877 0x0000c877 4   5    .text               ascii   T)\r@
+479 0x0000c89b 0x0000c89b 4   5    .text               ascii   4iZc
+480 0x0000c8b3 0x0000c8b3 4   5    .text               ascii   T)\r@
+481 0x0000c96b 0x0000c96b 5   7    .text               utf8    4\bڈRw
+482 0x0000cb97 0x0000cb97 4   5    .text               ascii   T+\r@
+483 0x0000cbd3 0x0000cbd3 4   5    .text               ascii   T*\r@
+484 0x0000cce4 0x0000cce4 4   5    .text               ascii   i"B)
+485 0x0000ccf7 0x0000ccf7 4   5    .text               ascii   Thj@
+486 0x0000cd3f 0x0000cd3f 4   5    .text               ascii   T\b\r@
+487 0x0000cd8f 0x0000cd8f 4   5    .text               ascii   Thj@
+488 0x0000cf1b 0x0000cf1b 4   5    .text               ascii   T\b\r@
+489 0x0000cfeb 0x0000cfeb 4   5    .text               ascii   Thf@
+490 0x0000d423 0x0000d423 4   5    .text               ascii   5`\n@
+491 0x0000e579 0x00000001 11  12   .shstrtab           ascii   .fini_array
+492 0x0000e585 0x0000000d 5   6    .shstrtab           ascii   .text
+493 0x0000e58b 0x00000013 4   5    .shstrtab           ascii   .got
+494 0x0000e590 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+495 0x0000e5a4 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+496 0x0000e5ad 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+497 0x0000e5b7 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+498 0x0000e5bf 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+499 0x0000e5cd 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+500 0x0000e5dc 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+501 0x0000e5e9 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+502 0x0000e5f3 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+503 0x0000e5fd 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+504 0x0000e60a 0x00000092 7   8    .shstrtab           ascii   .dynsym
+505 0x0000e612 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+506 0x0000e61c 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+507 0x0000e626 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+508 0x0000e639 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+509 0x0000e642 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+510 0x0000e64c 0x000000d4 7   8    .shstrtab           ascii   .rodata
+511 0x0000e654 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+512 0x0000e664 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+513 0x0000e694 0x00000031 4   5    .gnu_debugdata      ascii   Yg\vS
+514 0x0000e6a7 0x00000044 6   7    .gnu_debugdata      ascii   ia!xye
+515 0x0000e6be 0x0000005b 4   5    .gnu_debugdata      ascii   L'^u
+516 0x0000e6e4 0x00000081 4   5    .gnu_debugdata      ascii   |l%Y
+517 0x0000e6fc 0x00000099 4   5    .gnu_debugdata      ascii   >S78
+518 0x0000e795 0x00000132 4   5    .gnu_debugdata      ascii   oSo4
+519 0x0000e7ba 0x00000157 4   5    .gnu_debugdata      ascii   gQT|
+520 0x0000e7c2 0x0000015f 5   7    .gnu_debugdata      utf8    ˈM@6F
+521 0x0000e804 0x000001a1 5   8    .gnu_debugdata      utf8    ֊ĺ#wj
+522 0x0000e888 0x00000225 4   5    .gnu_debugdata      ascii   Ok\a\
+523 0x0000e8b1 0x0000024e 6   7    .gnu_debugdata      ascii   `k.Q#9
+524 0x0000e8d0 0x0000026d 5   6    .gnu_debugdata      ascii   Yk\r7g
+525 0x0000e8ff 0x0000029c 5   6    .gnu_debugdata      ascii   qY2wv
+526 0x0000e96c 0x00000309 4   5    .gnu_debugdata      ascii   o;H+
+527 0x0000e973 0x00000310 4   5    .gnu_debugdata      ascii   0[pW
+528 0x0000e98b 0x00000328 4   5    .gnu_debugdata      ascii   kWe^
+0x0000d690    1     16 sym.imp.__cxa_finalize
+0x0000d6d0    1     16 sym.imp.__android_log_print
+0x0000d730    1     16 sym.imp.__errno
+0x0000da00    1     16 sym.imp.__open_2
+0x0000d750    1     16 sym.imp.__stack_chk_fail
+0x0000da30    1     16 sym.imp.__strlcpy_chk
+0x0000da50    1     16 sym.imp.calloc
+0x0000d700    1     16 sym.imp.clock_gettime
+0x0000d890    1     16 sym.imp.close
+0x0000db20    1     16 sym.imp.fclose
+0x0000db00    1     16 sym.imp.fgets
+0x0000daf0    1     16 sym.imp.fopen
+0x0000d8e0    1     16 sym.imp.free
+0x0000d8b0    1     16 sym.imp.fsync
+0x0000d720    1     16 sym.imp.ioctl
+0x0000d900    1     16 sym.imp.memcpy
+0x0000d6c0    1     16 sym.imp.memset
+0x0000da60    1     16 sym.imp.mmap
+0x0000d8d0    1     16 sym.imp.munmap
+0x0000d850    1     16 sym.imp.pthread_cond_destroy
+0x0000d800    1     16 sym.imp.pthread_cond_init
+0x0000d760    1     16 sym.imp.pthread_cond_signal
+0x0000d710    1     16 sym.imp.pthread_cond_timedwait
+0x0000d770    1     16 sym.imp.pthread_cond_wait
+0x0000d7e0    1     16 sym.imp.pthread_condattr_init
+0x0000d7f0    1     16 sym.imp.pthread_condattr_setclock
+0x0000d830    1     16 sym.imp.pthread_mutex_destroy
+0x0000d7d0    1     16 sym.imp.pthread_mutex_init
+0x0000d6e0    1     16 sym.imp.pthread_mutex_lock
+0x0000d6f0    1     16 sym.imp.pthread_mutex_unlock
+0x0000d840    1     16 sym.imp.pthread_mutexattr_destroy
+0x0000d7c0    1     16 sym.imp.pthread_mutexattr_init
+0x0000d860    1     16 sym.imp.sem_destroy
+0x0000d810    1     16 sym.imp.sem_init
+0x0000d790    1     16 sym.imp.sem_post
+0x0000d780    1     16 sym.imp.sem_wait
+0x0000db10    1     16 sym.imp.strcasestr
+0x0000d9f0    1     16 sym.imp.strcmp
+0x0000d740    1     16 sym.imp.strerror
+0x0000da40    1     16 sym.imp.strncmp
+0x0000d950    1     16 sym.imp.usleep
+0x0000db30    1     16 sym.imp.pipe
+0x0000db40    1     16 sym.imp.pthread_create
+0x0000db60    1     16 sym.imp.pthread_join
+0x0000db50    1     16 sym.imp.read
+0x0000db70    1     16 sym.imp.write
+0x00005000    1     12 entry0
+0x0000adc4   18    300 method.COmxAmrwbplusDec.set_config_void__OMX_INDEXTYPE__void_
+0x0000727c   31    616 method.COmxAmrwbplusDec.frame_done_cb_OMX_BUFFERHEADERTYPE__bool_
+0x00009ca0    7    228 method.COmxAmrwbplusDec.post_command_unsigned_int__unsigned_int__unsigned_char_
+0x00005040    1      4 sym.COmxAmrwbplusDec::omx_cmd_queue::omx_cmd_queue__
+0x00006b28   28    724 method.COmxAmrwbplusDec.prepare_for_ebd_OMX_BUFFERHEADERTYPE_
+0x0000bd94   34    816 method.COmxAmrwbplusDec.use_input_buffer_void__OMX_BUFFERHEADERTYPE__unsigned_int__void__unsigned_int__unsigned_char_
+0x00005eb4   21   1460 fcn.00005eb4
+0x0000d2dc    9    260 sym.omx_amrwbplus_thread_create
+0x00005cf4   16    448 method.COmxAmrwbplusDec.post_output_unsigned_long__unsigned_long__unsigned_char_
+0x0000506c    5    148 method.COmxAmrwbplusDec::omx_cmd_queue.insert_entry_unsigned_long__unsigned_long__unsigned_char_
+0x00005100    5    168 method.COmxAmrwbplusDec::omx_cmd_queue.pop_entry_unsigned_long__unsigned_long__unsigned_char_
+0x0000b3c8   17    540 method.COmxAmrwbplusDec.allocate_output_buffer_void__OMX_BUFFERHEADERTYPE__unsigned_int__void__unsigned_int_
+0x00005424    4     96 method.COmxAmrwbplusDec.in_sleep__
+0x00005b38   16    444 method.COmxAmrwbplusDec.post_input_unsigned_long__unsigned_long__unsigned_char_
+0x0000ce68   24    492 method.COmxAmrwbplusDec.fill_this_buffer_void__OMX_BUFFERHEADERTYPE_
+0x00005660    3     76 method.COmxAmrwbplusDec.event_flush_complete__
+0x0000d618    5     88 sym.omx_amrwbplus_post_msg
+0x000051a8    3     40 method.COmxAmrwbplusDec::omx_cmd_queue.get_msg_id_unsigned_char_
+0x0000800c   13    324 method.COmxAmrwbplusDec.send_command_proxy_void__OMX_COMMANDTYPE__unsigned_int__void_
+0x00008b38   32    756 method.COmxAmrwbplusDec.process_in_port_msg_void__unsigned_char_
+0x0000b004    1     48 method.COmxAmrwbplusDec.component_tunnel_request_void__unsigned_int__void__unsigned_int__OMX_TUNNELSETUPTYPE_
+0x00006ea4    9    216 method.COmxAmrwbplusDec.free_ion_buffer_void_
+0x0000b034   13    364 method.COmxAmrwbplusDec.alloc_ion_buffer_unsigned_int_
+0x0000aef0   12    256 method.COmxAmrwbplusDec.get_extension_index_void__char__OMX_INDEXTYPE_
+0x00005484    3     92 method.COmxAmrwbplusDec.in_th_wakeup__
+0x000056ac    4     28 method.COmxAmrwbplusDec.process_event_cb_void__unsigned_char_
+0x0000d168    4     52 method.COmxAmrwbplusDec.component_role_enum_void__unsigned_char__unsigned_int_
+0x00006f7c    7    240 method.COmxAmrwbplusDec.audio_deregister_ion_COmxAmrwbplusDec::mmap_info_
+0x00009648   25    636 method.COmxAmrwbplusDec.execute_input_omx_flush__
+0x00006468   17    612 method.COmxAmrwbplusDec.COmxAmrwbplusDec__
+0x000098c4   28    640 method.COmxAmrwbplusDec.component_init_char_
+0x0000b1a0   17    552 method.COmxAmrwbplusDec.allocate_input_buffer_void__OMX_BUFFERHEADERTYPE__unsigned_int__void__unsigned_int_
+0x00005014    1     44 sym.get_omx_component_factory_fn
+0x0000d6a0    1     16 sym.imp.operator_new_unsigned_long_
+0x0000d6b0    1     16 fcn.0000d6b0
+0x00009b8c   12    276 method.COmxAmrwbplusDec.send_command_void__OMX_COMMANDTYPE__unsigned_int__void_
+0x0000d7b0    1     16 fcn.0000d7b0
+0x00005348    3     92 method.COmxAmrwbplusDec.event_complete__
+0x0000d0b4    4    132 method.COmxAmrwbplusDec.component_deinit_void_
+0x0000d820    1     16 fcn.0000d820
+0x000071b8    7    196 method.COmxAmrwbplusDec.flush_ack__
+0x0000d4a4    9    260 sym.omx_amrwbplus_event_thread_create
+0x0000d3e0   12    196 sym.omx_amrwbplus_msg
+0x0000a8ac   55   1040 method.COmxAmrwbplusDec.set_parameter_void__OMX_INDEXTYPE__void_
+0x0000d138    1     48 method.COmxAmrwbplusDec.use_EGL_image_void__OMX_BUFFERHEADERTYPE__unsigned_int__void__void_
+0x0000b9bc   55    984 method.COmxAmrwbplusDec.use_buffer_void__OMX_BUFFERHEADERTYPE__unsigned_int__void__unsigned_int__unsigned_char_
+0x000055c0    3     92 method.COmxAmrwbplusDec.out_th_wakeup__
+0x000056b8   49   1152 method.COmxAmrwbplusDec.process_events_COmxAmrwbplusDec_
+0x00006dfc    5    168 method.COmxAmrwbplusDec.audio_register_ion_COmxAmrwbplusDec::mmap_info_
+0x0000c3e0    6     68 method.COmxAmrwbplusDec.search_input_bufhdr_OMX_BUFFERHEADERTYPE_
+0x0000d5cc    3     76 sym.omx_amrwbplus_thread_stop
+0x000053a4    4    128 method.COmxAmrwbplusDec.in_th_sleep__
+0x00009e24    7     68 method.COmxAmrwbplusDec.release_done_unsigned_int_
+0x00005044    1     40 method.COmxAmrwbplusDec::omx_cmd_queue.omx_cmd_queue__
+0x00007b8c   18    516 method.COmxAmrwbplusDec.execute_output_omx_flush__
+0x00006a4c    1     36 sym.COmxAmrwbplusDec::COmxAmrwbplusDec__
+0x0000d8a0    1     16 fcn.0000d8a0
+0x0000c468  104   1740 method.COmxAmrwbplusDec.free_buffer_void__unsigned_int__OMX_BUFFERHEADERTYPE_
+0x0000706c   16    332 method.COmxAmrwbplusDec.buffer_done_cb_OMX_BUFFERHEADERTYPE__bool_
+0x0000b5e4   55    984 method.COmxAmrwbplusDec.allocate_buffer_void__OMX_BUFFERHEADERTYPE__unsigned_int__void__unsigned_int_
+0x0000c0c4   34    796 method.COmxAmrwbplusDec.use_output_buffer_void__OMX_BUFFERHEADERTYPE__unsigned_int__void__unsigned_int__unsigned_char_
+0x00009b44    3     72 method.COmxAmrwbplusDec.get_component_version_void__char__OMX_VERSIONTYPE__OMX_VERSIONTYPE__unsigned_char_____128__
+0x00009d84   15    160 method.COmxAmrwbplusDec.allocate_done__
+0x0000d19c   15    320 method.COmxAmrwbplusDec.is_platform_8960__
+0x0000cc6c   22    448 method.COmxAmrwbplusDec.empty_this_buffer_void__OMX_BUFFERHEADERTYPE_
+0x00006a70    3     92 method.COmxAmrwbplusDec.aio_write_msm_audio_aio_buf_
+0x0000aff0    1     20 method.COmxAmrwbplusDec.get_state_void__OMX_STATETYPE_
+0x00009e68   57   1632 method.COmxAmrwbplusDec.execute_omx_flush_unsigned_int__bool_
+0x0000cb34   21    312 method.Map_OMX_BUFFERHEADERTYPE__OMX_BUFFERHEADERTYPE_.erase_OMX_BUFFERHEADERTYPE_
+0x000066cc   36    896 method.COmxAmrwbplusDec.deinit_decoder__
+0x0000c424    6     68 method.COmxAmrwbplusDec.search_output_bufhdr_OMX_BUFFERHEADERTYPE_
+0x000051d0   13    376 method.COmxAmrwbplusDec.wait_for_event__
+0x00007d90    8    256 method.COmxAmrwbplusDec.process_command_msg_void__unsigned_char_
+0x00006acc    3     92 method.COmxAmrwbplusDec.aio_read_msm_audio_aio_buf_
+0x0000d5a8    3     36 sym.omx_amrwbplus_events
+0x0000acbc   10    264 method.COmxAmrwbplusDec.get_config_void__OMX_INDEXTYPE__void_
+0x0000d090    1     36 method.COmxAmrwbplusDec.set_callbacks_void__OMX_CALLBACKTYPE__void_
+0x000074e4   43    828 method.COmxAmrwbplusDec.process_out_port_msg_void__unsigned_char_
+0x0000561c    1     68 method.COmxAmrwbplusDec.wait_for_flush_event__
+0x000078e0   27    684 method.COmxAmrwbplusDec.fill_this_buffer_proxy_void__OMX_BUFFERHEADERTYPE_
+0x000054e0    4    128 method.COmxAmrwbplusDec.out_th_sleep__
+0x0000a4c8   39    900 method.COmxAmrwbplusDec.get_parameter_void__OMX_INDEXTYPE__void_
+0x00008edc   73   1900 method.COmxAmrwbplusDec.empty_this_buffer_proxy_void__OMX_BUFFERHEADERTYPE_
+0x00005560    4     96 method.COmxAmrwbplusDec.out_sleep__
+0x0000d870    1     16 sym.imp.operator_delete_void_
+0x00005010    1      4 entry.fini0
+0x0000d880    1     16 fcn.0000d880
+0x0000d8c0    1     16 fcn.0000d8c0
+0x0000d8f0    1     16 fcn.0000d8f0
+0x0000d940    1     16 fcn.0000d940
+0x0000d920    1     16 fcn.0000d920
+0x0000d970    1     16 fcn.0000d970
+0x0000d980    1     16 fcn.0000d980
+0x0000d990    1     16 fcn.0000d990
+0x0000d9a0    1     16 fcn.0000d9a0
+0x0000d9b0    1     16 fcn.0000d9b0
+0x0000d9c0    1     16 fcn.0000d9c0
+0x0000da10    1     16 fcn.0000da10
+0x0000da20    1     16 fcn.0000da20
+0x0000da70    1     16 fcn.0000da70
+0x0000da80    1     16 fcn.0000da80
+0x0000da90    1     16 fcn.0000da90
+0x0000daa0    1     16 fcn.0000daa0
+0x0000dab0    1     16 fcn.0000dab0
+0x0000dac0    1     16 fcn.0000dac0
+0x0000ce2c    1     60 method.COmxAmrwbplusDec.inc_num_il_in_buf__
+0x0000dad0    1     16 fcn.0000dad0
+0x0000d054    1     60 method.COmxAmrwbplusDec.inc_num_il_out_buf__
+0x0000dae0    1     16 fcn.0000dae0
+0x000077f8    2     44 fcn.000077f8
+0x00007850    1     32 fcn.00007850
+0x00007878    2     44 fcn.00007878
+0x000078b8    1     40 fcn.000078b8
+0x00007e44    1     24 fcn.00007e44
+0x00007ec8    2     40 fcn.00007ec8
+0x00007f0c    1     28 fcn.00007f0c
+0x00008d54    1     32 fcn.00008d54
+0x00008dc8    2     44 fcn.00008dc8
+0x00008df0    2     44 fcn.00008df0
+0x00008e4c    1     44 fcn.00008e4c
+0x0000d670    1     20 section..plt

@@ -1,0 +1,232 @@
+arch     arm
+baddr    0x0
+binsz    12715
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+compiler GCC: (GNU) 4.9 20150123 (prerelease)
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  false
+lsyms    false
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   false
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped true
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type   size lib name                   demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+21  ---------- 0x00004030 GLOBAL OBJ    8        g_ta_handle
+22  0x0000153c 0x0000153c GLOBAL FUNC   704      get_key_from_keymaster
+23  0x00001024 0x00001024 GLOBAL FUNC   1100     gf_ca_invoke_command
+24  0x00000d58 0x00000d58 GLOBAL FUNC   4        gf_ca_set_handle
+25  ---------- 0x00004044 GLOBAL NOTYPE 0        _end
+26  ---------- 0x0000402c GLOBAL NOTYPE 0        _edata
+27  0x00000d5c 0x00000d5c GLOBAL FUNC   500      gf_ca_open_session
+28  0x00003028 0x00004028 GLOBAL OBJ    4        ta_buf_size
+29  ---------- 0x0000402c GLOBAL NOTYPE 0        __bss_start
+30  0x00003021 0x00004021 GLOBAL OBJ    7        alipay_name
+31  ---------- 0x00004038 GLOBAL OBJ    8        g_alipay_handle
+32  0x00000f50 0x00000f50 GLOBAL FUNC   212      gf_ca_close_session
+33  0x00003018 0x00004018 GLOBAL OBJ    9        ta_name
+34  0x00003008 0x00004008 GLOBAL OBJ    16       ta_path
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000200   0x18 0x00000200   0x18 -r-- NOTE        .note.android.ident
+2   0x00000218   0x20 0x00000218   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000238  0x348 0x00000238  0x348 -r-- DYNSYM      .dynsym
+4   0x00000580  0x211 0x00000580  0x211 -r-- STRTAB      .dynstr
+5   0x00000798   0x64 0x00000798   0x64 -r-- GNU_HASH    .gnu.hash
+6   0x000007fc   0x46 0x000007fc   0x46 -r-- GNU_VERSYM  .gnu.version
+7   0x00000844   0x1c 0x00000844   0x1c -r-- GNU_VERDEF  .gnu.version_d
+8   0x00000860   0x20 0x00000860   0x20 -r-- GNU_VERNEED .gnu.version_r
+9   0x00000880   0xc0 0x00000880   0xc0 -r-- RELA        .rela.dyn
+10  0x00000940  0x1f8 0x00000940  0x1f8 -r-- RELA        .rela.plt
+11  0x00000b38  0x170 0x00000b38  0x170 -r-x PROGBITS    .plt
+12  0x00000ca8  0xb54 0x00000ca8  0xb54 -r-x PROGBITS    .text
+13  0x000017fc  0x582 0x000017fc  0x582 -r-- PROGBITS    .rodata
+14  0x00001d80  0x108 0x00001d80  0x108 -r-- PROGBITS    .eh_frame
+15  0x00001e88   0x3c 0x00001e88   0x3c -r-- PROGBITS    .eh_frame_hdr
+16  0x00002cd8    0x8 0x00003cd8    0x8 -rw- FINI_ARRAY  .fini_array
+17  0x00002ce0  0x230 0x00003ce0  0x230 -rw- DYNAMIC     .dynamic
+18  0x00002f10   0x30 0x00003f10   0x30 -rw- PROGBITS    .got
+19  0x00002f40   0xc0 0x00003f40   0xc0 -rw- PROGBITS    .got.plt
+20  0x00003000   0x2c 0x00004000   0x2c -rw- PROGBITS    .data
+21  0x0000302c    0x0 0x00004030   0x14 -rw- NOBITS      .bss
+22  0x0000302c   0x63 0x00000000   0x63 ---- PROGBITS    .comment
+23  0x00003090   0x1c 0x00000000   0x1c ---- NOTE        .note.gnu.gold-version
+24  0x000030ac   0xff 0x00000000   0xff ---- STRTAB      .shstrtab
+
+[Strings]
+nth paddr      vaddr      len size section                type    string
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                          utf16le @8\b@
+1   0x0000020c 0x0000020c 7   8    .note.android.ident    ascii   Android
+2   0x00000581 0x00000581 14  15   .dynstr                ascii   __cxa_finalize
+3   0x00000590 0x00000590 4   5    .dynstr                ascii   LIBC
+4   0x00000595 0x00000595 7   8    .dynstr                ascii   libc.so
+5   0x0000059d 0x0000059d 11  12   .dynstr                ascii   libgf_ca.so
+6   0x000005a9 0x000005a9 17  18   .dynstr                ascii   __register_atfork
+7   0x000005bb 0x000005bb 4   5    .dynstr                ascii   open
+8   0x000005c0 0x000005c0 12  13   .dynstr                ascii   __cxa_atexit
+9   0x000005cd 0x000005cd 25  26   .dynstr                ascii   QSEECom_send_modified_cmd
+10  0x000005e7 0x000005e7 20  21   .dynstr                ascii   QSEECom_shutdown_app
+11  0x000005fc 0x000005fc 17  18   .dynstr                ascii   QSEECom_start_app
+12  0x0000060e 0x0000060e 19  20   .dynstr                ascii   __android_log_print
+13  0x00000622 0x00000622 7   8    .dynstr                ascii   __errno
+14  0x0000062a 0x0000062a 16  17   .dynstr                ascii   __stack_chk_fail
+15  0x0000063b 0x0000063b 17  18   .dynstr                ascii   __stack_chk_guard
+16  0x0000064d 0x0000064d 11  12   .dynstr                ascii   alipay_name
+17  0x00000659 0x00000659 5   6    .dynstr                ascii   close
+18  0x0000065f 0x0000065f 15  16   .dynstr                ascii   g_alipay_handle
+19  0x0000066f 0x0000066f 11  12   .dynstr                ascii   g_ta_handle
+20  0x0000067b 0x0000067b 22  23   .dynstr                ascii   get_key_from_keymaster
+21  0x00000692 0x00000692 12  13   .dynstr                ascii   gettimeofday
+22  0x0000069f 0x0000069f 19  20   .dynstr                ascii   gf_ca_close_session
+23  0x000006b3 0x000006b3 20  21   .dynstr                ascii   gf_ca_invoke_command
+24  0x000006c8 0x000006c8 18  19   .dynstr                ascii   gf_ca_open_session
+25  0x000006db 0x000006db 16  17   .dynstr                ascii   gf_ca_set_handle
+26  0x000006ec 0x000006ec 5   6    .dynstr                ascii   ioctl
+27  0x000006f2 0x000006f2 9   10   .dynstr                ascii   localtime
+28  0x000006fc 0x000006fc 6   7    .dynstr                ascii   memcpy
+29  0x00000703 0x00000703 6   7    .dynstr                ascii   memset
+30  0x0000070a 0x0000070a 4   5    .dynstr                ascii   mmap
+31  0x0000070f 0x0000070f 6   7    .dynstr                ascii   munmap
+32  0x00000716 0x00000716 11  12   .dynstr                ascii   ta_buf_size
+33  0x00000722 0x00000722 7   8    .dynstr                ascii   ta_name
+34  0x0000072a 0x0000072a 7   8    .dynstr                ascii   ta_path
+35  0x00000732 0x00000732 16  17   .dynstr                ascii   QSEECom_send_cmd
+36  0x00000743 0x00000743 11  12   .dynstr                ascii   __bss_start
+37  0x0000074f 0x0000074f 4   5    .dynstr                ascii   _end
+38  0x00000754 0x00000754 6   7    .dynstr                ascii   _edata
+39  0x0000075b 0x0000075b 16  17   .dynstr                ascii   libQSEEComAPI.so
+40  0x0000076c 0x0000076c 9   10   .dynstr                ascii   libc++.so
+41  0x00000776 0x00000776 8   9    .dynstr                ascii   libdl.so
+42  0x0000077f 0x0000077f 7   8    .dynstr                ascii   libm.so
+43  0x00000787 0x00000787 9   10   .dynstr                ascii   liblog.so
+44  0x000007ac 0x000007ac 6   7    .gnu.hash              ascii   ` E\b\b,
+45  0x000007b3 0x000007b3 5   6    .gnu.hash              ascii   E\b\b\t4
+46  0x000007cb 0x000007cb 4   7    .gnu.hash              utf8    "ޙ։j
+47  0x00001233 0x00001233 4   5    .text                  ascii   2\b}\t
+48  0x000017fc 0x000017fc 15  16   .rodata                ascii   /firmware/image
+49  0x0000180c 0x0000180c 20  21   .rodata                ascii   /system/etc/firmware
+50  0x00001821 0x00001821 18  19   .rodata                ascii   [goodix_ca_entry]
+51  0x00001837 0x00001837 18  19   .rodata                ascii   gf_ca_open_session
+52  0x0000184a 0x0000184a 23  24   .rodata                ascii   [%s] GF_CA's version:%s
+53  0x00001862 0x00001862 12  13   .rodata                ascii   gf_ca_v1.1.1
+54  0x0000186f 0x0000186f 36  37   .rodata                ascii   Loading %s failed: ret=%d, errno=%d.
+55  0x00001894 0x00001894 19  20   .rodata                ascii   Loading %s Succeed.
+56  0x000018a8 0x000018a8 19  20   .rodata                ascii   gf_ca_close_session
+57  0x000018bc 0x000018bc 34  35   .rodata                ascii   Unload %s failed: ret=%d, errno=%d
+58  0x000018df 0x000018df 18  19   .rodata                ascii   Unload %s succeed.
+59  0x000018f2 0x000018f2 20  21   .rodata                ascii   g_ta_handle is NULL.
+60  0x00001907 0x00001907 40  41   .rodata                ascii   [%s] gx_ta_send_modified_cmd_req success
+61  0x00001930 0x00001930 20  21   .rodata                ascii   gf_ca_invoke_command
+62  0x00001945 0x00001945 25  26   .rodata                ascii   [%s] ta execution succeed
+63  0x0000195f 0x0000195f 34  35   .rodata                ascii   [%s] ta execution failed, errno=%d
+64  0x00001982 0x00001982 48  49   .rodata                ascii   [%s] gx_ta_send_modified_cmd_req fail, teeRet=%d
+65  0x000019b3 0x000019b3 13  14   .rodata                ascii   send_hmac_key
+66  0x000019c1 0x000019c1 35  36   .rodata                ascii   [%s] begin, token = %d, cmd_id = %d
+67  0x000019e5 0x000019e5 27  28   .rodata                ascii   gx_ta_send_modified_cmd_req
+68  0x00001a01 0x00001a01 41  42   .rodata                ascii   qsc_ION_memalloc failed with retval = %d\n
+69  0x00001a2b 0x00001a2b 50  51   .rodata                ascii   QSEECom_send_modified_cmd failed with retval = %d\n
+70  0x00001a5e 0x00001a5e 8   9    .rodata                ascii   [%s] end
+71  0x00001a67 0x00001a67 8   9    .rodata                ascii   /dev/ion
+72  0x00001a70 0x00001a70 30  31   .rodata                ascii   Error::Cannot open ION device\n
+73  0x00001a8f 0x00001a8f 43  44   .rodata                ascii   Error::Error while trying to allocate data\n
+74  0x00001abb 0x00001abb 38  39   .rodata                ascii   Error::ION alloc data returned a NULL\n
+75  0x00001ae2 0x00001ae2 37  38   .rodata                ascii   Error::Failed doing ION_IOC_MAP call\n
+76  0x00001b08 0x00001b08 23  24   .rodata                ascii   Error::ION MMAP failed\n
+77  0x00001b20 0x00001b20 42  43   .rodata                ascii   Error::ION FREE ioctl returned error = %d\n
+78  0x00001b4b 0x00001b4b 49  50   .rodata                ascii   Error::Unmapping ION Buffer failed with ret = %d\n
+79  0x00001b7d 0x00001b7d 50  51   .rodata                ascii   Error::ION Memory FREE ioctl failed with ret = %d\n
+80  0x00001bb0 0x00001bb0 23  24   .rodata                ascii   [goodix_qsee_keymaster]
+81  0x00001bc8 0x00001bc8 10  11   .rodata                ascii   [%s] enter
+82  0x00001bd3 0x00001bd3 22  23   .rodata                ascii   get_key_from_keymaster
+83  0x00001bea 0x00001bea 29  30   .rodata                ascii   [%s] args is null and invalid
+84  0x00001c08 0x00001c08 42  43   .rodata                ascii   [%s] keymaster start fail,ret=%d, errno=%d
+85  0x00001c33 0x00001c33 48  49   .rodata                ascii   [%s] keymaster start fail,km handle=%p, errno=%d
+86  0x00001c64 0x00001c64 51  52   .rodata                ascii   [%s] keymaster start success,km handle=%p, errno=%d
+87  0x00001c98 0x00001c98 80  81   .rodata                ascii   [%s] km get key ret:%d, token_rsp:%p, rsp.status:0x%x, rsp.offset:%d, rsp.len:%d
+88  0x00001ce9 0x00001ce9 20  21   .rodata                ascii   [%s] get key failed.
+89  0x00001cfe 0x00001cfe 21  22   .rodata                ascii   [%s] get key success.
+90  0x00001d14 0x00001d14 39  40   .rodata                ascii   [%s] Unload %s failed: ret=%d, errno=%d
+91  0x00001d3c 0x00001d3c 23  24   .rodata                ascii   [%s] Unload %s succeed.
+92  0x00001d54 0x00001d54 9   10   .rodata                ascii   [%s] exit
+93  0x00001d5e 0x00001d5e 9   10   .rodata                ascii   keymaster
+94  0x00003018 0x00004018 8   9    .data                  ascii   goodixfp
+95  0x00003021 0x00004021 6   7    .data                  ascii   alipay
+96  0x0000302d 0x00000001 36  37   .comment               ascii   GCC: (GNU) 4.9 20150123 (prerelease)
+97  0x00003052 0x00000026 60  61   .comment               ascii   Android clang version 3.8.256229  (based on LLVM 3.8.256229)
+98  0x000030a0 0x00000010 9   10   .note.gnu.gold-version ascii   gold 1.11
+99  0x000030ad 0x00000001 9   10   .shstrtab              ascii   .shstrtab
+100 0x000030b7 0x0000000b 19  20   .shstrtab              ascii   .note.android.ident
+101 0x000030cb 0x0000001f 18  19   .shstrtab              ascii   .note.gnu.build-id
+102 0x000030de 0x00000032 7   8    .shstrtab              ascii   .dynsym
+103 0x000030e6 0x0000003a 7   8    .shstrtab              ascii   .dynstr
+104 0x000030ee 0x00000042 9   10   .shstrtab              ascii   .gnu.hash
+105 0x000030f8 0x0000004c 12  13   .shstrtab              ascii   .gnu.version
+106 0x00003105 0x00000059 14  15   .shstrtab              ascii   .gnu.version_d
+107 0x00003114 0x00000068 14  15   .shstrtab              ascii   .gnu.version_r
+108 0x00003123 0x00000077 9   10   .shstrtab              ascii   .rela.dyn
+109 0x0000312d 0x00000081 9   10   .shstrtab              ascii   .rela.plt
+110 0x00003137 0x0000008b 5   6    .shstrtab              ascii   .text
+111 0x0000313d 0x00000091 7   8    .shstrtab              ascii   .rodata
+112 0x00003145 0x00000099 9   10   .shstrtab              ascii   .eh_frame
+113 0x0000314f 0x000000a3 13  14   .shstrtab              ascii   .eh_frame_hdr
+114 0x0000315d 0x000000b1 11  12   .shstrtab              ascii   .fini_array
+115 0x00003169 0x000000bd 8   9    .shstrtab              ascii   .dynamic
+116 0x00003172 0x000000c6 4   5    .shstrtab              ascii   .got
+117 0x00003177 0x000000cb 8   9    .shstrtab              ascii   .got.plt
+118 0x00003180 0x000000d4 5   6    .shstrtab              ascii   .data
+119 0x00003186 0x000000da 4   5    .shstrtab              ascii   .bss
+120 0x0000318b 0x000000df 8   9    .shstrtab              ascii   .comment
+121 0x00003194 0x000000e8 22  23   .shstrtab              ascii   .note.gnu.gold-version
+0x00000b58    1     16 sym.imp.__cxa_finalize
+0x00000b78    1     16 sym.imp.__register_atfork
+0x00000c08    1     16 sym.imp.open
+0x00000b68    1     16 sym.imp.__cxa_atexit
+0x00000c68    1     16 sym.imp.QSEECom_send_modified_cmd
+0x00000bf8    1     16 sym.imp.QSEECom_shutdown_app
+0x00000b98    1     16 sym.imp.QSEECom_start_app
+0x00000b88    1     16 sym.imp.__android_log_print
+0x00000ba8    1     16 sym.imp.__errno
+0x00000be8    1     16 sym.imp.__stack_chk_fail
+0x00000c28    1     16 sym.imp.close
+0x00000c48    1     16 sym.imp.gettimeofday
+0x00000c18    1     16 sym.imp.ioctl
+0x00000c58    1     16 sym.imp.localtime
+0x00000c38    1     16 sym.imp.memcpy
+0x00000bb8    1     16 sym.imp.memset
+0x00000c78    1     16 sym.imp.mmap
+0x00000c88    1     16 sym.imp.munmap
+0x00000c98    1     16 sym.imp.QSEECom_send_cmd
+0x00000ca8    1     28 entry0
+0x0000153c   16    704 sym.get_key_from_keymaster
+0x00001024   31   1100 sym.gf_ca_invoke_command
+0x00000d58    1      4 sym.gf_ca_set_handle
+0x00000d5c    7    500 sym.gf_ca_open_session
+0x00000f50    5    212 sym.gf_ca_close_session
+0x00000bc8    1     16 fcn.00000bc8
+0x00000bd8    1     16 fcn.00000bd8
+0x00001470    7    204 fcn.00001470
+0x00000b38    1     20 section..plt
+0x00000cc4    3     40 fcn.00000cc4
+0x00000cec    1     52 fcn.00000cec
+0x00000d20    1     56 fcn.00000d20

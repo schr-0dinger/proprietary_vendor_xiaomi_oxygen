@@ -1,0 +1,402 @@
+arch     arm
+baddr    0x0
+binsz    9058
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                             demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+33  0x0000118c 0x0000218c GLOBAL FUNC 84       osal_lock_destroy
+34  0x000012b0 0x000022b0 GLOBAL FUNC 18       osal_mem_set
+35  0x0000127c 0x0000227c GLOBAL FUNC 24       osal_mem_zalloc
+36  0x000013bc 0x000023bc GLOBAL FUNC 128      osal_cond_destroy
+37  0x000011e0 0x000021e0 GLOBAL FUNC 76       osal_lock_acquire
+38  0x000017d8 0x000027d8 GLOBAL FUNC 4        osal_thread_close_from_thread_fn
+39  0x00001610 0x00002610 GLOBAL FUNC 312      osal_thread_create
+40  0x0000175c 0x0000275c GLOBAL FUNC 124      osal_thread_destroy
+41  0x000017dc 0x000027dc GLOBAL FUNC 152      osal_dev_open
+42  0x000018d8 0x000028d8 GLOBAL FUNC 92       osal_dev_read
+43  0x0000110c 0x0000210c GLOBAL FUNC 128      osal_lock_create
+44  0x00001294 0x00002294 GLOBAL FUNC 4        osal_mem_calloc
+45  0x000012c4 0x000022c4 GLOBAL FUNC 248      osal_cond_create
+46  0x00001574 0x00002574 GLOBAL FUNC 156      osal_cond_signal
+47  0x0000143c 0x0000243c GLOBAL FUNC 120      osal_cond_wait
+48  0x00001278 0x00002278 GLOBAL FUNC 4        osal_mem_alloc
+49  0x00001298 0x00002298 GLOBAL FUNC 4        osal_mem_realloc
+50  0x000014b4 0x000024b4 GLOBAL FUNC 192      osal_cond_timedwait
+51  0x00001874 0x00002874 GLOBAL FUNC 100      osal_dev_close
+52  0x0000122c 0x0000222c GLOBAL FUNC 76       osal_lock_release
+53  0x000012a0 0x000022a0 GLOBAL FUNC 16       osal_mem_cpy
+54  0x0000129c 0x0000229c GLOBAL FUNC 4        osal_mem_free
+55  0x00001934 0x00002934 GLOBAL FUNC 92       osal_dev_write
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000154   0x18 0x00000154   0x18 -r-- NOTE        .note.android.ident
+2   0x0000016c   0x20 0x0000016c   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x0000018c  0x380 0x0000018c  0x380 -r-- DYNSYM      .dynsym
+4   0x0000050c   0x70 0x0000050c   0x70 -r-- GNU_VERSYM  .gnu.version
+5   0x0000057c   0x50 0x0000057c   0x50 -r-- GNU_VERNEED .gnu.version_r
+6   0x000005cc   0xc0 0x000005cc   0xc0 -r-- GNU_HASH    .gnu.hash
+7   0x0000068c  0x3c8 0x0000068c  0x3c8 -r-- STRTAB      .dynstr
+8   0x00000a54    0xd 0x00000a54    0xd -r-- ----        .rel.dyn
+9   0x00000a64    0x8 0x00000a64    0x8 -r-- ----        .relr.dyn
+10  0x00000a6c   0xb0 0x00000a6c   0xb0 -r-- ----        .ARM.exidx
+11  0x00000b1c   0xf8 0x00000b1c   0xf8 -r-- REL         .rel.plt
+12  0x00000c14  0x4e3 0x00000c14  0x4e3 -r-- PROGBITS    .rodata
+13  0x000010f8  0x8f4 0x000020f8  0x8f4 -r-x PROGBITS    .text
+14  0x000019f0  0x210 0x000029f0  0x210 -r-x PROGBITS    .plt
+15  0x00001c00    0x4 0x00003c00    0x4 -rw- PROGBITS    .data.rel.ro
+16  0x00001c04    0x8 0x00003c04    0x8 -rw- FINI_ARRAY  .fini_array
+17  0x00001c0c   0xe8 0x00003c0c   0xe8 -rw- DYNAMIC     .dynamic
+18  0x00001cf4    0x4 0x00003cf4    0x4 -rw- PROGBITS    .got
+19  0x00001cf8   0x88 0x00003cf8   0x88 -rw- PROGBITS    .got.plt
+20  0x00001d80   0x4e 0x00000000   0x4e ---- ----        .ARM.attributes
+21  0x00001dce   0xec 0x00000000   0xec ---- STRTAB      .shstrtab
+22  0x00001eba  0x4a8 0x00000000  0x4a8 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \t(
+1   0x00000038 0x00000038 5   24                       utf32le 444ĠĠ
+2   0x00000160 0x00000160 7   8    .note.android.ident ascii   Android
+3   0x000005f4 0x000005f4 4   5    .gnu.hash           ascii     @@
+4   0x0000061c 0x0000061c 5   24   .gnu.hash           utf32le !%+04
+5   0x00000639 0x00000639 5   6    .gnu.hash           ascii   674aW
+6   0x0000068d 0x0000068d 14  15   .dynstr             ascii   __cxa_finalize
+7   0x0000069c 0x0000069c 19  20   .dynstr             ascii   __android_log_print
+8   0x000006b0 0x000006b0 4   5    .dynstr             ascii   free
+9   0x000006b5 0x000006b5 6   7    .dynstr             ascii   malloc
+10  0x000006bc 0x000006bc 17  18   .dynstr             ascii   osal_lock_acquire
+11  0x000006ce 0x000006ce 16  17   .dynstr             ascii   osal_lock_create
+12  0x000006df 0x000006df 17  18   .dynstr             ascii   osal_lock_destroy
+13  0x000006f1 0x000006f1 17  18   .dynstr             ascii   osal_lock_release
+14  0x00000703 0x00000703 21  22   .dynstr             ascii   pthread_mutex_destroy
+15  0x00000719 0x00000719 18  19   .dynstr             ascii   pthread_mutex_init
+16  0x0000072c 0x0000072c 18  19   .dynstr             ascii   pthread_mutex_lock
+17  0x0000073f 0x0000073f 20  21   .dynstr             ascii   pthread_mutex_unlock
+18  0x00000754 0x00000754 6   7    .dynstr             ascii   calloc
+19  0x0000075b 0x0000075b 14  15   .dynstr             ascii   osal_mem_alloc
+20  0x0000076a 0x0000076a 15  16   .dynstr             ascii   osal_mem_calloc
+21  0x0000077a 0x0000077a 12  13   .dynstr             ascii   osal_mem_cpy
+22  0x00000787 0x00000787 13  14   .dynstr             ascii   osal_mem_free
+23  0x00000795 0x00000795 16  17   .dynstr             ascii   osal_mem_realloc
+24  0x000007a6 0x000007a6 12  13   .dynstr             ascii   osal_mem_set
+25  0x000007b3 0x000007b3 15  16   .dynstr             ascii   osal_mem_zalloc
+26  0x000007c3 0x000007c3 7   8    .dynstr             ascii   realloc
+27  0x000007cb 0x000007cb 16  17   .dynstr             ascii   __stack_chk_fail
+28  0x000007dc 0x000007dc 17  18   .dynstr             ascii   __stack_chk_guard
+29  0x000007ee 0x000007ee 13  14   .dynstr             ascii   clock_gettime
+30  0x000007fc 0x000007fc 16  17   .dynstr             ascii   osal_cond_create
+31  0x0000080d 0x0000080d 17  18   .dynstr             ascii   osal_cond_destroy
+32  0x0000081f 0x0000081f 16  17   .dynstr             ascii   osal_cond_signal
+33  0x00000830 0x00000830 19  20   .dynstr             ascii   osal_cond_timedwait
+34  0x00000844 0x00000844 14  15   .dynstr             ascii   osal_cond_wait
+35  0x00000853 0x00000853 20  21   .dynstr             ascii   pthread_cond_destroy
+36  0x00000868 0x00000868 17  18   .dynstr             ascii   pthread_cond_init
+37  0x0000087a 0x0000087a 19  20   .dynstr             ascii   pthread_cond_signal
+38  0x0000088e 0x0000088e 22  23   .dynstr             ascii   pthread_cond_timedwait
+39  0x000008a5 0x000008a5 17  18   .dynstr             ascii   pthread_cond_wait
+40  0x000008b7 0x000008b7 21  22   .dynstr             ascii   pthread_condattr_init
+41  0x000008cd 0x000008cd 25  26   .dynstr             ascii   pthread_condattr_setclock
+42  0x000008e7 0x000008e7 32  33   .dynstr             ascii   osal_thread_close_from_thread_fn
+43  0x00000908 0x00000908 18  19   .dynstr             ascii   osal_thread_create
+44  0x0000091b 0x0000091b 19  20   .dynstr             ascii   osal_thread_destroy
+45  0x0000092f 0x0000092f 20  21   .dynstr             ascii   pthread_attr_destroy
+46  0x00000944 0x00000944 17  18   .dynstr             ascii   pthread_attr_init
+47  0x00000956 0x00000956 27  28   .dynstr             ascii   pthread_attr_setdetachstate
+48  0x00000972 0x00000972 14  15   .dynstr             ascii   pthread_create
+49  0x00000981 0x00000981 12  13   .dynstr             ascii   pthread_join
+50  0x0000098e 0x0000098e 7   8    .dynstr             ascii   __errno
+51  0x00000996 0x00000996 8   9    .dynstr             ascii   __open_2
+52  0x0000099f 0x0000099f 10  11   .dynstr             ascii   __read_chk
+53  0x000009aa 0x000009aa 11  12   .dynstr             ascii   __write_chk
+54  0x000009b6 0x000009b6 5   6    .dynstr             ascii   close
+55  0x000009bc 0x000009bc 14  15   .dynstr             ascii   osal_dev_close
+56  0x000009cb 0x000009cb 13  14   .dynstr             ascii   osal_dev_open
+57  0x000009d9 0x000009d9 13  14   .dynstr             ascii   osal_dev_read
+58  0x000009e7 0x000009e7 14  15   .dynstr             ascii   osal_dev_write
+59  0x000009f6 0x000009f6 7   8    .dynstr             ascii   memmove
+60  0x000009fe 0x000009fe 6   7    .dynstr             ascii   memset
+61  0x00000a05 0x00000a05 9   10   .dynstr             ascii   liblog.so
+62  0x00000a0f 0x00000a0f 6   7    .dynstr             ascii   LIBLOG
+63  0x00000a16 0x00000a16 7   8    .dynstr             ascii   libc.so
+64  0x00000a1e 0x00000a1e 4   5    .dynstr             ascii   LIBC
+65  0x00000a23 0x00000a23 6   7    .dynstr             ascii   LIBC_N
+66  0x00000a2a 0x00000a2a 9   10   .dynstr             ascii   libc++.so
+67  0x00000a34 0x00000a34 7   8    .dynstr             ascii   libm.so
+68  0x00000a3c 0x00000a3c 8   9    .dynstr             ascii   libdl.so
+69  0x00000a45 0x00000a45 14  15   .dynstr             ascii   libgcs-osal.so
+70  0x00000a54 0x00000a54 4   5    .rel.dyn            ascii   APS2
+71  0x00000c14 0x00000c14 17  18   .rodata             ascii   %s: lock is NULL\n
+72  0x00000c26 0x00000c26 42  43   .rodata             ascii   %s: Failed to destroy attributes, rc = %d\n
+73  0x00000c51 0x00000c51 16  17   .rodata             ascii   %s: dev is NULL\n
+74  0x00000c62 0x00000c62 16  17   .rodata             ascii   osal_lock_create
+75  0x00000c73 0x00000c73 39  40   .rodata             ascii   %s: failed to allocate memory for lock\n
+76  0x00000c9b 0x00000c9b 17  18   .rodata             ascii   osal_lock_acquire
+77  0x00000cad 0x00000cad 39  40   .rodata             ascii   %s: Failed to init attributes, rc = %d\n
+78  0x00000cd5 0x00000cd5 34  35   .rodata             ascii   %s: failed to allocate dev memory\n
+79  0x00000cf8 0x00000cf8 16  17   .rodata             ascii   osal_cond_create
+80  0x00000d09 0x00000d09 39  40   .rodata             ascii   %s: Failed to join the thread, rc = %d\n
+81  0x00000d31 0x00000d31 20  21   .rodata             ascii   %s: write failed: %d
+82  0x00000d46 0x00000d46 37  38   .rodata             ascii   %s: Failed to destroy mutex, rc = %d\n
+83  0x00000d6c 0x00000d6c 23  24   .rodata             ascii   %s: ret_thread is NULL\n
+84  0x00000d84 0x00000d84 19  20   .rodata             ascii   %s: Thread is NULL\n
+85  0x00000d98 0x00000d98 19  20   .rodata             ascii   %s: open failed: %d
+86  0x00000dac 0x00000dac 36  37   .rodata             ascii   %s: Failed to destroy cond, rc = %d\n
+87  0x00000dd1 0x00000dd1 13  14   .rodata             ascii   osal_dev_open
+88  0x00000ddf 0x00000ddf 14  15   .rodata             ascii   osal_dev_write
+89  0x00000dee 0x00000dee 13  14   .rodata             ascii   osal_dev_read
+90  0x00000dfc 0x00000dfc 14  15   .rodata             ascii   osal_cond_wait
+91  0x00000e0b 0x00000e0b 18  19   .rodata             ascii   osal_thread_create
+92  0x00000e1e 0x00000e1e 19  20   .rodata             ascii   osal_thread_destroy
+93  0x00000e32 0x00000e32 19  20   .rodata             ascii   %s: read failed: %d
+94  0x00000e46 0x00000e46 27  28   .rodata             ascii   %s: Failed to release lock\n
+95  0x00000e62 0x00000e62 16  17   .rodata             ascii   osal_cond_signal
+96  0x00000e73 0x00000e73 17  18   .rodata             ascii   %s: cond is NULL\n
+97  0x00000e85 0x00000e85 17  18   .rodata             ascii   osal_cond_destroy
+98  0x00000e97 0x00000e97 35  36   .rodata             ascii   %s: failed to allocate cond memory\n
+99  0x00000ebb 0x00000ebb 22  23   .rodata             ascii   %s: condition is NULL\n
+100 0x00000ed2 0x00000ed2 38  39   .rodata             ascii   %s: Failed to signal on cond, rc = %d\n
+101 0x00000ef9 0x00000ef9 30  31   .rodata             ascii   %s: Failed to unlock, rc = %d\n
+102 0x00000f18 0x00000f18 36  37   .rodata             ascii   %s: Failed to wait on cond, rc = %d\n
+103 0x00000f3d 0x00000f3d 27  28   .rodata             ascii   %s: Failed to acquire lock\n
+104 0x00000f59 0x00000f59 17  18   .rodata             ascii   osal_lock_release
+105 0x00000f6b 0x00000f6b 21  22   .rodata             ascii   %s: ret_lock is NULL\n
+106 0x00000f81 0x00000f81 36  37   .rodata             ascii   %s: Failed to acquire lock, rc = %d\n
+107 0x00000fa6 0x00000fa6 20  21   .rodata             ascii   %s: close failed: %d
+108 0x00000fbb 0x00000fbb 17  18   .rodata             ascii   osal_lock_destroy
+109 0x00000fcd 0x00000fcd 33  34   .rodata             ascii   %s: Failed to init cond, rc = %d\n
+110 0x00000fef 0x00000fef 30  31   .rodata             ascii   %s: Failed to allocate memory\n
+111 0x0000100e 0x0000100e 34  35   .rodata             ascii   %s: Failed to init mutex, rc = %d\n
+112 0x00001031 0x00001031 26  27   .rodata             ascii   %s: Failed to create lock\n
+113 0x0000104c 0x0000104c 40  41   .rodata             ascii   %s: Failed to set detach state, rc = %d\n
+114 0x00001075 0x00001075 37  38   .rodata             ascii   %s: Failed to create thread, rc = %d\n
+115 0x0000109b 0x0000109b 28  29   .rodata             ascii   %s: dev or dev_name is NULL\n
+116 0x000010b8 0x000010b8 14  15   .rodata             ascii   osal_dev_close
+117 0x000010c7 0x000010c7 27  28   .rodata             ascii   %s: Failed to destroy lock\n
+118 0x000010e3 0x000010e3 19  20   .rodata             ascii   osal_cond_timedwait
+119 0x0000112d 0x0000212c 5   6    .text               ascii   !zD{D
+120 0x00001140 0x00002140 4   5    .text               ascii   \fJ\rK
+121 0x00001147 0x00002146 5   6    .text               ascii   !zD{D
+122 0x00001156 0x00002156 4   5    .text               ascii   \tJ\tK
+123 0x0000115d 0x0000215c 5   6    .text               ascii   !zD{D
+124 0x0000116d 0x0000216c 4   5    .text               ascii    ,`p
+125 0x000011a1 0x000021a0 5   6    .text               ascii   !zD{D
+126 0x000011ae 0x000021ae 4   5    .text               ascii   \bJ\bK
+127 0x000011b5 0x000021b4 5   6    .text               ascii   !zD{D
+128 0x000011f3 0x000021f2 5   6    .text               ascii   !zD{D
+129 0x00001207 0x00002206 5   6    .text               ascii   !zD{D
+130 0x0000123f 0x0000223e 5   6    .text               ascii   !zD{D
+131 0x00001253 0x00002252 5   6    .text               ascii   !zD{D
+132 0x00001288 0x00002288 4   5    .text               ascii   (F!F
+133 0x000012c9 0x000022c8 9   10   .text               ascii   F2HxD\ah8h
+134 0x000012f3 0x000022f2 9   10   .text               ascii   !,J-KzD{D
+135 0x00001302 0x00002302 4   5    .text               ascii   %J%K
+136 0x00001309 0x00002308 5   6    .text               ascii   !zD{D
+137 0x00001318 0x00002318 4   5    .text               ascii   !J"K
+138 0x0000131f 0x0000231e 5   6    .text               ascii   !zD{D
+139 0x0000134d 0x0000234c 4   5    .text               ascii   JzD\b
+140 0x00001352 0x00002352 4   5    .text               ascii    F4`
+141 0x0000137c 0x0000237c 4   5    .text               ascii   hB9h
+142 0x000013d5 0x000023d4 5   6    .text               ascii   KzD{D
+143 0x000013f1 0x000023f0 5   6    .text               ascii   KzD{D
+144 0x000013fe 0x000023fe 4   5    .text               ascii   \tJ\tK
+145 0x00001405 0x00002404 5   6    .text               ascii   !zD{D
+146 0x00001457 0x00002456 5   6    .text               ascii   KzD{D
+147 0x00001473 0x00002472 5   6    .text               ascii   KzD{D
+148 0x00001487 0x00002486 5   6    .text               ascii   !zD{D
+149 0x000014b9 0x000024b8 9   10   .text               ascii   F'HxD\ah8h
+150 0x00001503 0x00002502 5   6    .text               ascii   KzD{D
+151 0x00001517 0x00002516 5   6    .text               ascii   !zD{D
+152 0x00001537 0x00002536 9   10   .text               ascii   !\fJ\rKzD{D
+153 0x00001544 0x00002544 4   5    .text               ascii   eB8h
+154 0x00001589 0x00002588 9   10   .text               ascii   !\eJ\eKzD{D
+155 0x000015a1 0x000025a0 5   6    .text               ascii   !zD{D
+156 0x000015c1 0x000025c0 5   6    .text               ascii   KzD{D
+157 0x000015d9 0x000025d8 9   10   .text               ascii   !\vJ\vKzD{D
+158 0x0000161c 0x0000261c 7   8    .text               ascii   xD\ah8h\b
+159 0x0000164f 0x0000264e 9   10   .text               ascii   !5J6KzD{D
+160 0x0000165e 0x0000265e 4   5    .text               ascii   .J.K
+161 0x00001665 0x00002664 5   6    .text               ascii   !zD{D
+162 0x00001674 0x00002674 4   5    .text               ascii   *J+K
+163 0x0000167b 0x0000267a 5   6    .text               ascii   !zD{D
+164 0x00001697 0x00002696 5   6    .text               ascii   F%JzD
+165 0x000016aa 0x000026aa 6   7    .text               ascii   #J FzD
+166 0x000016b9 0x000026b8 5   6    .text               ascii   F JzD
+167 0x000016d6 0x000026d6 5   6    .text               ascii   hB9h\b
+168 0x000016f7 0x000026f6 5   6    .text               ascii   KzD{D
+169 0x00001787 0x00002786 5   6    .text               ascii   KzD{D
+170 0x00001794 0x00002794 4   5    .text               ascii   \fJ\rK
+171 0x0000179b 0x0000279a 5   6    .text               ascii   !zD{D
+172 0x000017f3 0x000027f2 5   6    .text               ascii   F8F1F
+173 0x00001803 0x00002802 4   5    .text               ascii    ,`'
+174 0x0000180f 0x0000280e 5   6    .text               ascii   !zD{D
+175 0x00001825 0x00002824 5   6    .text               ascii   !zD{D
+176 0x00001841 0x00002840 9   10   .text               ascii    \nJ\nKzD{D
+177 0x0000184e 0x0000284e 4   5    .text               ascii   -h F
+178 0x00001899 0x00002898 5   6    .text               ascii   KzD{D
+179 0x000018a2 0x000028a2 6   7    .text               ascii   (hEB F
+180 0x000018b5 0x000028b4 5   6    .text               ascii   !zD{D
+181 0x000018f9 0x000028f8 9   10   .text               ascii    \fJ\fKzD{D
+182 0x00001906 0x00002906 5   6    .text               ascii    h@B\t
+183 0x00001913 0x00002912 5   6    .text               ascii   !zD{D
+184 0x00001955 0x00002954 9   10   .text               ascii    \fJ\fKzD{D
+185 0x00001962 0x00002962 5   6    .text               ascii    h@B\t
+186 0x0000196f 0x0000296e 5   6    .text               ascii   !zD{D
+187 0x000019b9 0x000029b8 4   5    .text               ascii   D`G@
+188 0x000019c5 0x000029c4 4   5    .text               ascii   D`G@
+189 0x000019d1 0x000029d0 4   5    .text               ascii   D`G@
+190 0x000019dd 0x000029dc 4   5    .text               ascii   D`G@
+191 0x00001d85 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+192 0x00001d90 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+193 0x00001d97 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+194 0x00001dcf 0x00000001 11  12   .shstrtab           ascii   .fini_array
+195 0x00001ddb 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+196 0x00001de6 0x00000018 5   6    .shstrtab           ascii   .text
+197 0x00001dec 0x0000001e 4   5    .shstrtab           ascii   .got
+198 0x00001df1 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+199 0x00001e05 0x00000037 8   9    .shstrtab           ascii   .got.plt
+200 0x00001e0e 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+201 0x00001e17 0x00000049 15  16   .shstrtab           ascii   .ARM.attributes
+202 0x00001e27 0x00000059 7   8    .shstrtab           ascii   .dynstr
+203 0x00001e2f 0x00000061 14  15   .shstrtab           ascii   .gnu.version_r
+204 0x00001e3e 0x00000070 12  13   .shstrtab           ascii   .data.rel.ro
+205 0x00001e4b 0x0000007d 9   10   .shstrtab           ascii   .relr.dyn
+206 0x00001e55 0x00000087 8   9    .shstrtab           ascii   .rel.dyn
+207 0x00001e5e 0x00000090 12  13   .shstrtab           ascii   .gnu.version
+208 0x00001e6b 0x0000009d 7   8    .shstrtab           ascii   .dynsym
+209 0x00001e73 0x000000a5 9   10   .shstrtab           ascii   .gnu.hash
+210 0x00001e7d 0x000000af 18  19   .shstrtab           ascii   .note.gnu.build-id
+211 0x00001e90 0x000000c2 8   9    .shstrtab           ascii   .dynamic
+212 0x00001e99 0x000000cb 9   10   .shstrtab           ascii   .shstrtab
+213 0x00001ea3 0x000000d5 7   8    .shstrtab           ascii   .rodata
+214 0x00001eab 0x000000dd 14  15   .shstrtab           ascii   .gnu_debugdata
+215 0x00001ebb 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+216 0x00001f08 0x0000004e 4   6    .gnu_debugdata      utf8    $֨`\
+217 0x00001f19 0x0000005f 5   6    .gnu_debugdata      ascii   ADs4\b
+218 0x00001f47 0x0000008d 7   8    .gnu_debugdata      ascii   N/g)f7-
+219 0x00001f7d 0x000000c3 5   6    .gnu_debugdata      ascii   3"rTS
+220 0x00001fa2 0x000000e8 4   7    .gnu_debugdata      utf8    /ԔѺL
+221 0x00002006 0x0000014c 5   6    .gnu_debugdata      ascii   D1N\rW
+222 0x00002032 0x00000178 5   7    .gnu_debugdata      utf8    =lYÊO
+223 0x0000203f 0x00000185 4   6    .gnu_debugdata      utf8    \a*)ڒ
+224 0x00002045 0x0000018b 4   6    .gnu_debugdata      utf8    ȳY-a
+225 0x0000208c 0x000001d2 4   5    .gnu_debugdata      ascii   "c\vw
+226 0x0000212a 0x00000270 4   5    .gnu_debugdata      ascii   A?m)
+227 0x00002141 0x00000287 4   5    .gnu_debugdata      ascii   \tl#}
+228 0x00002176 0x000002bc 4   6    .gnu_debugdata      utf8    6FeƏ
+229 0x00002191 0x000002d7 6   8    .gnu_debugdata      utf8    #:\fYu6
+230 0x0000219a 0x000002e0 4   5    .gnu_debugdata      ascii   &Z\ar
+231 0x000021d6 0x0000031c 4   5    .gnu_debugdata      ascii   h$$q
+232 0x00002217 0x0000035d 7   10   .gnu_debugdata      utf8    $2`Ǭ1dն
+233 0x00002253 0x00000399 4   6    .gnu_debugdata      utf8    ]ƨ<K
+234 0x00002288 0x000003ce 5   6    .gnu_debugdata      ascii   prk8s
+235 0x000022d6 0x0000041c 4   6    .gnu_debugdata      utf8    K˱7>
+236 0x0000251c 0x00000662 6   28                       utf32le @\tBଜଜø
+0x00002a04    1     12 sym.imp.__cxa_finalize
+0x00002a28    1      4 sym.imp.__android_log_print
+0x00002a34    1      8 sym.imp.free
+0x00002a10    1     12 sym.imp.malloc
+0x00002a40    1     12 sym.imp.pthread_mutex_destroy
+0x00002a1c    1      4 sym.imp.pthread_mutex_init
+0x00002a4c    1      4 sym.imp.pthread_mutex_lock
+0x00002a58    1      4 sym.imp.pthread_mutex_unlock
+0x00002a64    1      8 sym.imp.calloc
+0x00002a70    1     12 sym.imp.realloc
+0x00002aa0    1     12 sym.imp.__stack_chk_fail
+0x00002ac4    1      8 sym.imp.clock_gettime
+0x00002aac    1      4 sym.imp.pthread_cond_destroy
+0x00002a94    1      8 sym.imp.pthread_cond_init
+0x00002adc    1      4 sym.imp.pthread_cond_signal
+0x00002ad0    1     12 sym.imp.pthread_cond_timedwait
+0x00002ab8    1      4 sym.imp.pthread_cond_wait
+0x00002a7c    1      4 sym.imp.pthread_condattr_init
+0x00002a88    1      4 sym.imp.pthread_condattr_setclock
+0x00002b0c    1      4 sym.imp.pthread_attr_destroy
+0x00002ae8    1      4 sym.imp.pthread_attr_init
+0x00002af4    1      8 sym.imp.pthread_attr_setdetachstate
+0x00002b00    1     12 sym.imp.pthread_create
+0x00002b18    1      4 sym.imp.pthread_join
+0x00002b30    1     12 sym.imp.__errno
+0x00002b24    1      8 sym.imp.__open_2
+0x00002b48    1      4 sym.imp.__read_chk
+0x00002b54    1      8 sym.imp.__write_chk
+0x00002b3c    1      4 sym.imp.close
+0x00002b60    1     12 sym.imp.memmove
+0x00002b6c    1      4 sym.imp.memset
+0x000020f8    2     20 entry0
+0x0000218c    5     66 sym.osal_lock_destroy
+0x00002a60    1      4 fcn.00002a60
+0x00002a50    1      8 fcn.00002a50
+0x000022b0    1     18 sym.osal_mem_set
+0x00002994    2     28 sym.__aeabi_memset
+0x0000227c    3     24 sym.osal_mem_zalloc
+0x00002a20    1      8 fcn.00002a20
+0x000029a4    1     12 sym.__aeabi_memclr
+0x000023bc    9    102 sym.osal_cond_destroy
+0x000021e0    5     58 sym.osal_lock_acquire
+0x000027d8    1      4 sym.osal_thread_close_from_thread_fn
+0x00002610   23    298 sym.osal_thread_create
+0x0000275c   10    130 sym.osal_thread_destroy
+0x000027dc    9    128 sym.osal_dev_open
+0x000028d8    5     76 sym.osal_dev_read
+0x0000210c    7    102 sym.osal_lock_create
+0x00002a30    1      4 fcn.00002a30
+0x00002294    2     16 sym.osal_mem_calloc
+0x000022c4   16    208 sym.osal_cond_create
+0x00002574   10    124 sym.osal_cond_signal
+0x0000243c    8     96 sym.osal_cond_wait
+0x00002278    2     16 sym.osal_mem_alloc
+0x00002298    2     16 sym.osal_mem_realloc
+0x000024b4    7    140 sym.osal_cond_timedwait
+0x00002874    6     84 sym.osal_dev_close
+0x0000222c    5     58 sym.osal_lock_release
+0x00002a80    1      8 fcn.00002a80
+0x000022a0    1     16 sym.osal_mem_cpy
+0x00002990    2     16 sym.__aeabi_memmove
+0x0000229c    2     16 sym.osal_mem_free
+0x00002934    5     76 sym.osal_dev_write
+0x00002106    2      6 entry.fini0
+0x00002ab0    1      8 fcn.00002ab0
+0x00002ac0    1      4 fcn.00002ac0
+0x00002ae0    1      8 fcn.00002ae0
+0x00002af0    1      4 fcn.00002af0
+0x00002b10    1      8 fcn.00002b10
+0x00002b20    1      4 fcn.00002b20
+0x00002b40    1      8 fcn.00002b40
+0x00002b50    1      4 fcn.00002b50
+0x00002b70    1     12 fcn.00002b70
+0x00002b80    1     12 fcn.00002b80
+0x00002b90    1     12 fcn.00002b90
+0x00002ba0    1     12 fcn.00002ba0
+0x00002bb0    1     12 fcn.00002bb0
+0x00002bc0    1     12 fcn.00002bc0
+0x00002bd0    1     12 fcn.00002bd0

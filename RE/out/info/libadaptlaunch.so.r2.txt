@@ -1,0 +1,986 @@
+arch     arm
+baddr    0x0
+binsz    107036
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                                                                               demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+88  0x00019018 0x00019018 GLOBAL OBJ  80       _ZTV18AdaptLaunchFeature                                                                                                           vtable for AdaptLaunchFeature
+89  0x00016f60 0x00016f60 GLOBAL FUNC 636      _ZN17AdaptLaunchActionC2EmNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES6_                                      AdaptLaunchAction::AdaptLaunchAction(unsigned long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >)
+90  0x00010544 0x00010544 GLOBAL FUNC 572      _ZN18AdaptLaunchFeature18removeFromDatabaseEP17AdaptLaunchActionRNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE  AdaptLaunchFeature::removeFromDatabase(AdaptLaunchAction*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&)
+91  0x00010780 0x00010780 GLOBAL FUNC 1532     _ZN18AdaptLaunchFeature8runAsyncE19AsyncTriggerPayload                                                                             AdaptLaunchFeature::runAsync(AsyncTriggerPayload)
+92  0x00016964 0x00016964 GLOBAL FUNC 68       _ZN20AdaptLaunchMetaMeterC1ERK11FeatureInfoP10LMDatabaseIJ11inputDbDataEER12FeatureState                                           AdaptLaunchMetaMeter::AdaptLaunchMetaMeter(FeatureInfo const&, LMDatabase<inputDbData>*, FeatureState&)
+95  0x0000cec0 0x0000cec0 GLOBAL FUNC 868      _ZN18AdaptLaunchFeatureC2E11FeatureInfo                                                                                            AdaptLaunchFeature::AdaptLaunchFeature(FeatureInfo)
+96  0x00016f60 0x00016f60 GLOBAL FUNC 636      _ZN17AdaptLaunchActionC1EmNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES6_                                      AdaptLaunchAction::AdaptLaunchAction(unsigned long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >)
+102 0x000169bc 0x000169bc GLOBAL FUNC 52       _ZN20AdaptLaunchMetaMeterD0Ev                                                                                                      AdaptLaunchMetaMeter::~AdaptLaunchMetaMeter()
+104 0x0000dd70 0x0000dd70 GLOBAL FUNC 200      _ZN18AdaptLaunchFeature11isHeavyGameENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE                              AdaptLaunchFeature::isHeavyGame(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >)
+105 0x0000cec0 0x0000cec0 GLOBAL FUNC 868      _ZN18AdaptLaunchFeatureC1E11FeatureInfo                                                                                            AdaptLaunchFeature::AdaptLaunchFeature(FeatureInfo)
+110 ---------- 0x0001a8b8 GLOBAL OBJ  40       _ZN17AdaptLaunchAction6mMutexE                                                                                                     AdaptLaunchAction::mMutex
+115 0x000169a8 0x000169a8 GLOBAL FUNC 20       _ZN20AdaptLaunchMetaMeterD2Ev                                                                                                      AdaptLaunchMetaMeter::~AdaptLaunchMetaMeter()
+122 0x00010d80 0x00010d80 GLOBAL FUNC 908      _ZN18AdaptLaunchFeature7getDataERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEER11featureDatai                   AdaptLaunchFeature::getData(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, featureData&, int)
+123 0x0000dba0 0x0000dba0 GLOBAL FUNC 200      _ZN18AdaptLaunchFeatureD1Ev                                                                                                        AdaptLaunchFeature::~AdaptLaunchFeature()
+125 ---------- 0x0001a8a8 GLOBAL OBJ  1        _ZN18AdaptLaunchFeature15registerFeatureE                                                                                          AdaptLaunchFeature::registerFeature
+132 0x00017504 0x00017504 GLOBAL FUNC 72       _ZN17AdaptLaunchActionD1Ev                                                                                                         AdaptLaunchAction::~AdaptLaunchAction()
+134 0x00017834 0x00017834 GLOBAL FUNC 372      _ZN17AdaptLaunchAction11applyActionENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEjii                            AdaptLaunchAction::applyAction(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, unsigned int, int, int)
+135 0x0001734c 0x0001734c GLOBAL FUNC 440      _ZN17AdaptLaunchAction11getInstanceEv                                                                                              AdaptLaunchAction::getInstance()
+136 0x000179a8 0x000179a8 GLOBAL FUNC 20       _ZN17AdaptLaunchAction12removeActionEi                                                                                             AdaptLaunchAction::removeAction(int)
+142 0x000169f0 0x000169f0 GLOBAL FUNC 1384     _ZN20AdaptLaunchMetaMeter15writeToDataBaseENSt3__16vectorIP5MeterNS0_9allocatorIS3_EEEE                                            AdaptLaunchMetaMeter::writeToDataBase(std::__1::vector<Meter*, std::__1::allocator<Meter*> >)
+150 0x00016964 0x00016964 GLOBAL FUNC 68       _ZN20AdaptLaunchMetaMeterC2ERK11FeatureInfoP10LMDatabaseIJ11inputDbDataEER12FeatureState                                           AdaptLaunchMetaMeter::AdaptLaunchMetaMeter(FeatureInfo const&, LMDatabase<inputDbData>*, FeatureState&)
+152 0x00010d7c 0x00010d7c GLOBAL FUNC 4        _ZN18AdaptLaunchFeature12runAsyncIdleERKNSt3__16atomicIbEE                                                                         AdaptLaunchFeature::runAsyncIdle(std::__1::atomic<bool> const&)
+161 0x0000dfdc 0x0000dfdc GLOBAL FUNC 64       _ZN18AdaptLaunchFeature12removeActionEP17AdaptLaunchAction                                                                         AdaptLaunchFeature::removeAction(AdaptLaunchAction*)
+162 0x0000e01c 0x0000e01c GLOBAL FUNC 104      _ZN18AdaptLaunchFeature14disableFeatureENSt3__16vectorIP11LMDBDataRowI11inputDbDataENS0_9allocatorIS5_EEEERK19AsyncTriggerPayloadi AdaptLaunchFeature::disableFeature(std::__1::vector<LMDBDataRow<inputDbData>*, std::__1::allocator<LMDBDataRow<inputDbData>*> >, AsyncTriggerPayload const&, int)
+164 0x000169a8 0x000169a8 GLOBAL FUNC 20       _ZN20AdaptLaunchMetaMeterD1Ev                                                                                                      AdaptLaunchMetaMeter::~AdaptLaunchMetaMeter()
+168 0x0000dc8c 0x0000dc8c GLOBAL FUNC 228      _ZN18AdaptLaunchFeature18getAvgLaunchValuesENSt3__16vectorIP11LMDBDataRowI11inputDbDataENS0_9allocatorIS5_EEEEiRiS9_S9_            AdaptLaunchFeature::getAvgLaunchValues(std::__1::vector<LMDBDataRow<inputDbData>*, std::__1::allocator<LMDBDataRow<inputDbData>*> >, int, int&, int&, int&)
+174 0x0000de38 0x0000de38 GLOBAL FUNC 420      _ZN18AdaptLaunchFeature11applyActionEP17AdaptLaunchActionRK19AsyncTriggerPayload                                                   AdaptLaunchFeature::applyAction(AdaptLaunchAction*, AsyncTriggerPayload const&)
+176 0x0000d894 0x0000d894 GLOBAL FUNC 396      _ZN18AdaptLaunchFeature17createMeterDataDbEv                                                                                       AdaptLaunchFeature::createMeterDataDb()
+177 0x0000dc68 0x0000dc68 GLOBAL FUNC 36       _ZN18AdaptLaunchFeatureD0Ev                                                                                                        AdaptLaunchFeature::~AdaptLaunchFeature()
+184 0x000190d0 0x000190d0 GLOBAL OBJ  48       _ZTV20AdaptLaunchMetaMeter                                                                                                         vtable for AdaptLaunchMetaMeter
+185 0x0001754c 0x0001754c GLOBAL FUNC 744      _ZN17AdaptLaunchAction10FeedbackCBEP11mpctl_msg_t                                                                                  AdaptLaunchAction::FeedbackCB(mpctl_msg_t*)
+188 0x0000dba0 0x0000dba0 GLOBAL FUNC 200      _ZN18AdaptLaunchFeatureD2Ev                                                                                                        AdaptLaunchFeature::~AdaptLaunchFeature()
+194 0x0000e61c 0x0000e61c GLOBAL FUNC 2344     _ZN18AdaptLaunchFeature18checkWriteOutputDBEP17AdaptLaunchActionRK19AsyncTriggerPayload                                            AdaptLaunchFeature::checkWriteOutputDB(AdaptLaunchAction*, AsyncTriggerPayload const&)
+198 ---------- 0x0001a8b0 GLOBAL OBJ  8        _ZN17AdaptLaunchAction15mPerfFbInstanceE                                                                                           AdaptLaunchAction::mPerfFbInstance
+199 0x00017504 0x00017504 GLOBAL FUNC 72       _ZN17AdaptLaunchActionD2Ev                                                                                                         AdaptLaunchAction::~AdaptLaunchAction()
+200 0x00010474 0x00010474 GLOBAL FUNC 208      _ZN18AdaptLaunchFeature6isGameERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE                                   AdaptLaunchFeature::isGame(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&)
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8  0x12f0 0x000002a8  0x12f0 -r-- DYNSYM      .dynsym
+4   0x00001598   0x194 0x00001598   0x194 -r-- GNU_VERSYM  .gnu.version
+5   0x0000172c    0x70 0x0000172c    0x70 -r-- GNU_VERNEED .gnu.version_r
+6   0x000017a0   0x35c 0x000017a0   0x35c -r-- GNU_HASH    .gnu.hash
+7   0x00001afc  0x38c9 0x00001afc  0x38c9 -r-- STRTAB      .dynstr
+8   0x000053c8   0x10b 0x000053c8   0x10b -r-- ----        .rela.dyn
+9   0x000054d8    0x10 0x000054d8    0x10 -r-- ----        .relr.dyn
+10  0x000054e8   0xe10 0x000054e8   0xe10 -r-- RELA        .rela.plt
+11  0x000062f8  0x1294 0x000062f8  0x1294 -r-- PROGBITS    .gcc_except_table
+12  0x00007590   0xb98 0x00007590   0xb98 -r-- PROGBITS    .rodata
+13  0x00008128   0x3ec 0x00008128   0x3ec -r-- PROGBITS    .eh_frame_hdr
+14  0x00008518  0x1444 0x00008518  0x1444 -r-- PROGBITS    .eh_frame
+15  0x0000a000  0xe190 0x0000a000  0xe190 -r-x PROGBITS    .text
+16  0x00018190   0x980 0x00018190   0x980 -r-x PROGBITS    .plt
+17  0x00019000   0x100 0x00019000   0x100 -rw- PROGBITS    .data.rel.ro
+18  0x00019100    0x10 0x00019100    0x10 -rw- FINI_ARRAY  .fini_array
+19  0x00019110     0x8 0x00019110     0x8 -rw- INIT_ARRAY  .init_array
+20  0x00019118   0x240 0x00019118   0x240 -rw- DYNAMIC     .dynamic
+21  0x00019358    0x68 0x00019358    0x68 -rw- PROGBITS    .got
+22  0x000193c0   0x4c8 0x000193c0   0x4c8 -rw- PROGBITS    .got.plt
+23  0x00019888    0x20 0x0001a888    0x20 -rw- PROGBITS    .data
+24  0x000198a8     0x0 0x0001a8a8    0x38 -rw- NOBITS      .bss
+25  0x000198a8   0x114 0x00000000   0x114 ---- STRTAB      .shstrtab
+26  0x000199bc   0x860 0x00000000   0x860 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 5   12                       utf16le @8\n@\e
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x000018b0 0x000018b0 11  48   .gnu.hash           utf32le TZ^agkotuz}
+3   0x00001948 0x00001948 4   5    .gnu.hash           ascii   +8@g
+4   0x00001972 0x00001972 5   6    .gnu.hash           ascii   8=$?@
+5   0x000019a2 0x000019a2 4   5    .gnu.hash           ascii   s\tIJ
+6   0x000019c4 0x000019c4 4   5    .gnu.hash           ascii   \v9q<
+7   0x000019ee 0x000019ee 5   6    .gnu.hash           ascii   2chu/
+8   0x000019fe 0x000019fe 6   8    .gnu.hash           utf8    ~!u-`ͼ
+9   0x00001a10 0x00001a10 5   6    .gnu.hash           ascii   cyg`\f
+10  0x00001a79 0x00001a79 5   7    .gnu.hash           utf8    <_ ھ\e
+11  0x00001afd 0x00001afd 14  15   .dynstr             ascii   __cxa_finalize
+12  0x00001b0c 0x00001b0c 14  15   .dynstr             ascii   _Unwind_Resume
+13  0x00001b1b 0x00001b1b 67  68   .dynstr             ascii   _Z14createClassObjI7Feature11FeatureInfo18AdaptLaunchFeatureEPT_T0_
+14  0x00001b5f 0x00001b5f 130 131  .dynstr             ascii   _ZN10LMDatabaseIJ11PerfdOutputEE14readAllocateDRIS0_EEN13LMDBDataTableIT_E4vecTER14LMDBDataRowKeym14lmdbOrderByCol14lmdbOrderByDir
+15  0x00001be2 0x00001be2 86  87   .dynstr             ascii   _ZN10LMDatabaseIJ11PerfdOutputEE18deleteDeallocateDRIS0_EEiRN13LMDBDataTableIT_E4vecTE
+16  0x00001c39 0x00001c39 70  71   .dynstr             ascii   _ZN10LMDatabaseIJ11PerfdOutputEE19writeCachedDRToDiskIS0_EE9lmdbErrorv
+17  0x00001c80 0x00001c80 145 146  .dynstr             ascii   _ZN10LMDatabaseIJ11PerfdOutputEE28build_query_for_where_clauseER14LMDBDataRowKeyRNSt3__112basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEE
+18  0x00001d12 0x00001d12 68  69   .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEE10getCountDRIS0_EEiR14LMDBDataRowKey
+19  0x00001d57 0x00001d57 54  55   .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEE12LMDB_memscpyEPvmPKvm
+20  0x00001d8e 0x00001d8e 50  51   .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEE14LMDatabaseInitEv
+21  0x00001dc1 0x00001dc1 130 131  .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEE14readAllocateDRIS0_EEN13LMDBDataTableIT_E4vecTER14LMDBDataRowKeym14lmdbOrderByCol14lmdbOrderByDir
+22  0x00001e44 0x00001e44 67  68   .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEE16createLMdbTablesIS0_EE9lmdbErrorv
+23  0x00001e88 0x00001e88 86  87   .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEE18deleteDeallocateDRIS0_EEiRN13LMDBDataTableIT_E4vecTE
+24  0x00001edf 0x00001edf 70  71   .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEE19writeCachedDRToDiskIS0_EE9lmdbErrorv
+25  0x00001f26 0x00001f26 63  64   .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEE27LMDatabaseWriteCachedToDiskEv
+26  0x00001f66 0x00001f66 145 146  .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEE28build_query_for_where_clauseER14LMDBDataRowKeyRNSt3__112basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEE
+27  0x00001ff8 0x00001ff8 43  44   .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEE8openLMdbEv
+28  0x00002024 0x00002024 44  45   .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEE9closeLMdbEv
+29  0x00002051 0x00002051 36  37   .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEED1Ev
+30  0x00002076 0x00002076 36  37   .dynstr             ascii   _ZN10LMDatabaseIJ11inputDbDataEED2Ev
+31  0x0000209b 0x0000209b 50  51   .dynstr             ascii   _ZN10LMDatabaseIJ8AppStateEE12LMDB_memscpyEPvmPKvm
+32  0x000020ce 0x000020ce 46  47   .dynstr             ascii   _ZN10LMDatabaseIJ8AppStateEE14LMDatabaseInitEv
+33  0x000020fd 0x000020fd 63  64   .dynstr             ascii   _ZN10LMDatabaseIJ8AppStateEE16createLMdbTablesIS0_EE9lmdbErrorv
+34  0x0000213d 0x0000213d 66  67   .dynstr             ascii   _ZN10LMDatabaseIJ8AppStateEE19writeCachedDRToDiskIS0_EE9lmdbErrorv
+35  0x00002180 0x00002180 59  60   .dynstr             ascii   _ZN10LMDatabaseIJ8AppStateEE27LMDatabaseWriteCachedToDiskEv
+36  0x000021bc 0x000021bc 141 142  .dynstr             ascii   _ZN10LMDatabaseIJ8AppStateEE28build_query_for_where_clauseER14LMDBDataRowKeyRNSt3__112basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEE
+37  0x0000224a 0x0000224a 39  40   .dynstr             ascii   _ZN10LMDatabaseIJ8AppStateEE8openLMdbEv
+38  0x00002272 0x00002272 40  41   .dynstr             ascii   _ZN10LMDatabaseIJ8AppStateEE9closeLMdbEv
+39  0x0000229b 0x0000229b 32  33   .dynstr             ascii   _ZN10LMDatabaseIJ8AppStateEED1Ev
+40  0x000022bc 0x000022bc 32  33   .dynstr             ascii   _ZN10LMDatabaseIJ8AppStateEED2Ev
+41  0x000022dd 0x000022dd 105 106  .dynstr             ascii   _ZN12FeatureState10writeStateERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE8AppState
+42  0x00002347 0x00002347 94  95   .dynstr             ascii   _ZN12FeatureState9deleteRowERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+43  0x000023a6 0x000023a6 94  95   .dynstr             ascii   _ZN12FeatureState9readStateERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+44  0x00002405 0x00002405 86  87   .dynstr             ascii   _ZN12FeatureStateC1ERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+45  0x0000245c 0x0000245c 21  22   .dynstr             ascii   _ZN12FeatureStateD1Ev
+46  0x00002472 0x00002472 48  49   .dynstr             ascii   _ZN12RegistryBaseI7Feature11FeatureInfoE6mMutexE
+47  0x000024a3 0x000024a3 51  52   .dynstr             ascii   _ZN12RegistryBaseI7Feature11FeatureInfoE9classListE
+48  0x000024d7 0x000024d7 42  43   .dynstr             ascii   _ZN13LMDBDataTableI11PerfdOutputE6getRowEm
+49  0x00002502 0x00002502 42  43   .dynstr             ascii   _ZN13LMDBDataTableI11inputDbDataE6getRowEm
+50  0x0000252d 0x0000252d 48  49   .dynstr             ascii   _ZN13LMDBDataTableI11inputDbDataEC2IRA12_KcEEOT_
+51  0x0000255e 0x0000255e 37  38   .dynstr             ascii   _ZN13LMDBDataTableI11inputDbDataED2Ev
+52  0x00002584 0x00002584 33  34   .dynstr             ascii   _ZN13LMDBDataTableI8AppStateED2Ev
+53  0x000025a6 0x000025a6 111 112  .dynstr             ascii   _ZN14FeatureLocator7getDataERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES7_R11featureDatai
+54  0x00002616 0x00002616 103 104  .dynstr             ascii   _ZN17AdaptLaunchAction11applyActionENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEjii
+55  0x0000267e 0x0000267e 37  38   .dynstr             ascii   _ZN17AdaptLaunchAction11getInstanceEv
+56  0x000026a4 0x000026a4 38  39   .dynstr             ascii   _ZN17AdaptLaunchAction12removeActionEi
+57  0x000026cb 0x000026cb 80  81   .dynstr             ascii   _ZN18AdaptLaunchFeature11applyActionEP17AdaptLaunchActionRK19AsyncTriggerPayload
+58  0x0000271c 0x0000271c 101 102  .dynstr             ascii   _ZN18AdaptLaunchFeature11isHeavyGameENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+59  0x00002782 0x00002782 58  59   .dynstr             ascii   _ZN18AdaptLaunchFeature12removeActionEP17AdaptLaunchAction
+60  0x000027bd 0x000027bd 58  59   .dynstr             ascii   _ZN18AdaptLaunchFeature12runAsyncIdleERKNSt3__16atomicIbEE
+61  0x000027f8 0x000027f8 130 131  .dynstr             ascii   _ZN18AdaptLaunchFeature14disableFeatureENSt3__16vectorIP11LMDBDataRowI11inputDbDataENS0_9allocatorIS5_EEEERK19AsyncTriggerPayloadi
+62  0x0000287b 0x0000287b 41  42   .dynstr             ascii   _ZN18AdaptLaunchFeature15registerFeatureE
+63  0x000028a5 0x000028a5 44  45   .dynstr             ascii   _ZN18AdaptLaunchFeature17createMeterDataDbEv
+64  0x000028d2 0x000028d2 87  88   .dynstr             ascii   _ZN18AdaptLaunchFeature18checkWriteOutputDBEP17AdaptLaunchActionRK19AsyncTriggerPayload
+65  0x0000292a 0x0000292a 119 120  .dynstr             ascii   _ZN18AdaptLaunchFeature18getAvgLaunchValuesENSt3__16vectorIP11LMDBDataRowI11inputDbDataENS0_9allocatorIS5_EEEEiRiS9_S9_
+66  0x000029a2 0x000029a2 129 130  .dynstr             ascii   _ZN18AdaptLaunchFeature18removeFromDatabaseEP17AdaptLaunchActionRNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+67  0x00002a24 0x00002a24 96  97   .dynstr             ascii   _ZN18AdaptLaunchFeature6isGameERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+68  0x00002a85 0x00002a85 112 113  .dynstr             ascii   _ZN18AdaptLaunchFeature7getDataERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEER11featureDatai
+69  0x00002af6 0x00002af6 54  55   .dynstr             ascii   _ZN18AdaptLaunchFeature8runAsyncE19AsyncTriggerPayload
+70  0x00002b2d 0x00002b2d 39  40   .dynstr             ascii   _ZN18AdaptLaunchFeatureC1E11FeatureInfo
+71  0x00002b55 0x00002b55 39  40   .dynstr             ascii   _ZN18AdaptLaunchFeatureC2E11FeatureInfo
+72  0x00002b7d 0x00002b7d 27  28   .dynstr             ascii   _ZN18AdaptLaunchFeatureD0Ev
+73  0x00002b99 0x00002b99 27  28   .dynstr             ascii   _ZN18AdaptLaunchFeatureD1Ev
+74  0x00002bb5 0x00002bb5 27  28   .dynstr             ascii   _ZN18AdaptLaunchFeatureD2Ev
+75  0x00002bd1 0x00002bd1 88  89   .dynstr             ascii   _ZN20AdaptLaunchMetaMeterC1ERK11FeatureInfoP10LMDatabaseIJ11inputDbDataEER12FeatureState
+76  0x00002c2a 0x00002c2a 50  51   .dynstr             ascii   _ZN7Feature16runAsyncPeriodicERKNSt3__16atomicIbEE
+77  0x00002c5d 0x00002c5d 27  28   .dynstr             ascii   _ZN8DumpData6MarkerEPKciS1_
+78  0x00002c79 0x00002c79 50  51   .dynstr             ascii   _ZN9MetaMeter11handleAsyncERK19AsyncTriggerPayload
+79  0x00002cac 0x00002cac 76  77   .dynstr             ascii   _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEPKc
+80  0x00002cf9 0x00002cf9 62  63   .dynstr             ascii   _ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+81  0x00002d38 0x00002d38 63  64   .dynstr             ascii   _ZNKSt3__121__basic_string_commonILb1EE20__throw_length_errorEv
+82  0x00002d78 0x00002d78 24  25   .dynstr             ascii   _ZNSt11logic_errorC2EPKc
+83  0x00002d91 0x00002d91 23  24   .dynstr             ascii   _ZNSt12length_errorD1Ev
+84  0x00002da9 0x00002da9 75  76   .dynstr             ascii   _ZNSt3__110__list_impIP11LMDBDataRowI11inputDbDataENS_9allocatorIS4_EEED2Ev
+85  0x00002df5 0x00002df5 71  72   .dynstr             ascii   _ZNSt3__110__list_impIP11LMDBDataRowI8AppStateENS_9allocatorIS4_EEED2Ev
+86  0x00002e3d 0x00002e3d 408 409  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_6vectorINS8_IiNS5_IiEEEENS5_ISA_EEEEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE21__construct_node_hashIRKNS_4pairIKS7_SC_EEJEEENS_10unique_ptrINS_11__hash_nodeISD_PvEENS_22__hash_node_destructorINS5_ISX_EEEEEEmOT_DpOT0_
+87  0x00002fd6 0x00002fd6 389 390  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_6vectorINS8_IiNS5_IiEEEENS5_ISA_EEEEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE25__emplace_unique_key_argsIS7_JRKNS_4pairIKS7_SC_EEEEENSP_INS_15__hash_iteratorIPNS_11__hash_nodeISD_PvEEEEbEERKT_DpOT0_
+88  0x0000315c 0x0000315c 277 278  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_6vectorINS8_IiNS5_IiEEEENS5_ISA_EEEEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE6rehashEm
+89  0x00003272 0x00003272 279 280  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_6vectorINS8_IiNS5_IiEEEENS5_ISA_EEEEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE8__rehashEm
+90  0x0000338a 0x0000338a 272 273  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_6vectorINS8_IiNS5_IiEEEENS5_ISA_EEEEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEED2Ev
+91  0x0000349b 0x0000349b 381 382  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP7Feature11FeatureInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE16__construct_nodeIJNS_4pairIPKcSC_EEEEENS_10unique_ptrINS_11__hash_nodeISD_PvEENS_22__hash_node_destructorINS5_ISW_EEEEEEDpOT_
+92  0x00003619 0x00003619 360 361  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP7Feature11FeatureInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE21__emplace_unique_implIJNS_4pairIPKcSC_EEEEENSP_INS_15__hash_iteratorIPNS_11__hash_nodeISD_PvEEEEbEEDpOT_
+93  0x00003782 0x00003782 263 264  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP7Feature11FeatureInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE6rehashEm
+94  0x0000388a 0x0000388a 265 266  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP7Feature11FeatureInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE8__rehashEm
+95  0x00003994 0x00003994 353 354  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_NS_8equal_toIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_4pairIKS7_S7_EEEEENSK_INS_15__hash_iteratorIPNS_11__hash_nodeIS8_PvEEEEbEERKT_DpOT0_
+96  0x00003af6 0x00003af6 241 242  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_NS_8equal_toIS7_EELb1EEENS5_IS8_EEE6rehashEm
+97  0x00003be8 0x00003be8 243 244  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered_map_hasherIS7_S8_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_S8_NS_8equal_toIS7_EELb1EEENS5_IS8_EEE8__rehashEm
+98  0x00003cdc 0x00003cdc 336 337  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeIjNS_13unordered_setIiNS_4hashIiEENS_8equal_toIiEENS_9allocatorIiEEEEEENS_22__unordered_map_hasherIjSA_NS3_IjEELb1EEENS_21__unordered_map_equalIjSA_NS5_IjEELb1EEENS7_ISA_EEE25__emplace_unique_key_argsIjJRKNS_4pairIKjS9_EEEEENSK_INS_15__hash_iteratorIPNS_11__hash_nodeISA_PvEEEEbEERKT_DpOT0_
+99  0x00003e2d 0x00003e2d 228 229  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeIjNS_13unordered_setIiNS_4hashIiEENS_8equal_toIiEENS_9allocatorIiEEEEEENS_22__unordered_map_hasherIjSA_NS3_IjEELb1EEENS_21__unordered_map_equalIjSA_NS5_IjEELb1EEENS7_ISA_EEE6rehashEm
+100 0x00003f12 0x00003f12 230 231  .dynstr             ascii   _ZNSt3__112__hash_tableINS_17__hash_value_typeIjNS_13unordered_setIiNS_4hashIiEENS_8equal_toIiEENS_9allocatorIiEEEEEENS_22__unordered_map_hasherIjSA_NS3_IjEELb1EEENS_21__unordered_map_equalIjSA_NS5_IjEELb1EEENS7_ISA_EEE8__rehashEm
+101 0x00003ff9 0x00003ff9 175 176  .dynstr             ascii   _ZNSt3__112__hash_tableIiNS_4hashIiEENS_8equal_toIiEENS_9allocatorIiEEE25__emplace_unique_key_argsIiJRKiEEENS_4pairINS_15__hash_iteratorIPNS_11__hash_nodeIiPvEEEEbEERKT_DpOT0_
+102 0x000040a9 0x000040a9 80  81   .dynstr             ascii   _ZNSt3__112__hash_tableIiNS_4hashIiEENS_8equal_toIiEENS_9allocatorIiEEE6rehashEm
+103 0x000040fa 0x000040fa 82  83   .dynstr             ascii   _ZNSt3__112__hash_tableIiNS_4hashIiEENS_8equal_toIiEENS_9allocatorIiEEE8__rehashEm
+104 0x0000414d 0x0000414d 25  26   .dynstr             ascii   _ZNSt3__112__next_primeEm
+105 0x00004167 0x00004167 74  75   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+106 0x000041b2 0x000041b2 75  76   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+107 0x000041fe 0x000041fe 74  75   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+108 0x00004249 0x00004249 71  72   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+109 0x00004291 0x00004291 78  79   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_mmRKS4_
+110 0x000042e0 0x000042e0 67  68   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev
+111 0x00004324 0x00004324 71  72   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_
+112 0x0000436c 0x0000436c 152 153  .dynstr             ascii   _ZNSt3__113unordered_mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4hashIS6_EENS_8equal_toIS6_EENS4_INS_4pairIKS6_S6_EEEEEC2ERKSF_
+113 0x00004405 0x00004405 141 142  .dynstr             ascii   _ZNSt3__113unordered_mapIjNS_13unordered_setIiNS_4hashIiEENS_8equal_toIiEENS_9allocatorIiEEEENS2_IjEENS4_IjEENS6_INS_4pairIKjS8_EEEEEC2ERKSF_
+114 0x00004493 0x00004493 80  81   .dynstr             ascii   _ZNSt3__113unordered_setIiNS_4hashIiEENS_8equal_toIiEENS_9allocatorIiEEEC2ERKS7_
+115 0x000044e4 0x000044e4 33  34   .dynstr             ascii   _ZNSt3__118condition_variableD1Ev
+116 0x00004506 0x00004506 74  75   .dynstr             ascii   _ZNSt3__127__tree_balance_after_insertIPNS_16__tree_node_baseIPvEEEEvT_S5_
+117 0x00004551 0x00004551 22  23   .dynstr             ascii   _ZNSt3__15mutex4lockEv
+118 0x00004568 0x00004568 24  25   .dynstr             ascii   _ZNSt3__15mutex6unlockEv
+119 0x00004581 0x00004581 19  20   .dynstr             ascii   _ZNSt3__15mutexD1Ev
+120 0x00004595 0x00004595 203 204  .dynstr             ascii   _ZNSt3__16__treeI9AsyncInfoNS_4lessIS1_EENS_9allocatorIS1_EEE12__find_equalIS1_EERPNS_16__tree_node_baseIPvEENS_21__tree_const_iteratorIS1_PNS_11__tree_nodeIS1_S9_EElEERPNS_15__tree_end_nodeISB_EESC_RKT_
+121 0x00004661 0x00004661 95  96   .dynstr             ascii   _ZNSt3__16__treeI9AsyncInfoNS_4lessIS1_EENS_9allocatorIS1_EEE7destroyEPNS_11__tree_nodeIS1_PvEE
+122 0x000046c1 0x000046c1 20  21   .dynstr             ascii   _ZNSt3__16threadD1Ev
+123 0x000046d6 0x000046d6 55  56   .dynstr             ascii   _ZNSt3__16vectorI9MeterInfoNS_9allocatorIS1_EEEC2ERKS4_
+124 0x0000470e 0x0000470e 61  62   .dynstr             ascii   _ZNSt3__16vectorINS0_IiNS_9allocatorIiEEEENS1_IS3_EEEC2ERKS5_
+125 0x0000474c 0x0000474c 236 237  .dynstr             ascii   _ZNSt3__16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEE6assignIPS6_EENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIS6_NS_15iterator_traitsISC_E9referenceEEE5valueEvE4typeESC_SC_
+126 0x00004839 0x00004839 94  95   .dynstr             ascii   _ZNSt3__16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEEC2ERKS8_
+127 0x00004898 0x00004898 107 108  .dynstr             ascii   _ZNSt3__16vectorIP11LMDBDataRowI11PerfdOutputENS_9allocatorIS4_EEE24__emplace_back_slow_pathIJRS4_EEEvDpOT_
+128 0x00004904 0x00004904 107 108  .dynstr             ascii   _ZNSt3__16vectorIP11LMDBDataRowI11inputDbDataENS_9allocatorIS4_EEE24__emplace_back_slow_pathIJRS4_EEEvDpOT_
+129 0x00004970 0x00004970 74  75   .dynstr             ascii   _ZNSt3__16vectorIP11LMDBDataRowI11inputDbDataENS_9allocatorIS4_EEEC2ERKS7_
+130 0x000049bb 0x000049bb 103 104  .dynstr             ascii   _ZNSt3__16vectorIP11LMDBDataRowI8AppStateENS_9allocatorIS4_EEE24__emplace_back_slow_pathIJRS4_EEEvDpOT_
+131 0x00004a23 0x00004a23 44  45   .dynstr             ascii   _ZNSt3__16vectorIiNS_9allocatorIiEEEC2ERKS3_
+132 0x00004a50 0x00004a50 21  22   .dynstr             ascii   _ZNSt3__19to_stringEi
+133 0x00004a66 0x00004a66 90  91   .dynstr             ascii   _ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_
+134 0x00004ac1 0x00004ac1 88  89   .dynstr             ascii   _ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EERKS9_SB_
+135 0x00004b1a 0x00004b1a 12  13   .dynstr             ascii   _ZSt7nothrow
+136 0x00004b27 0x00004b27 15  16   .dynstr             ascii   _ZSt9terminatev
+137 0x00004b37 0x00004b37 19  20   .dynstr             ascii   _ZTISt11logic_error
+138 0x00004b4b 0x00004b4b 20  21   .dynstr             ascii   _ZTISt12length_error
+139 0x00004b60 0x00004b60 16  17   .dynstr             ascii   _ZTISt9exception
+140 0x00004b71 0x00004b71 19  20   .dynstr             ascii   _ZTSSt11logic_error
+141 0x00004b85 0x00004b85 20  21   .dynstr             ascii   _ZTSSt12length_error
+142 0x00004b9a 0x00004b9a 16  17   .dynstr             ascii   _ZTSSt9exception
+143 0x00004bab 0x00004bab 24  25   .dynstr             ascii   _ZTV18AdaptLaunchFeature
+144 0x00004bc4 0x00004bc4 12  13   .dynstr             ascii   _ZTV7Feature
+145 0x00004bd1 0x00004bd1 37  38   .dynstr             ascii   _ZTVN10__cxxabiv117__class_type_infoE
+146 0x00004bf7 0x00004bf7 40  41   .dynstr             ascii   _ZTVN10__cxxabiv120__si_class_type_infoE
+147 0x00004c20 0x00004c20 20  21   .dynstr             ascii   _ZTVSt12length_error
+148 0x00004c35 0x00004c35 6   7    .dynstr             ascii   _ZdlPv
+149 0x00004c3c 0x00004c3c 20  21   .dynstr             ascii   _ZdlPvRKSt9nothrow_t
+150 0x00004c51 0x00004c51 5   6    .dynstr             ascii   _Znwm
+151 0x00004c57 0x00004c57 19  20   .dynstr             ascii   _ZnwmRKSt9nothrow_t
+152 0x00004c6b 0x00004c6b 19  20   .dynstr             ascii   __android_log_print
+153 0x00004c7f 0x00004c7f 24  25   .dynstr             ascii   __cxa_allocate_exception
+154 0x00004c98 0x00004c98 17  18   .dynstr             ascii   __cxa_begin_catch
+155 0x00004caa 0x00004caa 15  16   .dynstr             ascii   __cxa_end_catch
+156 0x00004cba 0x00004cba 20  21   .dynstr             ascii   __cxa_free_exception
+157 0x00004ccf 0x00004ccf 11  12   .dynstr             ascii   __cxa_throw
+158 0x00004cdb 0x00004cdb 20  21   .dynstr             ascii   __gxx_personality_v0
+159 0x00004cf0 0x00004cf0 16  17   .dynstr             ascii   __stack_chk_fail
+160 0x00004d01 0x00004d01 7   8    .dynstr             ascii   dlclose
+161 0x00004d09 0x00004d09 6   7    .dynstr             ascii   dlopen
+162 0x00004d10 0x00004d10 5   6    .dynstr             ascii   dlsym
+163 0x00004d16 0x00004d16 6   7    .dynstr             ascii   memchr
+164 0x00004d1d 0x00004d1d 6   7    .dynstr             ascii   memcmp
+165 0x00004d24 0x00004d24 6   7    .dynstr             ascii   memcpy
+166 0x00004d2b 0x00004d2b 13  14   .dynstr             ascii   perf_get_prop
+167 0x00004d39 0x00004d39 17  18   .dynstr             ascii   property_get_bool
+168 0x00004d4b 0x00004d4b 17  18   .dynstr             ascii   sqlite3_bind_blob
+169 0x00004d5d 0x00004d5d 16  17   .dynstr             ascii   sqlite3_bind_int
+170 0x00004d6e 0x00004d6e 17  18   .dynstr             ascii   sqlite3_bind_text
+171 0x00004d80 0x00004d80 13  14   .dynstr             ascii   sqlite3_close
+172 0x00004d8e 0x00004d8e 19  20   .dynstr             ascii   sqlite3_column_blob
+173 0x00004da2 0x00004da2 18  19   .dynstr             ascii   sqlite3_column_int
+174 0x00004db5 0x00004db5 20  21   .dynstr             ascii   sqlite3_column_int64
+175 0x00004dca 0x00004dca 19  20   .dynstr             ascii   sqlite3_column_text
+176 0x00004dde 0x00004dde 14  15   .dynstr             ascii   sqlite3_errmsg
+177 0x00004ded 0x00004ded 12  13   .dynstr             ascii   sqlite3_exec
+178 0x00004dfa 0x00004dfa 16  17   .dynstr             ascii   sqlite3_finalize
+179 0x00004e0b 0x00004e0b 15  16   .dynstr             ascii   sqlite3_open_v2
+180 0x00004e1b 0x00004e1b 18  19   .dynstr             ascii   sqlite3_prepare_v2
+181 0x00004e2e 0x00004e2e 13  14   .dynstr             ascii   sqlite3_reset
+182 0x00004e3c 0x00004e3c 12  13   .dynstr             ascii   sqlite3_step
+183 0x00004e49 0x00004e49 6   7    .dynstr             ascii   strlen
+184 0x00004e50 0x00004e50 87  88   .dynstr             ascii   _ZN20AdaptLaunchMetaMeter15writeToDataBaseENSt3__16vectorIP5MeterNS0_9allocatorIS3_EEEE
+185 0x00004ea8 0x00004ea8 88  89   .dynstr             ascii   _ZN20AdaptLaunchMetaMeterC2ERK11FeatureInfoP10LMDatabaseIJ11inputDbDataEER12FeatureState
+186 0x00004f01 0x00004f01 29  30   .dynstr             ascii   _ZN20AdaptLaunchMetaMeterD0Ev
+187 0x00004f1f 0x00004f1f 29  30   .dynstr             ascii   _ZN20AdaptLaunchMetaMeterD1Ev
+188 0x00004f3d 0x00004f3d 29  30   .dynstr             ascii   _ZN20AdaptLaunchMetaMeterD2Ev
+189 0x00004f5b 0x00004f5b 46  47   .dynstr             ascii   _ZN9MetaMeterC2ERK11FeatureInfoR12FeatureState
+190 0x00004f8a 0x00004f8a 17  18   .dynstr             ascii   _ZN9MetaMeterD2Ev
+191 0x00004f9c 0x00004f9c 26  27   .dynstr             ascii   _ZTV20AdaptLaunchMetaMeter
+192 0x00004fb7 0x00004fb7 67  68   .dynstr             ascii   _ZN10LMDatabaseIJ11PerfdOutputEE16createLMdbTablesIS0_EE9lmdbErrorv
+193 0x00004ffb 0x00004ffb 43  44   .dynstr             ascii   _ZN10LMDatabaseIJ11PerfdOutputEE8openLMdbEv
+194 0x00005027 0x00005027 44  45   .dynstr             ascii   _ZN10LMDatabaseIJ11PerfdOutputEE9closeLMdbEv
+195 0x00005054 0x00005054 114 115  .dynstr             ascii   _ZN10LMDatabaseIJ11PerfdOutputEEC2IJRKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEEEEmS9_DpOT_
+196 0x000050c7 0x000050c7 36  37   .dynstr             ascii   _ZN10LMDatabaseIJ11PerfdOutputEED2Ev
+197 0x000050ec 0x000050ec 37  38   .dynstr             ascii   _ZN13LMDBDataTableI11PerfdOutputED2Ev
+198 0x00005112 0x00005112 49  50   .dynstr             ascii   _ZN17AdaptLaunchAction10FeedbackCBEP11mpctl_msg_t
+199 0x00005144 0x00005144 40  41   .dynstr             ascii   _ZN17AdaptLaunchAction15mPerfFbInstanceE
+200 0x0000516d 0x0000516d 30  31   .dynstr             ascii   _ZN17AdaptLaunchAction6mMutexE
+201 0x0000518c 0x0000518c 93  94   .dynstr             ascii   _ZN17AdaptLaunchActionC1EmNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES6_
+202 0x000051ea 0x000051ea 93  94   .dynstr             ascii   _ZN17AdaptLaunchActionC2EmNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEES6_
+203 0x00005248 0x00005248 26  27   .dynstr             ascii   _ZN17AdaptLaunchActionD1Ev
+204 0x00005263 0x00005263 26  27   .dynstr             ascii   _ZN17AdaptLaunchActionD2Ev
+205 0x0000527e 0x0000527e 75  76   .dynstr             ascii   _ZNSt3__110__list_impIP11LMDBDataRowI11PerfdOutputENS_9allocatorIS4_EEED2Ev
+206 0x000052ca 0x000052ca 13  14   .dynstr             ascii   __strlcpy_chk
+207 0x000052d8 0x000052d8 4   5    .dynstr             ascii   atoi
+208 0x000052dd 0x000052dd 9   10   .dynstr             ascii   perf_hint
+209 0x000052e7 0x000052e7 13  14   .dynstr             ascii   perf_lock_rel
+210 0x000052f5 0x000052f5 18  19   .dynstr             ascii   pthread_mutex_lock
+211 0x00005308 0x00005308 20  21   .dynstr             ascii   pthread_mutex_unlock
+212 0x0000531d 0x0000531d 9   10   .dynstr             ascii   liblog.so
+213 0x00005327 0x00005327 6   7    .dynstr             ascii   LIBLOG
+214 0x0000532e 0x0000532e 7   8    .dynstr             ascii   libc.so
+215 0x00005336 0x00005336 4   5    .dynstr             ascii   LIBC
+216 0x0000533b 0x0000533b 6   7    .dynstr             ascii   LIBC_R
+217 0x00005342 0x00005342 8   9    .dynstr             ascii   libdl.so
+218 0x0000534b 0x0000534b 12  13   .dynstr             ascii   libcutils.so
+219 0x00005358 0x00005358 20  21   .dynstr             ascii   liblearningmodule.so
+220 0x0000536d 0x0000536d 15  16   .dynstr             ascii   libmeters-ns.so
+221 0x0000537d 0x0000537d 12  13   .dynstr             ascii   libsqlite.so
+222 0x0000538a 0x0000538a 22  23   .dynstr             ascii   libqti-perfd-client.so
+223 0x000053a1 0x000053a1 9   10   .dynstr             ascii   libc++.so
+224 0x000053ab 0x000053ab 7   8    .dynstr             ascii   libm.so
+225 0x000053b3 0x000053b3 17  18   .dynstr             ascii   libadaptlaunch.so
+226 0x000053c8 0x000053c8 5   6    .rela.dyn           ascii   APS2"
+227 0x00006854 0x00006854 4   5    .gcc_except_table   ascii   *4\bP
+228 0x000072e4 0x000072e4 4   5    .gcc_except_table   ascii   *4\bP
+229 0x000075a0 0x000075a0 18  19   .rodata             ascii   AdaptLaunchFeature
+230 0x000075b3 0x000075b3 6   7    .rodata             ascii   getRow
+231 0x000075ba 0x000075ba 4   5    .rodata             ascii   5000
+232 0x000075bf 0x000075bf 4   5    .rodata             ascii   LMDB
+233 0x000075c4 0x000075c4 66  67   .rodata             ascii   (intcol1 INTEGER, appName TEXT NOT null, rsvdName TEXT, blob BLOB)
+234 0x00007607 0x00007607 15  16   .rodata             ascii   FeatureRegistry
+235 0x00007617 0x00007617 19  20   .rodata             ascii   WHERE (rowid) = (?)
+236 0x0000762b 0x0000762b 38  39   .rodata             ascii   %s: %s() %d: sql:ERROR:Dbt=%s info=%s\n
+237 0x00007652 0x00007652 32  33   .rodata             ascii   Learning Complete - DISABLED ALB
+238 0x00007673 0x00007673 67  68   .rodata             ascii   %s: %s() %d: Meter aborted or could not get meter data for this run
+239 0x000076b7 0x000076b7 5   6    .rodata             ascii   15000
+240 0x000076bd 0x000076bd 35  36   .rodata             ascii   %s: %s() %d: db instance table NULL
+241 0x000076e1 0x000076e1 59  60   .rodata             ascii   %s: %s() %d: output db returning more rows for the same app
+242 0x0000771d 0x0000771d 50  51   .rodata             ascii   Learning Complete - DISABLED ALB as No gain by ALB
+243 0x00007750 0x00007750 18  19   .rodata             ascii   deleteDeallocateDR
+244 0x00007763 0x00007763 16  17   .rodata             ascii   IsFeatureEnabled
+245 0x00007774 0x00007774 63  64   .rodata             ascii   %s: %s() %d: Fast Loader enabled = %d TapEventIgnore Status %d\n
+246 0x000077b4 0x000077b4 14  15   .rodata             ascii   LMDBDataRowKey
+247 0x000077c3 0x000077c3 19  20   .rodata             ascii   COMMIT TRANSACTION;
+248 0x000077d7 0x000077d7 8   9    .rodata             ascii   openLMdb
+249 0x000077e0 0x000077e0 50  51   .rodata             ascii   %s: %s() %d: ERROR:Db=%s sql close failed, err=%d\n
+250 0x00007813 0x00007813 31  32   .rodata             ascii   Learning Complete - ENABLED ALB
+251 0x00007833 0x00007833 23  24   .rodata             ascii   vendor.debug.trace.perf
+252 0x0000784b 0x0000784b 26  27   .rodata             ascii   Exception caught: %s in %s
+253 0x00007868 0x00007868 39  40   .rodata             ascii   %s: %s() %d: No meters for this feature
+254 0x00007890 0x00007890 16  17   .rodata             ascii   createLMdbTables
+255 0x000078a1 0x000078a1 21  22   .rodata             ascii   SELECT COUNT(*) FROM
+256 0x000078b7 0x000078b7 14  15   .rodata             ascii   libskewknob.so
+257 0x000078c6 0x000078c6 5   6    .rodata             ascii   false
+258 0x000078cc 0x000078cc 70  71   .rodata             ascii   SET (intcol1, appName, rsvdName, blob) = (?,?,?,?) WHERE (rowid) = (?)
+259 0x00007913 0x00007913 11  12   .rodata             ascii   applyAction
+260 0x00007923 0x00007923 67  68   .rodata             ascii   allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+261 0x00007967 0x00007967 63  64   .rodata             ascii   %s: %s() %d: getMap() returned nullptr, Class %s not registered
+262 0x000079a7 0x000079a7 12  13   .rodata             ascii   output_table
+263 0x000079b6 0x000079b6 7   8    .rodata             ascii   intcol1
+264 0x000079be 0x000079be 7   8    .rodata             ascii   android
+265 0x000079c6 0x000079c6 12  13   .rodata             ascii   DELETE FROM
+266 0x000079d3 0x000079d3 46  47   .rodata             ascii   %s: %s() %d: Couldn't create feedback instance
+267 0x00007a02 0x00007a02 44  45   .rodata             ascii   %s: %s() %d: Error in std::string operations
+268 0x00007a2f 0x00007a2f 29  30   .rodata             ascii   Data Complete - Eval Required
+269 0x00007a4d 0x00007a4d 12  13   .rodata             ascii   INSERT INTO
+270 0x00007a5a 0x00007a5a 7   8    .rodata             ascii   appName
+271 0x00007a64 0x00007a64 50  51   .rodata             ascii   %s: %s() %d: Error in std::string operations in %s
+272 0x00007a97 0x00007a97 38  39   .rodata             ascii   %s: %s() %d: Output db table not found
+273 0x00007abe 0x00007abe 17  18   .rodata             ascii   AdaptLaunchAction
+274 0x00007ad0 0x00007ad0 36  37   .rodata             ascii   ro.vendor.perf.gfl.tap_ignore_enable
+275 0x00007af5 0x00007af5 4   5    .rodata             ascii   true
+276 0x00007afa 0x00007afa 62  63   .rodata             ascii   %s: %s() %d: AdaptLaunchAlgo:: mFeatureInputDb/dbinstance NULL
+277 0x00007b39 0x00007b39 51  52   .rodata             ascii   (intcol1, appName, rsvdName, blob) VALUES (?,?,?,?)
+278 0x00007b6d 0x00007b6d 43  44   .rodata             ascii   ro.vendor.perf.gfl_hg_assured_min_threshold
+279 0x00007b99 0x00007b99 11  12   .rodata             ascii   AdaptLaunch
+280 0x00007ba5 0x00007ba5 4   5    .rodata             ascii   DESC
+281 0x00007baa 0x00007baa 10  11   .rodata             ascii   getCountDR
+282 0x00007bb5 0x00007bb5 43  44   .rodata             ascii   %s: %s() %d: Dbt=%s Restrict reqCnt to %zu\n
+283 0x00007be5 0x00007be5 41  42   .rodata             ascii   %s: %s() %d: No input db for this feature
+284 0x00007c0f 0x00007c0f 14  15   .rodata             ascii   AdaptiveLaunch
+285 0x00007c1e 0x00007c1e 52  53   .rodata             ascii   %s: %s() %d: Error in DB init- createMeterDataDb  %d
+286 0x00007c53 0x00007c53 47  48   .rodata             ascii   %s: %s() %d: ERROR:Dbt=%s blstSz=%d, clstSz=%d\n
+287 0x00007c83 0x00007c83 62  63   .rodata             ascii   %s: %s() %d: ERROR:Dbt=%s new operator failure, allocated=%zu\n
+288 0x00007cc2 0x00007cc2 43  44   .rodata             ascii   %s: %s() %d: LMDatabaseInit failed, err=%d\n
+289 0x00007cee 0x00007cee 12  13   .rodata             ascii   ANDR-PERF-LM
+290 0x00007cfb 0x00007cfb 23  24   .rodata             ascii   PRAGMA journal_mode=WAL
+291 0x00007d13 0x00007d13 28  29   .rodata             ascii   build_query_for_where_clause
+292 0x00007d30 0x00007d30 40  41   .rodata             ascii   ro.vendor.perf.gfl_assured_min_threshold
+293 0x00007d59 0x00007d59 8   9    .rodata             ascii   Registry
+294 0x00007d62 0x00007d62 21  22   .rodata             ascii   SELECT *, rowid FROM
+295 0x00007d78 0x00007d78 15  16   .rodata             ascii   writeToDataBase
+296 0x00007d88 0x00007d88 61  62   .rodata             ascii   %s: %s() %d: no valid triggers present to write into input db
+297 0x00007dc6 0x00007dc6 33  34   .rodata             ascii   %s: %s() %d: Caught exception: %s
+298 0x00007de8 0x00007de8 7   8    .rodata             ascii   UPDATE
+299 0x00007df0 0x00007df0 35  36   .rodata             ascii   %s: %s() %d: incorrect no of meters
+300 0x00007e14 0x00007e14 11  12   .rodata             ascii   getInstance
+301 0x00007e20 0x00007e20 13  14   .rodata             ascii   AppClassifier
+302 0x00007e2e 0x00007e2e 19  20   .rodata             ascii   writeCachedDRToDisk
+303 0x00007e42 0x00007e42 21  22   .rodata             ascii   ROLLBACK TRANSACTION;
+304 0x00007e58 0x00007e58 9   10   .rodata             ascii   closeLMdb
+305 0x00007e62 0x00007e62 8   9    .rodata             ascii   rsvdName
+306 0x00007e6b 0x00007e6b 39  40   .rodata             ascii   %s: %s() %d: Caught exception: %s in %s
+307 0x00007e93 0x00007e93 16  17   .rodata             ascii   /data/vendor/lm/
+308 0x00007ea4 0x00007ea4 10  11   .rodata             ascii   FeedbackCB
+309 0x00007eaf 0x00007eaf 5   6    .rodata             ascii   ) = (
+310 0x00007eb6 0x00007eb6 8   9    .rodata             ascii   runAsync
+311 0x00007ebf 0x00007ebf 38  39   .rodata             ascii   %s: %s() %d: sql:ERROR:Dbt=%s info=%d\n
+312 0x00007ee6 0x00007ee6 51  52   .rodata             ascii   %s: %s() %d: AdaptLaunchAction::getInstance failure
+313 0x00007f1a 0x00007f1a 22  23   .rodata             ascii   Exception caught in %s
+314 0x00007f31 0x00007f31 27  28   .rodata             ascii   CREATE TABLE IF NOT EXISTS
+315 0x00007f4d 0x00007f4d 35  36   .rodata             ascii   %s: %s() %d: Caught Exception in %s
+316 0x00007f71 0x00007f71 10  11   .rodata             ascii    ORDER BY
+317 0x00007f7c 0x00007f7c 18  19   .rodata             ascii   checkWriteOutputDB
+318 0x00007f8f 0x00007f8f 18  19   .rodata             ascii   removeFromDatabase
+319 0x00007fa2 0x00007fa2 14  15   .rodata             ascii   ~LMDBDataTable
+320 0x00007fb1 0x00007fb1 34  35   .rodata             ascii   %s: %s() %d: ERROR:Dbt=%s info=%s\n
+321 0x00007fd4 0x00007fd4 41  42   .rodata             ascii   %s: %s() %d: dbinstance or metameter NULL
+322 0x00007ffe 0x00007ffe 14  15   .rodata             ascii   readAllocateDR
+323 0x0000800d 0x0000800d 51  52   .rodata             ascii   %s: %s() %d: Failed to aquire perflock, handle = %d
+324 0x00008041 0x00008041 49  50   .rodata             ascii   %s: %s() %d: ERROR:Db=%s sql open failed, err=%d\n
+325 0x00008076 0x00008076 17  18   .rodata             ascii   createMeterDataDb
+326 0x00008088 0x00008088 43  44   .rodata             ascii   %s: %s() %d: AdaptLaunchAlgo:: dbTable NULL
+327 0x000080b4 0x000080b4 7   8    .rodata             ascii   getData
+328 0x000080bc 0x000080bc 28  29   .rodata             ascii   BEGIN IMMEDIATE TRANSACTION;
+329 0x000080d9 0x000080d9 18  19   .rodata             ascii   AdaptLaunchAction:
+330 0x000080ec 0x000080ec 12  13   .rodata             ascii   St9exception
+331 0x000080f9 0x000080f9 16  17   .rodata             ascii   St12length_error
+332 0x0000810a 0x0000810a 15  16   .rodata             ascii   St11logic_error
+333 0x00008c19 0x00008c19 4   5    .eh_frame           ascii   zPLR
+334 0x00008c54 0x00008c54 5   24   .eh_frame           utf32le \b$Lᑀż
+335 0x00008c7c 0x00008c7c 5   24   .eh_frame           utf32le \b,tᖔƴ
+336 0x0000a030 0x0000a030 5   6    .text               ascii   h"B9h
+337 0x0000a037 0x0000a037 4   5    .text               ascii   6`N@
+338 0x0000a047 0x0000a047 4   5    .text               ascii   6`B@
+339 0x0000a059 0x0000a059 4   6    .text               utf8    {¨e8
+340 0x0000a2c4 0x0000a2c4 4   6    .text               utf8    Ȣ@9h
+341 0x0000a33b 0x0000a33b 4   5    .text               ascii   6`.@
+342 0x0000a703 0x0000a703 4   5    .text               ascii   6`\n@
+343 0x0000acdc 0x0000acdc 4   5    .text               ascii   (\rA8
+344 0x0000aedd 0x0000aedd 4   5    .text               ascii   B@9h
+345 0x0000b441 0x0000b441 4   5    .text               ascii   #@9h
+346 0x0000b4f9 0x0000b4f9 4   5    .text               ascii   #@9h
+347 0x0000b651 0x0000b651 4   5    .text               ascii   #@9(
+348 0x0000b78c 0x0000b78c 5   6    .text               ascii   h"B9h
+349 0x0000b793 0x0000b793 4   5    .text               ascii   6`N@
+350 0x0000b7a3 0x0000b7a3 4   5    .text               ascii   6`B@
+351 0x0000b7b5 0x0000b7b5 4   6    .text               utf8    {¨"3
+352 0x0000ba20 0x0000ba20 4   6    .text               utf8    Ȣ@9h
+353 0x0000ba97 0x0000ba97 4   5    .text               ascii   6`.@
+354 0x0000c324 0x0000c324 4   5    .text               ascii   (\rA8
+355 0x0000c525 0x0000c525 4   5    .text               ascii   B@9h
+356 0x0000ca89 0x0000ca89 4   5    .text               ascii   #@9h
+357 0x0000cb41 0x0000cb41 4   5    .text               ascii   #@9h
+358 0x0000cc99 0x0000cc99 4   5    .text               ascii   #@9(
+359 0x0000cf31 0x0000cf31 4   5    .text               ascii   "\n9(
+360 0x0000d0b5 0x0000d0b5 5   6    .text               ascii   j58"-
+361 0x0000d0c8 0x0000d0c8 4   5    .text               ascii   g"\n9
+362 0x0000d0f9 0x0000d0f9 4   5    .text               ascii   #@9h
+363 0x0000d1c2 0x0000d1c2 5   6    .text               ascii   \a6`^A
+364 0x0000d3fe 0x0000d3fe 5   6    .text               ascii   \a6`\n@
+365 0x0000d46e 0x0000d46e 4   5    .text               ascii   _8Zc
+366 0x0000d4b6 0x0000d4b6 4   5    .text               ascii   _89c
+367 0x0000d7fb 0x0000d7fb 4   5    .text               ascii   T`&@
+368 0x0000d88d 0x0000d88d 4   6    .text               utf8    {èT*
+369 0x0000da7c 0x0000da7c 4   5    .text               ascii   h"@9
+370 0x0000db8f 0x0000db8f 4   5    .text               ascii   6`\n@
+371 0x0000dbf7 0x0000dbf7 4   5    .text               ascii   6`^A
+372 0x0000dc85 0x0000dc85 4   6    .text               utf8    {¨V)
+373 0x0000dd2f 0x0000dd2f 5   6    .text               ascii   ZG|\n\e
+374 0x0000df81 0x0000df81 4   5    .text               ascii   #@9(
+375 0x0000e481 0x0000e481 4   5    .text               ascii   #@9h
+376 0x0000e585 0x0000e585 4   5    .text               ascii   B@9h
+377 0x0000e71c 0x0000e71c 5   6    .text               ascii   hB@9h
+378 0x0000e877 0x0000e877 7   8    .text               ascii   TB|\n\eB\f
+379 0x0000e91c 0x0000e91c 5   6    .text               ascii   hB@9h
+380 0x0000e96a 0x0000e96a 4   5    .text               ascii   @9(\v
+381 0x0000ea87 0x0000ea87 4   5    .text               ascii   ThK@
+382 0x0000ea93 0x0000ea93 7   8    .text               ascii   K\b}\t\e\b\r
+383 0x0000eb80 0x0000eb80 4   5    .text               ascii   ig\t)
+384 0x0000ec98 0x0000ec98 5   6    .text               ascii   hB@9h
+385 0x0000ecd4 0x0000ecd4 4   5    .text               ascii   wg\t)
+386 0x0000f1a1 0x0000f1a1 4   5    .text               ascii   #@9h
+387 0x0000f279 0x0000f279 4   5    .text               ascii   #@9h
+388 0x0000f4e1 0x0000f4e1 4   5    .text               ascii   C@9h
+389 0x0000fb05 0x0000fb05 4   5    .text               ascii   C@9h
+390 0x000102d9 0x000102d9 4   5    .text               ascii   #@9h
+391 0x000103dd 0x000103dd 4   5    .text               ascii   B@9h
+392 0x000106c5 0x000106c5 4   5    .text               ascii   CA9h
+393 0x00010739 0x00010739 4   5    .text               ascii   CA9h
+394 0x00010759 0x00010759 4   5    .text               ascii   CA9h
+395 0x000107dc 0x000107dc 4   6    .text               utf8    Ȏ@8\b
+396 0x0001099e 0x0001099e 5   6    .text               ascii   @9j\a@
+397 0x00010a0a 0x00010a0a 5   6    .text               ascii   @9j\a@
+398 0x00010b76 0x00010b76 4   5    .text               ascii   \t9w\v
+399 0x00010bf9 0x00010bf9 5   6    .text               ascii   "J9H\a
+400 0x00010ed7 0x00010ed7 4   5    .text               ascii   T)I@
+401 0x00010f91 0x00010f91 4   5    .text               ascii   B@9h
+402 0x0001101d 0x0001101d 4   5    .text               ascii   B@9h
+403 0x00011055 0x00011055 4   5    .text               ascii   CA9h
+404 0x000110d5 0x000110d5 4   5    .text               ascii   CA9\b
+405 0x00011585 0x00011585 4   5    .text               ascii   B@9h
+406 0x00011639 0x00011639 4   5    .text               ascii   80.\b
+407 0x00011735 0x00011735 4   5    .text               ascii   80.\v
+408 0x0001174b 0x0001174b 4   6    .text               utf8    T,\tԚ
+409 0x000117af 0x000117af 4   6    .text               utf8    Tl\tԚ
+410 0x000117f6 0x000117f6 4   6    .text               utf8    }ӭik
+411 0x000118ef 0x000118ef 4   5    .text               ascii   T\n\r\t
+412 0x0001190f 0x0001190f 4   5    .text               ascii   6\n\r\t
+413 0x0001192a 0x0001192a 5   6    .text               ascii   \b6\n\r\t
+414 0x00011a09 0x00011a09 4   5    .text               ascii   80.\b
+415 0x00011a23 0x00011a23 5   7    .text               utf8    T\t\vך9
+416 0x00011b57 0x00011b57 5   7    .text               utf8    T\t\tך(
+417 0x00011bcf 0x00011bcf 5   7    .text               utf8    T\t\tך(
+418 0x00011d71 0x00011d71 4   5    .text               ascii   80.\b
+419 0x00011e6d 0x00011e6d 4   5    .text               ascii   80.\v
+420 0x00011e83 0x00011e83 4   6    .text               utf8    T,\tԚ
+421 0x00011ee7 0x00011ee7 4   6    .text               utf8    Tl\tԚ
+422 0x00011f2e 0x00011f2e 4   6    .text               utf8    }ӭik
+423 0x00012027 0x00012027 4   5    .text               ascii   T\n\r\t
+424 0x00012047 0x00012047 4   5    .text               ascii   6\n\r\t
+425 0x00012062 0x00012062 5   6    .text               ascii   \b6\n\r\t
+426 0x000120bd 0x000120bd 4   5    .text               ascii   80.\b
+427 0x000121fb 0x000121fb 5   7    .text               utf8    T\t\t֚(
+428 0x0001226f 0x0001226f 5   7    .text               utf8    T\t\t֚(
+429 0x000123ab 0x000123ab 4   5    .text               ascii   6`\n@
+430 0x00012572 0x00012572 7   8    .text               ascii   @9+p@9_
+431 0x000125c3 0x000125c3 4   5    .text               ascii   Tl!@
+432 0x00012627 0x00012627 5   6    .text               ascii   Tlq@9
+433 0x00012677 0x00012677 4   5    .text               ascii   TL%@
+434 0x0001268b 0x0001268b 5   6    .text               ascii   TLq@9
+435 0x0001269e 0x0001269e 4   5    .text               ascii   \nkb\n
+436 0x000126ef 0x000126ef 4   5    .text               ascii   Tj @
+437 0x00012746 0x00012746 4   6    .text               utf8    _֊\b@
+438 0x00012762 0x00012762 7   8    .text               ascii   @9kp@9_
+439 0x000127af 0x000127af 4   5    .text               ascii   TL%@
+440 0x000127c3 0x000127c3 5   6    .text               ascii   TLq@9
+441 0x00012833 0x00012833 4   5    .text               ascii   T(\b@
+442 0x00012838 0x00012838 4   5    .text               ascii   \ta@9
+443 0x0001283f 0x0001283f 4   5    .text               ascii   5\t\t@
+444 0x00012854 0x00012854 4   5    .text               ascii   la@9
+445 0x00012868 0x00012868 5   6    .text               ascii   la@9L
+446 0x00012c11 0x00012c11 4   5    .text               ascii   80.\b
+447 0x00012df1 0x00012df1 4   5    .text               ascii   80.\n
+448 0x00012e6f 0x00012e6f 5   7    .text               utf8    Th\vԚ\e
+449 0x00012ea0 0x00012ea0 5   6    .text               ascii   *C@9+
+450 0x00012f68 0x00012f68 7   8    .text               ascii   +\rA8L\r@
+451 0x00012fd0 0x00012fd0 7   8    .text               ascii   *A@9)\r@
+452 0x00013010 0x00013010 7   8    .text               ascii   *A@9)\r@
+453 0x000130cb 0x000130cb 4   5    .text               ascii   T\n\r\t
+454 0x000130eb 0x000130eb 4   5    .text               ascii   6\n\r\t
+455 0x00013106 0x00013106 5   6    .text               ascii   \b6\n\r\t
+456 0x0001319d 0x0001319d 4   5    .text               ascii   80.\b
+457 0x0001326c 0x0001326c 4   5    .text               ascii   JE@9
+458 0x00013271 0x00013271 4   5    .text               ascii   ji8_
+459 0x000132bb 0x000132bb 5   7    .text               utf8    T\t\tښ(
+460 0x000132ea 0x000132ea 4   5    .text               ascii   \a7\b\t
+461 0x000132f8 0x000132f8 4   5    .text               ascii   JE@9
+462 0x000132fd 0x000132fd 4   5    .text               ascii   ji8_
+463 0x00013353 0x00013353 5   7    .text               utf8    T\t\tښ(
+464 0x00013370 0x00013370 4   5    .text               ascii   JE@9
+465 0x00013375 0x00013375 4   5    .text               ascii   ji8_
+466 0x000133f0 0x000133f0 4   5    .text               ascii   JE@9
+467 0x000133f5 0x000133f5 4   5    .text               ascii   ji8_
+468 0x0001351f 0x0001351f 5   7    .text               utf8    T*\tښI
+469 0x000135e5 0x000135e5 4   5    .text               ascii   B@9h
+470 0x00013a5c 0x00013a5c 7   10   .text               utf8    l%Zj!ʚ+
+471 0x00013b06 0x00013b06 7   8    .text               ascii   @9\bij8j
+472 0x00013b5c 0x00013b5c 4   5    .text               ascii   \b@@9
+473 0x00013bc8 0x00013bc8 5   6    .text               ascii   hB@9h
+474 0x00013c69 0x00013c69 4   5    .text               ascii   80.\b
+475 0x00013d79 0x00013d79 4   5    .text               ascii   80.\n
+476 0x00013df7 0x00013df7 5   7    .text               utf8    Th\vԚ\e
+477 0x00013e28 0x00013e28 5   6    .text               ascii   *C@9+
+478 0x00013ef0 0x00013ef0 7   8    .text               ascii   +\rA8L\r@
+479 0x00013f58 0x00013f58 7   8    .text               ascii   *A@9)\r@
+480 0x00013f98 0x00013f98 7   8    .text               ascii   *A@9)\r@
+481 0x00014053 0x00014053 4   5    .text               ascii   T\n\r\t
+482 0x00014073 0x00014073 4   5    .text               ascii   6\n\r\t
+483 0x0001408e 0x0001408e 5   6    .text               ascii   \b6\n\r\t
+484 0x00014125 0x00014125 4   5    .text               ascii   80.\b
+485 0x000141a8 0x000141a8 5   6    .text               ascii   iB@9j
+486 0x000141f4 0x000141f4 4   5    .text               ascii   JE@9
+487 0x000141f9 0x000141f9 4   5    .text               ascii   ji8_
+488 0x00014243 0x00014243 5   7    .text               utf8    T\t\tښ(
+489 0x00014253 0x00014253 6   7    .text               ascii   TiB@9j
+490 0x00014272 0x00014272 4   5    .text               ascii   \a7\b\t
+491 0x00014280 0x00014280 4   5    .text               ascii   JE@9
+492 0x00014285 0x00014285 4   5    .text               ascii   ji8_
+493 0x000142a7 0x000142a7 6   7    .text               ascii   TiB@9j
+494 0x000142db 0x000142db 5   7    .text               utf8    T\t\tښ(
+495 0x000142f8 0x000142f8 4   5    .text               ascii   JE@9
+496 0x000142fd 0x000142fd 4   5    .text               ascii   ji8_
+497 0x0001434b 0x0001434b 6   7    .text               ascii   TiB@9j
+498 0x00014378 0x00014378 4   5    .text               ascii   JE@9
+499 0x0001437d 0x0001437d 4   5    .text               ascii   ji8_
+500 0x000144a3 0x000144a3 5   7    .text               utf8    T\t\tښ(
+501 0x00014919 0x00014919 4   5    .text               ascii   B@9h
+502 0x00014981 0x00014981 4   5    .text               ascii   B@9h
+503 0x00014b75 0x00014b75 4   5    .text               ascii   80.\t
+504 0x00014b8b 0x00014b8b 5   7    .text               utf8    TK\tȚj
+505 0x00014bef 0x00014bef 5   7    .text               utf8    TI\tȚ*
+506 0x00014c79 0x00014c79 4   5    .text               ascii   80.\b
+507 0x00014cf7 0x00014cf7 5   7    .text               utf8    T\t\tؚ(
+508 0x00014d30 0x00014d30 4   5    .text               ascii   JE@9
+509 0x00014d35 0x00014d35 4   5    .text               ascii   ji8_
+510 0x00014d9c 0x00014d9c 4   5    .text               ascii   JE@9
+511 0x00014da1 0x00014da1 4   5    .text               ascii   ji8_
+512 0x00014de3 0x00014de3 5   7    .text               utf8    T\t\tؚ(
+513 0x00014e12 0x00014e12 4   5    .text               ascii   \a7\b\b
+514 0x00014e20 0x00014e20 4   5    .text               ascii   JE@9
+515 0x00014e25 0x00014e25 4   5    .text               ascii   ji8_
+516 0x00014e98 0x00014e98 4   5    .text               ascii   JE@9
+517 0x00014e9d 0x00014e9d 4   5    .text               ascii   ji8_
+518 0x00014fad 0x00014fad 4   5    .text               ascii   80.\b
+519 0x000150bd 0x000150bd 4   5    .text               ascii   80.\n
+520 0x0001513b 0x0001513b 5   7    .text               utf8    Th\vԚ\e
+521 0x0001516c 0x0001516c 5   6    .text               ascii   *C@9+
+522 0x00015234 0x00015234 7   8    .text               ascii   +\rA8L\r@
+523 0x0001529c 0x0001529c 7   8    .text               ascii   *A@9)\r@
+524 0x000152dc 0x000152dc 7   8    .text               ascii   *A@9)\r@
+525 0x00015397 0x00015397 4   5    .text               ascii   T\n\r\t
+526 0x000153b7 0x000153b7 4   5    .text               ascii   6\n\r\t
+527 0x000153d2 0x000153d2 5   6    .text               ascii   \b6\n\r\t
+528 0x00015b45 0x00015b45 4   5    .text               ascii   #@9h
+529 0x00015bfd 0x00015bfd 4   5    .text               ascii   #@9h
+530 0x00015d55 0x00015d55 4   5    .text               ascii   #@9(
+531 0x000160a1 0x000160a1 4   6    .text               utf8    {ŨO\b
+532 0x00016468 0x00016468 4   5    .text               ascii   (\rA8
+533 0x00016669 0x00016669 4   5    .text               ascii   B@9h
+534 0x00016b9a 0x00016b9a 4   6    .text               utf8    _։"@
+535 0x00016c1b 0x00016c1b 4   5    .text               ascii   yH/@
+536 0x00016c47 0x00016c47 5   7    .text               utf8    =AÂ<Z
+537 0x00016c53 0x00016c53 4   5    .text               ascii   TH#@
+538 0x00016c6f 0x00016c6f 7   8    .text               ascii   9H#@9_\v
+539 0x00016cb6 0x00016cb6 5   6    .text               ascii   \a6`\v@
+540 0x00016dbf 0x00016dbf 4   5    .text               ascii   4s"@
+541 0x0001726f 0x0001726f 4   5    .text               ascii   6`B@
+542 0x000172f8 0x000172f8 5   6    .text               ascii   h"B9h
+543 0x000172ff 0x000172ff 4   5    .text               ascii   6`N@
+544 0x0001730f 0x0001730f 4   5    .text               ascii   6`B@
+545 0x000176bd 0x000176bd 4   5    .text               ascii   #@9h
+546 0x00017771 0x00017771 4   5    .text               ascii   B@9h
+547 0x00017a60 0x00017a60 4   6    .text               utf8    Ȣ@9h
+548 0x00017ad7 0x00017ad7 4   5    .text               ascii   6`.@
+549 0x000198a9 0x00000001 11  12   .shstrtab           ascii   .init_array
+550 0x000198b5 0x0000000d 11  12   .shstrtab           ascii   .fini_array
+551 0x000198c1 0x00000019 5   6    .shstrtab           ascii   .text
+552 0x000198c7 0x0000001f 4   5    .shstrtab           ascii   .got
+553 0x000198cc 0x00000024 19  20   .shstrtab           ascii   .note.android.ident
+554 0x000198e0 0x00000038 8   9    .shstrtab           ascii   .got.plt
+555 0x000198e9 0x00000041 9   10   .shstrtab           ascii   .rela.plt
+556 0x000198f3 0x0000004b 4   5    .shstrtab           ascii   .bss
+557 0x000198f8 0x00000050 7   8    .shstrtab           ascii   .dynstr
+558 0x00019900 0x00000058 13  14   .shstrtab           ascii   .eh_frame_hdr
+559 0x0001990e 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+560 0x0001991d 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+561 0x0001992a 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+562 0x00019934 0x0000008c 9   10   .shstrtab           ascii   .rela.dyn
+563 0x0001993e 0x00000096 12  13   .shstrtab           ascii   .gnu.version
+564 0x0001994b 0x000000a3 7   8    .shstrtab           ascii   .dynsym
+565 0x00019953 0x000000ab 9   10   .shstrtab           ascii   .gnu.hash
+566 0x0001995d 0x000000b5 9   10   .shstrtab           ascii   .eh_frame
+567 0x00019967 0x000000bf 17  18   .shstrtab           ascii   .gcc_except_table
+568 0x00019979 0x000000d1 18  19   .shstrtab           ascii   .note.gnu.build-id
+569 0x0001998c 0x000000e4 8   9    .shstrtab           ascii   .dynamic
+570 0x00019995 0x000000ed 9   10   .shstrtab           ascii   .shstrtab
+571 0x0001999f 0x000000f7 7   8    .shstrtab           ascii   .rodata
+572 0x000199a7 0x000000ff 14  15   .shstrtab           ascii   .gnu_debugdata
+573 0x000199b6 0x0000010e 5   6    .shstrtab           ascii   .data
+574 0x000199bd 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+575 0x00019a02 0x00000046 4   5    .gnu_debugdata      ascii   (a%S
+576 0x00019a3b 0x0000007f 4   5    .gnu_debugdata      ascii   ]1f"
+577 0x00019a70 0x000000b4 4   5    .gnu_debugdata      ascii   5=T,
+578 0x00019a9d 0x000000e1 8   10   .gnu_debugdata      utf8    Nz#i{']:
+579 0x00019b1a 0x0000015e 5   6    .gnu_debugdata      ascii   2bZoZ
+580 0x00019b6b 0x000001af 5   7    .gnu_debugdata      utf8    Y\e:߭I
+581 0x00019b9a 0x000001de 8   9    .gnu_debugdata      ascii   \vk?Jhcsb
+582 0x00019bac 0x000001f0 4   5    .gnu_debugdata      ascii   e%;\v
+583 0x00019bf6 0x0000023a 5   6    .gnu_debugdata      ascii   \be$u6
+584 0x00019c4c 0x00000290 4   5    .gnu_debugdata      ascii   4}(&
+585 0x00019ca0 0x000002e4 6   7    .gnu_debugdata      ascii   V\rsj1$
+586 0x00019cae 0x000002f2 5   6    .gnu_debugdata      ascii   'Oo(+
+587 0x00019d01 0x00000345 4   5    .gnu_debugdata      ascii   VBj"
+588 0x00019d2e 0x00000372 5   6    .gnu_debugdata      ascii   8 \v4>
+589 0x00019d5c 0x000003a0 4   5    .gnu_debugdata      ascii   .e\r
+590 0x00019d6d 0x000003b1 5   6    .gnu_debugdata      ascii   dmzra
+591 0x00019d83 0x000003c7 4   5    .gnu_debugdata      ascii   =JE\b
+592 0x00019d91 0x000003d5 4   5    .gnu_debugdata      ascii   G<G0
+593 0x00019daf 0x000003f3 4   5    .gnu_debugdata      ascii   n4n`
+594 0x00019db9 0x000003fd 6   7    .gnu_debugdata      ascii   9BRiS_
+595 0x00019dc2 0x00000406 6   10   .gnu_debugdata      utf8    Ή/*썻Ge
+596 0x00019e03 0x00000447 4   5    .gnu_debugdata      ascii   #p*T
+597 0x00019e0c 0x00000450 4   5    .gnu_debugdata      ascii   16_q
+598 0x00019e2c 0x00000470 4   5    .gnu_debugdata      ascii   &a5d
+599 0x00019eb6 0x000004fa 6   8    .gnu_debugdata      utf8     \v#wv/
+600 0x00019eea 0x0000052e 4   7    .gnu_debugdata      utf8    ߀ªz/
+601 0x00019f51 0x00000595 8   9    .gnu_debugdata      ascii   0F\T85I^
+602 0x00019f60 0x000005a4 5   6    .gnu_debugdata      ascii   @Lej\t
+603 0x0001a093 0x000006d7 5   8    .gnu_debugdata      utf8    R.ϐͲ(
+604 0x0001a0b4 0x000006f8 5   7    .gnu_debugdata      utf8    \t0FKؒ
+605 0x0001a0de 0x00000722 4   5    .gnu_debugdata      ascii   ba6e
+606 0x0001a0e9 0x0000072d 4   5    .gnu_debugdata      ascii   lD1j
+607 0x0001a0fa 0x0000073e 4   6    .gnu_debugdata      utf8    ٭ L?
+608 0x0001a11b 0x0000075f 9   12   .gnu_debugdata      utf8    톏gR,Jj<y~
+609 0x0001a12e 0x00000772 4   6    .gnu_debugdata      utf8    ȓ|?9
+610 0x0001a144 0x00000788 4   6    .gnu_debugdata      utf8    J\ƅ\v
+611 0x0001a16b 0x000007af 5   6    .gnu_debugdata      ascii   E<w7K
+612 0x0001a180 0x000007c4 4   5    .gnu_debugdata      ascii   Wo{6
+613 0x0001a1d4 0x00000818 4   7    .gnu_debugdata      utf8    縗sdd
+0x000181b0    1     16 sym.imp.__cxa_finalize
+0x00018250    1     16 sym.imp._Unwind_Resume
+0x00018230    1     16 sym.imp.__android_log_print
+0x000188e0    1     16 sym.imp.__cxa_allocate_exception
+0x000182a0    1     16 sym.imp.__cxa_begin_catch
+0x00018360    1     16 sym.imp.__cxa_end_catch
+0x00018900    1     16 sym.imp.__cxa_free_exception
+0x000188f0    1     16 sym.imp.__cxa_throw
+0x00018240    1     16 sym.imp.__stack_chk_fail
+0x00018510    1     16 sym.imp.dlclose
+0x000184f0    1     16 sym.imp.dlopen
+0x00018500    1     16 sym.imp.dlsym
+0x00018800    1     16 sym.imp.memchr
+0x00018820    1     16 sym.imp.memcmp
+0x00018310    1     16 sym.imp.memcpy
+0x00018520    1     16 sym.imp.perf_get_prop
+0x00018600    1     16 sym.imp.property_get_bool
+0x000183c0    1     16 sym.imp.sqlite3_bind_blob
+0x000183a0    1     16 sym.imp.sqlite3_bind_int
+0x000183b0    1     16 sym.imp.sqlite3_bind_text
+0x00018220    1     16 sym.imp.sqlite3_close
+0x00018790    1     16 sym.imp.sqlite3_column_blob
+0x00018760    1     16 sym.imp.sqlite3_column_int
+0x000187a0    1     16 sym.imp.sqlite3_column_int64
+0x00018780    1     16 sym.imp.sqlite3_column_text
+0x000182f0    1     16 sym.imp.sqlite3_errmsg
+0x000182e0    1     16 sym.imp.sqlite3_exec
+0x000183f0    1     16 sym.imp.sqlite3_finalize
+0x000182d0    1     16 sym.imp.sqlite3_open_v2
+0x00018370    1     16 sym.imp.sqlite3_prepare_v2
+0x000183e0    1     16 sym.imp.sqlite3_reset
+0x000183d0    1     16 sym.imp.sqlite3_step
+0x00018530    1     16 sym.imp.strlen
+0x00018ab0    1     16 sym.imp.__strlcpy_chk
+0x00018a50    1     16 sym.imp.atoi
+0x00018ad0    1     16 sym.imp.perf_hint
+0x00018ae0    1     16 sym.imp.perf_lock_rel
+0x00018a80    1     16 sym.imp.pthread_mutex_lock
+0x00018a90    1     16 sym.imp.pthread_mutex_unlock
+0x0000a000    1     12 entry0
+0x00013cd0   66   1000 sym.std::__1::__hash_table_std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1::__unordered_map_hasher_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1::hash_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______true___std::__1::__unordered_map_equal_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1::equal_to_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______true___std::__1::allocator_std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_________::__rehash_unsigned_long_
+0x00011c5c    3     96 method.std::__1::unordered_set_int__std::__1::hash_int___std::__1::equal_to_int___std::__1::allocator_int___.unordered_set_std::__1::unordered_set_int__std::__1::hash_int___std::__1::equal_to_int___std::__1::allocator_int____const_
+0x0000f8b0    8    168 method.std::__1::vector_LMDBDataRow_inputDbData___std::__1::allocator_LMDBDataRow_inputDbData____.vector_std::__1::vector_LMDBDataRow_inputDbData___std::__1::allocator_LMDBDataRow_inputDbData_____const_
+0x00018330    1     16 sym.imp.operator_new_unsigned_long_
+0x000187b0    1     16 sym.imp.std::__1::__vector_base_common_true_::__throw_length_error___const
+0x000181e0    1     16 sym.imp.operator_delete_void_
+0x00018350    1     16 sym.imp.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___::append_char_const_
+0x000187c0    1     16 fcn.000187c0
+0x00018320    1     16 sym.imp.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___::append_char_const__unsigned_long_
+0x00018700    1     16 fcn.00018700
+0x000187d0    1     16 fcn.000187d0
+0x00018380    1     16 sym.imp.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___::assign_char_const_
+0x00012aec   23    412 method.std::__1::vector_int__std::__1::allocator_int___.vector_std::__1::vector_int__std::__1::allocator_int____const_
+0x000188c0    1     16 sym.imp.std::__1::__next_prime_unsigned_long_
+0x00016f60   23    556 method.AdaptLaunchAction.AdaptLaunchAction_unsigned_long__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____
+0x00010544   21    424 method.AdaptLaunchFeature.removeFromDatabase_AdaptLaunchAction__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____
+0x00010780   97   1448 method.AdaptLaunchFeature.runAsync_AsyncTriggerPayload_
+0x00016964    1     68 method.AdaptLaunchMetaMeter.AdaptLaunchMetaMeter_FeatureInfo_const__LMDatabase_inputDbData___FeatureState_
+0x00018a00    1     16 sym.imp.MetaMeter::MetaMeter_FeatureInfo_const__FeatureState_
+0x00014f30   16    244 fcn.00014f30
+0x0000a014    5     76 method.LMDatabase_AppState_.LMDatabase__
+0x0000cec0   25    640 method.AdaptLaunchFeature.AdaptLaunchFeature_FeatureInfo_
+0x0000bb30   23    520 method.LMDatabase_inputDbData_.openLMdb__
+0x0000b978   23    396 method.LMDBDataTable_inputDbData_.LMDBDataTable__
+0x000146ac    4     96 method.std::__1::__list_imp_LMDBDataRow_inputDbData___std::__1::allocator_LMDBDataRow_inputDbData____.__list_imp__
+0x00011cf4   16    244 method.std::__1::__hash_table_int__std::__1::hash_int___std::__1::equal_to_int___std::__1::allocator_int___.rehash_unsigned_long_
+0x00012534   68    712 method.std::__1::__tree_node_base_void__std::__1::__tree_AsyncInfo__std::__1::less_AsyncInfo___std::__1::allocator_AsyncInfo___.__find_equal_AsyncInfo__std::__1::__tree_const_iterator_AsyncInfo__std::__1::__tree_node_AsyncInfo__void___long___std::__1
+0x000169bc    1     52 fcn.000169bc
+0x00018a10    1     16 sym.imp.MetaMeter::MetaMeter__
+0x0000b7fc   20    348 method.LMDatabase_inputDbData_.closeLMdb__
+0x0000dd70    7    172 method.AdaptLaunchFeature.isHeavyGame_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____
+0x0001470c   12    248 method.void_std::__1::vector_LMDBDataRow_inputDbData___std::__1::allocator_LMDBDataRow_inputDbData____.__emplace_back_slow_path_LMDBDataRow_inputDbData___LMDBDataRow_inputDbData__
+0x0000f060   19    512 method.int_LMDatabase_inputDbData_.getCountDR_inputDbData__LMDBDataRowKey_
+0x0000b1c4   39   1088 method.LMDatabase_AppState_.build_query_for_where_clause_LMDBDataRowKey__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____
+0x00011124    3    104 method.std::__1::unordered_map_unsigned_int__std::__1::unordered_set_int__std::__1::hash_int___std::__1::equal_to_int___std::__1::allocator_int_____std::__1::hash_unsigned_int___std::__1::equal_to_unsigned_int___std::__1::allocator_std::__1::pair_unsigned
+0x0000b770    5     76 method.LMDatabase_inputDbData_.LMDatabase__
+0x0000b73c    1     52 method.LMDatabase_AppState_.LMDB_memscpy_void__unsigned_long__void_const__unsigned_long_
+0x000119d4   37    576 sym._ZNSt3__112__hash_tableINS_17__hash_value_typeIjNS_13unordered_setIiNS_4hashIiEENS_8equal_toIiEENS_9allocatorIiEEEEEENS_22__un
+0x000116a0   51    692 sym.std::__1::__hash_table_std::__1::__hash_value_type_unsigned_int__std::__1::unordered_set_int__std::__1::hash_int___std::__1::equal_to_int___std::__1::allocator_int_______std::__1::__unordered_map_hasher_unsigned_int__std::__1::__hash_value_type_unsigned_int__std::__1::unordered_set_int__std::__1::hash_int___std::__1::equal_to_int___std::__1::allocator_int_______std::__1::hash_unsigned_int___true___std::__1::__unordered_map_equal_unsigned_int__std::__1::__hash_value_type_unsigned_int__std::__1::unordered_set_int__std::__1::hash_int___std::__1::equal_to_int___std::__1::allocator_int_______std::__1::equal_to_unsigned_int___true___std::__1::allocator_std::__1::__hash_value_type_unsigned_int__std::__1::unordered_set_int__std::__1::hash_int___std::__1::equal_to_int___std::__1::allocator_int_________::__rehash_unsigned_long_
+0x000169a8    1     20 method.AdaptLaunchMetaMeter.AdaptLaunchMetaMeter__
+0x0000bf90   78   1908 method.lmdbError_LMDatabase_inputDbData_.writeCachedDRToDisk_inputDbData___
+0x000160d4   78   1908 method.lmdbError_LMDatabase_PerfdOutput_.writeCachedDRToDisk_PerfdOutput___
+0x00013bec   16    244 method.std::__1::__hash_table_std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1::__unordered
+0x0000a60c   10    264 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____std::__1::operator_char__std::__1::char_traits_char___std::__1.allocator_char____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_ch
+0x00017df0   20    344 method.LMDatabase_PerfdOutput_.closeLMdb__
+0x000172dc    5     76 method.LMDatabase_PerfdOutput_.LMDatabase__
+0x00010d80   63    804 method.AdaptLaunchFeature.getData_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____featureData__int_
+0x0000dba0   16    200 method.AdaptLaunchFeature.AdaptLaunchFeature__
+0x000149a0   10    312 fcn.000149a0
+0x00015014   66   1000 reloc._ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP7Feature11FeatureInfoEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1EEENS5_ISD_EEE
+0x00014804    5    136 sym.Feature_createClassObj_Feature__FeatureInfo__AdaptLaunchFeature__FeatureInfo_
+0x00011dd8   51    692 method.std::__1::__hash_table_int__std::__1::hash_int___std::__1::equal_to_int___std::__1::allocator_int___.__rehash_unsigned_long_
+0x000113f8   15    264 method.std::__1::vector_std::__1::vector_int__std::__1::allocator_int_____std::__1::allocator_std::__1::vector_int__std::__1::allocator_int_______.vector_std::__1::vector_std::__1::vector_int__std::__1::allocator_int_____std::__1::allocator_std::__1::vect
+0x000153fc   29    528 sym._ZNSt3__16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEE6assignIPS6_EENS_9enable_ifIXaasr21__is_
+0x00017f68   14    352 method.lmdbError_LMDatabase_PerfdOutput_.createLMdbTables_PerfdOutput___
+0x00017504    4     72 method.AdaptLaunchAction.AdaptLaunchAction__
+0x00018a40    1     16 fcn.00018a40
+0x00017b6c    4     96 method.std::__1::__list_imp_LMDBDataRow_PerfdOutput___std::__1::allocator_LMDBDataRow_PerfdOutput____.__list_imp__
+0x00017834   16    372 method.AdaptLaunchAction.applyAction_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____unsigned_int__int__int_
+0x0001734c   14    380 method.AdaptLaunchAction.getInstance__
+0x000179a8    3     20 method.AdaptLaunchAction.removeAction_int_
+0x000115bc   16    244 method.std::__1::__hash_table_std::__1::__hash_value_type_unsigned_int__std::__1::unordered_set_int__std::__1::hash_int___std::__1::equal_to_int___std::__1::allocator_int_______std::__1::__unordered_map_hasher_unsigned_int__std::__1::__hash_value_type_uns
+0x00011500    3     96 method.std::__1::unordered_map_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::hash_std::__1::basic_string_char__std::_
+0x00015fdc   12    248 method.void_std::__1::vector_LMDBDataRow_PerfdOutput___std::__1::allocator_LMDBDataRow_PerfdOutput____.__emplace_back_slow_path_LMDBDataRow_PerfdOutput___LMDBDataRow_PerfdOutput__
+0x0000f958   40   1100 method.LMDBDataTable_PerfdOutput_::vecT_LMDatabase_PerfdOutput_.readAllocateDR_PerfdOutput__LMDBDataRowKey__unsigned_long__lmdbOrderByCol__lmdbOrderByDir_
+0x000111f0   13    256 method.std::__1::vector_MeterInfo__std::__1::allocator_MeterInfo___.vector_std::__1::vector_MeterInfo__std::__1::allocator_MeterInfo____const_
+0x000169f0   64   1168 method.AdaptLaunchMetaMeter.writeToDataBase_std::__1::vector_Meter__std::__1::allocator_Meter____
+0x0000bd5c   14    356 method.lmdbError_LMDatabase_inputDbData_.createLMdbTables_inputDbData___
+0x0000a084    1     28 method.LMDatabase_AppState_.LMDatabaseWriteCachedToDisk__
+0x000181c0    1     16 fcn.000181c0
+0x000112f0   15    264 method.std::__1::vector_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::allocator_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______.vector_std::__1::vector_std::__1::
+0x000127fc   39    448 method.void_std::__1::__tree_balance_after_insert_std::__1.__tree_node_base_void___std::__1::__tree_node_base_void___std::__1::__tree_node_base_void__
+0x000145b4   12    248 method.void_std::__1::vector_LMDBDataRow_AppState___std::__1::allocator_LMDBDataRow_AppState____.__emplace_back_slow_path_LMDBDataRow_AppState___LMDBDataRow_AppState__
+0x0000b7e0    1     28 method.LMDatabase_inputDbData_.LMDatabaseWriteCachedToDisk__
+0x00018420    1     16 fcn.00018420
+0x00010d7c    1      4 method.AdaptLaunchFeature.runAsyncIdle_std::__1::atomic_bool__const_
+0x00013608    1    136 reloc._ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_6vectorINS8_IiNS5_IiEEEENS5_ISA_EEEEEENS_22__unordered_map_hasherIS7_SD_NS_4hashIS7_EELb1EEENS_21__unordered_map_equalIS7_SD_NS_8equal_toIS7_EELb1
+0x00018560    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.basic_string_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x000185a0    1     16 fcn.000185a0
+0x00012d48   66   1000 fcn.00012d48
+0x0001208c   37    548 method.std::__1::pair_std::__1::__hash_iterator_std::__1::__hash_node_int__void____bool__std::__1::__hash_table_int__std::__1::hash_int___std::__1::equal_to_int___std::__1::allocator_int___.__emplace_unique_key_args_int__int_const__int_const__int_cons
+0x000129bc    3     64 method.std::__1::__tree_AsyncInfo__std::__1::less_AsyncInfo___std::__1::allocator_AsyncInfo___.destroy_std::__1::__tree_node_AsyncInfo__void__
+0x00018960    1     16 fcn.00018960
+0x000171dc    1    136 method.LMDatabase_PerfdOutput_::LMDatabase_std::__1::basic_string_char__std::__1::char_traits_char___std::__1.allocator_char____const__unsigned_long__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_s
+0x000179bc   23    392 method.LMDBDataTable_PerfdOutput_.LMDBDataTable__
+0x0000dfdc    4     64 method.AdaptLaunchFeature.removeAction_AdaptLaunchAction_
+0x00018690    1     16 fcn.00018690
+0x0000e01c    4    104 method.AdaptLaunchFeature.disableFeature_std::__1::vector_LMDBDataRow_inputDbData___std::__1::allocator_LMDBDataRow_inputDbData______AsyncTriggerPayload_const__int_
+0x0000a3dc    2     20 method.LMDatabase_AppState_.LMDatabaseInit__
+0x0000a948   78   1908 method.lmdbError_LMDatabase_AppState_.writeCachedDRToDisk_AppState___
+0x0001572c   16    376 method.LMDBDataTable_inputDbData_.getRow_unsigned_long_
+0x0000dc8c   15    228 method.AdaptLaunchFeature.getAvgLaunchValues_std::__1::vector_LMDBDataRow_inputDbData___std::__1::allocator_LMDBDataRow_inputDbData______int__int__int__int_
+0x00012c78   16    208 fcn.00012c78
+0x000158c8   39   1088 method.LMDatabase_PerfdOutput_.build_query_for_where_clause_LMDBDataRowKey__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____
+0x0000f334   40   1092 method.LMDBDataTable_inputDbData_::vecT_LMDatabase_inputDbData_.readAllocateDR_inputDbData__LMDBDataRowKey__unsigned_long__lmdbOrderByCol__lmdbOrderByDir_
+0x0000a714   14    356 method.lmdbError_LMDatabase_AppState_.createLMdbTables_AppState___
+0x00015e40   16    376 method.LMDBDataTable_PerfdOutput_.getRow_unsigned_long_
+0x0000de38   17    356 method.AdaptLaunchFeature.applyAction_AdaptLaunchAction__AsyncTriggerPayload_const_
+0x0000c80c   39   1088 method.LMDatabase_inputDbData_.build_query_for_where_clause_LMDBDataRowKey__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____
+0x0000d894   12    312 method.AdaptLaunchFeature.createMeterDataDb__
+0x0000dc68    1     36 fcn.0000dc68
+0x00018660    1     16 fcn.00018660
+0x00014554    4     96 method.std::__1::__list_imp_LMDBDataRow_AppState___std::__1::allocator_LMDBDataRow_AppState____.__list_imp__
+0x00017bcc   23    512 method.LMDatabase_PerfdOutput_.openLMdb__
+0x0000a3e0   23    520 method.LMDatabase_AppState_.openLMdb__
+0x000140b8   79   1100 sym._ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_22__unordered
+0x0001754c   48    728 method.AdaptLaunchAction.FeedbackCB_mpctl_msg_t_
+0x0000cd84    1     52 method.LMDatabase_inputDbData_.LMDB_memscpy_void__unsigned_long__void_const__unsigned_long_
+0x00013130   79   1108 sym._ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_6vectorINS8_IiNS5_
+0x0000fedc   46   1228 method.int_LMDatabase_PerfdOutput_.deleteDeallocateDR_PerfdOutput__LMDBDataTable_PerfdOutput_::vecT_
+0x0000bb2c    1      4 method.LMDatabase_inputDbData_.LMDatabaseInit__
+0x0000a0a0   20    348 method.LMDatabase_AppState_.closeLMdb__
+0x0000e61c  134   2128 method.AdaptLaunchFeature.checkWriteOutputDB_AdaptLaunchAction__AsyncTriggerPayload_const_
+0x0000e084   46   1228 method.int_LMDatabase_inputDbData_.deleteDeallocateDR_inputDbData__LMDBDataTable_inputDbData_::vecT_
+0x0001560c   11    288 method.LMDBDataTable_inputDbData_.LMDBDataTable_char_const_____12___char_const_____12__
+0x0000a21c   23    396 method.LMDBDataTable_AppState_.LMDBDataTable__
+0x00010474    7    180 method.AdaptLaunchFeature.isGame_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____
+0x000148b8   10    176 sym._ZNSt3__112__hash_tableINS_17__hash_value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPFP7Feature11FeatureI
+0x000184c0    1     16 method.FeatureState.writeState_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__AppState_
+0x000187e0    1     16 sym.imp.FeatureState::deleteRow_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00018710    1     16 sym.imp.FeatureState::readState_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x000185f0    1     16 sym.imp.FeatureState::FeatureState_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00018630    1     16 sym.imp.FeatureState::FeatureState__
+0x00018670    1     16 method.FeatureLocator.getData_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____featureData__int_
+0x000186a0    1     16 sym.imp.DumpData::Marker_char_const__int__char_const_
+0x00018840    1     16 sym.imp.MetaMeter::handleAsync_AsyncTriggerPayload_const_
+0x00018540    1     16 sym.imp.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___::compare_char_const__const
+0x00018340    1     16 sym.imp.std::__1::__basic_string_common_true_::__throw_length_error___const
+0x00018910    1     16 sym.imp.std::logic_error::logic_error_char_const_
+0x00018810    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.basic_string_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__unsigned_long__unsigned_long__std::__1::allocator_char_
+0x00018200    1     16 sym.imp.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___::basic_string__
+0x00018730    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.operator_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00018620    1     16 sym.imp.std::__1::condition_variable::condition_variable__
+0x00018260    1     16 sym.imp.std::__1::mutex::lock__
+0x00018270    1     16 sym.imp.std::__1::mutex::unlock__
+0x00018280    1     16 sym.imp.std::__1::mutex::mutex__
+0x00018610    1     16 sym.imp.std::__1::thread::thread__
+0x00018410    1     16 sym.imp.std::__1::to_string_int_
+0x00018400    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____std::__1::operator_char__std::__1::char_traits_char___std::__1.allocator_char____char_const__std::__1::basic_string_char__std::__1::char_traits_char___std::__1:
+0x000182b0    1     16 sym.imp.std::terminate__
+0x00018550    1     16 sym.imp.operator_delete_void__std::nothrow_t_const_
+0x00018490    1     16 sym.imp.operator_new_unsigned_long__std::nothrow_t_const_
+0x0000a010    1      4 entry.fini0
+0x00016950    1     20 entry.init0
+0x000181d0    1     16 fcn.000181d0
+0x000181f0    1     16 fcn.000181f0
+0x0000a3d0    1     12 sym.__clang_call_terminate
+0x00018210    1     16 fcn.00018210
+0x00018290    1     16 fcn.00018290
+0x00018300    1     16 fcn.00018300
+0x00018390    1     16 fcn.00018390
+0x00018430    1     16 fcn.00018430
+0x00018440    1     16 fcn.00018440
+0x00018450    1     16 fcn.00018450
+0x00018470    1     16 fcn.00018470
+0x00018480    1     16 fcn.00018480
+0x000184a0    1     16 fcn.000184a0
+0x0000d224    3    236 method.FeatureInfo.FeatureInfo_FeatureInfo_const_
+0x0000d52c    1    204 method.Feature.Feature_FeatureInfo_
+0x0000d664   53    560 method.FeatureInfo.FeatureInfo__
+0x000184b0    1     16 fcn.000184b0
+0x000184d0    1     16 fcn.000184d0
+0x000184e0    1     16 fcn.000184e0
+0x0000da20    3    128 method.Feature.Feature__
+0x00018570    1     16 fcn.00018570
+0x00018580    1     16 fcn.00018580
+0x00018590    1     16 fcn.00018590
+0x000185b0    1     16 fcn.000185b0
+0x000185c0    1     16 fcn.000185c0
+0x000185d0    1     16 fcn.000185d0
+0x000185e0    1     16 fcn.000185e0
+0x000129fc   20    240 method.MeterInfo.MeterInfo__
+0x0000daa0   10    256 sym.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____std::__1::operator_char__std::__1::char_traits_char___std::__1::allocator_char____std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__char_const_
+0x00018640    1     16 fcn.00018640
+0x00018460    1     16 fcn.00018460
+0x00018650    1     16 fcn.00018650
+0x00018680    1     16 fcn.00018680
+0x0000ef44    1     80 method.LMDBDataRowKey.LMDBDataRowKey_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__int_
+0x000186c0    1     16 fcn.000186c0
+0x000186d0    1     16 fcn.000186d0
+0x000186e0    1     16 fcn.000186e0
+0x000186b0    1     16 fcn.000186b0
+0x000186f0    1     16 fcn.000186f0
+0x00018720    1     16 fcn.00018720
+0x00018740    1     16 fcn.00018740
+0x00018750    1     16 fcn.00018750
+0x00018770    1     16 fcn.00018770
+0x000187f0    1     16 fcn.000187f0
+0x00018830    1     16 fcn.00018830
+0x00018850    1     16 fcn.00018850
+0x00018860    1     16 fcn.00018860
+0x00018870    1     16 fcn.00018870
+0x00018880    1     16 fcn.00018880
+0x000122c4    1    112 method.MeterInfo.MeterInfo_MeterInfo_const_
+0x000123bc   18    352 method.std::__1::set_AsyncInfo__std::__1::less_AsyncInfo___std::__1::allocator_AsyncInfo___.set_std::__1::set_AsyncInfo__std::__1::less_AsyncInfo___std::__1::allocator_AsyncInfo____const_
+0x00018890    1     16 fcn.00018890
+0x000188a0    1     16 fcn.000188a0
+0x000188b0    1     16 fcn.000188b0
+0x00018920    1     16 fcn.00018920
+0x00018930    1     16 fcn.00018930
+0x00018940    1     16 fcn.00018940
+0x00011954    1     80 method.std::__1.__throw_length_error_char_const_
+0x00018970    1     16 fcn.00018970
+0x00018980    1     16 fcn.00018980
+0x000136c0   10    892 method.std::__1::__murmur2_or_cityhash_unsigned_long__64ul_.operator___void_const__unsigned_long_
+0x000189a0    1     16 fcn.000189a0
+0x00013b40   15    172 method.std::__1::unique_ptr_std::__1::__hash_node_std::__1::__hash_value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::vector_std::__1::vector_int__std::__1::allocator_int_____std::__1::allocator_std
+0x000189c0    1     16 fcn.000189c0
+0x000189d0    1     16 fcn.000189d0
+0x00014af4   18    340 fcn.00014af4
+0x00014c4c   59    740 fcn.00014c4c
+0x000189e0    1     16 fcn.000189e0
+0x00018a20    1     16 fcn.00018a20
+0x00018a30    1     16 fcn.00018a30
+0x00018a60    1     16 fcn.00018a60
+0x00018a70    1     16 fcn.00018a70
+0x00018aa0    1     16 fcn.00018aa0
+0x00018ac0    1     16 fcn.00018ac0
+0x00018af0    1     16 fcn.00018af0
+0x00018b00    1     16 fcn.00018b00
+0x0000cdb8   10    236 method.Registry_Feature__FeatureInfo__AdaptLaunchFeature_.Registry_char_const_
+0x0001110c    1     16 method.Feature.getData_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____featureData__int__int_
+0x0001111c    1      8 method.Feature.setData_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::vector_int__std::__1::allocator_int____
+0x000119a4    1     48 method.std::length_error.length_error_char_const_
+0x00013a3c    7    260 method.std::__1::__murmur2_or_cityhash_unsigned_long__64ul_.__hash_len_0_to_16_char_const__unsigned_long_
+0x00016f58    1      8 method.MetaMeter.getSyncData_std::__1::vector_Meter__std::__1::allocator_Meter____
+0x0000d1e4    5     64 fcn.0000d1e4
+0x0000d50c   40    424 fcn.0000d50c
+0x00012354    9     96 fcn.00012354
+0x000135d0    7     80 fcn.000135d0
+0x00018190    1     20 section..plt

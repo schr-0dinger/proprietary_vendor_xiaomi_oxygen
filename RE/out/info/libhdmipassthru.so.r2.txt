@@ -1,0 +1,514 @@
+arch     arm
+baddr    0x0
+binsz    16007
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                     demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+20  0x00001fa8 0x00002fa8 GLOBAL FUNC 160      passthru_is_convert_supported
+21  0x00001f2c 0x00002f2c GLOBAL FUNC 4        passthru_is_enabled
+22  0x00002c04 0x00003c04 GLOBAL FUNC 208      assign_output_devices
+23  0x00002aa6 0x00003aa6 GLOBAL FUNC 30       get_device_types
+24  0x000026f0 0x000036f0 GLOBAL FUNC 76       is_codec_backend_in_device_type
+25  0x00002238 0x00003238 GLOBAL FUNC 224      passthru_is_passthrough_stream
+26  0x00002cfe 0x00003cfe GLOBAL FUNC 42       append_devices
+27  0x0000264c 0x0000364c GLOBAL FUNC 164      is_audio_out_device_type
+28  0x00001cb4 0x00002cb4 GLOBAL FUNC 244      passthru_on_start
+29  0x000023e4 0x000033e4 GLOBAL FUNC 16       passthru_set_volume
+30  0x00002bcc 0x00003bcc GLOBAL FUNC 54       assign_devices
+31  0x00002840 0x00003840 GLOBAL FUNC 188      get_usb_device_address
+32  0x000028fc 0x000038fc GLOBAL FUNC 36       is_sco_in_device_type
+33  0x00001b04 0x00002b04 GLOBAL FUNC 100      passthru_is_supported_format
+34  0x00001c54 0x00002c54 GLOBAL FUNC 96       passthru_should_drop_data
+35  0x00002ac4 0x00003ac4 GLOBAL FUNC 36       is_single_device_type_equal
+36  0x000027e8 0x000037e8 GLOBAL FUNC 88       is_usb_out_device_type
+37  0x00001b68 0x00002b68 GLOBAL FUNC 236      passthru_get_channel_count
+38  0x000018dc 0x000028dc GLOBAL FUNC 552      passthru_update_dts_stream_configuration
+39  0x00002a64 0x00003a64 GLOBAL FUNC 66       compare_devices_for_any_match
+40  0x00002574 0x00003574 GLOBAL FUNC 216      is_audio_in_device_type
+41  0x00002920 0x00003920 GLOBAL FUNC 84       is_sco_out_device_type
+42  0x00002b4c 0x00003b4c GLOBAL FUNC 128      update_device_list
+43  0x000023f4 0x000033f4 GLOBAL FUNC 16       passthru_set_latency
+44  0x00001fa4 0x00002fa4 GLOBAL FUNC 4        passthru_should_standby
+45  0x0000214c 0x0000314c GLOBAL FUNC 236      passthru_update_stream_configuration
+46  0x00002ae8 0x00003ae8 GLOBAL FUNC 100      compare_devices
+47  0x00001e18 0x00002e18 GLOBAL FUNC 24       passthru_is_active
+48  0x00001da8 0x00002da8 GLOBAL FUNC 96       passthru_on_stop
+49  0x0000255c 0x0000355c GLOBAL FUNC 24       list_length
+50  0x00001e30 0x00002e30 GLOBAL FUNC 252      passthru_set_parameters
+51  ---------- 0x000067e4 GLOBAL OBJ  348      use_case_table
+52  0x00002998 0x00003998 GLOBAL FUNC 84       is_a2dp_out_device_type
+53  0x0000273c 0x0000373c GLOBAL FUNC 76       is_codec_backend_out_device_type
+54  0x00002338 0x00003338 GLOBAL FUNC 172      passthru_get_buffer_size
+55  0x00001f30 0x00002f30 GLOBAL FUNC 116      passthru_init
+56  0x00002318 0x00003318 GLOBAL FUNC 32       passthru_is_direct_passthrough
+57  0x00002404 0x00003404 GLOBAL FUNC 344      passthru_is_supported_backend_edid_cfg
+58  0x00002a2e 0x00003a2e GLOBAL FUNC 54       compare_device_type_and_address
+59  0x00002048 0x00003048 GLOBAL FUNC 260      passthru_is_passt_supported
+60  0x00001e08 0x00002e08 GLOBAL FUNC 16       passthru_on_pause
+61  0x000029ec 0x000039ec GLOBAL FUNC 38       clear_devices
+62  0x00002974 0x00003974 GLOBAL FUNC 36       is_a2dp_in_device_type
+63  0x00002cd4 0x00003cd4 GLOBAL FUNC 42       reassign_device_list
+64  0x00002a12 0x00003a12 GLOBAL FUNC 28       compare_device_type
+65  0x00002788 0x00003788 GLOBAL FUNC 96       is_usb_in_device_type
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000174    0x18 0x00000174    0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c    0x20 0x0000018c    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0x420 0x000001ac   0x420 -r-- DYNSYM      .dynsym
+4   0x000005cc    0x84 0x000005cc    0x84 -r-- GNU_VERSYM  .gnu.version
+5   0x00000650    0x40 0x00000650    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000690   0x174 0x00000690   0x174 -r-- GNU_HASH    .gnu.hash
+7   0x00000804   0x612 0x00000804   0x612 -r-- STRTAB      .dynstr
+8   0x00000e18    0x10 0x00000e18    0x10 -r-- ----        .rel.dyn
+9   0x00000e28     0x8 0x00000e28     0x8 -r-- ----        .relr.dyn
+10  0x00000e30   0x140 0x00000e30   0x140 -r-- ----        .ARM.exidx
+11  0x00000f70    0xc0 0x00000f70    0xc0 -r-- REL         .rel.plt
+12  0x00001030   0x898 0x00001030   0x898 -r-- PROGBITS    .rodata
+13  0x000018c8  0x1ba4 0x000028c8  0x1ba4 -r-x PROGBITS    .text
+14  0x00003470   0x1a0 0x00004470   0x1a0 -r-x PROGBITS    .plt
+15  0x00003610     0x4 0x00005610     0x4 -rw- PROGBITS    .data.rel.ro
+16  0x00003614     0x8 0x00005614     0x8 -rw- FINI_ARRAY  .fini_array
+17  0x0000361c   0x128 0x0000561c   0x128 -rw- DYNAMIC     .dynamic
+18  0x00003744     0x8 0x00005744     0x8 -rw- PROGBITS    .got
+19  0x0000374c    0x6c 0x0000574c    0x6c -rw- PROGBITS    .got.plt
+20  0x000037b8     0x0 0x000067b8   0x188 -rw- NOBITS      .bss
+21  0x000037b8    0x4e 0x00000000    0x4e ---- ----        .ARM.attributes
+22  0x00003806    0xf1 0x00000000    0xf1 ---- STRTAB      .shstrtab
+23  0x000038f7   0x590 0x00000000   0x590 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+3   0x000001a4 0x000001a4 4   6    .note.gnu.build-id  utf8    0~ϜE
+4   0x0000072c 0x0000072c 8   36   .gnu.hash           utf32le !%+/26;@
+5   0x00000767 0x00000767 4   5    .gnu.hash           ascii   098B
+6   0x0000078f 0x0000078f 6   7    .gnu.hash           ascii   \v~2n]l
+7   0x000007ac 0x000007ac 4   5    .gnu.hash           ascii    85\
+8   0x000007c3 0x000007c3 6   9    .gnu.hash           utf8    ̼iخ4Hj
+9   0x000007d0 0x000007d0 4   5    .gnu.hash           ascii   mKU0
+10  0x000007fd 0x000007fd 4   5    .gnu.hash           ascii   i4m1
+11  0x00000805 0x00000805 14  15   .dynstr             ascii   __cxa_finalize
+12  0x00000814 0x00000814 19  20   .dynstr             ascii   __android_log_print
+13  0x00000828 0x00000828 16  17   .dynstr             ascii   __stack_chk_fail
+14  0x00000839 0x00000839 17  18   .dynstr             ascii   __stack_chk_guard
+15  0x0000084b 0x0000084b 4   5    .dynstr             ascii   atoi
+16  0x00000850 0x00000850 19  20   .dynstr             ascii   compare_device_type
+17  0x00000864 0x00000864 17  18   .dynstr             ascii   get_iec61937_info
+18  0x00000876 0x00000876 12  13   .dynstr             ascii   hal_log_mask
+19  0x00000883 0x00000883 17  18   .dynstr             ascii   init_audio_parser
+20  0x00000895 0x00000895 24  25   .dynstr             ascii   passthru_get_buffer_size
+21  0x000008ae 0x000008ae 26  27   .dynstr             ascii   passthru_get_channel_count
+22  0x000008c9 0x000008c9 13  14   .dynstr             ascii   passthru_init
+23  0x000008d7 0x000008d7 18  19   .dynstr             ascii   passthru_is_active
+24  0x000008ea 0x000008ea 29  30   .dynstr             ascii   passthru_is_convert_supported
+25  0x00000908 0x00000908 30  31   .dynstr             ascii   passthru_is_direct_passthrough
+26  0x00000927 0x00000927 19  20   .dynstr             ascii   passthru_is_enabled
+27  0x0000093b 0x0000093b 27  28   .dynstr             ascii   passthru_is_passt_supported
+28  0x00000957 0x00000957 30  31   .dynstr             ascii   passthru_is_passthrough_stream
+29  0x00000976 0x00000976 38  39   .dynstr             ascii   passthru_is_supported_backend_edid_cfg
+30  0x0000099d 0x0000099d 28  29   .dynstr             ascii   passthru_is_supported_format
+31  0x000009ba 0x000009ba 17  18   .dynstr             ascii   passthru_on_pause
+32  0x000009cc 0x000009cc 17  18   .dynstr             ascii   passthru_on_start
+33  0x000009de 0x000009de 16  17   .dynstr             ascii   passthru_on_stop
+34  0x000009ef 0x000009ef 20  21   .dynstr             ascii   passthru_set_latency
+35  0x00000a04 0x00000a04 23  24   .dynstr             ascii   passthru_set_parameters
+36  0x00000a1c 0x00000a1c 19  20   .dynstr             ascii   passthru_set_volume
+37  0x00000a30 0x00000a30 25  26   .dynstr             ascii   passthru_should_drop_data
+38  0x00000a4a 0x00000a4a 23  24   .dynstr             ascii   passthru_should_standby
+39  0x00000a62 0x00000a62 40  41   .dynstr             ascii   passthru_update_dts_stream_configuration
+40  0x00000a8b 0x00000a8b 36  37   .dynstr             ascii   passthru_update_stream_configuration
+41  0x00000ab0 0x00000ab0 12  13   .dynstr             ascii   property_get
+42  0x00000abd 0x00000abd 17  18   .dynstr             ascii   property_get_bool
+43  0x00000acf 0x00000acf 18  19   .dynstr             ascii   pthread_mutex_lock
+44  0x00000ae2 0x00000ae2 20  21   .dynstr             ascii   pthread_mutex_unlock
+45  0x00000af7 0x00000af7 17  18   .dynstr             ascii   str_parms_get_str
+46  0x00000b09 0x00000b09 14  15   .dynstr             ascii   use_case_table
+47  0x00000b18 0x00000b18 6   7    .dynstr             ascii   usleep
+48  0x00000b1f 0x00000b1f 14  15   .dynstr             ascii   append_devices
+49  0x00000b2e 0x00000b2e 14  15   .dynstr             ascii   assign_devices
+50  0x00000b3d 0x00000b3d 21  22   .dynstr             ascii   assign_output_devices
+51  0x00000b53 0x00000b53 6   7    .dynstr             ascii   calloc
+52  0x00000b5a 0x00000b5a 13  14   .dynstr             ascii   clear_devices
+53  0x00000b68 0x00000b68 31  32   .dynstr             ascii   compare_device_type_and_address
+54  0x00000b88 0x00000b88 15  16   .dynstr             ascii   compare_devices
+55  0x00000b98 0x00000b98 29  30   .dynstr             ascii   compare_devices_for_any_match
+56  0x00000bb6 0x00000bb6 4   5    .dynstr             ascii   free
+57  0x00000bbb 0x00000bbb 16  17   .dynstr             ascii   get_device_types
+58  0x00000bcc 0x00000bcc 22  23   .dynstr             ascii   get_usb_device_address
+59  0x00000be3 0x00000be3 22  23   .dynstr             ascii   is_a2dp_in_device_type
+60  0x00000bfa 0x00000bfa 23  24   .dynstr             ascii   is_a2dp_out_device_type
+61  0x00000c12 0x00000c12 23  24   .dynstr             ascii   is_audio_in_device_type
+62  0x00000c2a 0x00000c2a 24  25   .dynstr             ascii   is_audio_out_device_type
+63  0x00000c43 0x00000c43 31  32   .dynstr             ascii   is_codec_backend_in_device_type
+64  0x00000c63 0x00000c63 32  33   .dynstr             ascii   is_codec_backend_out_device_type
+65  0x00000c84 0x00000c84 21  22   .dynstr             ascii   is_sco_in_device_type
+66  0x00000c9a 0x00000c9a 22  23   .dynstr             ascii   is_sco_out_device_type
+67  0x00000cb1 0x00000cb1 27  28   .dynstr             ascii   is_single_device_type_equal
+68  0x00000ccd 0x00000ccd 21  22   .dynstr             ascii   is_usb_in_device_type
+69  0x00000ce3 0x00000ce3 22  23   .dynstr             ascii   is_usb_out_device_type
+70  0x00000cfa 0x00000cfa 11  12   .dynstr             ascii   list_length
+71  0x00000d06 0x00000d06 20  21   .dynstr             ascii   reassign_device_list
+72  0x00000d1b 0x00000d1b 6   7    .dynstr             ascii   strcmp
+73  0x00000d22 0x00000d22 7   8    .dynstr             ascii   strlcpy
+74  0x00000d2a 0x00000d2a 18  19   .dynstr             ascii   update_device_list
+75  0x00000d3d 0x00000d3d 6   7    .dynstr             ascii   memset
+76  0x00000d44 0x00000d44 9   10   .dynstr             ascii   liblog.so
+77  0x00000d4e 0x00000d4e 6   7    .dynstr             ascii   LIBLOG
+78  0x00000d55 0x00000d55 7   8    .dynstr             ascii   libc.so
+79  0x00000d5d 0x00000d5d 4   5    .dynstr             ascii   LIBC
+80  0x00000d62 0x00000d62 18  19   .dynstr             ascii   libaudioparsers.so
+81  0x00000d75 0x00000d75 16  17   .dynstr             ascii   libaudioroute.so
+82  0x00000d86 0x00000d86 16  17   .dynstr             ascii   libaudioutils.so
+83  0x00000d97 0x00000d97 12  13   .dynstr             ascii   libcutils.so
+84  0x00000da4 0x00000da4 11  12   .dynstr             ascii   libexpat.so
+85  0x00000db0 0x00000db0 14  15   .dynstr             ascii   libtinyalsa.so
+86  0x00000dbf 0x00000dbf 18  19   .dynstr             ascii   libtinycompress.so
+87  0x00000dd2 0x00000dd2 21  22   .dynstr             ascii   libaudio_log_utils.so
+88  0x00000de8 0x00000de8 9   10   .dynstr             ascii   libc++.so
+89  0x00000df2 0x00000df2 7   8    .dynstr             ascii   libm.so
+90  0x00000dfa 0x00000dfa 8   9    .dynstr             ascii   libdl.so
+91  0x00000e03 0x00000e03 18  19   .dynstr             ascii   libhdmipassthru.so
+92  0x00000e18 0x00000e18 4   5    .rel.dyn            ascii   APS2
+93  0x00001030 0x00001030 14  15   .rodata             ascii   %s:PASSTHROUGH
+94  0x0000103f 0x0000103f 16  17   .rodata             ascii   %s : return true
+95  0x00001050 0x00001050 34  35   .rodata             ascii   vendor.audio.truehd.buffer.size.kb
+96  0x00001073 0x00001073 15  16   .rodata             ascii   Invalid session
+97  0x00001083 0x00001083 40  41   .rodata             ascii   passthru_update_dts_stream_configuration
+98  0x000010ac 0x000010ac 17  18   .rodata             ascii   %s : return false
+99  0x000010be 0x000010be 8   9    .rodata             ascii   passthru
+100 0x000010c7 0x000010c7 32  33   .rodata             ascii   %s:: get_iec61937_info failed %d
+101 0x000010e8 0x000010e8 22  23   .rodata             ascii   %s:PASSTHROUGH CONVERT
+102 0x000010ff 0x000010ff 53  54   .rodata             ascii   %s: PASSTHROUGH_CONVERT not supported for format 0x%x
+103 0x00001135 0x00001135 30  31   .rodata             ascii   passthru_is_passthrough_stream
+104 0x00001154 0x00001154 27  28   .rodata             ascii   pass thru is already active
+105 0x00001170 0x00001170 32  33   .rodata             ascii   %s : pass through format is true
+106 0x00001191 0x00001191 39  40   .rodata             ascii   dts new sample rate %d and channels %d\n
+107 0x000011b9 0x000011b9 70  71   .rodata             ascii   %s:: Invalid dts transmission rate %d\n using default sample rate 48000
+108 0x00001200 0x00001200 16  17   .rodata             ascii   passthru_on_stop
+109 0x00001211 0x00001211 14  15   .rodata             ascii   %s: convert %d
+110 0x00001220 0x00001220 28  29   .rodata             ascii   %s:Passthrough not supported
+111 0x0000123d 0x0000123d 38  39   .rodata             ascii   passthru_is_supported_backend_edid_cfg
+112 0x00001264 0x00001264 45  46   .rodata             ascii   %s: passthru on aux digital, start keep alive
+113 0x00001292 0x00001292 32  33   .rodata             ascii   %s:: not a passthrough format %d
+114 0x000012b3 0x000012b3 23  24   .rodata             ascii   %s:PASSTHROUGH IEC61937
+115 0x000012cb 0x000012cb 78  79   .rodata             ascii   %s: ERROR: Unsupported sample rate in passthru mode!!! backend_samplerate - %d
+116 0x0000131a 0x0000131a 26  27   .rodata             ascii   passthru_get_channel_count
+117 0x00001335 0x00001335 43  44   .rodata             ascii   inc pass thru count to notify other streams
+118 0x00001361 0x00001361 38  39   .rodata             ascii   %s:PASSTHROUGH supported for format %x
+119 0x00001388 0x00001388 32  33   .rodata             ascii   %s:PASSTHROUGH_CONVERT supported
+120 0x000013a9 0x000013a9 29  30   .rodata             ascii   passthru_is_convert_supported
+121 0x000013c7 0x000013c7 17  18   .rodata             ascii   %s:NO PASSTHROUGH
+122 0x000013d9 0x000013d9 12  13   .rodata             ascii   device_utils
+123 0x000013e6 0x000013e6 78  79   .rodata             ascii   %s:: Invalid transmission channels %d using default transmission channels as 2
+124 0x00001435 0x00001435 32  33   .rodata             ascii   drop data as pass thru is active
+125 0x00001456 0x00001456 23  24   .rodata             ascii   passthru_set_parameters
+126 0x0000146e 0x0000146e 50  51   .rodata             ascii   %s: ERROR: Unable to get current backend config!!!
+127 0x000014a1 0x000014a1 32  33   .rodata             ascii   vendor.audio.offload.passthrough
+128 0x000014c2 0x000014c2 58  59   .rodata             ascii   Invalid buffer %p size %lu skipping dts stream conf update
+129 0x000014fd 0x000014fd 33  34   .rodata             ascii   %s : pass through format is false
+130 0x0000151f 0x0000151f 25  26   .rodata             ascii   %s:: Invalid param out %p
+131 0x00001539 0x00001539 44  45   .rodata             ascii   %s: stop keep_alive on aux digital on device
+132 0x00001566 0x00001566 27  28   .rodata             ascii   passthru_is_passt_supported
+133 0x00001583 0x00001583 31  32   .rodata             ascii   vendor.audio.ddp.buffer.size.kb
+134 0x000015a3 0x000015a3 17  18   .rodata             ascii   Non DTS format %d
+135 0x000015b5 0x000015b5 7   8    .rodata             ascii   connect
+136 0x000015bd 0x000015bd 10  11   .rodata             ascii   disconnect
+137 0x000015c8 0x000015c8 75  76   .rodata             ascii   %s:becf: afe: bitwidth %d, samplerate %d channels %d format %d, device (%s)
+138 0x00001614 0x00001614 34  35   .rodata             ascii   %s: pass through channel count %d\n
+139 0x00001637 0x00001637 36  37   .rodata             ascii   passthru_update_stream_configuration
+140 0x0000165c 0x0000165c 28  29   .rodata             ascii   passthru_is_supported_format
+141 0x00001679 0x00001679 96  97   .rodata             ascii   %s: ERROR: Unsupported channels in passthru mode!!! max_edid_channels - %d backend_channels - %d
+142 0x000016da 0x000016da 42  43   .rodata             ascii   %s: Cannot allocate memory for device_info
+143 0x00001705 0x00001705 35  36   .rodata             ascii   %s: start keep alive on aux digital
+144 0x00001729 0x00001729 18  19   .rodata             ascii   update_device_list
+145 0x00001774 0x00001774 6   28   .rodata             utf32le \v37?Ŀؿ
+146 0x000018e7 0x000028e6 8   9    .text               ascii   ,xD\ah8h\a
+147 0x00001937 0x00002936 13  14   .text               ascii    iIjJjKyDzD{D
+148 0x0000194f 0x0000294e 13  14   .text               ascii    fIgJgKyDzD{D
+149 0x00001971 0x00002970 13  14   .text               ascii    aIaJbKyDzD{D
+150 0x00001994 0x00002994 4   5    .text               ascii   EIFJ
+151 0x00001999 0x00002998 5   6    .text               ascii    yDzD
+152 0x000019a4 0x000029a4 4   5    .text               ascii   CIDJ
+153 0x000019a9 0x000029a8 5   6    .text               ascii    yDzD
+154 0x000019bb 0x000029ba 9   10   .text               ascii   &?I@JyDzD
+155 0x000019fc 0x000029fc 10  11   .text               ascii   +F1I1JyDzD
+156 0x00001a60 0x00002a60 5   6    .text               ascii   \eJzDR
+157 0x00001a89 0x00002a88 7   8    .text               ascii   KyDzD{D
+158 0x00001b1b 0x00002b1a 7   8    .text               ascii   #zD|D~D
+159 0x00001b3d 0x00002b3c 5   6    .text               ascii   $\bI\bK
+160 0x00001b43 0x00002b42 5   6    .text               ascii    yD{D
+161 0x00001b9a 0x00002b9a 8   9    .text               ascii   &I&JyDzD
+162 0x00001ba6 0x00002ba6 10  11   .text               ascii   %I%JyDzD%K
+163 0x00001c01 0x00002c00 4   5    .text               ascii   0\bDO
+164 0x00001c1b 0x00002c1a 13  14   .text               ascii    \nI\vJ\vKyDzD{D
+165 0x00001c84 0x00002c84 4   5    .text               ascii   \bHxD
+166 0x00001c95 0x00002c94 5   6    .text               ascii    yDzD
+167 0x00001cbc 0x00002cbc 6   7    .text               ascii   TR4L|D
+168 0x00001cca 0x00002cca 4   5    .text               ascii   5I5J
+169 0x00001ccf 0x00002cce 5   6    .text               ascii    yDzD
+170 0x00001cde 0x00002cde 4   5    .text               ascii   -HxD
+171 0x00001d50 0x00002d50 4   5    .text               ascii   \aF6h
+172 0x00001d85 0x00002d84 5   6    .text               ascii    yDzD
+173 0x00001dd0 0x00002dd0 6   7    .text               ascii   \tI\nJ\nK
+174 0x00001dd7 0x00002dd6 7   8    .text               ascii    yDzD{D
+175 0x00001de2 0x00002de2 4   5    .text               ascii   \bHxD
+176 0x00001e34 0x00002e34 4   5    .text               ascii   /HjF
+177 0x00001e3c 0x00002e3c 6   7    .text               ascii   \fF #xD
+178 0x00001e43 0x00002e42 4   5    .text               ascii   h(h\t
+179 0x00001e51 0x00002e50 7   8    .text               ascii   \n F(IyD
+180 0x00001e6a 0x00002e6a 4   5    .text               ascii   $HxD
+181 0x00001e76 0x00002e76 4   5    .text               ascii   "HxD
+182 0x00001e80 0x00002e80 4   5    .text               ascii   #HxD
+183 0x00001e89 0x00002e88 11  12   .text               ascii   G"IjF F #yD
+184 0x00001eb9 0x00002eb8 4   5    .text               ascii   G(h\t
+185 0x00001ecf 0x00002ece 7   8    .text               ascii    yDzD{D
+186 0x00001edc 0x00002edc 6   7    .text               ascii   \tI\nJ\nK
+187 0x00001ee3 0x00002ee2 7   8    .text               ascii    yDzD{D
+188 0x00001f33 0x00002f32 5   6    .text               ascii   L|D!`
+189 0x00001f39 0x00002f38 5   6    .text               ascii   IyD\b`
+190 0x00001f4d 0x00002f4c 5   6    .text               ascii   IyD\b`
+191 0x00001f55 0x00002f54 5   6    .text               ascii   IyD\b`
+192 0x00001f5c 0x00002f5c 6   7    .text               ascii   \rIyD\b`
+193 0x00001f64 0x00002f64 6   7    .text               ascii   \fIyD\b`
+194 0x00001f6c 0x00002f6c 7   8    .text               ascii   \vIyD\b`\a
+195 0x00001f74 0x00002f74 6   7    .text               ascii   \nIyD\b`
+196 0x00001fc3 0x00002fc2 5   6    .text               ascii   M}D*h
+197 0x00001fe1 0x00002fe0 7   8    .text               ascii    yDzD{D
+198 0x00001ff9 0x00002ff8 7   8    .text               ascii   KyDzD{D
+199 0x00002009 0x00003008 13  14   .text               ascii    \fI\fJ\rKyDzD{D
+200 0x00002074 0x00003074 6   7    .text               ascii   0a~D2h
+201 0x0000209c 0x0000309c 4   5    .text               ascii    JzD
+202 0x000020ad 0x000030ac 5   6    .text               ascii   a~D2h
+203 0x000020c3 0x000030c2 6   7    .text               ascii   IyD\nhO
+204 0x000020fb 0x000030fa 7   8    .text               ascii   KyDzD{D
+205 0x0000210f 0x0000310e 7   8    .text               ascii    yDzD{D
+206 0x00002156 0x00003156 4   5    .text               ascii   (F\fF
+207 0x00002160 0x00003160 4   5    .text               ascii   &HxD
+208 0x0000216e 0x0000316e 4   5    .text               ascii   (F!F
+209 0x00002178 0x00003178 4   5    .text               ascii   $HxD
+210 0x0000218a 0x0000318a 4   5    .text               ascii   $HxD
+211 0x000021b1 0x000031b0 7   8    .text               ascii    yDzD{D
+212 0x000021c5 0x000031c4 7   8    .text               ascii    yDzD{D
+213 0x000021d9 0x000031d8 7   8    .text               ascii    yDzD{D
+214 0x000021ed 0x000031ec 7   8    .text               ascii    yDzD{D
+215 0x00002284 0x00003284 4   5    .text               ascii   \eHxD
+216 0x00002296 0x00003296 6   7    .text               ascii   \eIyD\th
+217 0x000022cb 0x000032ca 7   8    .text               ascii    yDzD{D
+218 0x000022d8 0x000032d8 6   7    .text               ascii   \aI\bJ\bK
+219 0x000022df 0x000032de 7   8    .text               ascii    yDzD{D
+220 0x0000233d 0x0000333c 7   8    .text               ascii   F$H\!xD
+221 0x00002361 0x00003360 7   8    .text               ascii   JiFxDzD
+222 0x00002395 0x00003394 7   8    .text               ascii   JiFxDzD
+223 0x000023be 0x000033be 4   5    .text               ascii    P)h
+224 0x000023e7 0x000033e6 5   6    .text               ascii   IyD\vh
+225 0x000023f7 0x000033f6 5   6    .text               ascii   IyD\vh
+226 0x0000242b 0x0000342a 4   5    .text               ascii   \n0F@
+227 0x00002448 0x00003448 4   5    .text               ascii   4HxD
+228 0x00002459 0x00003458 9   10   .text               ascii   F1H9F\n"xD
+229 0x00002469 0x00003468 11  12   .text               ascii   G\aF-H2F9FxD
+230 0x0000247c 0x0000347c 8   9    .text               ascii   *I+JyDzD
+231 0x00002486 0x00003486 4   5    .text               ascii   *HxD
+232 0x00002499 0x00003498 9   10   .text               ascii   P*I*JyDzD
+233 0x000024a8 0x000034a8 6   7    .text               ascii   (IyD\nh
+234 0x000024bc 0x000034bc 10  11   .text               ascii   $I%JyDzD$K
+235 0x00002505 0x00003504 7   8    .text               ascii   KyDzD{D
+236 0x00002571 0x00003570 4   5    .text               ascii    pG-
+237 0x00002591 0x00003590 4   5    .text               ascii   #@$o
+238 0x000025b3 0x000035b2 4   6    .text               utf8    E\tݚE
+239 0x000025b9 0x000035b8 5   8    .text               utf8    ܢE@Ѐ%
+240 0x000025d1 0x000035d0 6   8    .text               utf8    ؘF3F&F
+241 0x000025e2 0x000035e2 4   5    .text               ascii   %B4F
+242 0x000025e7 0x000035e6 4   5    .text               ascii   FCF\t
+243 0x00002704 0x00003704 4   5    .text               ascii   \fL|D
+244 0x00002750 0x00003750 4   5    .text               ascii   \fL|D
+245 0x00002850 0x00003850 5   6    .text               ascii   'H(LN
+246 0x0000286c 0x0000386c 5   6    .text               ascii   xD|DB
+247 0x00002877 0x00003876 4   5    .text               ascii   VFE\a
+248 0x00002a3d 0x00003a3c 4   5    .text               ascii   F\rFG
+249 0x00002ac1 0x00003ac0 4   5    .text               ascii    pG0
+250 0x00002b06 0x00003b06 4   5    .text               ascii   \vF\eh
+251 0x00002b8f 0x00003b8e 11  12   .text               ascii   Q\b`h`\f0!F "
+252 0x00002baf 0x00003bae 7   8    .text               ascii    yDzD{D
+253 0x00002cea 0x00003cea 6   7    .text               ascii   0F)F"F
+254 0x00002cfb 0x00003cfa 4   5    .text               ascii    pGp
+255 0x00002fa7 0x00003fa6 4   5    .text               ascii   *  `
+256 0x00003451 0x00004450 4   5    .text               ascii   D`G@
+257 0x0000345d 0x0000445c 4   5    .text               ascii   D`G@
+258 0x000037bd 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+259 0x000037c8 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+260 0x000037cf 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+261 0x00003807 0x00000001 11  12   .shstrtab           ascii   .fini_array
+262 0x00003813 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+263 0x0000381e 0x00000018 5   6    .shstrtab           ascii   .text
+264 0x00003824 0x0000001e 4   5    .shstrtab           ascii   .got
+265 0x00003829 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+266 0x0000383d 0x00000037 8   9    .shstrtab           ascii   .got.plt
+267 0x00003846 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+268 0x0000384f 0x00000049 4   5    .shstrtab           ascii   .bss
+269 0x00003854 0x0000004e 15  16   .shstrtab           ascii   .ARM.attributes
+270 0x00003864 0x0000005e 7   8    .shstrtab           ascii   .dynstr
+271 0x0000386c 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+272 0x0000387b 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+273 0x00003888 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+274 0x00003892 0x0000008c 8   9    .shstrtab           ascii   .rel.dyn
+275 0x0000389b 0x00000095 12  13   .shstrtab           ascii   .gnu.version
+276 0x000038a8 0x000000a2 7   8    .shstrtab           ascii   .dynsym
+277 0x000038b0 0x000000aa 9   10   .shstrtab           ascii   .gnu.hash
+278 0x000038ba 0x000000b4 18  19   .shstrtab           ascii   .note.gnu.build-id
+279 0x000038cd 0x000000c7 8   9    .shstrtab           ascii   .dynamic
+280 0x000038d6 0x000000d0 9   10   .shstrtab           ascii   .shstrtab
+281 0x000038e0 0x000000da 7   8    .shstrtab           ascii   .rodata
+282 0x000038e8 0x000000e2 14  15   .shstrtab           ascii   .gnu_debugdata
+283 0x000038f8 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+284 0x00003983 0x0000008c 4   6    .gnu_debugdata      utf8    ܬMIc
+285 0x000039da 0x000000e3 5   6    .gnu_debugdata      ascii   E/5B!
+286 0x000039f3 0x000000fc 6   8    .gnu_debugdata      utf8    ֩z}[3&
+287 0x000039ff 0x00000108 4   5    .gnu_debugdata      ascii   ~W.)
+288 0x00003a11 0x0000011a 4   5    .gnu_debugdata      ascii   M LO
+289 0x00003a19 0x00000122 4   5    .gnu_debugdata      ascii   33L+
+290 0x00003a2e 0x00000137 6   7    .gnu_debugdata      ascii   @x;^6B
+291 0x00003a70 0x00000179 5   7    .gnu_debugdata      utf8    ĳJ^Q7
+292 0x00003aa8 0x000001b1 4   5    .gnu_debugdata      ascii   !J~N
+293 0x00003b02 0x0000020b 5   7    .gnu_debugdata      utf8    0M,D˧
+294 0x00003b0d 0x00000216 4   5    .gnu_debugdata      ascii   x{?'
+295 0x00003b48 0x00000251 5   6    .gnu_debugdata      ascii   DH\n[;
+296 0x00003b61 0x0000026a 4   5    .gnu_debugdata      ascii   =8iP
+297 0x00003b82 0x0000028b 5   6    .gnu_debugdata      ascii   zgSg}
+298 0x00003baf 0x000002b8 4   5    .gnu_debugdata      ascii   6/V!
+299 0x00003c11 0x0000031a 4   5    .gnu_debugdata      ascii   !]eu
+300 0x00003cee 0x000003f7 5   8    .gnu_debugdata      utf8    ߴس<*p
+301 0x00003d03 0x0000040c 6   7    .gnu_debugdata      ascii   \t_lQ0S
+302 0x00003d4b 0x00000454 8   10   .gnu_debugdata      utf8    PzS\fV]vQ
+303 0x00003d75 0x0000047e 4   6    .gnu_debugdata      utf8    \tӣ2[
+304 0x00003d84 0x0000048d 4   5    .gnu_debugdata      ascii   76Fz
+305 0x00003db3 0x000004bc 5   7    .gnu_debugdata      utf8    S߅C`2
+306 0x00003dc0 0x000004c9 4   5    .gnu_debugdata      ascii   S-*K
+307 0x00003df5 0x000004fe 4   5    .gnu_debugdata      ascii   vP?<
+308 0x00003e43 0x0000054c 6   8    .gnu_debugdata      utf8    WڞR{&,
+309 0x00003e4d 0x00000556 6   7    .gnu_debugdata      ascii   Syc\f>n
+310 0x00003e5b 0x00000564 4   5    .gnu_debugdata      ascii   [f1j
+0x00004484    1     12 sym.imp.__cxa_finalize
+0x000044a8    1      4 sym.imp.__android_log_print
+0x000044b4    1      8 sym.imp.__stack_chk_fail
+0x00004508    1      4 sym.imp.atoi
+0x0000449c    1      4 sym.imp.get_iec61937_info
+0x00004490    1     12 sym.imp.init_audio_parser
+0x00004544    1      8 sym.imp.property_get
+0x0000452c    1      4 sym.imp.property_get_bool
+0x000044f0    1     12 sym.imp.pthread_mutex_lock
+0x000044d8    1      4 sym.imp.pthread_mutex_unlock
+0x000044fc    1      4 sym.imp.str_parms_get_str
+0x000044e4    1      8 sym.imp.usleep
+0x00004568    1      4 sym.imp.calloc
+0x00004550    1     12 sym.imp.free
+0x0000455c    1      4 sym.imp.strcmp
+0x00004574    1      8 sym.imp.strlcpy
+0x00004598    1      4 sym.imp.memset
+0x000028c8    2     20 entry0
+0x00002fa8    8    120 sym.passthru_is_convert_supported
+0x00002f2c    1      4 sym.passthru_is_enabled
+0x00003c04   27    202 sym.assign_output_devices
+0x00003aa6    8     30 sym.get_device_types
+0x000036f0   13     72 sym.is_codec_backend_in_device_type
+0x00003238   15    180 sym.passthru_is_passthrough_stream
+0x00003cfe    8     42 sym.append_devices
+0x0000364c   24    158 sym.is_audio_out_device_type
+0x00002cb4   16    232 sym.passthru_on_start
+0x00003d44    1     36 sym.__aeabi_uldivmod
+0x00003d68   41    784 sym.__udivmoddi4
+0x00004500    1      8 fcn.00004500
+0x00004510    1     12 fcn.00004510
+0x00004520    1     12 fcn.00004520
+0x000044c0    1     12 fcn.000044c0
+0x000033e4    1     12 sym.passthru_set_volume
+0x00003bcc   10     54 sym.assign_devices
+0x00003840   18    170 sym.get_usb_device_address
+0x000038fc    8     36 sym.is_sco_in_device_type
+0x00002b04    8     76 sym.passthru_is_supported_format
+0x00002c54    7     82 sym.passthru_should_drop_data
+0x00003ac4    8     36 sym.is_single_device_type_equal
+0x000037e8   11     84 sym.is_usb_out_device_type
+0x00002b68   18    202 sym.passthru_get_channel_count
+0x000028dc   34    466 sym.passthru_update_dts_stream_configuration
+0x00003a64   14     66 sym.compare_devices_for_any_match
+0x00003574   24    210 sym.is_audio_in_device_type
+0x00003920   12     78 sym.is_sco_out_device_type
+0x00003b4c   15    116 sym.update_device_list
+0x000033f4    1     12 sym.passthru_set_latency
+0x00002fa4    1      4 sym.passthru_should_standby
+0x0000314c   18    174 sym.passthru_update_stream_configuration
+0x00003ae8   21    100 sym.compare_devices
+0x00002e18    1     18 sym.passthru_is_active
+0x00002da8    6     74 sym.passthru_on_stop
+0x0000355c    5     24 sym.list_length
+0x00002e30   14    202 sym.passthru_set_parameters
+0x00003998   12     80 sym.is_a2dp_out_device_type
+0x0000373c   13     72 sym.is_codec_backend_out_device_type
+0x00003338   18    166 sym.passthru_get_buffer_size
+0x00002f30    1     76 sym.passthru_init
+0x00003318    5     32 sym.passthru_is_direct_passthrough
+0x00003404   14    298 sym.passthru_is_supported_backend_edid_cfg
+0x00003a2e   10     54 sym.compare_device_type_and_address
+0x00003048   22    212 sym.passthru_is_passt_supported
+0x00002e08    1     10 sym.passthru_on_pause
+0x000039ec    4     38 sym.clear_devices
+0x00003974    8     36 sym.is_a2dp_in_device_type
+0x00003cd4    6     54 sym.reassign_device_list
+0x00003a12    8     28 sym.compare_device_type
+0x00003788   12     90 sym.is_usb_in_device_type
+0x000028d6    2      6 entry.fini0
+0x000044a0    1      8 fcn.000044a0
+0x000044b0    1      4 fcn.000044b0
+0x000044d0    1      8 fcn.000044d0
+0x000044e0    1      4 fcn.000044e0
+0x00004530    1     12 fcn.00004530
+0x00004540    1      4 fcn.00004540
+0x00004560    1      8 fcn.00004560
+0x00004570    1      4 fcn.00004570
+0x00004580    1     12 fcn.00004580
+0x00003d38    2     24 sym.__aeabi_memclr8
+0x00004590    1      8 fcn.00004590
+0x000045a0    1     12 fcn.000045a0
+0x000045b0    1     12 fcn.000045b0
+0x000045c0    1     12 fcn.000045c0
+0x000045d0    1     12 fcn.000045d0
+0x000045e0    1     12 fcn.000045e0
+0x000045f0    1     12 fcn.000045f0
+0x0000424c    1     28 sym.__aeabi_uidivmod
+0x00004268    7     84 sym.__udivmodsi4
+0x00004078    3     72 sym.__aeabi_uidiv
+0x00004248    1      4 sym.__aeabi_idiv0
+0x00004410    1     24 fcn.00004410
+0x00004234    1     20 fcn.00004234

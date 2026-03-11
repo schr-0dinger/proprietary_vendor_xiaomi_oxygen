@@ -1,0 +1,542 @@
+arch     arm
+baddr    0x0
+binsz    32528
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                                                                 demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+53  0x00005ec0 0x00005ec0 GLOBAL FUNC 324      _ZN9DpmQmiHal20installListenFiltersERKN3com8qualcomm3qti3dpm3api4V1_016DpmHalFilterInfoE                             DpmQmiHal::installListenFilters(com::qualcomm::qti::dpm::api::V1_0::DpmHalFilterInfo const&)
+54  0x000057f4 0x000057f4 GLOBAL FUNC 140      _ZN9DpmQmiHal20updateDormancyStatusERKN7android8hardware11hidl_stringE                                               DpmQmiHal::updateDormancyStatus(android::hardware::hidl_string const&)
+55  0x0000673c 0x0000673c GLOBAL FUNC 60       __ubsan_handle_builtin_unreachable_minimal
+56  0x000068f8 0x000068f8 GLOBAL FUNC 28       __ubsan_handle_invalid_builtin_minimal_abort
+57  0x000052b0 0x000052b0 GLOBAL FUNC 4        _ZN9DpmQmiHal4joinEv                                                                                                 DpmQmiHal::join()
+58  0x000052f8 0x000052f8 GLOBAL FUNC 60       _ZN9DpmQmiHal9goDormantEj                                                                                            DpmQmiHal::goDormant(unsigned int)
+59  0x000061f8 0x000061f8 GLOBAL FUNC 24       _ZN13DpmEventRelay25converIntToDormancyStatusEi                                                                      DpmEventRelay::converIntToDormancyStatus(int)
+60  0x00006720 0x00006720 GLOBAL FUNC 28       __ubsan_handle_out_of_bounds_minimal_abort
+61  0x0000652c 0x0000652c GLOBAL FUNC 60       __ubsan_handle_sub_overflow_minimal
+62  0x00005a90 0x00005a90 GLOBAL FUNC 200      _ZN9DpmQmiHal15getFilterStatusERKN7android8hardware11hidl_stringE                                                    DpmQmiHal::getFilterStatus(android::hardware::hidl_string const&)
+63  0x00007008 0x00007008 GLOBAL OBJ  384      _ZTV9DpmQmiHal                                                                                                       vtable for DpmQmiHal
+64  0x00006b7c 0x00006b7c GLOBAL FUNC 60       __ubsan_handle_cfi_check_fail_minimal
+65  0x00006618 0x00006618 GLOBAL FUNC 28       __ubsan_handle_negate_overflow_minimal_abort
+66  0x00006a00 0x00006a00 GLOBAL FUNC 28       __ubsan_handle_nonnull_arg_minimal_abort
+67  0x00006120 0x00006120 GLOBAL FUNC 20       _ZN13DpmEventRelayC1ERKN7android2spIN3com8qualcomm3qti3dpm3api4V1_018IdpmClientCallbackEEE                           DpmEventRelay::DpmEventRelay(android::sp<com::qualcomm::qti::dpm::api::V1_0::IdpmClientCallback> const&)
+68  0x000054ec 0x000054ec GLOBAL FUNC 204      _ZN9DpmQmiHal15registerEventCbERKN7android2spIN3com8qualcomm3qti3dpm3api4V1_018IdpmClientCallbackEEE                 DpmQmiHal::registerEventCb(android::sp<com::qualcomm::qti::dpm::api::V1_0::IdpmClientCallback> const&)
+69  0x00006950 0x00006950 GLOBAL FUNC 28       __ubsan_handle_function_type_mismatch_minimal_abort
+70  0x000065dc 0x000065dc GLOBAL FUNC 60       __ubsan_handle_negate_overflow_minimal
+71  0x00006b60 0x00006b60 GLOBAL FUNC 28       __ubsan_handle_pointer_overflow_minimal_abort
+72  0x000067f0 0x000067f0 GLOBAL FUNC 28       __ubsan_handle_vla_bound_not_positive_minimal_abort
+73  0x00005b58 0x00005b58 GLOBAL FUNC 148      _ZN9DpmQmiHal20updateFilterRefCountERKN7android8hardware11hidl_stringEi                                              DpmQmiHal::updateFilterRefCount(android::hardware::hidl_string const&, int)
+74  0x000052b4 0x000052b4 GLOBAL FUNC 68       _ZN9DpmQmiHalC2EP10IDpmQmiMgr                                                                                        DpmQmiHal::DpmQmiHal(IDpmQmiMgr*)
+75  0x000064d4 0x000064d4 GLOBAL FUNC 60       __ubsan_handle_add_overflow_minimal
+76  0x00006acc 0x00006acc GLOBAL FUNC 60       __ubsan_handle_nullability_return_minimal
+77  0x00005bec 0x00005bec GLOBAL FUNC 160      _ZN9DpmQmiHal16deleteDfsTrackerERKN7android8hardware11hidl_stringE                                                   DpmQmiHal::deleteDfsTracker(android::hardware::hidl_string const&)
+78  0x000068bc 0x000068bc GLOBAL FUNC 60       __ubsan_handle_invalid_builtin_minimal
+79  0x00006584 0x00006584 GLOBAL FUNC 60       __ubsan_handle_mul_overflow_minimal
+80  0x000058f8 0x000058f8 GLOBAL FUNC 260      _ZN9DpmQmiHal20createDfsPortTrackerERKN7android8hardware11hidl_stringES4_S4_                                         DpmQmiHal::createDfsPortTracker(android::hardware::hidl_string const&, android::hardware::hidl_string const&, android::hardware::hidl_string const&)
+81  0x00006634 0x00006634 GLOBAL FUNC 60       __ubsan_handle_divrem_overflow_minimal
+82  0x000066e4 0x000066e4 GLOBAL FUNC 60       __ubsan_handle_out_of_bounds_minimal
+83  0x000066c8 0x000066c8 GLOBAL FUNC 28       __ubsan_handle_shift_out_of_bounds_minimal_abort
+85  0x0000680c 0x0000680c GLOBAL FUNC 60       __ubsan_handle_float_cast_overflow_minimal
+86  0x000069a8 0x000069a8 GLOBAL FUNC 28       __ubsan_handle_implicit_conversion_minimal_abort
+87  0x00006b08 0x00006b08 GLOBAL FUNC 28       __ubsan_handle_nullability_return_minimal_abort
+88  0x000062f0 0x000062f0 GLOBAL FUNC 60       __ubsan_handle_type_mismatch_minimal
+89  0x00005e2c 0x00005e2c GLOBAL FUNC 148      _ZN9DpmQmiHal16uninstallFiltersERKN7android8hardware11hidl_stringE                                                   DpmQmiHal::uninstallFilters(android::hardware::hidl_string const&)
+90  0x00006568 0x00006568 GLOBAL FUNC 28       __ubsan_handle_sub_overflow_minimal_abort
+91  0x0000696c 0x0000696c GLOBAL FUNC 60       __ubsan_handle_implicit_conversion_minimal
+92  0x000065c0 0x000065c0 GLOBAL FUNC 28       __ubsan_handle_mul_overflow_minimal_abort
+93  0x00006a58 0x00006a58 GLOBAL FUNC 28       __ubsan_handle_nonnull_return_minimal_abort
+94  0x000067b4 0x000067b4 GLOBAL FUNC 60       __ubsan_handle_vla_bound_not_positive_minimal
+95  0x000062d4 0x000062d4 GLOBAL FUNC 20       _ZN13DpmEventRelay24convertIntToFilterStatusEi                                                                       DpmEventRelay::convertIntToFilterStatus(int)
+96  0x00006bb8 0x00006bb8 GLOBAL FUNC 28       __ubsan_handle_cfi_check_fail_minimal_abort
+97  0x00006a1c 0x00006a1c GLOBAL FUNC 60       __ubsan_handle_nonnull_return_minimal
+98  0x00006ab0 0x00006ab0 GLOBAL FUNC 28       __ubsan_handle_nullability_arg_minimal_abort
+99  0x000058b8 0x000058b8 GLOBAL FUNC 64       _ZN9DpmQmiHal17deRegisterEventCbEv                                                                                   DpmQmiHal::deRegisterEventCb()
+100 0x00005400 0x00005400 GLOBAL FUNC 72       _ZN9DpmQmiHal18areAllIfacesActiveEv                                                                                  DpmQmiHal::areAllIfacesActive()
+101 0x00006510 0x00006510 GLOBAL FUNC 28       __ubsan_handle_add_overflow_minimal_abort
+102 0x000056bc 0x000056bc GLOBAL FUNC 152      _ZN9DpmQmiHal14goDormantIfaceERKN7android8hardware11hidl_stringEj                                                    DpmQmiHal::goDormantIface(android::hardware::hidl_string const&, unsigned int)
+103 0x00005c8c 0x00005c8c GLOBAL FUNC 400      _ZN9DpmQmiHal14installFiltersERKN3com8qualcomm3qti3dpm3api4V1_016DpmHalFilterInfoERKN7android8hardware11hidl_handleE DpmQmiHal::installFilters(com::qualcomm::qti::dpm::api::V1_0::DpmHalFilterInfo const&, android::hardware::hidl_handle const&)
+104 0x00007338 0x00007338 GLOBAL OBJ  232      _ZTC9DpmQmiHal0_N7android4hidl4base4V1_05IBaseE                                                                      construction vtable for android::hidl::base::V1_0::IBase-in-DpmQmiHal
+105 0x00006120 0x00006120 GLOBAL FUNC 20       _ZN13DpmEventRelayC2ERKN7android2spIN3com8qualcomm3qti3dpm3api4V1_018IdpmClientCallbackEEE                           DpmEventRelay::DpmEventRelay(android::sp<com::qualcomm::qti::dpm::api::V1_0::IdpmClientCallback> const&)
+106 0x00007420 0x00007420 GLOBAL OBJ  48       _ZTV13DpmEventRelay                                                                                                  vtable for DpmEventRelay
+107 0x000064b8 0x000064b8 GLOBAL FUNC 28       __ubsan_handle_alignment_assumption_minimal_abort
+108 0x00006914 0x00006914 GLOBAL FUNC 60       __ubsan_handle_function_type_mismatch_minimal
+109 0x00006b24 0x00006b24 GLOBAL FUNC 60       __ubsan_handle_pointer_overflow_minimal
+110 0x00005034 0x00005034 GLOBAL FUNC 404      _ZN9DpmQmiHal10makeDPMHALEiP10IDpmQmiMgr                                                                             DpmQmiHal::makeDPMHAL(int, IDpmQmiMgr*)
+111 0x00006670 0x00006670 GLOBAL FUNC 28       __ubsan_handle_divrem_overflow_minimal_abort
+112 0x000068a0 0x000068a0 GLOBAL FUNC 28       __ubsan_handle_load_invalid_value_minimal_abort
+113 ---------- 0x000087f0 GLOBAL OBJ  8        _ZN9DpmQmiHal9mCallbackE                                                                                             DpmQmiHal::mCallback
+114 0x00006210 0x00006210 GLOBAL FUNC 196      _ZN13DpmEventRelay11filterIndCbENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEi                    DpmEventRelay::filterIndCb(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int)
+115 0x00006864 0x00006864 GLOBAL FUNC 60       __ubsan_handle_load_invalid_value_minimal
+116 0x00006a74 0x00006a74 GLOBAL FUNC 60       __ubsan_handle_nullability_arg_minimal
+117 0x00005334 0x00005334 GLOBAL FUNC 204      _ZN9DpmQmiHal17getDormancyStatusERKN7android8hardware11hidl_stringE                                                  DpmQmiHal::getDormancyStatus(android::hardware::hidl_string const&)
+118 0x0000668c 0x0000668c GLOBAL FUNC 60       __ubsan_handle_shift_out_of_bounds_minimal
+119 0x00005880 0x00005880 GLOBAL FUNC 56       _ZN9DpmQmiHal17deleteAllTrackersEv                                                                                   DpmQmiHal::deleteAllTrackers()
+120 0x00007188 0x00007188 GLOBAL OBJ  48       _ZTT9DpmQmiHal                                                                                                       VTT for DpmQmiHal
+121 0x0000647c 0x0000647c GLOBAL FUNC 60       __ubsan_handle_alignment_assumption_minimal
+122 0x00006778 0x00006778 GLOBAL FUNC 60       __ubsan_handle_missing_return_minimal
+123 0x00005754 0x00005754 GLOBAL FUNC 160      _ZN9DpmQmiHal16deleteWdsTrackerERKN7android8hardware11hidl_stringE                                                   DpmQmiHal::deleteWdsTracker(android::hardware::hidl_string const&)
+124 0x00005e1c 0x00005e1c GLOBAL FUNC 16       _ZN9DpmQmiHal22convertToHalFilterInfoEN3com8qualcomm3qti3dpm3api4V1_026DpmHalNetworkStateEnumTypeE                   DpmQmiHal::convertToHalFilterInfo(com::qualcomm::qti::dpm::api::V1_0::DpmHalNetworkStateEnumType)
+125 0x000071b8 0x000071b8 GLOBAL OBJ  384      _ZTC9DpmQmiHal0_N3com8qualcomm3qti3dpm3api4V1_07IdpmQmiE                                                             construction vtable for com::qualcomm::qti::dpm::api::V1_0::IdpmQmi-in-DpmQmiHal
+126 0x00006848 0x00006848 GLOBAL FUNC 28       __ubsan_handle_float_cast_overflow_minimal_abort
+127 0x00006448 0x00006448 GLOBAL FUNC 28       __ubsan_handle_type_mismatch_minimal_abort
+128 0x000059fc 0x000059fc GLOBAL FUNC 148      _ZN9DpmQmiHal16setDfsFilterModeERKN7android8hardware11hidl_stringEb                                                  DpmQmiHal::setDfsFilterMode(android::hardware::hidl_string const&, bool)
+129 0x000055b8 0x000055b8 GLOBAL FUNC 260      _ZN9DpmQmiHal20createWdsPortTrackerERKN7android8hardware11hidl_stringES4_S4_                                         DpmQmiHal::createWdsPortTracker(android::hardware::hidl_string const&, android::hardware::hidl_string const&, android::hardware::hidl_string const&)
+130 0x00005448 0x00005448 GLOBAL FUNC 16       _ZN9DpmQmiHal20dpmMgrResultToStatusEN10IDpmQmiMgr3RETE                                                               DpmQmiHal::dpmMgrResultToStatus(IDpmQmiMgr::RET)
+131 0x00005458 0x00005458 GLOBAL FUNC 148      _ZN9DpmQmiHal22setDormancyEventReportERKN7android8hardware11hidl_stringEb                                            DpmQmiHal::setDormancyEventReport(android::hardware::hidl_string const&, bool)
+132 0x000051c8 0x000051c8 GLOBAL FUNC 64       _ZN9DpmQmiHalC1EP10IDpmQmiMgr                                                                                        DpmQmiHal::DpmQmiHal(IDpmQmiMgr*)
+133 0x00006134 0x00006134 GLOBAL FUNC 196      _ZN13DpmEventRelay13dormancyIndCbENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEi                  DpmEventRelay::dormancyIndCb(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int)
+134 0x000069c4 0x000069c4 GLOBAL FUNC 60       __ubsan_handle_nonnull_arg_minimal
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0xca8 0x000002a8   0xca8 -r-- DYNSYM      .dynsym
+4   0x00000f50   0x10e 0x00000f50   0x10e -r-- GNU_VERSYM  .gnu.version
+5   0x00001060    0x40 0x00001060    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x000010a0   0x228 0x000010a0   0x228 -r-- GNU_HASH    .gnu.hash
+7   0x000012c8  0x1d36 0x000012c8  0x1d36 -r-- STRTAB      .dynstr
+8   0x00003000   0x254 0x00003000   0x254 -r-- ----        .rela.dyn
+9   0x00003258    0x20 0x00003258    0x20 -r-- ----        .relr.dyn
+10  0x00003278   0x2b8 0x00003278   0x2b8 -r-- RELA        .rela.plt
+11  0x00003530   0x4b2 0x00003530   0x4b2 -r-- PROGBITS    .rodata
+12  0x000039e4   0x304 0x000039e4   0x304 -r-- PROGBITS    .eh_frame_hdr
+13  0x00003ce8   0xa4c 0x00003ce8   0xa4c -r-- PROGBITS    .eh_frame
+14  0x00005000  0x1bd4 0x00005000  0x1bd4 -r-x PROGBITS    .text
+15  0x00006be0   0x1f0 0x00006be0   0x1f0 -r-x PROGBITS    .plt
+16  0x00007000   0x450 0x00007000   0x450 -rw- PROGBITS    .data.rel.ro
+17  0x00007450    0x10 0x00007450    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00007460     0x8 0x00007460     0x8 -rw- INIT_ARRAY  .init_array
+19  0x00007468   0x260 0x00007468   0x260 -rw- DYNAMIC     .dynamic
+20  0x000076c8    0x28 0x000076c8    0x28 -rw- PROGBITS    .got
+21  0x000076f0   0x100 0x000076f0   0x100 -rw- PROGBITS    .got.plt
+22  0x000077f0     0x0 0x000087f0    0xb0 -rw- NOBITS      .bss
+23  0x000077f0    0xfc 0x00000000    0xfc ---- STRTAB      .shstrtab
+24  0x000078ec   0x624 0x00000000   0x624 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x000010e4 0x000010e4 4   10   .gnu.hash           utf16le \b& "
+3   0x00001130 0x00001130 19  80   .gnu.hash           utf32le 59>CIMPTY_cefnquwy{
+4   0x00001198 0x00001198 4   5    .gnu.hash           ascii   `Q\n\b
+5   0x000011b9 0x000011b9 4   5    .gnu.hash           ascii   +\`J
+6   0x000012a2 0x000012a2 4   5    .gnu.hash           ascii   l#V{
+7   0x000012c9 0x000012c9 12  13   .dynstr             ascii   __cxa_atexit
+8   0x000012d6 0x000012d6 14  15   .dynstr             ascii   __cxa_finalize
+9   0x000012e5 0x000012e5 90  91   .dynstr             ascii   _ZN13DpmEventRelayC1ERKN7android2spIN3com8qualcomm3qti3dpm3api4V1_018IdpmClientCallbackEEE
+10  0x00001340 0x00001340 109 110  .dynstr             ascii   _ZN3com8qualcomm3qti3dpm3api4V1_07IdpmQmi11linkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEEm
+11  0x000013ae 0x000013ae 115 116  .dynstr             ascii   _ZN3com8qualcomm3qti3dpm3api4V1_07IdpmQmi12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE
+12  0x00001422 0x00001422 137 138  .dynstr             ascii   _ZN3com8qualcomm3qti3dpm3api4V1_07IdpmQmi12getHashChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_10hidl_arrayIhLm32EJEEEEEEEE
+13  0x000014ac 0x000014ac 110 111  .dynstr             ascii   _ZN3com8qualcomm3qti3dpm3api4V1_07IdpmQmi13unlinkToDeathERKN7android2spINS6_8hardware20hidl_death_recipientEEE
+14  0x0000151b 0x0000151b 130 131  .dynstr             ascii   _ZN3com8qualcomm3qti3dpm3api4V1_07IdpmQmi14interfaceChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS9_11hidl_stringEEEEEE
+15  0x0000159e 0x0000159e 119 120  .dynstr             ascii   _ZN3com8qualcomm3qti3dpm3api4V1_07IdpmQmi19interfaceDescriptorENSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE
+16  0x00001616 0x00001616 66  67   .dynstr             ascii   _ZN3com8qualcomm3qti3dpm3api4V1_07IdpmQmi21notifySyspropsChangedEv
+17  0x00001659 0x00001659 66  67   .dynstr             ascii   _ZN3com8qualcomm3qti3dpm3api4V1_07IdpmQmi21setHALInstrumentationEv
+18  0x0000169c 0x0000169c 48  49   .dynstr             ascii   _ZN3com8qualcomm3qti3dpm3api4V1_07IdpmQmi4pingEv
+19  0x000016cd 0x000016cd 118 119  .dynstr             ascii   _ZN3com8qualcomm3qti3dpm3api4V1_07IdpmQmi5debugERKN7android8hardware11hidl_handleERKNS7_8hidl_vecINS7_11hidl_stringEEE
+20  0x00001744 0x00001744 29  30   .dynstr             ascii   _ZN7android14sp_report_raceEv
+21  0x00001762 0x00001762 38  39   .dynstr             ascii   _ZN7android23sp_report_stack_pointerEv
+22  0x00001789 0x00001789 72  73   .dynstr             ascii   _ZN7android2spIN3com8qualcomm3qti3dpm3api4V1_018IdpmClientCallbackEED2Ev
+23  0x000017d2 0x000017d2 93  94   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase11linkToDeathERKNS_2spINS_8hardware20hidl_death_recipientEEEm
+24  0x00001830 0x00001830 86  87   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase12getDebugInfoENSt3__18functionIFvRKNS2_9DebugInfoEEEE
+25  0x00001887 0x00001887 122 123  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase12getHashChainENSt3__18functionIFvRKNS_8hardware8hidl_vecINS6_10hidl_arrayIhLm32EJEEEEEEEE
+26  0x00001902 0x00001902 94  95   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase13unlinkToDeathERKNS_2spINS_8hardware20hidl_death_recipientEEE
+27  0x00001961 0x00001961 115 116  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase14interfaceChainENSt3__18functionIFvRKNS_8hardware8hidl_vecINS6_11hidl_stringEEEEEE
+28  0x000019d5 0x000019d5 104 105  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase19interfaceDescriptorENSt3__18functionIFvRKNS_8hardware11hidl_stringEEEE
+29  0x00001a3e 0x00001a3e 57  58   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase21notifySyspropsChangedEv
+30  0x00001a78 0x00001a78 57  58   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase21setHALInstrumentationEv
+31  0x00001ab2 0x00001ab2 39  40   .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase4pingEv
+32  0x00001ada 0x00001ada 103 104  .dynstr             ascii   _ZN7android4hidl4base4V1_05IBase5debugERKNS_8hardware11hidl_handleERKNS4_8hidl_vecINS4_11hidl_stringEEE
+33  0x00001b42 0x00001b42 33  34   .dynstr             ascii   _ZN7android7RefBase10onFirstRefEv
+34  0x00001b64 0x00001b64 38  39   .dynstr             ascii   _ZN7android7RefBase13onLastWeakRefEPKv
+35  0x00001b8b 0x00001b8b 40  41   .dynstr             ascii   _ZN7android7RefBase15onLastStrongRefEPKv
+36  0x00001bb4 0x00001bb4 46  47   .dynstr             ascii   _ZN7android7RefBase20onIncStrongAttemptedEjPKv
+37  0x00001be3 0x00001be3 23  24   .dynstr             ascii   _ZN7android7RefBaseC2Ev
+38  0x00001bfb 0x00001bfb 23  24   .dynstr             ascii   _ZN7android7RefBaseD2Ev
+39  0x00001c13 0x00001c13 57  58   .dynstr             ascii   _ZN7android8hardware20LazyServiceRegistrar11getInstanceEv
+40  0x00001c4d 0x00001c4d 162 163  .dynstr             ascii   _ZN7android8hardware20LazyServiceRegistrar15registerServiceERKNS_2spINS_4hidl4base4V1_05IBaseEEERKNSt3__112basic_stringIcNSA_11char_traitsIcEENSA_9allocatorIcEEEE
+41  0x00001cf0 0x00001cf0 47  48   .dynstr             ascii   _ZN7android8hardware22configureRpcThreadpoolEmb
+42  0x00001d20 0x00001d20 40  41   .dynstr             ascii   _ZN9DpmQmiHal10makeDPMHALEiP10IDpmQmiMgr
+43  0x00001d49 0x00001d49 65  66   .dynstr             ascii   _ZN9DpmQmiHal14goDormantIfaceERKN7android8hardware11hidl_stringEj
+44  0x00001d8b 0x00001d8b 116 117  .dynstr             ascii   _ZN9DpmQmiHal14installFiltersERKN3com8qualcomm3qti3dpm3api4V1_016DpmHalFilterInfoERKN7android8hardware11hidl_handleE
+45  0x00001e00 0x00001e00 65  66   .dynstr             ascii   _ZN9DpmQmiHal15getFilterStatusERKN7android8hardware11hidl_stringE
+46  0x00001e42 0x00001e42 100 101  .dynstr             ascii   _ZN9DpmQmiHal15registerEventCbERKN7android2spIN3com8qualcomm3qti3dpm3api4V1_018IdpmClientCallbackEEE
+47  0x00001ea7 0x00001ea7 66  67   .dynstr             ascii   _ZN9DpmQmiHal16deleteDfsTrackerERKN7android8hardware11hidl_stringE
+48  0x00001eea 0x00001eea 66  67   .dynstr             ascii   _ZN9DpmQmiHal16deleteWdsTrackerERKN7android8hardware11hidl_stringE
+49  0x00001f2d 0x00001f2d 67  68   .dynstr             ascii   _ZN9DpmQmiHal16setDfsFilterModeERKN7android8hardware11hidl_stringEb
+50  0x00001f71 0x00001f71 66  67   .dynstr             ascii   _ZN9DpmQmiHal16uninstallFiltersERKN7android8hardware11hidl_stringE
+51  0x00001fb4 0x00001fb4 34  35   .dynstr             ascii   _ZN9DpmQmiHal17deRegisterEventCbEv
+52  0x00001fd7 0x00001fd7 34  35   .dynstr             ascii   _ZN9DpmQmiHal17deleteAllTrackersEv
+53  0x00001ffa 0x00001ffa 67  68   .dynstr             ascii   _ZN9DpmQmiHal17getDormancyStatusERKN7android8hardware11hidl_stringE
+54  0x0000203e 0x0000203e 35  36   .dynstr             ascii   _ZN9DpmQmiHal18areAllIfacesActiveEv
+55  0x00002062 0x00002062 76  77   .dynstr             ascii   _ZN9DpmQmiHal20createDfsPortTrackerERKN7android8hardware11hidl_stringES4_S4_
+56  0x000020af 0x000020af 76  77   .dynstr             ascii   _ZN9DpmQmiHal20createWdsPortTrackerERKN7android8hardware11hidl_stringES4_S4_
+57  0x000020fc 0x000020fc 54  55   .dynstr             ascii   _ZN9DpmQmiHal20dpmMgrResultToStatusEN10IDpmQmiMgr3RETE
+58  0x00002133 0x00002133 88  89   .dynstr             ascii   _ZN9DpmQmiHal20installListenFiltersERKN3com8qualcomm3qti3dpm3api4V1_016DpmHalFilterInfoE
+59  0x0000218c 0x0000218c 70  71   .dynstr             ascii   _ZN9DpmQmiHal20updateDormancyStatusERKN7android8hardware11hidl_stringE
+60  0x000021d3 0x000021d3 71  72   .dynstr             ascii   _ZN9DpmQmiHal20updateFilterRefCountERKN7android8hardware11hidl_stringEi
+61  0x0000221b 0x0000221b 98  99   .dynstr             ascii   _ZN9DpmQmiHal22convertToHalFilterInfoEN3com8qualcomm3qti3dpm3api4V1_026DpmHalNetworkStateEnumTypeE
+62  0x0000227e 0x0000227e 73  74   .dynstr             ascii   _ZN9DpmQmiHal22setDormancyEventReportERKN7android8hardware11hidl_stringEb
+63  0x000022c8 0x000022c8 20  21   .dynstr             ascii   _ZN9DpmQmiHal4joinEv
+64  0x000022dd 0x000022dd 25  26   .dynstr             ascii   _ZN9DpmQmiHal9goDormantEj
+65  0x000022f7 0x000022f7 24  25   .dynstr             ascii   _ZN9DpmQmiHal9mCallbackE
+66  0x00002310 0x00002310 29  30   .dynstr             ascii   _ZN9DpmQmiHalC1EP10IDpmQmiMgr
+67  0x0000232e 0x0000232e 29  30   .dynstr             ascii   _ZN9DpmQmiHalC2EP10IDpmQmiMgr
+68  0x0000234c 0x0000234c 34  35   .dynstr             ascii   _ZNK7android7RefBase9decStrongEPKv
+69  0x0000236f 0x0000236f 34  35   .dynstr             ascii   _ZNK7android7RefBase9incStrongEPKv
+70  0x00002392 0x00002392 38  39   .dynstr             ascii   _ZNK7android8hardware11hidl_handleptEv
+71  0x000023b9 0x000023b9 102 103  .dynstr             ascii   _ZNK7android8hardware11hidl_stringcvNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEEv
+72  0x00002420 0x00002420 63  64   .dynstr             ascii   _ZNKSt3__121__basic_string_commonILb1EE20__throw_length_errorEv
+73  0x00002460 0x00002460 48  49   .dynstr             ascii   _ZNSt3__119__shared_weak_count14__release_weakEv
+74  0x00002491 0x00002491 56  57   .dynstr             ascii   _ZTC9DpmQmiHal0_N3com8qualcomm3qti3dpm3api4V1_07IdpmQmiE
+75  0x000024ca 0x000024ca 47  48   .dynstr             ascii   _ZTC9DpmQmiHal0_N7android4hidl4base4V1_05IBaseE
+76  0x000024fa 0x000024fa 14  15   .dynstr             ascii   _ZTT9DpmQmiHal
+77  0x00002509 0x00002509 14  15   .dynstr             ascii   _ZTV9DpmQmiHal
+78  0x00002518 0x00002518 6   7    .dynstr             ascii   _ZdlPv
+79  0x0000251f 0x0000251f 5   6    .dynstr             ascii   _Znwm
+80  0x00002525 0x00002525 19  20   .dynstr             ascii   __android_log_print
+81  0x00002539 0x00002539 18  19   .dynstr             ascii   __cxa_pure_virtual
+82  0x0000254c 0x0000254c 16  17   .dynstr             ascii   __stack_chk_fail
+83  0x0000255d 0x0000255d 41  42   .dynstr             ascii   __ubsan_handle_sub_overflow_minimal_abort
+84  0x00002587 0x00002587 5   6    .dynstr             ascii   abort
+85  0x0000258d 0x0000258d 6   7    .dynstr             ascii   memcpy
+86  0x00002594 0x00002594 6   7    .dynstr             ascii   strlen
+87  0x0000259b 0x0000259b 97  98   .dynstr             ascii   _ZN13DpmEventRelay11filterIndCbENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEi
+88  0x000025fd 0x000025fd 99  100  .dynstr             ascii   _ZN13DpmEventRelay13dormancyIndCbENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEi
+89  0x00002661 0x00002661 46  47   .dynstr             ascii   _ZN13DpmEventRelay24convertIntToFilterStatusEi
+90  0x00002690 0x00002690 47  48   .dynstr             ascii   _ZN13DpmEventRelay25converIntToDormancyStatusEi
+91  0x000026c0 0x000026c0 90  91   .dynstr             ascii   _ZN13DpmEventRelayC2ERKN7android2spIN3com8qualcomm3qti3dpm3api4V1_018IdpmClientCallbackEEE
+92  0x0000271b 0x0000271b 102 103  .dynstr             ascii   _ZN7android8hardware11hidl_stringC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+93  0x00002782 0x00002782 37  38   .dynstr             ascii   _ZN7android8hardware11hidl_stringD1Ev
+94  0x000027a8 0x000027a8 47  48   .dynstr             ascii   _ZN7android8hardware7details13return_statusD2Ev
+95  0x000027d8 0x000027d8 19  20   .dynstr             ascii   _ZTV13DpmEventRelay
+96  0x000027ec 0x000027ec 35  36   .dynstr             ascii   __ubsan_handle_add_overflow_minimal
+97  0x00002810 0x00002810 41  42   .dynstr             ascii   __ubsan_handle_add_overflow_minimal_abort
+98  0x0000283a 0x0000283a 43  44   .dynstr             ascii   __ubsan_handle_alignment_assumption_minimal
+99  0x00002866 0x00002866 49  50   .dynstr             ascii   __ubsan_handle_alignment_assumption_minimal_abort
+100 0x00002898 0x00002898 42  43   .dynstr             ascii   __ubsan_handle_builtin_unreachable_minimal
+101 0x000028c3 0x000028c3 37  38   .dynstr             ascii   __ubsan_handle_cfi_check_fail_minimal
+102 0x000028e9 0x000028e9 43  44   .dynstr             ascii   __ubsan_handle_cfi_check_fail_minimal_abort
+103 0x00002915 0x00002915 38  39   .dynstr             ascii   __ubsan_handle_divrem_overflow_minimal
+104 0x0000293c 0x0000293c 44  45   .dynstr             ascii   __ubsan_handle_divrem_overflow_minimal_abort
+105 0x00002969 0x00002969 42  43   .dynstr             ascii   __ubsan_handle_float_cast_overflow_minimal
+106 0x00002994 0x00002994 48  49   .dynstr             ascii   __ubsan_handle_float_cast_overflow_minimal_abort
+107 0x000029c5 0x000029c5 45  46   .dynstr             ascii   __ubsan_handle_function_type_mismatch_minimal
+108 0x000029f3 0x000029f3 51  52   .dynstr             ascii   __ubsan_handle_function_type_mismatch_minimal_abort
+109 0x00002a27 0x00002a27 42  43   .dynstr             ascii   __ubsan_handle_implicit_conversion_minimal
+110 0x00002a52 0x00002a52 48  49   .dynstr             ascii   __ubsan_handle_implicit_conversion_minimal_abort
+111 0x00002a83 0x00002a83 38  39   .dynstr             ascii   __ubsan_handle_invalid_builtin_minimal
+112 0x00002aaa 0x00002aaa 44  45   .dynstr             ascii   __ubsan_handle_invalid_builtin_minimal_abort
+113 0x00002ad7 0x00002ad7 41  42   .dynstr             ascii   __ubsan_handle_load_invalid_value_minimal
+114 0x00002b01 0x00002b01 47  48   .dynstr             ascii   __ubsan_handle_load_invalid_value_minimal_abort
+115 0x00002b31 0x00002b31 37  38   .dynstr             ascii   __ubsan_handle_missing_return_minimal
+116 0x00002b57 0x00002b57 35  36   .dynstr             ascii   __ubsan_handle_mul_overflow_minimal
+117 0x00002b7b 0x00002b7b 41  42   .dynstr             ascii   __ubsan_handle_mul_overflow_minimal_abort
+118 0x00002ba5 0x00002ba5 38  39   .dynstr             ascii   __ubsan_handle_negate_overflow_minimal
+119 0x00002bcc 0x00002bcc 44  45   .dynstr             ascii   __ubsan_handle_negate_overflow_minimal_abort
+120 0x00002bf9 0x00002bf9 34  35   .dynstr             ascii   __ubsan_handle_nonnull_arg_minimal
+121 0x00002c1c 0x00002c1c 40  41   .dynstr             ascii   __ubsan_handle_nonnull_arg_minimal_abort
+122 0x00002c45 0x00002c45 37  38   .dynstr             ascii   __ubsan_handle_nonnull_return_minimal
+123 0x00002c6b 0x00002c6b 43  44   .dynstr             ascii   __ubsan_handle_nonnull_return_minimal_abort
+124 0x00002c97 0x00002c97 38  39   .dynstr             ascii   __ubsan_handle_nullability_arg_minimal
+125 0x00002cbe 0x00002cbe 44  45   .dynstr             ascii   __ubsan_handle_nullability_arg_minimal_abort
+126 0x00002ceb 0x00002ceb 41  42   .dynstr             ascii   __ubsan_handle_nullability_return_minimal
+127 0x00002d15 0x00002d15 47  48   .dynstr             ascii   __ubsan_handle_nullability_return_minimal_abort
+128 0x00002d45 0x00002d45 36  37   .dynstr             ascii   __ubsan_handle_out_of_bounds_minimal
+129 0x00002d6a 0x00002d6a 42  43   .dynstr             ascii   __ubsan_handle_out_of_bounds_minimal_abort
+130 0x00002d95 0x00002d95 39  40   .dynstr             ascii   __ubsan_handle_pointer_overflow_minimal
+131 0x00002dbd 0x00002dbd 45  46   .dynstr             ascii   __ubsan_handle_pointer_overflow_minimal_abort
+132 0x00002deb 0x00002deb 42  43   .dynstr             ascii   __ubsan_handle_shift_out_of_bounds_minimal
+133 0x00002e16 0x00002e16 48  49   .dynstr             ascii   __ubsan_handle_shift_out_of_bounds_minimal_abort
+134 0x00002e47 0x00002e47 35  36   .dynstr             ascii   __ubsan_handle_sub_overflow_minimal
+135 0x00002e6b 0x00002e6b 36  37   .dynstr             ascii   __ubsan_handle_type_mismatch_minimal
+136 0x00002e90 0x00002e90 42  43   .dynstr             ascii   __ubsan_handle_type_mismatch_minimal_abort
+137 0x00002ebb 0x00002ebb 45  46   .dynstr             ascii   __ubsan_handle_vla_bound_not_positive_minimal
+138 0x00002ee9 0x00002ee9 51  52   .dynstr             ascii   __ubsan_handle_vla_bound_not_positive_minimal_abort
+139 0x00002f1d 0x00002f1d 25  26   .dynstr             ascii   android_set_abort_message
+140 0x00002f37 0x00002f37 5   6    .dynstr             ascii   write
+141 0x00002f3d 0x00002f3d 9   10   .dynstr             ascii   liblog.so
+142 0x00002f47 0x00002f47 6   7    .dynstr             ascii   LIBLOG
+143 0x00002f4e 0x00002f4e 7   8    .dynstr             ascii   libc.so
+144 0x00002f56 0x00002f56 4   5    .dynstr             ascii   LIBC
+145 0x00002f5b 0x00002f5b 14  15   .dynstr             ascii   libhidlbase.so
+146 0x00002f6a 0x00002f6a 12  13   .dynstr             ascii   libcutils.so
+147 0x00002f77 0x00002f77 10  11   .dynstr             ascii   libbase.so
+148 0x00002f82 0x00002f82 11  12   .dynstr             ascii   libutils.so
+149 0x00002f8e 0x00002f8e 21  22   .dynstr             ascii   libhardware_legacy.so
+150 0x00002fa4 0x00002fa4 14  15   .dynstr             ascii   libhardware.so
+151 0x00002fb3 0x00002fb3 31  32   .dynstr             ascii   com.qualcomm.qti.dpm.api@1.0.so
+152 0x00002fd3 0x00002fd3 9   10   .dynstr             ascii   libc++.so
+153 0x00002fdd 0x00002fdd 7   8    .dynstr             ascii   libm.so
+154 0x00002fe5 0x00002fe5 8   9    .dynstr             ascii   libdl.so
+155 0x00002fee 0x00002fee 15  16   .dynstr             ascii   libdpmqmihal.so
+156 0x00003000 0x00003000 4   5    .rela.dyn           ascii   APS2
+157 0x00003049 0x00003049 21  22   .rela.dyn           ascii   |\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b>\b
+158 0x00003530 0x00003530 24  25   .rodata             ascii   Failure in dormancyIndCb
+159 0x00003549 0x00003549 19  20   .rodata             ascii   ubsan: add-overflow
+160 0x0000355d 0x0000355d 21  22   .rodata             ascii   ubsan: out-of-bounds\n
+161 0x00003573 0x00003573 22  23   .rodata             ascii   ubsan: invalid-builtin
+162 0x0000358a 0x0000358a 27  28   .rodata             ascii   ubsan: implicit-conversion\n
+163 0x000035a6 0x000035a6 26  27   .rodata             ascii   ubsan: nullability-return\n
+164 0x000035c1 0x000035c1 19  20   .rodata             ascii   ubsan: mul-overflow
+165 0x000035d5 0x000035d5 20  21   .rodata             ascii   ubsan: type-mismatch
+166 0x000035ea 0x000035ea 23  24   .rodata             ascii   ubsan: nullability-arg\n
+167 0x00003602 0x00003602 23  24   .rodata             ascii   ubsan: too many errors\n
+168 0x0000361a 0x0000361a 39  40   .rodata             ascii   Could not register dpmQmiService. ERROR
+169 0x00003642 0x00003642 22  23   .rodata             ascii   ubsan: missing-return\n
+170 0x00003659 0x00003659 22  23   .rodata             ascii   ubsan: nonnull-return\n
+171 0x00003670 0x00003670 18  19   .rodata             ascii   ubsan: nonnull-arg
+172 0x00003683 0x00003683 22  23   .rodata             ascii   ubsan: nullability-arg
+173 0x0000369a 0x0000369a 29  30   .rodata             ascii   ubsan: vla-bound-not-positive
+174 0x000036b8 0x000036b8 20  21   .rodata             ascii   ubsan: sub-overflow\n
+175 0x000036cd 0x000036cd 20  21   .rodata             ascii   ubsan: add-overflow\n
+176 0x000036e2 0x000036e2 13  14   .rodata             ascii   dpmQmiService
+177 0x000036f0 0x000036f0 30  31   .rodata             ascii   ubsan: function-type-mismatch\n
+178 0x0000370f 0x0000370f 29  30   .rodata             ascii   ubsan: function-type-mismatch
+179 0x0000372d 0x0000372d 23  24   .rodata             ascii   ubsan: pointer-overflow
+180 0x00003745 0x00003745 27  28   .rodata             ascii   ubsan: alignment-assumption
+181 0x00003761 0x00003761 22  23   .rodata             ascii   ubsan: negate-overflow
+182 0x00003778 0x00003778 26  27   .rodata             ascii   ubsan: load-invalid-value\n
+183 0x00003793 0x00003793 23  24   .rodata             ascii   ubsan: divrem-overflow\n
+184 0x000037ab 0x000037ab 27  28   .rodata             ascii   ubsan: builtin-unreachable\n
+185 0x000037c7 0x000037c7 27  28   .rodata             ascii   ubsan: float-cast-overflow\n
+186 0x000037e3 0x000037e3 19  20   .rodata             ascii   ubsan: nonnull-arg\n
+187 0x000037f7 0x000037f7 25  26   .rodata             ascii   ubsan: load-invalid-value
+188 0x00003811 0x00003811 28  29   .rodata             ascii   ubsan: alignment-assumption\n
+189 0x0000382e 0x0000382e 19  20   .rodata             ascii   ubsan: sub-overflow
+190 0x00003842 0x00003842 23  24   .rodata             ascii   ubsan: negate-overflow\n
+191 0x0000385a 0x0000385a 20  21   .rodata             ascii   ubsan: out-of-bounds
+192 0x0000386f 0x0000386f 23  24   .rodata             ascii   ubsan: invalid-builtin\n
+193 0x00003887 0x00003887 21  22   .rodata             ascii   ubsan: nonnull-return
+194 0x0000389d 0x0000389d 25  26   .rodata             ascii   ubsan: nullability-return
+195 0x000038b7 0x000038b7 26  27   .rodata             ascii   ubsan: shift-out-of-bounds
+196 0x000038d2 0x000038d2 20  21   .rodata             ascii   ubsan: mul-overflow\n
+197 0x000038e7 0x000038e7 22  23   .rodata             ascii   ubsan: cfi-check-fail\n
+198 0x000038fe 0x000038fe 21  22   .rodata             ascii   ubsan: cfi-check-fail
+199 0x00003914 0x00003914 26  27   .rodata             ascii   ubsan: implicit-conversion
+200 0x0000392f 0x0000392f 22  23   .rodata             ascii   Failure in filterIndCb
+201 0x00003946 0x00003946 21  22   .rodata             ascii   ubsan: type-mismatch\n
+202 0x0000395c 0x0000395c 24  25   .rodata             ascii   ubsan: pointer-overflow\n
+203 0x00003975 0x00003975 22  23   .rodata             ascii   ubsan: divrem-overflow
+204 0x0000398c 0x0000398c 30  31   .rodata             ascii   ubsan: vla-bound-not-positive\n
+205 0x000039ab 0x000039ab 27  28   .rodata             ascii   ubsan: shift-out-of-bounds\n
+206 0x000039c7 0x000039c7 26  27   .rodata             ascii   ubsan: float-cast-overflow
+207 0x00003d9c 0x00003d9c 5   24   .eh_frame           utf32le \b$¼ᑠ¨
+208 0x000050c8 0x000050c8 4   6    .text               utf8    \t}\nȪ
+209 0x00005639 0x00005639 4   5    .text               ascii   c@9H
+210 0x0000569d 0x0000569d 4   5    .text               ascii   c@9\b
+211 0x00005703 0x00005703 4   5    .text               ascii   *\b\r@
+212 0x00005979 0x00005979 4   5    .text               ascii   c@9H
+213 0x000059dd 0x000059dd 4   5    .text               ascii   c@9\b
+214 0x00005b9f 0x00005b9f 4   5    .text               ascii   *\b9@
+215 0x00005d99 0x00005d99 4   5    .text               ascii   cA9\b
+216 0x00005db5 0x00005db5 4   5    .text               ascii   cA9h
+217 0x00005f7d 0x00005f7d 4   5    .text               ascii   cA9\b
+218 0x00006193 0x00006193 4   5    .text               ascii   *\t5@
+219 0x0000626b 0x0000626b 4   5    .text               ascii   *\t9@
+220 0x000077f1 0x00000001 11  12   .shstrtab           ascii   .init_array
+221 0x000077fd 0x0000000d 11  12   .shstrtab           ascii   .fini_array
+222 0x00007809 0x00000019 5   6    .shstrtab           ascii   .text
+223 0x0000780f 0x0000001f 4   5    .shstrtab           ascii   .got
+224 0x00007814 0x00000024 19  20   .shstrtab           ascii   .note.android.ident
+225 0x00007828 0x00000038 8   9    .shstrtab           ascii   .got.plt
+226 0x00007831 0x00000041 9   10   .shstrtab           ascii   .rela.plt
+227 0x0000783b 0x0000004b 4   5    .shstrtab           ascii   .bss
+228 0x00007840 0x00000050 7   8    .shstrtab           ascii   .dynstr
+229 0x00007848 0x00000058 13  14   .shstrtab           ascii   .eh_frame_hdr
+230 0x00007856 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+231 0x00007865 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+232 0x00007872 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+233 0x0000787c 0x0000008c 9   10   .shstrtab           ascii   .rela.dyn
+234 0x00007886 0x00000096 12  13   .shstrtab           ascii   .gnu.version
+235 0x00007893 0x000000a3 7   8    .shstrtab           ascii   .dynsym
+236 0x0000789b 0x000000ab 9   10   .shstrtab           ascii   .gnu.hash
+237 0x000078a5 0x000000b5 9   10   .shstrtab           ascii   .eh_frame
+238 0x000078af 0x000000bf 18  19   .shstrtab           ascii   .note.gnu.build-id
+239 0x000078c2 0x000000d2 8   9    .shstrtab           ascii   .dynamic
+240 0x000078cb 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+241 0x000078d5 0x000000e5 7   8    .shstrtab           ascii   .rodata
+242 0x000078dd 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+243 0x000078ed 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+244 0x0000791d 0x00000031 6   7    .gnu_debugdata      ascii   Yg\v`;I
+245 0x00007948 0x0000005c 6   7    .gnu_debugdata      ascii   j\nqB>W
+246 0x00007987 0x0000009b 5   7    .gnu_debugdata      utf8    n<Xޑk
+247 0x000079d6 0x000000ea 5   6    .gnu_debugdata      ascii   %M\r=e
+248 0x000079f9 0x0000010d 4   5    .gnu_debugdata      ascii   "h^g
+249 0x00007a47 0x0000015b 5   6    .gnu_debugdata      ascii   \?}EU
+250 0x00007ac6 0x000001da 4   5    .gnu_debugdata      ascii   N&=5
+251 0x00007afb 0x0000020f 4   5    .gnu_debugdata      ascii   qM0z
+252 0x00007b60 0x00000274 4   5    .gnu_debugdata      ascii   S\tfo
+253 0x00007b94 0x000002a8 8   9    .gnu_debugdata      ascii   h\fI;{KL4
+254 0x00007bba 0x000002ce 4   5    .gnu_debugdata      ascii   j4}O
+255 0x00007c0f 0x00000323 5   6    .gnu_debugdata      ascii   \^#:$
+256 0x00007c2a 0x0000033e 4   5    .gnu_debugdata      ascii   uq[B
+257 0x00007c36 0x0000034a 4   5    .gnu_debugdata      ascii   Fq\fQ
+258 0x00007c55 0x00000369 4   5    .gnu_debugdata      ascii   h,yT
+259 0x00007c93 0x000003a7 4   5    .gnu_debugdata      ascii   C\v47
+260 0x00007ca7 0x000003bb 4   6    .gnu_debugdata      utf8    Ȝ_6&
+261 0x00007cb1 0x000003c5 5   6    .gnu_debugdata      ascii   g\4^k
+262 0x00007cd1 0x000003e5 4   5    .gnu_debugdata      ascii   ($#\r
+263 0x00007cf2 0x00000406 4   5    .gnu_debugdata      ascii   mT^a
+264 0x00007cfc 0x00000410 4   5    .gnu_debugdata      ascii   'z.q
+265 0x00007d13 0x00000427 4   5    .gnu_debugdata      ascii   \n\V,
+266 0x00007d1e 0x00000432 5   6    .gnu_debugdata      ascii   03oG^
+267 0x00007d41 0x00000455 4   6    .gnu_debugdata      utf8    ߌ3'!
+268 0x00007d63 0x00000477 4   5    .gnu_debugdata      ascii   ;N"?
+269 0x00007d8f 0x000004a3 4   5    .gnu_debugdata      ascii   X{ry
+270 0x00007db9 0x000004cd 4   5    .gnu_debugdata      ascii   >kvs
+271 0x00007dda 0x000004ee 4   5    .gnu_debugdata      ascii   SyeK
+272 0x00007e00 0x00000514 4   5    .gnu_debugdata      ascii   @EOR
+273 0x00007e17 0x0000052b 4   5    .gnu_debugdata      ascii   "\btk
+274 0x00007e22 0x00000536 6   7    .gnu_debugdata      ascii   $#3<g]
+275 0x00007e39 0x0000054d 5   6    .gnu_debugdata      ascii   mZ5xO
+276 0x00007e60 0x00000574 5   6    .gnu_debugdata      ascii   ^Vbee
+277 0x00007e74 0x00000588 4   5    .gnu_debugdata      ascii   T+$8
+0x00006d70    1     16 sym.imp.__cxa_atexit
+0x00006c00    1     16 sym.imp.__cxa_finalize
+0x00006ca0    1     16 sym.imp.__android_log_print
+0x00006cc0    1     16 sym.imp.__stack_chk_fail
+0x00006d50    1     16 sym.imp.abort
+0x00006ce0    1     16 sym.imp.memcpy
+0x00006cd0    1     16 sym.imp.strlen
+0x00006dc0    1     16 sym.imp.android_set_abort_message
+0x00006db0    1     16 sym.imp.write
+0x00005000    1     12 entry0
+0x00005ec0   10    324 method.DpmQmiHal.installListenFilters_com::qualcomm::qti::dpm::api::V1_0::DpmHalFilterInfo_const_
+0x000057f4    5    140 method.DpmQmiHal.updateDormancyStatus_android::hardware::hidl_string_const_
+0x0000673c    3     60 sym.__ubsan_handle_builtin_unreachable_minimal
+0x0000632c   22    252 sym.report_this_error_void_
+0x000068f8    1     28 sym.__ubsan_handle_invalid_builtin_minimal_abort
+0x00006428    1     32 sym.message_char_const_
+0x00006464    3     24 sym.abort_with_message_char_const_
+0x000052b0    1      4 method.DpmQmiHal.join__
+0x000052f8    1     60 method.DpmQmiHal.goDormant_unsigned_int_
+0x000061f8    1     24 method.DpmEventRelay.converIntToDormancyStatus_int_
+0x00006720    1     28 sym.__ubsan_handle_out_of_bounds_minimal_abort
+0x0000652c    3     60 sym.__ubsan_handle_sub_overflow_minimal
+0x00005a90   11    200 method.DpmQmiHal.getFilterStatus_android::hardware::hidl_string_const_
+0x00006b7c    3     60 sym.__ubsan_handle_cfi_check_fail_minimal
+0x00006618    1     28 sym.__ubsan_handle_negate_overflow_minimal_abort
+0x00006a00    1     28 sym.__ubsan_handle_nonnull_arg_minimal_abort
+0x00006120    1     20 method.DpmEventRelay.DpmEventRelay_android::sp_com::qualcomm::qti::dpm::api::V1_0::IdpmClientCallback__const_
+0x000054ec    9    204 method.DpmQmiHal.registerEventCb_android::sp_com::qualcomm::qti::dpm::api::V1_0::IdpmClientCallback__const_
+0x00006950    1     28 sym.__ubsan_handle_function_type_mismatch_minimal_abort
+0x000065dc    3     60 sym.__ubsan_handle_negate_overflow_minimal
+0x00006b60    1     28 sym.__ubsan_handle_pointer_overflow_minimal_abort
+0x000067f0    1     28 sym.__ubsan_handle_vla_bound_not_positive_minimal_abort
+0x00005b58    5    148 method.DpmQmiHal.updateFilterRefCount_android::hardware::hidl_string_const__int_
+0x000052b4    1     68 fcn.000052b4
+0x000064d4    3     60 sym.__ubsan_handle_add_overflow_minimal
+0x00006acc    3     60 sym.__ubsan_handle_nullability_return_minimal
+0x00005bec    5    160 method.DpmQmiHal.deleteDfsTracker_android::hardware::hidl_string_const_
+0x000068bc    3     60 sym.__ubsan_handle_invalid_builtin_minimal
+0x00006584    3     60 sym.__ubsan_handle_mul_overflow_minimal
+0x000058f8   10    260 method.DpmQmiHal.createDfsPortTracker_android::hardware::hidl_string_const__android::hardware::hidl_string_const__android::hardware::hidl_string_const_
+0x00006634    3     60 sym.__ubsan_handle_divrem_overflow_minimal
+0x000066e4    3     60 sym.__ubsan_handle_out_of_bounds_minimal
+0x000066c8    1     28 sym.__ubsan_handle_shift_out_of_bounds_minimal_abort
+0x00005014    3     32 method.android::sp_com::qualcomm::qti::dpm::api::V1_0::IdpmClientCallback_.sp__
+0x0000680c    3     60 sym.__ubsan_handle_float_cast_overflow_minimal
+0x000069a8    1     28 sym.__ubsan_handle_implicit_conversion_minimal_abort
+0x00006b08    1     28 sym.__ubsan_handle_nullability_return_minimal_abort
+0x000062f0    3     60 sym.__ubsan_handle_type_mismatch_minimal
+0x00005e2c    5    148 method.DpmQmiHal.uninstallFilters_android::hardware::hidl_string_const_
+0x00006568    1     28 sym.__ubsan_handle_sub_overflow_minimal_abort
+0x0000696c    3     60 sym.__ubsan_handle_implicit_conversion_minimal
+0x000065c0    1     28 sym.__ubsan_handle_mul_overflow_minimal_abort
+0x00006a58    1     28 sym.__ubsan_handle_nonnull_return_minimal_abort
+0x000067b4    3     60 sym.__ubsan_handle_vla_bound_not_positive_minimal
+0x000062d4    1     20 method.DpmEventRelay.convertIntToFilterStatus_int_
+0x00006bb8    1     28 sym.__ubsan_handle_cfi_check_fail_minimal_abort
+0x00006a1c    3     60 sym.__ubsan_handle_nonnull_return_minimal
+0x00006ab0    1     28 sym.__ubsan_handle_nullability_arg_minimal_abort
+0x000058b8    3     64 method.DpmQmiHal.deRegisterEventCb__
+0x00005400    1     72 method.DpmQmiHal.areAllIfacesActive__
+0x00006510    1     28 sym.__ubsan_handle_add_overflow_minimal_abort
+0x000056bc    5    152 method.DpmQmiHal.goDormantIface_android::hardware::hidl_string_const__unsigned_int_
+0x00005c8c   13    400 method.DpmQmiHal.installFilters_com::qualcomm::qti::dpm::api::V1_0::DpmHalFilterInfo_const__android::hardware::hidl_handle_const_
+0x000064b8    1     28 sym.__ubsan_handle_alignment_assumption_minimal_abort
+0x00006914    3     60 sym.__ubsan_handle_function_type_mismatch_minimal
+0x00006b24    3     60 sym.__ubsan_handle_pointer_overflow_minimal
+0x00005034   21    404 method.DpmQmiHal.makeDPMHAL_int__IDpmQmiMgr_
+0x00006670    1     28 sym.__ubsan_handle_divrem_overflow_minimal_abort
+0x000068a0    1     28 sym.__ubsan_handle_load_invalid_value_minimal_abort
+0x00006210    5    196 method.DpmEventRelay.filterIndCb_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____int_
+0x00006864    3     60 sym.__ubsan_handle_load_invalid_value_minimal
+0x00006a74    3     60 sym.__ubsan_handle_nullability_arg_minimal
+0x00005334   11    204 method.DpmQmiHal.getDormancyStatus_android::hardware::hidl_string_const_
+0x0000668c    3     60 sym.__ubsan_handle_shift_out_of_bounds_minimal
+0x00005880    1     56 method.DpmQmiHal.deleteAllTrackers__
+0x0000647c    3     60 sym.__ubsan_handle_alignment_assumption_minimal
+0x00006778    3     60 sym.__ubsan_handle_missing_return_minimal
+0x00005754    5    160 method.DpmQmiHal.deleteWdsTracker_android::hardware::hidl_string_const_
+0x00005e1c    1     16 method.DpmQmiHal.convertToHalFilterInfo_com::qualcomm::qti::dpm::api::V1_0::DpmHalNetworkStateEnumType_
+0x00006848    1     28 sym.__ubsan_handle_float_cast_overflow_minimal_abort
+0x00006448    1     28 sym.__ubsan_handle_type_mismatch_minimal_abort
+0x000059fc    5    148 method.DpmQmiHal.setDfsFilterMode_android::hardware::hidl_string_const__bool_
+0x000055b8   10    260 method.DpmQmiHal.createWdsPortTracker_android::hardware::hidl_string_const__android::hardware::hidl_string_const__android::hardware::hidl_string_const_
+0x00005448    1     16 method.DpmQmiHal.dpmMgrResultToStatus_IDpmQmiMgr::RET_
+0x00005458    5    148 method.DpmQmiHal.setDormancyEventReport_android::hardware::hidl_string_const__bool_
+0x000051c8    1     64 method.DpmQmiHal.DpmQmiHal_IDpmQmiMgr_
+0x00006c30    1     16 fcn.00006c30
+0x00006134    5    196 method.DpmEventRelay.dormancyIndCb_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____int_
+0x000069c4    3     60 sym.__ubsan_handle_nonnull_arg_minimal
+0x00006d20    1     16 sym.imp.android::sp_report_race__
+0x00006c60    1     16 sym.imp.android::sp_report_stack_pointer__
+0x00006d60    1     16 sym.imp.android::RefBase::RefBase__
+0x00006c50    1     16 sym.imp.android::hardware::LazyServiceRegistrar::getInstance__
+0x00006c80    1     16 method.android::hardware::LazyServiceRegistrar.registerService_android::sp_android::hidl::base::V1_0::IBase__const__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00006c40    1     16 sym.imp.android::hardware::configureRpcThreadpool_unsigned_long__bool_
+0x00006c10    1     16 sym.imp.android::RefBase::decStrong_void_const__const
+0x00006c70    1     16 sym.imp.android::RefBase::incStrong_void_const__const
+0x00006d40    1     16 sym.imp.android::hardware::hidl_handle::operator_____const
+0x00006d10    1     16 method.android::hardware::hidl_string::operator_std::__1::basic_string_char__std::__1::char_traits_char___std::__1.allocator_char______const
+0x00006cf0    1     16 sym.imp.std::__1::__basic_string_common_true_::__throw_length_error___const
+0x00006cb0    1     16 sym.imp.std::__1::__shared_weak_count::__release_weak__
+0x00006c90    1     16 sym.imp.operator_delete_void_
+0x00006c20    1     16 sym.imp.operator_new_unsigned_long_
+0x00006d80    1     16 method.android::hardware::hidl_string.hidl_string_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00006d90    1     16 sym.imp.android::hardware::hidl_string::hidl_string__
+0x00006da0    1     16 sym.imp.android::hardware::details::return_status::return_status__
+0x00005010    1      4 entry.fini0
+0x00006100    1     32 entry.init0
+0x00005208   10    168 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.basic_string_decltype_nullptr___char_const_
+0x00006d00    1     16 fcn.00006d00
+0x00006d30    1     16 fcn.00006d30
+0x00006004    1      8 method.com::qualcomm::qti::dpm::api::V1_0::IdpmQmi.isRemote___const
+0x0000600c    1     12 method.com::qualcomm::qti::dpm::api::V1_0::IdpmQmi.IdpmQmi__
+0x00006020    1     40 method.android::hidl::base::V1_0::IBase.IBase__
+0x0000605c    1     48 method.virtual_thunk_to_android::hidl::base::V1_0::IBase.IBase__
+0x00006094    1     40 method.DpmQmiHal.DpmQmiHal__
+0x000060d0    1     48 method.virtual_thunk_to_DpmQmiHal.DpmQmiHal__
+0x000062e8    1      4 method.IDpmQmiMgr::IdpmEventCbListener.IdpmEventCbListener__
+0x000062ec    1      4 method.DpmEventRelay.DpmEventRelay__
+0x00006be0    1     20 section..plt

@@ -1,0 +1,286 @@
+arch     arm
+baddr    0x0
+binsz    18987
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                           demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+33  0x00002640 0x00002640 GLOBAL FUNC 732      qcmap_nl_query_if
+34  0x00002b5c 0x00002b5c GLOBAL FUNC 148      qcmap_nl_release_msg
+35  0x00002ea4 0x00002ea4 GLOBAL FUNC 764      qcmap_listener_start
+36  0x00002290 0x00002290 GLOBAL FUNC 628      qcmap_nl_alloc_msg
+37  0x00002df0 0x00002df0 GLOBAL FUNC 180      qcmap_nl_decode_link_nlmsg
+38  0x00002d4c 0x00002d4c GLOBAL FUNC 164      qcmap_nl_decode_rtm_link
+39  0x00002014 0x00002014 GLOBAL FUNC 636      qcmap_nl_open_socket
+40  0x00002504 0x00002504 GLOBAL FUNC 316      qcmap_nl_addfd_map
+41  0x00003470 0x00003470 GLOBAL FUNC 1032     qcmap_nl_decode_rtm_addr
+42  0x00003878 0x00003878 GLOBAL FUNC 700      qcmap_nl_decode_rtm_route
+43  0x00003214 0x00003214 GLOBAL FUNC 604      qcmap_nl_get_interface_details
+44  0x000031a0 0x000031a0 GLOBAL FUNC 116      qcmap_nl_is_recv_on_dev
+45  0x00002a24 0x00002a24 GLOBAL FUNC 312      qcmap_nl_listener_init
+46  0x00002bf0 0x00002bf0 GLOBAL FUNC 348      qcmap_nl_recv
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000238    0x18 0x00000238    0x18 -r-- NOTE        .note.android.ident
+2   0x00000250    0x20 0x00000250    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270   0x468 0x00000270   0x468 -r-- DYNSYM      .dynsym
+4   0x000006d8    0x5e 0x000006d8    0x5e -r-- GNU_VERSYM  .gnu.version
+5   0x00000738    0x20 0x00000738    0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000758    0x74 0x00000758    0x74 -r-- GNU_HASH    .gnu.hash
+7   0x000007cc   0x2cc 0x000007cc   0x2cc -r-- STRTAB      .dynstr
+8   0x00000a98    0x12 0x00000a98    0x12 -r-- ----        .rela.dyn
+9   0x00000ab0    0x18 0x00000ab0    0x18 -r-- ----        .relr.dyn
+10  0x00000ac8   0x378 0x00000ac8   0x378 -r-- RELA        .rela.plt
+11  0x00000e40   0x6c3 0x00000e40   0x6c3 -r-- PROGBITS    .rodata
+12  0x00001504    0x9c 0x00001504    0x9c -r-- PROGBITS    .eh_frame_hdr
+13  0x000015a0   0x244 0x000015a0   0x244 -r-- PROGBITS    .eh_frame
+14  0x00002000  0x1b34 0x00002000  0x1b34 -r-x PROGBITS    .text
+15  0x00003b40   0x270 0x00003b40   0x270 -r-x PROGBITS    .plt
+16  0x00004000   0x2f0 0x00004000   0x2f0 -rw- PROGBITS    .data.rel.ro
+17  0x000042f0    0x10 0x000042f0    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00004300   0x1e0 0x00004300   0x1e0 -rw- DYNAMIC     .dynamic
+19  0x000044e0     0x8 0x000044e0     0x8 -rw- PROGBITS    .got
+20  0x000044e8   0x140 0x000044e8   0x140 -rw- PROGBITS    .got.plt
+21  0x00004628    0xeb 0x00000000    0xeb ---- STRTAB      .shstrtab
+22  0x00004713   0x318 0x00000000   0x318 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x000007c4 0x000007c4 4   5    .gnu.hash           ascii   (+>1
+3   0x000007cd 0x000007cd 14  15   .dynstr             ascii   __cxa_finalize
+4   0x000007dc 0x000007dc 12  13   .dynstr             ascii   __FD_CLR_chk
+5   0x000007e9 0x000007e9 14  15   .dynstr             ascii   __FD_ISSET_chk
+6   0x000007f8 0x000007f8 12  13   .dynstr             ascii   __FD_SET_chk
+7   0x00000805 0x00000805 7   8    .dynstr             ascii   __errno
+8   0x0000080d 0x0000080d 12  13   .dynstr             ascii   __memcpy_chk
+9   0x0000081a 0x0000081a 12  13   .dynstr             ascii   __memset_chk
+10  0x00000827 0x00000827 16  17   .dynstr             ascii   __stack_chk_fail
+11  0x00000838 0x00000838 13  14   .dynstr             ascii   __strlcpy_chk
+12  0x00000846 0x00000846 12  13   .dynstr             ascii   __strlen_chk
+13  0x00000853 0x00000853 15  16   .dynstr             ascii   __vsnprintf_chk
+14  0x00000863 0x00000863 5   6    .dynstr             ascii   abort
+15  0x00000869 0x00000869 4   5    .dynstr             ascii   bind
+16  0x0000086e 0x0000086e 5   6    .dynstr             ascii   close
+17  0x00000874 0x00000874 17  18   .dynstr             ascii   ds_format_log_msg
+18  0x00000886 0x00000886 14  15   .dynstr             ascii   ds_system_call
+19  0x00000895 0x00000895 5   6    .dynstr             ascii   fcntl
+20  0x0000089b 0x0000089b 7   8    .dynstr             ascii   fprintf
+21  0x000008a3 0x000008a3 4   5    .dynstr             ascii   free
+22  0x000008a8 0x000008a8 5   6    .dynstr             ascii   ioctl
+23  0x000008ae 0x000008ae 6   7    .dynstr             ascii   malloc
+24  0x000008b5 0x000008b5 6   7    .dynstr             ascii   memcpy
+25  0x000008bc 0x000008bc 6   7    .dynstr             ascii   memset
+26  0x000008c3 0x000008c3 11  12   .dynstr             ascii   msg_sprintf
+27  0x000008cf 0x000008cf 6   7    .dynstr             ascii   perror
+28  0x000008d6 0x000008d6 20  21   .dynstr             ascii   qcmap_listener_start
+29  0x000008eb 0x000008eb 18  19   .dynstr             ascii   qcmap_nl_addfd_map
+30  0x000008fe 0x000008fe 18  19   .dynstr             ascii   qcmap_nl_alloc_msg
+31  0x00000911 0x00000911 26  27   .dynstr             ascii   qcmap_nl_decode_link_nlmsg
+32  0x0000092c 0x0000092c 24  25   .dynstr             ascii   qcmap_nl_decode_rtm_addr
+33  0x00000945 0x00000945 24  25   .dynstr             ascii   qcmap_nl_decode_rtm_link
+34  0x0000095e 0x0000095e 25  26   .dynstr             ascii   qcmap_nl_decode_rtm_route
+35  0x00000978 0x00000978 30  31   .dynstr             ascii   qcmap_nl_get_interface_details
+36  0x00000997 0x00000997 23  24   .dynstr             ascii   qcmap_nl_is_recv_on_dev
+37  0x000009af 0x000009af 22  23   .dynstr             ascii   qcmap_nl_listener_init
+38  0x000009c6 0x000009c6 20  21   .dynstr             ascii   qcmap_nl_open_socket
+39  0x000009db 0x000009db 17  18   .dynstr             ascii   qcmap_nl_query_if
+40  0x000009ed 0x000009ed 13  14   .dynstr             ascii   qcmap_nl_recv
+41  0x000009fb 0x000009fb 20  21   .dynstr             ascii   qcmap_nl_release_msg
+42  0x00000a10 0x00000a10 7   8    .dynstr             ascii   recvmsg
+43  0x00000a18 0x00000a18 6   7    .dynstr             ascii   select
+44  0x00000a1f 0x00000a1f 7   8    .dynstr             ascii   sendmsg
+45  0x00000a27 0x00000a27 6   7    .dynstr             ascii   socket
+46  0x00000a2e 0x00000a2e 6   7    .dynstr             ascii   stderr
+47  0x00000a35 0x00000a35 8   9    .dynstr             ascii   strerror
+48  0x00000a3e 0x00000a3e 7   8    .dynstr             ascii   strncmp
+49  0x00000a46 0x00000a46 7   8    .dynstr             ascii   libc.so
+50  0x00000a4e 0x00000a4e 4   5    .dynstr             ascii   LIBC
+51  0x00000a53 0x00000a53 10  11   .dynstr             ascii   libdiag.so
+52  0x00000a5e 0x00000a5e 13  14   .dynstr             ascii   libdsutils.so
+53  0x00000a6c 0x00000a6c 9   10   .dynstr             ascii   libc++.so
+54  0x00000a76 0x00000a76 7   8    .dynstr             ascii   libm.so
+55  0x00000a7e 0x00000a7e 8   9    .dynstr             ascii   libdl.so
+56  0x00000a87 0x00000a87 16  17   .dynstr             ascii   libqcmaputils.so
+57  0x00000a98 0x00000a98 4   5    .rela.dyn           ascii   APS2
+58  0x00000ab8 0x00000ab8 5   8    .relr.dyn           utf8    m۶m۶m
+59  0x00000e40 0x00000e40 43  44   .rodata             ascii   %s(): Failed sending RTM_GETNEIGH to kernel
+60  0x00000e6c 0x00000e6c 49  50   .rodata             ascii   %s(): rcvd msg with namelen != sizeof sockaddr_nl
+61  0x00000e9e 0x00000e9e 44  45   .rodata             ascii   %s(): Netlink message exceeds maximum length
+62  0x00000ecb 0x00000ecb 38  39   .rodata             ascii   %s(): Error on read callback[%d] fd=%d
+63  0x00000ef2 0x00000ef2 39  40   .rodata             ascii   %s(): Open: QCMAP Netlink socket failed
+64  0x00000f1a 0x00000f1a 25  26   .rodata             ascii   %s(): Rcvd msg truncated!
+65  0x00000f34 0x00000f34 24  25   .rodata             ascii   qcmap_nl_decode_rtm_addr
+66  0x00000f50 0x00000f50 31  32   .rodata             ascii   %s(): Exceeds maximum num of FD
+67  0x00000f70 0x00000f70 38  39   .rodata             ascii   %s(): Received nl_msg, recvmsg failed:
+68  0x00000f97 0x00000f97 57  58   .rodata             ascii   %s(): qcmap_nl_decode_rtm_addr : NULL if_addr_info passed
+69  0x00000fd1 0x00000fd1 29  30   .rodata             ascii   %s(): Failed malloc for iovec
+70  0x00000fef 0x00000fef 35  36   .rodata             ascii   %s(): Failed to allocate NL message
+71  0x00001013 0x00001013 22  23   .rodata             ascii   %s(): No read function
+72  0x0000102a 0x0000102a 52  53   .rodata             ascii   echo USB QCMAP NL IOCTL Snd GETNEIGH Succ> /dev/kmsg
+73  0x0000105f 0x0000105f 24  25   .rodata             ascii   qcmap_nl_decode_rtm_link
+74  0x00001078 0x00001078 30  31   .rodata             ascii   qcmap_nl_get_interface_details
+75  0x00001097 0x00001097 42  43   .rodata             ascii   %s(): Cannot open netlink socket errno: %d
+76  0x000010c2 0x000010c2 67  68   .rodata             ascii   %s(): call_ioctl_on_dev; ioctl failed                     error:%s\n
+77  0x00001106 0x00001106 13  14   .rodata             ascii   qcmap_nl_recv
+78  0x00001114 0x00001114 51  52   .rodata             ascii   %s(): metainfo:  index = %d, family = %d, type = %d
+79  0x00001148 0x00001148 20  21   .rodata             ascii   qcmap_listener_start
+80  0x0000115d 0x0000115d 68  69   .rodata             ascii   Socket bind failed %s- Make sure no-one has opened a NL socket with\n
+81  0x000011a2 0x000011a2 18  19   .rodata             ascii   qcmap_nl_addfd_map
+82  0x000011b5 0x000011b5 55  56   .rodata             ascii   %s(): qcmap_nl_query_if(): Failed in qcmap_nl_alloc_msg
+83  0x000011ed 0x000011ed 26  27   .rodata             ascii   qcmap_nl_decode_link_nlmsg
+84  0x00001208 0x00001208 32  33   .rodata             ascii   %s(): IOCTL Send Failed errno:%d
+85  0x00001229 0x00001229 58  59   .rodata             ascii   echo USB Qcmap NL IOCTL Snd GETNEIGH Failed %d > /dev/kmsg
+86  0x00001264 0x00001264 46  47   .rodata             ascii   %s(): get interface index socket create failed
+87  0x00001293 0x00001293 32  33   .rodata             ascii   %s(): Failed malloc for sockaddr
+88  0x000012b4 0x000012b4 39  40   .rodata             ascii   %s(): Failed to decode rtm link message
+89  0x000012dc 0x000012dc 55  56   .rodata             ascii   vendor/qcom/proprietary/data/mobileap/ipc/qcmap_utils.c
+90  0x00001314 0x00001314 30  31   .rodata             ascii   %s(): Failed malloc for msghdr
+91  0x00001333 0x00001333 49  50   .rodata             ascii   %s(): cannot add Netlink routing sock for reading
+92  0x00001365 0x00001365 28  29   .rodata             ascii   %s(): qcmap select failed %d
+93  0x00001382 0x00001382 18  19   .rodata             ascii   qcmap_nl_alloc_msg
+94  0x00001395 0x00001395 13  14   .rodata             ascii   NL recv error
+95  0x000013a3 0x000013a3 33  34   .rodata             ascii   %s(): metainfo: link up/down = %d
+96  0x000013c5 0x000013c5 51  52   .rodata             ascii   %s(): qcmap_nl_decode_rtm_addr : NULL buffer passed
+97  0x000013f9 0x000013f9 29  30   .rodata             ascii   %s, %d: assertion (a) failed!
+98  0x00001417 0x00001417 20  21   .rodata             ascii   qcmap_nl_open_socket
+99  0x0000142c 0x0000142c 17  18   .rodata             ascii   qcmap_nl_query_if
+100 0x0000143e 0x0000143e 55  56   .rodata             ascii   %s(): Failed malloc for buffer to store netlink message
+101 0x00001476 0x00001476 45  46   .rodata             ascii   %s(): Received RTM_NEWADDR for unknown family
+102 0x000014a4 0x000014a4 35  36   .rodata             ascii   %s(): Received RTM_NEWADDR for IPv6
+103 0x000014c8 0x000014c8 22  23   .rodata             ascii   qcmap_nl_listener_init
+104 0x000014df 0x000014df 35  36   .rodata             ascii   %s(): RTM_NEWADDR received for IPv4
+105 0x00002735 0x00002735 4   5    .text               ascii   wA9\b
+106 0x00002744 0x00002744 5   6    .text               ascii   (\t@yJ
+107 0x0000274e 0x0000274e 4   5    .text               ascii   \n*(\t
+108 0x00002759 0x00002759 4   5    .text               ascii   sA9\b
+109 0x00002768 0x00002768 5   6    .text               ascii   (\t@yJ
+110 0x00002772 0x00002772 4   5    .text               ascii   \n*(\t
+111 0x00003532 0x00003532 4   5    .text               ascii   @9\b\t
+112 0x00003572 0x00003572 4   5    .text               ascii   @9\b)
+113 0x000036e2 0x000036e2 4   5    .text               ascii   @9\b\t
+114 0x0000370e 0x0000370e 4   5    .text               ascii   @9\b)
+115 0x00003720 0x00003720 5   6    .text               ascii   \b\r@9h
+116 0x00003736 0x00003736 4   5    .text               ascii   @9\b)
+117 0x00004629 0x00000001 11  12   .shstrtab           ascii   .fini_array
+118 0x00004635 0x0000000d 5   6    .shstrtab           ascii   .text
+119 0x0000463b 0x00000013 4   5    .shstrtab           ascii   .got
+120 0x00004640 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+121 0x00004654 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+122 0x0000465d 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+123 0x00004667 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+124 0x0000466f 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+125 0x0000467d 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+126 0x0000468c 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+127 0x00004699 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+128 0x000046a3 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+129 0x000046ad 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+130 0x000046ba 0x00000092 7   8    .shstrtab           ascii   .dynsym
+131 0x000046c2 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+132 0x000046cc 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+133 0x000046d6 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+134 0x000046e9 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+135 0x000046f2 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+136 0x000046fc 0x000000d4 7   8    .shstrtab           ascii   .rodata
+137 0x00004704 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+138 0x00004714 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+139 0x00004768 0x00000055 6   8    .gnu_debugdata      utf8    <rý/NZ
+140 0x00004774 0x00000061 8   9    .gnu_debugdata      ascii   VVe-*\t\r~
+141 0x00004783 0x00000070 8   11   .gnu_debugdata      utf8    ݗoZ#:\tk\n
+142 0x000047f1 0x000000de 5   8    .gnu_debugdata      utf8    $ߝC"~
+143 0x00004818 0x00000105 4   5    .gnu_debugdata      ascii   &Zlo
+144 0x0000481f 0x0000010c 4   5    .gnu_debugdata      ascii   [vgh
+145 0x0000482e 0x0000011b 4   6    .gnu_debugdata      utf8    V9ˉ:
+146 0x00004838 0x00000125 4   6    .gnu_debugdata      utf8    ա\n"O
+147 0x0000483f 0x0000012c 4   5    .gnu_debugdata      ascii   \n2OK
+148 0x0000487a 0x00000167 4   5    .gnu_debugdata      ascii   ~8iF
+149 0x00004885 0x00000172 5   6    .gnu_debugdata      ascii   a&q!1
+150 0x000048c1 0x000001ae 4   5    .gnu_debugdata      ascii   .;n'
+151 0x000048fa 0x000001e7 5   6    .gnu_debugdata      ascii   |$I]y
+152 0x0000491b 0x00000208 4   5    .gnu_debugdata      ascii   ^}vu
+153 0x0000492f 0x0000021c 4   5    .gnu_debugdata      ascii   eQ#Y
+154 0x00004935 0x00000222 5   6    .gnu_debugdata      ascii   '.\bCL
+155 0x00004967 0x00000254 4   5    .gnu_debugdata      ascii   hUkk
+0x00003b60    1     16 sym.imp.__cxa_finalize
+0x00003d60    1     16 sym.imp.__FD_CLR_chk
+0x00003d50    1     16 sym.imp.__FD_ISSET_chk
+0x00003c40    1     16 sym.imp.__FD_SET_chk
+0x00003ba0    1     16 sym.imp.__errno
+0x00003da0    1     16 sym.imp.__memcpy_chk
+0x00003bc0    1     16 sym.imp.__memset_chk
+0x00003c10    1     16 sym.imp.__stack_chk_fail
+0x00003d80    1     16 sym.imp.__strlcpy_chk
+0x00003c70    1     16 sym.imp.__strlen_chk
+0x00003c90    1     16 sym.imp.__vsnprintf_chk
+0x00003b80    1     16 sym.imp.abort
+0x00003bd0    1     16 sym.imp.bind
+0x00003c00    1     16 sym.imp.close
+0x00003bf0    1     16 sym.imp.ds_format_log_msg
+0x00003c80    1     16 sym.imp.ds_system_call
+0x00003d30    1     16 sym.imp.fcntl
+0x00003b70    1     16 sym.imp.fprintf
+0x00003c30    1     16 sym.imp.free
+0x00003d90    1     16 sym.imp.ioctl
+0x00003c20    1     16 sym.imp.malloc
+0x00003d20    1     16 sym.imp.memcpy
+0x00003d10    1     16 sym.imp.memset
+0x00003bb0    1     16 sym.imp.msg_sprintf
+0x00003ce0    1     16 sym.imp.perror
+0x00003cd0    1     16 sym.imp.recvmsg
+0x00003d40    1     16 sym.imp.select
+0x00003c60    1     16 sym.imp.sendmsg
+0x00003b90    1     16 sym.imp.socket
+0x00003be0    1     16 sym.imp.strerror
+0x00003d70    1     16 sym.imp.strncmp
+0x00002000    1     12 entry0
+0x00002640   24    732 sym.qcmap_nl_query_if
+0x00002b5c    6    148 sym.qcmap_nl_release_msg
+0x00002ea4   32    764 sym.qcmap_listener_start
+0x00002290   12    628 sym.qcmap_nl_alloc_msg
+0x00002df0    7    180 sym.qcmap_nl_decode_link_nlmsg
+0x00002d4c    1    164 sym.qcmap_nl_decode_rtm_link
+0x00002014   18    636 sym.qcmap_nl_open_socket
+0x00002504   11    316 sym.qcmap_nl_addfd_map
+0x00003470   72   1032 sym.qcmap_nl_decode_rtm_addr
+0x00003878   39    700 sym.qcmap_nl_decode_rtm_route
+0x00003214   24    604 sym.qcmap_nl_get_interface_details
+0x000031a0    4    116 sym.qcmap_nl_is_recv_on_dev
+0x00002a24    8    312 sym.qcmap_nl_listener_init
+0x00002bf0   11    348 sym.qcmap_nl_recv
+0x00002010    1      4 entry.fini0
+0x00003c50    1     16 fcn.00003c50
+0x0000291c    4    264 sym.snprintf_char__unsigned_long_pass_object_size1__char_const__::_
+0x00003ca0    1     16 fcn.00003ca0
+0x00003cb0    1     16 fcn.00003cb0
+0x00003cc0    1     16 fcn.00003cc0
+0x00003cf0    1     16 fcn.00003cf0
+0x00003d00    1     16 fcn.00003d00
+0x00003b40    1     20 section..plt

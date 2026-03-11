@@ -1,0 +1,109 @@
+arch     arm
+baddr    0x0
+binsz    9608
+bintype  elf
+bits     64
+canary   false
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr vaddr bind type size lib name demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000238   0x18 0x00000238   0x18 -r-- NOTE        .note.android.ident
+2   0x00000250   0x20 0x00000250   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270   0x30 0x00000270   0x30 -r-- DYNSYM      .dynsym
+4   0x000002a0    0x4 0x000002a0    0x4 -r-- GNU_VERSYM  .gnu.version
+5   0x000002a4   0x20 0x000002a4   0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x000002c8   0x1c 0x000002c8   0x1c -r-- GNU_HASH    .gnu.hash
+7   0x000002e4   0xa1 0x000002e4   0xa1 -r-- STRTAB      .dynstr
+8   0x00000388   0x10 0x00000388   0x10 -r-- ----        .relr.dyn
+9   0x00000398   0x18 0x00000398   0x18 -r-- RELA        .rela.plt
+10  0x000003b0   0x24 0x000003b0   0x24 -r-- PROGBITS    .eh_frame_hdr
+11  0x000003d8   0x64 0x000003d8   0x64 -r-- PROGBITS    .eh_frame
+12  0x00001000   0x14 0x00001000   0x14 -r-x PROGBITS    .text
+13  0x00001020   0x30 0x00001020   0x30 -r-x PROGBITS    .plt
+14  0x00002000    0x8 0x00002000    0x8 -rw- PROGBITS    .data.rel.ro
+15  0x00002008   0x10 0x00002008   0x10 -rw- FINI_ARRAY  .fini_array
+16  0x00002018  0x1d0 0x00002018  0x1d0 -rw- DYNAMIC     .dynamic
+17  0x000021e8   0x20 0x000021e8   0x20 -rw- PROGBITS    .got.plt
+18  0x00002208   0xd4 0x00000000   0xd4 ---- STRTAB      .shstrtab
+19  0x000022dc  0x2ac 0x00000000  0x2ac ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x000002e5 0x000002e5 14  15   .dynstr             ascii   __cxa_finalize
+3   0x000002f4 0x000002f4 7   8    .dynstr             ascii   libc.so
+4   0x000002fc 0x000002fc 4   5    .dynstr             ascii   LIBC
+5   0x00000301 0x00000301 14  15   .dynstr             ascii   libhidlbase.so
+6   0x00000310 0x00000310 9   10   .dynstr             ascii   liblog.so
+7   0x0000031a 0x0000031a 11  12   .dynstr             ascii   libutils.so
+8   0x00000326 0x00000326 12  13   .dynstr             ascii   libcutils.so
+9   0x00000333 0x00000333 9   10   .dynstr             ascii   libc++.so
+10  0x0000033d 0x0000033d 7   8    .dynstr             ascii   libm.so
+11  0x00000345 0x00000345 8   9    .dynstr             ascii   libdl.so
+12  0x0000034e 0x0000034e 54  55   .dynstr             ascii   vendor.qti.hardware.data.cne.internal.constants@1.0.so
+13  0x00002209 0x00000001 11  12   .shstrtab           ascii   .fini_array
+14  0x00002215 0x0000000d 5   6    .shstrtab           ascii   .text
+15  0x0000221b 0x00000013 19  20   .shstrtab           ascii   .note.android.ident
+16  0x0000222f 0x00000027 8   9    .shstrtab           ascii   .got.plt
+17  0x00002238 0x00000030 9   10   .shstrtab           ascii   .rela.plt
+18  0x00002242 0x0000003a 7   8    .shstrtab           ascii   .dynstr
+19  0x0000224a 0x00000042 13  14   .shstrtab           ascii   .eh_frame_hdr
+20  0x00002258 0x00000050 14  15   .shstrtab           ascii   .gnu.version_r
+21  0x00002267 0x0000005f 12  13   .shstrtab           ascii   .data.rel.ro
+22  0x00002274 0x0000006c 9   10   .shstrtab           ascii   .relr.dyn
+23  0x0000227e 0x00000076 12  13   .shstrtab           ascii   .gnu.version
+24  0x0000228b 0x00000083 7   8    .shstrtab           ascii   .dynsym
+25  0x00002293 0x0000008b 9   10   .shstrtab           ascii   .gnu.hash
+26  0x0000229d 0x00000095 9   10   .shstrtab           ascii   .eh_frame
+27  0x000022a7 0x0000009f 18  19   .shstrtab           ascii   .note.gnu.build-id
+28  0x000022ba 0x000000b2 8   9    .shstrtab           ascii   .dynamic
+29  0x000022c3 0x000000bb 9   10   .shstrtab           ascii   .shstrtab
+30  0x000022cd 0x000000c5 14  15   .shstrtab           ascii   .gnu_debugdata
+31  0x000022dd 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+32  0x0000231a 0x0000003e 4   5    .gnu_debugdata      ascii   RbE\r
+33  0x00002326 0x0000004a 4   5    .gnu_debugdata      ascii   PF8x
+34  0x0000232b 0x0000004f 4   5    .gnu_debugdata      ascii   ~re
+35  0x00002330 0x00000054 4   5    .gnu_debugdata      ascii   _,^S
+36  0x0000235b 0x0000007f 6   10   .gnu_debugdata      utf8    b՝ꉋX$6
+37  0x0000236a 0x0000008e 4   5    .gnu_debugdata      ascii   I8e-
+38  0x0000237c 0x000000a0 6   7    .gnu_debugdata      ascii   F<,z7p
+39  0x000023a0 0x000000c4 6   7    .gnu_debugdata      ascii   \aG!fFI
+40  0x000023b0 0x000000d4 4   6    .gnu_debugdata      utf8    )dIާ
+41  0x000023fa 0x0000011e 4   6    .gnu_debugdata      utf8    ise״
+42  0x000024c8 0x000001ec 4   6    .gnu_debugdata      utf8    };ʓ'
+43  0x000024d5 0x000001f9 6   7    .gnu_debugdata      ascii   4k\euXL
+44  0x000024de 0x00000202 4   5    .gnu_debugdata      ascii   S)m[
+45  0x00002520 0x00000244 4   5    .gnu_debugdata      ascii   w.kX
+46  0x00002537 0x0000025b 5   6    .gnu_debugdata      ascii   M{lf\n
+0x00001040    1     16 sym.imp.__cxa_finalize
+0x00001000    1     12 entry0
+0x00001010    1      4 entry.fini0
+0x00001020    1     20 section..plt

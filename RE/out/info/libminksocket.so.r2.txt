@@ -1,0 +1,501 @@
+arch     arm
+baddr    0x0
+binsz    35481
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                           demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+53  0x0000301c 0x0000301c GLOBAL FUNC 64       BBuf_alloc
+54  0x000070d8 0x000070d8 GLOBAL FUNC 88       MSForwarder_new
+55  0x0000305c 0x0000305c GLOBAL FUNC 16       MinkIPC_startService
+56  0x00006bd0 0x00006bd0 GLOBAL FUNC 188      MinkSocket_start
+57  0x00004874 0x00004874 GLOBAL FUNC 36       MinkSocket_attachObject
+58  0x00005270 0x00005270 GLOBAL FUNC 316      MinkSocket_sendClose
+59  0x000053ac 0x000053ac GLOBAL FUNC 456      __process_message
+60  0x00003c04 0x00003c04 GLOBAL FUNC 140      MinkIPC_connect
+61  0x000084a0 0x000094a0 GLOBAL OBJ  8        gMinkPeerGIDTLSKey
+62  0x00007370 0x00007370 GLOBAL FUNC 20       ThreadPool_retain
+63  0x00003e94 0x00003e94 GLOBAL FUNC 20       MinkIPC_retain
+64  0x000045e8 0x000045e8 GLOBAL FUNC 296      MinkSocket_close
+65  0x000066d4 0x000066d4 GLOBAL FUNC 276      process_message
+66  0x00004898 0x00004898 GLOBAL FUNC 1876     MinkSocket_invoke
+67  0x00007384 0x00007384 GLOBAL FUNC 152      ThreadPool_stop
+68  0x00003264 0x00003264 GLOBAL FUNC 28       MinkIPC_join
+69  0x00006f54 0x00006f54 GLOBAL FUNC 52       MSForwarder_detach
+70  0x0000444c 0x0000444c GLOBAL FUNC 20       MinkSocket_retain
+71  0x000072c0 0x000072c0 GLOBAL FUNC 176      ThreadPool_release
+72  0x00007130 0x00007130 GLOBAL FUNC 20       FdWrapperFromObject
+73  0x00003e1c 0x00003e1c GLOBAL FUNC 120      MinkIPC_getClientInfo
+74  0x00004028 0x00004028 GLOBAL FUNC 488      MinkSocket_QRTR_new
+75  0x00003280 0x00003280 GLOBAL FUNC 296      MinkIPC_connect_QRTR
+76  0x00004460 0x00004460 GLOBAL FUNC 392      MinkSocket_delete
+77  0x00008498 0x00009498 GLOBAL OBJ  8        gMinkPeerUIDTLSKey
+78  0x0000741c 0x0000741c GLOBAL FUNC 68       ThreadPool_wait
+79  0x00003014 0x00003014 GLOBAL FUNC 8        BBuf_construct
+80  0x0000306c 0x0000306c GLOBAL FUNC 20       MinkIPC_startServiceOnSocket
+81  0x0000425c 0x0000425c GLOBAL FUNC 496      MinkSocket_new
+82  0x00004848 0x00004848 GLOBAL FUNC 44       MinkSocket_detachObject
+83  0x0000478c 0x0000478c GLOBAL FUNC 108      MinkSocket_unregisterForwarder
+84  0x00007238 0x00007238 GLOBAL FUNC 136      ThreadPool_new
+85  0x000071f4 0x000071f4 GLOBAL FUNC 68       FdWrapper_new
+86  0x00003ea8 0x00003ea8 GLOBAL FUNC 36       MinkIPC_wrapFd
+87  0x00004710 0x00004710 GLOBAL FUNC 84       MinkSocket_isConnected
+88  0x000047f8 0x000047f8 GLOBAL FUNC 80       MinkSocket_detach
+89  0x00003680 0x00003680 GLOBAL FUNC 328      MinkIPC_release
+90  0x00006f88 0x00006f88 GLOBAL FUNC 20       MSForwarderFromObject
+91  0x000067e8 0x000067e8 GLOBAL FUNC 1000     MinkSocket_dispatch
+92  0x00004210 0x00004210 GLOBAL FUNC 76       MinkSocket_release
+93  0x00004764 0x00004764 GLOBAL FUNC 40       MinkSocket_registerForwarder
+94  0x00007460 0x00007460 GLOBAL FUNC 228      ThreadPool_queue
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x8e8 0x000002a8   0x8e8 -r-- DYNSYM      .dynsym
+4   0x00000b90    0xbe 0x00000b90    0xbe -r-- GNU_VERSYM  .gnu.version
+5   0x00000c50    0x40 0x00000c50    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000c90   0x120 0x00000c90   0x120 -r-- GNU_HASH    .gnu.hash
+7   0x00000db0   0x5eb 0x00000db0   0x5eb -r-- STRTAB      .dynstr
+8   0x000013a0    0x3b 0x000013a0    0x3b -r-- ----        .rela.dyn
+9   0x000013e0    0x10 0x000013e0    0x10 -r-- ----        .relr.dyn
+10  0x000013f0   0x708 0x000013f0   0x708 -r-- RELA        .rela.plt
+11  0x00001af8   0x480 0x00001af8   0x480 -r-- PROGBITS    .rodata
+12  0x00001f78   0x1d4 0x00001f78   0x1d4 -r-- PROGBITS    .eh_frame_hdr
+13  0x00002150   0x7c4 0x00002150   0x7c4 -r-- PROGBITS    .eh_frame
+14  0x00003000  0x4680 0x00003000  0x4680 -r-x PROGBITS    .text
+15  0x00007680   0x4d0 0x00007680   0x4d0 -r-x PROGBITS    .plt
+16  0x00008000     0x8 0x00008000     0x8 -rw- PROGBITS    .data.rel.ro
+17  0x00008008    0x10 0x00008008    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00008018   0x1f0 0x00008018   0x1f0 -rw- DYNAMIC     .dynamic
+19  0x00008208    0x20 0x00008208    0x20 -rw- PROGBITS    .got
+20  0x00008228   0x270 0x00008228   0x270 -rw- PROGBITS    .got.plt
+21  0x00008498    0x18 0x00009498    0x18 -rw- PROGBITS    .data
+22  0x000084b0    0xf1 0x00000000    0xf1 ---- STRTAB      .shstrtab
+23  0x000085a1   0x4f8 0x00000000   0x4f8 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x0000029d 0x0000029d 9   10   .note.gnu.build-id  ascii   dAX\nl6%AQ
+3   0x00000cd7 0x00000cd7 4   5    .gnu.hash           ascii   # A\b
+4   0x00000ce0 0x00000ce0 10  44   .gnu.hash           utf32le 5<?DIKOUY\
+5   0x00000d0d 0x00000d0d 5   6    .gnu.hash           ascii   k={n1
+6   0x00000d3e 0x00000d3e 4   5    .gnu.hash           ascii   tZ}M
+7   0x00000d99 0x00000d99 4   5    .gnu.hash           ascii   \f'B<
+8   0x00000da0 0x00000da0 10  13   .gnu.hash           utf8    mB良\r#Hl0.8
+9   0x00000db1 0x00000db1 14  15   .dynstr             ascii   __cxa_finalize
+10  0x00000dc0 0x00000dc0 10  11   .dynstr             ascii   BBuf_alloc
+11  0x00000dcb 0x00000dcb 14  15   .dynstr             ascii   BBuf_construct
+12  0x00000dda 0x00000dda 13  14   .dynstr             ascii   FdWrapper_new
+13  0x00000de8 0x00000de8 15  16   .dynstr             ascii   MSForwarder_new
+14  0x00000df8 0x00000df8 15  16   .dynstr             ascii   MinkIPC_connect
+15  0x00000e08 0x00000e08 20  21   .dynstr             ascii   MinkIPC_connect_QRTR
+16  0x00000e1d 0x00000e1d 21  22   .dynstr             ascii   MinkIPC_getClientInfo
+17  0x00000e33 0x00000e33 12  13   .dynstr             ascii   MinkIPC_join
+18  0x00000e40 0x00000e40 15  16   .dynstr             ascii   MinkIPC_release
+19  0x00000e50 0x00000e50 14  15   .dynstr             ascii   MinkIPC_retain
+20  0x00000e5f 0x00000e5f 20  21   .dynstr             ascii   MinkIPC_startService
+21  0x00000e74 0x00000e74 28  29   .dynstr             ascii   MinkIPC_startServiceOnSocket
+22  0x00000e91 0x00000e91 14  15   .dynstr             ascii   MinkIPC_wrapFd
+23  0x00000ea0 0x00000ea0 19  20   .dynstr             ascii   MinkSocket_QRTR_new
+24  0x00000eb4 0x00000eb4 16  17   .dynstr             ascii   MinkSocket_close
+25  0x00000ec5 0x00000ec5 17  18   .dynstr             ascii   MinkSocket_delete
+26  0x00000ed7 0x00000ed7 22  23   .dynstr             ascii   MinkSocket_isConnected
+27  0x00000eee 0x00000eee 14  15   .dynstr             ascii   MinkSocket_new
+28  0x00000efd 0x00000efd 18  19   .dynstr             ascii   MinkSocket_release
+29  0x00000f10 0x00000f10 16  17   .dynstr             ascii   MinkSocket_start
+30  0x00000f21 0x00000f21 19  20   .dynstr             ascii   __android_log_print
+31  0x00000f35 0x00000f35 7   8    .dynstr             ascii   __errno
+32  0x00000f3d 0x00000f3d 16  17   .dynstr             ascii   __stack_chk_fail
+33  0x00000f4e 0x00000f4e 13  14   .dynstr             ascii   __strlcpy_chk
+34  0x00000f5c 0x00000f5c 6   7    .dynstr             ascii   accept
+35  0x00000f63 0x00000f63 4   5    .dynstr             ascii   bind
+36  0x00000f68 0x00000f68 5   6    .dynstr             ascii   close
+37  0x00000f6e 0x00000f6e 7   8    .dynstr             ascii   connect
+38  0x00000f76 0x00000f76 4   5    .dynstr             ascii   free
+39  0x00000f7b 0x00000f7b 18  19   .dynstr             ascii   gMinkPeerGIDTLSKey
+40  0x00000f8e 0x00000f8e 18  19   .dynstr             ascii   gMinkPeerUIDTLSKey
+41  0x00000fa1 0x00000fa1 11  12   .dynstr             ascii   getsockname
+42  0x00000fad 0x00000fad 10  11   .dynstr             ascii   getsockopt
+43  0x00000fb8 0x00000fb8 6   7    .dynstr             ascii   listen
+44  0x00000fbf 0x00000fbf 6   7    .dynstr             ascii   malloc
+45  0x00000fc6 0x00000fc6 6   7    .dynstr             ascii   memset
+46  0x00000fcd 0x00000fcd 15  16   .dynstr             ascii   process_message
+47  0x00000fdd 0x00000fdd 20  21   .dynstr             ascii   pthread_cond_destroy
+48  0x00000ff2 0x00000ff2 17  18   .dynstr             ascii   pthread_cond_init
+49  0x00001004 0x00001004 19  20   .dynstr             ascii   pthread_cond_signal
+50  0x00001018 0x00001018 17  18   .dynstr             ascii   pthread_cond_wait
+51  0x0000102a 0x0000102a 14  15   .dynstr             ascii   pthread_create
+52  0x00001039 0x00001039 19  20   .dynstr             ascii   pthread_getspecific
+53  0x0000104d 0x0000104d 12  13   .dynstr             ascii   pthread_join
+54  0x0000105a 0x0000105a 18  19   .dynstr             ascii   pthread_key_create
+55  0x0000106d 0x0000106d 21  22   .dynstr             ascii   pthread_mutex_destroy
+56  0x00001083 0x00001083 18  19   .dynstr             ascii   pthread_mutex_init
+57  0x00001096 0x00001096 18  19   .dynstr             ascii   pthread_mutex_lock
+58  0x000010a9 0x000010a9 20  21   .dynstr             ascii   pthread_mutex_unlock
+59  0x000010be 0x000010be 12  13   .dynstr             ascii   pthread_self
+60  0x000010cb 0x000010cb 11  12   .dynstr             ascii   qrtr_decode
+61  0x000010d7 0x000010d7 15  16   .dynstr             ascii   qrtr_new_lookup
+62  0x000010e7 0x000010e7 9   10   .dynstr             ascii   qrtr_open
+63  0x000010f1 0x000010f1 8   9    .dynstr             ascii   recvfrom
+64  0x000010fa 0x000010fa 8   9    .dynstr             ascii   shutdown
+65  0x00001103 0x00001103 6   7    .dynstr             ascii   socket
+66  0x0000110a 0x0000110a 6   7    .dynstr             ascii   unlink
+67  0x00001111 0x00001111 6   7    .dynstr             ascii   usleep
+68  0x00001118 0x00001118 21  22   .dynstr             ascii   MSForwarderFromObject
+69  0x0000112e 0x0000112e 18  19   .dynstr             ascii   MSForwarder_detach
+70  0x00001141 0x00001141 23  24   .dynstr             ascii   MinkSocket_attachObject
+71  0x00001159 0x00001159 17  18   .dynstr             ascii   MinkSocket_detach
+72  0x0000116b 0x0000116b 23  24   .dynstr             ascii   MinkSocket_detachObject
+73  0x00001183 0x00001183 19  20   .dynstr             ascii   MinkSocket_dispatch
+74  0x00001197 0x00001197 17  18   .dynstr             ascii   MinkSocket_invoke
+75  0x000011a9 0x000011a9 28  29   .dynstr             ascii   MinkSocket_registerForwarder
+76  0x000011c6 0x000011c6 17  18   .dynstr             ascii   MinkSocket_retain
+77  0x000011d8 0x000011d8 20  21   .dynstr             ascii   MinkSocket_sendClose
+78  0x000011ed 0x000011ed 30  31   .dynstr             ascii   MinkSocket_unregisterForwarder
+79  0x0000120c 0x0000120c 14  15   .dynstr             ascii   ThreadPool_new
+80  0x0000121b 0x0000121b 16  17   .dynstr             ascii   ThreadPool_queue
+81  0x0000122c 0x0000122c 18  19   .dynstr             ascii   ThreadPool_release
+82  0x0000123f 0x0000123f 17  18   .dynstr             ascii   __process_message
+83  0x00001251 0x00001251 12  13   .dynstr             ascii   __strlen_chk
+84  0x0000125e 0x0000125e 6   7    .dynstr             ascii   calloc
+85  0x00001269 0x00001269 6   7    .dynstr             ascii   memcpy
+86  0x00001270 0x00001270 4   5    .dynstr             ascii   poll
+87  0x00001275 0x00001275 19  20   .dynstr             ascii   pthread_setspecific
+88  0x00001289 0x00001289 11  12   .dynstr             ascii   qrtr_sendto
+89  0x00001295 0x00001295 7   8    .dynstr             ascii   recvmsg
+90  0x0000129d 0x0000129d 7   8    .dynstr             ascii   sendmsg
+91  0x000012a5 0x000012a5 6   7    .dynstr             ascii   sendto
+92  0x000012ac 0x000012ac 10  11   .dynstr             ascii   socketpair
+93  0x000012b7 0x000012b7 9   10   .dynstr             ascii   vsnprintf
+94  0x000012c1 0x000012c1 5   6    .dynstr             ascii   write
+95  0x000012c7 0x000012c7 19  20   .dynstr             ascii   FdWrapperFromObject
+96  0x000012db 0x000012db 17  18   .dynstr             ascii   ThreadPool_retain
+97  0x000012ed 0x000012ed 15  16   .dynstr             ascii   ThreadPool_stop
+98  0x000012fd 0x000012fd 15  16   .dynstr             ascii   ThreadPool_wait
+99  0x0000130d 0x0000130d 22  23   .dynstr             ascii   pthread_cond_broadcast
+100 0x00001324 0x00001324 14  15   .dynstr             ascii   pthread_detach
+101 0x00001333 0x00001333 5   6    .dynstr             ascii   sleep
+102 0x00001339 0x00001339 9   10   .dynstr             ascii   liblog.so
+103 0x00001343 0x00001343 6   7    .dynstr             ascii   LIBLOG
+104 0x0000134a 0x0000134a 7   8    .dynstr             ascii   libc.so
+105 0x00001352 0x00001352 4   5    .dynstr             ascii   LIBC
+106 0x00001357 0x00001357 10  11   .dynstr             ascii   libqrtr.so
+107 0x00001362 0x00001362 12  13   .dynstr             ascii   libcutils.so
+108 0x0000136f 0x0000136f 9   10   .dynstr             ascii   libc++.so
+109 0x00001379 0x00001379 7   8    .dynstr             ascii   libm.so
+110 0x00001381 0x00001381 8   9    .dynstr             ascii   libdl.so
+111 0x0000138a 0x0000138a 16  17   .dynstr             ascii   libminksocket.so
+112 0x000013a0 0x000013a0 4   5    .rela.dyn           ascii   APS2
+113 0x00001af8 0x00001af8 46  47   .rodata             ascii   MinkIPC_connect_QRTR connect failed: errno %d\n
+114 0x00001b27 0x00001b27 16  17   .rodata             ascii   MinkIPC_QRTR_new
+115 0x00001b38 0x00001b38 32  33   .rodata             ascii   %s: target object %d is NULL !!\n
+116 0x00001b59 0x00001b59 15  16   .rodata             ascii   process_message
+117 0x00001b69 0x00001b69 50  51   .rodata             ascii   %s: Failed to create new MinkIP...Creturning NULL\n
+118 0x00001b9c 0x00001b9c 42  43   .rodata             ascii   %s: server with node %x port %x went down\n
+119 0x00001bc7 0x00001bc7 28  29   .rodata             ascii   %s: err %x from insertIOV 2\n
+120 0x00001be4 0x00001be4 33  34   .rodata             ascii   %s: Error allocating 64KB buffer\n
+121 0x00001c06 0x00001c06 32  33   .rodata             ascii   MinkSocket_recvInvocationRequest
+122 0x00001c27 0x00001c27 28  29   .rodata             ascii   %s: ERRRR releasing minkIPC\n
+123 0x00001c44 0x00001c44 31  32   .rodata             ascii   %s: qrtr_open failed: errno %d\n
+124 0x00001c64 0x00001c64 42  43   .rodata             ascii   %s: client with node %x port %x went down\n
+125 0x00001c8f 0x00001c8f 28  29   .rodata             ascii   peer gid=%u uid=%u invoke=%u
+126 0x00001cac 0x00001cac 34  35   .rodata             ascii   %s:  Error adding object to table\n
+127 0x00001ccf 0x00001ccf 60  61   .rodata             ascii   %s:  Error sending message: returning Object_ERROR_UNAVAIL \n
+128 0x00001d0c 0x00001d0c 25  26   .rodata             ascii   %s: release minkIPC = %p\n
+129 0x00001d26 0x00001d26 35  36   .rodata             ascii   %s: qrtr_sendto failed: errno = %d\n
+130 0x00001d4a 0x00001d4a 10  11   .rodata             ascii   minksocket
+131 0x00001d55 0x00001d55 20  21   .rodata             ascii   MinkIPC_QRTR_Service
+132 0x00001d6a 0x00001d6a 28  29   .rodata             ascii   %s: error memory allocation\n
+133 0x00001d87 0x00001d87 20  21   .rodata             ascii   MinkIPC_beginService
+134 0x00001d9c 0x00001d9c 41  42   .rodata             ascii   %s: Server went down, closing connection\n
+135 0x00001dc6 0x00001dc6 14  15   .rodata             ascii   sendv_all_qrtr
+136 0x00001dd5 0x00001dd5 35  36   .rodata             ascii   %s: err=%d, SMCINVOKE_IOCTL_LOG, %s
+137 0x00001df9 0x00001df9 11  12   .rodata             ascii   MinkIPC_new
+138 0x00001e05 0x00001e05 28  29   .rodata             ascii   MinkSocket_sendInvokeSuccess
+139 0x00001e22 0x00001e22 38  39   .rodata             ascii   Mem allocation failure for UDP packet\n
+140 0x00001e4b 0x00001e4b 53  54   .rodata             ascii   %s: SMCINVOKE_IOCTL_LOG %s, o.invoke=%p, o.context=%p
+141 0x00001e81 0x00001e81 14  15   .rodata             ascii   lookup failed\n
+142 0x00001e90 0x00001e90 52  53   .rodata             ascii   %s: Memory allocation failure for Mink_QRTR_Context\n
+143 0x00001ec5 0x00001ec5 49  50   .rodata             ascii   %s: tid: %lx: me = %p sock %d returning errno %d\n
+144 0x00001ef7 0x00001ef7 20  21   .rodata             ascii   MinkIPC_connect_QRTR
+145 0x00001f0c 0x00001f0c 53  54   .rodata             ascii   %s: did not recv control pkt from server: errno = %d\n
+146 0x00001f42 0x00001f42 19  20   .rodata             ascii   %s: Invalid socket\n
+147 0x00003023 0x00003023 4   5    .text               ascii   R+\t@
+148 0x000032c3 0x000032c3 4   5    .text               ascii   Tbz@
+149 0x0000373f 0x0000373f 4   5    .text               ascii   T`z@
+150 0x0000398b 0x0000398b 4   5    .text               ascii   T('@
+151 0x00003a6d 0x00003a6d 4   10   .text               utf16le \n´ä說
+152 0x00003f26 0x00003f26 4   5    .text               ascii   A9(\a
+153 0x00003f2b 0x00003f2b 4   5    .text               ascii   5`z@
+154 0x00003f43 0x00003f43 4   5    .text               ascii   TwbH
+155 0x000040c2 0x000040c2 4   5    .text               ascii   \e)h^
+156 0x0000414b 0x0000414b 4   5    .text               ascii   Th\n@
+157 0x000043cb 0x000043cb 4   5    .text               ascii   Th\n@
+158 0x0000449b 0x0000449b 4   5    .text               ascii   7`R@
+159 0x000044cb 0x000044cb 4   5    .text               ascii   T`V@
+160 0x000044db 0x000044db 4   5    .text               ascii   7`R@
+161 0x0000450b 0x0000450b 4   5    .text               ascii   T`Z@
+162 0x00004557 0x00004557 4   5    .text               ascii   Tj\n@
+163 0x000047e5 0x000047e5 4   6    .text               utf8    {¨B\f
+164 0x00004861 0x00004861 4   6    .text               utf8    {hg\f
+165 0x00004a26 0x00004a26 4   6    .text               utf8    Dӈ-H
+166 0x00004a4d 0x00004a4d 5   7    .text               utf8    Ä<m/\a
+167 0x00004af6 0x00004af6 4   5    .text               ascii   \vK!\b
+168 0x00004c93 0x00004c93 4   5    .text               ascii   Th\n@
+169 0x00004d33 0x00004d33 5   6    .text               ascii   n!X n
+170 0x00004d39 0x00004d39 8   9    .text               ascii   X nBX n!
+171 0x00004ed7 0x00004ed7 4   5    .text               ascii   q\ni)
+172 0x000053e4 0x000053e4 7   8    .text               ascii   +ih8J\t\v
+173 0x000055d6 0x000055d6 4   6    .text               utf8    DӉ.H
+174 0x0000562a 0x0000562a 5   6    .text               ascii   \eKk\t@
+175 0x000056a3 0x000056a3 4   5    .text               ascii   T*\r@
+176 0x00005777 0x00005777 4   5    .text               ascii   M2*a
+177 0x0000583f 0x0000583f 4   5    .text               ascii   RmE@
+178 0x000058bf 0x000058bf 4   5    .text               ascii   T`F@
+179 0x00005937 0x00005937 4   5    .text               ascii   R\vyz
+180 0x00005cea 0x00005cea 4   5    .text               ascii   \e*Q\a
+181 0x00005d47 0x00005d47 46  62   .text               utf8    R@Î<@Í<@Ì<@Ë<@Ê<@É<@È<@Ç<@Æ<@Å<@Ä<@Ã<@Â<@Á<@À<
+182 0x00005db4 0x00005db4 4   6    .text               utf8    \t=Lӊ
+183 0x00005e3e 0x00005e3e 4   5    .text               ascii   \nK!\b
+184 0x00005f2c 0x00005f2c 4   6    .text               utf8    @B<@
+185 0x00005f3b 0x00005f3b 4   5    .text               ascii   4\t\r@
+186 0x00005f40 0x00005f40 4   6    .text               utf8    \n-HӉ
+187 0x00005f67 0x00005f67 6   7    .text               ascii   S\v-\bSI
+188 0x00005f72 0x00005f72 6   7    .text               ascii   \v\v\n=\fS
+189 0x00006073 0x00006073 4   5    .text               ascii   y)\a@
+190 0x00006190 0x00006190 9   10   .text               ascii   \t-\bS\n=\fS?
+191 0x000061d7 0x000061d7 6   7    .text               ascii   S\f=\fSI
+192 0x000061de 0x000061de 7   8    .text               ascii   \t\v\v-\bS)
+193 0x0000629c 0x0000629c 4   6    .text               utf8    \n=LӋ
+194 0x000062b8 0x000062b8 4   5    .text               ascii   \r-\bS
+195 0x00006326 0x00006326 5   6    .text               ascii   \nK\b\t@
+196 0x0000637f 0x0000637f 4   5    .text               ascii   T(+@
+197 0x000063b7 0x000063b7 5   6    .text               ascii   T\b-\bS
+198 0x0000662b 0x0000662b 4   5    .text               ascii   T5\b@
+199 0x0000665f 0x0000665f 4   5    .text               ascii   q\ni)
+200 0x00006743 0x00006743 6   7    .text               ascii   Th"@9\b
+201 0x00006820 0x00006820 7   8    .text               ascii   \b`C9{\aA
+202 0x00006878 0x00006878 4   5    .text               ascii   h"@9
+203 0x000068c3 0x000068c3 4   5    .text               ascii   =`R@
+204 0x00006957 0x00006957 4   5    .text               ascii   R#I5
+205 0x0000696b 0x0000696b 5   6    .text               ascii   7h"@9
+206 0x00006998 0x00006998 7   8    .text               ascii   +ih8J\t\v
+207 0x00006a2b 0x00006a2b 4   5    .text               ascii   T`f@
+208 0x00006b2f 0x00006b2f 4   5    .text               ascii   Tj\n@
+209 0x000071a7 0x000071a7 4   5    .text               ascii   T`\n@
+210 0x000071c3 0x000071c3 4   5    .text               ascii   T@ @
+211 0x00007570 0x00007570 4   5    .text               ascii   h2B9
+212 0x000084b1 0x00000001 11  12   .shstrtab           ascii   .fini_array
+213 0x000084bd 0x0000000d 5   6    .shstrtab           ascii   .text
+214 0x000084c3 0x00000013 4   5    .shstrtab           ascii   .got
+215 0x000084c8 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+216 0x000084dc 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+217 0x000084e5 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+218 0x000084ef 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+219 0x000084f7 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+220 0x00008505 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+221 0x00008514 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+222 0x00008521 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+223 0x0000852b 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+224 0x00008535 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+225 0x00008542 0x00000092 7   8    .shstrtab           ascii   .dynsym
+226 0x0000854a 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+227 0x00008554 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+228 0x0000855e 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+229 0x00008571 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+230 0x0000857a 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+231 0x00008584 0x000000d4 7   8    .shstrtab           ascii   .rodata
+232 0x0000858c 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+233 0x0000859b 0x000000eb 5   6    .shstrtab           ascii   .data
+234 0x000085a2 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+235 0x000085db 0x0000003a 4   6    .gnu_debugdata      utf8    \;Sϱ
+236 0x000085fb 0x0000005a 4   5    .gnu_debugdata      ascii   BmWB
+237 0x0000864b 0x000000aa 4   5    .gnu_debugdata      ascii   ^b5b
+238 0x00008651 0x000000b0 6   7    .gnu_debugdata      ascii   x({\aO=
+239 0x000086cd 0x0000012c 5   7    .gnu_debugdata      utf8    ɣ0[^m
+240 0x000086d7 0x00000136 4   5    .gnu_debugdata      ascii   QQ_^
+241 0x000086fb 0x0000015a 5   7    .gnu_debugdata      utf8    L?ʯNB
+242 0x00008720 0x0000017f 5   6    .gnu_debugdata      ascii   Y\b\t9G
+243 0x00008769 0x000001c8 4   6    .gnu_debugdata      utf8    -ߪU\r
+244 0x000087d8 0x00000237 4   5    .gnu_debugdata      ascii   Fy!^
+245 0x000087f1 0x00000250 5   8    .gnu_debugdata      utf8    t멋'kJ
+246 0x000087f9 0x00000258 4   5    .gnu_debugdata      ascii   b}7&
+247 0x00008800 0x0000025f 4   5    .gnu_debugdata      ascii   Q$P"
+248 0x00008819 0x00000278 8   11   .gnu_debugdata      utf8    Aޞyf(k\rߟ
+249 0x00008829 0x00000288 7   8    .gnu_debugdata      ascii   3\r1H)&\
+250 0x00008868 0x000002c7 4   6    .gnu_debugdata      utf8    2էAa
+251 0x00008891 0x000002f0 6   8    .gnu_debugdata      utf8    .6rHژ(
+252 0x0000889d 0x000002fc 7   9    .gnu_debugdata      utf8    O}ͻ(xz"
+253 0x000088aa 0x00000309 7   9    .gnu_debugdata      utf8    p4H:[͖\
+254 0x0000890d 0x0000036c 4   5    .gnu_debugdata      ascii   `-WE
+255 0x0000891d 0x0000037c 4   5    .gnu_debugdata      ascii   `E\G
+256 0x00008933 0x00000392 4   5    .gnu_debugdata      ascii   wRNM
+257 0x0000893e 0x0000039d 4   5    .gnu_debugdata      ascii   tjMK
+258 0x00008947 0x000003a6 4   5    .gnu_debugdata      ascii   \arf0
+259 0x000089b8 0x00000417 5   7    .gnu_debugdata      utf8    a,i\]
+260 0x000089ef 0x0000044e 4   5    .gnu_debugdata      ascii   0[7S
+261 0x000089fb 0x0000045a 4   5    .gnu_debugdata      ascii   r7+`
+262 0x00008a2d 0x0000048c 4   7    .gnu_debugdata      utf8    쿓:u0
+263 0x00008a54 0x000004b3 4   5    .gnu_debugdata      ascii   B-vh
+264 0x00008a68 0x000004c7 4   5    .gnu_debugdata      ascii   +wO*
+265 0x00008a7b 0x000004da 4   5    .gnu_debugdata      ascii   NqGe
+0x000076a0    1     16 sym.imp.__cxa_finalize
+0x000076c0    1     16 sym.imp.__android_log_print
+0x000077a0    1     16 sym.imp.__errno
+0x00007760    1     16 sym.imp.__stack_chk_fail
+0x00007940    1     16 sym.imp.__strlcpy_chk
+0x00007980    1     16 sym.imp.accept
+0x000076f0    1     16 sym.imp.bind
+0x00007840    1     16 sym.imp.close
+0x00007780    1     16 sym.imp.connect
+0x00007850    1     16 sym.imp.free
+0x000078d0    1     16 sym.imp.getsockname
+0x000076b0    1     16 sym.imp.getsockopt
+0x00007700    1     16 sym.imp.listen
+0x000077c0    1     16 sym.imp.malloc
+0x00007810    1     16 sym.imp.memset
+0x000078b0    1     16 sym.imp.pthread_cond_destroy
+0x000077e0    1     16 sym.imp.pthread_cond_init
+0x000078c0    1     16 sym.imp.pthread_cond_signal
+0x00007740    1     16 sym.imp.pthread_cond_wait
+0x00007710    1     16 sym.imp.pthread_create
+0x00007960    1     16 sym.imp.pthread_getspecific
+0x00007770    1     16 sym.imp.pthread_join
+0x000076d0    1     16 sym.imp.pthread_key_create
+0x000078a0    1     16 sym.imp.pthread_mutex_destroy
+0x000077d0    1     16 sym.imp.pthread_mutex_init
+0x00007730    1     16 sym.imp.pthread_mutex_lock
+0x00007750    1     16 sym.imp.pthread_mutex_unlock
+0x00007900    1     16 sym.imp.pthread_self
+0x00007830    1     16 sym.imp.qrtr_decode
+0x00007800    1     16 sym.imp.qrtr_new_lookup
+0x000077f0    1     16 sym.imp.qrtr_open
+0x00007820    1     16 sym.imp.recvfrom
+0x00007890    1     16 sym.imp.shutdown
+0x00007950    1     16 sym.imp.socket
+0x000076e0    1     16 sym.imp.unlink
+0x00007910    1     16 sym.imp.usleep
+0x00007a80    1     16 sym.imp.__strlen_chk
+0x000079a0    1     16 sym.imp.calloc
+0x000079e0    1     16 sym.imp.dup
+0x00007a10    1     16 sym.imp.memcpy
+0x00007aa0    1     16 sym.imp.poll
+0x00007a90    1     16 sym.imp.pthread_setspecific
+0x00007a30    1     16 sym.imp.qrtr_sendto
+0x00007ac0    1     16 sym.imp.recvmsg
+0x00007a20    1     16 sym.imp.sendmsg
+0x00007a40    1     16 sym.imp.sendto
+0x000079b0    1     16 sym.imp.socketpair
+0x00007ab0    1     16 sym.imp.vsnprintf
+0x000079d0    1     16 sym.imp.write
+0x00007b20    1     16 sym.imp.pthread_cond_broadcast
+0x00007b40    1     16 sym.imp.pthread_detach
+0x00007b30    1     16 sym.imp.sleep
+0x00003000    1     12 entry0
+0x0000301c    4     64 sym.BBuf_alloc
+0x000070d8    3     88 sym.MSForwarder_new
+0x00007b00    1     16 fcn.00007b00
+0x0000305c    1     16 sym.MinkIPC_startService
+0x00006bd0    7    188 sym.MinkSocket_start
+0x00004874    1     36 sym.MinkSocket_attachObject
+0x000077b0    1     16 fcn.000077b0
+0x00005270   14    316 sym.MinkSocket_sendClose
+0x000053ac    8    244 sym.__process_message
+0x00003c04    6    140 sym.MinkIPC_connect
+0x00007370    2     20 sym.ThreadPool_retain
+0x00003e94    2     20 sym.MinkIPC_retain
+0x000045e8   12    296 sym.MinkSocket_close
+0x000066d4   11    276 sym.process_message
+0x00004898   75   1876 sym.MinkSocket_invoke
+0x00007384    7    152 sym.ThreadPool_stop
+0x00003264    4     28 sym.MinkIPC_join
+0x00006f54    3     52 sym.MSForwarder_detach
+0x00007ad0    1     16 fcn.00007ad0
+0x0000444c    2     20 sym.MinkSocket_retain
+0x000072c0   10    176 sym.ThreadPool_release
+0x00007b10    1     16 fcn.00007b10
+0x00007130    1     20 sym.FdWrapperFromObject
+0x00003e1c    4    120 sym.MinkIPC_getClientInfo
+0x00004028   18    488 sym.MinkSocket_QRTR_new
+0x00003280   12    296 sym.MinkIPC_connect_QRTR
+0x00004460   18    392 sym.MinkSocket_delete
+0x0000741c    5     68 sym.ThreadPool_wait
+0x00003014    1      8 sym.BBuf_construct
+0x0000306c    1     20 sym.MinkIPC_startServiceOnSocket
+0x0000425c   19    496 sym.MinkSocket_new
+0x00004848    4     60 sym.MinkSocket_detachObject
+0x0000478c    7    108 sym.MinkSocket_unregisterForwarder
+0x00007238    6    136 sym.ThreadPool_new
+0x000071f4    3     68 sym.FdWrapper_new
+0x00003ea8    1     36 sym.MinkIPC_wrapFd
+0x00007970    1     16 fcn.00007970
+0x00004710    5     84 sym.MinkSocket_isConnected
+0x000047f8    5     80 sym.MinkSocket_detach
+0x00003680   16    328 sym.MinkIPC_release
+0x00006f88    1     20 sym.MSForwarderFromObject
+0x000067e8   40    808 sym.MinkSocket_dispatch
+0x00004210    5     76 sym.MinkSocket_release
+0x00004764    4     40 sym.MinkSocket_registerForwarder
+0x00007460    9    228 sym.ThreadPool_queue
+0x00003010    1      4 entry.fini0
+0x000033a8   26    728 sym.MinkIPC_QRTR_new
+0x00003c90   13    396 sym.MinkIPC_new
+0x00007720    1     16 fcn.00007720
+0x00007790    1     16 fcn.00007790
+0x00007860    1     16 fcn.00007860
+0x00007870    1     16 fcn.00007870
+0x00007880    1     16 fcn.00007880
+0x000078e0    1     16 fcn.000078e0
+0x000078f0    1     16 fcn.000078f0
+0x00007920    1     16 fcn.00007920
+0x00007930    1     16 fcn.00007930
+0x00007990    1     16 fcn.00007990
+0x000079c0    1     16 fcn.000079c0
+0x000079f0    1     16 fcn.000079f0
+0x00004fec   30    644 sym.sendv_all
+0x00005574  124   3248 sym.MinkSocket_recvInvocationRequest
+0x00006224   50   1004 sym.MinkSocket_recvInvocationSuccess
+0x00006610   10    196 sym.MinkSocket_recvClose
+0x00007a50    1     16 fcn.00007a50
+0x00007a60    1     16 fcn.00007a60
+0x00007a70    1     16 fcn.00007a70
+0x00006c8c    3    160 sym.snprintf_char__unsigned_long_pass_object_size1__char_const__::_
+0x00006d2c   23    552 sym.recv_msg
+0x00007ae0    1     16 fcn.00007ae0
+0x00007af0    1     16 fcn.00007af0
+0x00003080   21    484 sym.MinkIPC_beginService
+0x000037c8   51   1084 sym.MinkIPC_QRTR_Service
+0x00006f9c   24    316 sym.MSForwarder_invoke
+0x00003ecc   15    348 sym.MinkIPC_service
+0x00007144   13    176 sym.FdWrapper_invoke
+0x00007544   16    316 sym.thread_entrypoint
+0x00007680    1     20 section..plt

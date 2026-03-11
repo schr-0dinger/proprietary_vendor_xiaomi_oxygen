@@ -1,0 +1,417 @@
+arch     arm
+baddr    0x0
+binsz    9621
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                         demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+37  0x00001cd4 0x00003cd4 GLOBAL OBJ  272      halModFiles
+38  0x00001108 0x00002108 GLOBAL FUNC 440      parse_log_xml
+39  0x000010ce 0x000020ce GLOBAL FUNC 58       stringToValue
+40  ---------- 0x000050ec GLOBAL OBJ  136      hal_log_mask
+41  0x000019a0 0x000029a0 GLOBAL FUNC 128      log_utils_deinit
+42  0x00001660 0x00002660 GLOBAL FUNC 120      log_utils_init
+43  0x000015a8 0x000025a8 GLOBAL FUNC 184      register_for_dynamic_logging
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000174   0x18 0x00000174   0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c   0x20 0x0000018c   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac  0x2c0 0x000001ac  0x2c0 -r-- DYNSYM      .dynsym
+4   0x0000046c   0x58 0x0000046c   0x58 -r-- GNU_VERSYM  .gnu.version
+5   0x000004c4   0x40 0x000004c4   0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000504   0x40 0x00000504   0x40 -r-- GNU_HASH    .gnu.hash
+7   0x00000544  0x2a1 0x00000544  0x2a1 -r-- STRTAB      .dynstr
+8   0x000007e8   0x15 0x000007e8   0x15 -r-- ----        .rel.dyn
+9   0x00000800   0x10 0x00000800   0x10 -r-- ----        .relr.dyn
+10  0x00000810   0x60 0x00000810   0x60 -r-- ----        .ARM.exidx
+11  0x00000870  0x128 0x00000870  0x128 -r-- REL         .rel.plt
+12  0x00000998  0x724 0x00000998  0x724 -r-- PROGBITS    .rodata
+13  0x000010bc  0x9a4 0x000020bc  0x9a4 -r-x PROGBITS    .text
+14  0x00001a60  0x270 0x00002a60  0x270 -r-x PROGBITS    .plt
+15  0x00001cd0  0x114 0x00003cd0  0x114 -rw- PROGBITS    .data.rel.ro
+16  0x00001de4    0x8 0x00003de4    0x8 -rw- FINI_ARRAY  .fini_array
+17  0x00001dec  0x100 0x00003dec  0x100 -rw- DYNAMIC     .dynamic
+18  0x00001eec    0xc 0x00003eec    0xc -rw- PROGBITS    .got
+19  0x00001ef8   0xa0 0x00003ef8   0xa0 -rw- PROGBITS    .got.plt
+20  0x00001f98    0x4 0x00004f98    0x4 -rw- PROGBITS    .data
+21  0x00001f9c    0x0 0x00004f9c  0x1d8 -rw- NOBITS      .bss
+22  0x00001f9c   0x4e 0x00000000   0x4e ---- ----        .ARM.attributes
+23  0x00001fea   0xf7 0x00000000   0xf7 ---- STRTAB      .shstrtab
+24  0x000020e1  0x4b4 0x00000000  0x4b4 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+3   0x00000528 0x00000528 4   5    .gnu.hash           ascii   lrS$
+4   0x00000545 0x00000545 14  15   .dynstr             ascii   __cxa_finalize
+5   0x00000554 0x00000554 13  14   .dynstr             ascii   XML_GetBuffer
+6   0x00000562 0x00000562 16  17   .dynstr             ascii   XML_GetErrorCode
+7   0x00000573 0x00000573 15  16   .dynstr             ascii   XML_ParseBuffer
+8   0x00000583 0x00000583 16  17   .dynstr             ascii   XML_ParserCreate
+9   0x00000594 0x00000594 14  15   .dynstr             ascii   XML_ParserFree
+10  0x000005a3 0x000005a3 21  22   .dynstr             ascii   XML_SetElementHandler
+11  0x000005b9 0x000005b9 15  16   .dynstr             ascii   XML_SetUserData
+12  0x000005c9 0x000005c9 19  20   .dynstr             ascii   __android_log_print
+13  0x000005dd 0x000005dd 6   7    .dynstr             ascii   calloc
+14  0x000005e4 0x000005e4 6   7    .dynstr             ascii   fclose
+15  0x000005eb 0x000005eb 5   6    .dynstr             ascii   fopen
+16  0x000005f1 0x000005f1 5   6    .dynstr             ascii   fread
+17  0x000005f7 0x000005f7 4   5    .dynstr             ascii   free
+18  0x000005fc 0x000005fc 11  12   .dynstr             ascii   halModFiles
+19  0x00000608 0x00000608 13  14   .dynstr             ascii   parse_log_xml
+20  0x00000616 0x00000616 13  14   .dynstr             ascii   stringToValue
+21  0x00000624 0x00000624 7   8    .dynstr             ascii   strncmp
+22  0x0000062c 0x0000062c 7   8    .dynstr             ascii   strnlen
+23  0x00000634 0x00000634 7   8    .dynstr             ascii   __errno
+24  0x0000063c 0x0000063c 16  17   .dynstr             ascii   __stack_chk_fail
+25  0x0000064d 0x0000064d 17  18   .dynstr             ascii   __stack_chk_guard
+26  0x0000065f 0x0000065f 5   6    .dynstr             ascii   close
+27  0x00000665 0x00000665 5   6    .dynstr             ascii   fcntl
+28  0x0000066b 0x0000066b 12  13   .dynstr             ascii   hal_log_mask
+29  0x00000678 0x00000678 17  18   .dynstr             ascii   inotify_add_watch
+30  0x0000068a 0x0000068a 12  13   .dynstr             ascii   inotify_init
+31  0x00000697 0x00000697 16  17   .dynstr             ascii   inotify_rm_watch
+32  0x000006a8 0x000006a8 16  17   .dynstr             ascii   log_utils_deinit
+33  0x000006b9 0x000006b9 14  15   .dynstr             ascii   log_utils_init
+34  0x000006c8 0x000006c8 4   5    .dynstr             ascii   pipe
+35  0x000006cd 0x000006cd 4   5    .dynstr             ascii   poll
+36  0x000006d2 0x000006d2 20  21   .dynstr             ascii   pthread_attr_destroy
+37  0x000006e7 0x000006e7 17  18   .dynstr             ascii   pthread_attr_init
+38  0x000006f9 0x000006f9 27  28   .dynstr             ascii   pthread_attr_setdetachstate
+39  0x00000715 0x00000715 14  15   .dynstr             ascii   pthread_create
+40  0x00000724 0x00000724 12  13   .dynstr             ascii   pthread_join
+41  0x00000731 0x00000731 4   5    .dynstr             ascii   read
+42  0x00000736 0x00000736 28  29   .dynstr             ascii   register_for_dynamic_logging
+43  0x00000753 0x00000753 8   9    .dynstr             ascii   strerror
+44  0x0000075c 0x0000075c 7   8    .dynstr             ascii   strlcpy
+45  0x00000764 0x00000764 5   6    .dynstr             ascii   write
+46  0x0000076a 0x0000076a 6   7    .dynstr             ascii   memset
+47  0x00000771 0x00000771 9   10   .dynstr             ascii   liblog.so
+48  0x0000077b 0x0000077b 6   7    .dynstr             ascii   LIBLOG
+49  0x00000782 0x00000782 7   8    .dynstr             ascii   libc.so
+50  0x0000078a 0x0000078a 4   5    .dynstr             ascii   LIBC
+51  0x0000078f 0x0000078f 11  12   .dynstr             ascii   libutils.so
+52  0x0000079b 0x0000079b 12  13   .dynstr             ascii   libcutils.so
+53  0x000007a8 0x000007a8 11  12   .dynstr             ascii   libexpat.so
+54  0x000007b4 0x000007b4 9   10   .dynstr             ascii   libc++.so
+55  0x000007be 0x000007be 7   8    .dynstr             ascii   libm.so
+56  0x000007c6 0x000007c6 8   9    .dynstr             ascii   libdl.so
+57  0x000007cf 0x000007cf 21  22   .dynstr             ascii   libaudio_log_utils.so
+58  0x000007e8 0x000007e8 4   5    .rel.dyn            ascii   APS2
+59  0x00000808 0x00000808 4   5    .relr.dyn           ascii   UUUU
+60  0x00000998 0x00000998 7   8    .rodata             ascii   dolby.c
+61  0x000009a0 0x000009a0 51  52   .rodata             ascii   %s: module name does not match attr %s, mod name %s
+62  0x000009d4 0x000009d4 21  22   .rodata             ascii   registered, module %s
+63  0x000009ea 0x000009ea 13  14   .rodata             ascii   %s: read data
+64  0x000009f8 0x000009f8 10  11   .rodata             ascii   auto_hal.c
+65  0x00000a03 0x00000a03 6   7    .rodata             ascii   module
+66  0x00000a0a 0x00000a0a 37  38   .rodata             ascii   Could not create wake pipe.  errno=%d
+67  0x00000a30 0x00000a30 12  13   .rodata             ascii   keep_alive.c
+68  0x00000a3d 0x00000a3d 5   6    .rodata             ascii   qaf.c
+69  0x00000a43 0x00000a43 4   5    .rodata             ascii   pm.c
+70  0x00000a48 0x00000a48 9   10   .rodata             ascii   hw_info.c
+71  0x00000a55 0x00000a55 24  25   .rodata             ascii   %s: XML_GetBuffer failed
+72  0x00000a6e 0x00000a6e 26  27   .rodata             ascii   %s: file %s, log enable %s
+73  0x00000a89 0x00000a89 10  11   .rodata             ascii   audio_hw.c
+74  0x00000a96 0x00000a96 30  31   .rodata             ascii   out of poll event with mask %d
+75  0x00000ab5 0x00000ab5 6   7    .rodata             ascii   edid.c
+76  0x00000abc 0x00000abc 15  16   .rodata             ascii   compress_voip.c
+77  0x00000acc 0x00000acc 22  23   .rodata             ascii   %s: log mode set to %s
+78  0x00000ae3 0x00000ae3 36  37   .rodata             ascii   %s: set logging to true for value %d
+79  0x00000b08 0x00000b08 6   7    .rodata             ascii   a2dp.c
+80  0x00000b0f 0x00000b0f 17  18   .rodata             ascii   spkr_protection.c
+81  0x00000b21 0x00000b21 49  50   .rodata             ascii   , error registering module, no more free indexes!
+82  0x00000b53 0x00000b53 13  14   .rodata             ascii   compress_in.c
+83  0x00000b61 0x00000b61 11  12   .rodata             ascii   read_module
+84  0x00000b6d 0x00000b6d 14  15   .rodata             ascii   source_track.c
+85  0x00000b7c 0x00000b7c 33  34   .rodata             ascii   %s: fread failed, bytes read = %d
+86  0x00000b9e 0x00000b9e 4   5    .rodata             ascii   name
+87  0x00000ba3 0x00000ba3 30  31   .rodata             ascii   %s: could not parse %s logmask
+88  0x00000bc6 0x00000bc6 44  45   .rodata             ascii   %s: logging file level, parse module further
+89  0x00000bf3 0x00000bf3 11  12   .rodata             ascii   adsp_hdlr.c
+90  0x00000bff 0x00000bff 37  38   .rodata             ascii   %s: 'file' not found under module tag
+91  0x00000c25 0x00000c25 18  19   .rodata             ascii   compress_capture.c
+92  0x00000c38 0x00000c38 5   6    .rodata             ascii   hfp.c
+93  0x00000c3e 0x00000c3e 12  13   .rodata             ascii   sndmonitor.c
+94  0x00000c4b 0x00000c4b 21  22   .rodata             ascii   %s: parse %s log mask
+95  0x00000c61 0x00000c61 23  24   .rodata             ascii   monitor_mod_file_change
+96  0x00000c79 0x00000c79 10  11   .rodata             ascii   passthru.c
+97  0x00000c84 0x00000c84 4   5    .rodata             ascii   true
+98  0x00000c89 0x00000c89 52  53   .rodata             ascii   Could not make wake pipe fds non-blocking.  errno=%d
+99  0x00000cbe 0x00000cbe 4   5    .rodata             ascii   fm.c
+100 0x00000cc7 0x00000cc7 19  20   .rodata             ascii   audio_hw_extn_api.c
+101 0x00000cdb 0x00000cdb 40  41   .rodata             ascii   /data/vendor/audio/audio_dynamic_log.xml
+102 0x00000d04 0x00000d04 7   8    .rodata             ascii   utils.c
+103 0x00000d0c 0x00000d0c 35  36   .rodata             ascii   %s: 'name' not found for module tag
+104 0x00000d30 0x00000d30 26  27   .rodata             ascii   Module name does not match
+105 0x00000d4b 0x00000d4b 12  13   .rodata             ascii   audio_extn.c
+106 0x00000d58 0x00000d58 10  11   .rodata             ascii   platform.c
+107 0x00000d65 0x00000d65 29  30   .rodata             ascii   %s: ERROR: SHOULD NOT BE HERE
+108 0x00000d83 0x00000d83 16  17   .rodata             ascii   log_utils_deinit
+109 0x00000d94 0x00000d94 19  20   .rodata             ascii   Couldn't poll(): %s
+110 0x00000da8 0x00000da8 32  33   .rodata             ascii   %s: Failed to create XML parser!
+111 0x00000dc9 0x00000dc9 20  21   .rodata             ascii   value of index is %d
+112 0x00000dde 0x00000dde 12  13   .rodata             ascii   voice_extn.c
+113 0x00000deb 0x00000deb 37  38   .rodata             ascii   %s: set logging to false for value %d
+114 0x00000e11 0x00000e11 14  15   .rodata             ascii   log_xml_parser
+115 0x00000e20 0x00000e20 8   9    .rodata             ascii   log_mode
+116 0x00000e29 0x00000e29 8   9    .rodata             ascii   %s: exit
+117 0x00000e32 0x00000e32 15  16   .rodata             ascii   platform_info.c
+118 0x00000e42 0x00000e42 13  14   .rodata             ascii   parse_log_xml
+119 0x00000e50 0x00000e50 45  46   .rodata             ascii   error writing on wake fd, thread not created!
+120 0x00000e7e 0x00000e7e 5   6    .rodata             ascii   gef.c
+121 0x00000e84 0x00000e84 5   6    .rodata             ascii   usb.c
+122 0x00000e8a 0x00000e8a 10  11   .rodata             ascii   log_enable
+123 0x00000e95 0x00000e95 5   6    .rodata             ascii   ssr.c
+124 0x00000e9b 0x00000e9b 13  14   .rodata             ascii   set_log_value
+125 0x00000ea9 0x00000ea9 8   9    .rodata             ascii   listen.c
+126 0x00000eb2 0x00000eb2 26  27   .rodata             ascii   %s: Failed to open file %s
+127 0x00000ecd 0x00000ecd 44  45   .rodata             ascii   %s: logging module level,do not parse module
+128 0x00000efa 0x00000efa 26  27   .rodata             ascii   mod %s, already registered
+129 0x00000f15 0x00000f15 10  11   .rodata             ascii   dev_arbi.c
+130 0x00000f20 0x00000f20 42  43   .rodata             ascii   %s: Invalid module name %p or log value %p
+131 0x00000f4b 0x00000f4b 8   9    .rodata             ascii   bt_hal.c
+132 0x00000f54 0x00000f54 11  12   .rodata             ascii   dts_eagle.c
+133 0x00000f60 0x00000f60 7   8    .rodata             ascii   voice.c
+134 0x00000f68 0x00000f68 31  32   .rodata             ascii   error in value of file returned
+135 0x00000f88 0x00000f88 15  16   .rodata             ascii   audio_log_utils
+136 0x00000f98 0x00000f98 14  15   .rodata             ascii   soundtrigger.c
+137 0x00000fa7 0x00000fa7 34  35   .rodata             ascii   %s: XML_ParseBuffer failed, err %d
+138 0x00000fca 0x00000fca 4   5    .rodata             ascii   file
+139 0x00000fcf 0x00000fcf 44  45   .rodata             ascii   %s: Insufficient memory to allocate for data
+140 0x0000107c 0x0000107c 5   6    .rodata             ascii   pproc
+141 0x000010d2 0x000020d2 4   5    .text               ascii   \rF\aF
+142 0x000010e9 0x000020e8 5   6    .text               ascii   \f!F2F
+143 0x0000111a 0x0000211a 4   5    .text               ascii   SMSI
+144 0x0000111f 0x0000211e 7   8    .text               ascii   F}DyD(F
+145 0x0000112b 0x0000212a 4   6    .text               utf8    (@ЁF
+146 0x00001145 0x00002144 4   6    .text               utf8    (LЀF
+147 0x0000114f 0x0000214e 5   6    .text               ascii   `(FAF
+148 0x00001158 0x00002158 10  11   .text               ascii   NIOJ(FyDzD
+149 0x0000118c 0x0000218c 6   7    .text               ascii   9FB\t(F
+150 0x000011a5 0x000021a4 9   10   .text               ascii   G.I.JyDzD
+151 0x000011b2 0x000021b2 10  11   .text               ascii   /I/JyDzD/K
+152 0x000011ca 0x000021ca 6   7    .text               ascii   ,I,J-K
+153 0x000011d1 0x000021d0 7   8    .text               ascii    yDzD{D
+154 0x000011e2 0x000021e2 6   7    .text               ascii   )I)J*K
+155 0x000011e9 0x000021e8 7   8    .text               ascii    yDzD{D
+156 0x000011fa 0x000021fa 6   7    .text               ascii   (I(J)K
+157 0x00001201 0x00002200 7   8    .text               ascii    yDzD{D
+158 0x00001215 0x00002214 13  14   .text               ascii    $I$J%KyDzD{D
+159 0x00001231 0x00002230 13  14   .text               ascii     I J!KyDzD{D
+160 0x000012cd 0x000022cc 7   8    .text               ascii   F\a"0FyD
+161 0x000012ec 0x000022ec 4   5    .text               ascii   zI0F
+162 0x000012fa 0x000022fa 10  11   .text               ascii   xIxJyDzD{K
+163 0x00001333 0x00002332 6   7    .text               ascii   JyDzD/
+164 0x0000133a 0x0000233a 4   5    .text               ascii   (hiI
+165 0x00001348 0x00002348 8   9    .text               ascii   gIhJyDzD
+166 0x00001352 0x00002352 4   5    .text               ascii   fhoh
+167 0x00001357 0x00002356 5   6    .text               ascii   "8F1F
+168 0x00001367 0x00002366 13  14   .text               ascii    bIcJcKyDzD{D
+169 0x0000137e 0x0000237e 10  11   .text               ascii   ohmH"!xD:F
+170 0x00001392 0x00002392 8   9    .text               ascii   jIjJyDzD
+171 0x000013ac 0x000023ac 6   7    .text               ascii   TI\t"yD
+172 0x000013bf 0x000023be 13  14   .text               ascii    PIQJQKyDzD{D
+173 0x000013dc 0x000023dc 4   5    .text               ascii   MIyD
+174 0x000013e2 0x000023e2 4   5    .text               ascii   PJPK
+175 0x000013e7 0x000023e6 5   6    .text               ascii    zD{D
+176 0x000013f3 0x000023f2 7   8    .text               ascii   ! pMHxD
+177 0x00001406 0x00002406 6   7    .text               ascii   QI\v"yD
+178 0x0000141b 0x0000241a 13  14   .text               ascii    LIMJMKyDzD{D
+179 0x0000142c 0x0000242c 11  13   .text               utf8    KHxD\ahGE-ҀF
+180 0x00001449 0x00002448 13  14   .text               ascii    LILJMKyDzD{D
+181 0x0000145e 0x0000245e 4   5    .text               ascii   .J.K
+182 0x00001463 0x00002462 5   6    .text               ascii    zD{D
+183 0x00001492 0x00002492 9   10   .text               ascii   3I3JyDzD2
+184 0x0000149f 0x0000249e 15  16   .text               ascii    2M3J3K}DzD{D)F
+185 0x000014b5 0x000024b4 7   8    .text               ascii    )F3FzD
+186 0x00001591 0x00002590 5   6    .text               ascii   F\a"yD
+187 0x000015ab 0x000025aa 7   8    .text               ascii   A#M}D/h
+188 0x000015b6 0x000025b6 4   5    .text               ascii   "I"J
+189 0x000015bb 0x000025ba 5   6    .text               ascii    yDzD
+190 0x000015d3 0x000025d2 9   10   .text               ascii   &}D(F!F@"
+191 0x000015f7 0x000025f6 7   8    .text               ascii    #FyDzD
+192 0x0000160d 0x0000260c 7   8    .text               ascii   H!F@"xD
+193 0x0000161c 0x0000261c 4   5    .text               ascii   (h#F
+194 0x00001625 0x00002624 9   10   .text               ascii    \fI\fJyDzD
+195 0x0000166c 0x0000266c 4   5    .text               ascii   !FxD
+196 0x00001671 0x00002670 4   5    .text               ascii   h(h\a
+197 0x000016a0 0x000026a0 6   7    .text               ascii   \vH\fJ!F
+198 0x000016a7 0x000026a6 5   6    .text               ascii   #xDzD
+199 0x000016de 0x000026de 6   7    .text               ascii   "N~D0h
+200 0x000016e8 0x000026e8 6   7    .text               ascii    L!M!H
+201 0x000016ef 0x000026ee 7   8    .text               ascii   'xD|D}D
+202 0x00001712 0x00002712 6   7    .text               ascii    F)F@"
+203 0x0000171f 0x0000271e 7   8    .text               ascii    IFRF[F
+204 0x0000172c 0x0000272c 6   7    .text               ascii   (FAF""
+205 0x0000173b 0x0000273a 5   6    .text               ascii    IF[F
+206 0x00001746 0x00002746 4   5    .text               ascii   0h@4
+207 0x00001757 0x00002756 7   8    .text               ascii    yDzD{D
+208 0x000017b9 0x000027b8 13  14   .text               ascii    gIgJhKyDzD{D
+209 0x000017d0 0x000027d0 4   5    .text               ascii   dL|D
+210 0x000017db 0x000027da 5   6    .text               ascii   hbIcJ
+211 0x000017e1 0x000027e0 5   6    .text               ascii    yDzD
+212 0x00001821 0x00002820 5   6    .text               ascii   hSISJ
+213 0x00001827 0x00002826 5   6    .text               ascii    yDzD
+214 0x00001837 0x00002836 7   8    .text               ascii   7VIWJWK
+215 0x0000183f 0x0000283e 7   8    .text               ascii    yDzD{D
+216 0x0000184a 0x0000284a 4   5    .text               ascii   0F9F
+217 0x00001855 0x00002854 4   5    .text               ascii   0 `p
+218 0x000018aa 0x000028aa 8   9    .text               ascii   \ni3IyD\bx
+219 0x000018b6 0x000028b6 4   5    .text               ascii   2HxD
+220 0x000018bc 0x000028bc 4   5    .text               ascii   1HxD
+221 0x000018c2 0x000028c2 4   5    .text               ascii   1HxD
+222 0x000018f1 0x000028f0 5   6    .text               ascii    {DIF
+223 0x00001909 0x00002908 7   8    .text               ascii    IFzD#F
+224 0x000019a9 0x000029a8 7   8    .text               ascii    yDzD{D
+225 0x000019e8 0x000029e8 4   5    .text               ascii   \nI\vJ
+226 0x000019ed 0x000029ec 5   6    .text               ascii    yDzD
+227 0x00001a45 0x00002a44 4   5    .text               ascii   D`G@
+228 0x00001a51 0x00002a50 4   5    .text               ascii   D`G@
+229 0x00001fa1 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+230 0x00001fac 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+231 0x00001fb3 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+232 0x00001feb 0x00000001 11  12   .shstrtab           ascii   .fini_array
+233 0x00001ff7 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+234 0x00002002 0x00000018 5   6    .shstrtab           ascii   .text
+235 0x00002008 0x0000001e 4   5    .shstrtab           ascii   .got
+236 0x0000200d 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+237 0x00002021 0x00000037 8   9    .shstrtab           ascii   .got.plt
+238 0x0000202a 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+239 0x00002033 0x00000049 4   5    .shstrtab           ascii   .bss
+240 0x00002038 0x0000004e 15  16   .shstrtab           ascii   .ARM.attributes
+241 0x00002048 0x0000005e 7   8    .shstrtab           ascii   .dynstr
+242 0x00002050 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+243 0x0000205f 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+244 0x0000206c 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+245 0x00002076 0x0000008c 8   9    .shstrtab           ascii   .rel.dyn
+246 0x0000207f 0x00000095 12  13   .shstrtab           ascii   .gnu.version
+247 0x0000208c 0x000000a2 7   8    .shstrtab           ascii   .dynsym
+248 0x00002094 0x000000aa 9   10   .shstrtab           ascii   .gnu.hash
+249 0x0000209e 0x000000b4 18  19   .shstrtab           ascii   .note.gnu.build-id
+250 0x000020b1 0x000000c7 8   9    .shstrtab           ascii   .dynamic
+251 0x000020ba 0x000000d0 9   10   .shstrtab           ascii   .shstrtab
+252 0x000020c4 0x000000da 7   8    .shstrtab           ascii   .rodata
+253 0x000020cc 0x000000e2 14  15   .shstrtab           ascii   .gnu_debugdata
+254 0x000020db 0x000000f1 5   6    .shstrtab           ascii   .data
+255 0x000020e2 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+256 0x00002136 0x00000055 7   9    .gnu_debugdata      utf8    {ӟ!d)ry
+257 0x0000218e 0x000000ad 4   5    .gnu_debugdata      ascii   ZsXb
+258 0x000021a8 0x000000c7 4   5    .gnu_debugdata      ascii   *PiJ
+259 0x000021c3 0x000000e2 8   12   .gnu_debugdata      utf8    ǹ錅|HMH6n
+260 0x00002225 0x00000144 5   7    .gnu_debugdata      utf8    #εAmI
+261 0x00002236 0x00000155 4   5    .gnu_debugdata      ascii   vaO9
+262 0x000022a2 0x000001c1 5   6    .gnu_debugdata      ascii   c< (@
+263 0x000022d7 0x000001f6 5   6    .gnu_debugdata      ascii   yfZ.<
+264 0x000022e4 0x00000203 4   5    .gnu_debugdata      ascii   \e7*x
+265 0x000022fa 0x00000219 6   7    .gnu_debugdata      ascii   WH`"73
+266 0x00002310 0x0000022f 4   5    .gnu_debugdata      ascii   LGPe
+267 0x00002323 0x00000242 4   6    .gnu_debugdata      utf8    <;ڑd
+268 0x00002439 0x00000358 4   6    .gnu_debugdata      utf8    ͟V@Q
+269 0x00002458 0x00000377 7   9    .gnu_debugdata      utf8    ïAn56&9
+270 0x000024c2 0x000003e1 6   8    .gnu_debugdata      utf8    :uأaw{
+271 0x0000252e 0x0000044d 4   5    .gnu_debugdata      ascii   \a^0[
+272 0x0000253f 0x0000045e 4   6    .gnu_debugdata      utf8    ĐgT;
+273 0x00002578 0x00000497 5   6    .gnu_debugdata      ascii   xo\:>
+0x00002a74    1     12 sym.imp.__cxa_finalize
+0x00002ad4    1      8 sym.imp.XML_GetBuffer
+0x00002b04    1      8 sym.imp.XML_GetErrorCode
+0x00002aec    1      4 sym.imp.XML_ParseBuffer
+0x00002aa4    1      8 sym.imp.XML_ParserCreate
+0x00002b1c    1      4 sym.imp.XML_ParserFree
+0x00002ac8    1      4 sym.imp.XML_SetElementHandler
+0x00002abc    1      4 sym.imp.XML_SetUserData
+0x00002af8    1      4 sym.imp.__android_log_print
+0x00002ab0    1     12 sym.imp.calloc
+0x00002b28    1      4 sym.imp.fclose
+0x00002a98    1      4 sym.imp.fopen
+0x00002ae0    1     12 sym.imp.fread
+0x00002b10    1     12 sym.imp.free
+0x00002a8c    1      4 sym.imp.strncmp
+0x00002a80    1     12 sym.imp.strnlen
+0x00002ba0    1     12 sym.imp.__errno
+0x00002b7c    1      4 sym.imp.__stack_chk_fail
+0x00002bc4    1      8 sym.imp.close
+0x00002bac    1      4 sym.imp.fcntl
+0x00002bdc    1      4 sym.imp.inotify_add_watch
+0x00002bd0    1     12 sym.imp.inotify_init
+0x00002bb8    1      4 sym.imp.inotify_rm_watch
+0x00002b94    1      8 sym.imp.pipe
+0x00002be8    1      4 sym.imp.poll
+0x00002b70    1     12 sym.imp.pthread_attr_destroy
+0x00002b4c    1      4 sym.imp.pthread_attr_init
+0x00002b58    1      4 sym.imp.pthread_attr_setdetachstate
+0x00002b64    1      8 sym.imp.pthread_create
+0x00002c18    1      4 sym.imp.pthread_join
+0x00002bf4    1      8 sym.imp.read
+0x00002c00    1     12 sym.imp.strerror
+0x00002b40    1     12 sym.imp.strlcpy
+0x00002c0c    1      4 sym.imp.write
+0x00002c24    1      8 sym.imp.memset
+0x000020bc    2     20 entry0
+0x00002108   23    344 sym.parse_log_xml
+0x000020ce    7     58 sym.stringToValue
+0x000029a0    6    102 sym.log_utils_deinit
+0x00002b30    1     12 fcn.00002b30
+0x00002ca0    1     12 fcn.00002ca0
+0x00002660    3    120 sym.log_utils_init
+0x00002a30    2     24 sym.__aeabi_memclr4
+0x00002bb0    1      8 fcn.00002bb0
+0x00002bc0    1      4 fcn.00002bc0
+0x00002be0    1      8 fcn.00002be0
+0x00002aa0    1      4 fcn.00002aa0
+0x00002bf0    1      4 fcn.00002bf0
+0x00002a48    1     12 fcn.00002a48
+0x000025a8   12    146 sym.register_for_dynamic_logging
+0x00002b90    1      4 fcn.00002b90
+0x000020ca    2      6 entry.fini0
+0x00002a90    1      8 fcn.00002a90
+0x00002ac0    1      8 fcn.00002ac0
+0x00002ad0    1      4 fcn.00002ad0
+0x00002af0    1      8 fcn.00002af0
+0x00002b00    1      4 fcn.00002b00
+0x00002b20    1      8 fcn.00002b20
+0x00002b50    1      8 fcn.00002b50
+0x00002b60    1      4 fcn.00002b60
+0x00002b80    1     12 fcn.00002b80
+0x00002c10    1      8 fcn.00002c10
+0x00002c20    1      4 fcn.00002c20
+0x00002c30    1     12 fcn.00002c30
+0x00002c40    1     12 fcn.00002c40
+0x00002c50    1     12 fcn.00002c50
+0x00002c60    1     12 fcn.00002c60
+0x00002c70    1     12 fcn.00002c70
+0x00002c80    1     12 fcn.00002c80
+0x000026d8    7    144 fcn.000026d8
+0x00002c90    1     12 fcn.00002c90

@@ -1,0 +1,864 @@
+arch     arm
+baddr    0x0
+binsz    31342
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                   demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+7   0x00002888 0x00003888 GLOBAL FUNC 4        xa_g722_dec_get_scratch_byte_size
+8   0x00001e42 0x00001e42 GLOBAL OBJ  48       s_g722_qmf_coeffs
+9   0x00006694 0x00007694 GLOBAL FUNC 132      L_mls
+10  0x0000608c 0x0000708c GLOBAL FUNC 108      L_shr
+11  0x0000530c 0x0000630c GLOBAL FUNC 80       divide_s
+12  0x00002082 0x00003082 GLOBAL FUNC 1386     G722_ADPCM_Block4_Dual
+13  0x00002bf4 0x00003bf4 GLOBAL FUNC 12       xa_g722_plc_get_lib_name_string
+14  0x0000512e 0x0000612e GLOBAL FUNC 170      g722_dec_process
+15  0x00006294 0x00007294 GLOBAL FUNC 48       mult
+16  0x00002c1e 0x00003c1e GLOBAL FUNC 6        xa_g722_plc_get_scratch_byte_size
+17  0x00006c42 0x00007c42 GLOBAL FUNC 158      div_s
+18  0x0000664c 0x0000764c GLOBAL FUNC 6        sub
+19  0x00003498 0x00004498 GLOBAL FUNC 152      G722_PLC_ADPCM_UpdateState
+20  0x00001f8a 0x00001f8a GLOBAL OBJ  160      s_g722_lpc_wind
+21  0x00001f10 0x00001f10 GLOBAL OBJ  60       s_g722_quantizer_q6_shift3
+22  0x000052ce 0x000062ce GLOBAL FUNC 22       abs32
+23  0x00005248 0x00006248 GLOBAL FUNC 40       abs_s
+24  0x000052ec 0x000062ec GLOBAL FUNC 32       clearOverflow
+25  0x000059d4 0x000069d4 GLOBAL FUNC 96       l_mult_s32xs32
+26  0x00005910 0x00006910 GLOBAL FUNC 194      l_mult_u32xs16_shift
+27  0x000053ae 0x000063ae GLOBAL FUNC 8        max_16
+28  0x00006434 0x00007434 GLOBAL FUNC 32       setOverflow
+29  0x00005eac 0x00006eac GLOBAL FUNC 336      L_shift_r
+30  0x00005278 0x00006278 GLOBAL FUNC 60       add_sat
+31  0x00005210 0x00006210 GLOBAL FUNC 56       l_saturate
+32  0x00003530 0x00004530 GLOBAL FUNC 114      G722_PLC_Repetition
+33  0x0000203a 0x0000203a GLOBAL OBJ  16       s_g722_w_lag_low
+34  0x000050e4 0x000060e4 GLOBAL FUNC 32       g722_dec_get_total_byte_size
+35  0x0000680c 0x0000780c GLOBAL FUNC 78       L_sub
+36  0x00005270 0x00006270 GLOBAL FUNC 6        add
+37  0x0000585a 0x0000685a GLOBAL FUNC 4        l_mult_su
+38  0x00006652 0x00007652 GLOBAL FUNC 6        sub64
+39  0x00005e8c 0x00006e8c GLOBAL FUNC 32       L_negate
+40  0x000052b4 0x000062b4 GLOBAL FUNC 4        and16
+41  0x0000536a 0x0000636a GLOBAL FUNC 4        extract_l40
+42  ---------- 0x0000a1d0 GLOBAL OBJ  4        giOverflow
+43  0x00006718 0x00007718 GLOBAL FUNC 110      norm32_l40
+44  0x0000202a 0x0000202a GLOBAL OBJ  16       s_g722_w_lag_high
+45  0x0000685a 0x0000785a GLOBAL FUNC 68       L_add40
+46  0x0000634c 0x0000734c GLOBAL FUNC 40       norm_l
+47  0x00006454 0x00007454 GLOBAL FUNC 272      shift_r
+48  0x00001e92 0x00001e92 GLOBAL OBJ  64       s_g722_quantizer_ilb
+49  0x00005ffc 0x00006ffc GLOBAL FUNC 144      l_shl
+50  0x00006786 0x00007786 GLOBAL FUNC 78       L_add
+51  0x00002bb4 0x00003bb4 GLOBAL FUNC 12       xa_g722_get_lib_version_string
+52  0x000043ac 0x000053ac GLOBAL FUNC 2006     G722_PLC_LPAnalysis
+53  0x00005448 0x00006448 GLOBAL FUNC 4        L_deposit_h
+54  0x000055d4 0x000065d4 GLOBAL FUNC 128      L_msu
+55  0x00006b06 0x00007b06 GLOBAL FUNC 152      L_shl40
+56  0x00005380 0x00006380 GLOBAL FUNC 22       l_abs
+57  0x00005450 0x00006450 GLOBAL FUNC 96       l_mac_sat
+58  0x0000287e 0x0000387e GLOBAL FUNC 10       xa_g722_dec_get_handle_byte_size
+59  0x00002c18 0x00003c18 GLOBAL FUNC 6        xa_g722_plc_get_handle_byte_size
+60  0x00002db6 0x00003db6 GLOBAL FUNC 296      G722_PLC_SignalClassification
+61  0x00005370 0x00006370 GLOBAL FUNC 16       isOverflow
+62  0x00005726 0x00006726 GLOBAL FUNC 98       l64_shift
+63  0x000053d6 0x000063d6 GLOBAL FUNC 6        l64_sub_s64_s64
+64  0x000035a2 0x000045a2 GLOBAL FUNC 48       G722_PLC_HPPP
+65  0x00002ba8 0x00003ba8 GLOBAL FUNC 12       xa_g722_get_lib_name_string
+66  0x000067d4 0x000077d4 GLOBAL FUNC 56       L_saturate
+67  0x00005528 0x00006528 GLOBAL FUNC 172      l_mac_shift_sat
+68  0x000051d8 0x000061d8 GLOBAL FUNC 56       saturate
+69  0x00003426 0x00004426 GLOBAL FUNC 114      G722_PLC_MutingFactorNotFirstErasure
+70  0x00003210 0x00004210 GLOBAL FUNC 188      G722_PLC_PitchRepetition
+71  0x00002d70 0x00003d70 GLOBAL FUNC 70       G722_PLC_PreProcessing
+72  0x0000204a 0x0000204a GLOBAL OBJ  18       s_g722_lpdf_coef
+73  0x0000544c 0x0000644c GLOBAL FUNC 2        L_deposit_l
+74  0x00005a34 0x00006a34 GLOBAL FUNC 274      l_mult_s32xu32_shift
+75  0x00006328 0x00007328 GLOBAL FUNC 36       negate
+76  0x00006374 0x00007374 GLOBAL FUNC 54       norm_s
+77  0x0000288c 0x0000388c GLOBAL FUNC 80       xa_g722_dec_init
+78  0x00003660 0x00004660 GLOBAL FUNC 76       G722_PLC_FP16Division
+79  0x000052b8 0x000062b8 GLOBAL FUNC 22       abs16
+80  0x00005864 0x00006864 GLOBAL FUNC 168      l_mult_s32xu16_shift
+81  0x00005e3e 0x00006e3e GLOBAL FUNC 78       l_mult_uu_shift
+82  0x0000539e 0x0000639e GLOBAL FUNC 8        min_32
+83  0x00006418 0x00007418 GLOBAL FUNC 28       popOverflow
+84  0x00002c0c 0x00003c0c GLOBAL FUNC 12       xa_g722_plc_get_lib_api_version_string
+85  0x00005362 0x00006362 GLOBAL FUNC 4        extract_h40
+86  0x000053d0 0x000063d0 GLOBAL FUNC 6        l64_add_s64_s64
+87  0x000054b0 0x000064b0 GLOBAL FUNC 120      l_mac_shift
+88  0x000053e4 0x000063e4 GLOBAL FUNC 100      l_add_sat
+89  0x00006cf8 0x00007cf8 GLOBAL FUNC 34       max_64
+90  0x00006658 0x00007658 GLOBAL FUNC 60       sub_sat
+91  0x00004b84 0x00005b84 GLOBAL FUNC 1198     G722_PLC_ExtrapolateFrame
+92  0x00002f7c 0x00003f7c GLOBAL FUNC 660      G722_PLC_RepetitionResidual
+93  0x000060f8 0x000070f8 GLOBAL FUNC 4        l_sub
+94  0x000061d8 0x000071d8 GLOBAL FUNC 188      msu_r
+95  0x000028dc 0x000038dc GLOBAL FUNC 20       G722_Decoder_Init
+96  0x000028f0 0x000038f0 GLOBAL FUNC 114      xa_g722_dec
+97  0x000035d2 0x000045d2 GLOBAL FUNC 142      G722_PLC_FP32Division
+98  0x000068d0 0x000078d0 GLOBAL FUNC 30       L_mult
+99  0x00005788 0x00006788 GLOBAL FUNC 6        s64_mult_s32_s32
+100 0x000033ea 0x000043ea GLOBAL FUNC 60       G722_PLC_MutingFactorFirstErasure
+101 0x0000689e 0x0000789e GLOBAL FUNC 50       L_saturate40
+102 ---------- 0x0000a1d4 GLOBAL OBJ  4        giOldOverflow
+103 0x00005d58 0x00006d58 GLOBAL FUNC 40       l_mult_s1_sat
+104 0x000032cc 0x000042cc GLOBAL FUNC 286      G722_PLC_LPSynthesis
+105 0x0000535c 0x0000635c GLOBAL FUNC 4        extract_h
+106 0x00002bcc 0x00003bcc GLOBAL FUNC 38       C_NSA
+107 0x000053b6 0x000063b6 GLOBAL FUNC 4        l_add
+108 0x000056b8 0x000066b8 GLOBAL FUNC 110      l_mult_s32xs16_shift
+109 0x00002970 0x00003970 GLOBAL FUNC 568      G722_DecodeFrame
+110 0x00005034 0x00006034 GLOBAL FUNC 176      G722_Decoder_QMF
+111 0x000068ee 0x000078ee GLOBAL FUNC 6        L_mult_su
+112 0x00005360 0x00006360 GLOBAL FUNC 2        extract_l32_l40
+113 0x00005654 0x00006654 GLOBAL FUNC 100      l_sub_sat
+114 0x00006bf2 0x00007bf2 GLOBAL FUNC 80       round32_16
+115 0x000025ec 0x000035ec GLOBAL FUNC 544      G722_Decoder_ADPCM
+116 0x00002c30 0x00003c30 GLOBAL FUNC 176      xa_g722_plc_init
+117 0x000053dc 0x000063dc GLOBAL FUNC 8        l64_add_s64_s32
+118 0x00006564 0x00007564 GLOBAL FUNC 124      shl
+119 0x00005366 0x00006366 GLOBAL FUNC 4        extract_l
+120 0x00005c86 0x00006c86 GLOBAL FUNC 210      l_mult_s32xs32_shift_lp
+121 0x00005396 0x00006396 GLOBAL FUNC 8        min_16
+122 0x00001e82 0x00001e82 GLOBAL OBJ  16       s_g722_quantizer_wl
+123 0x000053c6 0x000063c6 GLOBAL FUNC 10       l64_add_s32_u32
+124 0x0000585e 0x0000685e GLOBAL FUNC 6        l_mult
+125 0x000053a6 0x000063a6 GLOBAL FUNC 8        max_32
+126 0x000063aa 0x000073aa GLOBAL FUNC 110      norm_l64
+127 0x00006ce8 0x00007ce8 GLOBAL FUNC 10       s64_MpyNac_s32_s32
+128 0x000036ac 0x000046ac GLOBAL FUNC 3326     G722_PLC_LTPAnalysis
+129 0x000068f4 0x000078f4 GLOBAL FUNC 144      Mpy_32_16_round
+130 0x0000280c 0x0000380c GLOBAL FUNC 40       G722_QMF_Init
+131 0x00005104 0x00006104 GLOBAL FUNC 42       g722_init_decoder
+132 0x00006b9e 0x00007b9e GLOBAL FUNC 84       L_shift_left40
+133 0x00006a7e 0x00007a7e GLOBAL FUNC 136      L_shl
+134 0x00005c18 0x00006c18 GLOBAL FUNC 110      l_mult_s32xs32_shift
+135 0x00005d80 0x00006d80 GLOBAL FUNC 94       l_mult_su_shift
+136 0x00002ce0 0x00003ce0 GLOBAL FUNC 144      G722_PLC_Init
+137 0x000052e4 0x000062e4 GLOBAL FUNC 4        and32
+138 0x00005dde 0x00006dde GLOBAL FUNC 96       l_mult_shift
+139 0x00002ede 0x00003ede GLOBAL FUNC 158      G722_PLC_ResidualModification
+140 0x00006984 0x00007984 GLOBAL FUNC 250      L_shr40
+141 0x0000578e 0x0000678e GLOBAL FUNC 204      l_mult_s32xs16_shr
+142 0x00005b46 0x00006b46 GLOBAL FUNC 210      l_mult_s32xu32_shift_lp
+143 0x00006198 0x00007198 GLOBAL FUNC 64       qc_round
+144 0x000065e0 0x000075e0 GLOBAL FUNC 108      shr
+145 0x00001e72 0x00001e72 GLOBAL OBJ  16       s_g722_quantizer_qq4
+146 0x00002bc0 0x00003bc0 GLOBAL FUNC 12       xa_g722_get_lib_api_version_string
+147 0x00006ce0 0x00007ce0 GLOBAL FUNC 8        S_saturate
+148 0x000053ba 0x000063ba GLOBAL FUNC 12       l64_add_s32_s32
+149 0x000060fc 0x000070fc GLOBAL FUNC 156      mac_r
+150 0x00002c00 0x00003c00 GLOBAL FUNC 12       xa_g722_plc_get_lib_version_string
+151 0x0000590c 0x0000690c GLOBAL FUNC 4        l_mult_uu
+152 0x00006cf2 0x00007cf2 GLOBAL FUNC 6        s64_MpyAcc_s32_s32
+153 0x00001f4c 0x00001f4c GLOBAL OBJ  62       s_g722_quantizer_qq6
+154 0x00002834 0x00003834 GLOBAL FUNC 74       G722_ADPCM_Init
+155 0x00001ed2 0x00001ed2 GLOBAL OBJ  62       s_g722_quantizer_q6
+156 0x000052e8 0x000062e8 GLOBAL FUNC 4        complement
+157 0x000062c4 0x000072c4 GLOBAL FUNC 100      mult_r
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000174    0x18 0x00000174    0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c    0x20 0x0000018c    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0x9e0 0x000001ac   0x9e0 -r-- DYNSYM      .dynsym
+4   0x00000b8c   0x13c 0x00000b8c   0x13c -r-- GNU_VERSYM  .gnu.version
+5   0x00000cc8    0x20 0x00000cc8    0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000ce8   0x400 0x00000ce8   0x400 -r-- GNU_HASH    .gnu.hash
+7   0x000010e8   0x959 0x000010e8   0x959 -r-- STRTAB      .dynstr
+8   0x00001a44    0x37 0x00001a44    0x37 -r-- ----        .rel.dyn
+9   0x00001a7c     0x8 0x00001a7c     0x8 -r-- ----        .relr.dyn
+10  0x00001a84   0x240 0x00001a84   0x240 -r-- ----        .ARM.exidx
+11  0x00001cc4   0x130 0x00001cc4   0x130 -r-- REL         .rel.plt
+12  0x00001df4   0x268 0x00001df4   0x268 -r-- PROGBITS    .rodata
+13  0x0000205c     0xc 0x0000205c     0xc -r-- PROGBITS    .ARM.extab
+14  0x00002070  0x4d14 0x00003070  0x4d14 -r-x PROGBITS    .text
+15  0x00006d90   0x280 0x00007d90   0x280 -r-x PROGBITS    .plt
+16  0x00007010     0x4 0x00009010     0x4 -rw- PROGBITS    .data.rel.ro
+17  0x00007014     0x8 0x00009014     0x8 -rw- FINI_ARRAY  .fini_array
+18  0x0000701c    0xe0 0x0000901c    0xe0 -rw- DYNAMIC     .dynamic
+19  0x000070fc    0x30 0x000090fc    0x30 -rw- PROGBITS    .got
+20  0x0000712c    0xa4 0x0000912c    0xa4 -rw- PROGBITS    .got.plt
+21  0x000071d0     0x0 0x0000a1d0     0x8 -rw- NOBITS      .bss
+22  0x000071d0    0x4e 0x00000000    0x4e ---- ----        .ARM.attributes
+23  0x0000721e    0xfc 0x00000000    0xfc ---- STRTAB      .shstrtab
+24  0x0000731a   0x754 0x00000000   0x754 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+3   0x00000d9d 0x00000d9d 4   5    .gnu.hash           ascii   \f $
+4   0x00000e10 0x00000e10 14  60   .gnu.hash           utf32le  ',023:@AEMTWX
+5   0x00000e4c 0x00000e4c 9   40   .gnu.hash           utf32le [_dhjmswz
+6   0x00000ea8 0x00000ea8 4   5    .gnu.hash           ascii   p)X!
+7   0x00000f45 0x00000f45 5   6    .gnu.hash           ascii   U4rd=
+8   0x00000f69 0x00000f69 4   5    .gnu.hash           ascii   _Iu]
+9   0x00000f89 0x00000f89 6   9    .gnu.hash           utf8    џ ȏ8\vz
+10  0x00000fbb 0x00000fbb 4   6    .gnu.hash           utf8    \rIމR
+11  0x00000fcc 0x00000fcc 5   6    .gnu.hash           ascii   ?I\ew
+12  0x00000fdd 0x00000fdd 4   6    .gnu.hash           utf8    X(ɠg
+13  0x00000ffc 0x00000ffc 5   7    .gnu.hash           utf8    1 p+֧
+14  0x00001008 0x00001008 8   10   .gnu.hash           utf8    h.A$},χj
+15  0x00001020 0x00001020 7   8    .gnu.hash           ascii   9r|\f4eN
+16  0x0000109c 0x0000109c 4   5    .gnu.hash           ascii   R,XM
+17  0x000010e9 0x000010e9 14  15   .dynstr             ascii   __cxa_finalize
+18  0x000010f8 0x000010f8 22  23   .dynstr             ascii   G722_ADPCM_Block4_Dual
+19  0x0000110f 0x0000110f 18  19   .dynstr             ascii   G722_Decoder_ADPCM
+20  0x00001122 0x00001122 20  21   .dynstr             ascii   s_g722_quantizer_ilb
+21  0x00001137 0x00001137 20  21   .dynstr             ascii   s_g722_quantizer_qq4
+22  0x0000114c 0x0000114c 20  21   .dynstr             ascii   s_g722_quantizer_qq6
+23  0x00001161 0x00001161 19  20   .dynstr             ascii   s_g722_quantizer_wl
+24  0x00001175 0x00001175 15  16   .dynstr             ascii   G722_ADPCM_Init
+25  0x00001185 0x00001185 13  14   .dynstr             ascii   G722_QMF_Init
+26  0x00001193 0x00001193 16  17   .dynstr             ascii   G722_DecodeFrame
+27  0x000011a4 0x000011a4 17  18   .dynstr             ascii   G722_Decoder_Init
+28  0x000011b6 0x000011b6 16  17   .dynstr             ascii   G722_Decoder_QMF
+29  0x000011c7 0x000011c7 25  26   .dynstr             ascii   G722_PLC_ExtrapolateFrame
+30  0x000011e1 0x000011e1 13  14   .dynstr             ascii   G722_PLC_HPPP
+31  0x000011ef 0x000011ef 16  17   .dynstr             ascii   __stack_chk_fail
+32  0x00001200 0x00001200 17  18   .dynstr             ascii   __stack_chk_guard
+33  0x00001212 0x00001212 6   7    .dynstr             ascii   printf
+34  0x00001219 0x00001219 11  12   .dynstr             ascii   xa_g722_dec
+35  0x00001225 0x00001225 32  33   .dynstr             ascii   xa_g722_dec_get_handle_byte_size
+36  0x00001246 0x00001246 33  34   .dynstr             ascii   xa_g722_dec_get_scratch_byte_size
+37  0x00001268 0x00001268 16  17   .dynstr             ascii   xa_g722_dec_init
+38  0x00001279 0x00001279 32  33   .dynstr             ascii   xa_g722_plc_get_handle_byte_size
+39  0x0000129a 0x0000129a 33  34   .dynstr             ascii   xa_g722_plc_get_scratch_byte_size
+40  0x000012bc 0x000012bc 16  17   .dynstr             ascii   xa_g722_plc_init
+41  0x000012cd 0x000012cd 34  35   .dynstr             ascii   xa_g722_get_lib_api_version_string
+42  0x000012f0 0x000012f0 27  28   .dynstr             ascii   xa_g722_get_lib_name_string
+43  0x0000130c 0x0000130c 30  31   .dynstr             ascii   xa_g722_get_lib_version_string
+44  0x0000132b 0x0000132b 5   6    .dynstr             ascii   C_NSA
+45  0x00001331 0x00001331 26  27   .dynstr             ascii   G722_PLC_ADPCM_UpdateState
+46  0x0000134c 0x0000134c 21  22   .dynstr             ascii   G722_PLC_FP16Division
+47  0x00001362 0x00001362 21  22   .dynstr             ascii   G722_PLC_FP32Division
+48  0x00001378 0x00001378 13  14   .dynstr             ascii   G722_PLC_Init
+49  0x00001386 0x00001386 20  21   .dynstr             ascii   G722_PLC_LPSynthesis
+50  0x0000139b 0x0000139b 33  34   .dynstr             ascii   G722_PLC_MutingFactorFirstErasure
+51  0x000013bd 0x000013bd 36  37   .dynstr             ascii   G722_PLC_MutingFactorNotFirstErasure
+52  0x000013e2 0x000013e2 24  25   .dynstr             ascii   G722_PLC_PitchRepetition
+53  0x000013fb 0x000013fb 22  23   .dynstr             ascii   G722_PLC_PreProcessing
+54  0x00001412 0x00001412 19  20   .dynstr             ascii   G722_PLC_Repetition
+55  0x00001426 0x00001426 27  28   .dynstr             ascii   G722_PLC_RepetitionResidual
+56  0x00001442 0x00001442 29  30   .dynstr             ascii   G722_PLC_ResidualModification
+57  0x00001460 0x00001460 29  30   .dynstr             ascii   G722_PLC_SignalClassification
+58  0x0000147e 0x0000147e 38  39   .dynstr             ascii   xa_g722_plc_get_lib_api_version_string
+59  0x000014a5 0x000014a5 31  32   .dynstr             ascii   xa_g722_plc_get_lib_name_string
+60  0x000014c5 0x000014c5 34  35   .dynstr             ascii   xa_g722_plc_get_lib_version_string
+61  0x000014e8 0x000014e8 19  20   .dynstr             ascii   G722_PLC_LPAnalysis
+62  0x000014fc 0x000014fc 20  21   .dynstr             ascii   G722_PLC_LTPAnalysis
+63  0x00001511 0x00001511 15  16   .dynstr             ascii   s_g722_lpc_wind
+64  0x00001521 0x00001521 16  17   .dynstr             ascii   s_g722_lpdf_coef
+65  0x00001532 0x00001532 17  18   .dynstr             ascii   s_g722_w_lag_high
+66  0x00001544 0x00001544 16  17   .dynstr             ascii   s_g722_w_lag_low
+67  0x00001555 0x00001555 17  18   .dynstr             ascii   s_g722_qmf_coeffs
+68  0x00001567 0x00001567 19  20   .dynstr             ascii   s_g722_quantizer_q6
+69  0x0000157b 0x0000157b 26  27   .dynstr             ascii   s_g722_quantizer_q6_shift3
+70  0x00001596 0x00001596 28  29   .dynstr             ascii   g722_dec_get_total_byte_size
+71  0x000015b3 0x000015b3 16  17   .dynstr             ascii   g722_dec_process
+72  0x000015c4 0x000015c4 17  18   .dynstr             ascii   g722_init_decoder
+73  0x000015d6 0x000015d6 4   5    .dynstr             ascii   mult
+74  0x000015db 0x000015db 5   6    .dynstr             ascii   L_add
+75  0x000015e1 0x000015e1 7   8    .dynstr             ascii   L_add40
+76  0x000015e9 0x000015e9 11  12   .dynstr             ascii   L_deposit_h
+77  0x000015f5 0x000015f5 11  12   .dynstr             ascii   L_deposit_l
+78  0x00001601 0x00001601 5   6    .dynstr             ascii   L_mls
+79  0x00001607 0x00001607 5   6    .dynstr             ascii   L_msu
+80  0x0000160d 0x0000160d 6   7    .dynstr             ascii   L_mult
+81  0x00001614 0x00001614 9   10   .dynstr             ascii   L_mult_su
+82  0x0000161e 0x0000161e 8   9    .dynstr             ascii   L_negate
+83  0x00001627 0x00001627 10  11   .dynstr             ascii   L_saturate
+84  0x00001632 0x00001632 12  13   .dynstr             ascii   L_saturate40
+85  0x0000163f 0x0000163f 14  15   .dynstr             ascii   L_shift_left40
+86  0x0000164e 0x0000164e 9   10   .dynstr             ascii   L_shift_r
+87  0x00001658 0x00001658 5   6    .dynstr             ascii   L_shl
+88  0x0000165e 0x0000165e 7   8    .dynstr             ascii   L_shl40
+89  0x00001666 0x00001666 5   6    .dynstr             ascii   L_shr
+90  0x0000166c 0x0000166c 7   8    .dynstr             ascii   L_shr40
+91  0x00001674 0x00001674 5   6    .dynstr             ascii   L_sub
+92  0x0000167a 0x0000167a 15  16   .dynstr             ascii   Mpy_32_16_round
+93  0x0000168a 0x0000168a 10  11   .dynstr             ascii   S_saturate
+94  0x00001695 0x00001695 5   6    .dynstr             ascii   abs16
+95  0x0000169b 0x0000169b 5   6    .dynstr             ascii   abs32
+96  0x000016a1 0x000016a1 5   6    .dynstr             ascii   abs_s
+97  0x000016ab 0x000016ab 7   8    .dynstr             ascii   add_sat
+98  0x000016b3 0x000016b3 5   6    .dynstr             ascii   and16
+99  0x000016b9 0x000016b9 5   6    .dynstr             ascii   and32
+100 0x000016bf 0x000016bf 13  14   .dynstr             ascii   clearOverflow
+101 0x000016cd 0x000016cd 10  11   .dynstr             ascii   complement
+102 0x000016d8 0x000016d8 5   6    .dynstr             ascii   div_s
+103 0x000016de 0x000016de 8   9    .dynstr             ascii   divide_s
+104 0x000016e7 0x000016e7 9   10   .dynstr             ascii   extract_h
+105 0x000016f1 0x000016f1 11  12   .dynstr             ascii   extract_h40
+106 0x000016fd 0x000016fd 9   10   .dynstr             ascii   extract_l
+107 0x00001707 0x00001707 15  16   .dynstr             ascii   extract_l32_l40
+108 0x00001717 0x00001717 11  12   .dynstr             ascii   extract_l40
+109 0x00001723 0x00001723 13  14   .dynstr             ascii   giOldOverflow
+110 0x00001731 0x00001731 10  11   .dynstr             ascii   giOverflow
+111 0x0000173c 0x0000173c 10  11   .dynstr             ascii   isOverflow
+112 0x00001747 0x00001747 15  16   .dynstr             ascii   l64_add_s32_s32
+113 0x00001757 0x00001757 15  16   .dynstr             ascii   l64_add_s32_u32
+114 0x00001767 0x00001767 15  16   .dynstr             ascii   l64_add_s64_s32
+115 0x00001777 0x00001777 15  16   .dynstr             ascii   l64_add_s64_s64
+116 0x00001787 0x00001787 9   10   .dynstr             ascii   l64_shift
+117 0x00001791 0x00001791 15  16   .dynstr             ascii   l64_sub_s64_s64
+118 0x000017a1 0x000017a1 5   6    .dynstr             ascii   l_abs
+119 0x000017a7 0x000017a7 5   6    .dynstr             ascii   l_add
+120 0x000017ad 0x000017ad 9   10   .dynstr             ascii   l_add_sat
+121 0x000017b7 0x000017b7 9   10   .dynstr             ascii   l_mac_sat
+122 0x000017c1 0x000017c1 11  12   .dynstr             ascii   l_mac_shift
+123 0x000017cd 0x000017cd 15  16   .dynstr             ascii   l_mac_shift_sat
+124 0x000017dd 0x000017dd 6   7    .dynstr             ascii   l_mult
+125 0x000017e4 0x000017e4 13  14   .dynstr             ascii   l_mult_s1_sat
+126 0x000017f2 0x000017f2 20  21   .dynstr             ascii   l_mult_s32xs16_shift
+127 0x00001807 0x00001807 18  19   .dynstr             ascii   l_mult_s32xs16_shr
+128 0x0000181a 0x0000181a 14  15   .dynstr             ascii   l_mult_s32xs32
+129 0x00001829 0x00001829 20  21   .dynstr             ascii   l_mult_s32xs32_shift
+130 0x0000183e 0x0000183e 23  24   .dynstr             ascii   l_mult_s32xs32_shift_lp
+131 0x00001856 0x00001856 20  21   .dynstr             ascii   l_mult_s32xu16_shift
+132 0x0000186b 0x0000186b 20  21   .dynstr             ascii   l_mult_s32xu32_shift
+133 0x00001880 0x00001880 23  24   .dynstr             ascii   l_mult_s32xu32_shift_lp
+134 0x00001898 0x00001898 12  13   .dynstr             ascii   l_mult_shift
+135 0x000018a5 0x000018a5 9   10   .dynstr             ascii   l_mult_su
+136 0x000018af 0x000018af 15  16   .dynstr             ascii   l_mult_su_shift
+137 0x000018bf 0x000018bf 20  21   .dynstr             ascii   l_mult_u32xs16_shift
+138 0x000018d4 0x000018d4 9   10   .dynstr             ascii   l_mult_uu
+139 0x000018de 0x000018de 15  16   .dynstr             ascii   l_mult_uu_shift
+140 0x000018ee 0x000018ee 10  11   .dynstr             ascii   l_saturate
+141 0x000018f9 0x000018f9 5   6    .dynstr             ascii   l_shl
+142 0x000018ff 0x000018ff 5   6    .dynstr             ascii   l_sub
+143 0x00001905 0x00001905 9   10   .dynstr             ascii   l_sub_sat
+144 0x0000190f 0x0000190f 5   6    .dynstr             ascii   mac_r
+145 0x00001915 0x00001915 6   7    .dynstr             ascii   max_16
+146 0x0000191c 0x0000191c 6   7    .dynstr             ascii   max_32
+147 0x00001923 0x00001923 6   7    .dynstr             ascii   max_64
+148 0x0000192a 0x0000192a 6   7    .dynstr             ascii   min_16
+149 0x00001931 0x00001931 6   7    .dynstr             ascii   min_32
+150 0x00001938 0x00001938 5   6    .dynstr             ascii   msu_r
+151 0x0000193e 0x0000193e 6   7    .dynstr             ascii   mult_r
+152 0x00001945 0x00001945 6   7    .dynstr             ascii   negate
+153 0x0000194c 0x0000194c 10  11   .dynstr             ascii   norm32_l40
+154 0x00001957 0x00001957 6   7    .dynstr             ascii   norm_l
+155 0x0000195e 0x0000195e 8   9    .dynstr             ascii   norm_l64
+156 0x00001967 0x00001967 6   7    .dynstr             ascii   norm_s
+157 0x0000196e 0x0000196e 11  12   .dynstr             ascii   popOverflow
+158 0x0000197a 0x0000197a 8   9    .dynstr             ascii   qc_round
+159 0x00001983 0x00001983 10  11   .dynstr             ascii   round32_16
+160 0x0000198e 0x0000198e 18  19   .dynstr             ascii   s64_MpyAcc_s32_s32
+161 0x000019a1 0x000019a1 18  19   .dynstr             ascii   s64_MpyNac_s32_s32
+162 0x000019b4 0x000019b4 16  17   .dynstr             ascii   s64_mult_s32_s32
+163 0x000019c5 0x000019c5 8   9    .dynstr             ascii   saturate
+164 0x000019ce 0x000019ce 11  12   .dynstr             ascii   setOverflow
+165 0x000019da 0x000019da 7   8    .dynstr             ascii   shift_r
+166 0x000019ee 0x000019ee 5   6    .dynstr             ascii   sub64
+167 0x000019f4 0x000019f4 7   8    .dynstr             ascii   sub_sat
+168 0x000019fc 0x000019fc 6   7    .dynstr             ascii   memcpy
+169 0x00001a03 0x00001a03 6   7    .dynstr             ascii   memset
+170 0x00001a0a 0x00001a0a 7   8    .dynstr             ascii   libc.so
+171 0x00001a12 0x00001a12 4   5    .dynstr             ascii   LIBC
+172 0x00001a17 0x00001a17 9   10   .dynstr             ascii   libc++.so
+173 0x00001a21 0x00001a21 7   8    .dynstr             ascii   libm.so
+174 0x00001a29 0x00001a29 8   9    .dynstr             ascii   libdl.so
+175 0x00001a32 0x00001a32 14  15   .dynstr             ascii   libadpcmdec.so
+176 0x00001a44 0x00001a44 5   6    .rel.dyn            ascii   APS2\f
+177 0x00001df4 0x00001df4 24  25   .rodata             ascii   invalid input frame size
+178 0x00001e0d 0x00001e0d 21  22   .rodata             ascii   G.722 Appendix IV PLC
+179 0x00001e27 0x00001e27 17  18   .rodata             ascii   G.722 Reference C
+180 0x00001e93 0x00001e93 5   6    .rodata             ascii   \b-\b[\b
+181 0x00001ea7 0x00001ea7 5   6    .rodata             ascii   \t'\n`\n
+182 0x00001ebf 0x00001ebf 5   6    .rodata             ascii   \f+\rt\r
+183 0x00001f3f 0x00001f3f 5   6    .rodata             ascii   -`2(7
+184 0x00001f80 0x00001f80 6   7    .rodata             ascii   Q\a(\bH\t
+185 0x00001f89 0x00001f89 7   8    .rodata             ascii   \f=\nM\n|\n
+186 0x00001f95 0x00001f95 5   6    .rodata             ascii   \vl\f4\r
+187 0x00001fb3 0x00001fb3 5   6    .rodata             ascii   !*#c%
+188 0x00001fb9 0x00001fb9 5   6    .rodata             ascii   '\b*p,
+189 0x00001fcf 0x00001fcf 5   6    .rodata             ascii   CuF#I
+190 0x00001feb 0x00001feb 11  12   .rodata             ascii   g:iNkNm9o\rq
+191 0x00002003 0x00002003 5   6    .rodata             ascii   {"|\b}
+192 0x00002035 0x00002035 5   6    .rodata             ascii   z5y5w
+193 0x00002043 0x00002043 5   6    .rodata             ascii   ^@q@_
+194 0x00002055 0x00002055 4   5    .rodata             ascii   'M!.
+195 0x0000213b 0x0000313a 4   5    .text               ascii   ?\vF\b
+196 0x00002153 0x00003152 4   5    .text               ascii   ?\vF\b
+197 0x00002167 0x00003166 4   5    .text               ascii   ?\vF\b
+198 0x0000238f 0x0000338e 4   6    .text               utf8    Bȿ+F
+199 0x000023a2 0x000033a2 4   5    .text               ascii   pW@E
+200 0x000023b9 0x000033b8 5   7    .text               utf8    Bȿ!FO
+201 0x00002512 0x00003512 5   7    .text               utf8    IEؿIF
+202 0x000025b0 0x000035b0 5   7    .text               utf8    HEؿHF
+203 0x000025d3 0x000035d2 4   6    .text               utf8    0HEȿ
+204 0x00002640 0x00003640 7   8    .text               ascii   \b\f|D$h4
+205 0x00002657 0x00003656 5   6    .text               ascii   \f|D&h
+206 0x00002667 0x00003666 6   7    .text               ascii   \f|D$h4
+207 0x0000267d 0x0000367c 4   5    .text               ascii   \vXF
+208 0x000026b3 0x000036b2 4   5    .text               ascii   $>)\b
+209 0x000026b9 0x000036b8 6   7    .text               ascii   $QI]FC
+210 0x000026c1 0x000036c0 6   7    .text               ascii   yyD\th1
+211 0x000026f3 0x000036f2 6   8    .text               utf8    Oؿ<FLE
+212 0x00002714 0x00003714 4   5    .text               ascii   ;N\n"
+213 0x0000272c 0x0000372c 5   6    .text               ascii   ~D6h6
+214 0x000027df 0x000037de 6   8    .text               utf8    Oȿ\aFOE
+215 0x00002830 0x00003830 4   5    .text               ascii   O\npG
+216 0x00002835 0x00003834 5   6    .text               ascii   ! "\b#
+217 0x0000287a 0x0000387a 4   5    .text               ascii   O\npG
+218 0x00002985 0x00003984 4   5    .text               ascii   h(h\n
+219 0x00002a64 0x00003a64 4   5    .text               ascii   )FJF
+220 0x00002b1a 0x00003b1a 5   6    .text               ascii   9x*F\r
+221 0x00002ba9 0x00003ba8 5   6    .text               ascii   HxDpG
+222 0x00002bb5 0x00003bb4 5   6    .text               ascii   HxDpG
+223 0x00002bc1 0x00003bc0 5   6    .text               ascii   HxDpG
+224 0x00002bd3 0x00003bd2 4   5    .text               ascii    pGO
+225 0x00002bee 0x00003bee 4   5    .text               ascii   \bFpG
+226 0x00002bf5 0x00003bf4 5   6    .text               ascii   HxDpG
+227 0x00002c01 0x00003c00 5   6    .text               ascii   HxDpG
+228 0x00002c0d 0x00003c0c 5   6    .text               ascii   HxDpG
+229 0x00002c1b 0x00003c1a 4   5    .text               ascii   `pGO
+230 0x00002c20 0x00003c20 4   5    .text               ascii   zppG
+231 0x00002d0d 0x00003d0c 4   5    .text               ascii   !\n"@
+232 0x00002da5 0x00003da4 4   5    .text               ascii   D$\f!
+233 0x00002dcf 0x00003dce 5   7    .text               utf8    6P.\vе
+234 0x00002e30 0x00003e30 4   5    .text               ascii   B"kB
+235 0x00002e93 0x00003e92 4   6    .text               utf8    Bȿ>F
+236 0x00002f2d 0x00003f2c 4   6    .text               utf8    Bȿ"F
+237 0x00002f3f 0x00003f3e 4   6    .text               utf8    Bȿ\vF
+238 0x00002f6f 0x00003f6e 5   7    .text               utf8    ?ȿ\vF,
+239 0x00003088 0x00004088 6   7    .text               ascii   )F:F3F
+240 0x000030cf 0x000040ce 4   5    .text               ascii   1[B2
+241 0x000030f3 0x000040f2 4   5    .text               ascii   F\b)<
+242 0x00003120 0x00004120 4   5    .text               ascii   M\ndE
+243 0x000031c6 0x000041c6 4   6    .text               utf8    PE\rݠ
+244 0x00003231 0x00004230 4   5    .text               ascii   2IB\f
+245 0x00003258 0x00004258 5   6    .text               ascii   \nF\b*)
+246 0x00003283 0x00004282 4   7    .text               utf8    тB ڣ
+247 0x00003296 0x00004296 4   5    .text               ascii   rE\nF
+248 0x00003317 0x00004316 4   5    .text               ascii   F<F"
+249 0x0000337e 0x0000437e 4   5    .text               ascii   \f0'F
+250 0x000034c6 0x000044c6 5   6    .text               ascii   |D$h4
+251 0x000034ee 0x000044ee 4   5    .text               ascii   PBd\b
+252 0x000034f8 0x000044f8 4   5    .text               ascii   NBd\b
+253 0x00003580 0x00004580 4   5    .text               ascii   *F@F
+254 0x00003588 0x00004588 6   7    .text               ascii   HF!F*F
+255 0x00003592 0x00004592 6   7    .text               ascii    FAF*F
+256 0x000036bf 0x000046be 5   6    .text               ascii   !PHxD
+257 0x000036fc 0x000046fc 4   5    .text               ascii   xD\ah
+258 0x00003826 0x00004826 4   7    .text               utf8    M! ﰁ
+259 0x00003aba 0x00004aba 4   5    .text               ascii   VaE%
+260 0x00003ada 0x00004ada 4   5    .text               ascii   4"QC
+261 0x00003ae1 0x00004ae0 4   5    .text               ascii   A\n\fO
+262 0x00003b50 0x00004b50 4   6    .text               utf8    ƀNF\t
+263 0x00003d33 0x00004d32 5   6    .text               ascii   :+F")
+264 0x00003e6f 0x00004e6e 5   8    .text               utf8    BȿCFȿ
+265 0x0000412e 0x0000512e 4   5    .text               ascii   MJ\b7
+266 0x0000417b 0x0000517a 4   5    .text               ascii   'XF4
+267 0x000041c1 0x000051c0 4   5    .text               ascii    \b@\b
+268 0x0000429c 0x0000529c 6   7    .text               ascii   XE\bF9F
+269 0x000042d0 0x000052d0 4   5    .text               ascii   MJ\b1
+270 0x00004407 0x00005406 4   5    .text               ascii   \n  B
+271 0x00004413 0x00005412 4   6    .text               utf8    `+݆O
+272 0x0000444c 0x0000544c 4   5    .text               ascii   Pb\b3
+273 0x00004475 0x00005474 4   5    .text               ascii   "9hO
+274 0x000044ad 0x000054ac 7   9    .text               utf8    7+FZE2з
+275 0x000044df 0x000054de 4   5    .text               ascii   "AFa
+276 0x000044e4 0x000054e4 4   5    .text               ascii   O\n\b2
+277 0x000044f7 0x000054f6 7   8    .text               ascii   #GF1F^E
+278 0x000045cc 0x000055cc 5   6    .text               ascii   MJ\b6c
+279 0x00004647 0x00005646 6   7    .text               ascii   TyD\th4
+280 0x00004665 0x00005664 6   7    .text               ascii   K{D\eh3
+281 0x00004782 0x00005782 4   5    .text               ascii   qF/F
+282 0x0000478e 0x0000578e 4   5    .text               ascii   MJ\b3
+283 0x000047dc 0x000057dc 5   6    .text               ascii   A\a?\f.
+284 0x000047e6 0x000057e6 4   5    .text               ascii   bE:F
+285 0x00004871 0x00005870 7   8    .text               ascii   0JCYCXC
+286 0x000048fe 0x000058fe 4   5    .text               ascii   P ^F
+287 0x0000496f 0x0000596e 4   5    .text               ascii   \bLE`
+288 0x00004a52 0x00005a52 4   5    .text               ascii   \aFW^
+289 0x00004a7b 0x00005a7a 5   6    .text               ascii   ;SE3F
+290 0x00004ab1 0x00005ab0 4   5    .text               ascii   \n\b6e
+291 0x00004b13 0x00005b12 4   5    .text               ascii   #>FY
+292 0x00004b56 0x00005b56 5   6    .text               ascii   A\a?\f
+293 0x00004c02 0x00005c02 6   7    .text               ascii   R$1F F
+294 0x00004d02 0x00005d02 4   5    .text               ascii   P \b!
+295 0x00004da8 0x00005da8 4   5    .text               ascii    F:F
+296 0x00004df1 0x00005df0 4   5    .text               ascii   FHFE
+297 0x00004e08 0x00005e08 4   5    .text               ascii   R+:F
+298 0x00004e16 0x00005e16 4   5    .text               ascii   @F3F
+299 0x00004e74 0x00005e74 4   5    .text               ascii   1F0F
+300 0x00004e9f 0x00005e9e 5   6    .text               ascii   F F)F
+301 0x00004eb8 0x00005eb8 4   5    .text               ascii    F)F
+302 0x00004efa 0x00005efa 8   9    .text               ascii   @F)F"F3F
+303 0x00004f1e 0x00005f1e 6   7    .text               ascii   @F)F"F
+304 0x00004f2e 0x00005f2e 6   7    .text               ascii   )F"F3F
+305 0x00004fcf 0x00005fce 5   6    .text               ascii   \nZFEE
+306 0x00005050 0x00006050 4   5    .text               ascii   #IyD
+307 0x000050a3 0x000060a2 4   6    .text               utf8    O.Fȿ
+308 0x000050f6 0x000060f6 6   7    .text               ascii   (D\f0 `
+309 0x0000513d 0x0000613c 4   5    .text               ascii   F\rF7
+310 0x00005186 0x00006186 4   5    .text               ascii   9F#F
+311 0x00005206 0x00006206 4   5    .text               ascii   pG>/
+312 0x00005235 0x00006234 9   10   .text               ascii   "yD\th\n`pG
+313 0x000052b4 0x000062b4 4   5    .text               ascii   \b@pG
+314 0x000052df 0x000062de 9   10   .text               ascii   A\bFpG\b@pG
+315 0x000052f3 0x000062f2 5   6    .text               ascii   h\bh\n`
+316 0x000052f9 0x000062f8 9   10   .text               ascii   IyD\th\b`pG
+317 0x0000535e 0x0000635e 4   5    .text               ascii   pGpG
+318 0x00005391 0x00006390 5   6    .text               ascii   A\bFpG
+319 0x0000539a 0x0000639a 4   5    .text               ascii   \bFpG
+320 0x000053a2 0x000063a2 4   5    .text               ascii   \bFpG
+321 0x000053a7 0x000063a6 6   8    .text               utf8    Bؿ\bFpG
+322 0x000053af 0x000063ae 10  12   .text               utf8    Bؿ\bFpG\bDpG
+323 0x000053d2 0x000063d2 4   5    .text               ascii   YApG
+324 0x000053e0 0x000063e0 4   5    .text               ascii   YApG
+325 0x00005417 0x00006416 4   5    .text               ascii   @pGo
+326 0x00005437 0x00006436 7   8    .text               ascii   @pG`FpG
+327 0x0000544a 0x0000644a 4   5    .text               ascii   pGpG
+328 0x0000547f 0x0000647e 4   5    .text               ascii   @pGo
+329 0x0000549f 0x0000649e 7   8    .text               ascii   @pG`FpG
+330 0x000054f8 0x000064f8 4   6    .text               utf8    ؿ.F\f
+331 0x00005570 0x00006570 4   6    .text               utf8    ؿ.F\f
+332 0x000055bb 0x000065ba 7   8    .text               ascii   "yD\th\n`
+333 0x00005623 0x00006622 4   5    .text               ascii   @pGo
+334 0x00005643 0x00006642 7   8    .text               ascii   @pG`FpG
+335 0x00005687 0x00006686 4   5    .text               ascii   @pGo
+336 0x000056a7 0x000066a6 7   8    .text               ascii   @pG`FpG
+337 0x000056f9 0x000066f8 4   6    .text               utf8    *ؿ(F
+338 0x0000571f 0x0000671e 4   6    .text               utf8    *ؿ!F
+339 0x0000577f 0x0000677e 4   6    .text               utf8    *ؿ\bF
+340 0x000057fb 0x000067fa 4   5    .text               ascii   \b<FX
+341 0x00005803 0x00006802 7   9    .text               utf8    (ȿ4FVB#
+342 0x00005828 0x00006828 4   6    .text               utf8    ؿ+F\a
+343 0x0000585a 0x0000685a 4   5    .text               ascii   HCpG
+344 0x0000589b 0x0000689a 4   5    .text               ascii   FHC
+345 0x000058b7 0x000068b6 7   9    .text               utf8    *ȿ!FTB
+346 0x000058d7 0x000068d6 4   6    .text               utf8    *ؿ0F
+347 0x000058ff 0x000068fe 4   6    .text               utf8    *ؿ#F
+348 0x0000590c 0x0000690c 5   6    .text               ascii   HCpG-
+349 0x00005973 0x00006972 4   6    .text               utf8    *ȿ1F
+350 0x0000599d 0x0000699c 4   6    .text               utf8    *ؿ F
+351 0x000059c3 0x000069c2 4   6    .text               utf8    *ؿ\vF
+352 0x00005ab5 0x00006ab4 5   7    .text               utf8    *ؿ(F\t
+353 0x00005add 0x00006adc 4   6    .text               utf8    )ؿ5F
+354 0x00005b19 0x00006b18 5   7    .text               utf8    *ȿ/F
+355 0x00005b35 0x00006b34 4   6    .text               utf8    *ؿ\bF
+356 0x00005ba8 0x00006ba8 4   5    .text               ascii   %K9C
+357 0x00005bbd 0x00006bbc 7   9    .text               utf8    *ؿ!F\t\fA
+358 0x00005bed 0x00006bec 5   7    .text               utf8    *ȿ%F!
+359 0x00005c09 0x00006c08 4   6    .text               utf8    *ؿ8F
+360 0x00005c59 0x00006c58 4   6    .text               utf8    *ؿ(F
+361 0x00005c7f 0x00006c7e 4   6    .text               utf8    *ؿ!F
+362 0x00005c9e 0x00006c9e 5   6    .text               ascii   sCeC
+363 0x00005cde 0x00006cde 5   7    .text               utf8     \tؿ=F
+364 0x00005d01 0x00006d00 7   9    .text               utf8    *ؿ4F&\f,
+365 0x00005d2d 0x00006d2c 5   7    .text               utf8    *ȿ=F
+366 0x00005d49 0x00006d48 4   6    .text               utf8    *ؿ\bF
+367 0x00005e44 0x00006e44 4   5    .text               ascii   ACPB
+368 0x00005e85 0x00006e84 4   6    .text               utf8    *ȿ!F
+369 0x00005e9f 0x00006e9e 7   8    .text               ascii   @pG@BpG
+370 0x00005f75 0x00006f74 8   9    .text               ascii   (yD\th\v`O
+371 0x00005fa1 0x00006fa0 5   7    .text               utf8    u+C\rб
+372 0x0000603f 0x0000703e 9   11   .text               utf8    (yD\th\n`ȿo
+373 0x000060a9 0x000070a8 5   6    .text               ascii   1\bFpG
+374 0x000060b9 0x000070b8 8   9    .text               ascii   (yD\th\n`O
+375 0x000060c9 0x000070c8 6   7    .text               ascii   A\bFpG@
+376 0x000060e5 0x000070e4 8   9    .text               ascii   F\bFpGIB\t
+377 0x00006182 0x00007182 5   6    .text               ascii   pGaF\b
+378 0x000061ca 0x000071ca 5   6    .text               ascii   pGaF\b
+379 0x0000627e 0x0000727e 4   5    .text               ascii   pG`F
+380 0x00006318 0x00007318 5   6    .text               ascii   pGaF\b
+381 0x0000633e 0x0000733e 4   5    .text               ascii   pG@B
+382 0x00006427 0x00007426 5   6    .text               ascii   h\n`pG
+383 0x0000643b 0x0000743a 5   6    .text               ascii   h\bh\n`
+384 0x00006441 0x00007440 9   10   .text               ascii   IyD\th\b`pG
+385 0x0000648b 0x0000748a 5   6    .text               ascii   ({D\eh
+386 0x000064fb 0x000074fa 8   9    .text               ascii   (yD\th\n`H
+387 0x00006591 0x00007590 8   9    .text               ascii   (yD\th\n`H
+388 0x000065b4 0x000075b4 4   5    .text               ascii   pGIB
+389 0x00006607 0x00007606 8   9    .text               ascii   (yD\th\n`H
+390 0x0000663e 0x0000763e 5   6    .text               ascii   pGIB\t
+391 0x00006655 0x00007654 4   5    .text               ascii   ApG@
+392 0x000066e7 0x000076e6 4   5    .text               ascii   @pGo
+393 0x00006707 0x00007706 7   8    .text               ascii   @pG`FpG
+394 0x00006807 0x00007806 5   6    .text               ascii   F\bFpG
+395 0x000068a7 0x000078a6 4   5    .text               ascii   !pGo
+396 0x000068c8 0x000078c8 4   5    .text               ascii   \vF`F
+397 0x000068cd 0x000078cc 4   5    .text               ascii   FpGH
+398 0x000068eb 0x000078ea 5   6    .text               ascii   @pGHC
+399 0x0000694b 0x0000794a 4   5    .text               ascii   "HBs
+400 0x00006b0e 0x00007b0e 4   5    .text               ascii   '\f(*
+401 0x00006cbb 0x00007cba 4   5    .text               ascii   u+C\b
+402 0x00006d45 0x00007d44 4   5    .text               ascii   D`G@
+403 0x00006d51 0x00007d50 4   5    .text               ascii   D`G@
+404 0x00006d5d 0x00007d5c 4   5    .text               ascii   D`G@
+405 0x00006d69 0x00007d68 4   5    .text               ascii   D`G@
+406 0x00006d75 0x00007d74 4   5    .text               ascii   D`G@
+407 0x000071d5 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+408 0x000071e0 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+409 0x000071e7 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+410 0x0000721f 0x00000001 11  12   .shstrtab           ascii   .fini_array
+411 0x0000722b 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+412 0x00007236 0x00000018 5   6    .shstrtab           ascii   .text
+413 0x0000723c 0x0000001e 4   5    .shstrtab           ascii   .got
+414 0x00007241 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+415 0x00007255 0x00000037 8   9    .shstrtab           ascii   .got.plt
+416 0x0000725e 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+417 0x00007267 0x00000049 4   5    .shstrtab           ascii   .bss
+418 0x0000726c 0x0000004e 15  16   .shstrtab           ascii   .ARM.attributes
+419 0x0000727c 0x0000005e 7   8    .shstrtab           ascii   .dynstr
+420 0x00007284 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+421 0x00007293 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+422 0x000072a0 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+423 0x000072aa 0x0000008c 8   9    .shstrtab           ascii   .rel.dyn
+424 0x000072b3 0x00000095 12  13   .shstrtab           ascii   .gnu.version
+425 0x000072c0 0x000000a2 7   8    .shstrtab           ascii   .dynsym
+426 0x000072c8 0x000000aa 9   10   .shstrtab           ascii   .gnu.hash
+427 0x000072d2 0x000000b4 18  19   .shstrtab           ascii   .note.gnu.build-id
+428 0x000072e5 0x000000c7 8   9    .shstrtab           ascii   .dynamic
+429 0x000072ee 0x000000d0 10  11   .shstrtab           ascii   .ARM.extab
+430 0x000072f9 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+431 0x00007303 0x000000e5 7   8    .shstrtab           ascii   .rodata
+432 0x0000730b 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+433 0x0000731b 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+434 0x0000734c 0x00000032 4   5    .gnu_debugdata      ascii   4 t'
+435 0x000073c0 0x000000a6 4   5    .gnu_debugdata      ascii   x:7O
+436 0x000073d2 0x000000b8 5   8    .gnu_debugdata      utf8    ѶՉV-N
+437 0x000073f6 0x000000dc 4   6    .gnu_debugdata      utf8    c4X͈
+438 0x0000740c 0x000000f2 7   8    .gnu_debugdata      ascii   %\XWf`\r
+439 0x0000741c 0x00000102 4   5    .gnu_debugdata      ascii   \f1f]
+440 0x0000746c 0x00000152 4   5    .gnu_debugdata      ascii   \t@w&
+441 0x00007496 0x0000017c 4   5    .gnu_debugdata      ascii   ,Z<b
+442 0x0000751b 0x00000201 4   5    .gnu_debugdata      ascii   q\nJ\b
+443 0x0000752b 0x00000211 6   7    .gnu_debugdata      ascii   \f'P_h!
+444 0x00007538 0x0000021e 4   8    .gnu_debugdata      utf8    $8𝝨@
+445 0x00007581 0x00000267 5   7    .gnu_debugdata      utf8    l'*~ǽ
+446 0x000075d5 0x000002bb 4   5    .gnu_debugdata      ascii   oP\fU
+447 0x000075fa 0x000002e0 4   5    .gnu_debugdata      ascii   3VNr
+448 0x00007655 0x0000033b 4   5    .gnu_debugdata      ascii   # o*
+449 0x0000766b 0x00000351 4   5    .gnu_debugdata      ascii   ]I#I
+450 0x00007684 0x0000036a 6   8    .gnu_debugdata      utf8    LӸ|^?4
+451 0x0000769b 0x00000381 5   6    .gnu_debugdata      ascii   }}-$(
+452 0x000076a4 0x0000038a 4   5    .gnu_debugdata      ascii   \t\f'`
+453 0x000076b7 0x0000039d 5   8    .gnu_debugdata      utf8    wgҰƿS
+454 0x000076c6 0x000003ac 6   7    .gnu_debugdata      ascii   Px@P4L
+455 0x000076d1 0x000003b7 4   6    .gnu_debugdata      utf8    0:Sښ
+456 0x00007720 0x00000406 6   7    .gnu_debugdata      ascii   7D\bnH)
+457 0x00007748 0x0000042e 4   5    .gnu_debugdata      ascii   L"7\t
+458 0x0000776c 0x00000452 4   6    .gnu_debugdata      utf8    clѥc
+459 0x00007780 0x00000466 5   6    .gnu_debugdata      ascii   "D0t>
+460 0x00007788 0x0000046e 4   5    .gnu_debugdata      ascii   9e4c
+461 0x000077d4 0x000004ba 4   5    .gnu_debugdata      ascii   ] ><
+462 0x000077e5 0x000004cb 10  12   .gnu_debugdata      utf8    &=[~#`5:VǑ
+463 0x0000786c 0x00000552 4   5    .gnu_debugdata      ascii   }\Mr
+464 0x000078a2 0x00000588 6   8    .gnu_debugdata      utf8    g3wSͷ0
+465 0x000078ee 0x000005d4 7   8    .gnu_debugdata      ascii   K- '_q\a
+466 0x000078f6 0x000005dc 4   5    .gnu_debugdata      ascii   "2X;
+467 0x00007906 0x000005ec 4   8    .gnu_debugdata      utf8    àFᵸY
+468 0x00007947 0x0000062d 5   6    .gnu_debugdata      ascii   ~GL|8
+469 0x00007982 0x00000668 5   7    .gnu_debugdata      utf8    3hgzل
+470 0x000079c5 0x000006ab 5   7    .gnu_debugdata      utf8    0Х\ezZ
+471 0x000079d7 0x000006bd 4   6    .gnu_debugdata      utf8    Dͳ3;
+472 0x00007a46 0x0000072c 4   5    .gnu_debugdata      ascii   \ak\e~
+0x00007da4    1     24 sym.imp.__cxa_finalize
+0x00007e40    1     12 sym.imp.__stack_chk_fail
+0x00007e10    1     12 sym.imp.printf
+0x00007f54    1      8 sym.imp.memcpy
+0x00007f60    1     12 sym.imp.memset
+0x00003070    2     20 entry0
+0x00003888    2     16 sym.xa_g722_dec_get_scratch_byte_size
+0x00007694    7    122 sym.L_mls
+0x0000708c   10    114 sym.L_shr
+0x0000630c    8     70 sym.divide_s
+0x00003082   26   1386 sym.G722_ADPCM_Block4_Dual
+0x00003bf4    1      6 sym.xa_g722_plc_get_lib_name_string
+0x0000612e   14    170 sym.g722_dec_process
+0x00007294    4     42 sym.mult
+0x00003c1e    1      6 sym.xa_g722_plc_get_scratch_byte_size
+0x00007c42   10    158 sym.div_s
+0x0000764c    1      6 sym.sub
+0x00004498    6    146 sym.G722_PLC_ADPCM_UpdateState
+0x000062ce    1     22 sym.abs32
+0x00006248    3     36 sym.abs_s
+0x000062ec    1     22 sym.clearOverflow
+0x000069d4    3     92 sym.l_mult_s32xs32
+0x00006910    1    194 sym.l_mult_u32xs16_shift
+0x000063ae    1      8 sym.max_16
+0x00007434    1     22 sym.setOverflow
+0x00006eac   30    324 sym.L_shift_r
+0x00006278    5     50 sym.add_sat
+0x00006210    5     50 sym.l_saturate
+0x00004530    4    114 sym.G722_PLC_Repetition
+0x000060e4    1     32 sym.g722_dec_get_total_byte_size
+0x00007f70    1     12 fcn.00007f70
+0x00007f80    1     12 fcn.00007f80
+0x0000780c    1     78 sym.L_sub
+0x00006270    1      6 sym.add
+0x0000685a    1      4 sym.l_mult_su
+0x00007652    1      6 sym.sub64
+0x00006e8c    3     26 sym.L_negate
+0x000062b4    1      4 sym.and16
+0x0000636a    1      4 sym.extract_l40
+0x00007718    7    110 sym.norm32_l40
+0x0000785a    1     68 sym.L_add40
+0x0000734c    8     40 sym.norm_l
+0x00007454   21    260 sym.shift_r
+0x00006ffc   13    140 sym.l_shl
+0x00007786    1     78 sym.L_add
+0x00003bb4    1      6 sym.xa_g722_get_lib_version_string
+0x000053ac   84   1988 sym.G722_PLC_LPAnalysis
+0x00006448    1      4 sym.L_deposit_h
+0x000065d4   10    118 sym.L_msu
+0x00007b06   10    164 sym.L_shl40
+0x00006380    1     22 sym.l_abs
+0x00006450    7     86 sym.l_mac_sat
+0x0000387e    1     10 sym.xa_g722_dec_get_handle_byte_size
+0x00007dd0    1     12 fcn.00007dd0
+0x00003c18    1      6 sym.xa_g722_plc_get_handle_byte_size
+0x00003db6   16    296 sym.G722_PLC_SignalClassification
+0x00006370    1     10 sym.isOverflow
+0x00006726    1     98 sym.l64_shift
+0x000063d6    1      6 sym.l64_sub_s64_s64
+0x000045a2    1     48 sym.G722_PLC_HPPP
+0x00003ba8    1      6 sym.xa_g722_get_lib_name_string
+0x000077d4    1     56 sym.L_saturate
+0x00006528    5    168 sym.l_mac_shift_sat
+0x000061d8    5     48 sym.saturate
+0x00004426    7    114 sym.G722_PLC_MutingFactorNotFirstErasure
+0x00004210   20    188 sym.G722_PLC_PitchRepetition
+0x00003d70    3     70 sym.G722_PLC_PreProcessing
+0x0000644c    1      2 sym.L_deposit_l
+0x00006a34    1    274 sym.l_mult_s32xu32_shift
+0x00007328    3     30 sym.negate
+0x00007374    9     54 sym.norm_s
+0x0000388c    7     80 sym.xa_g722_dec_init
+0x00004660    7     76 sym.G722_PLC_FP16Division
+0x000062b8    1     22 sym.abs16
+0x00006864    1    168 sym.l_mult_s32xu16_shift
+0x00006e3e    1     78 sym.l_mult_uu_shift
+0x0000639e    1      8 sym.min_32
+0x00007418    1     20 sym.popOverflow
+0x00003c0c    1      6 sym.xa_g722_plc_get_lib_api_version_string
+0x00006362    1      4 sym.extract_h40
+0x000063d0    1      6 sym.l64_add_s64_s64
+0x000064b0    1    120 sym.l_mac_shift
+0x000063e4    7     90 sym.l_add_sat
+0x00007cf8    1     34 sym.max_64
+0x00007658    5     50 sym.sub_sat
+0x00005b84   24   1194 sym.G722_PLC_ExtrapolateFrame
+0x00003f7c   28    660 sym.G722_PLC_RepetitionResidual
+0x000070f8    1      4 sym.l_sub
+0x000071d8   14    174 sym.msu_r
+0x000038dc    2     32 sym.G722_Decoder_Init
+0x00007e00    1     12 fcn.00007e00
+0x000038f0   14    114 sym.xa_g722_dec
+0x000045d2    6    142 sym.G722_PLC_FP32Division
+0x000078d0    1     30 sym.L_mult
+0x00006788    1      6 sym.s64_mult_s32_s32
+0x000043ea    3     60 sym.G722_PLC_MutingFactorFirstErasure
+0x0000789e    3     50 sym.L_saturate40
+0x00006d58    4     36 sym.l_mult_s1_sat
+0x000042cc   13    286 sym.G722_PLC_LPSynthesis
+0x0000635c    1      4 sym.extract_h
+0x00003bcc    6     38 sym.C_NSA
+0x000063b6    1      4 sym.l_add
+0x000066b8    1    110 sym.l_mult_s32xs16_shift
+0x00003970   24    574 sym.G722_DecodeFrame
+0x00007d1c    2     16 sym.__aeabi_memcpy
+0x00007e50    1     12 fcn.00007e50
+0x00007e60    1     12 fcn.00007e60
+0x00007e70    1     12 fcn.00007e70
+0x00007e80    1     12 fcn.00007e80
+0x00006034    3    170 sym.G722_Decoder_QMF
+0x000078ee    1      6 sym.L_mult_su
+0x00006360    1      2 sym.extract_l32_l40
+0x00006654    7     90 sym.l_sub_sat
+0x00007bf2    1     80 sym.round32_16
+0x000035ec   12    520 sym.G722_Decoder_ADPCM
+0x00003c30    3    130 sym.xa_g722_plc_init
+0x00007d30    2     24 sym.__aeabi_memclr
+0x000063dc    1      8 sym.l64_add_s64_s32
+0x00007564    9    118 sym.shl
+0x00006366    1      4 sym.extract_l
+0x00006c86    1    210 sym.l_mult_s32xs32_shift_lp
+0x00006396    1      8 sym.min_16
+0x000063c6    1     10 sym.l64_add_s32_u32
+0x0000685e    1      6 sym.l_mult
+0x000063a6    1      8 sym.max_32
+0x000073aa    7    110 sym.norm_l64
+0x00007ce8    1     10 sym.s64_MpyNac_s32_s32
+0x000046ac   67   3320 sym.G722_PLC_LTPAnalysis
+0x000078f4    1    144 sym.Mpy_32_16_round
+0x0000380c    1     40 sym.G722_QMF_Init
+0x00006104    3     42 sym.g722_init_decoder
+0x00007f90    1     12 fcn.00007f90
+0x00007b9e    8     84 sym.L_shift_left40
+0x00007a7e   13    136 sym.L_shl
+0x00006c18    1    110 sym.l_mult_s32xs32_shift
+0x00006d80    1     94 sym.l_mult_su_shift
+0x00003ce0    1    106 sym.G722_PLC_Init
+0x000062e4    1      4 sym.and32
+0x00006dde    1     96 sym.l_mult_shift
+0x00003ede    7    158 sym.G722_PLC_ResidualModification
+0x00007984   19    250 sym.L_shr40
+0x0000678e    1    204 sym.l_mult_s32xs16_shr
+0x00006b46    1    210 sym.l_mult_s32xu32_shift_lp
+0x00007198    5     58 sym.qc_round
+0x000075e0   10    116 sym.shr
+0x00003bc0    1      6 sym.xa_g722_get_lib_api_version_string
+0x00007ce0    1      8 sym.S_saturate
+0x000063ba    1     12 sym.l64_add_s32_s32
+0x000070fc   11    142 sym.mac_r
+0x00003c00    1      6 sym.xa_g722_plc_get_lib_version_string
+0x0000690c    1      4 sym.l_mult_uu
+0x00007cf2    1      6 sym.s64_MpyAcc_s32_s32
+0x00003834    1     74 sym.G722_ADPCM_Init
+0x000062e8    1      4 sym.complement
+0x000072c4    9     92 sym.mult_r
+0x0000307e    2      6 entry.fini0
+0x00007dc0    1     12 fcn.00007dc0
+0x00007df0    1     12 fcn.00007df0
+0x00007e20    1     12 fcn.00007e20
+0x00007e30    1     12 fcn.00007e30
+0x00007e90    1     12 fcn.00007e90
+0x00007ea0    1     12 fcn.00007ea0
+0x00007eb0    1     12 fcn.00007eb0
+0x00007ec0    1     12 fcn.00007ec0
+0x00007ed0    1     12 fcn.00007ed0
+0x00007ee0    1     12 fcn.00007ee0
+0x00007ef0    1     12 fcn.00007ef0
+0x00007f00    1     12 fcn.00007f00
+0x00007f10    1     12 fcn.00007f10
+0x00007f20    1     12 fcn.00007f20
+0x00007f30    1     12 fcn.00007f30
+0x00007f40    1     12 fcn.00007f40
+0x00007f50    1      4 fcn.00007f50
+0x00007fa0    1     12 fcn.00007fa0
+0x00007fb0    1     12 fcn.00007fb0

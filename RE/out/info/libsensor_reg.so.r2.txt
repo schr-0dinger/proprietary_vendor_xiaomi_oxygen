@@ -1,0 +1,262 @@
+arch     arm
+baddr    0x0
+binsz    22345
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                      demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+21  0x00003140 0x00003140 GLOBAL FUNC 320      JNI_OnLoad
+22  0x00003138 0x00003138 GLOBAL FUNC 8        Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_close
+23  0x00002f64 0x00002f64 GLOBAL FUNC 296      Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_getRegistryValue
+24  0x00003134 0x00003134 GLOBAL FUNC 4        Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_open
+25  0x00002edc 0x00002edc GLOBAL FUNC 136      Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_setRegistryValue
+26  0x00002014 0x00002014 GLOBAL FUNC 1196     sensor_reg_rcv_msg
+27  0x00002938 0x00002938 GLOBAL FUNC 1220     sensor_reg_write
+28  0x00002ed4 0x00002ed4 GLOBAL FUNC 8        sensor_reg_close
+29  0x00002dfc 0x00002dfc GLOBAL FUNC 216      sensor_reg_open
+30  0x000024c0 0x000024c0 GLOBAL FUNC 1144     sensor_reg_read
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000238   0x2e8 0x00000238   0x2e8 -r-- DYNSYM      .dynsym
+2   0x00000520    0x3e 0x00000520    0x3e -r-- GNU_VERSYM  .gnu.version
+3   0x00000560    0x40 0x00000560    0x40 -r-- GNU_VERNEED .gnu.version_r
+4   0x000005a0    0x50 0x000005a0    0x50 -r-- GNU_HASH    .gnu.hash
+5   0x000005f0   0x338 0x000005f0   0x338 -r-- STRTAB      .dynstr
+6   0x00000928   0x180 0x00000928   0x180 -r-- RELA        .rela.dyn
+7   0x00000aa8   0x228 0x00000aa8   0x228 -r-- RELA        .rela.plt
+8   0x00000cd0    0x18 0x00000cd0    0x18 -r-- NOTE        .note.android.ident
+9   0x00000ce8    0x20 0x00000ce8    0x20 -r-- NOTE        .note.gnu.build-id
+10  0x00000d08   0x47e 0x00000d08   0x47e -r-- PROGBITS    .rodata
+11  0x00001188    0x7c 0x00001188    0x7c -r-- PROGBITS    .eh_frame_hdr
+12  0x00001208   0x1fc 0x00001208   0x1fc -r-- PROGBITS    .eh_frame
+13  0x00002000  0x1280 0x00002000  0x1280 -r-x PROGBITS    .text
+14  0x00003280   0x190 0x00003280   0x190 -r-x PROGBITS    .plt
+15  0x00004000     0x8 0x00004000     0x8 -rw- PROGBITS    .data
+16  0x00005000    0x10 0x00005000    0x10 -rw- FINI_ARRAY  .fini_array
+17  0x00005010    0x60 0x00005010    0x60 -rw- PROGBITS    .data.rel.ro
+18  0x00005070   0x1e0 0x00005070   0x1e0 -rw- DYNAMIC     .dynamic
+19  0x00005250     0x8 0x00005250     0x8 -rw- PROGBITS    .got
+20  0x00005258    0xd0 0x00005258    0xd0 -rw- PROGBITS    .got.plt
+21  0x00005328     0x0 0x00006000    0xb1 -rw- NOBITS      .bss
+22  0x00005328    0xf1 0x00000000    0xf1 ---- STRTAB      .shstrtab
+23  0x00005419   0x330 0x00000000   0x330 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x000005f1 0x000005f1 11  12   .dynstr             ascii   libutils.so
+2   0x000005fd 0x000005fd 12  13   .dynstr             ascii   libcutils.so
+3   0x0000060a 0x0000060a 9   10   .dynstr             ascii   liblog.so
+4   0x00000614 0x00000614 13  14   .dynstr             ascii   libsensor1.so
+5   0x00000622 0x00000622 9   10   .dynstr             ascii   libc++.so
+6   0x0000062c 0x0000062c 7   8    .dynstr             ascii   libc.so
+7   0x00000634 0x00000634 7   8    .dynstr             ascii   libm.so
+8   0x0000063c 0x0000063c 8   9    .dynstr             ascii   libdl.so
+9   0x00000645 0x00000645 16  17   .dynstr             ascii   libsensor_reg.so
+10  0x00000656 0x00000656 14  15   .dynstr             ascii   __cxa_finalize
+11  0x00000665 0x00000665 4   5    .dynstr             ascii   LIBC
+12  0x0000066a 0x0000066a 10  11   .dynstr             ascii   JNI_OnLoad
+13  0x00000675 0x00000675 62  63   .dynstr             ascii   Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_close
+14  0x000006b4 0x000006b4 73  74   .dynstr             ascii   Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_getRegistryValue
+15  0x000006fe 0x000006fe 61  62   .dynstr             ascii   Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_open
+16  0x0000073c 0x0000073c 73  74   .dynstr             ascii   Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_setRegistryValue
+17  0x00000786 0x00000786 19  20   .dynstr             ascii   __android_log_print
+18  0x0000079a 0x0000079a 6   7    .dynstr             ascii   LIBLOG
+19  0x000007a1 0x000007a1 16  17   .dynstr             ascii   __stack_chk_fail
+20  0x000007b2 0x000007b2 15  16   .dynstr             ascii   __vsnprintf_chk
+21  0x000007c2 0x000007c2 13  14   .dynstr             ascii   clock_gettime
+22  0x000007d0 0x000007d0 4   5    .dynstr             ascii   free
+23  0x000007d5 0x000007d5 6   7    .dynstr             ascii   malloc
+24  0x000007dc 0x000007dc 20  21   .dynstr             ascii   pthread_cond_destroy
+25  0x000007f1 0x000007f1 17  18   .dynstr             ascii   pthread_cond_init
+26  0x00000803 0x00000803 19  20   .dynstr             ascii   pthread_cond_signal
+27  0x00000817 0x00000817 22  23   .dynstr             ascii   pthread_cond_timedwait
+28  0x0000082e 0x0000082e 21  22   .dynstr             ascii   pthread_mutex_destroy
+29  0x00000844 0x00000844 18  19   .dynstr             ascii   pthread_mutex_init
+30  0x00000857 0x00000857 18  19   .dynstr             ascii   pthread_mutex_lock
+31  0x0000086a 0x0000086a 20  21   .dynstr             ascii   pthread_mutex_unlock
+32  0x0000087f 0x0000087f 21  22   .dynstr             ascii   sensor1_alloc_msg_buf
+33  0x00000895 0x00000895 13  14   .dynstr             ascii   sensor1_close
+34  0x000008a3 0x000008a3 20  21   .dynstr             ascii   sensor1_free_msg_buf
+35  0x000008b8 0x000008b8 12  13   .dynstr             ascii   sensor1_open
+36  0x000008c5 0x000008c5 13  14   .dynstr             ascii   sensor1_write
+37  0x000008d3 0x000008d3 16  17   .dynstr             ascii   sensor_reg_close
+38  0x000008e4 0x000008e4 15  16   .dynstr             ascii   sensor_reg_open
+39  0x000008f4 0x000008f4 18  19   .dynstr             ascii   sensor_reg_rcv_msg
+40  0x00000907 0x00000907 15  16   .dynstr             ascii   sensor_reg_read
+41  0x00000917 0x00000917 16  17   .dynstr             ascii   sensor_reg_write
+42  0x00000cdc 0x00000cdc 7   8    .note.android.ident ascii   Android
+43  0x00000d18 0x00000d18 39  40   .rodata             ascii   %s: received NULL msg_hdr_ptr! type: %i
+44  0x00000d40 0x00000d40 15  16   .rodata             ascii   registerMethods
+45  0x00000d50 0x00000d50 39  40   .rodata             ascii   %s: sensor_reg_wait_for_response failed
+46  0x00000d78 0x00000d78 28  29   .rodata             ascii   %s: Registry request timeout
+47  0x00000d95 0x00000d95 15  16   .rodata             ascii   sensor_reg_read
+48  0x00000da5 0x00000da5 5   6    .rodata             ascii   close
+49  0x00000dab 0x00000dab 30  31   .rodata             ascii   %s: native registration failed
+50  0x00000dca 0x00000dca 18  19   .rodata             ascii   sensor_reg_rcv_msg
+51  0x00000ddd 0x00000ddd 16  17   .rodata             ascii   sensor_reg_write
+52  0x00000dee 0x00000dee 23  24   .rodata             ascii   sensor_reg_process_resp
+53  0x00000e06 0x00000e06 5   6    .rodata             ascii   (I)[B
+54  0x00000e0c 0x00000e0c 24  25   .rodata             ascii   %s: received BROKEN_PIPE
+55  0x00000e25 0x00000e25 42  43   .rodata             ascii   %s: sensor1_alloc_msg_buf returned(get) %d
+56  0x00000e50 0x00000e50 16  17   .rodata             ascii   getRegistryValue
+57  0x00000e61 0x00000e61 40  41   .rodata             ascii   %s: Unable to malloc space for read_data
+58  0x00000e8a 0x00000e8a 35  36   .rodata             ascii   %s: Unknown message id received: %i
+59  0x00000eae 0x00000eae 36  37   .rodata             ascii   %s: The value of len must be > 1: %i
+60  0x00000ed3 0x00000ed3 10  11   .rodata             ascii   JNI_OnLoad
+61  0x00000ede 0x00000ede 51  52   .rodata             ascii   com/qualcomm/qti/sensors/core/sensortest/SensorsReg
+62  0x00000f12 0x00000f12 16  17   .rodata             ascii   setRegistryValue
+63  0x00000f23 0x00000f23 29  30   .rodata             ascii   %s: sensor1_write returned %d
+64  0x00000f41 0x00000f41 23  24   .rodata             ascii   %s: received RETRY_OPEN
+65  0x00000f59 0x00000f59 29  30   .rodata             ascii   %s: Sensor1 handle not opened
+66  0x00000f77 0x00000f77 10  11   .rodata             ascii   sensor_reg
+67  0x00000f82 0x00000f82 28  29   .rodata             ascii   %s: error processing message
+68  0x00000f9f 0x00000f9f 29  30   .rodata             ascii   %s: Error in RESP; result: %i
+69  0x00000fbd 0x00000fbd 19  20   .rodata             ascii   java/lang/Exception
+70  0x00000fd1 0x00000fd1 29  30   .rodata             ascii   %s: sensor_reg_req_add failed
+71  0x00000fef 0x00000fef 25  26   .rodata             ascii   %s: sensor1 not available
+72  0x00001009 0x00001009 23  24   .rodata             ascii   sensor_reg_sensor1_open
+73  0x00001021 0x00001021 37  38   .rodata             ascii   %s: Unable to find transaction id: %i
+74  0x00001047 0x00001047 35  36   .rodata             ascii   %s: Invalid service number type: %i
+75  0x0000106b 0x0000106b 17  18   .rodata             ascii   %s: GetEnv failed
+76  0x0000107d 0x0000107d 28  29   .rodata             ascii   %s: Error in RESP result: %i
+77  0x0000109a 0x0000109a 4   5    .rodata             ascii   open
+78  0x0000109f 0x0000109f 24  25   .rodata             ascii   %s: Invalid msg type: %u
+79  0x000010b8 0x000010b8 28  29   .rodata             ascii   sensor_reg_wait_for_response
+80  0x000010d5 0x000010d5 37  38   .rodata             ascii   %s: sensor1_alloc_msg_buf returned %d
+81  0x000010fb 0x000010fb 37  38   .rodata             ascii   %s: Failed registering methods for %s
+82  0x00001121 0x00001121 14  15   .rodata             ascii   Error code: %i
+83  0x00001134 0x00001134 20  21   .rodata             ascii   %s: error in message
+84  0x00001149 0x00001149 23  24   .rodata             ascii   %s: Can't find class %s
+85  0x00001161 0x00001161 7   8    .rodata             ascii   (I[BB)I
+86  0x00001169 0x00001169 28  29   .rodata             ascii   %s: sensor1_open returned %d
+87  0x000020a5 0x000020a5 4   5    .text               ascii   *@9
+88  0x00002448 0x00002448 5   6    .text               ascii   )!@9l
+89  0x00002454 0x00002454 4   5    .text               ascii   \th+8
+90  0x0000249c 0x0000249c 8   9    .text               ascii   (ik8\bh+8
+91  0x00002564 0x00002564 6   7    .text               ascii   isA9\b)
+92  0x00002584 0x00002584 4   5    .text               ascii   hsA9
+93  0x000026e8 0x000026e8 4   5    .text               ascii   ivA9
+94  0x000027c8 0x000027c8 4   5    .text               ascii   irA9
+95  0x000027f0 0x000027f0 4   5    .text               ascii   hrA9
+96  0x0000282f 0x0000282f 4   5    .text               ascii   2B@5
+97  0x0000289c 0x0000289c 5   6    .text               ascii   uvA9
+98  0x000028b4 0x000028b4 5   6    .text               ascii   \tuA9?
+99  0x000028bf 0x000028bf 4   5    .text               ascii   T\b9@
+100 0x000028dc 0x000028dc 4   5    .text               ascii   +uA9
+101 0x000028e7 0x000028e7 4   5    .text               ascii   T+9@
+102 0x00002a10 0x00002a10 5   6    .text               ascii   isA9\b
+103 0x00002a30 0x00002a30 4   5    .text               ascii   hsA9
+104 0x00002b94 0x00002b94 4   5    .text               ascii   ivA9
+105 0x00002bcd 0x00002bcd 4   5    .text               ascii   jh8J
+106 0x00002ca0 0x00002ca0 5   6    .text               ascii   irA9\b
+107 0x00002cc0 0x00002cc0 4   5    .text               ascii   hrA9
+108 0x00002cff 0x00002cff 4   5    .text               ascii   2B@5
+109 0x00002d5c 0x00002d5c 5   6    .text               ascii   wvA9
+110 0x00002d78 0x00002d78 5   6    .text               ascii   \tuA9?
+111 0x00002d83 0x00002d83 4   5    .text               ascii   T\b9@
+112 0x00002da0 0x00002da0 4   5    .text               ascii   +uA9
+113 0x00002dab 0x00002dab 4   5    .text               ascii   T+9@
+114 0x00005329 0x00000001 11  12   .shstrtab           ascii   .fini_array
+115 0x00005335 0x0000000d 5   6    .shstrtab           ascii   .text
+116 0x0000533b 0x00000013 4   5    .shstrtab           ascii   .got
+117 0x00005340 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+118 0x00005354 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+119 0x0000535d 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+120 0x00005367 0x0000003f 4   5    .shstrtab           ascii   .bss
+121 0x0000536c 0x00000044 7   8    .shstrtab           ascii   .dynstr
+122 0x00005374 0x0000004c 13  14   .shstrtab           ascii   .eh_frame_hdr
+123 0x00005382 0x0000005a 14  15   .shstrtab           ascii   .gnu.version_r
+124 0x00005391 0x00000069 12  13   .shstrtab           ascii   .data.rel.ro
+125 0x0000539e 0x00000076 9   10   .shstrtab           ascii   .rela.dyn
+126 0x000053a8 0x00000080 12  13   .shstrtab           ascii   .gnu.version
+127 0x000053b5 0x0000008d 7   8    .shstrtab           ascii   .dynsym
+128 0x000053bd 0x00000095 9   10   .shstrtab           ascii   .gnu.hash
+129 0x000053c7 0x0000009f 9   10   .shstrtab           ascii   .eh_frame
+130 0x000053d1 0x000000a9 18  19   .shstrtab           ascii   .note.gnu.build-id
+131 0x000053e4 0x000000bc 8   9    .shstrtab           ascii   .dynamic
+132 0x000053ed 0x000000c5 9   10   .shstrtab           ascii   .shstrtab
+133 0x000053f7 0x000000cf 7   8    .shstrtab           ascii   .rodata
+134 0x000053ff 0x000000d7 14  15   .shstrtab           ascii   .gnu_debugdata
+135 0x0000540e 0x000000e6 5   6    .shstrtab           ascii   .data
+136 0x0000541a 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+137 0x0000546a 0x00000051 6   7    .gnu_debugdata      ascii   ehUIl]
+138 0x000054ff 0x000000e6 6   8    .gnu_debugdata      utf8    `ȴzo^W
+139 0x0000553f 0x00000126 5   6    .gnu_debugdata      ascii   njq\ap
+140 0x000055a5 0x0000018c 4   5    .gnu_debugdata      ascii   Qsfo
+141 0x000055df 0x000001c6 5   6    .gnu_debugdata      ascii   ]\ec>'
+142 0x000055eb 0x000001d2 4   6    .gnu_debugdata      utf8    =6×@
+143 0x00005613 0x000001fa 4   5    .gnu_debugdata      ascii   Km1D
+144 0x00005637 0x0000021e 6   9    .gnu_debugdata      utf8    /iת9ߞN
+145 0x00005661 0x00000248 4   5    .gnu_debugdata      ascii   h(AD
+146 0x0000566e 0x00000255 5   6    .gnu_debugdata      ascii   Gl4 +
+147 0x00005683 0x0000026a 7   10   .gnu_debugdata      utf8    P䉄Ifwq]
+148 0x0000568e 0x00000275 4   6    .gnu_debugdata      utf8    ܗ_A=
+149 0x000056a1 0x00000288 4   5    .gnu_debugdata      ascii   y\b.=
+150 0x000056b1 0x00000298 4   5    .gnu_debugdata      ascii   9Er!
+151 0x000056d7 0x000002be 6   7    .gnu_debugdata      ascii   &_%f<$
+152 0x000056de 0x000002c5 4   5    .gnu_debugdata      ascii   1B|k
+153 0x00005700 0x000002e7 6   9    .gnu_debugdata      utf8    :ɖ6҇v&
+154 0x0000570d 0x000002f4 6   7    .gnu_debugdata      ascii   Z7;w.o
+0x000032a0    1     16 sym.imp.__cxa_finalize
+0x000032b0    1     16 sym.imp.__android_log_print
+0x000033c0    1     16 sym.imp.__stack_chk_fail
+0x000033f0    1     16 sym.imp.__vsnprintf_chk
+0x00003330    1     16 sym.imp.clock_gettime
+0x000033b0    1     16 sym.imp.free
+0x00003320    1     16 sym.imp.malloc
+0x000033a0    1     16 sym.imp.pthread_cond_destroy
+0x00003370    1     16 sym.imp.pthread_cond_init
+0x00003300    1     16 sym.imp.pthread_cond_signal
+0x00003340    1     16 sym.imp.pthread_cond_timedwait
+0x00003390    1     16 sym.imp.pthread_mutex_destroy
+0x00003360    1     16 sym.imp.pthread_mutex_init
+0x000032c0    1     16 sym.imp.pthread_mutex_lock
+0x000032d0    1     16 sym.imp.pthread_mutex_unlock
+0x00003350    1     16 sym.imp.sensor1_alloc_msg_buf
+0x000032f0    1     16 sym.imp.sensor1_close
+0x00003310    1     16 sym.imp.sensor1_free_msg_buf
+0x000032e0    1     16 sym.imp.sensor1_open
+0x00003380    1     16 sym.imp.sensor1_write
+0x00002000    1     12 entry0
+0x00003140   11    320 sym.JNI_OnLoad
+0x00003138    1      8 sym.Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_close
+0x00002f64   11    296 sym.Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_getRegistryValue
+0x00003134    2     20 sym.Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_open
+0x00002edc    1    136 sym.Java_com_qualcomm_qti_sensors_core_sensortest_SensorsReg_setRegistryValue
+0x000033d0    1     16 fcn.000033d0
+0x00002014   54   1196 sym.sensor_reg_rcv_msg
+0x00002938   41   1220 sym.sensor_reg_write
+0x00002ed4    1      8 sym.sensor_reg_close
+0x00002dfc    6    216 sym.sensor_reg_open
+0x000024c0   36   1144 sym.sensor_reg_read
+0x000033e0    1     16 fcn.000033e0
+0x0000308c    3    168 sym.snprintf_char__unsigned_long_pass_object_size1__char_const__::_
+0x00003280    1     20 section..plt

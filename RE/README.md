@@ -85,6 +85,22 @@ python3 RE/dump_output_info.py \
 6. Compare against existing downstream Qualcomm sensor drivers from similar Xiaomi/msm8953 devices.
 7. Rebuild the open library in source form, then replace the blob only after the ABI and structure layout match.
 
+### Batch scan helper
+
+To get a broad inventory of camera blobs quickly (exports, imports, deps), use:
+
+```bash
+RE/batch_camera_scan.sh proprietary RE/out quick camera
+```
+
+This also runs the existing sensor dump helpers on any blob that exports
+`sensor_open_lib`. Use:
+
+- `r2` for lightweight radare2 metadata.
+- `deep` for `r2 -A` plus strings and function list (slow).
+- `camera` scope for just camera-related blobs.
+- `all` scope to scan all vendor `.so` blobs (very slow).
+
 ## Scope guidance
 
 Good OSS candidates in this tree:

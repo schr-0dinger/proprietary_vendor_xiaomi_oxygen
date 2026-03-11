@@ -1,0 +1,779 @@
+arch     arm
+baddr    0x0
+binsz    55571
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                             demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+12  0x00003034 0x00003034 GLOBAL FUNC 8        Swap32BtoN
+13  0x0000305c 0x0000305c GLOBAL FUNC 16       SwapFloat32NtoB
+14  0x00004c70 0x00004c70 GLOBAL FUNC 2392     unpc_block
+15  0x0000974c 0x0000974c GLOBAL FUNC 888      _ZN11ALACEncoder17InitializeEncoderE22AudioFormatDescription     ALACEncoder::InitializeEncoder(AudioFormatDescription)
+16  0x00009f74 0x00009f74 GLOBAL FUNC 96       init_coefs
+17  0x000030d4 0x000030d4 GLOBAL FUNC 88       BitBufferRead
+18  0x000033a4 0x000033a4 GLOBAL FUNC 108      BitBufferRewind
+19  0x000074cc 0x000074cc GLOBAL FUNC 36       _ZN11ALACEncoderD0Ev                                             ALACEncoder::~ALACEncoder()
+20  0x0000a0bc 0x0000a0bc GLOBAL FUNC 3276     pc_block
+21  0x000030b4 0x000030b4 GLOBAL FUNC 16       Swap32
+22  0x00004720 0x00004720 GLOBAL FUNC 40       set_standard_ag_params
+23  0x00009550 0x00009550 GLOBAL FUNC 128      _ZN11ALACEncoder9GetConfigER18ALACSpecificConfig                 ALACEncoder::GetConfig(ALACSpecificConfig&)
+24  0x0000be18 0x0000be18 GLOBAL FUNC 912      copy20ToPredictor
+25  0x0000312c 0x0000312c GLOBAL FUNC 76       BitBufferReadSmall
+26  0x00003428 0x00003428 GLOBAL FUNC 20       _ZN11ALACDecoderC2Ev                                             ALACDecoder::ALACDecoder()
+27  0x0000720c 0x0000720c GLOBAL FUNC 48       copyPredictorTo32
+28  0x00007ed0 0x00007ed0 GLOBAL FUNC 524      _ZN11ALACEncoder18EncodeStereoEscapeEP9BitBufferPvjj             ALACEncoder::EncodeStereoEscape(BitBuffer*, void*, unsigned int, unsigned int)
+29  0x00004774 0x00004774 GLOBAL FUNC 876      dyn_decomp
+30  0x00009228 0x00009228 GLOBAL FUNC 800      _ZN11ALACEncoder6EncodeE22AudioFormatDescriptionS0_PhS1_Pi       ALACEncoder::Encode(AudioFormatDescription, AudioFormatDescription, unsigned char*, unsigned char*, int*)
+31  0x0000ad88 0x0000ad88 GLOBAL FUNC 1260     mix16
+32  0x000046bc 0x000046bc GLOBAL FUNC 100      _ZN11ALACDecoder11FillElementEP9BitBuffer                        ALACDecoder::FillElement(BitBuffer*)
+33  0x00003488 0x00003488 GLOBAL FUNC 140      _ZN11ALACDecoder4InitEPK18ALACSpecificConfig                     ALACDecoder::Init(ALACSpecificConfig const*)
+34  0x0000343c 0x0000343c GLOBAL FUNC 76       _ZN11ALACDecoderD1Ev                                             ALACDecoder::~ALACDecoder()
+35  0x0000723c 0x0000723c GLOBAL FUNC 464      copyPredictorTo32Shift
+36  0x000055c8 0x000055c8 GLOBAL FUNC 1296     unmix16
+37  0x00009548 0x00009548 GLOBAL FUNC 8        _ZN11ALACEncoder6FinishEv                                        ALACEncoder::Finish()
+38  0x0000740c 0x0000740c GLOBAL FUNC 52       _ZN11ALACEncoderC2Ev                                             ALACEncoder::ALACEncoder()
+39  0x0000c1a8 0x0000c1a8 GLOBAL FUNC 912      copy24ToPredictor
+40  0x00003178 0x00003178 GLOBAL FUNC 60       BitBufferReadOne
+41  0x00006e2c 0x00006e2c GLOBAL FUNC 992      copyPredictorTo20
+42  0x000074f0 0x000074f0 GLOBAL FUNC 2528     _ZN11ALACEncoder12EncodeStereoEP9BitBufferPvjjj                  ALACEncoder::EncodeStereo(BitBuffer*, void*, unsigned int, unsigned int, unsigned int)
+43  0x00009fd4 0x00009fd4 GLOBAL FUNC 232      copy_coefs
+44  0x0000303c 0x0000303c GLOBAL FUNC 8        Swap64BtoN
+45  0x0000307c 0x0000307c GLOBAL FUNC 16       SwapFloat64NtoB
+46  0x00003514 0x00003514 GLOBAL FUNC 388      _ZN11ALACDecoder4InitEPvj                                        ALACDecoder::Init(void*, unsigned int)
+47  0x000095d0 0x000095d0 GLOBAL FUNC 20       _ZN11ALACEncoder18GetMagicCookieSizeEj                           ALACEncoder::GetMagicCookieSize(unsigned int)
+48  0x00007440 0x00007440 GLOBAL FUNC 140      _ZN11ALACEncoderD1Ev                                             ALACEncoder::~ALACEncoder()
+49  0x0000302c 0x0000302c GLOBAL FUNC 8        Swap32NtoB
+50  0x000031ec 0x000031ec GLOBAL FUNC 32       BitBufferPeekOne
+51  0x000095e4 0x000095e4 GLOBAL FUNC 360      _ZN11ALACEncoder14GetMagicCookieEPvPj                            ALACEncoder::GetMagicCookie(void*, unsigned int*)
+52  0x000030a0 0x000030a0 GLOBAL FUNC 20       Swap24
+53  0x00003258 0x00003258 GLOBAL FUNC 28       BitBufferGetPosition
+54  0x00009ac4 0x00009ac4 GLOBAL FUNC 88       _ZN11ALACEncoder15GetSourceFormatEPK22AudioFormatDescriptionPS0_ ALACEncoder::GetSourceFormat(AudioFormatDescription const*, AudioFormatDescription*)
+55  0x000080dc 0x000080dc GLOBAL FUNC 1292     _ZN11ALACEncoder16EncodeStereoFastEP9BitBufferPvjjj              ALACEncoder::EncodeStereoFast(BitBuffer*, void*, unsigned int, unsigned int, unsigned int)
+56  0x0000b5c4 0x0000b5c4 GLOBAL FUNC 2132     mix32
+57  0x00003020 0x00003020 GLOBAL FUNC 12       Swap16BtoN
+58  0x000031b4 0x000031b4 GLOBAL FUNC 56       BitBufferPeek
+59  0x000065b8 0x000065b8 GLOBAL FUNC 1000     copyPredictorTo24
+60  0x00004748 0x00004748 GLOBAL FUNC 44       set_ag_params
+61  0x00005dbc 0x00005dbc GLOBAL FUNC 2044     unmix32
+62  0x0000d008 0x0000d008 GLOBAL OBJ  64       _ZTV11ALACEncoder                                                vtable for ALACEncoder
+63  0x0000304c 0x0000304c GLOBAL FUNC 16       SwapFloat32BtoN
+64  0x0000343c 0x0000343c GLOBAL FUNC 76       _ZN11ALACDecoderD2Ev                                             ALACDecoder::~ALACDecoder()
+65  0x0000337c 0x0000337c GLOBAL FUNC 40       BitBufferAdvance
+66  0x00004618 0x00004618 GLOBAL FUNC 164      _ZN11ALACDecoder17DataStreamElementEP9BitBuffer                  ALACDecoder::DataStreamElement(BitBuffer*)
+67  0x0000b274 0x0000b274 GLOBAL FUNC 260      mix20
+68  0x0000320c 0x0000320c GLOBAL FUNC 76       BitBufferUnpackBERSize
+69  0x00005ad8 0x00005ad8 GLOBAL FUNC 236      unmix20
+70  0x000085e8 0x000085e8 GLOBAL FUNC 3136     _ZN11ALACEncoder10EncodeMonoEP9BitBufferPvjjj                    ALACEncoder::EncodeMono(BitBuffer*, void*, unsigned int, unsigned int, unsigned int)
+71  0x00007440 0x00007440 GLOBAL FUNC 140      _ZN11ALACEncoderD2Ev                                             ALACEncoder::~ALACEncoder()
+72  0x00009b1c 0x00009b1c GLOBAL FUNC 1112     dyn_comp
+73  0x0000c79c 0x0000c79c GLOBAL FUNC 708      alac_dec_process
+74  0x00003044 0x00003044 GLOBAL FUNC 8        Swap64NtoB
+75  0x0000c538 0x0000c538 GLOBAL FUNC 612      alac_dec_interface
+76  0x0000308c 0x0000308c GLOBAL FUNC 20       Swap16
+77  0x000030c4 0x000030c4 GLOBAL FUNC 16       BitBufferInit
+78  0x00003410 0x00003410 GLOBAL FUNC 24       BitBufferReset
+79  0x00003428 0x00003428 GLOBAL FUNC 20       _ZN11ALACDecoderC1Ev                                             ALACDecoder::ALACDecoder()
+80  0x0000b378 0x0000b378 GLOBAL FUNC 588      mix24
+81  0x00003274 0x00003274 GLOBAL FUNC 140      BitBufferByteAlign
+82  0x00003300 0x00003300 GLOBAL FUNC 124      BitBufferWrite
+83  0x00003698 0x00003698 GLOBAL FUNC 3968     _ZN11ALACDecoder6DecodeEP9BitBufferPhjjPj                        ALACDecoder::Decode(BitBuffer*, unsigned char*, unsigned int, unsigned int, unsigned int*)
+84  0x00005bc4 0x00005bc4 GLOBAL FUNC 504      unmix24
+85  0x00003014 0x00003014 GLOBAL FUNC 12       Swap16NtoB
+86  0x0000306c 0x0000306c GLOBAL FUNC 16       SwapFloat64BtoN
+87  0x000069a0 0x000069a0 GLOBAL FUNC 1164     copyPredictorTo24Shift
+88  0x0000740c 0x0000740c GLOBAL FUNC 52       _ZN11ALACEncoderC1Ev                                             ALACEncoder::ALACEncoder()
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000238    0x18 0x00000238    0x18 -r-- NOTE        .note.android.ident
+2   0x00000250    0x20 0x00000250    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270   0x858 0x00000270   0x858 -r-- DYNSYM      .dynsym
+4   0x00000ac8    0xb2 0x00000ac8    0xb2 -r-- GNU_VERSYM  .gnu.version
+5   0x00000b7c    0x40 0x00000b7c    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000bc0   0x210 0x00000bc0   0x210 -r-- GNU_HASH    .gnu.hash
+7   0x00000dd0   0x720 0x00000dd0   0x720 -r-- STRTAB      .dynstr
+8   0x000014f0    0x43 0x000014f0    0x43 -r-- ----        .rela.dyn
+9   0x00001538    0x10 0x00001538    0x10 -r-- ----        .relr.dyn
+10  0x00001548   0x528 0x00001548   0x528 -r-- RELA        .rela.plt
+11  0x00001a70   0x2ac 0x00001a70   0x2ac -r-- PROGBITS    .rodata
+12  0x00001d1c   0x26c 0x00001d1c   0x26c -r-- PROGBITS    .eh_frame_hdr
+13  0x00001f88   0x904 0x00001f88   0x904 -r-- PROGBITS    .eh_frame
+14  0x00003000  0x9a60 0x00003000  0x9a60 -r-x PROGBITS    .text
+15  0x0000ca60   0x390 0x0000ca60   0x390 -r-x PROGBITS    .plt
+16  0x0000d000    0x48 0x0000d000    0x48 -rw- PROGBITS    .data.rel.ro
+17  0x0000d048    0x10 0x0000d048    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x0000d058   0x1d0 0x0000d058   0x1d0 -rw- DYNAMIC     .dynamic
+19  0x0000d228     0x8 0x0000d228     0x8 -rw- PROGBITS    .got
+20  0x0000d230   0x1d0 0x0000d230   0x1d0 -rw- PROGBITS    .got.plt
+21  0x0000d400    0xeb 0x00000000    0xeb ---- STRTAB      .shstrtab
+22  0x0000d4eb   0x428 0x00000000   0x428 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x00000c64 0x00000c64 9   40   .gnu.hash           utf32le  (,149?AD
+3   0x00000c8c 0x00000c8c 4   20   .gnu.hash           utf32le JLQU
+4   0x00000ccb 0x00000ccb 4   5    .gnu.hash           ascii   hQ~,
+5   0x00000cfb 0x00000cfb 8   10   .gnu.hash           utf8    `|ޤ:P\nD'
+6   0x00000d1c 0x00000d1c 4   5    .gnu.hash           ascii   \k)_
+7   0x00000d23 0x00000d23 4   5    .gnu.hash           ascii   '2~?
+8   0x00000d31 0x00000d31 4   5    .gnu.hash           ascii   T\fXD
+9   0x00000d61 0x00000d61 5   7    .gnu.hash           utf8    ޤ:;\aW
+10  0x00000d8e 0x00000d8e 4   6    .gnu.hash           utf8    7/_e
+11  0x00000da3 0x00000da3 7   8    .gnu.hash           ascii   n 4lDd\n
+12  0x00000dd1 0x00000dd1 14  15   .dynstr             ascii   __cxa_finalize
+13  0x00000de0 0x00000de0 6   7    .dynstr             ascii   Swap16
+14  0x00000de7 0x00000de7 10  11   .dynstr             ascii   Swap16BtoN
+15  0x00000df2 0x00000df2 10  11   .dynstr             ascii   Swap16NtoB
+16  0x00000dfd 0x00000dfd 6   7    .dynstr             ascii   Swap24
+17  0x00000e04 0x00000e04 6   7    .dynstr             ascii   Swap32
+18  0x00000e0b 0x00000e0b 10  11   .dynstr             ascii   Swap32BtoN
+19  0x00000e16 0x00000e16 10  11   .dynstr             ascii   Swap32NtoB
+20  0x00000e21 0x00000e21 10  11   .dynstr             ascii   Swap64BtoN
+21  0x00000e2c 0x00000e2c 10  11   .dynstr             ascii   Swap64NtoB
+22  0x00000e37 0x00000e37 15  16   .dynstr             ascii   SwapFloat32BtoN
+23  0x00000e47 0x00000e47 15  16   .dynstr             ascii   SwapFloat32NtoB
+24  0x00000e57 0x00000e57 15  16   .dynstr             ascii   SwapFloat64BtoN
+25  0x00000e67 0x00000e67 15  16   .dynstr             ascii   SwapFloat64NtoB
+26  0x00000e77 0x00000e77 16  17   .dynstr             ascii   BitBufferAdvance
+27  0x00000e88 0x00000e88 18  19   .dynstr             ascii   BitBufferByteAlign
+28  0x00000e9b 0x00000e9b 20  21   .dynstr             ascii   BitBufferGetPosition
+29  0x00000eb0 0x00000eb0 13  14   .dynstr             ascii   BitBufferInit
+30  0x00000ebe 0x00000ebe 13  14   .dynstr             ascii   BitBufferPeek
+31  0x00000ecc 0x00000ecc 16  17   .dynstr             ascii   BitBufferPeekOne
+32  0x00000edd 0x00000edd 13  14   .dynstr             ascii   BitBufferRead
+33  0x00000eeb 0x00000eeb 16  17   .dynstr             ascii   BitBufferReadOne
+34  0x00000efc 0x00000efc 18  19   .dynstr             ascii   BitBufferReadSmall
+35  0x00000f0f 0x00000f0f 14  15   .dynstr             ascii   BitBufferReset
+36  0x00000f1e 0x00000f1e 15  16   .dynstr             ascii   BitBufferRewind
+37  0x00000f2e 0x00000f2e 22  23   .dynstr             ascii   BitBufferUnpackBERSize
+38  0x00000f45 0x00000f45 14  15   .dynstr             ascii   BitBufferWrite
+39  0x00000f54 0x00000f54 41  42   .dynstr             ascii   _ZN11ALACDecoder11FillElementEP9BitBuffer
+40  0x00000f7e 0x00000f7e 47  48   .dynstr             ascii   _ZN11ALACDecoder17DataStreamElementEP9BitBuffer
+41  0x00000fae 0x00000fae 44  45   .dynstr             ascii   _ZN11ALACDecoder4InitEPK18ALACSpecificConfig
+42  0x00000fdb 0x00000fdb 25  26   .dynstr             ascii   _ZN11ALACDecoder4InitEPvj
+43  0x00000ff5 0x00000ff5 41  42   .dynstr             ascii   _ZN11ALACDecoder6DecodeEP9BitBufferPhjjPj
+44  0x0000101f 0x0000101f 20  21   .dynstr             ascii   _ZN11ALACDecoderC1Ev
+45  0x00001034 0x00001034 20  21   .dynstr             ascii   _ZN11ALACDecoderC2Ev
+46  0x00001049 0x00001049 20  21   .dynstr             ascii   _ZN11ALACDecoderD1Ev
+47  0x0000105e 0x0000105e 20  21   .dynstr             ascii   _ZN11ALACDecoderD2Ev
+48  0x00001073 0x00001073 16  17   .dynstr             ascii   __stack_chk_fail
+49  0x00001084 0x00001084 6   7    .dynstr             ascii   calloc
+50  0x0000108b 0x0000108b 17  18   .dynstr             ascii   copyPredictorTo20
+51  0x0000109d 0x0000109d 17  18   .dynstr             ascii   copyPredictorTo24
+52  0x000010af 0x000010af 22  23   .dynstr             ascii   copyPredictorTo24Shift
+53  0x000010c6 0x000010c6 17  18   .dynstr             ascii   copyPredictorTo32
+54  0x000010d8 0x000010d8 22  23   .dynstr             ascii   copyPredictorTo32Shift
+55  0x000010ef 0x000010ef 10  11   .dynstr             ascii   dyn_decomp
+56  0x000010fa 0x000010fa 4   5    .dynstr             ascii   free
+57  0x000010ff 0x000010ff 6   7    .dynstr             ascii   memset
+58  0x00001106 0x00001106 13  14   .dynstr             ascii   set_ag_params
+59  0x00001114 0x00001114 7   8    .dynstr             ascii   unmix16
+60  0x0000111c 0x0000111c 7   8    .dynstr             ascii   unmix20
+61  0x00001124 0x00001124 7   8    .dynstr             ascii   unmix24
+62  0x0000112c 0x0000112c 7   8    .dynstr             ascii   unmix32
+63  0x00001134 0x00001134 10  11   .dynstr             ascii   unpc_block
+64  0x0000113f 0x0000113f 22  23   .dynstr             ascii   set_standard_ag_params
+65  0x00001156 0x00001156 6   7    .dynstr             ascii   memcpy
+66  0x0000115d 0x0000115d 45  46   .dynstr             ascii   _ZN11ALACEncoder10EncodeMonoEP9BitBufferPvjjj
+67  0x0000118b 0x0000118b 47  48   .dynstr             ascii   _ZN11ALACEncoder12EncodeStereoEP9BitBufferPvjjj
+68  0x000011bb 0x000011bb 37  38   .dynstr             ascii   _ZN11ALACEncoder14GetMagicCookieEPvPj
+69  0x000011e1 0x000011e1 64  65   .dynstr             ascii   _ZN11ALACEncoder15GetSourceFormatEPK22AudioFormatDescriptionPS0_
+70  0x00001222 0x00001222 51  52   .dynstr             ascii   _ZN11ALACEncoder16EncodeStereoFastEP9BitBufferPvjjj
+71  0x00001256 0x00001256 60  61   .dynstr             ascii   _ZN11ALACEncoder17InitializeEncoderE22AudioFormatDescription
+72  0x00001293 0x00001293 52  53   .dynstr             ascii   _ZN11ALACEncoder18EncodeStereoEscapeEP9BitBufferPvjj
+73  0x000012c8 0x000012c8 38  39   .dynstr             ascii   _ZN11ALACEncoder18GetMagicCookieSizeEj
+74  0x000012ef 0x000012ef 58  59   .dynstr             ascii   _ZN11ALACEncoder6EncodeE22AudioFormatDescriptionS0_PhS1_Pi
+75  0x0000132a 0x0000132a 25  26   .dynstr             ascii   _ZN11ALACEncoder6FinishEv
+76  0x00001344 0x00001344 48  49   .dynstr             ascii   _ZN11ALACEncoder9GetConfigER18ALACSpecificConfig
+77  0x00001375 0x00001375 20  21   .dynstr             ascii   _ZN11ALACEncoderC1Ev
+78  0x0000138a 0x0000138a 20  21   .dynstr             ascii   _ZN11ALACEncoderC2Ev
+79  0x0000139f 0x0000139f 20  21   .dynstr             ascii   _ZN11ALACEncoderD0Ev
+80  0x000013b4 0x000013b4 20  21   .dynstr             ascii   _ZN11ALACEncoderD1Ev
+81  0x000013c9 0x000013c9 20  21   .dynstr             ascii   _ZN11ALACEncoderD2Ev
+82  0x000013de 0x000013de 17  18   .dynstr             ascii   _ZTV11ALACEncoder
+83  0x000013f0 0x000013f0 6   7    .dynstr             ascii   _ZdlPv
+84  0x000013f7 0x000013f7 17  18   .dynstr             ascii   copy20ToPredictor
+85  0x00001409 0x00001409 17  18   .dynstr             ascii   copy24ToPredictor
+86  0x0000141b 0x0000141b 8   9    .dynstr             ascii   dyn_comp
+87  0x00001424 0x00001424 10  11   .dynstr             ascii   init_coefs
+88  0x0000142f 0x0000142f 5   6    .dynstr             ascii   mix16
+89  0x00001435 0x00001435 5   6    .dynstr             ascii   mix20
+90  0x0000143b 0x0000143b 5   6    .dynstr             ascii   mix24
+91  0x00001441 0x00001441 5   6    .dynstr             ascii   mix32
+92  0x00001447 0x00001447 8   9    .dynstr             ascii   pc_block
+93  0x00001450 0x00001450 6   7    .dynstr             ascii   printf
+94  0x00001457 0x00001457 10  11   .dynstr             ascii   copy_coefs
+95  0x00001462 0x00001462 5   6    .dynstr             ascii   _Znwm
+96  0x00001468 0x00001468 19  20   .dynstr             ascii   __android_log_print
+97  0x0000147c 0x0000147c 18  19   .dynstr             ascii   alac_dec_interface
+98  0x0000148f 0x0000148f 16  17   .dynstr             ascii   alac_dec_process
+99  0x000014a0 0x000014a0 6   7    .dynstr             ascii   malloc
+100 0x000014a7 0x000014a7 9   10   .dynstr             ascii   liblog.so
+101 0x000014b1 0x000014b1 6   7    .dynstr             ascii   LIBLOG
+102 0x000014b8 0x000014b8 7   8    .dynstr             ascii   libc.so
+103 0x000014c0 0x000014c0 4   5    .dynstr             ascii   LIBC
+104 0x000014c5 0x000014c5 9   10   .dynstr             ascii   libc++.so
+105 0x000014cf 0x000014cf 7   8    .dynstr             ascii   libm.so
+106 0x000014d7 0x000014d7 8   9    .dynstr             ascii   libdl.so
+107 0x000014e0 0x000014e0 15  16   .dynstr             ascii   libAlacSwDec.so
+108 0x000014f0 0x000014f0 5   6    .rela.dyn           ascii   APS2\a
+109 0x00001ad7 0x00001ad7 35  36   .rodata             ascii   Unsupported input channel count %d\n
+110 0x00001afb 0x00001afb 40  41   .rodata             ascii   Alac core decoder initialization failed\n
+111 0x00001b24 0x00001b24 36  37   .rodata             ascii   compressed frame too big: %u vs. %u\n
+112 0x00001b49 0x00001b49 44  45   .rodata             ascii   ALAC Dec failed to allocated wrapper memory\n
+113 0x00001b76 0x00001b76 37  38   .rodata             ascii   compressed frame too big: %u vs. %u \n
+114 0x00001b9c 0x00001b9c 23  24   .rodata             ascii   That ain't right! (%u)\n
+115 0x00001bb4 0x00001bb4 42  43   .rodata             ascii   Received NULL pointer during process call\n
+116 0x00001bdf 0x00001bdf 41  42   .rodata             ascii   Decoder input configuration not provided\n
+117 0x00001c09 0x00001c09 51  52   .rodata             ascii   Received NULL result, Error cannot be communicated\n
+118 0x00001c3d 0x00001c3d 15  16   .rodata             ascii   ALACDec_Wrapper
+119 0x00001c4d 0x00001c4d 60  61   .rodata             ascii   Unsupported output bit-width, defaulting to input bit-width\n
+120 0x00001c8a 0x00001c8a 27  28   .rodata             ascii   Unsupported interface = %d\n
+121 0x00001ca6 0x00001ca6 31  32   .rodata             ascii   Unsupported input bit-width %d\n
+122 0x00001d0c 0x00001d0c 4   5    .rodata             ascii   chan
+123 0x0000308e 0x0000308e 4   5    .text               ascii   @y\b\t
+124 0x000030a0 0x000030a0 5   6    .text               ascii   \b\b@9\t
+125 0x000030f2 0x000030f2 4   5    .text               ascii   @9N}
+126 0x000030fc 0x000030fc 4   5    .text               ascii   \b\t@9
+127 0x0000310e 0x0000310e 4   5    .text               ascii   \b*\b!
+128 0x00003146 0x00003146 4   5    .text               ascii   \n\vM}
+129 0x000031c2 0x000031c2 8   9    .text               ascii   @9\b\t@9)=
+130 0x000031fe 0x000031fe 4   5    .text               ascii   \tK\b%
+131 0x0000321a 0x0000321a 4   5    .text               ascii   @yL!
+132 0x00003240 0x00003240 5   6    .text               ascii   h9\b3\t
+133 0x0000325c 0x0000325c 5   6    .text               ascii   \v$B)\n
+134 0x0000326a 0x0000326a 6   7    .text               ascii   \b\v`\r\b\v
+135 0x00003332 0x00003332 4   5    .text               ascii   \rK.$
+136 0x000033ba 0x000033ba 4   5    .text               ascii   \bK\v}
+137 0x0000349b 0x0000349b 4   5    .text               ascii   =(\b@
+138 0x000035ca 0x000035ca 4   5    .text               ascii   \b*=%
+139 0x000035da 0x000035da 4   5    .text               ascii   \b*5%
+140 0x000035ea 0x000035ea 4   5    .text               ascii   \b*1%
+141 0x000035fa 0x000035fa 4   5    .text               ascii   \b*-%
+142 0x00003739 0x00003739 4   5    .text               ascii   +\a)\b
+143 0x00003745 0x00003745 4   5    .text               ascii   #\b))
+144 0x0000378b 0x0000378b 4   5    .text               ascii   5\b'@
+145 0x000037bc 0x000037bc 7   8    .text               ascii   jzhx)\t\n
+146 0x000037d5 0x000037d5 4   5    .text               ascii   2@y)
+147 0x000038d7 0x000038d7 4   5    .text               ascii   4\b\v@
+148 0x00003932 0x00003932 4   5    .text               ascii   \e*w$
+149 0x000039ba 0x000039ba 8   9    .text               ascii   \tK_\r\bkhR
+150 0x000039f1 0x000039f1 5   6    .text               ascii   i3xs\n
+151 0x00003a1d 0x00003a1d 4   5    .text               ascii   2@y)
+152 0x00003aa1 0x00003aa1 4   5    .text               ascii   W\n)3
+153 0x00003b7f 0x00003b7f 4   5    .text               ascii   4\b\v@
+154 0x00003bae 0x00003bae 6   7    .text               ascii   @yh~\b\e
+155 0x00003cb7 0x00003cb7 4   5    .text               ascii   7\b\v@
+156 0x00003cc1 0x00003cc1 4   5    .text               ascii   ~\e\e\b
+157 0x00003cc6 0x00003cc6 8   9    .text               ascii   \tK_\r\bk\b:
+158 0x00003cee 0x00003cee 4   5    .text               ascii   \e*|#
+159 0x00003d1b 0x00003d1b 4   5    .text               ascii   7\b\v@
+160 0x00003d25 0x00003d25 4   5    .text               ascii   ~\e\e\b
+161 0x00003d2a 0x00003d2a 6   7    .text               ascii   \tK_\r\bk
+162 0x00003dcf 0x00003dcf 4   5    .text               ascii   T\t\v@
+163 0x00003de1 0x00003de1 5   6    .text               ascii   \r\tkH1
+164 0x00003e23 0x00003e23 4   5    .text               ascii   *\ti7
+165 0x00003e80 0x00003e80 7   8    .text               ascii   jyhx)\t\n
+166 0x00003f23 0x00003f23 4   5    .text               ascii   \vaE!
+167 0x00003f30 0x00003f30 6   7    .text               ascii   `Y0| H
+168 0x00003f3b 0x00003f3b 4   5    .text               ascii   \vaE!
+169 0x00003f47 0x00003f47 4   5    .text               ascii   \vaE!
+170 0x00003f53 0x00003f53 4   5    .text               ascii   \v (a
+171 0x00003f58 0x00003f58 4   5    .text               ascii   `Y!|
+172 0x00003f5f 0x00003f5f 4   5    .text               ascii   \vaE!
+173 0x00003f6b 0x00003f6b 4   5    .text               ascii   \vaE!
+174 0x00003f77 0x00003f77 4   5    .text               ascii   \vaE!
+175 0x00003ffd 0x00003ffd 6   7    .text               ascii   ~\f\e-yl
+176 0x0000400c 0x0000400c 5   6    .text               ascii   mY(x\b
+177 0x0000408b 0x0000408b 4   5    .text               ascii   T\t\v@
+178 0x0000409d 0x0000409d 5   6    .text               ascii   \r\tkh\e
+179 0x0000414d 0x0000414d 4   5    .text               ascii   #))g
+180 0x00004186 0x00004186 6   7    .text               ascii   @y(}\b\e
+181 0x00004245 0x00004245 4   5    .text               ascii   ~\b\e)
+182 0x000042d5 0x000042d5 4   5    .text               ascii   Y+xk
+183 0x00004310 0x00004310 7   8    .text               ascii   jih8)\t\n
+184 0x0000451d 0x0000451d 4   5    .text               ascii   Y+xk
+185 0x0000453d 0x0000453d 4   5    .text               ascii   I+8m
+186 0x00004555 0x00004555 4   5    .text               ascii   I.8#
+187 0x00004592 0x00004592 4   5    .text               ascii   @9_A
+188 0x000045c9 0x000045c9 4   5    .text               ascii   Y*xJ
+189 0x0000472b 0x0000472b 4   5    .text               ascii   =!QE
+190 0x000047ac 0x000047ac 4   5    .text               ascii   \blA)
+191 0x0000485a 0x0000485a 4   6    .text               utf8    Cӈjh
+192 0x0000486a 0x0000486a 4   5    .text               ascii   \ek91
+193 0x000048c1 0x000048c1 5   6    .text               ascii   Ji8j!
+194 0x000048ce 0x000048ce 4   5    .text               ascii   \fK)%
+195 0x00004932 0x00004932 4   5    .text               ascii   \nKi%
+196 0x00004956 0x00004956 7   8    .text               ascii   \f\e\t'IK_
+197 0x00004966 0x00004966 4   5    .text               ascii   \vKJ}
+198 0x0000496b 0x0000496b 6   7    .text               ascii   S\b%\f\ei
+199 0x00004984 0x00004984 4   5    .text               ascii   H}\t\e
+200 0x000049ae 0x000049ae 4   6    .text               utf8    Cӈjh
+201 0x000049f4 0x000049f4 6   7    .text               ascii   H\eH\v\ba
+202 0x00004a12 0x00004a12 4   5    .text               ascii   *\n)%
+203 0x00004a18 0x00004a18 5   6    .text               ascii   \n|\n\eK
+204 0x00004ae3 0x00004ae3 4   5    .text               ascii   7\b|@
+205 0x00004b36 0x00004b36 19  20   .text               ascii   `7\b\aX7(\aP7H\aH7h\a@7\t
+206 0x00004b63 0x00004b63 5   6    .text               ascii   7(\b\b7
+207 0x00004cd2 0x00004cd2 4   5    .text               ascii   \t\v)!
+208 0x00004d42 0x00004d42 4   5    .text               ascii   \t\v)!
+209 0x00004d6e 0x00004d6e 11  12   .text               ascii   @yl\b@ym\f@yn
+210 0x00004d86 0x00004d86 4   5    .text               ascii   @y_(
+211 0x00004df6 0x00004df6 4   5    .text               ascii   ~)b=
+212 0x00004e3c 0x00004e3c 5   6    .text               ascii   *+\e\e\e
+213 0x00004e6a 0x00004e6a 4   5    .text               ascii   \eKB|
+214 0x00004fbe 0x00004fbe 4   5    .text               ascii   \n\eB(
+215 0x00004fde 0x00004fde 4   5    .text               ascii   \n\eB(
+216 0x00004ffe 0x00004ffe 4   5    .text               ascii   \n\eB(
+217 0x00005022 0x00005022 4   5    .text               ascii   \n\eB(
+218 0x00005042 0x00005042 4   5    .text               ascii   \n\eB(
+219 0x00005066 0x00005066 4   5    .text               ascii   \n\eB(
+220 0x0000508a 0x0000508a 4   5    .text               ascii   \n\eB(
+221 0x000050be 0x000050be 11  12   .text               ascii   @yl\b@ym\f@y_
+222 0x00005127 0x00005127 5   6    .text               ascii   KG|\a\e
+223 0x000053bb 0x000053bb 4   5    .text               ascii   q7h6
+224 0x000053db 0x000053db 4   6    .text               utf8    ӹhwx
+225 0x0000542f 0x0000542f 4   6    .text               utf8    ӹhwx
+226 0x00005502 0x00005502 4   5    .text               ascii   \t\v1~
+227 0x0000551b 0x0000551b 4   5    .text               ascii   q$h#
+228 0x0000553b 0x0000553b 4   6    .text               utf8    ӧidx
+229 0x0000558f 0x0000558f 4   6    .text               utf8    ӧidx
+230 0x00005636 0x00005636 4   5    .text               ascii   \f*K!
+231 0x0000579b 0x0000579b 4   5    .text               ascii   N1~\n
+232 0x000057c0 0x000057c0 6   7    .text               ascii   Ah.|!J
+233 0x000057f1 0x000057f1 5   11   .text               utf16le I\rQ\rZ
+234 0x000059f0 0x000059f0 4   5    .text               ascii   @h.|
+235 0x00005a4b 0x00005a4b 4   5    .text               ascii   x)hi
+236 0x00005abf 0x00005abf 4   5    .text               ascii   x,D@
+237 0x00005b19 0x00005b19 4   5    .text               ascii   }\fSn
+238 0x00005b31 0x00005b31 4   5    .text               ascii   }\fSn
+239 0x00005b81 0x00005b81 4   5    .text               ascii   }\fSm
+240 0x00005b97 0x00005b97 4   5    .text               ascii   8,D@
+241 0x00005b9d 0x00005b9d 5   6    .text               ascii   }\fSm\r
+242 0x00005c4b 0x00005c4b 5   6    .text               ascii   9/~\bS
+243 0x00005cc7 0x00005cc7 6   7    .text               ascii   9/~\bS?
+244 0x00005d2d 0x00005d2d 4   5    .text               ascii   }\bSn
+245 0x00005d45 0x00005d45 5   6    .text               ascii   }\bSl\r
+246 0x00005d89 0x00005d89 4   5    .text               ascii   }\bSm
+247 0x00005d93 0x00005d93 4   5    .text               ascii   8,D@
+248 0x00005da9 0x00005da9 5   6    .text               ascii   }\bSl\t
+249 0x00005e5b 0x00005e5b 4   5    .text               ascii   6/\t@
+250 0x000060ac 0x000060ac 4   5    .text               ascii   pE@x
+251 0x0000615f 0x0000615f 4   5    .text               ascii   6/\t@
+252 0x00006213 0x00006213 4   5    .text               ascii   NU<\f
+253 0x00006358 0x00006358 4   5    .text               ascii   oE@x
+254 0x00006503 0x00006503 4   5    .text               ascii   \rai-
+255 0x00006602 0x00006602 4   5    .text               ascii   \f*K\e
+256 0x00006607 0x00006607 4   5    .text               ascii   6M\r@
+257 0x00006778 0x00006778 5   6    .text               ascii   #(aNc
+258 0x00006863 0x00006863 4   5    .text               ascii   OB(!
+259 0x0000690b 0x0000690b 5   6    .text               ascii   \r (aN
+260 0x0000694f 0x0000694f 6   7    .text               ascii   Sn}\bSK
+261 0x00006985 0x00006985 4   5    .text               ascii   }\bSl
+262 0x00006a0f 0x00006a0f 4   5    .text               ascii   6n\r@
+263 0x00006a5b 0x00006a5b 4   5    .text               ascii   Op(!
+264 0x00006baf 0x00006baf 7   8    .text               ascii   \rF(aN\a\n
+265 0x00006bb8 0x00006bb8 4   5    .text               ascii   #(aN
+266 0x00006c9f 0x00006c9f 4   5    .text               ascii   =\f\b\v
+267 0x00006d7f 0x00006d7f 5   6    .text               ascii   \r (aN
+268 0x00006db8 0x00006db8 4   5    .text               ascii   .xmx
+269 0x00006dd5 0x00006dd5 4   5    .text               ascii   }\bSn
+270 0x00006df8 0x00006df8 5   6    .text               ascii   .$@xJ
+271 0x00006e7b 0x00006e7b 4   5    .text               ascii   6M\r@
+272 0x00006eb7 0x00006eb7 4   5    .text               ascii   O%(!
+273 0x00006f47 0x00006f47 6   7    .text               ascii   \rA(aN"
+274 0x00006f51 0x00006f51 4   5    .text               ascii   (aNc
+275 0x00006fe4 0x00006fe4 5   6    .text               ascii    T\fOc
+276 0x000070cb 0x000070cb 4   5    .text               ascii   OB(!
+277 0x00007123 0x00007123 5   6    .text               ascii   \r (aN
+278 0x000071b0 0x000071b0 6   7    .text               ascii   m}\fSn}
+279 0x0000721f 0x0000721f 4   5    .text               ascii   *\vD@
+280 0x000072a3 0x000072a3 4   5    .text               ascii   6/\t@
+281 0x00007397 0x00007397 4   5    .text               ascii   N@x1
+282 0x000073b8 0x000073b8 4   5    .text               ascii   .xmx
+283 0x000073e8 0x000073e8 5   6    .text               ascii   -$@xJ
+284 0x00007537 0x00007537 4   5    .text               ascii   =(\b@
+285 0x0000760d 0x0000760d 6   7    .text               ascii   jh8)\t\n
+286 0x0000777d 0x0000777d 4   5    .text               ascii   #M))
+287 0x000077dc 0x000077dc 7   8    .text               ascii   +ih8J\t\v
+288 0x00007bba 0x00007bba 7   8    .text               ascii   \e3ki\eSh
+289 0x00007d4a 0x00007d4a 4   5    .text               ascii   @y)!
+290 0x00007f60 0x00007f60 7   8    .text               ascii   +ih8J\t\v
+291 0x0000811b 0x0000811b 4   5    .text               ascii   =(\b@
+292 0x000081a4 0x000081a4 7   8    .text               ascii   +ih8J\t\v
+293 0x00008426 0x00008426 4   5    .text               ascii   @y)!
+294 0x00008511 0x00008511 5   6    .text               ascii   ~\n\e\v(
+295 0x0000854a 0x0000854a 6   7    .text               ascii   \t\vX9\r\e
+296 0x0000861f 0x0000861f 4   5    .text               ascii   =(\b@
+297 0x0000865b 0x0000865b 4   5    .text               ascii   T\n\`
+298 0x000086c0 0x000086c0 7   8    .text               ascii   Lyhxk\t\f
+299 0x00008737 0x00008737 4   5    .text               ascii   6+\t@
+300 0x00008795 0x00008795 4   5    .text               ascii   K@\r\a
+301 0x000087ad 0x000087ad 4   5    .text               ascii   Q@\r:
+302 0x000087fd 0x000087fd 4   5    .text               ascii   Zn|n
+303 0x0000880d 0x0000880d 5   6    .text               ascii   I@\rn\t
+304 0x0000881d 0x0000881d 5   6    .text               ascii   Q@\rk\r
+305 0x0000882c 0x0000882c 4   5    .text               ascii   `Y@\r
+306 0x0000885f 0x0000885f 4   5    .text               ascii   \v\fy+
+307 0x00008896 0x00008896 4   6    .text               utf8    ~ӌ"@
+308 0x00008997 0x00008997 4   5    .text               ascii   6L\t@
+309 0x00008a04 0x00008a04 4   6    .text               utf8    Ñ@\r>
+310 0x00008a46 0x00008a46 4   5    .text               ascii    NBD
+311 0x00008aaa 0x00008aaa 4   5    .text               ascii   @M\r|
+312 0x00008b00 0x00008b00 7   8    .text               ascii   .y,x\ry,
+313 0x00008efe 0x00008efe 7   8    .text               ascii   \e3ki\eSj
+314 0x00008f0a 0x00008f0a 4   5    .text               ascii   \b\v)1
+315 0x00008f12 0x00008f12 4   5    .text               ascii   \tkb\r
+316 0x00008ffd 0x00008ffd 4   5    .text               ascii   iwx,
+317 0x00009128 0x00009128 7   8    .text               ascii   +ih8J\t\v
+318 0x000092c4 0x000092c4 4   5    .text               ascii   h*@9
+319 0x00009383 0x00009383 5   7    .text               utf8    RJ!ɚH
+320 0x00009573 0x00009573 7   8    .text               ascii   9h"@9\tE
+321 0x0000958b 0x0000958b 4   5    .text               ascii   9hf`
+322 0x0000959f 0x0000959f 4   5    .text               ascii   y`Z`
+323 0x00009641 0x00009641 5   6    .text               ascii   "@9\bE
+324 0x00009798 0x00009798 7   8    .text               ascii   +ih8J\t\v
+325 0x000097c3 0x000097c3 4   5    .text               ascii   yw^`
+326 0x000097d7 0x000097d7 5   6    .text               ascii   \e\b\t\b\v
+327 0x00009ad7 0x00009ad7 5   6    .text               ascii   T(0@9
+328 0x00009adf 0x00009adf 4   5    .text               ascii   7( @
+329 0x00009b96 0x00009b96 5   6    .text               ascii   \tK\t\b@
+330 0x00009baa 0x00009baa 5   6    .text               ascii   :)\t\f@
+331 0x00009bf6 0x00009bf6 4   5    .text               ascii   \f\v?e
+332 0x00009c3a 0x00009c3a 4   5    .text               ascii   \bK)!
+333 0x00009ca6 0x00009ca6 4   5    .text               ascii   (*hU
+334 0x00009cf5 0x00009cf5 4   5    .text               ascii   #<)\a
+335 0x00009d06 0x00009d06 4   5    .text               ascii   **H!
+336 0x00009d46 0x00009d46 4   5    .text               ascii   \bK)!
+337 0x00009d5a 0x00009d5a 4   5    .text               ascii   \b*U\v
+338 0x00009d86 0x00009d86 5   6    .text               ascii   \n*9\rH
+339 0x00009e3b 0x00009e3b 5   6    .text               ascii   q(!\v\e
+340 0x00009e4a 0x00009e4a 4   5    .text               ascii   \ek\n\a
+341 0x00009e6e 0x00009e6e 5   6    .text               ascii   :*VC@
+342 0x00009efa 0x00009efa 4   5    .text               ascii   H\v\ta
+343 0x0000a008 0x0000a008 5   6    .text               ascii   \n$@x)
+344 0x0000a0a4 0x0000a0a4 5   6    .text               ascii   \vhhx_
+345 0x0000a0b0 0x0000a0b0 5   6    .text               ascii   +h(xk
+346 0x0000a21e 0x0000a21e 11  12   .text               ascii   @yl\b@ym\f@yn
+347 0x0000a236 0x0000a236 4   5    .text               ascii   @y_(
+348 0x0000a2a6 0x0000a2a6 4   5    .text               ascii   ~)b=
+349 0x0000a30e 0x0000a30e 4   5    .text               ascii   \eKB(
+350 0x0000a322 0x0000a322 4   5    .text               ascii   \eKJ}
+351 0x0000a46e 0x0000a46e 4   5    .text               ascii   \n\eB(
+352 0x0000a48e 0x0000a48e 4   5    .text               ascii   \n\eB(
+353 0x0000a4ae 0x0000a4ae 4   5    .text               ascii   \n\eB(
+354 0x0000a4d2 0x0000a4d2 4   5    .text               ascii   \n\eB(
+355 0x0000a4f2 0x0000a4f2 4   5    .text               ascii   \n\eB(
+356 0x0000a516 0x0000a516 4   5    .text               ascii   \n\eB(
+357 0x0000a53a 0x0000a53a 4   5    .text               ascii   \n\eB(
+358 0x0000a56e 0x0000a56e 11  12   .text               ascii   @yl\b@ym\f@y_
+359 0x0000a877 0x0000a877 4   5    .text               ascii   q4h6
+360 0x0000a897 0x0000a897 4   6    .text               utf8    ӹhwx
+361 0x0000a8eb 0x0000a8eb 4   6    .text               utf8    ӹhwx
+362 0x0000aadd 0x0000aadd 4   5    .text               ascii   5@)+
+363 0x0000ac64 0x0000ac64 5   6    .text               ascii   J-@))
+364 0x0000ac6e 0x0000ac6e 4   5    .text               ascii   \nKJ!
+365 0x0000acdb 0x0000acdb 4   5    .text               ascii   q0h#
+366 0x0000acfb 0x0000acfb 4   6    .text               utf8    ӧidx
+367 0x0000ad4f 0x0000ad4f 4   6    .text               utf8    ӧidx
+368 0x0000ae23 0x0000ae23 4   5    .text               ascii   6.\t@
+369 0x0000aed3 0x0000aed3 4   5    .text               ascii   \rc e
+370 0x0000aee1 0x0000aee1 4   6    .text               utf8    Z@\rǤ
+371 0x0000af29 0x0000af29 4   5    .text               ascii   hm|.
+372 0x0000af51 0x0000af51 6   7    .text               ascii   I@\r1~\v
+373 0x0000af58 0x0000af58 5   6    .text               ascii   $I@\r0
+374 0x0000af68 0x0000af68 7   8    .text               ascii   #Q@\r!|\v
+375 0x0000af71 0x0000af71 4   5    .text               ascii   Q@\r1
+376 0x0000af80 0x0000af80 4   5    .text               ascii   #Y@\r
+377 0x0000af85 0x0000af85 4   5    .text               ascii   Y@\rI
+378 0x0000af9f 0x0000af9f 4   5    .text               ascii   Nc d
+379 0x0000afa7 0x0000afa7 4   6    .text               utf8    N _<
+380 0x0000afd6 0x0000afd6 6   7    .text               ascii   \rK\rA\r\e
+381 0x0000b077 0x0000b077 4   5    .text               ascii   6\r\t@
+382 0x0000b115 0x0000b115 4   5    .text               ascii   X@\r!
+383 0x0000b165 0x0000b165 6   7    .text               ascii   P@\r1~\n
+384 0x0000b175 0x0000b175 4   5    .text               ascii   X@\r\r
+385 0x0000b193 0x0000b193 6   7    .text               ascii   < hn|.
+386 0x0000b19d 0x0000b19d 4   5    .text               ascii   I@\r.
+387 0x0000b1a5 0x0000b1a5 4   5    .text               ascii   Q@\r.
+388 0x0000b2e1 0x0000b2e1 4   5    .text               ascii   =\v\e\b
+389 0x0000b344 0x0000b344 8   9    .text               ascii   l\r@9m\t@9
+390 0x0000b383 0x0000b383 4   6    .text               utf8    S)!Ț
+391 0x0000b3d5 0x0000b3d5 4   5    .text               ascii   \t@90
+392 0x0000b3e2 0x0000b3e2 4   5    .text               ascii   @91<
+393 0x0000b52d 0x0000b52d 4   5    .text               ascii   =\n\e\b
+394 0x0000b590 0x0000b590 8   9    .text               ascii   l\r@9m\t@9
+395 0x0000b5e3 0x0000b5e3 4   6    .text               utf8    S)!Ț
+396 0x0000b6c7 0x0000b6c7 4   5    .text               ascii   6q\t@
+397 0x0000b7a5 0x0000b7a5 4   6    .text               utf8    *aNԜ
+398 0x0000b7b2 0x0000b7b2 4   5    .text               ascii   "N1F
+399 0x0000b7bd 0x0000b7bd 4   6    .text               utf8    (aNƄ
+400 0x0000b846 0x0000b846 5   6    .text               ascii   @Ms~\r
+401 0x0000b88b 0x0000b88b 4   5    .text               ascii   nG(a
+402 0x0000b897 0x0000b897 4   6    .text               utf8    \f`_<
+403 0x0000b8ea 0x0000b8ea 4   5    .text               ascii   \n\e1*
+404 0x0000b9d3 0x0000b9d3 4   5    .text               ascii   6P\t@
+405 0x0000ba66 0x0000ba66 4   5    .text               ascii    NcD
+406 0x0000ba91 0x0000ba91 6   7    .text               ascii   *aN'*a
+407 0x0000ba9f 0x0000ba9f 6   8    .text               utf8    N\a*aNƄ
+408 0x0000bb0a 0x0000bb0a 5   6    .text               ascii   @\r!|\f
+409 0x0000bb4e 0x0000bb4e 4   5    .text               ascii    NBD
+410 0x0000bb63 0x0000bb63 4   6    .text               utf8    \fB_<
+411 0x0000bb9a 0x0000bb9a 4   5    .text               ascii   \t\nQE
+412 0x0000bc02 0x0000bc02 4   5    .text               ascii   \n\e1*
+413 0x0000bc8a 0x0000bc8a 4   5    .text               ascii   \r*j\n
+414 0x0000bd27 0x0000bd27 4   5    .text               ascii   TL}\t
+415 0x0000bd66 0x0000bd66 5   6    .text               ascii   @\r`h-
+416 0x0000bd6f 0x0000bd6f 4   5    .text               ascii   TH}\t
+417 0x0000be37 0x0000be37 4   5    .text               ascii   *k}\n
+418 0x0000be67 0x0000be67 4   5    .text               ascii   6+\r@
+419 0x0000bec5 0x0000bec5 4   5    .text               ascii   8a.a
+420 0x0000becd 0x0000becd 5   6    .text               ascii   8ana\b
+421 0x0000befa 0x0000befa 4   5    .text               ascii   \b/b\b
+422 0x0000bf1c 0x0000bf1c 5   6    .text               ascii   B8!.G
+423 0x0000bf37 0x0000bf37 11  12   .text               ascii   \r'8a.!8anc\f
+424 0x0000bf67 0x0000bf67 6   7    .text               ascii   \rb8!.C
+425 0x0000bfbd 0x0000bfbd 4   5    .text               ascii   T(OB
+426 0x0000bfc2 0x0000bfc2 4   5    .text               ascii   4Of\f
+427 0x0000bff3 0x0000bff3 5   6    .text               ascii   NAT(O
+428 0x0000bff9 0x0000bff9 4   5    .text               ascii   T(O!
+429 0x0000c0ae 0x0000c0ae 4   5    .text               ascii   @\r"\b
+430 0x0000c0b9 0x0000c0b9 9   10   .text               ascii   8an!\b@\rb\f
+431 0x0000c0c3 0x0000c0c3 5   6    .text               ascii   \ra\f@\r
+432 0x0000c0f2 0x0000c0f2 7   8    .text               ascii   \b/!8!.$
+433 0x0000c117 0x0000c117 5   6    .text               ascii   N!T(O
+434 0x0000c11d 0x0000c11d 4   5    .text               ascii   T(O!
+435 0x0000c1c7 0x0000c1c7 4   5    .text               ascii   *k}\n
+436 0x0000c1f7 0x0000c1f7 4   5    .text               ascii   6+\r@
+437 0x0000c255 0x0000c255 4   5    .text               ascii   8a.a
+438 0x0000c25d 0x0000c25d 5   6    .text               ascii   8ana\b
+439 0x0000c28a 0x0000c28a 4   5    .text               ascii   \b/b\b
+440 0x0000c2ac 0x0000c2ac 5   6    .text               ascii   B8!.G
+441 0x0000c2c7 0x0000c2c7 11  12   .text               ascii   \r'8a.!8anc\f
+442 0x0000c2f7 0x0000c2f7 6   7    .text               ascii   \rb8!.C
+443 0x0000c34d 0x0000c34d 4   5    .text               ascii   T(OB
+444 0x0000c352 0x0000c352 4   5    .text               ascii   8Of\f
+445 0x0000c383 0x0000c383 5   6    .text               ascii   NAT(O
+446 0x0000c389 0x0000c389 4   5    .text               ascii   T(O!
+447 0x0000c43e 0x0000c43e 4   5    .text               ascii   @\r"\b
+448 0x0000c449 0x0000c449 9   10   .text               ascii   8an!\b@\rb\f
+449 0x0000c453 0x0000c453 5   6    .text               ascii   \ra\f@\r
+450 0x0000c482 0x0000c482 7   8    .text               ascii   \b/!8!.$
+451 0x0000c4a7 0x0000c4a7 5   6    .text               ascii   N!T(O
+452 0x0000c4ad 0x0000c4ad 4   5    .text               ascii   T(O!
+453 0x0000c5c4 0x0000c5c4 4   6    .text               utf8    \b!Ú)
+454 0x0000c5d3 0x0000c5d3 4   5    .text               ascii   Th\n@
+455 0x0000c5e3 0x0000c5e3 6   8    .text               utf8    R(!Ț)
+456 0x0000c70e 0x0000c70e 4   5    .text               ascii   @9h\n
+457 0x0000c825 0x0000c825 5   6    .text               ascii   &@9\b}
+458 0x0000c836 0x0000c836 4   5    .text               ascii   \tk:1
+459 0x0000c844 0x0000c844 4   5    .text               ascii   \e}\v\e
+460 0x0000c8ef 0x0000c8ef 6   7    .text               ascii   4hB@9(
+461 0x0000c8f7 0x0000c8f7 5   6    .text               ascii   7i"A)
+462 0x0000c96d 0x0000c96d 4   5    .text               ascii   &@9j
+463 0x0000c98c 0x0000c98c 4   5    .text               ascii   mij8
+464 0x0000c9f3 0x0000c9f3 4   6    .text               utf8    r+@R
+465 0x0000ca49 0x0000ca49 5   6    .text               ascii   &@9\b}
+466 0x0000ca4f 0x0000ca4f 5   6    .text               ascii   \e\b}\t\e
+467 0x0000d401 0x00000001 11  12   .shstrtab           ascii   .fini_array
+468 0x0000d40d 0x0000000d 5   6    .shstrtab           ascii   .text
+469 0x0000d413 0x00000013 4   5    .shstrtab           ascii   .got
+470 0x0000d418 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+471 0x0000d42c 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+472 0x0000d435 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+473 0x0000d43f 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+474 0x0000d447 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+475 0x0000d455 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+476 0x0000d464 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+477 0x0000d471 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+478 0x0000d47b 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+479 0x0000d485 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+480 0x0000d492 0x00000092 7   8    .shstrtab           ascii   .dynsym
+481 0x0000d49a 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+482 0x0000d4a4 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+483 0x0000d4ae 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+484 0x0000d4c1 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+485 0x0000d4ca 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+486 0x0000d4d4 0x000000d4 7   8    .shstrtab           ascii   .rodata
+487 0x0000d4dc 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+488 0x0000d4ec 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+489 0x0000d537 0x0000004c 6   8    .gnu_debugdata      utf8    \eu>)Ń\t
+490 0x0000d554 0x00000069 4   5    .gnu_debugdata      ascii   *Pt[
+491 0x0000d5a1 0x000000b6 4   5    .gnu_debugdata      ascii   l{BW
+492 0x0000d5a8 0x000000bd 4   5    .gnu_debugdata      ascii   \tqz5
+493 0x0000d640 0x00000155 5   6    .gnu_debugdata      ascii   \r[/mn
+494 0x0000d689 0x0000019e 4   5    .gnu_debugdata      ascii   h:=b
+495 0x0000d6ae 0x000001c3 5   6    .gnu_debugdata      ascii   7pjj\n
+496 0x0000d6e8 0x000001fd 5   7    .gnu_debugdata      utf8    ek Gפ
+497 0x0000d747 0x0000025c 4   5    .gnu_debugdata      ascii   T3kh
+498 0x0000d764 0x00000279 4   5    .gnu_debugdata      ascii   [jSi
+499 0x0000d784 0x00000299 6   8    .gnu_debugdata      utf8    C\bޒVg_
+500 0x0000d79b 0x000002b0 6   7    .gnu_debugdata      ascii   7j{bBf
+501 0x0000d7a3 0x000002b8 4   5    .gnu_debugdata      ascii   L[Bd
+502 0x0000d80d 0x00000322 4   5    .gnu_debugdata      ascii   W,7"
+503 0x0000d816 0x0000032b 4   5    .gnu_debugdata      ascii   \fd$0
+504 0x0000d843 0x00000358 4   6    .gnu_debugdata      utf8    j\b.Ӓ
+505 0x0000d856 0x0000036b 4   5    .gnu_debugdata      ascii   0{{b
+506 0x0000d868 0x0000037d 4   6    .gnu_debugdata      utf8    Qǵ0`
+507 0x0000d886 0x0000039b 4   5    .gnu_debugdata      ascii   XN~C
+508 0x0000d8b3 0x000003c8 8   10   .gnu_debugdata      utf8    ":U͟\r\bnl
+0x0000ca80    1     16 sym.imp.__cxa_finalize
+0x0000cbf0    1     16 sym.imp.__stack_chk_fail
+0x0000caa0    1     16 sym.imp.calloc
+0x0000ca90    1     16 sym.imp.free
+0x0000cbe0    1     16 sym.imp.memset
+0x0000cc10    1     16 sym.imp.memcpy
+0x0000ccd0    1     16 sym.imp.printf
+0x0000cd90    1     16 sym.imp.__android_log_print
+0x0000cd80    1     16 sym.imp.malloc
+0x00003000    1     12 entry0
+0x00003034    1      8 sym.Swap32BtoN
+0x0000305c    1     16 sym.SwapFloat32NtoB
+0x00004c70   85   2392 sym.unpc_block
+0x0000974c   13    856 method.ALACEncoder.InitializeEncoder_AudioFormatDescription_
+0x00009f74    3     96 sym.init_coefs
+0x000030d4    1     88 sym.BitBufferRead
+0x000033a4    8    108 sym.BitBufferRewind
+0x000074cc    1     36 fcn.000074cc
+0x0000cc20    1     16 fcn.0000cc20
+0x0000a0bc  111   3276 sym.pc_block
+0x000030b4    1     16 sym.Swap32
+0x00004720    1     40 sym.set_standard_ag_params
+0x00009550    1    128 method.ALACEncoder.GetConfig_ALACSpecificConfig_
+0x0000cd50    1     16 fcn.0000cd50
+0x0000cd60    1     16 fcn.0000cd60
+0x0000be18   15    912 sym.copy20ToPredictor
+0x0000312c    1     76 sym.BitBufferReadSmall
+0x00003428    1     20 sym.ALACDecoder::ALACDecoder__
+0x0000720c    4     48 sym.copyPredictorTo32
+0x00007ed0    5    184 method.ALACEncoder.EncodeStereoEscape_BitBuffer__void__unsigned_int__unsigned_int_
+0x00004774   31    876 sym.dyn_decomp
+0x00009228   24    800 method.ALACEncoder.Encode_AudioFormatDescription__AudioFormatDescription__unsigned_char__unsigned_char__int_
+0x0000ad88   35   1260 sym.mix16
+0x000046bc    3    100 method.ALACDecoder.FillElement_BitBuffer_
+0x0000cad0    1     16 fcn.0000cad0
+0x0000caf0    1     16 fcn.0000caf0
+0x00003488    1    140 method.ALACDecoder.Init_ALACSpecificConfig_const_
+0x0000343c    7     76 method.ALACDecoder.ALACDecoder__
+0x0000723c   16    464 sym.copyPredictorTo32Shift
+0x000055c8   33   1296 sym.unmix16
+0x00009548    1      8 method.ALACEncoder.Finish__
+0x0000740c    1     52 method.ALACEncoder.ALACEncoder__
+0x0000c1a8   15    912 sym.copy24ToPredictor
+0x00003178    1     60 sym.BitBufferReadOne
+0x00006e2c   15    992 sym.copyPredictorTo20
+0x000074f0   36   2232 method.ALACEncoder.EncodeStereo_BitBuffer__void__unsigned_int__unsigned_int__unsigned_int_
+0x00009fd4   16    232 sym.copy_coefs
+0x0000303c    1      8 sym.Swap64BtoN
+0x0000307c    1     16 sym.SwapFloat64NtoB
+0x00003514   15    388 method.ALACDecoder.Init_void__unsigned_int_
+0x000095d0    1     20 method.ALACEncoder.GetMagicCookieSize_unsigned_int_
+0x00007440   13    140 reloc.ALACEncoder::ALACEncoder__
+0x0000302c    1      8 sym.Swap32NtoB
+0x000031ec    1     32 sym.BitBufferPeekOne
+0x000095e4    9    360 method.ALACEncoder.GetMagicCookie_void__unsigned_int_
+0x000030a0    1     20 sym.Swap24
+0x00003258    1     28 sym.BitBufferGetPosition
+0x00009ac4    5     88 method.ALACEncoder.GetSourceFormat_AudioFormatDescription_const__AudioFormatDescription_
+0x000080dc   20   1152 method.ALACEncoder.EncodeStereoFast_BitBuffer__void__unsigned_int__unsigned_int__unsigned_int_
+0x0000b5c4   57   2132 sym.mix32
+0x00003020    1     12 sym.Swap16BtoN
+0x000031b4    1     56 sym.BitBufferPeek
+0x000065b8   15   1000 sym.copyPredictorTo24
+0x00004748    1     44 sym.set_ag_params
+0x00005dbc   50   2044 sym.unmix32
+0x0000304c    1     16 sym.SwapFloat32BtoN
+0x0000337c    3     40 sym.BitBufferAdvance
+0x00004618    6    164 method.ALACDecoder.DataStreamElement_BitBuffer_
+0x0000b274    9    260 sym.mix20
+0x0000320c    3     76 sym.BitBufferUnpackBERSize
+0x00005ad8    9    236 sym.unmix20
+0x000085e8   26   1704 method.ALACEncoder.EncodeMono_BitBuffer__void__unsigned_int__unsigned_int__unsigned_int_
+0x00009b1c   33   1112 sym.dyn_comp
+0x0000c79c   24    556 sym.alac_dec_process
+0x00003044    1      8 sym.Swap64NtoB
+0x0000c538   34    612 sym.alac_dec_interface
+0x0000308c    1     20 sym.Swap16
+0x000030c4    1     16 sym.BitBufferInit
+0x00003410    1     24 sym.BitBufferReset
+0x0000b378   19    588 sym.mix24
+0x00003274    9    140 sym.BitBufferByteAlign
+0x00003300    6    124 sym.BitBufferWrite
+0x00003698   52    800 method.ALACDecoder.Decode_BitBuffer__unsigned_char__unsigned_int__unsigned_int__unsigned_int_
+0x00005bc4   19    504 sym.unmix24
+0x00003014    1     12 sym.Swap16NtoB
+0x0000306c    1     16 sym.SwapFloat64BtoN
+0x000069a0   16   1164 sym.copyPredictorTo24Shift
+0x0000cc30    1     16 sym.imp.operator_delete_void_
+0x0000cdb0    1     16 sym.imp.operator_new_unsigned_long_
+0x00003010    1      4 entry.fini0
+0x0000cab0    1     16 fcn.0000cab0
+0x0000cac0    1     16 fcn.0000cac0
+0x0000cae0    1     16 fcn.0000cae0
+0x0000cb00    1     16 fcn.0000cb00
+0x0000cb10    1     16 fcn.0000cb10
+0x0000cb20    1     16 fcn.0000cb20
+0x0000cb30    1     16 fcn.0000cb30
+0x0000cb40    1     16 fcn.0000cb40
+0x0000cb50    1     16 fcn.0000cb50
+0x0000cb60    1     16 fcn.0000cb60
+0x0000cb70    1     16 fcn.0000cb70
+0x0000cb80    1     16 fcn.0000cb80
+0x0000cb90    1     16 fcn.0000cb90
+0x0000cba0    1     16 fcn.0000cba0
+0x0000cbb0    1     16 fcn.0000cbb0
+0x0000cbc0    1     16 fcn.0000cbc0
+0x0000cbd0    1     16 fcn.0000cbd0
+0x0000cc00    1     16 fcn.0000cc00
+0x00004ae0   63    400 sym.lead
+0x0000cc40    1     16 fcn.0000cc40
+0x0000cc50    1     16 fcn.0000cc50
+0x0000cc60    1     16 fcn.0000cc60
+0x0000cc70    1     16 fcn.0000cc70
+0x0000cc80    1     16 fcn.0000cc80
+0x0000cc90    1     16 fcn.0000cc90
+0x0000cca0    1     16 fcn.0000cca0
+0x0000ccb0    1     16 fcn.0000ccb0
+0x0000ccc0    1     16 fcn.0000ccc0
+0x0000cce0    1     16 fcn.0000cce0
+0x0000ccf0    1     16 fcn.0000ccf0
+0x0000cd00    1     16 fcn.0000cd00
+0x0000cd10    1     16 fcn.0000cd10
+0x0000cd20    1     16 fcn.0000cd20
+0x0000cd30    1     16 fcn.0000cd30
+0x0000cd40    1     16 fcn.0000cd40
+0x0000cd70    1     16 fcn.0000cd70
+0x0000cda0    1     16 fcn.0000cda0
+0x0000cdc0    1     16 fcn.0000cdc0
+0x0000cdd0    1     16 fcn.0000cdd0
+0x0000cde0    1     16 fcn.0000cde0
+0x00003998   10    188 fcn.00003998
+0x0000ca60    1     20 section..plt

@@ -1,0 +1,113 @@
+arch     arm
+baddr    0x0
+binsz    9568
+bintype  elf
+bits     64
+canary   false
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                    demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+2   0x00001014 0x00001014 GLOBAL FUNC 8        _Z18early_wakeup_ioctli early_wakeup_ioctl(int)
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000238   0x18 0x00000238   0x18 -r-- NOTE        .note.android.ident
+2   0x00000250   0x20 0x00000250   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x00000270   0x48 0x00000270   0x48 -r-- DYNSYM      .dynsym
+4   0x000002b8    0x6 0x000002b8    0x6 -r-- GNU_VERSYM  .gnu.version
+5   0x000002c0   0x20 0x000002c0   0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x000002e0   0x20 0x000002e0   0x20 -r-- GNU_HASH    .gnu.hash
+7   0x00000300   0x83 0x00000300   0x83 -r-- STRTAB      .dynstr
+8   0x00000388   0x10 0x00000388   0x10 -r-- ----        .relr.dyn
+9   0x00000398   0x18 0x00000398   0x18 -r-- RELA        .rela.plt
+10  0x000003b0   0x2c 0x000003b0   0x2c -r-- PROGBITS    .eh_frame_hdr
+11  0x000003e0   0x7c 0x000003e0   0x7c -r-- PROGBITS    .eh_frame
+12  0x00001000   0x1c 0x00001000   0x1c -r-x PROGBITS    .text
+13  0x00001020   0x30 0x00001020   0x30 -r-x PROGBITS    .plt
+14  0x00002000    0x8 0x00002000    0x8 -rw- PROGBITS    .data.rel.ro
+15  0x00002008   0x10 0x00002008   0x10 -rw- FINI_ARRAY  .fini_array
+16  0x00002018  0x1c0 0x00002018  0x1c0 -rw- DYNAMIC     .dynamic
+17  0x000021d8   0x20 0x000021d8   0x20 -rw- PROGBITS    .got.plt
+18  0x000021f8   0xd4 0x00000000   0xd4 ---- STRTAB      .shstrtab
+19  0x000022cc  0x294 0x00000000  0x294 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000244 0x00000244 7   8    .note.android.ident ascii   Android
+2   0x00000262 0x00000262 6   7    .note.gnu.build-id  ascii   '\e_h@q
+3   0x00000301 0x00000301 14  15   .dynstr             ascii   __cxa_finalize
+4   0x00000310 0x00000310 23  24   .dynstr             ascii   _Z18early_wakeup_ioctli
+5   0x00000328 0x00000328 7   8    .dynstr             ascii   libc.so
+6   0x00000330 0x00000330 4   5    .dynstr             ascii   LIBC
+7   0x00000335 0x00000335 11  12   .dynstr             ascii   libutils.so
+8   0x00000341 0x00000341 9   10   .dynstr             ascii   liblog.so
+9   0x0000034b 0x0000034b 12  13   .dynstr             ascii   libcutils.so
+10  0x00000358 0x00000358 9   10   .dynstr             ascii   libc++.so
+11  0x00000362 0x00000362 7   8    .dynstr             ascii   libm.so
+12  0x0000036a 0x0000036a 8   9    .dynstr             ascii   libdl.so
+13  0x00000373 0x00000373 15  16   .dynstr             ascii   libperfioctl.so
+14  0x000021f9 0x00000001 11  12   .shstrtab           ascii   .fini_array
+15  0x00002205 0x0000000d 5   6    .shstrtab           ascii   .text
+16  0x0000220b 0x00000013 19  20   .shstrtab           ascii   .note.android.ident
+17  0x0000221f 0x00000027 8   9    .shstrtab           ascii   .got.plt
+18  0x00002228 0x00000030 9   10   .shstrtab           ascii   .rela.plt
+19  0x00002232 0x0000003a 7   8    .shstrtab           ascii   .dynstr
+20  0x0000223a 0x00000042 13  14   .shstrtab           ascii   .eh_frame_hdr
+21  0x00002248 0x00000050 14  15   .shstrtab           ascii   .gnu.version_r
+22  0x00002257 0x0000005f 12  13   .shstrtab           ascii   .data.rel.ro
+23  0x00002264 0x0000006c 9   10   .shstrtab           ascii   .relr.dyn
+24  0x0000226e 0x00000076 12  13   .shstrtab           ascii   .gnu.version
+25  0x0000227b 0x00000083 7   8    .shstrtab           ascii   .dynsym
+26  0x00002283 0x0000008b 9   10   .shstrtab           ascii   .gnu.hash
+27  0x0000228d 0x00000095 9   10   .shstrtab           ascii   .eh_frame
+28  0x00002297 0x0000009f 18  19   .shstrtab           ascii   .note.gnu.build-id
+29  0x000022aa 0x000000b2 8   9    .shstrtab           ascii   .dynamic
+30  0x000022b3 0x000000bb 9   10   .shstrtab           ascii   .shstrtab
+31  0x000022bd 0x000000c5 14  15   .shstrtab           ascii   .gnu_debugdata
+32  0x000022cd 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+33  0x00002352 0x00000086 4   6    .gnu_debugdata      utf8    nBʪn
+34  0x00002358 0x0000008c 4   6    .gnu_debugdata      utf8    ۙ0@\f
+35  0x00002360 0x00000094 5   7    .gnu_debugdata      utf8    zڴ"T#
+36  0x00002367 0x0000009b 4   5    .gnu_debugdata      ascii   \R'-
+37  0x00002376 0x000000aa 6   8    .gnu_debugdata      utf8    z^e>?#
+38  0x0000238d 0x000000c1 4   6    .gnu_debugdata      utf8    \r~ep
+39  0x000023b2 0x000000e6 4   5    .gnu_debugdata      ascii   ! "L
+40  0x000023e2 0x00000116 4   5    .gnu_debugdata      ascii   u\f\r*
+41  0x000023e7 0x0000011b 7   8    .gnu_debugdata      ascii   R\e9!cd\
+42  0x00002400 0x00000134 4   5    .gnu_debugdata      ascii   A'C,
+43  0x00002420 0x00000154 6   7    .gnu_debugdata      ascii   hw?VJ$
+44  0x00002465 0x00000199 4   5    .gnu_debugdata      ascii   Dl(\r
+45  0x00002483 0x000001b7 4   5    .gnu_debugdata      ascii   \bXGP
+46  0x000024f8 0x0000022c 5   7    .gnu_debugdata      utf8    |Q\vۛ$
+47  0x00002515 0x00000249 4   5    .gnu_debugdata      ascii   $Q|g
+48  0x00002540 0x00000274 6   7    .gnu_debugdata      ascii   9V\eS>9
+0x00001040    1     16 sym.imp.__cxa_finalize
+0x00001000    1     12 entry0
+0x00001014    1      8 sym.early_wakeup_ioctl_int_
+0x00001010    1      4 entry.fini0
+0x00001020    1     20 section..plt

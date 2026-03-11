@@ -1,0 +1,873 @@
+arch     arm
+baddr    0x0
+binsz    33507
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+compiler GCC: (GNU) 4.9 20150123 (prerelease)
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+intrp    /system/bin/linker
+laddr    0x0
+lang     c++
+linenum  false
+lsyms    false
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   false
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped true
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type   size lib name                                                      demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+66  0x00002524 0x00002524 GLOBAL FUNC   100      DiracSound_saveHeadset
+67  0x00003354 0x00003354 GLOBAL FUNC   104      DiracSoundLib_GetDescriptor
+68  0x000033e8 0x000033e8 GLOBAL FUNC   2524     DiracSound_command
+69  0x0000293c 0x0000293c GLOBAL FUNC   52       DiracSound_getConfig
+70  0x00007c78 0x00008c78 GLOBAL OBJ    16       _ZTTN7android23DiracSetParameterThreadE                   VTT for android::DiracSetParameterThread
+71  0x000033bc 0x000033bc GLOBAL FUNC   44       DiracSound_process
+72  0x0000242c 0x0000242c GLOBAL FUNC   248      DiracSound_restoreEQ
+73  0x00007ca0 0x00008ca0 GLOBAL OBJ    88       _ZTCN7android23DiracSetParameterThreadE0_NS_6ThreadE      construction vtable for android::Thread-in-android::DiracSetParameterThread
+74  0x00008008 0x00009008 GLOBAL OBJ    128      gPresetDSP_HP
+75  0x00002060 0x00002060 GLOBAL FUNC   104      _ZN7android23DiracSetParameterThreadD2Ev                  android::DiracSetParameterThread::~DiracSetParameterThread()
+76  0x000027a4 0x000027a4 GLOBAL FUNC   124      DiracSound_restoreSpeakerStereoModeState
+77  0x00004238 0x00004238 GLOBAL FUNC   56       DiracSound_getDescriptor
+78  0x00002340 0x00002340 GLOBAL FUNC   24       DiracSound_releaseAppId
+79  0x0000210c 0x0000210c GLOBAL FUNC   40       _ZN7android23DiracSetParameterThreadD0Ev                  android::DiracSetParameterThread::~DiracSetParameterThread()
+80  0x00001fa0 0x00001fa0 GLOBAL FUNC   84       _ZN7android23DiracSetParameterThreadC2EPNS_11setParamBufE android::DiracSetParameterThread::DiracSetParameterThread(android::setParamBuf*)
+81  0x000028a4 0x000028a4 GLOBAL FUNC   152      DiracSound_setConfig
+82  0x00002134 0x00002134 GLOBAL FUNC   44       _ZTv0_n12_N7android23DiracSetParameterThreadD0Ev          virtual thunk to android::DiracSetParameterThread::~DiracSetParameterThread()
+83  0x00002310 0x00002310 GLOBAL FUNC   48       DiracSound_allocateAppId
+84  0x00007c88 0x00008c88 GLOBAL OBJ    16       gDiracSoundInterface
+85  0x000026c4 0x000026c4 GLOBAL FUNC   124      DiracSound_restoreMusicState
+86  0x00003290 0x00003290 GLOBAL FUNC   196      DiracSoundLib_Release
+87  0x00002820 0x00002820 GLOBAL FUNC   132      DiracSound_getHIFIState
+88  0x00008088 0x00009088 GLOBAL OBJ    84       gPresetDSP_SPK
+89  0x00002358 0x00002358 GLOBAL FUNC   212      DiracSound_saveEQ
+90  ---------- 0x0000910c GLOBAL NOTYPE 0        __bss_start
+91  0x000080f0 0x000090f0 GLOBAL OBJ    28       AELI
+92  0x00002fa0 0x00002fa0 GLOBAL FUNC   704      DiracSoundLib_Create
+93  0x00002740 0x00002740 GLOBAL FUNC   100      DiracSound_saveSpeakerStereoModeState
+94  ---------- 0x00009117 GLOBAL NOTYPE 0        _end
+95  0x00002660 0x00002660 GLOBAL FUNC   100      DiracSound_saveMusicState
+96  0x00007c20 0x00008c20 GLOBAL OBJ    88       _ZTVN7android23DiracSetParameterThreadE                   vtable for android::DiracSetParameterThread
+97  0x000022d0 0x000022d0 GLOBAL FUNC   64       parameterInfoInit
+98  0x000020c8 0x000020c8 GLOBAL FUNC   32       _ZN7android23DiracSetParameterThreadD1Ev                  android::DiracSetParameterThread::~DiracSetParameterThread()
+99  ---------- 0x0000910c GLOBAL NOTYPE 0        _edata
+100 0x000080dc 0x000090dc GLOBAL OBJ    20       DSPVarFS
+101 0x00002160 0x00002160 GLOBAL FUNC   360      _ZN7android23DiracSetParameterThread10threadLoopEv        android::DiracSetParameterThread::threadLoop()
+102 0x00002f40 0x00002f40 GLOBAL FUNC   36       DiracSoundLib_QueryNumberEffects
+103 0x00002588 0x00002588 GLOBAL FUNC   116      DiracSound_restoreHeadset
+104 ---------- 0x0000910c GLOBAL OBJ    10       gAppIdUsed
+105 0x00001ff4 0x00001ff4 GLOBAL FUNC   108      _ZN7android23DiracSetParameterThreadC1EPNS_11setParamBufE android::DiracSetParameterThread::DiracSetParameterThread(android::setParamBuf*)
+106 0x000020e8 0x000020e8 GLOBAL FUNC   36       _ZTv0_n12_N7android23DiracSetParameterThreadD1Ev          virtual thunk to android::DiracSetParameterThread::~DiracSetParameterThread()
+107 0x00002f64 0x00002f64 GLOBAL FUNC   56       DiracSoundLib_QueryEffect
+108 0x000025fc 0x000025fc GLOBAL FUNC   100      DiracSound_saveMode
+109 0x00002970 0x00002970 GLOBAL FUNC   1096     DiracSound_updateState
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000154    0x13 0x00000154    0x13 -r-- PROGBITS    .interp
+2   0x00000168    0x18 0x00000168    0x18 -r-- NOTE        .note.android.ident
+3   0x00000180    0x20 0x00000180    0x20 -r-- NOTE        .note.gnu.build-id
+4   0x000001a0   0x6f0 0x000001a0   0x6f0 -r-- DYNSYM      .dynsym
+5   0x00000890   0xa53 0x00000890   0xa53 -r-- STRTAB      .dynstr
+6   0x000012e4   0x178 0x000012e4   0x178 -r-- GNU_HASH    .gnu.hash
+7   0x0000145c    0xde 0x0000145c    0xde -r-- GNU_VERSYM  .gnu.version
+8   0x0000153c    0x1c 0x0000153c    0x1c -r-- GNU_VERDEF  .gnu.version_d
+9   0x00001558    0x50 0x00001558    0x50 -r-- GNU_VERNEED .gnu.version_r
+10  0x000015a8   0x210 0x000015a8   0x210 -r-- REL         .rel.dyn
+11  0x000017b8   0x2c8 0x000017b8   0x2c8 -r-- REL         .rel.plt
+12  0x00001a80   0x440 0x00001a80   0x440 -r-x PROGBITS    .plt
+13  0x00001ec0  0x4030 0x00001ec0  0x4030 -r-x PROGBITS    .text
+14  0x00005ef0   0x260 0x00005ef0   0x260 -r-- ----        .ARM.exidx
+15  0x00006150    0x3c 0x00006150    0x3c -r-- PROGBITS    .ARM.extab
+16  0x00006190  0x166c 0x00006190  0x166c -r-- PROGBITS    .rodata
+17  0x00007c10     0x4 0x00008c10     0x4 -rw- FINI_ARRAY  .fini_array
+18  0x00007c20   0x120 0x00008c20   0x120 -rw- PROGBITS    .data.rel.ro
+19  0x00007d40   0x120 0x00008d40   0x120 -rw- DYNAMIC     .dynamic
+20  0x00007e60   0x1a0 0x00008e60   0x1a0 -rw- PROGBITS    .got
+21  0x00008000   0x10c 0x00009000   0x10c -rw- PROGBITS    .data
+22  0x0000810c     0x0 0x0000910c     0xb -rw- NOBITS      .bss
+23  0x0000810c    0x63 0x00000000    0x63 ---- PROGBITS    .comment
+24  0x00008170    0x1c 0x00000000    0x1c ---- NOTE        .note.gnu.gold-version
+25  0x0000818c    0x40 0x00000000    0x40 ---- ----        .ARM.attributes
+26  0x000081cc   0x117 0x00000000   0x117 ---- STRTAB      .shstrtab
+
+[Strings]
+nth paddr      vaddr      len size section                type    string
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 5   12                          utf16le 4 \t(\e
+1   0x00000038 0x00000038 5   24                          utf32le 444ĠĠ
+2   0x00000154 0x00000154 18  19   .interp                ascii   /system/bin/linker
+3   0x00000174 0x00000174 7   8    .note.android.ident    ascii   Android
+4   0x00000891 0x00000891 14  15   .dynstr                ascii   __cxa_finalize
+5   0x000008a0 0x000008a0 4   5    .dynstr                ascii   LIBC
+6   0x000008a5 0x000008a5 7   8    .dynstr                ascii   libc.so
+7   0x000008ad 0x000008ad 11  12   .dynstr                ascii   libdirac.so
+8   0x000008b9 0x000008b9 12  13   .dynstr                ascii   __cxa_atexit
+9   0x000008c6 0x000008c6 17  18   .dynstr                ascii   __register_atfork
+10  0x000008d8 0x000008d8 4   5    .dynstr                ascii   AELI
+11  0x000008dd 0x000008dd 8   9    .dynstr                ascii   DSPVarFS
+12  0x000008e6 0x000008e6 20  21   .dynstr                ascii   DiracSoundLib_Create
+13  0x000008fb 0x000008fb 27  28   .dynstr                ascii   DiracSoundLib_GetDescriptor
+14  0x00000917 0x00000917 25  26   .dynstr                ascii   DiracSoundLib_QueryEffect
+15  0x00000931 0x00000931 32  33   .dynstr                ascii   DiracSoundLib_QueryNumberEffects
+16  0x00000952 0x00000952 21  22   .dynstr                ascii   DiracSoundLib_Release
+17  0x00000968 0x00000968 24  25   .dynstr                ascii   DiracSound_allocateAppId
+18  0x00000981 0x00000981 18  19   .dynstr                ascii   DiracSound_command
+19  0x00000994 0x00000994 14  15   .dynstr                ascii   __aeabi_memcpy
+20  0x000009a3 0x000009a3 6   7    .dynstr                ascii   LIBC_N
+21  0x000009aa 0x000009aa 20  21   .dynstr                ascii   DiracSound_getConfig
+22  0x000009bf 0x000009bf 23  24   .dynstr                ascii   __gnu_Unwind_Find_exidx
+23  0x000009d7 0x000009d7 24  25   .dynstr                ascii   DiracSound_getDescriptor
+24  0x000009f0 0x000009f0 23  24   .dynstr                ascii   DiracSound_getHIFIState
+25  0x00000a08 0x00000a08 18  19   .dynstr                ascii   DiracSound_process
+26  0x00000a1b 0x00000a1b 23  24   .dynstr                ascii   DiracSound_releaseAppId
+27  0x00000a33 0x00000a33 20  21   .dynstr                ascii   DiracSound_restoreEQ
+28  0x00000a48 0x00000a48 25  26   .dynstr                ascii   DiracSound_restoreHeadset
+29  0x00000a62 0x00000a62 28  29   .dynstr                ascii   DiracSound_restoreMusicState
+30  0x00000a7f 0x00000a7f 6   7    .dynstr                ascii   dladdr
+31  0x00000a86 0x00000a86 8   9    .dynstr                ascii   libdl.so
+32  0x00000a8f 0x00000a8f 40  41   .dynstr                ascii   DiracSound_restoreSpeakerStereoModeState
+33  0x00000ab8 0x00000ab8 14  15   .dynstr                ascii   __snprintf_chk
+34  0x00000ac7 0x00000ac7 17  18   .dynstr                ascii   DiracSound_saveEQ
+35  0x00000ad9 0x00000ad9 22  23   .dynstr                ascii   DiracSound_saveHeadset
+36  0x00000af0 0x00000af0 19  20   .dynstr                ascii   DiracSound_saveMode
+37  0x00000b04 0x00000b04 25  26   .dynstr                ascii   DiracSound_saveMusicState
+38  0x00000b1e 0x00000b1e 37  38   .dynstr                ascii   DiracSound_saveSpeakerStereoModeState
+39  0x00000b44 0x00000b44 20  21   .dynstr                ascii   DiracSound_setConfig
+40  0x00000b59 0x00000b59 22  23   .dynstr                ascii   DiracSound_updateState
+41  0x00000b70 0x00000b70 54  55   .dynstr                ascii   _ZN7android11AudioSystem13setParametersERKNS_7String8E
+42  0x00000ba7 0x00000ba7 50  51   .dynstr                ascii   _ZN7android23DiracSetParameterThread10threadLoopEv
+43  0x00000bda 0x00000bda 57  58   .dynstr                ascii   _ZN7android23DiracSetParameterThreadC1EPNS_11setParamBufE
+44  0x00000c14 0x00000c14 57  58   .dynstr                ascii   _ZN7android23DiracSetParameterThreadC2EPNS_11setParamBufE
+45  0x00000c4e 0x00000c4e 40  41   .dynstr                ascii   _ZN7android23DiracSetParameterThreadD0Ev
+46  0x00000c77 0x00000c77 40  41   .dynstr                ascii   _ZN7android23DiracSetParameterThreadD1Ev
+47  0x00000ca0 0x00000ca0 40  41   .dynstr                ascii   _ZN7android23DiracSetParameterThreadD2Ev
+48  0x00000cc9 0x00000cc9 52  53   .dynstr                ascii   _ZN7android2spINS_23DiracSetParameterThreadEEaSEPS1_
+49  0x00000cfe 0x00000cfe 32  33   .dynstr                ascii   _ZN7android6Thread10readyToRunEv
+50  0x00000d1f 0x00000d1f 33  34   .dynstr                ascii   _ZN7android6Thread11requestExitEv
+51  0x00000d41 0x00000d41 28  29   .dynstr                ascii   _ZN7android6Thread3runEPKcij
+52  0x00000d5e 0x00000d5e 22  23   .dynstr                ascii   _ZN7android6ThreadC2Eb
+53  0x00000d75 0x00000d75 22  23   .dynstr                ascii   _ZN7android6ThreadD0Ev
+54  0x00000d8c 0x00000d8c 22  23   .dynstr                ascii   _ZN7android6ThreadD1Ev
+55  0x00000da3 0x00000da3 22  23   .dynstr                ascii   _ZN7android6ThreadD2Ev
+56  0x00000dba 0x00000dba 33  34   .dynstr                ascii   _ZN7android7RefBase10onFirstRefEv
+57  0x00000ddc 0x00000ddc 38  39   .dynstr                ascii   _ZN7android7RefBase13onLastWeakRefEPKv
+58  0x00000e03 0x00000e03 40  41   .dynstr                ascii   _ZN7android7RefBase15onLastStrongRefEPKv
+59  0x00000e2c 0x00000e2c 46  47   .dynstr                ascii   _ZN7android7RefBase20onIncStrongAttemptedEjPKv
+60  0x00000e5b 0x00000e5b 23  24   .dynstr                ascii   _ZN7android7RefBaseC2Ev
+61  0x00000e73 0x00000e73 23  24   .dynstr                ascii   _ZN7android7RefBaseD2Ev
+62  0x00000e8b 0x00000e8b 30  31   .dynstr                ascii   _ZN7android7String86appendEPKc
+63  0x00000eaa 0x00000eaa 23  24   .dynstr                ascii   _ZN7android7String8C1Ev
+64  0x00000ec2 0x00000ec2 23  24   .dynstr                ascii   _ZN7android7String8D1Ev
+65  0x00000eda 0x00000eda 34  35   .dynstr                ascii   _ZNK7android7RefBase9decStrongEPKv
+66  0x00000efd 0x00000efd 34  35   .dynstr                ascii   _ZNK7android7RefBase9incStrongEPKv
+67  0x00000f20 0x00000f20 52  53   .dynstr                ascii   _ZTCN7android23DiracSetParameterThreadE0_NS_6ThreadE
+68  0x00000f55 0x00000f55 39  40   .dynstr                ascii   _ZTTN7android23DiracSetParameterThreadE
+69  0x00000f7d 0x00000f7d 39  40   .dynstr                ascii   _ZTVN7android23DiracSetParameterThreadE
+70  0x00000fa5 0x00000fa5 48  49   .dynstr                ascii   _ZTv0_n12_N7android23DiracSetParameterThreadD0Ev
+71  0x00000fd6 0x00000fd6 48  49   .dynstr                ascii   _ZTv0_n12_N7android23DiracSetParameterThreadD1Ev
+72  0x00001007 0x00001007 30  31   .dynstr                ascii   _ZTv0_n12_N7android6ThreadD0Ev
+73  0x00001026 0x00001026 30  31   .dynstr                ascii   _ZTv0_n12_N7android6ThreadD1Ev
+74  0x00001045 0x00001045 6   7    .dynstr                ascii   _ZdlPv
+75  0x0000104c 0x0000104c 5   6    .dynstr                ascii   _Znwj
+76  0x00001052 0x00001052 15  16   .dynstr                ascii   __aeabi_memclr4
+77  0x00001062 0x00001062 15  16   .dynstr                ascii   __aeabi_memclr8
+78  0x00001072 0x00001072 15  16   .dynstr                ascii   __aeabi_memcpy4
+79  0x00001082 0x00001082 19  20   .dynstr                ascii   __android_log_print
+80  0x00001096 0x00001096 18  19   .dynstr                ascii   __cxa_pure_virtual
+81  0x000010a9 0x000010a9 13  14   .dynstr                ascii   __sprintf_chk
+82  0x000010b7 0x000010b7 16  17   .dynstr                ascii   __stack_chk_fail
+83  0x000010c8 0x000010c8 17  18   .dynstr                ascii   __stack_chk_guard
+84  0x000010da 0x000010da 13  14   .dynstr                ascii   __strlcpy_chk
+85  0x000010e8 0x000010e8 12  13   .dynstr                ascii   __strlen_chk
+86  0x000010f5 0x000010f5 4   5    .dynstr                ascii   atof
+87  0x000010fa 0x000010fa 4   5    .dynstr                ascii   atoi
+88  0x000010ff 0x000010ff 6   7    .dynstr                ascii   calloc
+89  0x00001106 0x00001106 4   5    .dynstr                ascii   free
+90  0x0000110b 0x0000110b 10  11   .dynstr                ascii   gAppIdUsed
+91  0x00001116 0x00001116 20  21   .dynstr                ascii   gDiracSoundInterface
+92  0x0000112b 0x0000112b 13  14   .dynstr                ascii   gPresetDSP_HP
+93  0x00001139 0x00001139 14  15   .dynstr                ascii   gPresetDSP_SPK
+94  0x00001148 0x00001148 6   7    .dynstr                ascii   memcmp
+95  0x0000114f 0x0000114f 17  18   .dynstr                ascii   parameterInfoInit
+96  0x00001161 0x00001161 12  13   .dynstr                ascii   property_get
+97  0x0000116e 0x0000116e 12  13   .dynstr                ascii   property_set
+98  0x0000117b 0x0000117b 20  21   .dynstr                ascii   pthread_cond_destroy
+99  0x00001190 0x00001190 17  18   .dynstr                ascii   pthread_cond_init
+100 0x000011a2 0x000011a2 19  20   .dynstr                ascii   pthread_cond_signal
+101 0x000011b6 0x000011b6 17  18   .dynstr                ascii   pthread_cond_wait
+102 0x000011c8 0x000011c8 24  25   .dynstr                ascii   pthread_condattr_destroy
+103 0x000011e1 0x000011e1 21  22   .dynstr                ascii   pthread_condattr_init
+104 0x000011f7 0x000011f7 25  26   .dynstr                ascii   pthread_condattr_setclock
+105 0x00001211 0x00001211 21  22   .dynstr                ascii   pthread_mutex_destroy
+106 0x00001227 0x00001227 18  19   .dynstr                ascii   pthread_mutex_init
+107 0x0000123a 0x0000123a 18  19   .dynstr                ascii   pthread_mutex_lock
+108 0x0000124d 0x0000124d 20  21   .dynstr                ascii   pthread_mutex_unlock
+109 0x00001262 0x00001262 6   7    .dynstr                ascii   sscanf
+110 0x00001269 0x00001269 6   7    .dynstr                ascii   strchr
+111 0x00001270 0x00001270 6   7    .dynstr                ascii   strcmp
+112 0x00001277 0x00001277 7   8    .dynstr                ascii   strncmp
+113 0x0000127f 0x0000127f 5   6    .dynstr                ascii   abort
+114 0x00001285 0x00001285 7   8    .dynstr                ascii   fprintf
+115 0x0000128d 0x0000128d 6   7    .dynstr                ascii   stderr
+116 0x00001294 0x00001294 4   5    .dynstr                ascii   _end
+117 0x00001299 0x00001299 6   7    .dynstr                ascii   _edata
+118 0x000012a0 0x000012a0 11  12   .dynstr                ascii   __bss_start
+119 0x000012ac 0x000012ac 12  13   .dynstr                ascii   libcutils.so
+120 0x000012b9 0x000012b9 11  12   .dynstr                ascii   libutils.so
+121 0x000012c5 0x000012c5 11  12   .dynstr                ascii   libmedia.so
+122 0x000012d1 0x000012d1 9   10   .dynstr                ascii   libc++.so
+123 0x000012db 0x000012db 7   8    .dynstr                ascii   libm.so
+124 0x000012e4 0x000012e4 4   20   .gnu.hash              utf32le %B\b\b
+125 0x00001330 0x00001330 4   20   .gnu.hash              utf32le HIKL
+126 0x00001344 0x00001344 10  44   .gnu.hash              utf32le MNOPQRSUVW
+127 0x00001370 0x00001370 4   20   .gnu.hash              utf32le YZ[_
+128 0x0000138c 0x0000138c 5   24   .gnu.hash              utf32le bdfik
+129 0x000013cc 0x000013cc 6   7    .gnu.hash              ascii   #?/%WP
+130 0x000013e7 0x000013e7 5   7    .gnu.hash              utf8    d)ųXB
+131 0x00001429 0x00001429 5   6    .gnu.hash              ascii   :/%CE
+132 0x00001efb 0x00001efa 4   5    .text                  ascii   \n\b0\e
+133 0x00001fb0 0x00001fb0 9   10   .text                  ascii   0h `\vI\fJP
+134 0x00001fba 0x00001fba 4   5    .text                  ascii   \f\fyD
+135 0x00001fbf 0x00001fbe 5   6    .text                  ascii   hzD#P
+136 0x00001fd5 0x00001fd4 5   6    .text                  ascii   JyDzD
+137 0x00002024 0x00002024 4   5    .text                  ascii   @0#`
+138 0x00002039 0x00002038 7   8    .text                  ascii    \bJyDzD
+139 0x00002065 0x00002064 5   6    .text                  ascii   F(h `
+140 0x0000206e 0x0000206e 8   9    .text                  ascii   \f\f!P`j\f0
+141 0x0000208c 0x0000208c 5   6    .text                  ascii   `jFh6
+142 0x000020ab 0x000020aa 5   6    .text                  ascii   JyDzD
+143 0x000020ed 0x000020ec 4   5    .text                  ascii   hyDR
+144 0x000020f2 0x000020f2 4   5    .text                  ascii   \f,\th
+145 0x0000210f 0x0000210e 5   6    .text                  ascii   F\aHxD
+146 0x00002137 0x00002136 6   7    .text                  ascii   h\bIyDR
+147 0x00002142 0x00002142 4   5    .text                  ascii   \th F
+148 0x00002167 0x00002166 5   6    .text                  ascii   FLHxD
+149 0x000021b6 0x000021b6 4   5    .text                  ascii   `j\f0
+150 0x000021d8 0x000021d8 4   5    .text                  ascii   `j\f0
+151 0x000021e3 0x000021e2 7   8    .text                  ascii    YF:F+F
+152 0x0000220c 0x0000220c 4   5    .text                  ascii   `j\f0
+153 0x0000221e 0x0000221e 4   5    .text                  ascii   `j\f0
+154 0x0000222f 0x0000222e 5   6    .text                  ascii    YFzD
+155 0x0000223f 0x0000223e 5   6    .text                  ascii    YFzD
+156 0x0000225d 0x0000225c 5   6    .text                  ascii    YFzD
+157 0x0000226b 0x0000226a 7   8    .text                  ascii    \rJyDzD
+158 0x00002279 0x00002278 5   6    .text                  ascii   JyDzD
+159 0x00002313 0x00002312 7   8    .text                  ascii    yD\th\n\
+160 0x00002327 0x00002326 10  11   .text                  ascii   "yD\th\nT\n(\b
+161 0x00002335 0x00002334 5   6    .text                  ascii   0pGTk
+162 0x00002349 0x00002348 9   10   .text                  ascii   "yD\th\nTpG
+163 0x0000235f 0x0000235e 7   8    .text                  ascii   F*H\!xD
+164 0x0000239c 0x0000239c 4   5    .text                  ascii   \a\n0F
+165 0x000023c3 0x000023c2 5   6    .text                  ascii   2KF0F
+166 0x000023dd 0x000023dc 7   8    .text                  ascii    yD#FzD
+167 0x000023e9 0x000023e8 5   6    .text                  ascii   H!FxD
+168 0x00002433 0x00002432 7   8    .text                  ascii   F2H\!xD
+169 0x00002448 0x00002448 4   5    .text                  ascii   \!0F
+170 0x00002458 0x00002458 4   5    .text                  ascii   *M\a'
+171 0x00002460 0x00002460 4   5    .text                  ascii   *L}D
+172 0x00002465 0x00002464 5   6    .text                  ascii   D|D0F
+173 0x0000248f 0x0000248e 5   6    .text                  ascii   2+F0F
+174 0x000024a8 0x000024a8 4   5    .text                  ascii   xD)F
+175 0x000024b5 0x000024b4 7   8    .text                  ascii   J+FyDzD
+176 0x000024cc 0x000024cc 4   5    .text                  ascii   (F!F
+177 0x000024d8 0x000024d8 4   5    .text                  ascii   (F,!
+178 0x0000252b 0x0000252a 5   6    .text                  ascii   H\!xD
+179 0x0000254e 0x0000254e 4   5    .text                  ascii    F\"
+180 0x00002556 0x00002556 6   7    .text                  ascii   \nH!FxD
+181 0x0000258f 0x0000258e 5   6    .text                  ascii   H\!xD
+182 0x000025a9 0x000025a8 7   8    .text                  ascii   J)FxDzD
+183 0x00002603 0x00002602 5   6    .text                  ascii   H\!xD
+184 0x00002626 0x00002626 4   5    .text                  ascii    F\"
+185 0x0000262e 0x0000262e 6   7    .text                  ascii   \nH!FxD
+186 0x00002667 0x00002666 5   6    .text                  ascii   H\!xD
+187 0x0000268a 0x0000268a 4   5    .text                  ascii    F\"
+188 0x00002692 0x00002692 6   7    .text                  ascii   \nH!FxD
+189 0x000026cb 0x000026ca 5   6    .text                  ascii   H\!xD
+190 0x000026e5 0x000026e4 7   8    .text                  ascii   J)FxDzD
+191 0x00002747 0x00002746 5   6    .text                  ascii   H\!xD
+192 0x0000276a 0x0000276a 4   5    .text                  ascii    F\"
+193 0x00002772 0x00002772 6   7    .text                  ascii   \nH!FxD
+194 0x000027ab 0x000027aa 5   6    .text                  ascii   H\!xD
+195 0x000027c5 0x000027c4 7   8    .text                  ascii   J)FxDzD
+196 0x00002827 0x00002826 5   6    .text                  ascii   H\!xD
+197 0x00002841 0x00002840 7   8    .text                  ascii   J)FxDzD
+198 0x0000284d 0x0000284c 5   6    .text                  ascii   I(FyD
+199 0x0000285d 0x0000285c 4   5    .text                  ascii   (yD\b
+200 0x000028a7 0x000028a6 7   8    .text                  ascii   A#J\rF!I
+201 0x00002915 0x00002914 4   5    .text                  ascii   0\bDO
+202 0x000029a3 0x000029a2 7   8    .text                  ascii   #~DzD1F
+203 0x000029b3 0x000029b2 5   6    .text                  ascii    1FzD
+204 0x000029ff 0x000029fe 4   6    .text                  utf8    \n2zD
+205 0x00002a57 0x00002a56 4   5    .text                  ascii   *0F@
+206 0x00002af1 0x00002af0 6   7    .text                  ascii   JyDzD5
+207 0x00002afd 0x00002afc 5   6    .text                  ascii   JyDzD
+208 0x00002b5f 0x00002b5e 5   6    .text                  ascii   JyDzD
+209 0x00002b79 0x00002b78 5   6    .text                  ascii   JyDzD
+210 0x00002b94 0x00002b94 4   5    .text                  ascii   }HxD
+211 0x00002ba6 0x00002ba6 4   5    .text                  ascii   xHxD
+212 0x00002bb9 0x00002bb8 4   5    .text                  ascii   *0F@
+213 0x00002bc7 0x00002bc6 7   8    .text                  ascii    sJyDzD
+214 0x00002c0c 0x00002c0c 5   6    .text                  ascii   cIyDQ
+215 0x00002cb4 0x00002cb4 6   7    .text                  ascii   A\n\b"+F
+216 0x00002dbd 0x00002dbc 5   6    .text                  ascii   F]H\fF
+217 0x00002e94 0x00002e94 8   9    .text                  ascii   \f 1F\b"#F
+218 0x00002ea6 0x00002ea6 6   7    .text                  ascii   \r \b"#F
+219 0x00002eb7 0x00002eb6 5   6    .text                  ascii    \b"#F
+220 0x00002ec6 0x00002ec6 4   5    .text                  ascii   hi!F
+221 0x00002f49 0x00002f48 5   6    .text                  ascii    yDzD
+222 0x00002f75 0x00002f74 7   8    .text                  ascii    \aJyDzD
+223 0x00002fb7 0x00002fb6 5   6    .text                  ascii   hyD3F
+224 0x00002ff5 0x00002ff4 5   6    .text                  ascii   J+FyD
+225 0x0000301d 0x0000301c 5   6    .text                  ascii   JyDzD
+226 0x00003056 0x00003056 8   9    .text                  ascii   rHsJxDzD
+227 0x0000305f 0x0000305e 5   6    .text                  ascii   hpH!`
+228 0x00003067 0x00003066 5   6    .text                  ascii   gxD,`
+229 0x00003074 0x00003074 4   5    .text                  ascii   mH)F
+230 0x0000308c 0x0000308c 8   9    .text                  ascii   iJxD)FzD
+231 0x00003098 0x00003098 4   5    .text                  ascii   gH)F
+232 0x000030b5 0x000030b4 7   8    .text                  ascii   xxD1FzD
+233 0x000030c0 0x000030c0 4   5    .text                  ascii   `H1F
+234 0x00003140 0x00003140 4   5    .text                  ascii   \aF(F
+235 0x00003150 0x00003150 4   5    .text                  ascii   8F)F
+236 0x00003186 0x00003186 4   5    .text                  ascii   @F)F
+237 0x0000319b 0x0000319a 5   6    .text                  ascii   h*IyD
+238 0x000031ac 0x000031ac 5   6    .text                  ascii   yD#F`
+239 0x000031b7 0x000031b6 4   5    .text                  ascii   p%J@
+240 0x000031c1 0x000031c0 4   5    .text                  ascii   pzD@
+241 0x00003268 0x00003268 5   6    .text                  ascii   (h!FP
+242 0x0000326e 0x0000326e 4   5    .text                  ascii   \f\f(D
+243 0x00003280 0x00003280 4   5    .text                  ascii   \bD!F
+244 0x00003288 0x00003288 4   5    .text                  ascii    F%`
+245 0x00003299 0x00003298 7   8    .text                  ascii    yD#FzD
+246 0x000032f5 0x000032f4 7   8    .text                  ascii   "yD\th\nT
+247 0x0000337e 0x0000337e 4   5    .text                  ascii   \fI F
+248 0x00003391 0x00003390 7   8    .text                  ascii    \tJyDzD
+249 0x0000346e 0x0000346e 6   7    .text                  ascii   P)yDzD
+250 0x0000349e 0x0000349e 4   5    .text                  ascii   XF1F
+251 0x000034e9 0x000034e8 5   6    .text                  ascii   (yDzD
+252 0x00003515 0x00003514 5   6    .text                  ascii   (yDzD
+253 0x0000357c 0x0000357c 8   9    .text                  ascii   $(3iyDzD
+254 0x00003611 0x00003610 5   6    .text                  ascii   0yDzD
+255 0x00003639 0x00003638 7   8    .text                  ascii   &3hyDzD
+256 0x0000366e 0x0000366e 8   9    .text                  ascii   X&3hyDzD
+257 0x000036ae 0x000036ae 6   7    .text                  ascii   \b'yDzD
+258 0x000036eb 0x000036ea 5   6    .text                  ascii   %yDzD
+259 0x00003713 0x00003712 5   6    .text                  ascii   %yDzD
+260 0x0000373f 0x0000373e 5   6    .text                  ascii   0yDzD
+261 0x000037a4 0x000037a4 4   6    .text                  utf8    ̐yDZ
+262 0x0000385d 0x0000385c 5   6    .text                  ascii   $yDzD
+263 0x00003869 0x00003868 4   5    .text                  ascii   0\b+@
+264 0x00003881 0x00003880 5   6    .text                  ascii   $yDzD
+265 0x0000389f 0x0000389e 5   6    .text                  ascii   0yDzD
+266 0x000038c5 0x000038c4 5   6    .text                  ascii   0yDzD
+267 0x000038f5 0x000038f4 5   6    .text                  ascii   0yDzD
+268 0x0000391b 0x0000391a 5   6    .text                  ascii   0yDzD
+269 0x00003941 0x00003940 5   6    .text                  ascii   0yDzD
+270 0x0000396d 0x0000396c 5   6    .text                  ascii   #yDzD
+271 0x00003979 0x00003978 4   5    .text                  ascii   0\b+@
+272 0x0000398f 0x0000398e 9   10   .text                  ascii   #5iyDzD+F
+273 0x000039bc 0x000039bc 4   5    .text                  ascii   yDzD
+274 0x00003a09 0x00003a08 7   8    .text                  ascii   J3iyDzD
+275 0x00003a47 0x00003a46 7   8    .text                  ascii   J3iyDzD
+276 0x00003a81 0x00003a80 4   8    .text                  utf8    (@䀿I
+277 0x00003a8b 0x00003a8a 7   8    .text                  ascii   J3iyDzD
+278 0x00003ab1 0x00003ab0 4   6    .text                  utf8    (lѰh
+279 0x00003ab7 0x00003ab6 4   6    .text                  utf8    (iЦI
+280 0x00003ac4 0x00003ac4 6   7    .text                  ascii   3|yDzD
+281 0x00003ad0 0x00003ad0 4   5    .text                  ascii   0|*(
+282 0x00003b19 0x00003b18 4   6    .text                  utf8    (8ыI
+283 0x00003b21 0x00003b20 7   8    .text                  ascii   J3iyDzD
+284 0x00003b50 0x00003b50 8   9    .text                  ascii   |I}J3iyD
+285 0x00003b98 0x00003b98 9   10   .text                  ascii   TIUJyDzD'
+286 0x00003ba5 0x00003ba4 9   10   .text                  ascii    dJ3iyDzD
+287 0x00003bea 0x00003bea 8   9    .text                  ascii   FIFJyDzD
+288 0x00003c03 0x00003c02 7   8    .text                  ascii    ]I^JyD
+289 0x00003c1a 0x00003c1a 4   5    .text                  ascii   6L6J
+290 0x00003c22 0x00003c22 6   7    .text                  ascii   *\n|DzD
+291 0x00003c36 0x00003c36 4   5    .text                  ascii   \n 0K
+292 0x00003c69 0x00003c68 7   8    .text                  ascii    !FCFzD
+293 0x00003c80 0x00003c80 8   9    .text                  ascii   .I/JyDzD
+294 0x00003c8a 0x00003c8a 8   9    .text                  ascii   4I4JyDzD
+295 0x00003df2 0x00003df2 4   5    .text                  ascii   yDzD
+296 0x00003e16 0x00003e16 5   6    .text                  ascii   yD\tha
+297 0x00003e21 0x00003e20 4   5    .text                  ascii   *)FA
+298 0x00003e45 0x00003e44 8   10   .text                  utf8    o(ѦIyD\th
+299 0x00003e6b 0x00003e6a 5   6    .text                  ascii   IyD\th
+300 0x00003e7d 0x00003e7c 5   6    .text                  ascii   IyD\th
+301 0x00003e8f 0x00003e8e 4   5    .text                  ascii   *)FA
+302 0x00003ebf 0x00003ebe 5   7    .text                  utf8    ؉IyDQ
+303 0x00003ecb 0x00003eca 6   7    .text                  ascii    &F)FF
+304 0x00003fac 0x00003fac 4   5    .text                  ascii   PHxD
+305 0x00003fbe 0x00003fbe 4   5    .text                  ascii   MHxD
+306 0x00004036 0x00004036 4   5    .text                  ascii   \b"#F
+307 0x00004053 0x00004052 4   5    .text                  ascii    )F\f
+308 0x00004058 0x00004058 6   7    .text                  ascii   \r \b"#F
+309 0x00004063 0x00004062 8   9    .text                  ascii    )F\b"#F\f
+310 0x0000407a 0x0000407a 4   5    .text                  ascii   \b\n)F
+311 0x00004103 0x00004102 5   6    .text                  ascii   FIH\fF
+312 0x00004159 0x00004158 5   6    .text                  ascii   \t8F!F
+313 0x00004180 0x00004180 4   5    .text                  ascii   (a.F
+314 0x00004188 0x00004188 4   5    .text                  ascii   8F!F
+315 0x000041b8 0x000041b8 4   5    .text                  ascii   Dp(F
+316 0x000041e4 0x000041e4 4   5    .text                  ascii   Dp(F
+317 0x0000423e 0x0000423e 6   7    .text                  ascii   \tJ\bFzD
+318 0x00004255 0x00004254 5   6    .text                  ascii   JyDzD
+319 0x00004277 0x00004276 7   8    .text                  ascii   F=J\rF;I
+320 0x00004286 0x00004286 4   5    .text                  ascii   yDzD
+321 0x000042b0 0x000042b0 4   5    .text                  ascii   0F"F
+322 0x000042bd 0x000042bc 7   8    .text                  ascii   '0F)F"F
+323 0x000042e8 0x000042e8 8   9    .text                  ascii   \fq0F)F"F
+324 0x0000430c 0x0000430c 4   5    .text                  ascii   0F"F
+325 0x00004319 0x00004318 7   8    .text                  ascii   '0F)F"F
+326 0x00004344 0x00004344 8   9    .text                  ascii   \fq0F)F"F
+327 0x00004359 0x00004358 9   10   .text                  ascii    \aJ;FyDzD
+328 0x00004383 0x00004382 13  14   .text                  ascii   F6H8J\fFxD5IzD
+329 0x000043ce 0x000043ce 4   5    .text                  ascii   (F!F
+330 0x000043db 0x000043da 5   6    .text                  ascii   &(F!F
+331 0x00004400 0x00004400 4   5    .text                  ascii   (F!F
+332 0x00004428 0x00004428 4   5    .text                  ascii   (F!F
+333 0x0000449b 0x0000449a 4   5    .text                  ascii    #&B
+334 0x000044c1 0x000044c0 7   8    .text                  ascii   J+FyDzD
+335 0x00004525 0x00004524 5   6    .text                  ascii   F\b"xD
+336 0x00004551 0x00004550 7   8    .text                  ascii   J+FyDzD
+337 0x000045d5 0x000045d4 6   7    .text                  ascii   3excEO
+338 0x000045e9 0x000045e8 4   5    .text                  ascii   xexO
+339 0x00004617 0x00004616 4   5    .text                  ascii   B~DO
+340 0x0000463d 0x0000463c 8   9    .text                  ascii   D\nKJx{DL
+341 0x00004649 0x00004648 7   8    .text                  ascii   \BpIx<"
+342 0x0000469b 0x0000469a 4   5    .text                  ascii    \nX*
+343 0x00004717 0x00004716 7   8    .text                  ascii    \rJyDzD
+344 0x0000472f 0x0000472e 5   6    .text                  ascii    yDzD
+345 0x00004765 0x00004764 4   5    .text                  ascii   F\b+7
+346 0x00004777 0x00004776 7   8    .text                  ascii   \t0F)F"F
+347 0x00004793 0x00004792 5   6    .text                  ascii   \n)F"F
+348 0x000047a6 0x000047a6 4   5    .text                  ascii   /HxD
+349 0x000047b8 0x000047b8 4   5    .text                  ascii   0F"F
+350 0x000047c4 0x000047c4 6   7    .text                  ascii   0F)F"F
+351 0x000047e3 0x000047e2 7   8    .text                  ascii   \t0F)F"F
+352 0x000047ff 0x000047fe 5   6    .text                  ascii   \n)F"F
+353 0x00004824 0x00004824 4   5    .text                  ascii   0F"F
+354 0x00004830 0x00004830 6   7    .text                  ascii   0F)F"F
+355 0x00004849 0x00004848 7   8    .text                  ascii    \bJyDzD
+356 0x000048fc 0x000048fc 6   7    .text                  ascii    F\r!BF
+357 0x0000491f 0x0000491e 11  15   .text                  utf8    )$܀)6А)OР)@
+358 0x00004962 0x00004962 4   5    .text                  ascii    F\r!
+359 0x0000498f 0x0000498e 4   5    .text                  ascii   " Fw
+360 0x000049d8 0x000049d8 4   5    .text                  ascii    FBF
+361 0x00004a4a 0x00004a4a 6   7    .text                  ascii    F\r!BF
+362 0x00004a72 0x00004a72 5   6    .text                  ascii   E[--\n
+363 0x00004a80 0x00004a80 4   5    .text                  ascii    " F
+364 0x00004b50 0x00004b50 4   5    .text                  ascii   \b \aI
+365 0x00004b56 0x00004b56 6   7    .text                  ascii   yD\th\th
+366 0x00004b92 0x00004b92 4   5    .text                  ascii   (F1F
+367 0x00004bb6 0x00004bb6 4   5    .text                  ascii   (F"F
+368 0x00004bdf 0x00004bde 5   6    .text                  ascii   q(F"F
+369 0x00004bf7 0x00004bf6 5   6    .text                  ascii   JxDzD
+370 0x00004c26 0x00004c26 6   7    .text                  ascii   2h F)F
+371 0x00004c93 0x00004c92 5   6    .text                  ascii   JxDzD
+372 0x00004cab 0x00004caa 5   6    .text                  ascii   FIH\rF
+373 0x00004cd2 0x00004cd2 4   5    .text                  ascii   @F\r!
+374 0x00004d42 0x00004d42 4   5    .text                  ascii   @F\r!
+375 0x00004d6a 0x00004d6a 4   5    .text                  ascii   )F@h
+376 0x00004d71 0x00004d70 5   6    .text                  ascii    @F"F
+377 0x00004d98 0x00004d98 6   7    .text                  ascii   yD\th\th
+378 0x00004db2 0x00004db2 4   5    .text                  ascii   @F\r!
+379 0x00004dc9 0x00004dc8 5   6    .text                  ascii   JxDzD
+380 0x00004e2e 0x00004e2e 6   7    .text                  ascii   yD\th\th
+381 0x00004e61 0x00004e60 4   5    .text                  ascii   F&H\n
+382 0x00004e7d 0x00004e7c 5   6    .text                  ascii   `)F0F
+383 0x00004e86 0x00004e86 4   5    .text                  ascii   iF0F
+384 0x00004ea1 0x00004ea0 4   5    .text                  ascii   d2F\b
+385 0x00004eb4 0x00004eb4 4   5    .text                  ascii   0F9F
+386 0x00004f0f 0x00004f0e 4   5    .text                  ascii   F3H\f
+387 0x00004f42 0x00004f42 5   6    .text                  ascii   "i(FO
+388 0x00004f51 0x00004f50 4   5    .text                  ascii   \n(Fo
+389 0x00004f5e 0x00004f5e 4   5    .text                  ascii   (FIF
+390 0x00004f73 0x00004f72 4   5    .text                  ascii   d*F\t
+391 0x00004f7c 0x00004f7c 4   5    .text                  ascii    e8F
+392 0x00004f99 0x00004f98 5   6    .text                  ascii   JxDzD
+393 0x00004fba 0x00004fba 4   5    .text                  ascii    a(F
+394 0x00005004 0x00005004 4   5    .text                  ascii   (F!F
+395 0x00005015 0x00005014 5   6    .text                  ascii   JxDzD
+396 0x00005034 0x00005034 4   5    .text                  ascii   xD\bK
+397 0x00005044 0x00005044 4   5    .text                  ascii   aFrF
+398 0x00005060 0x00005060 9   10   .text                  ascii   \vIyD\th\th\v
+399 0x00005080 0x00005080 4   5    .text                  ascii   \th\th
+400 0x0000509c 0x0000509c 9   10   .text                  ascii   \vIyD\th\th\v
+401 0x000050bc 0x000050bc 4   5    .text                  ascii   \th\th
+402 0x00005181 0x00005180 9   10   .text                  ascii   F\rHzDxD\b0
+403 0x000051c5 0x000051c4 5   6    .text                  ascii   F0h\rF
+404 0x000051d4 0x000051d4 4   5    .text                  ascii   0h)F
+405 0x000051f3 0x000051f2 5   6    .text                  ascii   F h\rF
+406 0x00005202 0x00005202 6   7    .text                  ascii    h)F2F
+407 0x00005227 0x00005226 5   6    .text                  ascii   %Bk F
+408 0x0000522d 0x0000522c 4   5    .text                  ascii   G(Fp
+409 0x00005237 0x00005236 9   10   .text                  ascii   F0h\rFBi0F
+410 0x00005246 0x00005246 4   5    .text                  ascii   0h)F
+411 0x0000526f 0x0000526e 5   6    .text                  ascii   FBi8F
+412 0x0000527a 0x0000527a 8   9    .text                  ascii   8h1F*FCF
+413 0x0000529b 0x0000529a 5   6    .text                  ascii   h\tj\bG
+414 0x000052a5 0x000052a4 5   6    .text                  ascii   hJj!F
+415 0x000052d3 0x000052d2 4   5    .text                  ascii   k\bG!
+416 0x0000536b 0x0000536a 7   8    .text                  ascii   KxDyD{D
+417 0x0000538b 0x0000538a 4   5    .text                  ascii   F\f.\b
+418 0x000053e9 0x000053e8 4   5    .text                  ascii   qDPp
+419 0x000053f7 0x000053f6 7   8    .text                  ascii   KxDyD{D
+420 0x00005415 0x00005414 4   5    .text                  ascii   "p(O
+421 0x000054bd 0x000054bc 7   8    .text                  ascii   KxDyD{D
+422 0x000054d9 0x000054d8 4   5    .text                  ascii   F\aF&
+423 0x0000552f 0x0000552e 4   5    .text                  ascii   qEPO
+424 0x00005557 0x00005556 4   5    .text                  ascii   qEPO
+425 0x0000556f 0x0000556e 4   5    .text                  ascii   qEPO
+426 0x00005589 0x00005588 7   8    .text                  ascii   KxDyD{D
+427 0x000055b9 0x000055b8 5   6    .text                  ascii   !Bk F
+428 0x0000562f 0x0000562e 7   8    .text                  ascii   FyD\th\th
+429 0x0000565e 0x0000565e 4   5    .text                  ascii   0F)F
+430 0x00005676 0x00005676 6   7    .text                  ascii   yD\th\th
+431 0x000056d4 0x000056d4 6   7    .text                  ascii   jF F)F
+432 0x0000571d 0x0000571c 7   8    .text                  ascii   F\aIxDyD
+433 0x0000572b 0x0000572a 5   6    .text                  ascii   #rFcF
+434 0x0000576e 0x0000576e 5   6    .text                  ascii   \b(\aH\b
+435 0x00005808 0x00005808 4   5    .text                  ascii   bh^h
+436 0x00005821 0x00005820 5   7    .text                  utf8    (~аB|
+437 0x00005830 0x00005830 5   6    .text                  ascii   (F)FP
+438 0x000058ba 0x000058ba 4   5    .text                  ascii   +N~D
+439 0x000058c6 0x000058c6 4   5    .text                  ascii   )N~D
+440 0x00005945 0x00005944 7   8    .text                  ascii   KxDyD{D
+441 0x00005955 0x00005954 11  12   .text                  ascii   2\aI\aKxDyD{D
+442 0x000059c3 0x000059c2 5   6    .text                  ascii   \a'Dl\b
+443 0x00005aae 0x00005aae 4   5    .text                  ascii   xDpG
+444 0x00006190 0x00006190 16  17   .rodata                ascii   EffectDiracSound
+445 0x000061a1 0x000061a1 31  32   .rodata                ascii   DiracSetParameterThread: create
+446 0x000061c1 0x000061c1 58  59   .rodata                ascii   DiracSetParameterThread: create. invalid paramBuf pointer!
+447 0x000061fc 0x000061fc 31  32   .rodata                ascii   DiracSetParameterThread: delete
+448 0x0000621c 0x0000621c 56  57   .rodata                ascii   DiracSetParameterThread: Loop. invalid paramBuf pointer!
+449 0x00006255 0x00006255 30  31   .rodata                ascii   DiracSetParameterThread: close
+450 0x00006274 0x00006274 22  23   .rodata                ascii   Thread: setParam No.%d
+451 0x0000628b 0x0000628b 50  51   .rodata                ascii   DiracSetParameterThread, No parameter need to set!
+452 0x000062be 0x000062be 30  31   .rodata                ascii   DiracSetParameterThread: sleep
+453 0x000062dd 0x000062dd 30  31   .rodata                ascii   DiracSetParameterThread: awake
+454 0x00006304 0x00006304 29  30   .rodata                ascii   DiracSound_saveEQ() value: %s
+455 0x00006322 0x00006322 22  23   .rodata                ascii   persist.audio.dirac.eq
+456 0x0000633d 0x0000633d 32  33   .rodata                ascii   DiracSound_restoreEQ() value: %s
+457 0x00006361 0x00006361 27  28   .rodata                ascii   persist.audio.dirac.headset
+458 0x0000637f 0x0000637f 39  40   .rodata                ascii   DiracSound_restoreHeadset(), headset=%d
+459 0x000063a7 0x000063a7 16  17   .rodata                ascii   audio.dirac.mode
+460 0x000063b8 0x000063b8 31  32   .rodata                ascii   persist.audio.dirac.music.state
+461 0x000063da 0x000063da 47  48   .rodata                ascii   DiracSound_restoreMusicState(), music enable=%d
+462 0x0000640a 0x0000640a 38  39   .rodata                ascii   persist.audio.sfx.spk.stereomode.state
+463 0x00006433 0x00006433 53  54   .rodata                ascii   DiracSound_restoreSpeakerStereoModeState(), enable=%d
+464 0x00006469 0x00006469 18  19   .rodata                ascii   persist.audio.hifi
+465 0x0000647c 0x0000647c 5   6    .rodata                ascii   false
+466 0x00006482 0x00006482 4   5    .rodata                ascii   true
+467 0x00006487 0x00006487 41  42   .rodata                ascii   DiracSound_getHIFIState(), hifi enable=%d
+468 0x000064b1 0x000064b1 26  27   .rodata                ascii   DiracSound_setConfig start
+469 0x000064cc 0x000064cc 28  29   .rodata                ascii   DiracSound_getConfig() start
+470 0x000064e9 0x000064e9 57  58   .rodata                ascii   DiracSound_updateState(), black list reference count [%d]
+471 0x00006523 0x00006523 47  48   .rodata                ascii   DiracSound_updateState(), Disable Dirac Effect.
+472 0x00006553 0x00006553 86  87   .rodata                ascii   DiracSound_updateState(), enable=%d, hifi=%d, device=0x%x, headset=%d, samplingRate=%d
+473 0x000065aa 0x000065aa 63  64   .rodata                ascii   DiracSound_updateState(), mode=%d, music=%d, movie=%d, reset=%d
+474 0x000065ea 0x000065ea 53  54   .rodata                ascii   Move device from earpiece to speaker for stereo mode.
+475 0x00006620 0x00006620 45  46   .rodata                ascii   DiracSound_updateState(), Speaker Stereo Mode
+476 0x0000664e 0x0000664e 44  45   .rodata                ascii   DiracSound_updateState(), Speaker Movie Mode
+477 0x0000667b 0x0000667b 88  89   .rodata                ascii   DiracSound_updateState(), Speaker Movie/Stereo Mode is not supported. Stop update state.
+478 0x000066d4 0x000066d4 35  36   .rodata                ascii   DiracSound_updateState(), Headphone
+479 0x000066f8 0x000066f8 50  51   .rodata                ascii   DiracSound_updateState(), unknown Device Type: %d!
+480 0x0000672b 0x0000672b 40  41   .rodata                ascii   DiracSoundLib_QueryNumberEffects() start
+481 0x00006754 0x00006754 33  34   .rodata                ascii   DiracSoundLib_QueryEffect() start
+482 0x00006776 0x00006776 42  43   .rodata                ascii   DiracSoundLib_Create() start, sessionId=%d
+483 0x000067a1 0x000067a1 60  61   .rodata                ascii   DiracSoundLib_Create(), invalid parameter pHandle=%p uuid=%p
+484 0x000067de 0x000067de 56  57   .rodata                ascii   DiracSoundLib_Create(), allocate application id failed!
+485 0x00006817 0x00006817 27  28   .rodata                ascii   persist.audio.dirac.speaker
+486 0x00006834 0x00006834 30  31   .rodata                ascii   persist.audio.speaker.dualmode
+487 0x00006853 0x00006853 30  31   .rodata                ascii   ro.vendor.audio.sfx.spk.stereo
+488 0x00006872 0x00006872 23  24   .rodata                ascii   DiracSetParameterThread
+489 0x0000688a 0x0000688a 23  24   .rodata                ascii   DiracSoundLib_Create %p
+490 0x000068a2 0x000068a2 24  25   .rodata                ascii   DiracSoundLib_Release %p
+491 0x000068bb 0x000068bb 35  36   .rodata                ascii   DiracSoundLib_GetDescriptor() start
+492 0x000068df 0x000068df 54  55   .rodata                ascii   DiracSoundLib_GetDescriptor() called with NULL pointer
+493 0x00006916 0x00006916 38  39   .rodata                ascii   DiracSound_command() start, cmdCode=%d
+494 0x0000693d 0x0000693d 46  47   .rodata                ascii   DiracSound_command(), pContext is NULL pointer
+495 0x0000696c 0x0000696c 22  23   .rodata                ascii   EFFECT_CMD_ENABLE() OK
+496 0x00006983 0x00006983 23  24   .rodata                ascii   EFFECT_CMD_DISABLE() OK
+497 0x0000699b 0x0000699b 21  22   .rodata                ascii   Set mHeadsetType = %d
+498 0x000069b1 0x000069b1 13  14   .rodata                ascii   Set mode = %d
+499 0x000069bf 0x000069bf 14  15   .rodata                ascii   Set music = %d
+500 0x000069ce 0x000069ce 14  15   .rodata                ascii   Set movie = %d
+501 0x000069dd 0x000069dd 13  14   .rodata                ascii   Set EQ level:
+502 0x000069eb 0x000069eb 51  52   .rodata                ascii   Set EQ data size is not correct, psize=%d, vsize=%d
+503 0x00006a1f 0x00006a1f 12  13   .rodata                ascii   EQ band = %d
+504 0x00006a2c 0x00006a2c 13  14   .rodata                ascii   EQ value = %f
+505 0x00006a3a 0x00006a3a 36  37   .rodata                ascii   Set blacklist action = %c, name = %s
+506 0x00006a5f 0x00006a5f 36  37   .rodata                ascii   Allocate memory for app info failed!
+507 0x00006a84 0x00006a84 19  20   .rodata                ascii   Set Movie Mode = %d
+508 0x00006a98 0x00006a98 32  33   .rodata                ascii   Set HIFI Mode:%d, HIFI mode = %d
+509 0x00006ab9 0x00006ab9 28  29   .rodata                ascii   Set Speaker Stereo Mode = %d
+510 0x00006ad6 0x00006ad6 52  53   .rodata                ascii   Speaker Stereo Mode is not supported on this device!
+511 0x00006b0b 0x00006b0b 21  22   .rodata                ascii   Get mHeadsetType = %d
+512 0x00006b21 0x00006b21 13  14   .rodata                ascii   Get mode = %d
+513 0x00006b2f 0x00006b2f 14  15   .rodata                ascii   Get music = %d
+514 0x00006b3e 0x00006b3e 14  15   .rodata                ascii   Get movie = %d
+515 0x00006b4d 0x00006b4d 13  14   .rodata                ascii   Get EQ level:
+516 0x00006b5b 0x00006b5b 33  34   .rodata                ascii   Get EQ invalid argument, psize=%d
+517 0x00006b7d 0x00006b7d 37  38   .rodata                ascii   Get EQ invalid argument, replySize=%d
+518 0x00006ba3 0x00006ba3 32  33   .rodata                ascii   Get EQ invalid argument, band=%d
+519 0x00006bc4 0x00006bc4 24  25   .rodata                ascii   EQ band = %d, value = %f
+520 0x00006bdd 0x00006bdd 6   7    .rodata                ascii   %-8.2f
+521 0x00006be4 0x00006be4 19  20   .rodata                ascii   EQ level string: %s
+522 0x00006bf8 0x00006bf8 19  20   .rodata                ascii   Get Movie Mode = %d
+523 0x00006c0c 0x00006c0c 28  29   .rodata                ascii   Get Speaker Stereo Mode = %d
+524 0x00006c29 0x00006c29 48  49   .rodata                ascii   DiracSound_Command EFFECT_CMD_SET_DEVICE: 0x%08x
+525 0x00006c5a 0x00006c5a 48  49   .rodata                ascii   DiracSound_Command EFFECT_CMD_SET_AUDIO_MODE: %d
+526 0x00006c8b 0x00006c8b 49  50   .rodata                ascii   DiracSound_Command EFFECT_CMD_GET_INITIAL_ENABLED
+527 0x00006cbd 0x00006cbd 66  67   .rodata                ascii   DiracSound_Command EFFECT_CMD_SET_AUDIO_STANDBY, current mode = %d
+528 0x00006d00 0x00006d00 62  63   .rodata                ascii   DiracSound_Command EFFECT_CMD_SET_APP_NAME: stream=%d, name=%s
+529 0x00006d3f 0x00006d3f 37  38   .rodata                ascii   DiracSound_Command EFFECT_CMD_OFFLOAD
+530 0x00006d65 0x00006d65 35  36   .rodata                ascii   Dirac_getDescriptor() invalid param
+531 0x00006d89 0x00006d89 13  14   .rodata                ascii   Dirac Library
+532 0x00006d97 0x00006d97 18  19   .rodata                ascii   Dirac Audio Effect
+533 0x00006daa 0x00006daa 57  58   .rodata                ascii   DiracDSP_SetSPKParam() data length: %d, detail:0x%x, 0x%x
+534 0x00006de4 0x00006de4 48  49   .rodata                ascii   DiracDSP_SetSPKParam() unsupport data length: %d
+535 0x00006e15 0x00006e15 54  55   .rodata                ascii   DiracDSP_SetDParams(), Unsupported parameter type:%d !
+536 0x00006e4c 0x00006e4c 64  65   .rodata                ascii   ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+537 0x00006e8d 0x00006e8d 139 140  .rodata                ascii   cal_devid=%u;cal_apptype=%u;cal_caltype=%u;cal_samplerate=%u;cal_topoid=0x%x;cal_moduleid=0x%x;cal_paramid=0x%x;cal_persist=%u;cal_data=%s;
+538 0x00006f19 0x00006f19 61  62   .rodata                ascii   DiracDSP_SetParameter(), Too many parameters are wait to set!
+539 0x00006f57 0x00006f57 14  15   .rodata                ascii   SetParam No.%d
+540 0x00006f66 0x00006f66 28  29   .rodata                ascii   MIDSP_SetSPKParam() mode: %d
+541 0x00006f83 0x00006f83 60  61   .rodata                ascii   DiracDSP_updateState_Headphone() hdsound_idx: %d, device: %d
+542 0x00006fc0 0x00006fc0 47  48   .rodata                ascii   DiracDSP_SetHPParam() unsupport data length: %d
+543 0x00006ff0 0x00006ff0 71  72   .rodata                ascii   DiracDSP_reinitState(), enable=%d, hifi=%d, mode=%d, music=%d, movie=%d
+544 0x00007038 0x00007038 40  41   .rodata                ascii   void _Unwind_Resume(_Unwind_Exception *)
+545 0x00007061 0x00007061 44  45   .rodata                ascii   external/libunwind_llvm/src/Unwind-EHABI.cpp
+546 0x0000708e 0x0000708e 29  30   .rodata                ascii   _Unwind_Resume() can't return
+547 0x000070ac 0x000070ac 125 126  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Set(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+548 0x0000712a 0x0000712a 26  27   .rodata                ascii   unsupported register class
+549 0x00007145 0x00007145 117 118  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Pop(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation)
+550 0x000071bb 0x000071bb 77  78   .rodata                ascii   _Unwind_Reason_Code unwind_phase2(unw_context_t *, _Unwind_Exception *, bool)
+551 0x00007209 0x00007209 98  99   .rodata                ascii   during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+552 0x0000726c 0x0000726c 25  26   .rodata                ascii   libunwind: %s %s:%d - %s\n
+553 0x00007286 0x00007286 134 135  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Get_Internal(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+554 0x0000730d 0x0000730d 44  45   .rodata                ascii   external/libunwind_llvm/src/UnwindCursor.hpp
+555 0x0000733a 0x0000733a 51  52   .rodata                ascii   uint32_t libunwind::Registers_arm::getRegister(int)
+556 0x0000736e 0x0000736e 41  42   .rodata                ascii   external/libunwind_llvm/src/Registers.hpp
+557 0x00007398 0x00007398 24  25   .rodata                ascii   unsupported arm register
+558 0x000073b1 0x000073b1 57  58   .rodata                ascii   void libunwind::Registers_arm::setRegister(int, uint32_t)
+559 0x000073eb 0x000073eb 59  60   .rodata                ascii   unw_fpreg_t libunwind::Registers_arm::getFloatRegister(int)
+560 0x00007427 0x00007427 26  27   .rodata                ascii   Unknown ARM float register
+561 0x00007442 0x00007442 65  66   .rodata                ascii   void libunwind::Registers_arm::setFloatRegister(int, unw_fpreg_t)
+562 0x00007484 0x00007484 221 222  .rodata                ascii   bool libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getInfoFromEHABISection(pint_t, const libunwind::UnwindInfoSections &) [A = libunwind::LocalAddressSpace, R = libunwind::Registers_arm]
+563 0x00007562 0x00007562 27  28   .rodata                ascii   unknown personality routine
+564 0x0000757e 0x0000757e 65  66   .rodata                ascii   index inlined table detected but pr function requires extra words
+565 0x000076df 0x000076df 16  17   .rodata                ascii   unknown register
+566 0x0000771c 0x0000771c 10  11   .rodata                ascii   DiracSound
+567 0x0000775c 0x0000775c 18  19   .rodata                ascii   Dirac Audio Effect
+568 0x00007c78 0x00008c78 4   20   .data.rel.ro           utf32le \f\f@@
+569 0x000080f0 0x000090f0 4   5    .data                  ascii   TLEA
+570 0x0000810d 0x00000001 36  37   .comment               ascii   GCC: (GNU) 4.9 20150123 (prerelease)
+571 0x00008132 0x00000026 60  61   .comment               ascii   Android clang version 3.8.256229  (based on LLVM 3.8.256229)
+572 0x00008180 0x00000010 9   10   .note.gnu.gold-version ascii   gold 1.11
+573 0x00008191 0x00000005 5   6    .ARM.attributes        ascii   aeabi
+574 0x0000819d 0x00000011 6   7    .ARM.attributes        ascii   ARM v7
+575 0x000081a5 0x00000019 4   5    .ARM.attributes        ascii   \n\aA\b
+576 0x000081cd 0x00000001 9   10   .shstrtab              ascii   .shstrtab
+577 0x000081d7 0x0000000b 7   8    .shstrtab              ascii   .interp
+578 0x000081df 0x00000013 19  20   .shstrtab              ascii   .note.android.ident
+579 0x000081f3 0x00000027 18  19   .shstrtab              ascii   .note.gnu.build-id
+580 0x00008206 0x0000003a 7   8    .shstrtab              ascii   .dynsym
+581 0x0000820e 0x00000042 7   8    .shstrtab              ascii   .dynstr
+582 0x00008216 0x0000004a 9   10   .shstrtab              ascii   .gnu.hash
+583 0x00008220 0x00000054 12  13   .shstrtab              ascii   .gnu.version
+584 0x0000822d 0x00000061 14  15   .shstrtab              ascii   .gnu.version_d
+585 0x0000823c 0x00000070 14  15   .shstrtab              ascii   .gnu.version_r
+586 0x0000824b 0x0000007f 8   9    .shstrtab              ascii   .rel.dyn
+587 0x00008254 0x00000088 8   9    .shstrtab              ascii   .rel.plt
+588 0x0000825d 0x00000091 5   6    .shstrtab              ascii   .text
+589 0x00008263 0x00000097 10  11   .shstrtab              ascii   .ARM.exidx
+590 0x0000826e 0x000000a2 10  11   .shstrtab              ascii   .ARM.extab
+591 0x00008279 0x000000ad 7   8    .shstrtab              ascii   .rodata
+592 0x00008281 0x000000b5 11  12   .shstrtab              ascii   .fini_array
+593 0x0000828d 0x000000c1 12  13   .shstrtab              ascii   .data.rel.ro
+594 0x0000829a 0x000000ce 8   9    .shstrtab              ascii   .dynamic
+595 0x000082a3 0x000000d7 4   5    .shstrtab              ascii   .got
+596 0x000082a8 0x000000dc 5   6    .shstrtab              ascii   .data
+597 0x000082ae 0x000000e2 4   5    .shstrtab              ascii   .bss
+598 0x000082b3 0x000000e7 8   9    .shstrtab              ascii   .comment
+599 0x000082bc 0x000000f0 22  23   .shstrtab              ascii   .note.gnu.gold-version
+600 0x000082d3 0x00000107 15  16   .shstrtab              ascii   .ARM.attributes
+0x00001a94    1     12 sym.imp.__cxa_finalize
+0x00001aa0    1     12 sym.imp.__cxa_atexit
+0x00001aac    1     12 sym.imp.__register_atfork
+0x00001e90    1     12 sym.imp.__aeabi_memcpy
+0x00001eb4    1     12 sym.imp.__gnu_Unwind_Find_exidx
+0x00001e9c    1     12 sym.imp.dladdr
+0x00001ea8    1     12 sym.imp.__snprintf_chk
+0x00001c14    1     12 sym.imp.__aeabi_memclr4
+0x00001b84    1     12 sym.imp.__aeabi_memclr8
+0x00001bf0    1     12 sym.imp.__aeabi_memcpy4
+0x00001ac4    1     12 sym.imp.__android_log_print
+0x00001e54    1     12 sym.imp.__cxa_pure_virtual
+0x00001b90    1     12 sym.imp.__sprintf_chk
+0x00001b78    1     12 sym.imp.__stack_chk_fail
+0x00001d4c    1     12 sym.imp.__strlcpy_chk
+0x00001b9c    1     12 sym.imp.__strlen_chk
+0x00001d10    1     12 sym.imp.atof
+0x00001bd8    1     12 sym.imp.atoi
+0x00001d40    1     12 sym.imp.calloc
+0x00001ce0    1     12 sym.imp.free
+0x00001bfc    1     12 sym.imp.memcmp
+0x00001bb4    1     12 sym.imp.property_get
+0x00001ba8    1     12 sym.imp.property_set
+0x00001af4    1     12 sym.imp.pthread_cond_destroy
+0x00001c8c    1     12 sym.imp.pthread_cond_init
+0x00001cd4    1     12 sym.imp.pthread_cond_signal
+0x00001b6c    1     12 sym.imp.pthread_cond_wait
+0x00001c98    1     12 sym.imp.pthread_condattr_destroy
+0x00001c74    1     12 sym.imp.pthread_condattr_init
+0x00001c80    1     12 sym.imp.pthread_condattr_setclock
+0x00001adc    1     12 sym.imp.pthread_mutex_destroy
+0x00001c68    1     12 sym.imp.pthread_mutex_init
+0x00001b30    1     12 sym.imp.pthread_mutex_lock
+0x00001b48    1     12 sym.imp.pthread_mutex_unlock
+0x00001bc0    1     12 sym.imp.sscanf
+0x00001bcc    1     12 sym.imp.strchr
+0x00001be4    1     12 sym.imp.strcmp
+0x00001c20    1     12 sym.imp.strncmp
+0x00001e78    1     12 sym.imp.abort
+0x00001e84    1     12 sym.imp.fprintf
+0x00001ec0    1     28 entry0
+0x00002524    3     78 sym.DiracSound_saveHeadset
+0x00003354    6     78 sym.DiracSoundLib_GetDescriptor
+0x0000437c    1    224 fcn.0000437c
+0x000045ac   11    180 fcn.000045ac
+0x00004670    8    206 fcn.00004670
+0x00004368    1      4 fcn.00004368
+0x000033e8  146   2140 sym.DiracSound_command
+0x00001cec    1     12 rsym.DiracSound_setConfig
+0x00003dc4   30    772 fcn.00003dc4
+0x00001cf8    1     12 rsym.DiracSound_updateState
+0x00001d04    1     12 rsym.DiracSound_saveHeadset
+0x0000292e    1      4 fcn.0000292e
+0x000040fc    3    298 fcn.000040fc
+0x00001d1c    1     12 rsym.DiracSound_saveEQ
+0x00001d28    1     12 rsym.DiracSound_saveMode
+0x00001d34    1     12 rsym.DiracSound_saveMusicState
+0x00001c5c    1     12 rsym.DiracSound_getHIFIState
+0x00001d58    1     12 rsym.DiracSound_saveSpeakerStereoModeState
+0x0000293c    1     44 sym.DiracSound_getConfig
+0x000033bc    7     44 sym.DiracSound_process
+0x0000242c    8    208 sym.DiracSound_restoreEQ
+0x00002060    8     98 method.android::DiracSetParameterThread.DiracSetParameterThread__
+0x000027a4    3     94 sym.DiracSound_restoreSpeakerStereoModeState
+0x00004238    4     44 sym.DiracSound_getDescriptor
+0x00002340    1      6 sym.DiracSound_releaseAppId
+0x0000210c    2     36 reloc.android::DiracSetParameterThread::DiracSetParameterThread__
+0x00001b0c    1     12 rsym._ZN7android23DiracSetParameterThreadD2Ev
+0x00001b18    1     12 sym.imp.android::RefBase::RefBase__
+0x00001fa0    4     66 fcn.00001fa0
+0x000028a4    6    138 sym.DiracSound_setConfig
+0x00002134    1     40 reloc.virtual_thunk_to_android::DiracSetParameterThread::DiracSetParameterThread__
+0x00002310    6     40 sym.DiracSound_allocateAppId
+0x000026c4    3     94 sym.DiracSound_restoreMusicState
+0x00003290   10    182 sym.DiracSoundLib_Release
+0x00002820    3     98 sym.DiracSound_getHIFIState
+0x00002358    6    174 sym.DiracSound_saveEQ
+0x00002fa0   22    560 sym.DiracSoundLib_Create
+0x00002740    3     78 sym.DiracSound_saveSpeakerStereoModeState
+0x00002660    3     78 sym.DiracSound_saveMusicState
+0x000022d0    1     28 sym.parameterInfoInit
+0x000020c8    1     28 sym.android::DiracSetParameterThread::DiracSetParameterThread__
+0x00002160   19    312 method.android::DiracSetParameterThread.threadLoop__
+0x00002f40    1     26 sym.DiracSoundLib_QueryNumberEffects
+0x00002588    3     88 sym.DiracSound_restoreHeadset
+0x00001ff4    4     84 method.android::DiracSetParameterThread.DiracSetParameterThread_android::setParamBuf_
+0x000020e8    2     32 method.virtual_thunk_to_android::DiracSetParameterThread.DiracSetParameterThread__
+0x00002f64    4     44 sym.DiracSoundLib_QueryEffect
+0x000025fc    3     78 sym.DiracSound_saveMode
+0x00002970   52    964 sym.DiracSound_updateState
+0x00003260    5     46 method.android::sp_android::DiracSetParameterThread_.operator_android::DiracSetParameterThread_
+0x00001b54    1     12 sym.imp.android::AudioSystem::setParameters_android::String8_const_
+0x00001d94    1     12 sym.imp.android::Thread::readyToRun__
+0x00001d88    1     12 sym.imp.android::Thread::requestExit__
+0x00001d7c    1     12 sym.imp.android::Thread::run_char_const__int__unsigned_int_
+0x00001ab8    1     12 sym.imp.android::Thread::Thread_bool_
+0x00001e48    1     12 rsym._ZN7android6ThreadD0Ev
+0x00001e3c    1     12 rsym._ZN7android6ThreadD1Ev
+0x00001b00    1     12 sym.imp.android::Thread::Thread__
+0x00001dc4    1     12 sym.imp.android::RefBase::onFirstRef__
+0x00001de8    1     12 sym.imp.android::RefBase::onLastWeakRef_void_const_
+0x00001dd0    1     12 sym.imp.android::RefBase::onLastStrongRef_void_const_
+0x00001ddc    1     12 sym.imp.android::RefBase::onIncStrongAttempted_unsigned_int__void_const_
+0x00001ad0    1     12 rsym._ZN7android7RefBaseC2Ev
+0x00001b3c    1     12 sym.imp.android::String8::append_char_const_
+0x00001b24    1     12 rsym._ZN7android7String8C1Ev
+0x00001b60    1     12 sym.imp.android::String8::String8__
+0x00001cc8    1     12 sym.imp.android::RefBase::decStrong_void_const__const
+0x00001cbc    1     12 sym.imp.android::RefBase::incStrong_void_const__const
+0x00001e6c    1     12 rsym._ZTv0_n12_N7android6ThreadD0Ev
+0x00001e60    1     12 sym.imp.virtual_thunk_to_android::Thread::Thread__
+0x00001ae8    1     12 sym.imp.operator_delete_void_
+0x00001c08    1     12 sym.imp.operator_new_unsigned_int_
+0x00002db8   18    374 fcn.00002db8
+0x00004754   10    266 fcn.00004754
+0x00004270    5    248 fcn.00004270
+0x00001c2c    1     12 rsym.DiracSound_restoreEQ
+0x00001c38    1     12 rsym.DiracSound_restoreHeadset
+0x00001c44    1     12 rsym.DiracSound_restoreMusicState
+0x00001c50    1     12 rsym.DiracSound_restoreSpeakerStereoModeState
+0x00001ca4    1     12 rsym._ZN7android23DiracSetParameterThreadC1EPNS_11setParamBufE
+0x00001cb0    1     12 rsym._ZN7android2spINS_23DiracSetParameterThreadEEaSEPS1_
+0x00004470   14    140 fcn.00004470
+0x0000451c    9    120 fcn.0000451c
+0x000051c0    3     46 fcn.000051c0
+0x000051ee    6     68 fcn.000051ee
+0x00004ca4   25    292 fcn.00004ca4
+0x00004c08   21    132 fcn.00004c08
+0x000052d0    1      6 fcn.000052d0
+0x00005262    3     56 fcn.00005262
+0x00005028    1     40 fcn.00005028
+0x000052a0    1     30 fcn.000052a0
+0x0000529a    1      6 fcn.0000529a
+0x00005232    3     48 fcn.00005232
+0x000050f4    1      6 fcn.000050f4
+0x0000517c    1     60 fcn.0000517c
+0x00005694    5    100 fcn.00005694
+0x00004f04   15    214 fcn.00004f04
+0x000052be    1     18 fcn.000052be
+0x00005168    3     38 fcn.00005168
+0x00005714    1     36 fcn.00005714
+0x00005114   10     72 fcn.00005114
+0x00005124    6    114 fcn.00005124
+0x00001f98    1      4 fcn.00001f98
+0x0000511c    1      8 fcn.0000511c
+0x0000510c    2     12 fcn.0000510c
+0x00005740    1     72 fcn.00005740
+0x00004870    5     64 fcn.00004870
+0x000048c4   56    656 fcn.000048c4
+0x00005794   13     88 fcn.00005794
+0x000057ec   23    372 fcn.000057ec
+0x00005e38    1      8 fcn.00005e38
+0x00005e30    1      8 fcn.00005e30
+0x00005e40    1      8 fcn.00005e40
+0x00005e48    1     68 fcn.00005e48
+0x00005ea4    1      8 fcn.00005ea4
+0x00005ec4    1      8 fcn.00005ec4
+0x00005eb4    1      8 fcn.00005eb4
+0x00005ee4    1      8 fcn.00005ee4

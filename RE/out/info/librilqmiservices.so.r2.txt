@@ -1,0 +1,135 @@
+arch     arm
+baddr    0x0
+binsz    11405
+bintype  elf
+bits     64
+canary   false
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                    demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+3   0x00001014 0x00001014 GLOBAL FUNC 28       embms_get_service_object_internal_v01
+4   0x000027f0 0x000037f0 GLOBAL OBJ  72       embms_qmi_idl_service_object_v01
+5   0x00001030 0x00001030 GLOBAL FUNC 28       Qtuner_get_service_object_internal_v01
+6   0x00002848 0x00003848 GLOBAL OBJ  72       Qtuner_qmi_idl_service_object_v01
+7   0x0000104c 0x0000104c GLOBAL FUNC 28       ims_qmi_get_service_object_internal_v01
+8   0x000024b0 0x000024b0 GLOBAL OBJ  72       ims_qmi_qmi_idl_service_object_v01
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000270   0x18 0x00000270   0x18 -r-- NOTE        .note.android.ident
+2   0x00000288   0x20 0x00000288   0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0xd8 0x000002a8   0xd8 -r-- DYNSYM      .dynsym
+4   0x00000380   0x12 0x00000380   0x12 -r-- GNU_VERSYM  .gnu.version
+5   0x00000394   0x20 0x00000394   0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x000003b8   0x3c 0x000003b8   0x3c -r-- GNU_HASH    .gnu.hash
+7   0x000003f4  0x161 0x000003f4  0x161 -r-- STRTAB      .dynstr
+8   0x00000558   0x2e 0x00000558   0x2e -r-- ----        .rela.dyn
+9   0x00000588   0x30 0x00000588   0x30 -r-- ----        .relr.dyn
+10  0x000005b8   0x18 0x000005b8   0x18 -r-- RELA        .rela.plt
+11  0x000005d0  0x479 0x000005d0  0x479 -r-- PROGBITS    .rodata
+12  0x00000a4c   0x3c 0x00000a4c   0x3c -r-- PROGBITS    .eh_frame_hdr
+13  0x00000a88   0xac 0x00000a88   0xac -r-- PROGBITS    .eh_frame
+14  0x00001000   0x68 0x00001000   0x68 -r-x PROGBITS    .text
+15  0x00001070   0x30 0x00001070   0x30 -r-x PROGBITS    .plt
+16  0x00002000  0x5d8 0x00002000  0x5d8 -rw- PROGBITS    .data.rel.ro
+17  0x000025d8   0x10 0x000025d8   0x10 -rw- FINI_ARRAY  .fini_array
+18  0x000025e8  0x1d0 0x000025e8  0x1d0 -rw- DYNAMIC     .dynamic
+19  0x000027b8   0x18 0x000027b8   0x18 -rw- PROGBITS    .got
+20  0x000027d0   0x20 0x000027d0   0x20 -rw- PROGBITS    .got.plt
+21  0x000027f0   0xc0 0x000037f0   0xc0 -rw- PROGBITS    .data
+22  0x000028b0   0xf1 0x00000000   0xf1 ---- STRTAB      .shstrtab
+23  0x000029a1  0x2ec 0x00000000  0x2ec ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x000003e9 0x000003e9 5   7    .gnu.hash           utf8    Օpj8U
+3   0x000003f5 0x000003f5 14  15   .dynstr             ascii   __cxa_finalize
+4   0x00000404 0x00000404 36  37   .dynstr             ascii   common_qmi_idl_type_table_object_v01
+5   0x00000429 0x00000429 37  38   .dynstr             ascii   embms_get_service_object_internal_v01
+6   0x0000044f 0x0000044f 32  33   .dynstr             ascii   embms_qmi_idl_service_object_v01
+7   0x00000470 0x00000470 38  39   .dynstr             ascii   Qtuner_get_service_object_internal_v01
+8   0x00000497 0x00000497 33  34   .dynstr             ascii   Qtuner_qmi_idl_service_object_v01
+9   0x000004b9 0x000004b9 39  40   .dynstr             ascii   ims_qmi_get_service_object_internal_v01
+10  0x000004e1 0x000004e1 34  35   .dynstr             ascii   ims_qmi_qmi_idl_service_object_v01
+11  0x00000504 0x00000504 7   8    .dynstr             ascii   libc.so
+12  0x0000050c 0x0000050c 4   5    .dynstr             ascii   LIBC
+13  0x00000511 0x00000511 19  20   .dynstr             ascii   libqmi_common_so.so
+14  0x00000525 0x00000525 9   10   .dynstr             ascii   libc++.so
+15  0x0000052f 0x0000052f 7   8    .dynstr             ascii   libm.so
+16  0x00000537 0x00000537 8   9    .dynstr             ascii   libdl.so
+17  0x00000540 0x00000540 20  21   .dynstr             ascii   librilqmiservices.so
+18  0x00000558 0x00000558 4   5    .rela.dyn           ascii   APS2
+19  0x00000598 0x00000598 18  19   .relr.dyn           ascii   UUUAUUUU3AtxTUUu\b8
+20  0x00000634 0x00000634 4   10   .rodata             utf16le \a\e,\a
+21  0x00000644 0x00000644 7   15   .rodata             utf16le 2\a!5\a#8
+22  0x000006b6 0x000006b6 4   10   .rodata             utf16le +%\e-
+23  0x000006cc 0x000006cc 7   16   .rodata             utf16le !6\v#9\a\v
+24  0x0000101f 0x0000101f 5   6    .text               ascii   q \bBz
+25  0x0000103b 0x0000103b 5   6    .text               ascii   q \b@z
+26  0x00001057 0x00001057 5   6    .text               ascii   q \bAz
+27  0x000028b1 0x00000001 11  12   .shstrtab           ascii   .fini_array
+28  0x000028bd 0x0000000d 5   6    .shstrtab           ascii   .text
+29  0x000028c3 0x00000013 4   5    .shstrtab           ascii   .got
+30  0x000028c8 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+31  0x000028dc 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+32  0x000028e5 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+33  0x000028ef 0x0000003f 7   8    .shstrtab           ascii   .dynstr
+34  0x000028f7 0x00000047 13  14   .shstrtab           ascii   .eh_frame_hdr
+35  0x00002905 0x00000055 14  15   .shstrtab           ascii   .gnu.version_r
+36  0x00002914 0x00000064 12  13   .shstrtab           ascii   .data.rel.ro
+37  0x00002921 0x00000071 9   10   .shstrtab           ascii   .relr.dyn
+38  0x0000292b 0x0000007b 9   10   .shstrtab           ascii   .rela.dyn
+39  0x00002935 0x00000085 12  13   .shstrtab           ascii   .gnu.version
+40  0x00002942 0x00000092 7   8    .shstrtab           ascii   .dynsym
+41  0x0000294a 0x0000009a 9   10   .shstrtab           ascii   .gnu.hash
+42  0x00002954 0x000000a4 9   10   .shstrtab           ascii   .eh_frame
+43  0x0000295e 0x000000ae 18  19   .shstrtab           ascii   .note.gnu.build-id
+44  0x00002971 0x000000c1 8   9    .shstrtab           ascii   .dynamic
+45  0x0000297a 0x000000ca 9   10   .shstrtab           ascii   .shstrtab
+46  0x00002984 0x000000d4 7   8    .shstrtab           ascii   .rodata
+47  0x0000298c 0x000000dc 14  15   .shstrtab           ascii   .gnu_debugdata
+48  0x0000299b 0x000000eb 5   6    .shstrtab           ascii   .data
+49  0x000029a2 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+50  0x000029de 0x0000003d 6   7    .gnu_debugdata      ascii   #L?+ib
+51  0x00002a80 0x000000df 4   5    .gnu_debugdata      ascii   P4)X
+52  0x00002aab 0x0000010a 4   5    .gnu_debugdata      ascii   Wc.X
+53  0x00002b06 0x00000165 5   7    .gnu_debugdata      utf8    7IDޓ\
+54  0x00002b52 0x000001b1 6   9    .gnu_debugdata      utf8    j\bуœB
+55  0x00002b89 0x000001e8 6   8    .gnu_debugdata      utf8    jFhW&ғ
+56  0x00002bec 0x0000024b 4   5    .gnu_debugdata      ascii   WL\bc
+57  0x00002bf4 0x00000253 4   5    .gnu_debugdata      ascii   a;Sn
+58  0x00002c5c 0x000002bb 4   6    .gnu_debugdata      utf8    eW6؈
+59  0x00002c7d 0x000002dc 4   5    .gnu_debugdata      ascii   kBWX
+0x00001090    1     16 sym.imp.__cxa_finalize
+0x00001000    1     12 entry0
+0x00001014    1     28 sym.embms_get_service_object_internal_v01
+0x00001030    1     28 sym.Qtuner_get_service_object_internal_v01
+0x0000104c    1     28 sym.ims_qmi_get_service_object_internal_v01
+0x00001010    1      4 entry.fini0
+0x00001070    1     20 section..plt

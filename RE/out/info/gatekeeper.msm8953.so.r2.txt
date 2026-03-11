@@ -1,0 +1,206 @@
+arch     arm
+baddr    0x0
+binsz    18096
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                         demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+17  0x00003010 0x00003010 GLOBAL OBJ  248      HMI
+18  0x00002014 0x00002014 GLOBAL FUNC 436      _Z11delete_userPK17gatekeeper_devicej        delete_user(gatekeeper_device const*, unsigned int)
+19  0x000021c8 0x000021c8 GLOBAL FUNC 432      _Z16delete_all_usersPK17gatekeeper_device    delete_all_users(gatekeeper_device const*)
+20  0x00002378 0x00002378 GLOBAL FUNC 864      _Z8HwGkOpenPK11hw_module_tPKcPP11hw_device_t HwGkOpen(hw_module_t const*, char const*, hw_device_t**)
+21  ---------- 0x00005000 GLOBAL OBJ  8        context
+[Sections]
+
+nth paddr        size vaddr       vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000    0x0 0x00000000    0x0 ---- NULL
+1   0x00000238  0x210 0x00000238  0x210 -r-- DYNSYM      .dynsym
+2   0x00000448   0x2c 0x00000448   0x2c -r-- GNU_VERSYM  .gnu.version
+3   0x00000474   0x60 0x00000474   0x60 -r-- GNU_VERNEED .gnu.version_r
+4   0x000004d8   0x30 0x000004d8   0x30 -r-- GNU_HASH    .gnu.hash
+5   0x00000508  0x178 0x00000508  0x178 -r-- STRTAB      .dynstr
+6   0x00000680  0x108 0x00000680  0x108 -r-- RELA        .rela.dyn
+7   0x00000788  0x180 0x00000788  0x180 -r-- RELA        .rela.plt
+8   0x00000908   0x18 0x00000908   0x18 -r-- NOTE        .note.android.ident
+9   0x00000920   0x20 0x00000920   0x20 -r-- NOTE        .note.gnu.build-id
+10  0x00000940  0x51b 0x00000940  0x51b -r-- PROGBITS    .rodata
+11  0x00000e5c   0x54 0x00000e5c   0x54 -r-- PROGBITS    .eh_frame_hdr
+12  0x00000eb0  0x17c 0x00000eb0  0x17c -r-- PROGBITS    .eh_frame
+13  0x00002000  0xd50 0x00002000  0xd50 -r-x PROGBITS    .text
+14  0x00002d50  0x120 0x00002d50  0x120 -r-x PROGBITS    .plt
+15  0x00003000  0x108 0x00003000  0x108 -rw- PROGBITS    .data
+16  0x00004000   0x10 0x00004000   0x10 -rw- FINI_ARRAY  .fini_array
+17  0x00004010  0x1c0 0x00004010  0x1c0 -rw- DYNAMIC     .dynamic
+18  0x000041d0   0x18 0x000041d0   0x18 -rw- PROGBITS    .got
+19  0x000041e8   0x98 0x000041e8   0x98 -rw- PROGBITS    .got.plt
+20  0x00004280    0x0 0x00005000    0x8 -rw- NOBITS      .bss
+21  0x00004280   0xe4 0x00000000   0xe4 ---- STRTAB      .shstrtab
+22  0x00004364  0x34c 0x00000000  0x34c ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\t@
+1   0x00000509 0x00000509 9   10   .dynstr             ascii   liblog.so
+2   0x00000513 0x00000513 12  13   .dynstr             ascii   libcutils.so
+3   0x00000520 0x00000520 9   10   .dynstr             ascii   libc++.so
+4   0x0000052a 0x0000052a 7   8    .dynstr             ascii   libc.so
+5   0x00000532 0x00000532 7   8    .dynstr             ascii   libm.so
+6   0x0000053a 0x0000053a 8   9    .dynstr             ascii   libdl.so
+7   0x00000543 0x00000543 21  22   .dynstr             ascii   gatekeeper.msm8953.so
+8   0x00000559 0x00000559 14  15   .dynstr             ascii   __cxa_finalize
+9   0x00000568 0x00000568 4   5    .dynstr             ascii   LIBC
+10  0x00000571 0x00000571 37  38   .dynstr             ascii   _Z11delete_userPK17gatekeeper_devicej
+11  0x00000597 0x00000597 41  42   .dynstr             ascii   _Z16delete_all_usersPK17gatekeeper_device
+12  0x000005c1 0x000005c1 44  45   .dynstr             ascii   _Z8HwGkOpenPK11hw_module_tPKcPP11hw_device_t
+13  0x000005ee 0x000005ee 6   7    .dynstr             ascii   _ZdlPv
+14  0x000005f5 0x000005f5 5   6    .dynstr             ascii   _Znwm
+15  0x000005fb 0x000005fb 19  20   .dynstr             ascii   __android_log_print
+16  0x0000060f 0x0000060f 6   7    .dynstr             ascii   LIBLOG
+17  0x00000616 0x00000616 16  17   .dynstr             ascii   __stack_chk_fail
+18  0x00000627 0x00000627 7   8    .dynstr             ascii   context
+19  0x0000062f 0x0000062f 7   8    .dynstr             ascii   dlclose
+20  0x00000637 0x00000637 6   7    .dynstr             ascii   dlopen
+21  0x0000063e 0x0000063e 5   6    .dynstr             ascii   dlsym
+22  0x00000644 0x00000644 4   5    .dynstr             ascii   free
+23  0x00000649 0x00000649 6   7    .dynstr             ascii   malloc
+24  0x00000650 0x00000650 6   7    .dynstr             ascii   memcmp
+25  0x00000657 0x00000657 6   7    .dynstr             ascii   memcpy
+26  0x0000065e 0x0000065e 6   7    .dynstr             ascii   memset
+27  0x00000665 0x00000665 12  13   .dynstr             ascii   property_get
+28  0x00000672 0x00000672 6   7    .dynstr             ascii   strcmp
+29  0x00000679 0x00000679 6   7    .dynstr             ascii   usleep
+30  0x00000914 0x00000914 7   8    .note.android.ident ascii   Android
+31  0x0000093c 0x0000093c 8   9    .note.gnu.build-id  ascii   1m`-TDWH
+32  0x00000948 0x00000948 17  18   .rodata             ascii   gatekeeper_device
+33  0x0000095a 0x0000095a 9   10   .rodata             ascii   HwKmClose
+34  0x00000964 0x00000964 7   8    .rodata             ascii   ret: %d
+35  0x0000096c 0x0000096c 38  39   .rodata             ascii   dlsym: Error Loading QSEECom_start_app
+36  0x00000993 0x00000993 16  17   .rodata             ascii   libQSEEComAPI.so
+37  0x000009a4 0x000009a4 42  43   .rodata             ascii   dlsym: Error Loading QSEECom_set_bandwidth
+38  0x000009cf 0x000009cf 53  54   .rodata             ascii   Verify command failed (unable to enable clks) ret =%d
+39  0x00000a05 0x00000a05 53  54   .rodata             ascii   Enroll command failed (unable to enable clks) ret =%d
+40  0x00000a3b 0x00000a3b 19  20   .rodata             ascii   Qseecom handle NULL
+41  0x00000a4f 0x00000a4f 28  29   .rodata             ascii   Loading keymaster app failed
+42  0x00000a6c 0x00000a6c 18  19   .rodata             ascii   QTI GateKeeper HAL
+43  0x00000a7f 0x00000a7f 25  26   .rodata             ascii   QSEECom_send_modified_cmd
+44  0x00000a99 0x00000a99 48  49   .rodata             ascii   dlsym: Error Loading QSEECom_scale_bus_bandwidth
+45  0x00000aca 0x00000aca 40  41   .rodata             ascii   Verify command: (unable to disable clks)
+46  0x00000af3 0x00000af3 29  30   .rodata             ascii   Memalloc for gk handle failed
+47  0x00000b11 0x00000b11 46  47   .rodata             ascii   dlsym: Error Loading QSEECom_send_modified_cmd
+48  0x00000b40 0x00000b40 27  28   .rodata             ascii   Delete User send cmd failed
+49  0x00000b5c 0x00000b5c 26  27   .rodata             ascii   /vendor/firmware_mnt/image
+50  0x00000b77 0x00000b77 22  23   .rodata             ascii   Gatekeeper initialized
+51  0x00000b8e 0x00000b8e 31  32   .rodata             ascii   vendor.sys.listeners.registered
+52  0x00000bae 0x00000bae 37  38   .rodata             ascii   dlsym: Error Loading QSEECom_send_cmd
+53  0x00000bd4 0x00000bd4 4   5    .rodata             ascii   true
+54  0x00000bd9 0x00000bd9 50  51   .rodata             ascii   Delete All Users command: (unable to disable clks)
+55  0x00000c10 0x00000c10 31  32   .rodata             ascii   handle->ion_sbuffer handle NULL
+56  0x00000c30 0x00000c30 63  64   .rodata             ascii   Delete All Users command failed (unable to enable clks) ret =%d
+57  0x00000c70 0x00000c70 15  16   .rodata             ascii   HwGkOpen called
+58  0x00000c80 0x00000c80 21  22   .rodata             ascii   QSEECom_set_bandwidth
+59  0x00000c96 0x00000c96 16  17   .rodata             ascii   resp->status: %d
+60  0x00000ca7 0x00000ca7 16  17   .rodata             ascii   Context  == NULL
+61  0x00000cb8 0x00000cb8 32  33   .rodata             ascii   Delete All Users send cmd failed
+62  0x00000cd9 0x00000cd9 27  28   .rodata             ascii   QSEECom_scale_bus_bandwidth
+63  0x00000cf5 0x00000cf5 22  23   .rodata             ascii   Enroll send cmd failed
+64  0x00000d0c 0x00000d0c 58  59   .rodata             ascii   Delete User command failed (unable to enable clks) ret =%d
+65  0x00000d47 0x00000d47 45  46   .rodata             ascii   Delete User command: (unable to disable clks)
+66  0x00000d75 0x00000d75 10  11   .rodata             ascii   gatekeeper
+67  0x00000d80 0x00000d80 16  17   .rodata             ascii   QSEECom_send_cmd
+68  0x00000d91 0x00000d91 20  21   .rodata             ascii   QSEECom_shutdown_app
+69  0x00000da6 0x00000da6 14  15   .rodata             ascii   gk_handle NULL
+70  0x00000db5 0x00000db5 17  18   .rodata             ascii   QSEECom_start_app
+71  0x00000dc8 0x00000dc8 41  42   .rodata             ascii   dlsym: Error Loading QSEECom_shutdown_app
+72  0x00000df2 0x00000df2 9   10   .rodata             ascii   keymaster
+73  0x00000dfc 0x00000dfc 40  41   .rodata             ascii   Enroll command: (unable to disable clks)
+74  0x00000e25 0x00000e25 22  23   .rodata             ascii   Verify send cmd failed
+75  0x00000e3c 0x00000e3c 30  31   .rodata             ascii   failed to load qseecom library
+76  0x00002523 0x00002523 4   5    .text               ascii   5w\n@
+77  0x00003010 0x00003010 4   5    .data               ascii   TMWH
+78  0x00004281 0x00000001 11  12   .shstrtab           ascii   .fini_array
+79  0x0000428d 0x0000000d 5   6    .shstrtab           ascii   .text
+80  0x00004293 0x00000013 4   5    .shstrtab           ascii   .got
+81  0x00004298 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+82  0x000042ac 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+83  0x000042b5 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+84  0x000042bf 0x0000003f 4   5    .shstrtab           ascii   .bss
+85  0x000042c4 0x00000044 7   8    .shstrtab           ascii   .dynstr
+86  0x000042cc 0x0000004c 13  14   .shstrtab           ascii   .eh_frame_hdr
+87  0x000042da 0x0000005a 14  15   .shstrtab           ascii   .gnu.version_r
+88  0x000042e9 0x00000069 9   10   .shstrtab           ascii   .rela.dyn
+89  0x000042f3 0x00000073 12  13   .shstrtab           ascii   .gnu.version
+90  0x00004300 0x00000080 7   8    .shstrtab           ascii   .dynsym
+91  0x00004308 0x00000088 9   10   .shstrtab           ascii   .gnu.hash
+92  0x00004312 0x00000092 9   10   .shstrtab           ascii   .eh_frame
+93  0x0000431c 0x0000009c 18  19   .shstrtab           ascii   .note.gnu.build-id
+94  0x0000432f 0x000000af 8   9    .shstrtab           ascii   .dynamic
+95  0x00004338 0x000000b8 9   10   .shstrtab           ascii   .shstrtab
+96  0x00004342 0x000000c2 7   8    .shstrtab           ascii   .rodata
+97  0x0000434a 0x000000ca 14  15   .shstrtab           ascii   .gnu_debugdata
+98  0x00004359 0x000000d9 5   6    .shstrtab           ascii   .data
+99  0x00004365 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+100 0x000043c9 0x00000065 4   6    .gnu_debugdata      utf8    L(~Ʈ
+101 0x00004410 0x000000ac 4   5    .gnu_debugdata      ascii   O\b3a
+102 0x00004473 0x0000010f 4   5    .gnu_debugdata      ascii   E*Ra
+103 0x000044cf 0x0000016b 4   8    .gnu_debugdata      utf8    θ/Gť
+104 0x000044d9 0x00000175 6   7    .gnu_debugdata      ascii   S1{E$\r
+105 0x000044e7 0x00000183 4   7    .gnu_debugdata      utf8    C黡\n6
+106 0x000044f1 0x0000018d 4   5    .gnu_debugdata      ascii   jM4S
+107 0x00004505 0x000001a1 8   9    .gnu_debugdata      ascii   M1Pd-r~E
+108 0x0000457b 0x00000217 5   6    .gnu_debugdata      ascii   CW9R/
+109 0x0000458b 0x00000227 9   11   .gnu_debugdata      utf8    \fbAs\fUʍ;*
+110 0x000045cf 0x0000026b 4   5    .gnu_debugdata      ascii   Y\a\th
+111 0x000045d6 0x00000272 4   5    .gnu_debugdata      ascii   Ir=j
+112 0x000045e1 0x0000027d 4   5    .gnu_debugdata      ascii   )Nq\f
+113 0x00004628 0x000002c4 5   6    .gnu_debugdata      ascii   avmz.
+114 0x0000464a 0x000002e6 4   5    .gnu_debugdata      ascii   &\em{
+115 0x00004692 0x0000032e 5   7    .gnu_debugdata      utf8    Ϙ U3g
+0x00002d70    1     16 sym.imp.__cxa_finalize
+0x00002d90    1     16 sym.imp.__android_log_print
+0x00002e50    1     16 sym.imp.__stack_chk_fail
+0x00002e40    1     16 sym.imp.dlclose
+0x00002dc0    1     16 sym.imp.dlopen
+0x00002dd0    1     16 sym.imp.dlsym
+0x00002e20    1     16 sym.imp.free
+0x00002db0    1     16 sym.imp.malloc
+0x00002e00    1     16 sym.imp.memcmp
+0x00002e60    1     16 sym.imp.memcpy
+0x00002d80    1     16 sym.imp.memset
+0x00002df0    1     16 sym.imp.property_get
+0x00002da0    1     16 sym.imp.strcmp
+0x00002e10    1     16 sym.imp.usleep
+0x00002000    1     12 entry0
+0x00002014   18    436 sym.delete_user_gatekeeper_device_const__unsigned_int_
+0x000021c8   18    432 sym.delete_all_users_gatekeeper_device_const_
+0x00002378   31    864 sym.HwGkOpen_hw_module_t_const__char_const__hw_device_t_
+0x00002e30    1     16 sym.imp.operator_delete_void_
+0x00002de0    1     16 sym.imp.operator_new_unsigned_long_
+0x000026d8    5    152 sym.HwKmClose_hw_device_t_
+0x00002770   32    700 sym.Verify_gatekeeper_device_const__unsigned_int__unsigned_long__unsigned_char_const__unsigned_int__unsigned_char_const__unsigned_int__unsigned_char__unsigned_int__bool_
+0x00002a2c   31    804 sym.Enroll_gatekeeper_device_const__unsigned_int__unsigned_char_const__unsigned_int__unsigned_char_const__unsigned_int__unsigned_char_const__unsigned_int__unsigned_char__unsigned_int_
+0x00002d50    1     20 section..plt

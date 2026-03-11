@@ -1,0 +1,461 @@
+arch     arm
+baddr    0x0
+binsz    21006
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+compiler GCC: (GNU) 4.9 20150123 (prerelease)
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+intrp    /system/bin/linker
+laddr    0x0
+lang     c++
+linenum  false
+lsyms    false
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   false
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped true
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type   size lib name                                                                     demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+28  ---------- 0x00006004 GLOBAL NOTYPE 0        __bss_start
+29  0x00001d6c 0x00001d6c GLOBAL FUNC   236      _ZN24QCameraPostProcStillMoreD1Ev                                        QCameraPostProcStillMore::~QCameraPostProcStillMore()
+31  0x000017fc 0x000017fc GLOBAL FUNC   120      img_algo_frame_ind
+32  ---------- 0x00006005 GLOBAL NOTYPE 0        _end
+33  0x00001c50 0x00001c50 GLOBAL FUNC   284      _ZN24QCameraPostProcStillMoreC1Ev                                        QCameraPostProcStillMore::QCameraPostProcStillMore()
+34  0x00001d6c 0x00001d6c GLOBAL FUNC   236      _ZN24QCameraPostProcStillMoreD2Ev                                        QCameraPostProcStillMore::~QCameraPostProcStillMore()
+37  0x00001c50 0x00001c50 GLOBAL FUNC   284      _ZN24QCameraPostProcStillMoreC2Ev                                        QCameraPostProcStillMore::QCameraPostProcStillMore()
+38  ---------- 0x00006004 GLOBAL NOTYPE 0        _edata
+41  0x00001bf4 0x00001bf4 GLOBAL FUNC   92       img_algo_set_frame_ops
+42  0x0000116c 0x0000116c GLOBAL FUNC   1680     _ZN24QCameraPostProcStillMore11processDataEPP11img_frame_tiP10img_meta_t QCameraPostProcStillMore::processData(img_frame_t**, int, img_meta_t*)
+43  0x00001098 0x00001098 GLOBAL FUNC   96       img_algo_deinit
+44  0x00001044 0x00001044 GLOBAL FUNC   84       img_algo_init
+45  0x000010f8 0x000010f8 GLOBAL FUNC   116      img_algo_process
+46  0x00001874 0x00001874 GLOBAL FUNC   896      _ZN24QCameraPostProcStillMore13registerImageERP11img_frame_t             QCameraPostProcStillMore::registerImage(img_frame_t*&)
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000154    0x13 0x00000154    0x13 -r-- PROGBITS    .interp
+2   0x00000168    0x18 0x00000168    0x18 -r-- NOTE        .note.android.ident
+3   0x00000180    0x20 0x00000180    0x20 -r-- NOTE        .note.gnu.build-id
+4   0x000001a0   0x300 0x000001a0   0x300 -r-- DYNSYM      .dynsym
+5   0x000004a0   0x597 0x000004a0   0x597 -r-- STRTAB      .dynstr
+6   0x00000a38    0xb8 0x00000a38    0xb8 -r-- GNU_HASH    .gnu.hash
+7   0x00000af0    0x60 0x00000af0    0x60 -r-- GNU_VERSYM  .gnu.version
+8   0x00000b50    0x1c 0x00000b50    0x1c -r-- GNU_VERDEF  .gnu.version_d
+9   0x00000b6c    0x70 0x00000b6c    0x70 -r-- GNU_VERNEED .gnu.version_r
+10  0x00000bdc    0xb8 0x00000bdc    0xb8 -r-- REL         .rel.dyn
+11  0x00000c94   0x118 0x00000c94   0x118 -r-- REL         .rel.plt
+12  0x00000dac   0x1b8 0x00000dac   0x1b8 -r-x PROGBITS    .plt
+13  0x00000f64  0x2604 0x00000f64  0x2604 -r-x PROGBITS    .text
+14  0x00003568   0x1a0 0x00003568   0x1a0 -r-- ----        .ARM.exidx
+15  0x00003708    0x30 0x00003708    0x30 -r-- PROGBITS    .ARM.extab
+16  0x00003738   0xb58 0x00003738   0xb58 -r-- PROGBITS    .rodata
+17  0x00004de8     0x4 0x00005de8     0x4 -rw- FINI_ARRAY  .fini_array
+18  0x00004dec    0x48 0x00005dec    0x48 -rw- PROGBITS    .data.rel.ro
+19  0x00004e34   0x120 0x00005e34   0x120 -rw- DYNAMIC     .dynamic
+20  0x00004f54    0xac 0x00005f54    0xac -rw- PROGBITS    .got
+21  0x00005000     0x4 0x00006000     0x4 -rw- PROGBITS    .data
+22  0x00005004     0x0 0x00006004     0x1 -rw- NOBITS      .bss
+23  0x00005004    0x63 0x00000000    0x63 ---- PROGBITS    .comment
+24  0x00005068    0x1c 0x00000000    0x1c ---- NOTE        .note.gnu.gold-version
+25  0x00005084    0x40 0x00000000    0x40 ---- ----        .ARM.attributes
+26  0x000050c4    0x24 0x00000000    0x24 ---- PROGBITS    .gnu_debuglink
+27  0x000050e8   0x126 0x00000000   0x126 ---- STRTAB      .shstrtab
+
+[Strings]
+nth paddr      vaddr      len size section                type    string
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                          utf16le 4 \t(
+1   0x00000038 0x00000038 5   24                          utf32le 444ĠĠ
+2   0x00000154 0x00000154 18  19   .interp                ascii   /system/bin/linker
+3   0x00000174 0x00000174 7   8    .note.android.ident    ascii   Android
+4   0x000004a1 0x000004a1 14  15   .dynstr                ascii   __cxa_finalize
+5   0x000004b0 0x000004b0 4   5    .dynstr                ascii   LIBC
+6   0x000004b5 0x000004b5 7   8    .dynstr                ascii   libc.so
+7   0x000004bd 0x000004bd 28  29   .dynstr                ascii   libmmcamera_stillmore_lib.so
+8   0x000004da 0x000004da 12  13   .dynstr                ascii   __cxa_atexit
+9   0x000004e7 0x000004e7 17  18   .dynstr                ascii   __register_atfork
+10  0x000004f9 0x000004f9 24  25   .dynstr                ascii   _Z19cpcommon_jtQq0GW21fv
+11  0x00000512 0x00000512 51  52   .dynstr                ascii   _Z20stillMore_iKtXNRGAUMPKhS0_jjS0_S0_jjjjPhS1_jjPi
+12  0x00000546 0x00000546 27  28   .dynstr                ascii   _Z20stillMore_jmf9K6K5NQfff
+13  0x00000562 0x00000562 25  26   .dynstr                ascii   _Z20stillMore_uf6H4LqsSkv
+14  0x0000057c 0x0000057c 63  64   .dynstr                ascii   _Z20stillMore_yPGmb6U2btPKPKhS2_jjjjjPKPKijjjPhS7_jjRiS8_S8_S8_
+15  0x000005bc 0x000005bc 72  73   .dynstr                ascii   _ZN24QCameraPostProcStillMore11processDataEPP11img_frame_tiP10img_meta_t
+16  0x00000605 0x00000605 60  61   .dynstr                ascii   _ZN24QCameraPostProcStillMore13registerImageERP11img_frame_t
+17  0x00000642 0x00000642 33  34   .dynstr                ascii   _ZN24QCameraPostProcStillMoreC1Ev
+18  0x00000664 0x00000664 33  34   .dynstr                ascii   _ZN24QCameraPostProcStillMoreC2Ev
+19  0x00000686 0x00000686 33  34   .dynstr                ascii   _ZN24QCameraPostProcStillMoreD1Ev
+20  0x000006a8 0x000006a8 33  34   .dynstr                ascii   _ZN24QCameraPostProcStillMoreD2Ev
+21  0x000006ca 0x000006ca 36  37   .dynstr                ascii   _ZN4qrcp22StillMoreTunableParamsC1Ev
+22  0x000006ef 0x000006ef 52  53   .dynstr                ascii   _ZNSt3__113__vector_baseIPKhNS_9allocatorIS2_EEED2Ev
+23  0x00000724 0x00000724 51  52   .dynstr                ascii   _ZNSt3__113__vector_baseIPhNS_9allocatorIS1_EEED2Ev
+24  0x00000758 0x00000758 51  52   .dynstr                ascii   _ZNSt3__113__vector_baseIPiNS_9allocatorIS1_EEED2Ev
+25  0x0000078c 0x0000078c 73  74   .dynstr                ascii   _ZNSt3__16vectorIPKhNS_9allocatorIS2_EEE21__push_back_slow_pathIS2_EEvOT_
+26  0x000007d6 0x000007d6 74  75   .dynstr                ascii   _ZNSt3__16vectorIPhNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_
+27  0x00000821 0x00000821 72  73   .dynstr                ascii   _ZNSt3__16vectorIPhNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_
+28  0x0000086a 0x0000086a 74  75   .dynstr                ascii   _ZNSt3__16vectorIPiNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_
+29  0x000008b5 0x000008b5 6   7    .dynstr                ascii   _ZdaPv
+30  0x000008bc 0x000008bc 6   7    .dynstr                ascii   _ZdlPv
+31  0x000008c3 0x000008c3 5   6    .dynstr                ascii   _Znaj
+32  0x000008c9 0x000008c9 5   6    .dynstr                ascii   _Znwj
+33  0x000008cf 0x000008cf 14  15   .dynstr                ascii   __aeabi_memcpy
+34  0x000008de 0x000008de 6   7    .dynstr                ascii   LIBC_N
+35  0x000008e5 0x000008e5 15  16   .dynstr                ascii   __aeabi_memcpy4
+36  0x000008f5 0x000008f5 19  20   .dynstr                ascii   __android_log_print
+37  0x00000909 0x00000909 16  17   .dynstr                ascii   __stack_chk_fail
+38  0x0000091a 0x0000091a 17  18   .dynstr                ascii   __stack_chk_guard
+39  0x0000092c 0x0000092c 15  16   .dynstr                ascii   img_algo_deinit
+40  0x0000093c 0x0000093c 18  19   .dynstr                ascii   img_algo_frame_ind
+41  0x0000094f 0x0000094f 13  14   .dynstr                ascii   img_algo_init
+42  0x0000095d 0x0000095d 16  17   .dynstr                ascii   img_algo_process
+43  0x0000096e 0x0000096e 22  23   .dynstr                ascii   img_algo_set_frame_ops
+44  0x00000985 0x00000985 6   7    .dynstr                ascii   roundf
+45  0x0000098c 0x0000098c 7   8    .dynstr                ascii   libm.so
+46  0x00000994 0x00000994 5   6    .dynstr                ascii   abort
+47  0x0000099a 0x0000099a 7   8    .dynstr                ascii   fprintf
+48  0x000009a2 0x000009a2 6   7    .dynstr                ascii   stderr
+49  0x000009a9 0x000009a9 15  16   .dynstr                ascii   __aeabi_memclr8
+50  0x000009b9 0x000009b9 23  24   .dynstr                ascii   __gnu_Unwind_Find_exidx
+51  0x000009d1 0x000009d1 14  15   .dynstr                ascii   __snprintf_chk
+52  0x000009e0 0x000009e0 6   7    .dynstr                ascii   dladdr
+53  0x000009e7 0x000009e7 8   9    .dynstr                ascii   libdl.so
+54  0x000009f0 0x000009f0 6   7    .dynstr                ascii   _edata
+55  0x000009f7 0x000009f7 11  12   .dynstr                ascii   __bss_start
+56  0x00000a03 0x00000a03 4   5    .dynstr                ascii   _end
+57  0x00000a08 0x00000a08 13  14   .dynstr                ascii   libseemore.so
+58  0x00000a16 0x00000a16 12  13   .dynstr                ascii   libcutils.so
+59  0x00000a23 0x00000a23 9   10   .dynstr                ascii   liblog.so
+60  0x00000a2d 0x00000a2d 9   10   .dynstr                ascii   libc++.so
+61  0x00000a6c 0x00000a6c 5   24   .gnu.hash              utf32le !%&')
+62  0x00000a88 0x00000a88 4   20   .gnu.hash              utf32le *+./
+63  0x00000f9f 0x00000f9e 4   5    .text                  ascii   \n\b0\e
+64  0x00001051 0x00001050 5   6    .text                  ascii   J|D}D
+65  0x0000105b 0x0000105a 5   6    .text                  ascii    !F+F
+66  0x0000106e 0x0000106e 10  11   .text                  ascii   \tJ!F0`L zD
+67  0x000010a5 0x000010a4 5   6    .text                  ascii   KyDzD
+68  0x000010c2 0x000010c2 12  13   .text                  ascii   \nIf \nJ\nKyDzD
+69  0x00001107 0x00001106 7   8    .text                  ascii    yDzD{D
+70  0x00001127 0x00001126 5   6    .text                  ascii   h(F!F
+71  0x0000113b 0x0000113a 9   10   .text                  ascii    \tJ\nKyDzD
+72  0x00001193 0x00001192 4   5    .text                  ascii   hyD&
+73  0x000011d6 0x000011d6 6   7    .text                  ascii   yDzD{D
+74  0x00001207 0x00001206 7   8    .text                  ascii   5yDzD{D
+75  0x00001229 0x00001228 5   6    .text                  ascii   5yDzD
+76  0x00001240 0x00001240 6   7    .text                  ascii   yD\th\th
+77  0x0000126a 0x0000126a 4   5    .text                  ascii   zD{D
+78  0x00001372 0x00001372 6   7    .text                  ascii   \b4yDzD
+79  0x000015e8 0x000015e8 4   5    .text                  ascii    F+i
+80  0x000015f1 0x000015f0 5   6    .text                  ascii   "0h#F
+81  0x0000160a 0x0000160a 4   5    .text                  ascii   dObJ
+82  0x0000161d 0x0000161c 5   6    .text                  ascii    1F;F
+83  0x0000162f 0x0000162e 5   6    .text                  ascii   #;F[J
+84  0x00001653 0x00001652 7   8    .text                  ascii    zD1F;F
+85  0x00001668 0x00001668 4   5    .text                  ascii   ;FzD
+86  0x00001671 0x00001670 4   5    .text                  ascii    1F]
+87  0x0000168b 0x0000168a 5   6    .text                  ascii    9FCF
+88  0x00001695 0x00001694 7   8    .text                  ascii   n*ohjJC
+89  0x000016a5 0x000016a4 7   8    .text                  ascii   njo(kJC
+90  0x000016bd 0x000016bc 4   5    .text                  ascii   !(n$
+91  0x000016c6 0x000016c6 4   5    .text                  ascii    F+i
+92  0x000016cf 0x000016ce 5   6    .text                  ascii   "0h#F
+93  0x000016e1 0x000016e0 5   6    .text                  ascii   #CF5J
+94  0x00001719 0x00001718 5   6    .text                  ascii    9FCF
+95  0x0000172b 0x0000172a 7   8    .text                  ascii    zD9FCF
+96  0x0000173f 0x0000173e 12  13   .text                  ascii   p"J#KyDzD{D`
+97  0x0000180f 0x0000180e 7   8    .text                  ascii   h~DzD3F
+98  0x00001837 0x00001836 7   8    .text                  ascii    zD)F3F
+99  0x0000188b 0x0000188a 5   6    .text                  ascii   hyD{D
+100 0x000018dc 0x000018dc 4   5    .text                  ascii   \b``k
+101 0x00001908 0x00001908 4   5    .text                  ascii   @j f
+102 0x00001948 0x00001948 4   5    .text                  ascii   \b` l
+103 0x0000194d 0x0000194c 4   5    .text                  ascii   0 d
+104 0x00001953 0x00001952 5   6    .text                  ascii   n!oHC
+105 0x00001961 0x00001960 5   6    .text                  ascii   naoHC
+106 0x00001a27 0x00001a26 4   5    .text                  ascii   B(F8
+107 0x00001b29 0x00001b28 4   5    .text                  ascii   )\vF)
+108 0x00001ba7 0x00001ba6 5   6    .text                  ascii   KzD{D
+109 0x00001c05 0x00001c04 5   6    .text                  ascii   D\fFzD
+110 0x00001c0d 0x00001c0c 5   6    .text                  ascii    1F;F
+111 0x00001c1b 0x00001c1a 8   9    .text                  ascii    1F;F\nJd
+112 0x00001c25 0x00001c24 4   5    .text                  ascii   *zDE
+113 0x00001c60 0x00001c60 10  11   .text                  ascii   5IxD5J6KyD
+114 0x00001c6b 0x00001c6a 5   6    .text                  ascii   hzD{D
+115 0x00001ca7 0x00001ca6 7   8    .text                  ascii   $'J(KyD
+116 0x00001cb1 0x00001cb0 5   6    .text                  ascii   @zD{D
+117 0x00001cbd 0x00001cbc 9   10   .text                  ascii    %J%KyDzD
+118 0x00001d03 0x00001d02 5   6    .text                  ascii    zD{D
+119 0x00001d79 0x00001d78 7   8    .text                  ascii    3KyDzD
+120 0x00001de2 0x00001de2 4   5    .text                  ascii   T_yh
+121 0x00001e05 0x00001e04 5   6    .text                  ascii   KyDzD
+122 0x00001e5b 0x00001e5a 4   5    .text                  ascii   F hh
+123 0x00001ee0 0x00001ee0 6   7    .text                  ascii   @FIF2F
+124 0x00001f94 0x00001f94 6   7    .text                  ascii    F\r!BF
+125 0x00001fb7 0x00001fb6 11  15   .text                  utf8    )$܀)6А)OР)@
+126 0x00001ffa 0x00001ffa 4   5    .text                  ascii    F\r!
+127 0x00002027 0x00002026 4   5    .text                  ascii   " Fw
+128 0x00002070 0x00002070 4   5    .text                  ascii    FBF
+129 0x000020e2 0x000020e2 6   7    .text                  ascii    F\r!BF
+130 0x0000210a 0x0000210a 5   6    .text                  ascii   E[--\n
+131 0x00002118 0x00002118 4   5    .text                  ascii    " F
+132 0x000021e8 0x000021e8 4   5    .text                  ascii   \b \aI
+133 0x000021ee 0x000021ee 6   7    .text                  ascii   yD\th\th
+134 0x0000222a 0x0000222a 4   5    .text                  ascii   (F1F
+135 0x0000224e 0x0000224e 4   5    .text                  ascii   (F"F
+136 0x00002277 0x00002276 5   6    .text                  ascii   q(F"F
+137 0x0000228f 0x0000228e 5   6    .text                  ascii   JxDzD
+138 0x000022be 0x000022be 6   7    .text                  ascii   2h F)F
+139 0x0000232b 0x0000232a 5   6    .text                  ascii   JxDzD
+140 0x00002343 0x00002342 5   6    .text                  ascii   FIH\rF
+141 0x0000236a 0x0000236a 4   5    .text                  ascii   @F\r!
+142 0x000023da 0x000023da 4   5    .text                  ascii   @F\r!
+143 0x00002402 0x00002402 4   5    .text                  ascii   )F@h
+144 0x00002409 0x00002408 5   6    .text                  ascii    @F"F
+145 0x00002430 0x00002430 6   7    .text                  ascii   yD\th\th
+146 0x0000244a 0x0000244a 4   5    .text                  ascii   @F\r!
+147 0x00002461 0x00002460 5   6    .text                  ascii   JxDzD
+148 0x000024c6 0x000024c6 6   7    .text                  ascii   yD\th\th
+149 0x000024f9 0x000024f8 4   5    .text                  ascii   F&H\n
+150 0x00002515 0x00002514 5   6    .text                  ascii   `)F0F
+151 0x0000251e 0x0000251e 4   5    .text                  ascii   iF0F
+152 0x00002539 0x00002538 4   5    .text                  ascii   d2F\b
+153 0x0000254c 0x0000254c 4   5    .text                  ascii   0F9F
+154 0x000025a7 0x000025a6 4   5    .text                  ascii   F3H\f
+155 0x000025da 0x000025da 5   6    .text                  ascii   "i(FO
+156 0x000025e9 0x000025e8 4   5    .text                  ascii   \n(Fo
+157 0x000025f6 0x000025f6 4   5    .text                  ascii   (FIF
+158 0x0000260b 0x0000260a 4   5    .text                  ascii   d*F\t
+159 0x00002614 0x00002614 4   5    .text                  ascii    e8F
+160 0x00002631 0x00002630 5   6    .text                  ascii   JxDzD
+161 0x00002652 0x00002652 4   5    .text                  ascii    a(F
+162 0x0000269c 0x0000269c 4   5    .text                  ascii   (F!F
+163 0x000026ad 0x000026ac 5   6    .text                  ascii   JxDzD
+164 0x000026cc 0x000026cc 4   5    .text                  ascii   xD\bK
+165 0x000026dc 0x000026dc 4   5    .text                  ascii   aFrF
+166 0x000026f8 0x000026f8 9   10   .text                  ascii   \vIyD\th\th\v
+167 0x00002718 0x00002718 4   5    .text                  ascii   \th\th
+168 0x00002734 0x00002734 9   10   .text                  ascii   \vIyD\th\th\v
+169 0x00002754 0x00002754 4   5    .text                  ascii   \th\th
+170 0x00002819 0x00002818 9   10   .text                  ascii   F\rHzDxD\b0
+171 0x0000285d 0x0000285c 5   6    .text                  ascii   F0h\rF
+172 0x0000286c 0x0000286c 4   5    .text                  ascii   0h)F
+173 0x0000288b 0x0000288a 5   6    .text                  ascii   F h\rF
+174 0x0000289a 0x0000289a 6   7    .text                  ascii    h)F2F
+175 0x000028bf 0x000028be 5   6    .text                  ascii   %Bk F
+176 0x000028c5 0x000028c4 4   5    .text                  ascii   G(Fp
+177 0x000028cf 0x000028ce 9   10   .text                  ascii   F0h\rFBi0F
+178 0x000028de 0x000028de 4   5    .text                  ascii   0h)F
+179 0x00002907 0x00002906 5   6    .text                  ascii   FBi8F
+180 0x00002912 0x00002912 8   9    .text                  ascii   8h1F*FCF
+181 0x00002933 0x00002932 5   6    .text                  ascii   h\tj\bG
+182 0x0000293d 0x0000293c 5   6    .text                  ascii   hJj!F
+183 0x0000296b 0x0000296a 4   5    .text                  ascii   k\bG!
+184 0x00002a03 0x00002a02 7   8    .text                  ascii   KxDyD{D
+185 0x00002a23 0x00002a22 4   5    .text                  ascii   F\f.\b
+186 0x00002a81 0x00002a80 4   5    .text                  ascii   qDPp
+187 0x00002a8f 0x00002a8e 7   8    .text                  ascii   KxDyD{D
+188 0x00002aad 0x00002aac 4   5    .text                  ascii   "p(O
+189 0x00002b55 0x00002b54 7   8    .text                  ascii   KxDyD{D
+190 0x00002b71 0x00002b70 4   5    .text                  ascii   F\aF&
+191 0x00002bc7 0x00002bc6 4   5    .text                  ascii   qEPO
+192 0x00002bef 0x00002bee 4   5    .text                  ascii   qEPO
+193 0x00002c07 0x00002c06 4   5    .text                  ascii   qEPO
+194 0x00002c21 0x00002c20 7   8    .text                  ascii   KxDyD{D
+195 0x00002c51 0x00002c50 5   6    .text                  ascii   !Bk F
+196 0x00002cc7 0x00002cc6 7   8    .text                  ascii   FyD\th\th
+197 0x00002cf6 0x00002cf6 4   5    .text                  ascii   0F)F
+198 0x00002d0e 0x00002d0e 6   7    .text                  ascii   yD\th\th
+199 0x00002d6c 0x00002d6c 6   7    .text                  ascii   jF F)F
+200 0x00002db5 0x00002db4 7   8    .text                  ascii   F\aIxDyD
+201 0x00002dc3 0x00002dc2 5   6    .text                  ascii   #rFcF
+202 0x00002e06 0x00002e06 5   6    .text                  ascii   \b(\aH\b
+203 0x00002ea0 0x00002ea0 4   5    .text                  ascii   bh^h
+204 0x00002eb9 0x00002eb8 5   7    .text                  utf8    (~аB|
+205 0x00002ec8 0x00002ec8 5   6    .text                  ascii   (F)FP
+206 0x00002f52 0x00002f52 4   5    .text                  ascii   +N~D
+207 0x00002f5e 0x00002f5e 4   5    .text                  ascii   )N~D
+208 0x00002fdd 0x00002fdc 7   8    .text                  ascii   KxDyD{D
+209 0x00002fed 0x00002fec 11  12   .text                  ascii   2\aI\aKxDyD{D
+210 0x0000305b 0x0000305a 5   6    .text                  ascii   \a'Dl\b
+211 0x00003146 0x00003146 4   5    .text                  ascii   xDpG
+212 0x00003738 0x00003738 16  17   .rodata                ascii   QCameraStillMore
+213 0x00003749 0x00003749 10  11   .rodata                ascii   %s:%d : E\n
+214 0x00003754 0x00003754 47  48   .rodata                ascii   int img_algo_init(void **, img_init_params_t *)
+215 0x00003784 0x00003784 10  11   .rodata                ascii   %s:%d : X\n
+216 0x0000378f 0x0000378f 27  28   .rodata                ascii   int img_algo_deinit(void *)
+217 0x000037ab 0x000037ab 90  91   .rodata                ascii   int img_algo_process(void *, img_frame_t **, int, img_frame_t **, int, img_meta_t **, int)
+218 0x00003806 0x00003806 45  46   .rodata                ascii   int img_algo_frame_ind(void *, img_frame_t *)
+219 0x00003834 0x00003834 53  54   .rodata                ascii   int img_algo_set_frame_ops(void *, img_frame_ops_t *)
+220 0x0000386a 0x0000386a 52  53   .rodata                ascii   QCameraPostProcStillMore::QCameraPostProcStillMore()
+221 0x0000389f 0x0000389f 39  40   .rodata                ascii   %s:%d Version of libstillmore.so is %s\n
+222 0x000038c7 0x000038c7 60  61   .rodata                ascii   %s:%d Current version of libstillmore.so is not applicable.\n
+223 0x00003904 0x00003904 53  54   .rodata                ascii   QCameraPostProcStillMore::~QCameraPostProcStillMore()
+224 0x0000393a 0x0000393a 62  63   .rodata                ascii   int8_t QCameraPostProcStillMore::registerImage(img_frame_t *&)
+225 0x00003979 0x00003979 15  16   .rodata                ascii   StillMore_input
+226 0x00003989 0x00003989 13  14   .rodata                ascii   %s:%d : %d X\n
+227 0x00003997 0x00003997 79  80   .rodata                ascii   int8_t QCameraPostProcStillMore::processData(img_frame_t **, int, img_meta_t *)
+228 0x000039e7 0x000039e7 39  40   .rodata                ascii   %s:%d : Error mFrameOps not configured\n
+229 0x00003a0f 0x00003a0f 29  30   .rodata                ascii   %s:%d : Error p_meta is NULL\n
+230 0x00003a2d 0x00003a2d 21  22   .rodata                ascii   %s:%d : num input %d\n
+231 0x00003a43 0x00003a43 20  21   .rodata                ascii   %s:%d Invalid input\n
+232 0x00003a58 0x00003a58 23  24   .rodata                ascii   %s:%d Invalid aec info\n
+233 0x00003a70 0x00003a70 64  65   .rodata                ascii   %s:%d : exp_time %f iso %d linecount %d lux_idx %f real_gain %f\n
+234 0x00003ab1 0x00003ab1 51  52   .rodata                ascii   %s:%d : Stillmore Config brColor %f brIntensity %f\n
+235 0x00003ae5 0x00003ae5 44  45   .rodata                ascii   %s:%d : dim %d %d, stride %d %d, scan %d %d\n
+236 0x00003b12 0x00003b12 16  17   .rodata                ascii   StillMore_output
+237 0x00003b23 0x00003b23 36  37   .rodata                ascii   %s:%d : output rect (%d %d %d %d) X\n
+238 0x00003b48 0x00003b48 32  33   .rodata                ascii   %s:%d : meta rect (%d %d %d %d)\n
+239 0x00003b69 0x00003b69 20  21   .rodata                ascii   %s:%d : p_meta %p X\n
+240 0x00003b7e 0x00003b7e 21  22   .rodata                ascii   %s:%d : X stats = %d\n
+241 0x00003b94 0x00003b94 47  48   .rodata                ascii   %s:%d : AOST_Core_Failure! Enter error handler\n
+242 0x00003bc4 0x00003bc4 16  17   .rodata                ascii   %s:%d : Error X\n
+243 0x00003bd5 0x00003bd5 40  41   .rodata                ascii   void _Unwind_Resume(_Unwind_Exception *)
+244 0x00003bfe 0x00003bfe 44  45   .rodata                ascii   external/libunwind_llvm/src/Unwind-EHABI.cpp
+245 0x00003c2b 0x00003c2b 29  30   .rodata                ascii   _Unwind_Resume() can't return
+246 0x00003c49 0x00003c49 125 126  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Set(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+247 0x00003cc7 0x00003cc7 26  27   .rodata                ascii   unsupported register class
+248 0x00003ce2 0x00003ce2 117 118  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Pop(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation)
+249 0x00003d58 0x00003d58 77  78   .rodata                ascii   _Unwind_Reason_Code unwind_phase2(unw_context_t *, _Unwind_Exception *, bool)
+250 0x00003da6 0x00003da6 98  99   .rodata                ascii   during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+251 0x00003e09 0x00003e09 25  26   .rodata                ascii   libunwind: %s %s:%d - %s\n
+252 0x00003e23 0x00003e23 134 135  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Get_Internal(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+253 0x00003eaa 0x00003eaa 44  45   .rodata                ascii   external/libunwind_llvm/src/UnwindCursor.hpp
+254 0x00003ed7 0x00003ed7 51  52   .rodata                ascii   uint32_t libunwind::Registers_arm::getRegister(int)
+255 0x00003f0b 0x00003f0b 41  42   .rodata                ascii   external/libunwind_llvm/src/Registers.hpp
+256 0x00003f35 0x00003f35 24  25   .rodata                ascii   unsupported arm register
+257 0x00003f4e 0x00003f4e 57  58   .rodata                ascii   void libunwind::Registers_arm::setRegister(int, uint32_t)
+258 0x00003f88 0x00003f88 59  60   .rodata                ascii   unw_fpreg_t libunwind::Registers_arm::getFloatRegister(int)
+259 0x00003fc4 0x00003fc4 26  27   .rodata                ascii   Unknown ARM float register
+260 0x00003fdf 0x00003fdf 65  66   .rodata                ascii   void libunwind::Registers_arm::setFloatRegister(int, unw_fpreg_t)
+261 0x00004024 0x00004024 221 222  .rodata                ascii   bool libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getInfoFromEHABISection(pint_t, const libunwind::UnwindInfoSections &) [A = libunwind::LocalAddressSpace, R = libunwind::Registers_arm]
+262 0x00004102 0x00004102 27  28   .rodata                ascii   unknown personality routine
+263 0x0000411e 0x0000411e 65  66   .rodata                ascii   index inlined table detected but pr function requires extra words
+264 0x0000427f 0x0000427f 16  17   .rodata                ascii   unknown register
+265 0x00005005 0x00000001 36  37   .comment               ascii   GCC: (GNU) 4.9 20150123 (prerelease)
+266 0x0000502a 0x00000026 60  61   .comment               ascii   Android clang version 3.8.256229  (based on LLVM 3.8.256229)
+267 0x00005078 0x00000010 9   10   .note.gnu.gold-version ascii   gold 1.11
+268 0x00005089 0x00000005 5   6    .ARM.attributes        ascii   aeabi
+269 0x00005095 0x00000011 6   7    .ARM.attributes        ascii   ARM v7
+270 0x0000509d 0x00000019 4   5    .ARM.attributes        ascii   \n\aA\b
+271 0x000050c4 0x00000000 28  29   .gnu_debuglink         ascii   libmmcamera_stillmore_lib.so
+272 0x000050e9 0x00000001 9   10   .shstrtab              ascii   .shstrtab
+273 0x000050f3 0x0000000b 7   8    .shstrtab              ascii   .interp
+274 0x000050fb 0x00000013 19  20   .shstrtab              ascii   .note.android.ident
+275 0x0000510f 0x00000027 18  19   .shstrtab              ascii   .note.gnu.build-id
+276 0x00005122 0x0000003a 7   8    .shstrtab              ascii   .dynsym
+277 0x0000512a 0x00000042 7   8    .shstrtab              ascii   .dynstr
+278 0x00005132 0x0000004a 9   10   .shstrtab              ascii   .gnu.hash
+279 0x0000513c 0x00000054 12  13   .shstrtab              ascii   .gnu.version
+280 0x00005149 0x00000061 14  15   .shstrtab              ascii   .gnu.version_d
+281 0x00005158 0x00000070 14  15   .shstrtab              ascii   .gnu.version_r
+282 0x00005167 0x0000007f 8   9    .shstrtab              ascii   .rel.dyn
+283 0x00005170 0x00000088 8   9    .shstrtab              ascii   .rel.plt
+284 0x00005179 0x00000091 5   6    .shstrtab              ascii   .text
+285 0x0000517f 0x00000097 10  11   .shstrtab              ascii   .ARM.exidx
+286 0x0000518a 0x000000a2 10  11   .shstrtab              ascii   .ARM.extab
+287 0x00005195 0x000000ad 7   8    .shstrtab              ascii   .rodata
+288 0x0000519d 0x000000b5 11  12   .shstrtab              ascii   .fini_array
+289 0x000051a9 0x000000c1 12  13   .shstrtab              ascii   .data.rel.ro
+290 0x000051b6 0x000000ce 8   9    .shstrtab              ascii   .dynamic
+291 0x000051bf 0x000000d7 4   5    .shstrtab              ascii   .got
+292 0x000051c4 0x000000dc 5   6    .shstrtab              ascii   .data
+293 0x000051ca 0x000000e2 4   5    .shstrtab              ascii   .bss
+294 0x000051cf 0x000000e7 8   9    .shstrtab              ascii   .comment
+295 0x000051d8 0x000000f0 22  23   .shstrtab              ascii   .note.gnu.gold-version
+296 0x000051ef 0x00000107 15  16   .shstrtab              ascii   .ARM.attributes
+297 0x000051ff 0x00000117 14  15   .shstrtab              ascii   .gnu_debuglink
+0x00000dc0    1     12 sym.imp.__cxa_finalize
+0x00000dcc    1     12 sym.imp.__cxa_atexit
+0x00000dd8    1     12 sym.imp.__register_atfork
+0x00000e74    1     12 sym.imp.__aeabi_memcpy
+0x00000f10    1     12 sym.imp.__aeabi_memcpy4
+0x00000de4    1     12 sym.imp.__android_log_print
+0x00000e2c    1     12 sym.imp.__stack_chk_fail
+0x00000e5c    1     12 sym.imp.roundf
+0x00000f1c    1     12 sym.imp.abort
+0x00000f28    1     12 sym.imp.fprintf
+0x00000f34    1     12 sym.imp.__aeabi_memclr8
+0x00000f58    1     12 sym.imp.__gnu_Unwind_Find_exidx
+0x00000f4c    1     12 sym.imp.__snprintf_chk
+0x00000f40    1     12 sym.imp.dladdr
+0x00000f64    1     28 entry0
+0x00001e80   11    138 method.void_std::__1::vector_unsigned_char_const__std::__1::allocator_unsigned_char_const___.__push_back_slow_path_unsigned_char_const__unsigned_char_const_
+0x00001d6c   20    210 method.QCameraPostProcStillMore.QCameraPostProcStillMore__
+0x000017fc    1     90 sym.img_algo_frame_ind
+0x00000e80    1     12 rsym._ZN24QCameraPostProcStillMore13registerImageERP11img_frame_t
+0x00001c50    7    222 sym.QCameraPostProcStillMore::QCameraPostProcStillMore__
+0x00001e58    3     40 method.std::__1::__vector_base_int__std::__1::allocator_int___.__vector_base__
+0x00000e14    1     12 sym.imp.operator_delete_void_
+0x00001bf4    1     74 sym.img_algo_set_frame_ops
+0x0000116c   56   1500 method.QCameraPostProcStillMore.processData_img_frame_t__int__img_meta_t_
+0x00001098    3     70 sym.img_algo_deinit
+0x00000e08    1     12 rsym._ZN24QCameraPostProcStillMoreD2Ev
+0x00001044    1     68 sym.img_algo_init
+0x00000df0    1     12 sym.imp.operator_new_unsigned_int_
+0x00000dfc    1     12 rsym._ZN24QCameraPostProcStillMoreC2Ev
+0x000010f8    6     92 sym.img_algo_process
+0x00001874   43    856 method.QCameraPostProcStillMore.registerImage_img_frame_t_
+0x00000ed4    1     12 sym.imp.cpcommon_jtQq0GW21f__
+0x00000ec8    1     12 sym.imp.stillMore_iKtXNRGAUM_unsigned_char_const__unsigned_char_const__unsigned_int__unsigned_int__unsigned_char_const__unsigned_char_const__unsigned_int__unsigned_int__unsigned_int__unsigned_int__unsigned_char__unsigned_char__unsigned_int__unsigned_int__int_
+0x00000e50    1     12 sym.imp.stillMore_jmf9K6K5NQ_float__float__float_
+0x00000e44    1     12 sym.imp.stillMore_uf6H4LqsSk__
+0x00000e68    1     12 sym.imp.stillMore_yPGmb6U2bt_unsigned_char_const_const__unsigned_char_const_const__unsigned_int__unsigned_int__unsigned_int__unsigned_int__unsigned_int__int_const_const__unsigned_int__unsigned_int__unsigned_int__unsigned_char__unsigned_char__unsigned_int__unsigned_int__int__int__int__int_
+0x00000e38    1     12 sym.imp.qrcp::StillMoreTunableParams::StillMoreTunableParams__
+0x00000ee0    1     12 sym.imp.operator_delete___void_
+0x00000e98    1     12 sym.imp.operator_new___unsigned_int_
+0x00000e20    1     12 rsym._ZN24QCameraPostProcStillMore11processDataEPP11img_frame_tiP10img_meta_t
+0x00000e8c    1     12 rsym._ZNSt3__16vectorIPKhNS_9allocatorIS2_EEE21__push_back_slow_pathIS2_EEvOT_
+0x00000ea4    1     12 rsym._ZNSt3__16vectorIPhNS_9allocatorIS1_EEE21__push_back_slow_pathIS1_EEvOT_
+0x00000eb0    1     12 rsym._ZNSt3__16vectorIPhNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_
+0x00000ebc    1     12 rsym._ZNSt3__16vectorIPiNS_9allocatorIS1_EEE21__push_back_slow_pathIRKS1_EEvOT_
+0x00000eec    1     12 rsym._ZNSt3__113__vector_baseIPiNS_9allocatorIS1_EEED2Ev
+0x00000ef8    1     12 rsym._ZNSt3__113__vector_baseIPhNS_9allocatorIS1_EEED2Ev
+0x00000f04    1     12 rsym._ZNSt3__113__vector_baseIPKhNS_9allocatorIS2_EEED2Ev
+0x00002858    3     46 fcn.00002858
+0x00002886    6     68 fcn.00002886
+0x0000233c   25    292 fcn.0000233c
+0x000022a0   21    132 fcn.000022a0
+0x00002968    1      6 fcn.00002968
+0x000028fa    3     56 fcn.000028fa
+0x000026c0    1     40 fcn.000026c0
+0x00002938    1     30 fcn.00002938
+0x00002932    1      6 fcn.00002932
+0x000028ca    3     48 fcn.000028ca
+0x0000278c    1      6 fcn.0000278c
+0x00002814    1     60 fcn.00002814
+0x00002d2c    5    100 fcn.00002d2c
+0x0000259c   15    214 fcn.0000259c
+0x00002956    1     18 fcn.00002956
+0x00002800    3     38 fcn.00002800
+0x00002dac    1     36 fcn.00002dac
+0x000027ac   10     72 fcn.000027ac
+0x000027bc    6    114 fcn.000027bc
+0x000027b4    1      8 fcn.000027b4
+0x000027a4    2     12 fcn.000027a4
+0x00002dd8    1     72 fcn.00002dd8
+0x00001f08    5     64 fcn.00001f08
+0x00001f5c   56    656 fcn.00001f5c
+0x00002e2c   13     88 fcn.00002e2c
+0x00002e84   23    372 fcn.00002e84
+0x000034d0    1      8 fcn.000034d0
+0x000034c8    1      8 fcn.000034c8
+0x000034d8    1      8 fcn.000034d8
+0x000034e0    1     68 fcn.000034e0
+0x0000353c    1      8 fcn.0000353c
+0x0000355c    1      8 fcn.0000355c

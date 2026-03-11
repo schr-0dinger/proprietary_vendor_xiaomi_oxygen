@@ -1,0 +1,296 @@
+arch     arm
+baddr    0x0
+binsz    23486
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                       demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+51  0x0000307c 0x0000307c GLOBAL FUNC 1108     qdmafagent_initialize
+56  0x00005558 0x00006558 GLOBAL OBJ  40       gQccSysHalFileAgentLock
+57  0x00003ae4 0x00003ae4 GLOBAL FUNC 692      qdmafagent_cancel_download
+58  0x000037d0 0x000037d0 GLOBAL FUNC 788      qdmafagent_start_download
+59  0x00003d98 0x00003d98 GLOBAL FUNC 1100     qdmafagent_upload_request
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x5a0 0x000002a8   0x5a0 -r-- DYNSYM      .dynsym
+4   0x00000848    0x78 0x00000848    0x78 -r-- GNU_VERSYM  .gnu.version
+5   0x000008c0    0x40 0x000008c0    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000900    0x64 0x00000900    0x64 -r-- GNU_HASH    .gnu.hash
+7   0x00000964   0xbaa 0x00000964   0xbaa -r-- STRTAB      .dynstr
+8   0x00001510    0xc4 0x00001510    0xc4 -r-- ----        .rela.dyn
+9   0x000015d8    0x10 0x000015d8    0x10 -r-- ----        .relr.dyn
+10  0x000015e8   0x360 0x000015e8   0x360 -r-- RELA        .rela.plt
+11  0x00001948   0x2b4 0x00001948   0x2b4 -r-- PROGBITS    .rodata
+12  0x00001bfc    0xf4 0x00001bfc    0xf4 -r-- PROGBITS    .eh_frame_hdr
+13  0x00001cf0   0x39c 0x00001cf0   0x39c -r-- PROGBITS    .eh_frame
+14  0x00003000  0x1578 0x00003000  0x1578 -r-x PROGBITS    .text
+15  0x00004580   0x260 0x00004580   0x260 -r-x PROGBITS    .plt
+16  0x00005000   0x190 0x00005000   0x190 -rw- PROGBITS    .data.rel.ro
+17  0x00005190    0x10 0x00005190    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x000051a0     0x8 0x000051a0     0x8 -rw- INIT_ARRAY  .init_array
+19  0x000051a8   0x250 0x000051a8   0x250 -rw- DYNAMIC     .dynamic
+20  0x000053f8    0x28 0x000053f8    0x28 -rw- PROGBITS    .got
+21  0x00005420   0x138 0x00005420   0x138 -rw- PROGBITS    .got.plt
+22  0x00005558    0x28 0x00006558    0x28 -rw- PROGBITS    .data
+23  0x00005580     0x0 0x00006580    0x18 -rw- NOBITS      .bss
+24  0x00005580   0x102 0x00000000   0x102 ---- STRTAB      .shstrtab
+25  0x00005682   0x53c 0x00000000   0x53c ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x0000029b 0x0000029b 5   6    .note.gnu.build-id  ascii   A7:>A
+3   0x00000965 0x00000965 12  13   .dynstr             ascii   __cxa_atexit
+4   0x00000972 0x00000972 14  15   .dynstr             ascii   __cxa_finalize
+5   0x00000981 0x00000981 130 131  .dynstr             ascii   _ZN6vendor3qti8hardware9qccsyshal4V1_010IQccsyshal10getServiceERKNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEEb
+6   0x00000a04 0x00000a04 126 127  .dynstr             ascii   _ZN6vendor3qti8hardware9qccsyshal4V1_018IQccsyshalCallback11linkToDeathERKN7android2spINS5_8hardware20hidl_death_recipientEEEm
+7   0x00000a83 0x00000a83 132 133  .dynstr             ascii   _ZN6vendor3qti8hardware9qccsyshal4V1_018IQccsyshalCallback12getDebugInfoENSt3__18functionIFvRKN7android4hidl4base4V1_09DebugInfoEEEE
+8   0x00000b08 0x00000b08 154 155  .dynstr             ascii   _ZN6vendor3qti8hardware9qccsyshal4V1_018IQccsyshalCallback12getHashChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS8_10hidl_arrayIhLm32EJEEEEEEEE
+9   0x00000ba3 0x00000ba3 127 128  .dynstr             ascii   _ZN6vendor3qti8hardware9qccsyshal4V1_018IQccsyshalCallback13unlinkToDeathERKN7android2spINS5_8hardware20hidl_death_recipientEEE
+10  0x00000c23 0x00000c23 147 148  .dynstr             ascii   _ZN6vendor3qti8hardware9qccsyshal4V1_018IQccsyshalCallback14interfaceChainENSt3__18functionIFvRKN7android8hardware8hidl_vecINS8_11hidl_stringEEEEEE
+11  0x00000cb7 0x00000cb7 136 137  .dynstr             ascii   _ZN6vendor3qti8hardware9qccsyshal4V1_018IQccsyshalCallback19interfaceDescriptorENSt3__18functionIFvRKN7android8hardware11hidl_stringEEEE
+12  0x00000d40 0x00000d40 83  84   .dynstr             ascii   _ZN6vendor3qti8hardware9qccsyshal4V1_018IQccsyshalCallback21notifySyspropsChangedEv
+13  0x00000d94 0x00000d94 83  84   .dynstr             ascii   _ZN6vendor3qti8hardware9qccsyshal4V1_018IQccsyshalCallback21setHALInstrumentationEv
+14  0x00000de8 0x00000de8 65  66   .dynstr             ascii   _ZN6vendor3qti8hardware9qccsyshal4V1_018IQccsyshalCallback4pingEv
+15  0x00000e2a 0x00000e2a 135 136  .dynstr             ascii   _ZN6vendor3qti8hardware9qccsyshal4V1_018IQccsyshalCallback5debugERKN7android8hardware11hidl_handleERKNS6_8hidl_vecINS6_11hidl_stringEEE
+16  0x00000eb2 0x00000eb2 29  30   .dynstr             ascii   _ZN7android14sp_report_raceEv
+17  0x00000ed0 0x00000ed0 38  39   .dynstr             ascii   _ZN7android23sp_report_stack_pointerEv
+18  0x00000ef7 0x00000ef7 45  46   .dynstr             ascii   _ZN7android2spI23QccsyshalDeathRecipientED2Ev
+19  0x00000f25 0x00000f25 69  70   .dynstr             ascii   _ZN7android2spIN6vendor3qti8hardware9qccsyshal4V1_010IQccsyshalEED2Ev
+20  0x00000f6b 0x00000f6b 72  73   .dynstr             ascii   _ZN7android2spIN6vendor3qti8hardware9qccsyshal4V1_010IQccsyshalEEaSEPS6_
+21  0x00000fb4 0x00000fb4 77  78   .dynstr             ascii   _ZN7android2spIN6vendor3qti8hardware9qccsyshal4V1_018IQccsyshalCallbackEED2Ev
+22  0x00001002 0x00001002 33  34   .dynstr             ascii   _ZN7android7RefBase10onFirstRefEv
+23  0x00001024 0x00001024 38  39   .dynstr             ascii   _ZN7android7RefBase13onLastWeakRefEPKv
+24  0x0000104b 0x0000104b 40  41   .dynstr             ascii   _ZN7android7RefBase15onLastStrongRefEPKv
+25  0x00001074 0x00001074 46  47   .dynstr             ascii   _ZN7android7RefBase20onIncStrongAttemptedEjPKv
+26  0x000010a3 0x000010a3 23  24   .dynstr             ascii   _ZN7android7RefBaseC2Ev
+27  0x000010bb 0x000010bb 23  24   .dynstr             ascii   _ZN7android7RefBaseD2Ev
+28  0x000010d3 0x000010d3 37  38   .dynstr             ascii   _ZN7android8hardware11hidl_stringC1Ev
+29  0x000010f9 0x000010f9 37  38   .dynstr             ascii   _ZN7android8hardware11hidl_stringD1Ev
+30  0x0000111f 0x0000111f 102 103  .dynstr             ascii   _ZN7android8hardware11hidl_stringaSERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+31  0x00001186 0x00001186 47  48   .dynstr             ascii   _ZN7android8hardware7details13return_statusD2Ev
+32  0x000011b6 0x000011b6 48  49   .dynstr             ascii   _ZN7android8hardware7details14logAlwaysFatalEPKc
+33  0x000011e7 0x000011e7 34  35   .dynstr             ascii   _ZNK7android7RefBase9decStrongEPKv
+34  0x0000120a 0x0000120a 34  35   .dynstr             ascii   _ZNK7android7RefBase9incStrongEPKv
+35  0x0000122d 0x0000122d 42  43   .dynstr             ascii   _ZNK7android8hardware11hidl_string5c_strEv
+36  0x00001258 0x00001258 42  43   .dynstr             ascii   _ZNK7android8hardware11hidl_string5emptyEv
+37  0x00001283 0x00001283 64  65   .dynstr             ascii   _ZNK7android8hardware7details13return_status16onValueRetrievalEv
+38  0x000012c4 0x000012c4 63  64   .dynstr             ascii   _ZNKSt3__121__basic_string_commonILb1EE20__throw_length_errorEv
+39  0x00001304 0x00001304 23  24   .dynstr             ascii   _ZTV17QccsyshalCallback
+40  0x0000131c 0x0000131c 29  30   .dynstr             ascii   _ZTV23QccsyshalDeathRecipient
+41  0x0000133a 0x0000133a 6   7    .dynstr             ascii   _ZdaPv
+42  0x00001341 0x00001341 6   7    .dynstr             ascii   _ZdlPv
+43  0x00001348 0x00001348 5   6    .dynstr             ascii   _Znam
+44  0x0000134e 0x0000134e 5   6    .dynstr             ascii   _Znwm
+45  0x00001354 0x00001354 19  20   .dynstr             ascii   __android_log_print
+46  0x00001368 0x00001368 16  17   .dynstr             ascii   __stack_chk_fail
+47  0x00001379 0x00001379 13  14   .dynstr             ascii   __strlcpy_chk
+48  0x00001387 0x00001387 4   5    .dynstr             ascii   exit
+49  0x0000138c 0x0000138c 23  24   .dynstr             ascii   gQccSysHalFileAgentLock
+50  0x000013a4 0x000013a4 6   7    .dynstr             ascii   malloc
+51  0x000013ab 0x000013ab 6   7    .dynstr             ascii   memcpy
+52  0x000013b2 0x000013b2 6   7    .dynstr             ascii   memset
+53  0x000013b9 0x000013b9 18  19   .dynstr             ascii   pthread_mutex_lock
+54  0x000013cc 0x000013cc 20  21   .dynstr             ascii   pthread_mutex_unlock
+55  0x000013e1 0x000013e1 26  27   .dynstr             ascii   qdmafagent_cancel_download
+56  0x000013fc 0x000013fc 21  22   .dynstr             ascii   qdmafagent_initialize
+57  0x00001412 0x00001412 25  26   .dynstr             ascii   qdmafagent_start_download
+58  0x0000142c 0x0000142c 25  26   .dynstr             ascii   qdmafagent_upload_request
+59  0x00001446 0x00001446 9   10   .dynstr             ascii   sigaction
+60  0x00001450 0x00001450 6   7    .dynstr             ascii   strdup
+61  0x00001457 0x00001457 6   7    .dynstr             ascii   strlen
+62  0x0000145e 0x0000145e 9   10   .dynstr             ascii   liblog.so
+63  0x00001468 0x00001468 6   7    .dynstr             ascii   LIBLOG
+64  0x0000146f 0x0000146f 7   8    .dynstr             ascii   libc.so
+65  0x00001477 0x00001477 4   5    .dynstr             ascii   LIBC
+66  0x0000147c 0x0000147c 12  13   .dynstr             ascii   libcutils.so
+67  0x00001489 0x00001489 11  12   .dynstr             ascii   libutils.so
+68  0x00001495 0x00001495 10  11   .dynstr             ascii   libbase.so
+69  0x000014a0 0x000014a0 9   10   .dynstr             ascii   libfmq.so
+70  0x000014aa 0x000014aa 14  15   .dynstr             ascii   libhidlbase.so
+71  0x000014b9 0x000014b9 36  37   .dynstr             ascii   vendor.qti.hardware.qccsyshal@1.0.so
+72  0x000014de 0x000014de 9   10   .dynstr             ascii   libc++.so
+73  0x000014e8 0x000014e8 7   8    .dynstr             ascii   libm.so
+74  0x000014f0 0x000014f0 8   9    .dynstr             ascii   libdl.so
+75  0x000014f9 0x000014f9 20  21   .dynstr             ascii   libqcc_file_agent.so
+76  0x00001510 0x00001510 4   5    .rela.dyn           ascii   APS2
+77  0x00001948 0x00001948 63  64   .rodata             ascii   %s(): qccsyshal::qdmafagent_start_download_sys_hal() returns %d
+78  0x00001988 0x00001988 25  26   .rodata             ascii   qdmafagent_start_download
+79  0x000019a2 0x000019a2 25  26   .rodata             ascii   qdmafagent_upload_request
+80  0x000019bc 0x000019bc 29  30   .rodata             ascii   %s(): signo %d reset callback
+81  0x000019da 0x000019da 9   10   .rodata             ascii   qccsyshal
+82  0x000019e4 0x000019e4 14  15   .rodata             ascii   atexit_handler
+83  0x000019f3 0x000019f3 44  45   .rodata             ascii   %s(): Failed to get QccsyshalCallback object
+84  0x00001a20 0x00001a20 27  28   .rodata             ascii   %s(): atexit reset callback
+85  0x00001a3c 0x00001a3c 14  15   .rodata             ascii   signal_handler
+86  0x00001a4b 0x00001a4b 37  38   .rodata             ascii   %s(): Failed to get IQccsyshal object
+87  0x00001a71 0x00001a71 63  64   .rodata             ascii   %s(): Agent not init, please call qdmafagent_initialize() first
+88  0x00001ab1 0x00001ab1 59  60   .rodata             ascii   %s(): qccsyshal::qdmafagent_initialize_sys_hal() returns %d
+89  0x00001aed 0x00001aed 21  22   .rodata             ascii   qdmafagent_initialize
+90  0x00001b03 0x00001b03 64  65   .rodata             ascii   %s(): qccsyshal->qdmafagent_cancel_download_sys_hal() returns %d
+91  0x00001b44 0x00001b44 44  45   .rodata             ascii   hidl_vec can't hold more than 2^32 elements.
+92  0x00001b71 0x00001b71 13  14   .rodata             ascii   qcc_file_hidl
+93  0x00001b80 0x00001b80 63  64   .rodata             ascii   %s(): qccsyshal::qdmafagent_upload_request_sys_hal() returns %d
+94  0x00001bc0 0x00001bc0 32  33   .rodata             ascii   Qccsyshal service hidl died %llu
+95  0x00001be1 0x00001be1 26  27   .rodata             ascii   qdmafagent_cancel_download
+96  0x00003595 0x00003595 4   5    .text               ascii   j68Z
+97  0x000038fc 0x000038fc 5   6    .text               ascii   ?k88\
+98  0x00003905 0x00003905 4   5    .text               ascii   #@9h
+99  0x00003990 0x00003990 5   6    .text               ascii   ?k887
+100 0x00003999 0x00003999 4   5    .text               ascii   #@9h
+101 0x00003a2d 0x00003a2d 4   5    .text               ascii   #@9h
+102 0x00003c28 0x00003c28 4   5    .text               ascii   ?k88
+103 0x00003cbd 0x00003cbd 4   5    .text               ascii   k78l
+104 0x00003f70 0x00003f70 4   5    .text               ascii   \vij8
+105 0x00003f75 0x00003f75 4   5    .text               ascii   j*8J
+106 0x00004016 0x00004016 4   5    .text               ascii   \r*j\t
+107 0x0000401b 0x0000401b 4   5    .text               ascii   6-\r@
+108 0x00004057 0x00004057 4   5    .text               ascii   T\rik
+109 0x0000406b 0x0000406b 6   7    .text               ascii   T\tik8l
+110 0x00004148 0x00004148 4   5    .text               ascii   \bii8
+111 0x000041a7 0x000041a7 4   5    .text               ascii   T\rik
+112 0x000041bb 0x000041bb 6   7    .text               ascii   T\tik8l
+113 0x00004395 0x00004395 4   10   .text               utf16le \b´ä
+114 0x00005581 0x00000001 11  12   .shstrtab           ascii   .init_array
+115 0x0000558d 0x0000000d 11  12   .shstrtab           ascii   .fini_array
+116 0x00005599 0x00000019 5   6    .shstrtab           ascii   .text
+117 0x0000559f 0x0000001f 4   5    .shstrtab           ascii   .got
+118 0x000055a4 0x00000024 19  20   .shstrtab           ascii   .note.android.ident
+119 0x000055b8 0x00000038 8   9    .shstrtab           ascii   .got.plt
+120 0x000055c1 0x00000041 9   10   .shstrtab           ascii   .rela.plt
+121 0x000055cb 0x0000004b 4   5    .shstrtab           ascii   .bss
+122 0x000055d0 0x00000050 7   8    .shstrtab           ascii   .dynstr
+123 0x000055d8 0x00000058 13  14   .shstrtab           ascii   .eh_frame_hdr
+124 0x000055e6 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+125 0x000055f5 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+126 0x00005602 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+127 0x0000560c 0x0000008c 9   10   .shstrtab           ascii   .rela.dyn
+128 0x00005616 0x00000096 12  13   .shstrtab           ascii   .gnu.version
+129 0x00005623 0x000000a3 7   8    .shstrtab           ascii   .dynsym
+130 0x0000562b 0x000000ab 9   10   .shstrtab           ascii   .gnu.hash
+131 0x00005635 0x000000b5 9   10   .shstrtab           ascii   .eh_frame
+132 0x0000563f 0x000000bf 18  19   .shstrtab           ascii   .note.gnu.build-id
+133 0x00005652 0x000000d2 8   9    .shstrtab           ascii   .dynamic
+134 0x0000565b 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+135 0x00005665 0x000000e5 7   8    .shstrtab           ascii   .rodata
+136 0x0000566d 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+137 0x0000567c 0x000000fc 5   6    .shstrtab           ascii   .data
+138 0x00005683 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+139 0x000056c1 0x0000003f 4   5    .gnu_debugdata      ascii   \rAHH
+140 0x000056e0 0x0000005e 5   7    .gnu_debugdata      utf8    g6"Ȃf
+141 0x00005717 0x00000095 6   7    .gnu_debugdata      ascii   U-Qpif
+142 0x00005757 0x000000d5 5   6    .gnu_debugdata      ascii   1\t&/\a
+143 0x000057ac 0x0000012a 5   7    .gnu_debugdata      utf8    *ZAڎ`
+144 0x000057d1 0x0000014f 4   5    .gnu_debugdata      ascii   f\nXf
+145 0x000057e1 0x0000015f 4   5    .gnu_debugdata      ascii   \eYND
+146 0x000057ec 0x0000016a 4   5    .gnu_debugdata      ascii   fWgU
+147 0x00005835 0x000001b3 4   6    .gnu_debugdata      utf8    S$uڅ
+148 0x0000583e 0x000001bc 6   7    .gnu_debugdata      ascii   sK]\nO:
+149 0x0000589b 0x00000219 4   5    .gnu_debugdata      ascii   t/Ai
+150 0x000058c5 0x00000243 5   7    .gnu_debugdata      utf8    cnށg\a
+151 0x0000593c 0x000002ba 4   6    .gnu_debugdata      utf8    ҍ_L{
+152 0x0000594b 0x000002c9 5   7    .gnu_debugdata      utf8    gt۴jO
+153 0x00005954 0x000002d2 6   10   .gnu_debugdata      utf8     P͜ﭺz|
+154 0x00005987 0x00000305 6   8    .gnu_debugdata      utf8    ^WAb̦g
+155 0x000059e8 0x00000366 6   7    .gnu_debugdata      ascii   n\qu\n)
+156 0x000059f1 0x0000036f 9   12   .gnu_debugdata      utf8    k\aǱCR~ù\a(
+157 0x00005a25 0x000003a3 4   6    .gnu_debugdata      utf8    _^\fǧ
+158 0x00005a2d 0x000003ab 4   5    .gnu_debugdata      ascii    ];\e
+159 0x00005a50 0x000003ce 4   5    .gnu_debugdata      ascii   f+>i
+160 0x00005ab8 0x00000436 8   9    .gnu_debugdata      ascii   !\f 0kV7r
+161 0x00005ac4 0x00000442 4   5    .gnu_debugdata      ascii   3b||
+162 0x00005ad6 0x00000454 4   6    .gnu_debugdata      utf8    ג5vZ
+163 0x00005ae8 0x00000466 5   8    .gnu_debugdata      utf8    ﵭw\vOo
+164 0x00005b53 0x000004d1 6   9    .gnu_debugdata      utf8    dޡ.Sd.
+165 0x00005b67 0x000004e5 4   5    .gnu_debugdata      ascii   #&M@
+166 0x00005b8d 0x0000050b 4   5    .gnu_debugdata      ascii   A+Dz
+0x000045b0    1     16 sym.imp.__cxa_atexit
+0x000045a0    1     16 sym.imp.__cxa_finalize
+0x000046a0    1     16 sym.imp.__android_log_print
+0x000046e0    1     16 sym.imp.__stack_chk_fail
+0x000047b0    1     16 sym.imp.__strlcpy_chk
+0x00004720    1     16 sym.imp.exit
+0x000047d0    1     16 sym.imp.malloc
+0x00004660    1     16 sym.imp.memcpy
+0x00004750    1     16 sym.imp.memset
+0x000045e0    1     16 sym.imp.pthread_mutex_lock
+0x000046c0    1     16 sym.imp.pthread_mutex_unlock
+0x000046b0    1     16 sym.imp.sigaction
+0x000047c0    1     16 sym.imp.strdup
+0x00004610    1     16 sym.imp.strlen
+0x00003000    1     12 entry0
+0x000037b0    3     32 method.android::sp_vendor::qti::hardware::qccsyshal::V1_0::IQccsyshalCallback_.sp__
+0x0000307c   40   1108 sym.qdmafagent_initialize
+0x0000305c    3     32 method.android::sp_QccsyshalDeathRecipient_.sp__
+0x0000303c    3     32 method.android::sp_vendor::qti::hardware::qccsyshal::V1_0::IQccsyshal_.sp__
+0x000042a8    9    132 method.android::sp_vendor::qti::hardware::qccsyshal::V1_0::IQccsyshal_.operator_vendor::qti::hardware::qccsyshal::V1_0::IQccsyshal_
+0x00003ae4   27    692 sym.qdmafagent_cancel_download
+0x000037d0   34    788 sym.qdmafagent_start_download
+0x00003d98   54   1100 sym.qdmafagent_upload_request
+0x00004700    1     16 method.vendor::qti::hardware::qccsyshal::V1_0::IQccsyshal.getService_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__bool_
+0x00004600    1     16 sym.imp.android::sp_report_race__
+0x00004640    1     16 sym.imp.android::sp_report_stack_pointer__
+0x00004630    1     16 fcn.00004630
+0x00004780    1     16 sym.imp.android::RefBase::RefBase__
+0x000045d0    1     16 fcn.000045d0
+0x000046d0    1     16 sym.imp.android::hardware::hidl_string::hidl_string__
+0x00004670    1     16 method.android::hardware::hidl_string.operator_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00004650    1     16 sym.imp.android::hardware::details::return_status::return_status__
+0x00004730    1     16 sym.imp.android::hardware::details::logAlwaysFatal_char_const_
+0x000045c0    1     16 sym.imp.android::RefBase::decStrong_void_const__const
+0x000045f0    1     16 sym.imp.android::RefBase::incStrong_void_const__const
+0x000047a0    1     16 sym.imp.android::hardware::hidl_string::c_str___const
+0x00004790    1     16 sym.imp.android::hardware::hidl_string::empty___const
+0x00004690    1     16 sym.imp.android::hardware::details::return_status::onValueRetrieval___const
+0x000046f0    1     16 sym.imp.std::__1::__basic_string_common_true_::__throw_length_error___const
+0x00004760    1     16 sym.imp.operator_delete___void_
+0x00004680    1     16 sym.imp.operator_delete_void_
+0x00004740    1     16 sym.imp.operator_new___unsigned_long_
+0x00004620    1     16 sym.imp.operator_new_unsigned_long_
+0x00003010    1      4 entry.fini0
+0x00004524    1     84 entry.init0
+0x000034dc   12    264 method.vendor::qti::hardware::qccsyshal::V1_0::IQccsyshal.getService_char_const__bool_
+0x00003020    1     28 sym.atexit
+0x00004710    1     16 fcn.00004710
+0x000034d0    1     12 method.QccSysHalFileAgentLock.QccSysHalFileAgentLock__
+0x00004770    1     16 fcn.00004770
+0x000041e4    1     80 method.QccsyshalDeathRecipient.serviceDied_unsigned_long__android::wp_android::hidl::base::V1_0::IBase__const_
+0x0000423c    1     40 method.QccsyshalDeathRecipient.QccsyshalDeathRecipient__
+0x00004278    1     48 method.virtual_thunk_to_QccsyshalDeathRecipient.QccsyshalDeathRecipient__
+0x0000432c    1      8 method.vendor::qti::hardware::qccsyshal::V1_0::IQccsyshalCallback.isRemote___const
+0x0000433c    1     40 method.QccsyshalCallback.QccsyshalCallback__
+0x00004364   15    380 method.QccsyshalCallback.fagentCb_vendor::qti::hardware::qccsyshal::V1_0::QdmaFileAgentResults_const_
+0x000044f4    1     48 method.virtual_thunk_to_QccsyshalCallback.QccsyshalCallback__
+0x000035e4    5    232 sym.signal_handler_int_
+0x000036cc    7    228 sym.atexit_handler__
+0x00004580    1     20 section..plt

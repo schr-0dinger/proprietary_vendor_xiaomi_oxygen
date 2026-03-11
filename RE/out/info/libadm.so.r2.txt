@@ -1,0 +1,374 @@
+arch     arm
+baddr    0x0
+binsz    20930
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                       demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+43  0x00003fc0 0x00004fc0 GLOBAL FUNC 36       __aeabi_uldivmod
+44  0x0000332c 0x0000432c GLOBAL FUNC 1932     adm_abandon_focus
+45  0x00003fe4 0x00004fe4 GLOBAL FUNC 788      __udivmoddi4
+46  0x00001d6c 0x00002d6c GLOBAL FUNC 164      adm_register_input_stream
+47  0x00003328 0x00004328 GLOBAL FUNC 4        adm_request_focus_v2
+48  0x00002390 0x00003390 GLOBAL FUNC 3436     adm_request_focus_v2_1
+49  0x000042f8 0x000052f8 GLOBAL FUNC 464      __aeabi_uidiv
+50  0x000044cc 0x000054cc GLOBAL FUNC 28       __aeabi_uidivmod
+51  0x00001384 0x00002384 GLOBAL FUNC 2056     adm_init
+52  0x00003ab8 0x00004ab8 GLOBAL FUNC 1044     adm_is_noirq_avail
+53  0x00001b98 0x00002b98 GLOBAL FUNC 468      adm_register_output_stream
+54  0x000020d0 0x000030d0 GLOBAL FUNC 348      adm_request_focus
+55  0x000042f8 0x000052f8 GLOBAL FUNC 464      __udivsi3
+56  0x00001b8c 0x00002b8c GLOBAL FUNC 12       adm_deinit
+57  0x00001e10 0x00002e10 GLOBAL FUNC 704      adm_deregister_stream
+58  0x00003ecc 0x00004ecc GLOBAL FUNC 156      adm_on_routing_change
+59  0x0000222c 0x0000322c GLOBAL FUNC 356      adm_set_config
+60  0x000044e8 0x000054e8 GLOBAL FUNC 480      __udivmodsi4
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000174    0x18 0x00000174    0x18 -r-- NOTE        .note.android.ident
+2   0x0000018c    0x20 0x0000018c    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000001ac   0x3d0 0x000001ac   0x3d0 -r-- DYNSYM      .dynsym
+4   0x0000057c    0x7a 0x0000057c    0x7a -r-- GNU_VERSYM  .gnu.version
+5   0x000005f8    0x60 0x000005f8    0x60 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000658    0x88 0x00000658    0x88 -r-- GNU_HASH    .gnu.hash
+7   0x000006e0   0x3c9 0x000006e0   0x3c9 -r-- STRTAB      .dynstr
+8   0x00000aac    0x11 0x00000aac    0x11 -r-- ----        .rel.dyn
+9   0x00000ac0     0x8 0x00000ac0     0x8 -r-- ----        .relr.dyn
+10  0x00000ac8    0xa8 0x00000ac8    0xa8 -r-- ----        .ARM.exidx
+11  0x00000b70   0x178 0x00000b70   0x178 -r-- REL         .rel.plt
+12  0x00000ce8    0x18 0x00000ce8    0x18 -r-- PROGBITS    .ARM.extab
+13  0x00000d00   0x66d 0x00000d00   0x66d -r-- PROGBITS    .rodata
+14  0x00001370  0x3364 0x00002370  0x3364 -r-x PROGBITS    .text
+15  0x000046e0   0x310 0x000056e0   0x310 -r-x PROGBITS    .plt
+16  0x000049f0     0x4 0x000069f0     0x4 -rw- PROGBITS    .data.rel.ro
+17  0x000049f4     0x8 0x000069f4     0x8 -rw- FINI_ARRAY  .fini_array
+18  0x000049fc    0xf8 0x000069fc    0xf8 -rw- DYNAMIC     .dynamic
+19  0x00004af4     0x8 0x00006af4     0x8 -rw- PROGBITS    .got
+20  0x00004afc    0xc8 0x00006afc    0xc8 -rw- PROGBITS    .got.plt
+21  0x00004bc8     0x0 0x00007bc8     0x8 -rw- NOBITS      .bss
+22  0x00004bc8    0x4e 0x00000000    0x4e ---- ----        .ARM.attributes
+23  0x00004c16    0xfc 0x00000000    0xfc ---- STRTAB      .shstrtab
+24  0x00004d12   0x4b0 0x00000000   0x4b0 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                       utf16le 4 \n(
+1   0x00000038 0x00000038 5   24                       utf32le 444ŀŀ
+2   0x00000180 0x00000180 7   8    .note.android.ident ascii   Android
+3   0x00000688 0x00000688 4   20   .gnu.hash           utf32le +.38
+4   0x0000069c 0x0000069c 4   5    .gnu.hash           ascii   hE_a
+5   0x000006e1 0x000006e1 14  15   .dynstr             ascii   __cxa_finalize
+6   0x000006f0 0x000006f0 16  17   .dynstr             ascii   __aeabi_uldivmod
+7   0x00000701 0x00000701 19  20   .dynstr             ascii   __android_log_print
+8   0x00000715 0x00000715 7   8    .dynstr             ascii   __errno
+9   0x0000071d 0x0000071d 16  17   .dynstr             ascii   __stack_chk_fail
+10  0x0000072e 0x0000072e 17  18   .dynstr             ascii   __stack_chk_guard
+11  0x00000740 0x00000740 15  16   .dynstr             ascii   __vsnprintf_chk
+12  0x00000750 0x00000750 17  18   .dynstr             ascii   adm_abandon_focus
+13  0x00000762 0x00000762 10  11   .dynstr             ascii   adm_deinit
+14  0x0000076d 0x0000076d 21  22   .dynstr             ascii   adm_deregister_stream
+15  0x00000783 0x00000783 8   9    .dynstr             ascii   adm_init
+16  0x0000078c 0x0000078c 18  19   .dynstr             ascii   adm_is_noirq_avail
+17  0x0000079f 0x0000079f 21  22   .dynstr             ascii   adm_on_routing_change
+18  0x000007b5 0x000007b5 25  26   .dynstr             ascii   adm_register_input_stream
+19  0x000007cf 0x000007cf 26  27   .dynstr             ascii   adm_register_output_stream
+20  0x000007ea 0x000007ea 17  18   .dynstr             ascii   adm_request_focus
+21  0x000007fc 0x000007fc 20  21   .dynstr             ascii   adm_request_focus_v2
+22  0x00000811 0x00000811 22  23   .dynstr             ascii   adm_request_focus_v2_1
+23  0x00000828 0x00000828 14  15   .dynstr             ascii   adm_set_config
+24  0x00000837 0x00000837 4   5    .dynstr             ascii   atoi
+25  0x0000083c 0x0000083c 17  18   .dynstr             ascii   atrace_begin_body
+26  0x0000084e 0x0000084e 15  16   .dynstr             ascii   atrace_end_body
+27  0x0000085e 0x0000085e 23  24   .dynstr             ascii   atrace_get_enabled_tags
+28  0x00000876 0x00000876 6   7    .dynstr             ascii   calloc
+29  0x0000087d 0x0000087d 13  14   .dynstr             ascii   clock_gettime
+30  0x0000088b 0x0000088b 15  16   .dynstr             ascii   clock_nanosleep
+31  0x0000089b 0x0000089b 7   8    .dynstr             ascii   dlclose
+32  0x000008a3 0x000008a3 6   7    .dynstr             ascii   dlopen
+33  0x000008aa 0x000008aa 5   6    .dynstr             ascii   dlsym
+34  0x000008b0 0x000008b0 6   7    .dynstr             ascii   fclose
+35  0x000008b7 0x000008b7 5   6    .dynstr             ascii   fopen
+36  0x000008bd 0x000008bd 7   8    .dynstr             ascii   fprintf
+37  0x000008c5 0x000008c5 4   5    .dynstr             ascii   free
+38  0x000008ca 0x000008ca 7   8    .dynstr             ascii   getline
+39  0x000008d2 0x000008d2 6   7    .dynstr             ascii   memcmp
+40  0x000008d9 0x000008d9 9   10   .dynstr             ascii   nanosleep
+41  0x000008e3 0x000008e3 18  19   .dynstr             ascii   pcm_get_htimestamp
+42  0x000008f6 0x000008f6 9   10   .dynstr             ascii   pcm_ioctl
+43  0x00000900 0x00000900 12  13   .dynstr             ascii   property_get
+44  0x0000090d 0x0000090d 17  18   .dynstr             ascii   property_get_bool
+45  0x0000091f 0x0000091f 17  18   .dynstr             ascii   pthread_cond_init
+46  0x00000931 0x00000931 19  20   .dynstr             ascii   pthread_cond_signal
+47  0x00000945 0x00000945 22  23   .dynstr             ascii   pthread_cond_timedwait
+48  0x0000095c 0x0000095c 17  18   .dynstr             ascii   pthread_cond_wait
+49  0x0000096e 0x0000096e 21  22   .dynstr             ascii   pthread_condattr_init
+50  0x00000984 0x00000984 25  26   .dynstr             ascii   pthread_condattr_setclock
+51  0x0000099e 0x0000099e 18  19   .dynstr             ascii   pthread_mutex_init
+52  0x000009b1 0x000009b1 18  19   .dynstr             ascii   pthread_mutex_lock
+53  0x000009c4 0x000009c4 20  21   .dynstr             ascii   pthread_mutex_unlock
+54  0x000009d9 0x000009d9 6   7    .dynstr             ascii   stderr
+55  0x000009e0 0x000009e0 6   7    .dynstr             ascii   strdup
+56  0x000009e7 0x000009e7 8   9    .dynstr             ascii   strerror
+57  0x000009f0 0x000009f0 6   7    .dynstr             ascii   strstr
+58  0x000009f7 0x000009f7 8   9    .dynstr             ascii   strtok_r
+59  0x00000a00 0x00000a00 6   7    .dynstr             ascii   usleep
+60  0x00000a07 0x00000a07 12  13   .dynstr             ascii   __udivmodsi4
+61  0x00000a14 0x00000a14 13  14   .dynstr             ascii   __aeabi_uidiv
+62  0x00000a22 0x00000a22 9   10   .dynstr             ascii   __udivsi3
+63  0x00000a2c 0x00000a2c 12  13   .dynstr             ascii   __udivmoddi4
+64  0x00000a39 0x00000a39 16  17   .dynstr             ascii   __aeabi_uidivmod
+65  0x00000a4a 0x00000a4a 9   10   .dynstr             ascii   liblog.so
+66  0x00000a54 0x00000a54 6   7    .dynstr             ascii   LIBLOG
+67  0x00000a5b 0x00000a5b 7   8    .dynstr             ascii   libc.so
+68  0x00000a63 0x00000a63 4   5    .dynstr             ascii   LIBC
+69  0x00000a68 0x00000a68 8   9    .dynstr             ascii   libdl.so
+70  0x00000a71 0x00000a71 12  13   .dynstr             ascii   libcutils.so
+71  0x00000a7e 0x00000a7e 14  15   .dynstr             ascii   libtinyalsa.so
+72  0x00000a8d 0x00000a8d 9   10   .dynstr             ascii   libc++.so
+73  0x00000a97 0x00000a97 7   8    .dynstr             ascii   libm.so
+74  0x00000a9f 0x00000a9f 9   10   .dynstr             ascii   libadm.so
+75  0x00000aac 0x00000aac 4   5    .rel.dyn            ascii   APS2
+76  0x00000d00 0x00000d00 23  24   .rodata             ascii   ADM: acquired perf lock
+77  0x00000d18 0x00000d18 11  12   .rodata             ascii   in:sleep_ns
+78  0x00000d24 0x00000d24 8   9    .rodata             ascii   playback
+79  0x00000d2d 0x00000d2d 51  52   .rodata             ascii   %s Memory allocation failed for audio data manager!
+80  0x00000d61 0x00000d61 27  28   .rodata             ascii   playback drain set to %d ms
+81  0x00000d7d 0x00000d7d 27  28   .rodata             ascii   ro.vendor.extension_library
+82  0x00000d99 0x00000d99 22  23   .rodata             ascii   adm_request_focus_v2_1
+83  0x00000db4 0x00000db4 32  33   .rodata             ascii   failed waiting for phase sync %d
+84  0x00000dd5 0x00000dd5 39  40   .rodata             ascii   %s sleep interrupted with %ld remaining
+85  0x00000dfd 0x00000dfd 6   7    .rodata             ascii   bengal
+86  0x00000e07 0x00000e07 16  17   .rodata             ascii   dlsym rel failed
+87  0x00000e1c 0x00000e1c 32  33   .rodata             ascii   Failed to get sync ptr w/ err %s
+88  0x00000e3f 0x00000e3f 17  18   .rodata             ascii   adm_abandon_focus
+89  0x00000e51 0x00000e51 30  31   .rodata             ascii   vendor.audio.adm.phaseshift.ms
+90  0x00000e70 0x00000e70 7   8    .rodata             ascii   trinket
+91  0x00000e78 0x00000e78 16  17   .rodata             ascii   dlsym acq failed
+92  0x00000e89 0x00000e89 36  37   .rodata             ascii   vendor.audio.adm.playback.drain.msec
+93  0x00000eae 0x00000eae 7   8    .rodata             ascii   2000000
+94  0x00000eb6 0x00000eb6 16  17   .rodata             ascii   out:sleep_ns %ld
+95  0x00000ec7 0x00000ec7 35  36   .rodata             ascii   Failed to get stream_name or dev %d
+96  0x00000eeb 0x00000eeb 22  23   .rodata             ascii   %s: handle %d flags %x
+97  0x00000f02 0x00000f02 5   6    .rodata             ascii   atoll
+98  0x00000f08 0x00000f08 14  15   .rodata             ascii   phase_sync set
+99  0x00000f17 0x00000f17 6   7    .rodata             ascii   qc_adm
+100 0x00000f22 0x00000f22 27  28   .rodata             ascii   Failed to release perf lock
+101 0x00000f3e 0x00000f3e 5   6    .rodata             ascii   NOIRQ
+102 0x00000f44 0x00000f44 17  18   .rodata             ascii   ro.board.platform
+103 0x00000f56 0x00000f56 19  20   .rodata             ascii   wait_for_focus_cond
+104 0x00000f6a 0x00000f6a 41  42   .rodata             ascii   failed to open /proc/asound/pcm w/ err %s
+105 0x00000f94 0x00000f94 7   8    .rodata             ascii   capture
+106 0x00000f9c 0x00000f9c 28  29   .rodata             ascii   vendor.audio.adm.debug.noadm
+107 0x00000fb9 0x00000fb9 29  30   .rodata             ascii   vendor.audio.adm.buffering.ms
+108 0x00000fd7 0x00000fd7 24  25   .rodata             ascii   ns %ld > expected_ns %ld
+109 0x00000ff0 0x00000ff0 8   9    .rodata             ascii   adm_init
+110 0x00000ff9 0x00000ff9 35  36   .rodata             ascii   %s: input stream (%d) de-registered
+111 0x00001020 0x00001020 7   8    .rodata             ascii   lahaina
+112 0x00001028 0x00001028 25  26   .rodata             ascii   Failed sync ptr w/ err %s
+113 0x00001044 0x00001044 15  16   .rodata             ascii   %s (skipped %u)
+114 0x00001054 0x00001054 16  17   .rodata             ascii   /proc/asound/pcm
+115 0x00001067 0x00001067 17  18   .rodata             ascii   library not found
+116 0x0000107b 0x0000107b 19  20   .rodata             ascii   wait_for_focus_lock
+117 0x0000108f 0x0000108f 34  35   .rodata             ascii   vendor.audio.adm.enable.debug.logs
+118 0x000010b4 0x000010b4 23  24   .rodata             ascii   ADM: released perf lock
+119 0x000010cc 0x000010cc 33  34   .rodata             ascii   Failed to get sync ptr w/ err %s\n
+120 0x000010ee 0x000010ee 23  24   .rodata             ascii   ADM library v2.7 loaded
+121 0x00001106 0x00001106 31  32   .rodata             ascii   %s: Aquiring perf lock for ULLA
+122 0x00001126 0x00001126 32  33   .rodata             ascii   Failed to set sync ptr w/ err %s
+123 0x00001147 0x00001147 13  14   .rodata             ascii   perf_lock_rel
+124 0x00001155 0x00001155 27  28   .rodata             ascii   Failed to acquire perf lock
+125 0x00001171 0x00001171 30  31   .rodata             ascii   vendor.audio.adm.enable.traces
+126 0x00001190 0x00001190 13  14   .rodata             ascii   wait_for_sync
+127 0x0000119e 0x0000119e 30  31   .rodata             ascii   Timeout waiting for phase sync
+128 0x000011bd 0x000011bd 57  58   .rodata             ascii   ADM buffering size (%d) ms requested, defaulting to %d ms
+129 0x000011f7 0x000011f7 25  26   .rodata             ascii   adm_register_input_stream
+130 0x00001211 0x00001211 36  37   .rodata             ascii   %s: output stream (%d) de-registered
+131 0x0000123b 0x0000123b 5   6    .rodata             ascii   shima
+132 0x00001241 0x00001241 29  30   .rodata             ascii   vendor.audio.adm.debug.noperf
+133 0x0000125f 0x0000125f 13  14   .rodata             ascii   perf_lock_acq
+134 0x0000126d 0x0000126d 9   10   .rodata             ascii   sleep_for
+135 0x00001277 0x00001277 29  30   .rodata             ascii   %s sleep returned with err %d
+136 0x00001295 0x00001295 26  27   .rodata             ascii   adm_register_output_stream
+137 0x000012b0 0x000012b0 21  22   .rodata             ascii   adm_deregister_stream
+138 0x000012c6 0x000012c6 32  33   .rodata             ascii   %s: Releasing perf lock for ULLA
+139 0x000012e7 0x000012e7 13  14   .rodata             ascii   dlopen failed
+140 0x000012f5 0x000012f5 60  61   .rodata             ascii   adjust_app_ptr with frames %d, new_appl_ptr < 0 .. expected?
+141 0x00001332 0x00001332 36  37   .rodata             ascii   margin check: %s(%s) failed diff %ld
+142 0x0000135f 0x0000135f 5   6    .rodata             ascii   talos
+143 0x00001365 0x00001365 7   8    .rodata             ascii   prefill
+144 0x000042b3 0x000052b2 4   5    .text               ascii   * 0`
+145 0x00004bcd 0x00000005 5   6    .ARM.attributes     ascii   aeabi
+146 0x00004bd8 0x00000010 5   6    .ARM.attributes     ascii   C2.09
+147 0x00004bdf 0x00000017 10  11   .ARM.attributes     ascii   cortex-a53
+148 0x00004c17 0x00000001 11  12   .shstrtab           ascii   .fini_array
+149 0x00004c23 0x0000000d 10  11   .shstrtab           ascii   .ARM.exidx
+150 0x00004c2e 0x00000018 5   6    .shstrtab           ascii   .text
+151 0x00004c34 0x0000001e 4   5    .shstrtab           ascii   .got
+152 0x00004c39 0x00000023 19  20   .shstrtab           ascii   .note.android.ident
+153 0x00004c4d 0x00000037 8   9    .shstrtab           ascii   .got.plt
+154 0x00004c56 0x00000040 8   9    .shstrtab           ascii   .rel.plt
+155 0x00004c5f 0x00000049 4   5    .shstrtab           ascii   .bss
+156 0x00004c64 0x0000004e 15  16   .shstrtab           ascii   .ARM.attributes
+157 0x00004c74 0x0000005e 7   8    .shstrtab           ascii   .dynstr
+158 0x00004c7c 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+159 0x00004c8b 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+160 0x00004c98 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+161 0x00004ca2 0x0000008c 8   9    .shstrtab           ascii   .rel.dyn
+162 0x00004cab 0x00000095 12  13   .shstrtab           ascii   .gnu.version
+163 0x00004cb8 0x000000a2 7   8    .shstrtab           ascii   .dynsym
+164 0x00004cc0 0x000000aa 9   10   .shstrtab           ascii   .gnu.hash
+165 0x00004cca 0x000000b4 18  19   .shstrtab           ascii   .note.gnu.build-id
+166 0x00004cdd 0x000000c7 8   9    .shstrtab           ascii   .dynamic
+167 0x00004ce6 0x000000d0 10  11   .shstrtab           ascii   .ARM.extab
+168 0x00004cf1 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+169 0x00004cfb 0x000000e5 7   8    .shstrtab           ascii   .rodata
+170 0x00004d03 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+171 0x00004d13 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+172 0x00004d4f 0x0000003d 4   5    .gnu_debugdata      ascii   cWBm
+173 0x00004d82 0x00000070 4   5    .gnu_debugdata      ascii   {O.~
+174 0x00004d95 0x00000083 7   10   .gnu_debugdata      utf8    W9I\r댾\bj
+175 0x00004dad 0x0000009b 4   5    .gnu_debugdata      ascii   F\nZ\v
+176 0x00004def 0x000000dd 5   7    .gnu_debugdata      utf8    sшj\bu
+177 0x00004df9 0x000000e7 4   5    .gnu_debugdata      ascii   I4i\f
+178 0x00004e09 0x000000f7 4   5    .gnu_debugdata      ascii   ET+\a
+179 0x00004e76 0x00000164 5   7    .gnu_debugdata      utf8    >iJEö
+180 0x00004f5e 0x0000024c 4   5    .gnu_debugdata      ascii   XVO(
+181 0x0000504f 0x0000033d 4   5    .gnu_debugdata      ascii    <]2
+182 0x00005059 0x00000347 4   5    .gnu_debugdata      ascii   :fT;
+183 0x00005079 0x00000367 5   6    .gnu_debugdata      ascii   z*ILD
+184 0x00005090 0x0000037e 5   7    .gnu_debugdata      utf8    rʹ=/L
+185 0x000050ac 0x0000039a 6   8    .gnu_debugdata      utf8    ʃ`BL0y
+186 0x000050c0 0x000003ae 4   5    .gnu_debugdata      ascii   <?Yc
+187 0x000050fb 0x000003e9 4   6    .gnu_debugdata      utf8    ;rȓb
+188 0x00005121 0x0000040f 4   5    .gnu_debugdata      ascii   ##oB
+189 0x00005128 0x00000416 4   5    .gnu_debugdata      ascii   Tgqi
+190 0x00005161 0x0000044f 4   8    .gnu_debugdata      utf8    [턹 Ȕ
+191 0x00005180 0x0000046e 10  12   .gnu_debugdata      utf8    x\pCJGϵ\U\r
+0x000056f4    1     12 sym.imp.__cxa_finalize
+0x00005778    1      4 sym.imp.__android_log_print
+0x00005838    1      4 sym.imp.__errno
+0x0000579c    1      4 sym.imp.__stack_chk_fail
+0x000058ec    1      4 sym.imp.__vsnprintf_chk
+0x00005754    1      8 sym.imp.atoi
+0x000057fc    1      4 sym.imp.atrace_begin_body
+0x00005808    1      4 sym.imp.atrace_end_body
+0x000057d8    1      4 sym.imp.atrace_get_enabled_tags
+0x00005718    1      4 sym.imp.calloc
+0x00005814    1      8 sym.imp.clock_gettime
+0x0000585c    1      4 sym.imp.clock_nanosleep
+0x00005784    1      8 sym.imp.dlclose
+0x00005760    1     12 sym.imp.dlopen
+0x0000576c    1      4 sym.imp.dlsym
+0x000058e0    1     12 sym.imp.fclose
+0x000058a4    1      8 sym.imp.fopen
+0x00005850    1     12 sym.imp.fprintf
+0x000057a8    1      4 sym.imp.free
+0x000058b0    1     12 sym.imp.getline
+0x0000570c    1      4 sym.imp.memcmp
+0x0000582c    1      4 sym.imp.nanosleep
+0x0000588c    1      4 sym.imp.pcm_get_htimestamp
+0x00005820    1     12 sym.imp.pcm_ioctl
+0x00005700    1     12 sym.imp.property_get
+0x00005790    1     12 sym.imp.property_get_bool
+0x00005730    1     12 sym.imp.pthread_cond_init
+0x000057c0    1     12 sym.imp.pthread_cond_signal
+0x00005880    1     12 sym.imp.pthread_cond_timedwait
+0x000057f0    1     12 sym.imp.pthread_cond_wait
+0x0000573c    1      4 sym.imp.pthread_condattr_init
+0x00005748    1      4 sym.imp.pthread_condattr_setclock
+0x00005724    1      8 sym.imp.pthread_mutex_init
+0x000057b4    1      8 sym.imp.pthread_mutex_lock
+0x000057cc    1      4 sym.imp.pthread_mutex_unlock
+0x000058c8    1      4 sym.imp.strdup
+0x00005844    1      8 sym.imp.strerror
+0x000058d4    1      8 sym.imp.strstr
+0x000058bc    1      4 sym.imp.strtok_r
+0x000057e4    1      8 sym.imp.usleep
+0x00002370    2     20 entry0
+0x00004fc0    1     36 sym.__aeabi_uldivmod
+0x000059b0    1     12 fcn.000059b0
+0x0000432c   57   1828 sym.adm_abandon_focus
+0x00004fe4   43    788 sym.__udivmoddi4
+0x00002d6c    5    152 sym.adm_register_input_stream
+0x00005800    1      8 fcn.00005800
+0x00005810    1      4 fcn.00005810
+0x000057b0    1      4 fcn.000057b0
+0x00004328    2     16 sym.adm_request_focus_v2
+0x00003390  102   3252 sym.adm_request_focus_v2_1
+0x000052f8    3     72 sym.__aeabi_uidiv
+0x000054c8    1      4 sym.__aeabi_idiv0
+0x000054cc    1     28 sym.__aeabi_uidivmod
+0x000059e0    1     12 fcn.000059e0
+0x00002384   57   1828 sym.adm_init
+0x00004ab8   44    980 sym.adm_is_noirq_avail
+0x00002b98   16    408 sym.adm_register_output_stream
+0x000030d0   20    336 sym.adm_request_focus
+0x00002b8c    1     12 sym.adm_deinit
+0x00002e10   20    640 sym.adm_deregister_stream
+0x00004ecc    8    156 sym.adm_on_routing_change
+0x0000322c    7    356 sym.adm_set_config
+0x000054e8    7     84 sym.__udivmodsi4
+0x0000237e    2      6 entry.fini0
+0x00005710    1      8 fcn.00005710
+0x00005720    1      4 fcn.00005720
+0x00005740    1      8 fcn.00005740
+0x00005750    1      4 fcn.00005750
+0x00005770    1      8 fcn.00005770
+0x00005780    1      4 fcn.00005780
+0x000057a0    1      8 fcn.000057a0
+0x000057d0    1      8 fcn.000057d0
+0x000057e0    1      4 fcn.000057e0
+0x00005830    1      8 fcn.00005830
+0x00005840    1      4 fcn.00005840
+0x00005860    1     12 fcn.00005860
+0x00005870    1     12 fcn.00005870
+0x00005890    1     12 fcn.00005890
+0x000058a0    1      4 fcn.000058a0
+0x000058c0    1      8 fcn.000058c0
+0x000058d0    1      4 fcn.000058d0
+0x000058f0    1     12 fcn.000058f0
+0x000040fc   10    512 sym.adjust_app_ptr
+0x00005900    1     12 fcn.00005900
+0x00005910    1     12 fcn.00005910
+0x00004f68    1     88 sym.snprintf_char__unsigned_int_pass_object_size1__char_const__::_
+0x000059a0    1     12 fcn.000059a0
+0x00005920    1     12 fcn.00005920
+0x00005940    1     12 fcn.00005940
+0x00005950    1     12 fcn.00005950
+0x00005960    1     12 fcn.00005960
+0x00005970    1     12 fcn.00005970
+0x00005980    1     12 fcn.00005980
+0x00005990    1     12 fcn.00005990
+0x000059c0    1     12 fcn.000059c0
+0x000059d0    1     12 fcn.000059d0
+0x000054b4    1     20 fcn.000054b4
+0x00005690    1     24 fcn.00005690

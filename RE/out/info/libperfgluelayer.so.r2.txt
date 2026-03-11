@@ -1,0 +1,294 @@
+arch     arm
+baddr    0x0
+binsz    18416
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                          demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+26  0x00002480 0x00002480 GLOBAL FUNC 148      _ZN13PerfGlueLayer25PerfGlueLayerBootCompleteEv               PerfGlueLayer::PerfGlueLayerBootComplete()
+27  ---------- 0x00005370 GLOBAL OBJ  1280     _ZN13PerfGlueLayer8mModulesE                                  PerfGlueLayer::mModules
+28  0x00002094 0x00002094 GLOBAL FUNC 4        _ZN13PerfGlueLayerC2Ev                                        PerfGlueLayer::PerfGlueLayer()
+29  0x00002c54 0x00002c54 GLOBAL FUNC 96       _ZN10PerfModule10DeregisterEv                                 PerfModule::Deregister()
+30  0x00002874 0x00002874 GLOBAL FUNC 100      _ZN10PerfModule21IsThisEventRegisteredEi                      PerfModule::IsThisEventRegistered(int)
+31  0x0000371c 0x0000371c GLOBAL FUNC 4        _ZN10PerfModuleD2Ev                                           PerfModule::~PerfModule()
+32  0x00002098 0x00002098 GLOBAL FUNC 4        _ZN13PerfGlueLayerC1EPKcPii                                   PerfGlueLayer::PerfGlueLayer(char const*, int*, int)
+33  0x00002098 0x00002098 GLOBAL FUNC 4        _ZN13PerfGlueLayerC2EPKcPii                                   PerfGlueLayer::PerfGlueLayer(char const*, int*, int)
+35  0x000036dc 0x000036dc GLOBAL FUNC 64       _ZN10PerfModuleC2Ev                                           PerfModule::PerfModule()
+36  ---------- 0x00005890 GLOBAL OBJ  40       _ZN13PerfGlueLayer6mMutexE                                    PerfGlueLayer::mMutex
+37  ---------- 0x00005888 GLOBAL OBJ  8        _ZN13PerfGlueLayer9mMpctlModE                                 PerfGlueLayer::mMpctlMod
+38  0x00002344 0x00002344 GLOBAL FUNC 4        _ZN13PerfGlueLayerD1Ev                                        PerfGlueLayer::~PerfGlueLayer()
+39  0x000028d8 0x000028d8 GLOBAL FUNC 408      _ZN13PerfGlueLayer24PerfGlueLayerSyncRequestEi                PerfGlueLayer::PerfGlueLayerSyncRequest(int)
+40  0x00002094 0x00002094 GLOBAL FUNC 4        _ZN13PerfGlueLayerC1Ev                                        PerfGlueLayer::PerfGlueLayer()
+42  0x0000371c 0x0000371c GLOBAL FUNC 4        _ZN10PerfModuleD1Ev                                           PerfModule::~PerfModule()
+43  0x00002ea0 0x00002ea0 GLOBAL FUNC 1164     _ZN13PerfGlueLayer11LoadPerfLibEPKc                           PerfGlueLayer::LoadPerfLib(char const*)
+44  0x00002a70 0x00002a70 GLOBAL FUNC 484      _ZN13PerfGlueLayer17PerfGlueLayerInitEv                       PerfGlueLayer::PerfGlueLayerInit()
+46  0x00002348 0x00002348 GLOBAL FUNC 312      _ZN10PerfModule8RegisterEPKcPii                               PerfModule::Register(char const*, int*, int)
+47  0x000036dc 0x000036dc GLOBAL FUNC 64       _ZN10PerfModuleC1Ev                                           PerfModule::PerfModule()
+48  ---------- 0x000058b8 GLOBAL OBJ  1        _ZN13PerfGlueLayer13mBootCompleteE                            PerfGlueLayer::mBootComplete
+49  0x00002cb4 0x00002cb4 GLOBAL FUNC 492      _ZN13PerfGlueLayer17PerfGlueLayerExitEv                       PerfGlueLayer::PerfGlueLayerExit()
+50  0x00002514 0x00002514 GLOBAL FUNC 864      _ZN13PerfGlueLayer26PerfGlueLayerSubmitRequestEP11mpctl_msg_t PerfGlueLayer::PerfGlueLayerSubmitRequest(mpctl_msg_t*)
+51  0x0000209c 0x0000209c GLOBAL FUNC 680      _ZN13PerfGlueLayer8RegisterEPKcPii                            PerfGlueLayer::Register(char const*, int*, int)
+52  0x0000332c 0x0000332c GLOBAL FUNC 268      _ZN10PerfModule11LoadPerfLibEPKc                              PerfModule::LoadPerfLib(char const*)
+53  0x0000369c 0x0000369c GLOBAL FUNC 64       _ZN10PerfModule13UnloadPerfLibEv                              PerfModule::UnloadPerfLib()
+54  0x00003720 0x00003720 GLOBAL FUNC 4        _ZN10PerfModule4DumpEv                                        PerfModule::Dump()
+55  ---------- 0x00005870 GLOBAL OBJ  24       _ZN13PerfGlueLayer14mLoadedModulesE                           PerfGlueLayer::mLoadedModules
+56  0x00002344 0x00002344 GLOBAL FUNC 4        _ZN13PerfGlueLayerD2Ev                                        PerfGlueLayer::~PerfGlueLayer()
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x558 0x000002a8   0x558 -r-- DYNSYM      .dynsym
+4   0x00000800    0x72 0x00000800    0x72 -r-- GNU_VERSYM  .gnu.version
+5   0x00000874    0x40 0x00000874    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x000008b8    0xe8 0x000008b8    0xe8 -r-- GNU_HASH    .gnu.hash
+7   0x000009a0   0x74f 0x000009a0   0x74f -r-- STRTAB      .dynstr
+8   0x000010f0    0x39 0x000010f0    0x39 -r-- ----        .rela.dyn
+9   0x00001130    0x10 0x00001130    0x10 -r-- ----        .relr.dyn
+10  0x00001140   0x2b8 0x00001140   0x2b8 -r-- RELA        .rela.plt
+11  0x000013f8    0x72 0x000013f8    0x72 -r-- PROGBITS    .rodata
+12  0x0000146c    0xdc 0x0000146c    0xdc -r-- PROGBITS    .eh_frame_hdr
+13  0x00001548   0x34c 0x00001548   0x34c -r-- PROGBITS    .eh_frame
+14  0x00002000  0x19b8 0x00002000  0x19b8 -r-x PROGBITS    .text
+15  0x000039c0   0x1f0 0x000039c0   0x1f0 -r-x PROGBITS    .plt
+16  0x00004000     0x8 0x00004000     0x8 -rw- PROGBITS    .data.rel.ro
+17  0x00004008    0x10 0x00004008    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00004018     0x8 0x00004018     0x8 -rw- INIT_ARRAY  .init_array
+19  0x00004020   0x220 0x00004020   0x220 -rw- DYNAMIC     .dynamic
+20  0x00004240    0x30 0x00004240    0x30 -rw- PROGBITS    .got
+21  0x00004270   0x100 0x00004270   0x100 -rw- PROGBITS    .got.plt
+22  0x00004370     0x0 0x00005370   0x549 -rw- NOBITS      .bss
+23  0x00004370    0xfc 0x00000000    0xfc ---- STRTAB      .shstrtab
+24  0x0000446c   0x384 0x00000000   0x384 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00000910 0x00000910 5   24   .gnu.hash           utf32le #'*.4
+3   0x00000945 0x00000945 5   6    .gnu.hash           ascii   X'V0\v
+4   0x0000096c 0x0000096c 4   5    .gnu.hash           ascii   4\tc<
+5   0x000009a1 0x000009a1 12  13   .dynstr             ascii   __cxa_atexit
+6   0x000009ae 0x000009ae 14  15   .dynstr             ascii   __cxa_finalize
+7   0x000009bd 0x000009bd 29  30   .dynstr             ascii   _ZN10PerfModule10DeregisterEv
+8   0x000009db 0x000009db 32  33   .dynstr             ascii   _ZN10PerfModule11LoadPerfLibEPKc
+9   0x000009fc 0x000009fc 32  33   .dynstr             ascii   _ZN10PerfModule13UnloadPerfLibEv
+10  0x00000a1d 0x00000a1d 40  41   .dynstr             ascii   _ZN10PerfModule21IsThisEventRegisteredEi
+11  0x00000a46 0x00000a46 22  23   .dynstr             ascii   _ZN10PerfModule4DumpEv
+12  0x00000a5d 0x00000a5d 31  32   .dynstr             ascii   _ZN10PerfModule8RegisterEPKcPii
+13  0x00000a7d 0x00000a7d 19  20   .dynstr             ascii   _ZN10PerfModuleC1Ev
+14  0x00000a91 0x00000a91 19  20   .dynstr             ascii   _ZN10PerfModuleC2Ev
+15  0x00000aa5 0x00000aa5 19  20   .dynstr             ascii   _ZN10PerfModuleD1Ev
+16  0x00000ab9 0x00000ab9 19  20   .dynstr             ascii   _ZN10PerfModuleD2Ev
+17  0x00000acd 0x00000acd 30  31   .dynstr             ascii   _ZN12TargetConfig10cur_targetE
+18  0x00000aec 0x00000aec 35  36   .dynstr             ascii   _ZN13PerfGlueLayer11LoadPerfLibEPKc
+19  0x00000b10 0x00000b10 34  35   .dynstr             ascii   _ZN13PerfGlueLayer13mBootCompleteE
+20  0x00000b33 0x00000b33 35  36   .dynstr             ascii   _ZN13PerfGlueLayer14mLoadedModulesE
+21  0x00000b57 0x00000b57 39  40   .dynstr             ascii   _ZN13PerfGlueLayer17PerfGlueLayerExitEv
+22  0x00000b7f 0x00000b7f 39  40   .dynstr             ascii   _ZN13PerfGlueLayer17PerfGlueLayerInitEv
+23  0x00000ba7 0x00000ba7 46  47   .dynstr             ascii   _ZN13PerfGlueLayer24PerfGlueLayerSyncRequestEi
+24  0x00000bd6 0x00000bd6 47  48   .dynstr             ascii   _ZN13PerfGlueLayer25PerfGlueLayerBootCompleteEv
+25  0x00000c06 0x00000c06 61  62   .dynstr             ascii   _ZN13PerfGlueLayer26PerfGlueLayerSubmitRequestEP11mpctl_msg_t
+26  0x00000c44 0x00000c44 26  27   .dynstr             ascii   _ZN13PerfGlueLayer6mMutexE
+27  0x00000c5f 0x00000c5f 34  35   .dynstr             ascii   _ZN13PerfGlueLayer8RegisterEPKcPii
+28  0x00000c82 0x00000c82 28  29   .dynstr             ascii   _ZN13PerfGlueLayer8mModulesE
+29  0x00000c9f 0x00000c9f 29  30   .dynstr             ascii   _ZN13PerfGlueLayer9mMpctlModE
+30  0x00000cbd 0x00000cbd 27  28   .dynstr             ascii   _ZN13PerfGlueLayerC1EPKcPii
+31  0x00000cd9 0x00000cd9 22  23   .dynstr             ascii   _ZN13PerfGlueLayerC1Ev
+32  0x00000cf0 0x00000cf0 27  28   .dynstr             ascii   _ZN13PerfGlueLayerC2EPKcPii
+33  0x00000d0c 0x00000d0c 22  23   .dynstr             ascii   _ZN13PerfGlueLayerC2Ev
+34  0x00000d23 0x00000d23 22  23   .dynstr             ascii   _ZN13PerfGlueLayerD1Ev
+35  0x00000d3a 0x00000d3a 22  23   .dynstr             ascii   _ZN13PerfGlueLayerD2Ev
+36  0x00000d51 0x00000d51 79  80   .dynstr             ascii   _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEmmPKcm
+37  0x00000da1 0x00000da1 62  63   .dynstr             ascii   _ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
+38  0x00000de0 0x00000de0 63  64   .dynstr             ascii   _ZNKSt3__121__basic_string_commonILb1EE20__throw_length_errorEv
+39  0x00000e20 0x00000e20 74  75   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+40  0x00000e6b 0x00000e6b 113 114  .dynstr             ascii   _ZNSt3__16removeINS_11__wrap_iterIPNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEPKcEET_SC_SC_RKT0_
+41  0x00000edd 0x00000edd 119 120  .dynstr             ascii   _ZNSt3__16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEE21__push_back_slow_pathIS6_EEvOT_
+42  0x00000f55 0x00000f55 120 121  .dynstr             ascii   _ZNSt3__16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEE5eraseENS_11__wrap_iterIPKS6_EESC_
+43  0x00000fce 0x00000fce 6   7    .dynstr             ascii   _ZdlPv
+44  0x00000fd5 0x00000fd5 5   6    .dynstr             ascii   _Znwm
+45  0x00000fdb 0x00000fdb 16  17   .dynstr             ascii   __stack_chk_fail
+46  0x00000fec 0x00000fec 13  14   .dynstr             ascii   __strlcpy_chk
+47  0x00000ffa 0x00000ffa 12  13   .dynstr             ascii   __strlen_chk
+48  0x00001007 0x00001007 5   6    .dynstr             ascii   abort
+49  0x0000100d 0x0000100d 4   5    .dynstr             ascii   atoi
+50  0x00001012 0x00001012 7   8    .dynstr             ascii   dlclose
+51  0x0000101a 0x0000101a 7   8    .dynstr             ascii   dlerror
+52  0x00001022 0x00001022 6   7    .dynstr             ascii   dlopen
+53  0x00001029 0x00001029 5   6    .dynstr             ascii   dlsym
+54  0x0000102f 0x0000102f 4   5    .dynstr             ascii   free
+55  0x00001034 0x00001034 6   7    .dynstr             ascii   memcpy
+56  0x0000103b 0x0000103b 12  13   .dynstr             ascii   property_get
+57  0x00001048 0x00001048 18  19   .dynstr             ascii   pthread_mutex_lock
+58  0x0000105b 0x0000105b 20  21   .dynstr             ascii   pthread_mutex_unlock
+59  0x00001070 0x00001070 6   7    .dynstr             ascii   strlen
+60  0x00001077 0x00001077 7   8    .dynstr             ascii   strncmp
+61  0x0000107f 0x0000107f 7   8    .dynstr             ascii   libc.so
+62  0x00001087 0x00001087 4   5    .dynstr             ascii   LIBC
+63  0x0000108c 0x0000108c 8   9    .dynstr             ascii   libdl.so
+64  0x00001095 0x00001095 11  12   .dynstr             ascii   libutils.so
+65  0x000010a1 0x000010a1 9   10   .dynstr             ascii   liblog.so
+66  0x000010ab 0x000010ab 12  13   .dynstr             ascii   libcutils.so
+67  0x000010b8 0x000010b8 16  17   .dynstr             ascii   libperfconfig.so
+68  0x000010c9 0x000010c9 9   10   .dynstr             ascii   libc++.so
+69  0x000010d3 0x000010d3 7   8    .dynstr             ascii   libm.so
+70  0x000010db 0x000010db 19  20   .dynstr             ascii   libperfgluelayer.so
+71  0x000010f0 0x000010f0 4   5    .rela.dyn           ascii   APS2
+72  0x000013f8 0x000013f8 27  28   .rodata             ascii   perfmodule_sync_request_ext
+73  0x00001414 0x00001414 15  16   .rodata             ascii   perfmodule_init
+74  0x00001424 0x00001424 15  16   .rodata             ascii   perfmodule_exit
+75  0x00001436 0x00001436 23  24   .rodata             ascii   vendor.post_boot.parsed
+76  0x0000144e 0x0000144e 25  26   .rodata             ascii   perfmodule_submit_request
+77  0x0000221f 0x0000221f 4   5    .text               ascii   R:_\t
+78  0x0000230b 0x0000230b 4   5    .text               ascii   R\tq}
+79  0x00002577 0x00002577 7   8    .text               ascii   4h"@9\t\t
+80  0x000025d6 0x000025d6 4   5    .text               ascii   @9(\a
+81  0x0000287f 0x0000287f 4   5    .text               ascii   T\b\b@
+82  0x0000289b 0x0000289b 4   5    .text               ascii   R\vxj
+83  0x00002aad 0x00002aad 4   5    .text               ascii   BB9(
+84  0x00002c60 0x00002c60 4   5    .text               ascii   \b@B9
+85  0x00002cec 0x00002cec 4   5    .text               ascii   hBB9
+86  0x00002d33 0x00002d33 4   5    .text               ascii   4h6A
+87  0x00002d40 0x00002d40 4   5    .text               ascii   hBG9
+88  0x00002d47 0x00002d47 4   5    .text               ascii   4`.A
+89  0x00002d98 0x00002d98 4   5    .text               ascii   hBL9
+90  0x00002de3 0x00002de3 4   5    .text               ascii   4hvB
+91  0x00002df0 0x00002df0 4   5    .text               ascii   hBQ9
+92  0x00002df7 0x00002df7 4   5    .text               ascii   4`nB
+93  0x0000315c 0x0000315c 4   5    .text               ascii   \t\rI8
+94  0x0000319b 0x0000319b 5   6    .text               ascii   5(CG9
+95  0x000031a3 0x000031a3 4   5    .text               ascii   5(C\a
+96  0x0000321f 0x0000321f 5   6    .text               ascii   5(CL9
+97  0x00003227 0x00003227 4   5    .text               ascii   5(C\f
+98  0x00003267 0x00003267 5   6    .text               ascii   5(CQ9
+99  0x00003344 0x00003344 4   5    .text               ascii   hBB9
+100 0x0000347f 0x0000347f 4   5    .text               ascii   R\b}\n
+101 0x0000351f 0x0000351f 4   6    .text               utf8    TɎ^8
+102 0x0000365a 0x0000365a 5   6    .text               ascii   \a6h\n@
+103 0x0000366e 0x0000366e 5   6    .text               ascii   \a6`\n@
+104 0x000036a8 0x000036a8 4   5    .text               ascii   \b@B9
+105 0x00003763 0x00003763 4   5    .text               ascii   Tl\n@
+106 0x00003813 0x00003813 4   5    .text               ascii   Tt.@
+107 0x00004371 0x00000001 11  12   .shstrtab           ascii   .init_array
+108 0x0000437d 0x0000000d 11  12   .shstrtab           ascii   .fini_array
+109 0x00004389 0x00000019 5   6    .shstrtab           ascii   .text
+110 0x0000438f 0x0000001f 4   5    .shstrtab           ascii   .got
+111 0x00004394 0x00000024 19  20   .shstrtab           ascii   .note.android.ident
+112 0x000043a8 0x00000038 8   9    .shstrtab           ascii   .got.plt
+113 0x000043b1 0x00000041 9   10   .shstrtab           ascii   .rela.plt
+114 0x000043bb 0x0000004b 4   5    .shstrtab           ascii   .bss
+115 0x000043c0 0x00000050 7   8    .shstrtab           ascii   .dynstr
+116 0x000043c8 0x00000058 13  14   .shstrtab           ascii   .eh_frame_hdr
+117 0x000043d6 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+118 0x000043e5 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+119 0x000043f2 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+120 0x000043fc 0x0000008c 9   10   .shstrtab           ascii   .rela.dyn
+121 0x00004406 0x00000096 12  13   .shstrtab           ascii   .gnu.version
+122 0x00004413 0x000000a3 7   8    .shstrtab           ascii   .dynsym
+123 0x0000441b 0x000000ab 9   10   .shstrtab           ascii   .gnu.hash
+124 0x00004425 0x000000b5 9   10   .shstrtab           ascii   .eh_frame
+125 0x0000442f 0x000000bf 18  19   .shstrtab           ascii   .note.gnu.build-id
+126 0x00004442 0x000000d2 8   9    .shstrtab           ascii   .dynamic
+127 0x0000444b 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+128 0x00004455 0x000000e5 7   8    .shstrtab           ascii   .rodata
+129 0x0000445d 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+130 0x0000446d 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+131 0x000044b6 0x0000004a 4   5    .gnu_debugdata      ascii   XP)\t
+132 0x000044d9 0x0000006d 5   6    .gnu_debugdata      ascii   %\e\eim
+133 0x000044e9 0x0000007d 5   6    .gnu_debugdata      ascii   [?J$p
+134 0x000044ff 0x00000093 4   6    .gnu_debugdata      utf8    \a?c̼
+135 0x00004528 0x000000bc 5   6    .gnu_debugdata      ascii   YI(\\e
+136 0x0000454b 0x000000df 5   8    .gnu_debugdata      utf8    \4꿘%c
+137 0x00004564 0x000000f8 6   11   .gnu_debugdata      utf8    熊$˛ׂ,\b
+138 0x00004582 0x00000116 4   6    .gnu_debugdata      utf8    xbZʼ
+139 0x00004590 0x00000124 4   5    .gnu_debugdata      ascii   y;3K
+140 0x000045c4 0x00000158 8   9    .gnu_debugdata      ascii   {}GAu`)d
+141 0x000045de 0x00000172 4   5    .gnu_debugdata      ascii   {y9_
+142 0x000045e5 0x00000179 4   5    .gnu_debugdata      ascii   c*aR
+143 0x000045fd 0x00000191 4   7    .gnu_debugdata      utf8    д+\t߬
+144 0x00004615 0x000001a9 5   8    .gnu_debugdata      utf8    <OӣDА
+145 0x00004647 0x000001db 5   7    .gnu_debugdata      utf8    җ\ngS\a
+146 0x0000464e 0x000001e2 8   9    .gnu_debugdata      ascii   ?LO4A"9z
+147 0x00004707 0x0000029b 4   5    .gnu_debugdata      ascii   /\t*1
+148 0x0000479f 0x00000333 5   7    .gnu_debugdata      utf8    *ߵ}Bg
+0x00003ba0    1     16 sym.imp.__cxa_atexit
+0x000039e0    1     16 sym.imp.__cxa_finalize
+0x00003a80    1     16 sym.imp.__stack_chk_fail
+0x00003a50    1     16 sym.imp.__strlcpy_chk
+0x00003a20    1     16 sym.imp.__strlen_chk
+0x00003b90    1     16 sym.imp.abort
+0x00003a70    1     16 sym.imp.atoi
+0x00003ab0    1     16 sym.imp.dlclose
+0x00003b60    1     16 sym.imp.dlerror
+0x00003b50    1     16 sym.imp.dlopen
+0x00003b70    1     16 sym.imp.dlsym
+0x00003aa0    1     16 sym.imp.free
+0x00003af0    1     16 sym.imp.memcpy
+0x00003a60    1     16 sym.imp.property_get
+0x00003a10    1     16 sym.imp.pthread_mutex_lock
+0x00003a40    1     16 sym.imp.pthread_mutex_unlock
+0x00003ac0    1     16 sym.imp.strlen
+0x00003a30    1     16 sym.imp.strncmp
+0x00002000    1     12 entry0
+0x00002480    6    148 method.PerfGlueLayer.PerfGlueLayerBootComplete__
+0x00002094    1      4 fcn.00002094
+0x00002c54    4     96 method.PerfModule.Deregister__
+0x00002874    9    100 method.PerfModule.IsThisEventRegistered_int_
+0x0000371c    1      4 fcn.0000371c
+0x00002098    2     20 method.PerfGlueLayer.PerfGlueLayer_char_const__int__int_
+0x00003724   18    360 method.void_std::__1::vector_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::allocator_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______::__push_back_slow_path_std::_
+0x000036dc    1     64 method.PerfModule.PerfModule__
+0x00002344    1      4 method.PerfGlueLayer.PerfGlueLayer__
+0x000028d8   19    408 method.PerfGlueLayer.PerfGlueLayerSyncRequest_int_
+0x00003438   17    280 method.std::__1::vector_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::allocator_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______.erase_std::__1::__wrap_iter_std::_
+0x00002ea0   58   1164 method.PerfGlueLayer.LoadPerfLib_char_const_
+0x00002a70   36    484 method.PerfGlueLayer.PerfGlueLayerInit__
+0x00003550   18    332 method.std::__1::__wrap_iter_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::remove_std::__1::__wrap_iter_std::__1::basic_string_char__std::__1::char_traits_char___std::__1.allocator_char______char_const
+0x00002348   18    312 method.PerfModule.Register_char_const__int__int_
+0x00002cb4   34    492 method.PerfGlueLayer.PerfGlueLayerExit__
+0x00002514   61    864 method.PerfGlueLayer.PerfGlueLayerSubmitRequest_mpctl_msg_t_
+0x0000209c   35    680 method.PerfGlueLayer.Register_char_const__int__int_
+0x0000332c   10    268 method.PerfModule.LoadPerfLib_char_const_
+0x0000369c    4     64 method.PerfModule.UnloadPerfLib__
+0x00003720    1      4 method.PerfModule.Dump__
+0x00003ad0    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.compare_unsigned_long__unsigned_long__char_const__unsigned_long__const
+0x00003b80    1     16 sym.imp.std::__1::__vector_base_common_true_::__throw_length_error___const
+0x00003b40    1     16 sym.imp.std::__1::__basic_string_common_true_::__throw_length_error___const
+0x00003a90    1     16 sym.imp.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___::append_char_const_
+0x000039f0    1     16 sym.imp.operator_delete_void_
+0x00003ae0    1     16 sym.imp.operator_new_unsigned_long_
+0x00002010    1      4 entry.fini0
+0x0000388c    1    300 entry.init0
+0x00003b00    1     16 fcn.00003b00
+0x00003b10    1     16 fcn.00003b10
+0x00003b20    1     16 fcn.00003b20
+0x00003b30    1     16 fcn.00003b30
+0x00002014   10    128 method.std::__1::vector_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____std::__1::allocator_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______.vector__
+0x000039c0    1     20 section..plt

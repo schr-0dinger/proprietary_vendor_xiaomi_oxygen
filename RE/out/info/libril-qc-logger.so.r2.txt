@@ -1,0 +1,575 @@
+arch     arm
+baddr    0x0
+binsz    40806
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                                                                                                   demangled
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+35  0x00005454 0x00005454 GLOBAL FUNC 4        _ZN3qti3ril6logger13LoggerFactoryD0Ev                                                                                  qti::ril::logger::LoggerFactory::~LoggerFactory()
+38  0x000098e0 0x0000a8e0 GLOBAL OBJ  32       __emutls_v._ZN3qti3ril6logger6Logger7log_bufE
+39  0x00007508 0x00007508 GLOBAL FUNC 260      _ZN3qti3ril6logger4diag17DiagLoggerFactory9theLoggerEv                                                                 qti::ril::logger::diag::DiagLoggerFactory::theLogger()
+40  0x00005710 0x00005710 GLOBAL FUNC 32       _ZN3qti3ril6logger10LoggerImplC2ERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEE                    qti::ril::logger::LoggerImpl::LoggerImpl(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+41  0x00005af8 0x00005af8 GLOBAL FUNC 376      _ZN3qti3ril6logger6Logger10setDefaultERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEE               qti::ril::logger::Logger::setDefault(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+42  ---------- 0x0000a930 GLOBAL OBJ  1        _ZN3qti3ril6logger6Logger11debugLoggerE                                                                                qti::ril::logger::Logger::debugLogger
+43  ---------- 0x0000a920 GLOBAL OBJ  16       _ZN3qti3ril6logger6Logger13defaultLoggerE                                                                              qti::ril::logger::Logger::defaultLogger
+44  0x00006fec 0x00006fec GLOBAL FUNC 24       _ZN3qti3ril6logger7android13AndroidLogger4vlogENS1_8LogLevelEPKcS6_                                                    qti::ril::logger::android::AndroidLogger::vlog(qti::ril::logger::LogLevel, char const*, char const*)
+45  0x00006c50 0x00006c50 GLOBAL FUNC 24       _ZN3qti3ril6logger7android20AndroidLoggerFactoryD2Ev                                                                   qti::ril::logger::android::AndroidLoggerFactory::~AndroidLoggerFactory()
+47  0x000093c0 0x000093c0 GLOBAL OBJ  16       _ZTTN3qti3ril6logger4diag10DiagLoggerE                                                                                 VTT for qti::ril::logger::diag::DiagLogger
+48  0x00005664 0x00005664 GLOBAL FUNC 172      _ZN3qti3ril6logger12StdoutLoggerC1Ev                                                                                   qti::ril::logger::StdoutLogger::StdoutLogger()
+49  0x00005010 0x00005010 GLOBAL FUNC 120      _ZN3qti3ril6logger13LoggerFactory15loggerFactoriesEv                                                                   qti::ril::logger::LoggerFactory::loggerFactories()
+51  0x00009030 0x00009030 GLOBAL OBJ  104      _ZTVN3qti3ril6logger12StdoutLoggerE                                                                                    vtable for qti::ril::logger::StdoutLogger
+52  0x00006f34 0x00006f34 GLOBAL FUNC 24       _ZN3qti3ril6logger7android13AndroidLoggerC2Ev                                                                          qti::ril::logger::android::AndroidLogger::AndroidLogger()
+53  0x00006cd0 0x00006cd0 GLOBAL FUNC 72       _ZTv0_n32_N3qti3ril6logger7android20AndroidLoggerFactoryD0Ev                                                           virtual thunk to qti::ril::logger::android::AndroidLoggerFactory::~AndroidLoggerFactory()
+54  0x000092e0 0x000092e0 GLOBAL OBJ  104      _ZTVN3qti3ril6logger4diag17DiagLoggerFactoryE                                                                          vtable for qti::ril::logger::diag::DiagLoggerFactory
+57  0x000052e0 0x000052e0 GLOBAL FUNC 24       _ZN3qti3ril6logger13LoggerFactoryC2ERKS2_                                                                              qti::ril::logger::LoggerFactory::LoggerFactory(qti::ril::logger::LoggerFactory const&)
+58  0x000058c8 0x000058c8 GLOBAL FUNC 344      _ZN3qti3ril6logger6Logger3logENS1_8LogLevelEPKcS5_z                                                                    qti::ril::logger::Logger::log(qti::ril::logger::LogLevel, char const*, char const*, ::)
+60  0x000076b8 0x000076b8 GLOBAL FUNC 76       _ZN3qti3ril6logger4diag10DiagLoggerC2Ev                                                                                qti::ril::logger::diag::DiagLogger::DiagLogger()
+61  0x000077d0 0x000077d0 GLOBAL FUNC 108      _ZN3qti3ril6logger4diag10DiagLoggerD1Ev                                                                                qti::ril::logger::diag::DiagLogger::~DiagLogger()
+62  0x000074b4 0x000074b4 GLOBAL FUNC 84       _ZN3qti3ril6logger4diag17DiagLoggerFactory13getLoggerImplEv                                                            qti::ril::logger::diag::DiagLoggerFactory::getLoggerImpl()
+63  0x000073d4 0x000073d4 GLOBAL FUNC 24       _ZN3qti3ril6logger4diag17DiagLoggerFactoryD2Ev                                                                         qti::ril::logger::diag::DiagLoggerFactory::~DiagLoggerFactory()
+65  0x00007004 0x00007004 GLOBAL FUNC 24       _ZTv0_n24_N3qti3ril6logger7android13AndroidLogger4vlogENS1_8LogLevelEPKcS6_                                            virtual thunk to qti::ril::logger::android::AndroidLogger::vlog(qti::ril::logger::LogLevel, char const*, char const*)
+66  0x00006e88 0x00006e88 GLOBAL FUNC 84       _ZTv0_n24_N3qti3ril6logger7android20AndroidLoggerFactory13getLoggerImplEv                                              virtual thunk to qti::ril::logger::android::AndroidLoggerFactory::getLoggerImpl()
+67  0x0000558c 0x0000558c GLOBAL FUNC 104      _ZN3qti3ril6logger13LoggerFactory9getLoggerERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEE         qti::ril::logger::LoggerFactory::getLogger(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+70  0x000058bc 0x000058bc GLOBAL FUNC 4        _ZTv0_n24_N3qti3ril6logger19StdoutLoggerFactory13getLoggerImplEv                                                       virtual thunk to qti::ril::logger::StdoutLoggerFactory::getLoggerImpl()
+71  0x00006b94 0x00006b94 GLOBAL FUNC 160      _ZN3qti3ril6logger7android20AndroidLoggerFactoryC1Ev                                                                   qti::ril::logger::android::AndroidLoggerFactory::AndroidLoggerFactory()
+72  0x00006c94 0x00006c94 GLOBAL FUNC 60       _ZN3qti3ril6logger7android20AndroidLoggerFactoryD0Ev                                                                   qti::ril::logger::android::AndroidLoggerFactory::~AndroidLoggerFactory()
+73  0x00009008 0x00009008 GLOBAL OBJ  40       _ZTVN3qti3ril6logger13LoggerFactoryE                                                                                   vtable for qti::ril::logger::LoggerFactory
+75  0x0000760c 0x0000760c GLOBAL FUNC 84       _ZTv0_n24_N3qti3ril6logger4diag17DiagLoggerFactory13getLoggerImplEv                                                    virtual thunk to qti::ril::logger::diag::DiagLoggerFactory::getLoggerImpl()
+76  0x000052f8 0x000052f8 GLOBAL FUNC 348      _ZN3qti3ril6logger13LoggerFactoryD1Ev                                                                                  qti::ril::logger::LoggerFactory::~LoggerFactory()
+77  0x00006d30 0x00006d30 GLOBAL FUNC 84       _ZN3qti3ril6logger7android20AndroidLoggerFactory13getLoggerImplEv                                                      qti::ril::logger::android::AndroidLoggerFactory::getLoggerImpl()
+78  0x00009230 0x00009230 GLOBAL OBJ  104      _ZTVN3qti3ril6logger7android13AndroidLoggerE                                                                           vtable for qti::ril::logger::android::AndroidLogger
+80  0x000058c0 0x000058c0 GLOBAL FUNC 8        _ZN3qti3ril6logger10LoggerImpl13registerParamERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEESB_    qti::ril::logger::LoggerImpl::registerParam(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+81  0x00005acc 0x00005acc GLOBAL FUNC 44       _ZN3qti3ril6logger6Logger9setParamsERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEz                qti::ril::logger::Logger::setParams(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, ::)
+83  0x00007324 0x00007324 GLOBAL FUNC 148      _ZN3qti3ril6logger4diag17DiagLoggerFactoryC1Ev                                                                         qti::ril::logger::diag::DiagLoggerFactory::DiagLoggerFactory()
+84  0x00007418 0x00007418 GLOBAL FUNC 60       _ZN3qti3ril6logger4diag17DiagLoggerFactoryD0Ev                                                                         qti::ril::logger::diag::DiagLoggerFactory::~DiagLoggerFactory()
+85  0x0000564c 0x0000564c GLOBAL FUNC 24       _ZN3qti3ril6logger12StdoutLoggerC2Ev                                                                                   qti::ril::logger::StdoutLogger::StdoutLogger()
+86  0x00006c68 0x00006c68 GLOBAL FUNC 44       _ZTv0_n32_N3qti3ril6logger7android20AndroidLoggerFactoryD1Ev                                                           virtual thunk to qti::ril::logger::android::AndroidLoggerFactory::~AndroidLoggerFactory()
+88  0x00005458 0x00005458 GLOBAL FUNC 308      _ZN3qti3ril6logger13LoggerFactory16getLoggerFactoryERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEE qti::ril::logger::LoggerFactory::getLoggerFactory(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+89  ---------- 0x0000a988 GLOBAL OBJ  40       _ZN3qti3ril6logger7android20AndroidLoggerFactory7factoryE                                                              qti::ril::logger::android::AndroidLoggerFactory::factory
+91  0x00005748 0x00005748 GLOBAL FUNC 24       _ZTv0_n24_N3qti3ril6logger12StdoutLogger4vlogENS1_8LogLevelEPKcS5_                                                     virtual thunk to qti::ril::logger::StdoutLogger::vlog(qti::ril::logger::LogLevel, char const*, char const*)
+92  0x00006d84 0x00006d84 GLOBAL FUNC 260      _ZN3qti3ril6logger7android20AndroidLoggerFactory9theLoggerEv                                                           qti::ril::logger::android::AndroidLoggerFactory::theLogger()
+93  0x00009220 0x00009220 GLOBAL OBJ  16       _ZTTN3qti3ril6logger7android20AndroidLoggerFactoryE                                                                    VTT for qti::ril::logger::android::AndroidLoggerFactory
+94  0x000077b8 0x000077b8 GLOBAL FUNC 24       _ZN3qti3ril6logger4diag10DiagLoggerD2Ev                                                                                qti::ril::logger::diag::DiagLogger::~DiagLogger()
+95  0x00007454 0x00007454 GLOBAL FUNC 72       _ZTv0_n32_N3qti3ril6logger4diag17DiagLoggerFactoryD0Ev                                                                 virtual thunk to qti::ril::logger::diag::DiagLoggerFactory::~DiagLoggerFactory()
+96  0x00005c70 0x00005c70 GLOBAL FUNC 388      _ZN3qti3ril6logger6Logger4initEv                                                                                       qti::ril::logger::Logger::init()
+97  0x00007918 0x00007918 GLOBAL FUNC 112      _ZTv0_n32_N3qti3ril6logger4diag10DiagLoggerD0Ev                                                                        virtual thunk to qti::ril::logger::diag::DiagLogger::~DiagLogger()
+100 0x00009298 0x00009298 GLOBAL OBJ  16       _ZTTN3qti3ril6logger7android13AndroidLoggerE                                                                           VTT for qti::ril::logger::android::AndroidLogger
+101 0x00009138 0x00009138 GLOBAL OBJ  16       _ZTTN3qti3ril6logger12StdoutLoggerE                                                                                    VTT for qti::ril::logger::StdoutLogger
+102 0x00006d18 0x00006d18 GLOBAL FUNC 24       _ZN3qti3ril6logger7android20AndroidLoggerFactoryC2Ev                                                                   qti::ril::logger::android::AndroidLoggerFactory::AndroidLoggerFactory()
+103 0x00006c34 0x00006c34 GLOBAL FUNC 28       _ZN3qti3ril6logger7android20AndroidLoggerFactoryD1Ev                                                                   qti::ril::logger::android::AndroidLoggerFactory::~AndroidLoggerFactory()
+104 0x00009348 0x00009348 GLOBAL OBJ  16       _ZTTN3qti3ril6logger4diag17DiagLoggerFactoryE                                                                          VTT for qti::ril::logger::diag::DiagLoggerFactory
+105 0x00005730 0x00005730 GLOBAL FUNC 24       _ZN3qti3ril6logger12StdoutLogger4vlogENS1_8LogLevelEPKcS5_                                                             qti::ril::logger::StdoutLogger::vlog(qti::ril::logger::LogLevel, char const*, char const*)
+106 0x000090c0 0x000090c0 GLOBAL OBJ  104      _ZTVN3qti3ril6logger19StdoutLoggerFactoryE                                                                             vtable for qti::ril::logger::StdoutLoggerFactory
+108 0x00006f4c 0x00006f4c GLOBAL FUNC 160      _ZN3qti3ril6logger7android13AndroidLoggerC1Ev                                                                          qti::ril::logger::android::AndroidLogger::AndroidLogger()
+110 0x000098a0 0x0000a8a0 GLOBAL OBJ  64       LogLevel_names
+111 0x00005090 0x00005090 GLOBAL FUNC 592      _ZN3qti3ril6logger13LoggerFactoryC2ERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEE                 qti::ril::logger::LoggerFactory::LoggerFactory(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+112 0x000052f8 0x000052f8 GLOBAL FUNC 348      _ZN3qti3ril6logger13LoggerFactoryD2Ev                                                                                  qti::ril::logger::LoggerFactory::~LoggerFactory()
+113 0x00005760 0x00005760 GLOBAL FUNC 260      _ZN3qti3ril6logger19StdoutLoggerFactory13getLoggerImplEv                                                               qti::ril::logger::StdoutLoggerFactory::getLoggerImpl()
+115 0x00007988 0x00007988 GLOBAL FUNC 220      _ZN3qti3ril6logger4diag10DiagLogger4vlogENS1_8LogLevelEPKcS6_                                                          qti::ril::logger::diag::DiagLogger::vlog(qti::ril::logger::LogLevel, char const*, char const*)
+116 0x00007704 0x00007704 GLOBAL FUNC 180      _ZN3qti3ril6logger4diag10DiagLoggerC1Ev                                                                                qti::ril::logger::diag::DiagLogger::DiagLogger()
+117 0x000078b0 0x000078b0 GLOBAL FUNC 104      _ZN3qti3ril6logger4diag10DiagLoggerD0Ev                                                                                qti::ril::logger::diag::DiagLogger::~DiagLogger()
+118 0x0000749c 0x0000749c GLOBAL FUNC 24       _ZN3qti3ril6logger4diag17DiagLoggerFactoryC2Ev                                                                         qti::ril::logger::diag::DiagLoggerFactory::DiagLoggerFactory()
+119 0x000073b8 0x000073b8 GLOBAL FUNC 28       _ZN3qti3ril6logger4diag17DiagLoggerFactoryD1Ev                                                                         qti::ril::logger::diag::DiagLoggerFactory::~DiagLoggerFactory()
+120 0x00009358 0x00009358 GLOBAL OBJ  104      _ZTVN3qti3ril6logger4diag10DiagLoggerE                                                                                 vtable for qti::ril::logger::diag::DiagLogger
+121 0x00005df4 0x00005df4 GLOBAL FUNC 68       _ZN3qti3ril6logger21qcril_get_thread_nameEv                                                                            qti::ril::logger::qcril_get_thread_name()
+122 ---------- 0x0000a938 GLOBAL OBJ  24       _ZN3qti3ril6logger6Logger6prefixE                                                                                      qti::ril::logger::Logger::prefix
+127 0x000073ec 0x000073ec GLOBAL FUNC 44       _ZTv0_n32_N3qti3ril6logger4diag17DiagLoggerFactoryD1Ev                                                                 virtual thunk to qti::ril::logger::diag::DiagLoggerFactory::~DiagLoggerFactory()
+128 0x00009128 0x00009128 GLOBAL OBJ  16       _ZTTN3qti3ril6logger19StdoutLoggerFactoryE                                                                             VTT for qti::ril::logger::StdoutLoggerFactory
+130 0x000091b8 0x000091b8 GLOBAL OBJ  104      _ZTVN3qti3ril6logger7android20AndroidLoggerFactoryE                                                                    vtable for qti::ril::logger::android::AndroidLoggerFactory
+131 ---------- 0x0000a9c8 GLOBAL OBJ  40       _ZN3qti3ril6logger4diag17DiagLoggerFactory7factoryE                                                                    qti::ril::logger::diag::DiagLoggerFactory::factory
+132 0x00007a64 0x00007a64 GLOBAL FUNC 232      _ZTv0_n24_N3qti3ril6logger4diag10DiagLogger4vlogENS1_8LogLevelEPKcS6_                                                  virtual thunk to qti::ril::logger::diag::DiagLogger::vlog(qti::ril::logger::LogLevel, char const*, char const*)
+133 0x0000783c 0x0000783c GLOBAL FUNC 116      _ZTv0_n32_N3qti3ril6logger4diag10DiagLoggerD1Ev                                                                        virtual thunk to qti::ril::logger::diag::DiagLogger::~DiagLogger()
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0xc90 0x000002a8   0xc90 -r-- DYNSYM      .dynsym
+4   0x00000f38   0x10c 0x00000f38   0x10c -r-- GNU_VERSYM  .gnu.version
+5   0x00001044    0x40 0x00001044    0x40 -r-- GNU_VERNEED .gnu.version_r
+6   0x00001088   0x2fc 0x00001088   0x2fc -r-- GNU_HASH    .gnu.hash
+7   0x00001384  0x1d4a 0x00001384  0x1d4a -r-- STRTAB      .dynstr
+8   0x000030d0   0x250 0x000030d0   0x250 -r-- ----        .rela.dyn
+9   0x00003320    0x30 0x00003320    0x30 -r-- ----        .relr.dyn
+10  0x00003350   0x4c8 0x00003350   0x4c8 -r-- RELA        .rela.plt
+11  0x00003818   0x138 0x00003818   0x138 -r-- PROGBITS    .rodata
+12  0x00003950   0x33c 0x00003950   0x33c -r-- PROGBITS    .eh_frame_hdr
+13  0x00003c90   0xc3c 0x00003c90   0xc3c -r-- PROGBITS    .eh_frame
+14  0x00005000  0x3138 0x00005000  0x3138 -r-x PROGBITS    .text
+15  0x00008140   0x350 0x00008140   0x350 -r-x PROGBITS    .plt
+16  0x00009000   0x408 0x00009000   0x408 -rw- PROGBITS    .data.rel.ro
+17  0x00009408    0x10 0x00009408    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00009418    0x18 0x00009418    0x18 -rw- INIT_ARRAY  .init_array
+19  0x00009430   0x210 0x00009430   0x210 -rw- DYNAMIC     .dynamic
+20  0x00009640    0xb0 0x00009640    0xb0 -rw- PROGBITS    .got
+21  0x000096f0   0x1b0 0x000096f0   0x1b0 -rw- PROGBITS    .got.plt
+22  0x000098a0    0x80 0x0000a8a0    0x80 -rw- PROGBITS    .data
+23  0x00009920     0x0 0x0000a920   0x148 -rw- NOBITS      .bss
+24  0x00009920   0x102 0x00000000   0x102 ---- STRTAB      .shstrtab
+25  0x00009a22   0x544 0x00000000   0x544 ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00001198 0x00001198 21  88   .gnu.hash           utf32le #(079ACDILPUX[`beinqy
+3   0x00001212 0x00001212 4   5    .gnu.hash           ascii   SC`S
+4   0x00001220 0x00001220 4   6    .gnu.hash           utf8    +u{h
+5   0x00001268 0x00001268 5   7    .gnu.hash           utf8    \flѧEi
+6   0x00001270 0x00001270 5   7    .gnu.hash           utf8    D7w#ͨ
+7   0x00001289 0x00001289 4   5    .gnu.hash           ascii   \eu{?
+8   0x0000128e 0x0000128e 9   11   .gnu.hash           utf8    u{(eݍP=k6
+9   0x000012a2 0x000012a2 6   7    .gnu.hash           ascii   9*HC`1
+10  0x00001357 0x00001357 4   5    .gnu.hash           ascii   -Uq3
+11  0x00001385 0x00001385 12  13   .dynstr             ascii   __cxa_atexit
+12  0x00001392 0x00001392 14  15   .dynstr             ascii   __cxa_finalize
+13  0x000013a1 0x000013a1 14  15   .dynstr             ascii   LogLevel_names
+14  0x000013b0 0x000013b0 115 116  .dynstr             ascii   _ZN3qti3ril6logger10LoggerImpl13registerParamERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEESB_
+15  0x00001424 0x00001424 99  100  .dynstr             ascii   _ZN3qti3ril6logger10LoggerImplC2ERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEE
+16  0x00001488 0x00001488 58  59   .dynstr             ascii   _ZN3qti3ril6logger12StdoutLogger4vlogENS1_8LogLevelEPKcS5_
+17  0x000014c3 0x000014c3 36  37   .dynstr             ascii   _ZN3qti3ril6logger12StdoutLoggerC1Ev
+18  0x000014e8 0x000014e8 36  37   .dynstr             ascii   _ZN3qti3ril6logger12StdoutLoggerC2Ev
+19  0x0000150d 0x0000150d 52  53   .dynstr             ascii   _ZN3qti3ril6logger13LoggerFactory15loggerFactoriesEv
+20  0x00001542 0x00001542 118 119  .dynstr             ascii   _ZN3qti3ril6logger13LoggerFactory16getLoggerFactoryERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEE
+21  0x000015b9 0x000015b9 110 111  .dynstr             ascii   _ZN3qti3ril6logger13LoggerFactory9getLoggerERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEE
+22  0x00001628 0x00001628 102 103  .dynstr             ascii   _ZN3qti3ril6logger13LoggerFactoryC2ERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEE
+23  0x0000168f 0x0000168f 41  42   .dynstr             ascii   _ZN3qti3ril6logger13LoggerFactoryC2ERKS2_
+24  0x000016b9 0x000016b9 37  38   .dynstr             ascii   _ZN3qti3ril6logger13LoggerFactoryD0Ev
+25  0x000016df 0x000016df 37  38   .dynstr             ascii   _ZN3qti3ril6logger13LoggerFactoryD1Ev
+26  0x00001705 0x00001705 37  38   .dynstr             ascii   _ZN3qti3ril6logger13LoggerFactoryD2Ev
+27  0x0000172b 0x0000172b 56  57   .dynstr             ascii   _ZN3qti3ril6logger19StdoutLoggerFactory13getLoggerImplEv
+28  0x00001764 0x00001764 43  44   .dynstr             ascii   _ZN3qti3ril6logger21qcril_get_thread_nameEv
+29  0x00001790 0x00001790 104 105  .dynstr             ascii   _ZN3qti3ril6logger6Logger10setDefaultERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEE
+30  0x000017f9 0x000017f9 39  40   .dynstr             ascii   _ZN3qti3ril6logger6Logger11debugLoggerE
+31  0x00001821 0x00001821 41  42   .dynstr             ascii   _ZN3qti3ril6logger6Logger13defaultLoggerE
+32  0x0000184b 0x0000184b 51  52   .dynstr             ascii   _ZN3qti3ril6logger6Logger3logENS1_8LogLevelEPKcS5_z
+33  0x0000187f 0x0000187f 32  33   .dynstr             ascii   _ZN3qti3ril6logger6Logger4initEv
+34  0x000018a0 0x000018a0 33  34   .dynstr             ascii   _ZN3qti3ril6logger6Logger6prefixE
+35  0x000018c2 0x000018c2 103 104  .dynstr             ascii   _ZN3qti3ril6logger6Logger9setParamsERKNSt3__112basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEz
+36  0x0000192a 0x0000192a 61  62   .dynstr             ascii   _ZNKSt3__119__shared_weak_count13__get_deleterERKSt9type_info
+37  0x00001968 0x00001968 56  57   .dynstr             ascii   _ZNSt3__110shared_ptrIN3qti3ril6logger10LoggerImplEED2Ev
+38  0x000019a1 0x000019a1 80  81   .dynstr             ascii   _ZNSt3__110shared_ptrIN3qti3ril6logger12StdoutLoggerEE11make_sharedIJEEES5_DpOT_
+39  0x000019f2 0x000019f2 58  59   .dynstr             ascii   _ZNSt3__110shared_ptrIN3qti3ril6logger12StdoutLoggerEED2Ev
+40  0x00001a2d 0x00001a2d 71  72   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+41  0x00001a75 0x00001a75 67  68   .dynstr             ascii   _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev
+42  0x00001ab9 0x00001ab9 60  61   .dynstr             ascii   _ZNSt3__113__tree_removeIPNS_16__tree_node_baseIPvEEEEvT_S5_
+43  0x00001af6 0x00001af6 48  49   .dynstr             ascii   _ZNSt3__119__shared_weak_count14__release_weakEv
+44  0x00001b27 0x00001b27 34  35   .dynstr             ascii   _ZNSt3__119__shared_weak_countD2Ev
+45  0x00001b4a 0x00001b4a 103 104  .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN3qti3ril6logger12StdoutLoggerENS_9allocatorIS4_EEE16__on_zero_sharedEv
+46  0x00001bb2 0x00001bb2 108 109  .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN3qti3ril6logger12StdoutLoggerENS_9allocatorIS4_EEE21__on_zero_shared_weakEv
+47  0x00001c1f 0x00001c1f 110 111  .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN3qti3ril6logger19StdoutLoggerFactoryENS_9allocatorIS4_EEE16__on_zero_sharedEv
+48  0x00001c8e 0x00001c8e 115 116  .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN3qti3ril6logger19StdoutLoggerFactoryENS_9allocatorIS4_EEE21__on_zero_shared_weakEv
+49  0x00001d02 0x00001d02 74  75   .dynstr             ascii   _ZNSt3__127__tree_balance_after_insertIPNS_16__tree_node_baseIPvEEEEvT_S5_
+50  0x00001d4d 0x00001d4d 270 271  .dynstr             ascii   _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPN3qti3ril6logger13LoggerFactoryEEENS_19__map_value_compareIS7_SD_NS_4lessIS7_EELb1EEENS5_ISD_EEE12__find_equalIS7_EERPNS_16__tree_node_baseIPvEERPNS_15__tree_end_nodeISO_EERKT_
+51  0x00001e5c 0x00001e5c 257 258  .dynstr             ascii   _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPN3qti3ril6logger13LoggerFactoryEEENS_19__map_value_compareIS7_SD_NS_4lessIS7_EELb1EEENS5_ISD_EEE4findIS7_EENS_15__tree_iteratorISD_PNS_11__tree_nodeISD_PvEElEERKT_
+52  0x00001f5e 0x00001f5e 224 225  .dynstr             ascii   _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPN3qti3ril6logger13LoggerFactoryEEENS_19__map_value_compareIS7_SD_NS_4lessIS7_EELb1EEENS5_ISD_EEE7destroyEPNS_11__tree_nodeISD_PvEE
+53  0x0000203f 0x0000203f 35  36   .dynstr             ascii   _ZTTN3qti3ril6logger12StdoutLoggerE
+54  0x00002063 0x00002063 42  43   .dynstr             ascii   _ZTTN3qti3ril6logger19StdoutLoggerFactoryE
+55  0x0000208e 0x0000208e 33  34   .dynstr             ascii   _ZTVN3qti3ril6logger10LoggerImplE
+56  0x000020b0 0x000020b0 35  36   .dynstr             ascii   _ZTVN3qti3ril6logger12StdoutLoggerE
+57  0x000020d4 0x000020d4 36  37   .dynstr             ascii   _ZTVN3qti3ril6logger13LoggerFactoryE
+58  0x000020f9 0x000020f9 42  43   .dynstr             ascii   _ZTVN3qti3ril6logger19StdoutLoggerFactoryE
+59  0x00002124 0x00002124 86  87   .dynstr             ascii   _ZTVNSt3__120__shared_ptr_emplaceIN3qti3ril6logger12StdoutLoggerENS_9allocatorIS4_EEEE
+60  0x0000217b 0x0000217b 93  94   .dynstr             ascii   _ZTVNSt3__120__shared_ptr_emplaceIN3qti3ril6logger19StdoutLoggerFactoryENS_9allocatorIS4_EEEE
+61  0x000021d9 0x000021d9 66  67   .dynstr             ascii   _ZTv0_n24_N3qti3ril6logger12StdoutLogger4vlogENS1_8LogLevelEPKcS5_
+62  0x0000221c 0x0000221c 64  65   .dynstr             ascii   _ZTv0_n24_N3qti3ril6logger19StdoutLoggerFactory13getLoggerImplEv
+63  0x0000225d 0x0000225d 6   7    .dynstr             ascii   _ZdlPv
+64  0x00002264 0x00002264 5   6    .dynstr             ascii   _Znwm
+65  0x0000226a 0x0000226a 19  20   .dynstr             ascii   __cxa_guard_acquire
+66  0x0000227e 0x0000227e 19  20   .dynstr             ascii   __cxa_guard_release
+67  0x00002292 0x00002292 18  19   .dynstr             ascii   __cxa_pure_virtual
+68  0x000022a5 0x000022a5 45  46   .dynstr             ascii   __emutls_v._ZN3qti3ril6logger6Logger7log_bufE
+69  0x000022d3 0x000022d3 16  17   .dynstr             ascii   __stack_chk_fail
+70  0x000022e4 0x000022e4 6   7    .dynstr             ascii   memcmp
+71  0x000022eb 0x000022eb 5   6    .dynstr             ascii   prctl
+72  0x000022f1 0x000022f1 6   7    .dynstr             ascii   printf
+73  0x000022f8 0x000022f8 9   10   .dynstr             ascii   vsnprintf
+74  0x00002302 0x00002302 67  68   .dynstr             ascii   _ZN3qti3ril6logger7android13AndroidLogger4vlogENS1_8LogLevelEPKcS6_
+75  0x00002346 0x00002346 45  46   .dynstr             ascii   _ZN3qti3ril6logger7android13AndroidLoggerC1Ev
+76  0x00002374 0x00002374 45  46   .dynstr             ascii   _ZN3qti3ril6logger7android13AndroidLoggerC2Ev
+77  0x000023a2 0x000023a2 65  66   .dynstr             ascii   _ZN3qti3ril6logger7android20AndroidLoggerFactory13getLoggerImplEv
+78  0x000023e4 0x000023e4 57  58   .dynstr             ascii   _ZN3qti3ril6logger7android20AndroidLoggerFactory7factoryE
+79  0x0000241e 0x0000241e 60  61   .dynstr             ascii   _ZN3qti3ril6logger7android20AndroidLoggerFactory9theLoggerEv
+80  0x0000245b 0x0000245b 52  53   .dynstr             ascii   _ZN3qti3ril6logger7android20AndroidLoggerFactoryC1Ev
+81  0x00002490 0x00002490 52  53   .dynstr             ascii   _ZN3qti3ril6logger7android20AndroidLoggerFactoryC2Ev
+82  0x000024c5 0x000024c5 52  53   .dynstr             ascii   _ZN3qti3ril6logger7android20AndroidLoggerFactoryD0Ev
+83  0x000024fa 0x000024fa 52  53   .dynstr             ascii   _ZN3qti3ril6logger7android20AndroidLoggerFactoryD1Ev
+84  0x0000252f 0x0000252f 52  53   .dynstr             ascii   _ZN3qti3ril6logger7android20AndroidLoggerFactoryD2Ev
+85  0x00002564 0x00002564 89  90   .dynstr             ascii   _ZNSt3__110shared_ptrIN3qti3ril6logger7android13AndroidLoggerEE11make_sharedIJEEES6_DpOT_
+86  0x000025be 0x000025be 67  68   .dynstr             ascii   _ZNSt3__110shared_ptrIN3qti3ril6logger7android13AndroidLoggerEED2Ev
+87  0x00002602 0x00002602 112 113  .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN3qti3ril6logger7android13AndroidLoggerENS_9allocatorIS5_EEE16__on_zero_sharedEv
+88  0x00002673 0x00002673 117 118  .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN3qti3ril6logger7android13AndroidLoggerENS_9allocatorIS5_EEE21__on_zero_shared_weakEv
+89  0x000026e9 0x000026e9 44  45   .dynstr             ascii   _ZTTN3qti3ril6logger7android13AndroidLoggerE
+90  0x00002716 0x00002716 51  52   .dynstr             ascii   _ZTTN3qti3ril6logger7android20AndroidLoggerFactoryE
+91  0x0000274a 0x0000274a 44  45   .dynstr             ascii   _ZTVN3qti3ril6logger7android13AndroidLoggerE
+92  0x00002777 0x00002777 51  52   .dynstr             ascii   _ZTVN3qti3ril6logger7android20AndroidLoggerFactoryE
+93  0x000027ab 0x000027ab 95  96   .dynstr             ascii   _ZTVNSt3__120__shared_ptr_emplaceIN3qti3ril6logger7android13AndroidLoggerENS_9allocatorIS5_EEEE
+94  0x0000280b 0x0000280b 75  76   .dynstr             ascii   _ZTv0_n24_N3qti3ril6logger7android13AndroidLogger4vlogENS1_8LogLevelEPKcS6_
+95  0x00002857 0x00002857 73  74   .dynstr             ascii   _ZTv0_n24_N3qti3ril6logger7android20AndroidLoggerFactory13getLoggerImplEv
+96  0x000028a1 0x000028a1 60  61   .dynstr             ascii   _ZTv0_n32_N3qti3ril6logger7android20AndroidLoggerFactoryD0Ev
+97  0x000028de 0x000028de 60  61   .dynstr             ascii   _ZTv0_n32_N3qti3ril6logger7android20AndroidLoggerFactoryD1Ev
+98  0x0000291b 0x0000291b 23  24   .dynstr             ascii   __android_log_buf_write
+99  0x00002933 0x00002933 15  16   .dynstr             ascii   Diag_LSM_DeInit
+100 0x00002943 0x00002943 13  14   .dynstr             ascii   Diag_LSM_Init
+101 0x00002951 0x00002951 61  62   .dynstr             ascii   _ZN3qti3ril6logger4diag10DiagLogger4vlogENS1_8LogLevelEPKcS6_
+102 0x0000298f 0x0000298f 39  40   .dynstr             ascii   _ZN3qti3ril6logger4diag10DiagLoggerC1Ev
+103 0x000029b7 0x000029b7 39  40   .dynstr             ascii   _ZN3qti3ril6logger4diag10DiagLoggerC2Ev
+104 0x000029df 0x000029df 39  40   .dynstr             ascii   _ZN3qti3ril6logger4diag10DiagLoggerD0Ev
+105 0x00002a07 0x00002a07 39  40   .dynstr             ascii   _ZN3qti3ril6logger4diag10DiagLoggerD1Ev
+106 0x00002a2f 0x00002a2f 39  40   .dynstr             ascii   _ZN3qti3ril6logger4diag10DiagLoggerD2Ev
+107 0x00002a57 0x00002a57 59  60   .dynstr             ascii   _ZN3qti3ril6logger4diag17DiagLoggerFactory13getLoggerImplEv
+108 0x00002a93 0x00002a93 51  52   .dynstr             ascii   _ZN3qti3ril6logger4diag17DiagLoggerFactory7factoryE
+109 0x00002ac7 0x00002ac7 54  55   .dynstr             ascii   _ZN3qti3ril6logger4diag17DiagLoggerFactory9theLoggerEv
+110 0x00002afe 0x00002afe 46  47   .dynstr             ascii   _ZN3qti3ril6logger4diag17DiagLoggerFactoryC1Ev
+111 0x00002b2d 0x00002b2d 46  47   .dynstr             ascii   _ZN3qti3ril6logger4diag17DiagLoggerFactoryC2Ev
+112 0x00002b5c 0x00002b5c 46  47   .dynstr             ascii   _ZN3qti3ril6logger4diag17DiagLoggerFactoryD0Ev
+113 0x00002b8b 0x00002b8b 46  47   .dynstr             ascii   _ZN3qti3ril6logger4diag17DiagLoggerFactoryD1Ev
+114 0x00002bba 0x00002bba 46  47   .dynstr             ascii   _ZN3qti3ril6logger4diag17DiagLoggerFactoryD2Ev
+115 0x00002be9 0x00002be9 83  84   .dynstr             ascii   _ZNSt3__110shared_ptrIN3qti3ril6logger4diag10DiagLoggerEE11make_sharedIJEEES6_DpOT_
+116 0x00002c3d 0x00002c3d 61  62   .dynstr             ascii   _ZNSt3__110shared_ptrIN3qti3ril6logger4diag10DiagLoggerEED2Ev
+117 0x00002c7b 0x00002c7b 106 107  .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN3qti3ril6logger4diag10DiagLoggerENS_9allocatorIS5_EEE16__on_zero_sharedEv
+118 0x00002ce6 0x00002ce6 111 112  .dynstr             ascii   _ZNSt3__120__shared_ptr_emplaceIN3qti3ril6logger4diag10DiagLoggerENS_9allocatorIS5_EEE21__on_zero_shared_weakEv
+119 0x00002d56 0x00002d56 38  39   .dynstr             ascii   _ZTTN3qti3ril6logger4diag10DiagLoggerE
+120 0x00002d7d 0x00002d7d 45  46   .dynstr             ascii   _ZTTN3qti3ril6logger4diag17DiagLoggerFactoryE
+121 0x00002dab 0x00002dab 38  39   .dynstr             ascii   _ZTVN3qti3ril6logger4diag10DiagLoggerE
+122 0x00002dd2 0x00002dd2 45  46   .dynstr             ascii   _ZTVN3qti3ril6logger4diag17DiagLoggerFactoryE
+123 0x00002e00 0x00002e00 89  90   .dynstr             ascii   _ZTVNSt3__120__shared_ptr_emplaceIN3qti3ril6logger4diag10DiagLoggerENS_9allocatorIS5_EEEE
+124 0x00002e5a 0x00002e5a 69  70   .dynstr             ascii   _ZTv0_n24_N3qti3ril6logger4diag10DiagLogger4vlogENS1_8LogLevelEPKcS6_
+125 0x00002ea0 0x00002ea0 67  68   .dynstr             ascii   _ZTv0_n24_N3qti3ril6logger4diag17DiagLoggerFactory13getLoggerImplEv
+126 0x00002ee4 0x00002ee4 47  48   .dynstr             ascii   _ZTv0_n32_N3qti3ril6logger4diag10DiagLoggerD0Ev
+127 0x00002f14 0x00002f14 47  48   .dynstr             ascii   _ZTv0_n32_N3qti3ril6logger4diag10DiagLoggerD1Ev
+128 0x00002f44 0x00002f44 54  55   .dynstr             ascii   _ZTv0_n32_N3qti3ril6logger4diag17DiagLoggerFactoryD0Ev
+129 0x00002f7b 0x00002f7b 54  55   .dynstr             ascii   _ZTv0_n32_N3qti3ril6logger4diag17DiagLoggerFactoryD1Ev
+130 0x00002fb2 0x00002fb2 11  12   .dynstr             ascii   msg_sprintf
+131 0x00002fbe 0x00002fbe 5   6    .dynstr             ascii   abort
+132 0x00002fc4 0x00002fc4 4   5    .dynstr             ascii   free
+133 0x00002fc9 0x00002fc9 6   7    .dynstr             ascii   malloc
+134 0x00002fd0 0x00002fd0 6   7    .dynstr             ascii   memcpy
+135 0x00002fd7 0x00002fd7 6   7    .dynstr             ascii   memset
+136 0x00002fde 0x00002fde 19  20   .dynstr             ascii   pthread_getspecific
+137 0x00002ff2 0x00002ff2 18  19   .dynstr             ascii   pthread_key_create
+138 0x00003005 0x00003005 18  19   .dynstr             ascii   pthread_key_delete
+139 0x00003018 0x00003018 18  19   .dynstr             ascii   pthread_mutex_lock
+140 0x0000302b 0x0000302b 20  21   .dynstr             ascii   pthread_mutex_unlock
+141 0x00003040 0x00003040 12  13   .dynstr             ascii   pthread_once
+142 0x0000304d 0x0000304d 19  20   .dynstr             ascii   pthread_setspecific
+143 0x00003061 0x00003061 7   8    .dynstr             ascii   realloc
+144 0x00003069 0x00003069 9   10   .dynstr             ascii   liblog.so
+145 0x00003073 0x00003073 6   7    .dynstr             ascii   LIBLOG
+146 0x0000307a 0x0000307a 7   8    .dynstr             ascii   libc.so
+147 0x00003082 0x00003082 4   5    .dynstr             ascii   LIBC
+148 0x00003087 0x00003087 12  13   .dynstr             ascii   libcutils.so
+149 0x00003094 0x00003094 9   10   .dynstr             ascii   libc++.so
+150 0x0000309e 0x0000309e 10  11   .dynstr             ascii   libdiag.so
+151 0x000030a9 0x000030a9 7   8    .dynstr             ascii   libm.so
+152 0x000030b1 0x000030b1 8   9    .dynstr             ascii   libdl.so
+153 0x000030ba 0x000030ba 19  20   .dynstr             ascii   libril-qc-logger.so
+154 0x000030d0 0x000030d0 4   5    .rela.dyn           ascii   APS2
+155 0x00003818 0x00003818 10  11   .rodata             ascii   DEBUG
+156 0x00003826 0x00003826 7   8    .rodata             ascii   [%s] %s
+157 0x0000382e 0x0000382e 10  11   .rodata             ascii   HIGH
+158 0x00003839 0x00003839 10  11   .rodata             ascii   MAX
+159 0x00003844 0x00003844 20  21   .rodata             ascii   Setting logger to %s
+160 0x00003859 0x00003859 10  11   .rodata             ascii   WARN
+161 0x00003864 0x00003864 16  17   .rodata             ascii   libril-qc-logger
+162 0x00003875 0x00003875 31  32   .rodata             ascii   Unable to instantiate logger %s
+163 0x00003895 0x00003895 10  11   .rodata             ascii   ESSENTIAL
+164 0x000038a0 0x000038a0 10  11   .rodata             ascii   INFO
+165 0x000038ab 0x000038ab 10  11   .rodata             ascii   FATAL
+166 0x000038b6 0x000038b6 42  43   .rodata             ascii   Unable to find LoggerFactory for logger %s
+167 0x000038e1 0x000038e1 12  13   .rodata             ascii   [%s:%s]: %s\n
+168 0x000038ee 0x000038ee 55  56   .rodata             ascii   vendor/qcom/proprietary/qcril-hal/logger/DiagLogger.cpp
+169 0x00003926 0x00003926 10  11   .rodata             ascii   VERBOSE
+170 0x000057b0 0x000057b0 4   6    .text               utf8    \t}\nȪ
+171 0x000058b5 0x000058b5 4   6    .text               utf8    {¨b\n
+172 0x00005b74 0x00005b74 4   6    .text               utf8    \t}\nȪ
+173 0x00005ebe 0x00005ebe 5   6    .text               ascii   @9)%C
+174 0x00005f0e 0x00005f0e 5   6    .text               ascii   @9)%C
+175 0x00005f66 0x00005f66 5   6    .text               ascii   @9)%C
+176 0x00005fbe 0x00005fbe 5   6    .text               ascii   @9)%C
+177 0x00006006 0x00006006 5   6    .text               ascii   @9)%C
+178 0x0000608d 0x0000608d 4   6    .text               utf8    {¨d\b
+179 0x000060fc 0x000060fc 5   6    .text               ascii   \t\rB8\n
+180 0x000061e7 0x000061e7 4   5    .text               ascii   T)\b@
+181 0x000061ec 0x000061ec 5   6    .text               ascii   (a@9\b
+182 0x000061f3 0x000061f3 4   5    .text               ascii   5(\t@
+183 0x000063bc 0x000063bc 5   6    .text               ascii   \t\rB8\n
+184 0x00006404 0x00006404 5   6    .text               ascii   \t\rB8\n
+185 0x00006493 0x00006493 4   5    .text               ascii   RH\t@
+186 0x000064af 0x000064af 4   5    .text               ascii   TH\t@
+187 0x000064bc 0x000064bc 5   6    .text               ascii   La@9_
+188 0x000064f8 0x000064f8 5   6    .text               ascii   La@9_
+189 0x00006503 0x00006503 4   5    .text               ascii   T-\b@
+190 0x0000653c 0x0000653c 4   5    .text               ascii   -`@9
+191 0x0000655b 0x0000655b 4   5    .text               ascii   R\n\t@
+192 0x00006560 0x00006560 5   6    .text               ascii   \va@9L
+193 0x00006597 0x00006597 4   5    .text               ascii   9\n\t@
+194 0x000065ec 0x000065ec 6   7    .text               ascii   Ka@9\v\b
+195 0x000065fc 0x000065fc 4   5    .text               ascii   la@9
+196 0x00006603 0x00006603 4   5    .text               ascii   4\n\t@
+197 0x0000661f 0x0000661f 4   5    .text               ascii   9\n\t@
+198 0x00006674 0x00006674 6   7    .text               ascii   Ka@9K\t
+199 0x00006684 0x00006684 5   6    .text               ascii   la@9\f
+200 0x0000668b 0x0000668b 4   5    .text               ascii   4\n\t@
+201 0x0000669b 0x0000669b 6   7    .text               ascii   THa@9(
+202 0x000066a3 0x000066a3 4   5    .text               ascii   4H\t@
+203 0x000066d0 0x000066d0 5   6    .text               ascii   La@9_
+204 0x000066f8 0x000066f8 6   7    .text               ascii   ia@9)\b
+205 0x0000674c 0x0000674c 4   5    .text               ascii   Ia@9
+206 0x000067ab 0x000067ab 7   8    .text               ascii   R\na@9*a
+207 0x000067bf 0x000067bf 4   5    .text               ascii   9(\t@
+208 0x0000680b 0x0000680b 7   8    .text               ascii   R\na@9*a
+209 0x0000681f 0x0000681f 4   5    .text               ascii   9(\t@
+210 0x00006a23 0x00006a23 4   5    .text               ascii   6`*@
+211 0x00006a7f 0x00006a7f 4   5    .text               ascii   6`*@
+212 0x00006bc7 0x00006bc7 4   6    .text               utf8    9(̍R
+213 0x00006dd4 0x00006dd4 4   6    .text               utf8    \t}\nȪ
+214 0x00006f7f 0x00006f7f 4   6    .text               utf8    9(̍R
+215 0x0000705f 0x0000705f 4   6    .text               utf8    9)̍R
+216 0x000071cf 0x000071cf 4   5    .text               ascii   6`*@
+217 0x0000722b 0x0000722b 4   5    .text               ascii   6`*@
+218 0x00007280 0x00007280 4   6    .text               utf8    *̍RK
+219 0x00007558 0x00007558 4   6    .text               utf8    \t}\nȪ
+220 0x00007802 0x00007802 5   6    .text               ascii   @9)%C
+221 0x00007813 0x00007813 4   5    .text               ascii   6`"@
+222 0x00007876 0x00007876 5   6    .text               ascii   @9)%C
+223 0x00007887 0x00007887 4   5    .text               ascii   6`"@
+224 0x000078e2 0x000078e2 5   6    .text               ascii   @9)%C
+225 0x000078f3 0x000078f3 4   5    .text               ascii   6`"@
+226 0x00007952 0x00007952 5   6    .text               ascii   @9)%C
+227 0x00007963 0x00007963 4   5    .text               ascii   6`"@
+228 0x00007998 0x00007998 4   5    .text               ascii   \b @9
+229 0x00007a80 0x00007a80 4   5    .text               ascii   \b!@9
+230 0x00007d04 0x00007d04 7   8    .text               ascii   h"A9)%C
+231 0x00007d17 0x00007d17 4   5    .text               ascii   6`.@
+232 0x00007d7c 0x00007d7c 7   8    .text               ascii   h"A9)%C
+233 0x00007d8f 0x00007d8f 4   5    .text               ascii   6`.@
+234 0x00009921 0x00000001 11  12   .shstrtab           ascii   .init_array
+235 0x0000992d 0x0000000d 11  12   .shstrtab           ascii   .fini_array
+236 0x00009939 0x00000019 5   6    .shstrtab           ascii   .text
+237 0x0000993f 0x0000001f 4   5    .shstrtab           ascii   .got
+238 0x00009944 0x00000024 19  20   .shstrtab           ascii   .note.android.ident
+239 0x00009958 0x00000038 8   9    .shstrtab           ascii   .got.plt
+240 0x00009961 0x00000041 9   10   .shstrtab           ascii   .rela.plt
+241 0x0000996b 0x0000004b 4   5    .shstrtab           ascii   .bss
+242 0x00009970 0x00000050 7   8    .shstrtab           ascii   .dynstr
+243 0x00009978 0x00000058 13  14   .shstrtab           ascii   .eh_frame_hdr
+244 0x00009986 0x00000066 14  15   .shstrtab           ascii   .gnu.version_r
+245 0x00009995 0x00000075 12  13   .shstrtab           ascii   .data.rel.ro
+246 0x000099a2 0x00000082 9   10   .shstrtab           ascii   .relr.dyn
+247 0x000099ac 0x0000008c 9   10   .shstrtab           ascii   .rela.dyn
+248 0x000099b6 0x00000096 12  13   .shstrtab           ascii   .gnu.version
+249 0x000099c3 0x000000a3 7   8    .shstrtab           ascii   .dynsym
+250 0x000099cb 0x000000ab 9   10   .shstrtab           ascii   .gnu.hash
+251 0x000099d5 0x000000b5 9   10   .shstrtab           ascii   .eh_frame
+252 0x000099df 0x000000bf 18  19   .shstrtab           ascii   .note.gnu.build-id
+253 0x000099f2 0x000000d2 8   9    .shstrtab           ascii   .dynamic
+254 0x000099fb 0x000000db 9   10   .shstrtab           ascii   .shstrtab
+255 0x00009a05 0x000000e5 7   8    .shstrtab           ascii   .rodata
+256 0x00009a0d 0x000000ed 14  15   .shstrtab           ascii   .gnu_debugdata
+257 0x00009a1c 0x000000fc 5   6    .shstrtab           ascii   .data
+258 0x00009a23 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+259 0x00009a53 0x00000031 4   5    .gnu_debugdata      ascii   Yg\vh
+260 0x00009aa3 0x00000081 6   7    .gnu_debugdata      ascii   E\nRD?G
+261 0x00009b05 0x000000e3 4   6    .gnu_debugdata      utf8    ,D̴\n
+262 0x00009b42 0x00000120 5   7    .gnu_debugdata      utf8    18%CҐ
+263 0x00009b93 0x00000171 5   6    .gnu_debugdata      ascii   \v3\eoJ
+264 0x00009ba9 0x00000187 4   5    .gnu_debugdata      ascii   kX/$
+265 0x00009bb2 0x00000190 4   5    .gnu_debugdata      ascii   #J&z
+266 0x00009bcf 0x000001ad 5   6    .gnu_debugdata      ascii   e\t$BA
+267 0x00009bf6 0x000001d4 4   5    .gnu_debugdata      ascii   ^?P=
+268 0x00009c66 0x00000244 4   5    .gnu_debugdata      ascii   \vSNO
+269 0x00009c73 0x00000251 4   8    .gnu_debugdata      utf8    0gx:
+270 0x00009cb1 0x0000028f 4   6    .gnu_debugdata      utf8    աKc\e
+271 0x00009cea 0x000002c8 8   9    .gnu_debugdata      ascii   ea/zHJ!j
+272 0x00009d3b 0x00000319 4   5    .gnu_debugdata      ascii   <xV\v
+273 0x00009d5f 0x0000033d 4   6    .gnu_debugdata      utf8    TDХK
+274 0x00009d84 0x00000362 4   5    .gnu_debugdata      ascii   \tVH/
+275 0x00009dda 0x000003b8 4   5    .gnu_debugdata      ascii   uo.E
+276 0x00009dea 0x000003c8 5   6    .gnu_debugdata      ascii   \tmXY(
+277 0x00009df9 0x000003d7 4   5    .gnu_debugdata      ascii   NFoD
+278 0x00009e15 0x000003f3 8   10   .gnu_debugdata      utf8    |#N·%u'e
+279 0x00009e38 0x00000416 6   7    .gnu_debugdata      ascii   CS2bxp
+280 0x00009e44 0x00000422 4   5    .gnu_debugdata      ascii    ?xD
+281 0x00009e89 0x00000467 4   5    .gnu_debugdata      ascii   ,ig^
+282 0x00009ebd 0x0000049b 4   5    .gnu_debugdata      ascii   Xn:l
+283 0x00009ee0 0x000004be 6   7    .gnu_debugdata      ascii   nK)L9E
+284 0x00009efd 0x000004db 5   8    .gnu_debugdata      utf8    [ᇲh7;
+285 0x00009f08 0x000004e6 4   5    .gnu_debugdata      ascii   /vxX
+0x00008180    1     16 sym.imp.__cxa_atexit
+0x00008160    1     16 sym.imp.__cxa_finalize
+0x00008170    1     16 sym.imp.__cxa_guard_acquire
+0x00008190    1     16 sym.imp.__cxa_guard_release
+0x000081f0    1     16 sym.imp.__stack_chk_fail
+0x000082e0    1     16 sym.imp.memcmp
+0x000082c0    1     16 sym.imp.prctl
+0x00008250    1     16 sym.imp.printf
+0x00008290    1     16 sym.imp.vsnprintf
+0x00008350    1     16 sym.imp.__android_log_buf_write
+0x000083a0    1     16 sym.imp.Diag_LSM_DeInit
+0x00008390    1     16 sym.imp.Diag_LSM_Init
+0x000083b0    1     16 sym.imp.msg_sprintf
+0x00008450    1     16 sym.imp.abort
+0x00008480    1     16 sym.imp.free
+0x00008420    1     16 sym.imp.malloc
+0x00008440    1     16 sym.imp.memcpy
+0x000083e0    1     16 sym.imp.memset
+0x000083c0    1     16 sym.imp.pthread_getspecific
+0x00008470    1     16 sym.imp.pthread_key_create
+0x00008460    1     16 sym.imp.pthread_key_delete
+0x00008400    1     16 sym.imp.pthread_mutex_lock
+0x00008410    1     16 sym.imp.pthread_mutex_unlock
+0x000083f0    1     16 sym.imp.pthread_once
+0x00008430    1     16 sym.imp.pthread_setspecific
+0x000083d0    1     16 sym.imp.realloc
+0x00005000    1     12 entry0
+0x00005454    1      4 fcn.00005454
+0x000055f4    6     88 method.std::__1::shared_ptr_qti::ril::logger::LoggerImpl_.shared_ptr__
+0x00006354   15    276 reloc._ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPN3qti3ril6logger13LoggerFactoryEEENS_19__map_value_compareIS7_SD_NS_4lessIS7_EELb1EEENS5_ISD_EEE4findIS7_EENS_15__tree_iteratorISD_PNS_11__tree_nodeISD_PvEElEER
+0x00007508   11    260 method.qti::ril::logger::diag::DiagLoggerFactory.theLogger__
+0x00005710    1     32 method.qti::ril::logger::LoggerImpl.LoggerImpl_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00005af8   21    376 method.qti::ril::logger::Logger.setDefault_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00006fec    1     24 method.qti::ril::logger::android::AndroidLogger.vlog_qti::ril::logger::LogLevel__char_const__char_const_
+0x00006c50    1     24 fcn.00006c50
+0x00007b4c   17    376 method.std::__1::shared_ptr_qti::ril::logger::diag::DiagLogger__std::__1::shared_ptr_qti::ril::logger::diag::DiagLogger_.make_shared____
+0x00005664    5    172 method.qti::ril::logger::StdoutLogger.StdoutLogger__
+0x00005010    4    120 method.qti::ril::logger::LoggerFactory.loggerFactories__
+0x00006098   20    284 sym._ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPN3qti3ril6logger13LoggerFactoryE
+0x00006f34    1     24 method.qti::ril::logger::android::AndroidLogger.AndroidLogger__
+0x00006cd0    1     72 method.virtual_thunk_to_qti::ril::logger::android::AndroidLoggerFactory.AndroidLoggerFactory__
+0x000082d0    1     16 fcn.000082d0
+0x00005864    6     88 method.std::__1::shared_ptr_qti::ril::logger::StdoutLogger_.shared_ptr__
+0x00006b2c    1     12 method.std::__1::__shared_ptr_emplace_qti::ril::logger::StdoutLoggerFactory__std::__1::allocator_qti::ril::logger::StdoutLoggerFactory___.__on_zero_shared__
+0x000052e0    1     24 method.qti::ril::logger::LoggerFactory.LoggerFactory_qti::ril::logger::LoggerFactory_const_
+0x000058c8   13    344 method.qti::ril::logger::Logger.log_qti::ril::logger::LogLevel__char_const__char_const__..._
+0x00006aac    1     12 method.std::__1::__shared_ptr_emplace_qti::ril::logger::StdoutLogger__std::__1::allocator_qti::ril::logger::StdoutLogger___.__on_zero_shared__
+0x000076b8    3     76 fcn.000076b8
+0x000077d0    5    108 method.qti::ril::logger::diag::DiagLogger.DiagLogger__
+0x000074b4    3     84 method.qti::ril::logger::diag::DiagLoggerFactory.getLoggerImpl__
+0x00008360    1     16 fcn.00008360
+0x000073d4    1     24 fcn.000073d4
+0x00007660    6     88 method.std::__1::shared_ptr_qti::ril::logger::diag::DiagLogger_.shared_ptr__
+0x00007004    1     24 method.virtual_thunk_to_qti::ril::logger::android::AndroidLogger.vlog_qti::ril::logger::LogLevel__char_const__char_const_
+0x00006e88    3     84 method.virtual_thunk_to_qti::ril::logger::android::AndroidLoggerFactory.getLoggerImpl__
+0x00008310    1     16 fcn.00008310
+0x0000558c    5    104 method.qti::ril::logger::LoggerFactory.getLogger_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00006860   18    396 method.std::__1::shared_ptr_qti::ril::logger::StdoutLogger__std::__1::shared_ptr_qti::ril::logger::StdoutLogger_.make_shared____
+0x00006ab8    1      4 method.std::__1::__shared_ptr_emplace_qti::ril::logger::StdoutLogger__std::__1::allocator_qti::ril::logger::StdoutLogger___.__on_zero_shared_weak__
+0x000058bc    1      4 method.virtual_thunk_to_qti::ril::logger::StdoutLoggerFactory.getLoggerImpl__
+0x00006b94    5    160 method.qti::ril::logger::android::AndroidLoggerFactory.AndroidLoggerFactory__
+0x00006c94    1     60 fcn.00006c94
+0x0000760c    3     84 method.virtual_thunk_to_qti::ril::logger::diag::DiagLoggerFactory.getLoggerImpl__
+0x000052f8   17    348 method.qti::ril::logger::LoggerFactory.LoggerFactory__
+0x00006d30    3     84 method.qti::ril::logger::android::AndroidLoggerFactory.getLoggerImpl__
+0x000058c0    1      8 method.qti::ril::logger::LoggerImpl.registerParam_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00005acc    1     44 method.qti::ril::logger::Logger.setParams_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const__..._
+0x00006edc    6     88 method.std::__1::shared_ptr_qti::ril::logger::android::AndroidLogger_.shared_ptr__
+0x00007324    5    148 method.qti::ril::logger::diag::DiagLoggerFactory.DiagLoggerFactory__
+0x00007418    1     60 fcn.00007418
+0x0000564c    1     24 sym.qti::ril::logger::StdoutLogger::StdoutLogger__
+0x00006c68    1     44 sym.virtual_thunk_to_qti::ril::logger::android::AndroidLoggerFactory::AndroidLoggerFactory__
+0x00005458   11    308 method.qti::ril::logger::LoggerFactory.getLoggerFactory_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00007258    1     12 method.std::__1::__shared_ptr_emplace_qti::ril::logger::android::AndroidLogger__std::__1::allocator_qti::ril::logger::android::AndroidLogger___.__on_zero_shared__
+0x00005748    1     24 method.virtual_thunk_to_qti::ril::logger::StdoutLogger.vlog_qti::ril::logger::LogLevel__char_const__char_const_
+0x00006d84   11    260 method.qti::ril::logger::android::AndroidLoggerFactory.theLogger__
+0x000077b8    1     24 fcn.000077b8
+0x00007454    1     72 method.virtual_thunk_to_qti::ril::logger::diag::DiagLoggerFactory.DiagLoggerFactory__
+0x00005c70   18    388 method.qti::ril::logger::Logger.init__
+0x00007918    5    112 method.virtual_thunk_to_qti::ril::logger::diag::DiagLogger.DiagLogger__
+0x0000701c   18    380 method.std::__1::shared_ptr_qti::ril::logger::android::AndroidLogger__std::__1::shared_ptr_qti::ril::logger::android::AndroidLogger_.make_shared____
+0x00007264    1      4 method.std::__1::__shared_ptr_emplace_qti::ril::logger::android::AndroidLogger__std::__1::allocator_qti::ril::logger::android::AndroidLogger___.__on_zero_shared_weak__
+0x00006d18    1     24 fcn.00006d18
+0x00006c34    1     28 sym.qti::ril::logger::android::AndroidLoggerFactory::AndroidLoggerFactory__
+0x00005730    1     24 method.qti::ril::logger::StdoutLogger.vlog_qti::ril::logger::LogLevel__char_const__char_const_
+0x00006f4c    5    160 sym.qti::ril::logger::android::AndroidLogger::AndroidLogger__
+0x00007dc8    1      4 method.std::__1::__shared_ptr_emplace_qti::ril::logger::diag::DiagLogger__std::__1::allocator_qti::ril::logger::diag::DiagLogger___.__on_zero_shared_weak__
+0x00005090   21    592 method.qti::ril::logger::LoggerFactory.LoggerFactory_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x00005760   11    260 method.qti::ril::logger::StdoutLoggerFactory.getLoggerImpl__
+0x00006048    5     80 method.std::__1::__tree_std::__1::__value_type_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____qti::ril::logger::LoggerFactory___std::__1::__map_value_compare_std::__1::basic_string_char__std::__1::char_traits_char_
+0x000081a0    1     16 fcn.000081a0
+0x00008220    1     16 sym.imp.operator_delete_void_
+0x00007988    9    220 method.qti::ril::logger::diag::DiagLogger.vlog_qti::ril::logger::LogLevel__char_const__char_const_
+0x00007704    7    180 fcn.00007704
+0x000078b0    5    104 sym.qti::ril::logger::diag::DiagLogger::DiagLogger__
+0x0000749c    1     24 fcn.0000749c
+0x000073b8    1     28 sym.qti::ril::logger::diag::DiagLoggerFactory::DiagLoggerFactory__
+0x00005df4    1     68 method.qti::ril::logger.qcril_get_thread_name__
+0x00007e7c   20    448 sym.__emutls_get_address
+0x00006468   67   1016 method.void_std::__1::__tree_remove_std::__1.__tree_node_base_void___std::__1::__tree_node_base_void___std::__1::__tree_node_base_void__
+0x00006b38    1      4 method.std::__1::__shared_ptr_emplace_qti::ril::logger::StdoutLoggerFactory__std::__1::allocator_qti::ril::logger::StdoutLoggerFactory___.__on_zero_shared_weak__
+0x000061b4   27    416 method.void_std::__1::__tree_balance_after_insert_std::__1.__tree_node_base_void___std::__1::__tree_node_base_void___std::__1::__tree_node_base_void__
+0x00007dbc    1     12 method.std::__1::__shared_ptr_emplace_qti::ril::logger::diag::DiagLogger__std::__1::allocator_qti::ril::logger::diag::DiagLogger___.__on_zero_shared__
+0x000073ec    1     44 sym.virtual_thunk_to_qti::ril::logger::diag::DiagLoggerFactory::DiagLoggerFactory__
+0x00007a64    9    232 method.virtual_thunk_to_qti::ril::logger::diag::DiagLogger.vlog_qti::ril::logger::LogLevel__char_const__char_const_
+0x0000783c    5    116 sym.virtual_thunk_to_qti::ril::logger::diag::DiagLogger::DiagLogger__
+0x00008240    1     16 sym.imp.std::__1::__shared_weak_count::__release_weak__
+0x000082f0    1     16 sym.imp.std::__1::__shared_weak_count::__shared_weak_count__
+0x000081d0    1     16 sym.imp.operator_new_unsigned_long_
+0x0000500c    1      4 entry.fini0
+0x00006b3c    2    104 entry.init0
+0x00007268    5    188 entry.init1
+0x00007dcc    5    176 entry.init2
+0x000081b0    1     16 method.std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char___.basic_string_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char____const_
+0x000081c0    1     16 fcn.000081c0
+0x000081e0    1     16 fcn.000081e0
+0x00008200    1     16 fcn.00008200
+0x00008210    1     16 fcn.00008210
+0x00008230    1     16 fcn.00008230
+0x00008260    1     16 fcn.00008260
+0x00008270    1     16 fcn.00008270
+0x00005a20    3    172 sym.snprintf_char__unsigned_long_pass_object_size1__char_const__::_
+0x000082a0    1     16 fcn.000082a0
+0x000082b0    1     16 fcn.000082b0
+0x00008280    1     16 fcn.00008280
+0x00008320    1     16 fcn.00008320
+0x00008330    1     16 fcn.00008330
+0x00008340    1     16 fcn.00008340
+0x00008370    1     16 fcn.00008370
+0x00008380    1     16 fcn.00008380
+0x00005088    1      8 method.std::__1::map_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_____qti::ril::logger::LoggerFactory__std::__1::less_std::__1::basic_string_char__std::__1::char_traits_char___std::__1::allocator_char_______std::__1:
+0x00005e40    1     40 method.qti::ril::logger::StdoutLoggerFactory.StdoutLoggerFactory__
+0x00005e7c    1     48 method.virtual_thunk_to_qti::ril::logger::StdoutLoggerFactory.StdoutLoggerFactory__
+0x00005fa0    5     84 method.virtual_thunk_to_qti::ril::logger::StdoutLogger.StdoutLogger__
+0x00006044    1      4 method.qti::ril::logger::LoggerImpl.LoggerImpl__
+0x000069ec    5     92 method.std::__1::__shared_ptr_emplace_qti::ril::logger::StdoutLogger__std::__1::allocator_qti::ril::logger::StdoutLogger___.__shared_ptr_emplace__
+0x00006abc    1     52 method.std::__1::__shared_ptr_emplace_qti::ril::logger::StdoutLoggerFactory__std::__1::allocator_qti::ril::logger::StdoutLoggerFactory___.__shared_ptr_emplace__
+0x00007198    5     92 method.std::__1::__shared_ptr_emplace_qti::ril::logger::android::AndroidLogger__std::__1::allocator_qti::ril::logger::android::AndroidLogger___.__shared_ptr_emplace__
+0x00007cc4    5    120 method.std::__1::__shared_ptr_emplace_qti::ril::logger::diag::DiagLogger__std::__1::allocator_qti::ril::logger::diag::DiagLogger___.__shared_ptr_emplace__
+0x00008078    3     56 fcn.00008078
+0x00005eac    5     80 fcn.00005eac
+0x00005efc    5     76 fcn.00005efc
+0x00005f48    5     88 sym.virtual_thunk_to_qti::ril::logger::StdoutLogger::StdoutLogger__
+0x00005ff4    5     80 sym.qti::ril::logger::LoggerImpl::LoggerImpl__
+0x00006a48    5    100 fcn.00006a48
+0x00006af0    1     60 fcn.00006af0
+0x000071f4    5    100 fcn.000071f4
+0x00007d3c    5    128 fcn.00007d3c
+0x00008040    3     52 fcn.00008040
+0x000080b4    8    132 fcn.000080b4
+0x00008140    1     20 section..plt

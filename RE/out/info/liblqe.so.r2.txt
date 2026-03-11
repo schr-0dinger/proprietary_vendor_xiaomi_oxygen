@@ -1,0 +1,599 @@
+arch     arm
+baddr    0x0
+binsz    74706
+bintype  elf
+bits     64
+canary   true
+injprot  false
+class    ELF64
+crypto   false
+endian   little
+havecode true
+laddr    0x0
+lang     c++
+linenum  true
+lsyms    true
+machine  ARM aarch64
+nx       true
+os       android
+pic      true
+relocs   true
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped false
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type size lib name                                              demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+29  0x0000b260 0x0000b260 GLOBAL FUNC 1312     lqe_ott_get_downlink_throughput_report_status
+30  0x00005604 0x00005604 GLOBAL FUNC 976      lqei_get_downlink_throughput_info
+31  0x00006cf4 0x00006cf4 GLOBAL FUNC 972      lqei_release
+32  0x00005e88 0x00005e88 GLOBAL FUNC 1440     lqei_set_uplink_throughput_indication_frequency
+33  0x00008cac 0x00008cac GLOBAL FUNC 244      lqe_cmdq_alloc_cmd
+34  0x00004bf4 0x00004bf4 GLOBAL FUNC 1092     lqei_get_min_downlink_throughput_frequency
+35  0x0000c28c 0x0000c28c GLOBAL FUNC 1536     lqe_ott_get_uplink_throughput_info
+36  0x0000c88c 0x0000c88c GLOBAL FUNC 796      lqe_release_wds_client
+37  0x0000e718 0x0000e718 GLOBAL FUNC 1444     lqe_wds_toggle_throughput_indications
+38  0x00004444 0x00004444 GLOBAL FUNC 1548     lqei_client_register
+39  0x0000ac4c 0x0000ac4c GLOBAL FUNC 1556     lqe_ott_toggle_throughput_indications
+40  0x00008fdc 0x00008fdc GLOBAL FUNC 796      lqe_release_ott_client
+41  0x0000698c 0x0000698c GLOBAL FUNC 872      lqei_init
+42  0x00005038 0x00005038 GLOBAL FUNC 1484     lqei_set_downlink_throughput_indication_frequency
+43  ---------- 0x00013190 GLOBAL OBJ  288      lqe_config
+44  0x0000cba8 0x0000cba8 GLOBAL FUNC 1244     lqe_int_wds_client
+45  0x000070c0 0x000070c0 GLOBAL FUNC 7148     lqe_process_cmd_cb
+46  0x00011ef8 0x00012ef8 GLOBAL OBJ  40       lqe_qmi_vtbl
+47  0x0000ecbc 0x0000ecbc GLOBAL FUNC 1584     lqe_wds_get_downlink_throughput_info
+48  0x000092f8 0x000092f8 GLOBAL FUNC 1444     lqe_int_ott_client
+49  0x0000b780 0x0000b780 GLOBAL FUNC 1536     lqe_ott_get_downlink_throughput_info
+50  0x0000bd80 0x0000bd80 GLOBAL FUNC 1292     lqe_ott_get_uplink_throughput_report_status
+51  0x0000e1b8 0x0000e1b8 GLOBAL FUNC 1376     lqe_wds_set_throughput_report_period
+52  0x0000654c 0x0000654c GLOBAL FUNC 1088     lqei_get_uplink_throughput_info
+53  0x00008ed8 0x00008ed8 GLOBAL FUNC 232      lqe_cmdq_enqueue_cmd
+54  ---------- 0x00013300 GLOBAL OBJ  80       lqe_wds_clients
+55  0x00008fc0 0x00008fc0 GLOBAL FUNC 16       lqe_cmdq_init
+56  0x0000a570 0x0000a570 GLOBAL FUNC 1756     lqe_ott_set_throughput_report_period
+57  0x00004014 0x00004014 GLOBAL FUNC 1072     lqei_client_release
+58  0x000059d4 0x000059d4 GLOBAL FUNC 1204     lqei_get_min_uplink_throughput_frequency
+59  ---------- 0x000132b0 GLOBAL OBJ  80       lqe_ott_clients
+60  0x00008fd0 0x00008fd0 GLOBAL FUNC 12       lqe_cmdq_deinit
+61  0x0000dcc0 0x0000dcc0 GLOBAL FUNC 1272     lqe_wds_get_downlink_throughput_report_status
+62  0x00008da4 0x00008da4 GLOBAL FUNC 308      lqe_cmdq_free_cmd
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000270    0x18 0x00000270    0x18 -r-- NOTE        .note.android.ident
+2   0x00000288    0x20 0x00000288    0x20 -r-- NOTE        .note.gnu.build-id
+3   0x000002a8   0x5e8 0x000002a8   0x5e8 -r-- DYNSYM      .dynsym
+4   0x00000890    0x7e 0x00000890    0x7e -r-- GNU_VERSYM  .gnu.version
+5   0x00000910    0x20 0x00000910    0x20 -r-- GNU_VERNEED .gnu.version_r
+6   0x00000930    0xf8 0x00000930    0xf8 -r-- GNU_HASH    .gnu.hash
+7   0x00000a28   0x6a6 0x00000a28   0x6a6 -r-- STRTAB      .dynstr
+8   0x000010d0    0x83 0x000010d0    0x83 -r-- ----        .rela.dyn
+9   0x00001158    0x78 0x00001158    0x78 -r-- ----        .relr.dyn
+10  0x000011d0   0x3a8 0x000011d0   0x3a8 -r-- RELA        .rela.plt
+11  0x00001578  0x1588 0x00001578  0x1588 -r-- PROGBITS    .rodata
+12  0x00002b00   0x15c 0x00002b00   0x15c -r-- PROGBITS    .eh_frame_hdr
+13  0x00002c60   0x64c 0x00002c60   0x64c -r-- PROGBITS    .eh_frame
+14  0x00004000  0xb2ec 0x00004000  0xb2ec -r-x PROGBITS    .text
+15  0x0000f2f0   0x290 0x0000f2f0   0x290 -r-x PROGBITS    .plt
+16  0x00010000  0x1b08 0x00010000  0x1b08 -rw- PROGBITS    .data.rel.ro
+17  0x00011b08    0x10 0x00011b08    0x10 -rw- FINI_ARRAY  .fini_array
+18  0x00011b18   0x240 0x00011b18   0x240 -rw- DYNAMIC     .dynamic
+19  0x00011d58    0x50 0x00011d58    0x50 -rw- PROGBITS    .got
+20  0x00011da8   0x150 0x00011da8   0x150 -rw- PROGBITS    .got.plt
+21  0x00011ef8    0x28 0x00012ef8    0x28 -rw- PROGBITS    .data
+22  0x00011f20     0x0 0x00012f20   0x430 -rw- NOBITS      .bss
+23  0x00011f20    0xf6 0x00000000    0xf6 ---- STRTAB      .shstrtab
+24  0x00012016   0x3bc 0x00000000   0x3bc ---- PROGBITS    .gnu_debugdata
+
+[Strings]
+nth paddr      vaddr      len size section             type    string
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000034 0x00000034 4   10                       utf16le @8\n@
+1   0x0000027c 0x0000027c 7   8    .note.android.ident ascii   Android
+2   0x00000984 0x00000984 7   32   .gnu.hash           utf32le "#'+07<
+3   0x000009ce 0x000009ce 5   6    .gnu.hash           ascii   P)"^E
+4   0x000009f2 0x000009f2 6   7    .gnu.hash           ascii   @6Den#
+5   0x00000a06 0x00000a06 6   7    .gnu.hash           ascii   Ux~|of
+6   0x00000a29 0x00000a29 14  15   .dynstr             ascii   __cxa_finalize
+7   0x00000a38 0x00000a38 15  16   .dynstr             ascii   Diag_LSM_DeInit
+8   0x00000a48 0x00000a48 13  14   .dynstr             ascii   Diag_LSM_Init
+9   0x00000a56 0x00000a56 16  17   .dynstr             ascii   __stack_chk_fail
+10  0x00000a67 0x00000a67 17  18   .dynstr             ascii   ds_format_log_msg
+11  0x00000a79 0x00000a79 13  14   .dynstr             ascii   ds_get_target
+12  0x00000a87 0x00000a87 17  18   .dynstr             ascii   ds_get_target_str
+13  0x00000a99 0x00000a99 15  16   .dynstr             ascii   lqe_cmdq_deinit
+14  0x00000aa9 0x00000aa9 13  14   .dynstr             ascii   lqe_cmdq_init
+15  0x00000ab7 0x00000ab7 10  11   .dynstr             ascii   lqe_config
+16  0x00000ac2 0x00000ac2 18  19   .dynstr             ascii   lqe_int_ott_client
+17  0x00000ad5 0x00000ad5 18  19   .dynstr             ascii   lqe_int_wds_client
+18  0x00000ae8 0x00000ae8 36  37   .dynstr             ascii   lqe_ott_get_downlink_throughput_info
+19  0x00000b0d 0x00000b0d 45  46   .dynstr             ascii   lqe_ott_get_downlink_throughput_report_status
+20  0x00000b3b 0x00000b3b 34  35   .dynstr             ascii   lqe_ott_get_uplink_throughput_info
+21  0x00000b5e 0x00000b5e 43  44   .dynstr             ascii   lqe_ott_get_uplink_throughput_report_status
+22  0x00000b8a 0x00000b8a 36  37   .dynstr             ascii   lqe_ott_set_throughput_report_period
+23  0x00000baf 0x00000baf 37  38   .dynstr             ascii   lqe_ott_toggle_throughput_indications
+24  0x00000bd5 0x00000bd5 18  19   .dynstr             ascii   lqe_process_cmd_cb
+25  0x00000be8 0x00000be8 12  13   .dynstr             ascii   lqe_qmi_vtbl
+26  0x00000bf5 0x00000bf5 22  23   .dynstr             ascii   lqe_release_ott_client
+27  0x00000c0c 0x00000c0c 22  23   .dynstr             ascii   lqe_release_wds_client
+28  0x00000c23 0x00000c23 36  37   .dynstr             ascii   lqe_wds_get_downlink_throughput_info
+29  0x00000c48 0x00000c48 45  46   .dynstr             ascii   lqe_wds_get_downlink_throughput_report_status
+30  0x00000c76 0x00000c76 36  37   .dynstr             ascii   lqe_wds_set_throughput_report_period
+31  0x00000c9b 0x00000c9b 37  38   .dynstr             ascii   lqe_wds_toggle_throughput_indications
+32  0x00000cc1 0x00000cc1 20  21   .dynstr             ascii   lqei_client_register
+33  0x00000cd6 0x00000cd6 19  20   .dynstr             ascii   lqei_client_release
+34  0x00000cea 0x00000cea 33  34   .dynstr             ascii   lqei_get_downlink_throughput_info
+35  0x00000d0c 0x00000d0c 42  43   .dynstr             ascii   lqei_get_min_downlink_throughput_frequency
+36  0x00000d37 0x00000d37 40  41   .dynstr             ascii   lqei_get_min_uplink_throughput_frequency
+37  0x00000d60 0x00000d60 31  32   .dynstr             ascii   lqei_get_uplink_throughput_info
+38  0x00000d80 0x00000d80 9   10   .dynstr             ascii   lqei_init
+39  0x00000d8a 0x00000d8a 12  13   .dynstr             ascii   lqei_release
+40  0x00000d97 0x00000d97 49  50   .dynstr             ascii   lqei_set_downlink_throughput_indication_frequency
+41  0x00000dc9 0x00000dc9 47  48   .dynstr             ascii   lqei_set_uplink_throughput_indication_frequency
+42  0x00000df9 0x00000df9 11  12   .dynstr             ascii   msg_sprintf
+43  0x00000e05 0x00000e05 21  22   .dynstr             ascii   pthread_mutex_destroy
+44  0x00000e1b 0x00000e1b 18  19   .dynstr             ascii   pthread_mutex_init
+45  0x00000e2e 0x00000e2e 18  19   .dynstr             ascii   pthread_mutex_lock
+46  0x00000e41 0x00000e41 20  21   .dynstr             ascii   pthread_mutex_unlock
+47  0x00000e56 0x00000e56 14  15   .dynstr             ascii   ds_cmdq_deinit
+48  0x00000e65 0x00000e65 11  12   .dynstr             ascii   ds_cmdq_enq
+49  0x00000e71 0x00000e71 12  13   .dynstr             ascii   ds_cmdq_init
+50  0x00000e7e 0x00000e7e 4   5    .dynstr             ascii   free
+51  0x00000e83 0x00000e83 18  19   .dynstr             ascii   lqe_cmdq_alloc_cmd
+52  0x00000e96 0x00000e96 20  21   .dynstr             ascii   lqe_cmdq_enqueue_cmd
+53  0x00000eab 0x00000eab 17  18   .dynstr             ascii   lqe_cmdq_free_cmd
+54  0x00000ebd 0x00000ebd 6   7    .dynstr             ascii   malloc
+55  0x00000ec4 0x00000ec4 15  16   .dynstr             ascii   lqe_ott_clients
+56  0x00000ed4 0x00000ed4 35  36   .dynstr             ascii   ott_get_service_object_internal_v01
+57  0x00000ef8 0x00000ef8 31  32   .dynstr             ascii   qmi_client_get_service_instance
+58  0x00000f18 0x00000f18 25  26   .dynstr             ascii   qmi_client_message_decode
+59  0x00000f32 0x00000f32 24  25   .dynstr             ascii   qmi_client_notifier_init
+60  0x00000f4b 0x00000f4b 28  29   .dynstr             ascii   qmi_client_ott_init_instance
+61  0x00000f68 0x00000f68 28  29   .dynstr             ascii   qmi_client_register_error_cb
+62  0x00000f85 0x00000f85 29  30   .dynstr             ascii   qmi_client_register_notify_cb
+63  0x00000fa3 0x00000fa3 18  19   .dynstr             ascii   qmi_client_release
+64  0x00000fb6 0x00000fb6 24  25   .dynstr             ascii   qmi_client_send_msg_sync
+65  0x00000fcf 0x00000fcf 15  16   .dynstr             ascii   lqe_wds_clients
+66  0x00000fdf 0x00000fdf 28  29   .dynstr             ascii   qmi_client_wds_init_instance
+67  0x00000ffc 0x00000ffc 35  36   .dynstr             ascii   wds_get_service_object_internal_v01
+68  0x00001020 0x00001020 7   8    .dynstr             ascii   libc.so
+69  0x00001028 0x00001028 4   5    .dynstr             ascii   LIBC
+70  0x0000102d 0x0000102d 10  11   .dynstr             ascii   libdiag.so
+71  0x00001038 0x00001038 13  14   .dynstr             ascii   libdsutils.so
+72  0x00001046 0x00001046 12  13   .dynstr             ascii   libcutils.so
+73  0x00001053 0x00001053 17  18   .dynstr             ascii   libqmiservices.so
+74  0x00001065 0x00001065 13  14   .dynstr             ascii   libqmi_cci.so
+75  0x00001073 0x00001073 19  20   .dynstr             ascii   libqmi_common_so.so
+76  0x00001087 0x00001087 23  24   .dynstr             ascii   libqmi_client_helper.so
+77  0x0000109f 0x0000109f 9   10   .dynstr             ascii   liblog.so
+78  0x000010a9 0x000010a9 9   10   .dynstr             ascii   libc++.so
+79  0x000010b3 0x000010b3 7   8    .dynstr             ascii   libm.so
+80  0x000010bb 0x000010bb 8   9    .dynstr             ascii   libdl.so
+81  0x000010c4 0x000010c4 9   10   .dynstr             ascii   liblqe.so
+82  0x000010d0 0x000010d0 4   5    .rela.dyn           ascii   APS2
+83  0x00001160 0x00001160 5   8    .relr.dyn           utf8    m۶m۶m
+84  0x00001168 0x00001168 5   8    .relr.dyn           utf8    m۶m۶m
+85  0x00001170 0x00001170 5   8    .relr.dyn           utf8    m۶m۶m
+86  0x00001178 0x00001178 5   8    .relr.dyn           utf8    m۶m۶m
+87  0x00001180 0x00001180 5   8    .relr.dyn           utf8    m۶m۶m
+88  0x00001188 0x00001188 5   8    .relr.dyn           utf8    m۶m۶m
+89  0x00001190 0x00001190 5   8    .relr.dyn           utf8    m۶m۶m
+90  0x00001198 0x00001198 5   8    .relr.dyn           utf8    m۶m۶m
+91  0x000011a0 0x000011a0 5   8    .relr.dyn           utf8    m۶m۶m
+92  0x000011a8 0x000011a8 5   8    .relr.dyn           utf8    m۶m۶m
+93  0x000011b0 0x000011b0 5   8    .relr.dyn           utf8    m۶m۶m
+94  0x000011b8 0x000011b8 5   8    .relr.dyn           utf8    m۶m۶m
+95  0x000011c0 0x000011c0 5   8    .relr.dyn           utf8    m۶m۶m
+96  0x00001578 0x00001578 34  35   .rodata             ascii   %s(): uplink message not supported
+97  0x0000159b 0x0000159b 65  66   .rodata             ascii   %s: turning off uplink throughput indications on client hanule:%d
+98  0x000015dd 0x000015dd 55  56   .rodata             ascii   lqe_toggle_registration_downlink_throughput_indications
+99  0x00001615 0x00001615 55  56   .rodata             ascii   %s(): Turning off downlink throughput indications: %d \n
+100 0x0000164d 0x0000164d 48  49   .rodata             ascii   process QMI_OTT_DOWNLINK_THROUGHPUT_INFO_IND_V01
+101 0x0000167e 0x0000167e 34  35   .rodata             ascii   lqe_ott_get_handle_from_qmi_client
+102 0x000016a1 0x000016a1 24  25   .rodata             ascii   %s,Invalid hanule passed
+103 0x000016ba 0x000016ba 23  24   .rodata             ascii   lqe_mdm_in_service_hdlr
+104 0x000016d2 0x000016d2 42  43   .rodata             ascii   %s(): Invalid filter mode ind msg error %d
+105 0x000016fd 0x000016fd 21  22   .rodata             ascii   %s: cmd alloc failed\n
+106 0x00001713 0x00001713 20  21   .rodata             ascii   lqei_qmi_client_init
+107 0x00001728 0x00001728 24  25   .rodata             ascii   %s(): downlink_rate : %u
+108 0x00001741 0x00001741 26  27   .rodata             ascii   %s(): invalid index passed
+109 0x0000175c 0x0000175c 45  46   .rodata             ascii   lqe_wds_get_downlink_throughput_report_status
+110 0x0000178a 0x0000178a 27  28   .rodata             ascii   %s(): Invalid hanule passed
+111 0x000017a6 0x000017a6 9   10   .rodata             ascii   lqei_init
+112 0x000017b0 0x000017b0 33  34   .rodata             ascii   %s(): Mutex initialization failed
+113 0x000017d2 0x000017d2 34  35   .rodata             ascii   %s(): invalid index [%d], skipping
+114 0x000017f5 0x000017f5 17  18   .rodata             ascii   lqe_cmdq_free_cmd
+115 0x00001807 0x00001807 20  21   .rodata             ascii   lqe_cmdq_enqueue_cmd
+116 0x0000181c 0x0000181c 34  35   .rodata             ascii   %s(): No handler for OTT IND id %d
+117 0x0000183f 0x0000183f 36  37   .rodata             ascii   lqe_wds_get_downlink_throughput_info
+118 0x00001864 0x00001864 48  49   .rodata             ascii   process QMI_WDS_DOWNLINK_THROUGHPUT_INFO_IND_V01
+119 0x00001898 0x00001898 42  43   .rodata             ascii   vendor/qcom/proprietary/data/lqe/src/lqe.c
+120 0x000018c3 0x000018c3 37  38   .rodata             ascii   lqe_ott_toggle_throughput_indications
+121 0x000018e9 0x000018e9 29  30   .rodata             ascii   %s(): failed to put commmand\n
+122 0x00001907 0x00001907 20  21   .rodata             ascii   lqei_client_register
+123 0x0000191c 0x0000191c 42  43   .rodata             ascii   %s(): dl_rate is:%d confidence_level is %d
+124 0x00001947 0x00001947 40  41   .rodata             ascii   lqei_get_min_uplink_throughput_frequency
+125 0x00001970 0x00001970 23  24   .rodata             ascii   lqe_process_qmi_sys_ind
+126 0x00001988 0x00001988 46  47   .rodata             ascii   process QMI_OTT_UPLINK_THROUGHPUT_INFO_IND_V01
+127 0x000019b7 0x000019b7 57  58   .rodata             ascii   %s(): failed on qmi_client_wds_init_instance with rc=%d!\n
+128 0x000019f1 0x000019f1 22  23   .rodata             ascii   lqe_qmi_get_wds_client
+129 0x00001a08 0x00001a08 21  22   .rodata             ascii   lqe_qmi_wds_notify_cb
+130 0x00001a1e 0x00001a1e 19  20   .rodata             ascii   unlock mutex failed
+131 0x00001a32 0x00001a32 33  34   .rodata             ascii   lqei_get_downlink_throughput_info
+132 0x00001a54 0x00001a54 37  38   .rodata             ascii   %s(): There is no registered callback
+133 0x00001a7a 0x00001a7a 50  51   .rodata             ascii   vendor/qcom/proprietary/data/lqe/src/lqe_qmi_ott.c
+134 0x00001aad 0x00001aad 18  19   .rodata             ascii   lqe_int_ott_client
+135 0x00001ac0 0x00001ac0 34  35   .rodata             ascii   lqe_ott_get_uplink_throughput_info
+136 0x00001ae3 0x00001ae3 50  51   .rodata             ascii   %s(): Invalid info received. info [%p], index [%d]
+137 0x00001b16 0x00001b16 54  55   .rodata             ascii   %s(): Turning on downlink throughput indications: %d \n
+138 0x00001b4d 0x00001b4d 36  37   .rodata             ascii   lqe_ott_get_downlink_throughput_info
+139 0x00001b72 0x00001b72 22  23   .rodata             ascii   %s(): uplink_rate : %u
+140 0x00001b89 0x00001b89 31  32   .rodata             ascii   lqei_get_uplink_throughput_info
+141 0x00001ba9 0x00001ba9 16  17   .rodata             ascii   %s: free_f NULL\n
+142 0x00001bba 0x00001bba 36  37   .rodata             ascii   lqe_ott_set_throughput_report_period
+143 0x00001bdf 0x00001bdf 25  26   .rodata             ascii   %s(): OTT service is up!\n
+144 0x00001bf9 0x00001bf9 36  37   .rodata             ascii   %s(): Unsupported service event=%d!\n
+145 0x00001c1e 0x00001c1e 16  17   .rodata             ascii   Diag LSM DeInit\n
+146 0x00001c2f 0x00001c2f 32  33   .rodata             ascii   %s(): unknown qmi sys event [%d]
+147 0x00001c50 0x00001c50 32  33   .rodata             ascii   %s(): LQE command is unsupported
+148 0x00001c71 0x00001c71 29  30   .rodata             ascii   %s(): Unknown direction [%d]\n
+149 0x00001c8f 0x00001c8f 49  50   .rodata             ascii   %s(): Unable to find a ott client handle for [%p]
+150 0x00001cc1 0x00001cc1 9   10   .rodata             ascii   %s: ENTRY
+151 0x00001ccb 0x00001ccb 19  20   .rodata             ascii   lqei_client_release
+152 0x00001cdf 0x00001cdf 27  28   .rodata             ascii   %s(): Invalid handle passed
+153 0x00001cfb 0x00001cfb 21  22   .rodata             ascii   %s(): invalid client\n
+154 0x00001d11 0x00001d11 25  26   .rodata             ascii   %s(): WDS service is up!\n
+155 0x00001d2b 0x00001d2b 49  50   .rodata             ascii   %s(): Not in SSR, ignoring WDS service up event!\n
+156 0x00001d5d 0x00001d5d 23  24   .rodata             ascii   %s(): bad params passed
+157 0x00001d75 0x00001d75 27  28   .rodata             ascii   %s(): reporting_status [%d]
+158 0x00001d91 0x00001d91 66  67   .rodata             ascii   %s: turning on downlink throughput indications on client handle:%d
+159 0x00001dd4 0x00001dd4 33  34   .rodata             ascii   %s(): never initialized. Skipping
+160 0x00001df6 0x00001df6 8   9    .rodata             ascii   %s: EXIT
+161 0x00001dff 0x00001dff 36  37   .rodata             ascii   %s(): releasing client at index [%d]
+162 0x00001e24 0x00001e24 50  51   .rodata             ascii   vendor/qcom/proprietary/data/lqe/src/lqe_qmi_wds.c
+163 0x00001e57 0x00001e57 26  27   .rodata             ascii   %s(): Uplink not supported
+164 0x00001e72 0x00001e72 42  43   .rodata             ascii   lqei_get_min_downlink_throughput_frequency
+165 0x00001e9d 0x00001e9d 34  35   .rodata             ascii   %s(): Failed to de-initialize cmdq
+166 0x00001ec0 0x00001ec0 42  43   .rodata             ascii   %s(): releasing ott client with index [%d]
+167 0x00001eeb 0x00001eeb 18  19   .rodata             ascii   lqe_int_wds_client
+168 0x00001efe 0x00001efe 17  18   .rodata             ascii   %s: EXIT with suc
+169 0x00001f10 0x00001f10 17  18   .rodata             ascii   %s: EXIT with err
+170 0x00001f22 0x00001f22 54  55   .rodata             ascii   %s(): process LQE_UPLINK_THROUGHPUT_IND_EV, index [%d]
+171 0x00001f59 0x00001f59 34  35   .rodata             ascii   %s(): No handler for WDS IND id %d
+172 0x00001f7c 0x00001f7c 17  18   .rodata             ascii   %s(): bad params\n
+173 0x00001f8e 0x00001f8e 57  58   .rodata             ascii   %s(): received LQE_QMI_SYS_EVENT_MODEM_OUT_OF_SERVICE_IND
+174 0x00001fc8 0x00001fc8 22  23   .rodata             ascii   lqe_process_ott_ind_cb
+175 0x00001fdf 0x00001fdf 56  57   .rodata             ascii   %s(): qmi_client_release of qmi_clnt_hndl [%p], rc [%d]\n
+176 0x00002018 0x00002018 57  58   .rodata             ascii   %s(): failed on qmi_client_ott_init_instance with rc=%d!\n
+177 0x00002052 0x00002052 53  54   .rodata             ascii   %s(): Turning off uplink throughput indications: %d \n
+178 0x00002088 0x00002088 17  18   .rodata             ascii   lock mutex failed
+179 0x0000209a 0x0000209a 47  48   .rodata             ascii   vendor/qcom/proprietary/data/lqe/src/lqe_cmdq.c
+180 0x000020ca 0x000020ca 15  16   .rodata             ascii   %s: bad params\n
+181 0x000020da 0x000020da 22  23   .rodata             ascii   lqe_release_ott_client
+182 0x000020f1 0x000020f1 20  21   .rodata             ascii   lqe_qmi_wds_callback
+183 0x00002106 0x00002106 49  50   .rodata             ascii   lqei_set_downlink_throughput_indication_frequency
+184 0x00002138 0x00002138 42  43   .rodata             ascii   %s(): ul_rate is:%d confidence_level is %d
+185 0x00002163 0x00002163 24  25   .rodata             ascii   %s(): target: [%d]: [%s]
+186 0x0000217c 0x0000217c 31  32   .rodata             ascii   %s(): init client at index [%d]
+187 0x0000219c 0x0000219c 23  24   .rodata             ascii   %s(): using index [%d]\n
+188 0x000021b4 0x000021b4 35  36   .rodata             ascii   %s(): failed with rc=%d, qmi_err=%d
+189 0x000021d8 0x000021d8 25  26   .rodata             ascii   %s(): BAD PARAMS received
+190 0x000021f2 0x000021f2 37  38   .rodata             ascii   %s(): LQE PULL command is unsupported
+191 0x00002218 0x00002218 23  24   .rodata             ascii   %s, BAD PARAMS received
+192 0x00002230 0x00002230 39  40   .rodata             ascii   %s:Unable to allocate a QMI OTT client
+193 0x00002258 0x00002258 64  65   .rodata             ascii   %s: turning on uplink throughput indications on client hanule:%d
+194 0x00002299 0x00002299 35  36   .rodata             ascii   %s(): Unkown event receieved [0x%X]
+195 0x000022bd 0x000022bd 72  73   .rodata             ascii   %s(): succesfully set report_interval_timer in downlink direction : %d \n
+196 0x00002306 0x00002306 52  53   .rodata             ascii   %s(): Turning on uplink throughput indications: %d \n
+197 0x0000233b 0x0000233b 26  27   .rodata             ascii   %s(): BAD PARAMS received\n
+198 0x00002356 0x00002356 67  68   .rodata             ascii   %s: turning off downlink throughput indications on client handle:%d
+199 0x0000239a 0x0000239a 51  52   .rodata             ascii   %s(): failed to get uplink throughput report status
+200 0x000023ce 0x000023ce 47  48   .rodata             ascii   lqei_set_uplink_throughput_indication_frequency
+201 0x000023fe 0x000023fe 12  13   .rodata             ascii   lqei_release
+202 0x0000240b 0x0000240b 33  34   .rodata             ascii   %s(): Called with null pointers!\n
+203 0x0000242d 0x0000242d 37  38   .rodata             ascii   %s:failed to allocate a client object
+204 0x00002453 0x00002453 26  27   .rodata             ascii   %s(): Mutex destroy failed
+205 0x0000246e 0x0000246e 30  31   .rodata             ascii   %s(): Unknown LQE event [0x%X]
+206 0x0000248d 0x0000248d 20  21   .rodata             ascii   lqe_qmi_ott_callback
+207 0x000024a2 0x000024a2 40  41   .rodata             ascii   %s(): released lqe client with index:%d\n
+208 0x000024cb 0x000024cb 53  54   .rodata             ascii   %s(): failed to get downlink throughput report status
+209 0x00002501 0x00002501 27  28   .rodata             ascii   lqe_mdm_out_of_service_hdlr
+210 0x0000251d 0x0000251d 28  29   .rodata             ascii   %s(): Re-issue LQE after SSR
+211 0x0000253a 0x0000253a 18  19   .rodata             ascii   lqe_qmi_ott_err_cb
+212 0x0000254d 0x0000254d 49  50   .rodata             ascii   %s(): Unable to find a wds client handle for [%p]
+213 0x0000257f 0x0000257f 42  43   .rodata             ascii   %s(): qmi_client_init_instance successful\n
+214 0x000025aa 0x000025aa 43  44   .rodata             ascii   lqe_ott_get_uplink_throughput_report_status
+215 0x000025d6 0x000025d6 53  54   .rodata             ascii   %s(): received LQE_QMI_SYS_EVENT_MODEM_IN_SERVICE_IND
+216 0x0000260c 0x0000260c 22  23   .rodata             ascii   lqe_process_wds_ind_cb
+217 0x00002623 0x00002623 36  37   .rodata             ascii   %s(): failed with rc=%d, qmi_err=%d\n
+218 0x00002648 0x00002648 27  28   .rodata             ascii   %s(): OTT service is down!\n
+219 0x00002664 0x00002664 27  28   .rodata             ascii   %s: EXIT with not supported
+220 0x00002680 0x00002680 54  55   .rodata             ascii   %s(): SSR OOS in progress... ignoring duplication call
+221 0x000026b7 0x000026b7 18  19   .rodata             ascii   lqe_cmdq_alloc_cmd
+222 0x000026ca 0x000026ca 22  23   .rodata             ascii   lqe_release_wds_client
+223 0x000026e1 0x000026e1 35  36   .rodata             ascii   %s(): already initialized. Skipping
+224 0x00002705 0x00002705 51  52   .rodata             ascii   %s(): LQE is using [0x%x] QMI service. Dropping ind
+225 0x00002739 0x00002739 6   7    .rodata             ascii   rmnet0
+226 0x00002740 0x00002740 21  22   .rodata             ascii   %s(): cmd enq failed\n
+227 0x00002756 0x00002756 21  22   .rodata             ascii   lqe_qmi_ott_notify_cb
+228 0x0000276c 0x0000276c 42  43   .rodata             ascii   %s(): releasing wds client with index [%d]
+229 0x00002797 0x00002797 34  35   .rodata             ascii   lqe_wds_get_handle_from_qmi_client
+230 0x000027ba 0x000027ba 18  19   .rodata             ascii   %s: using index:%d
+231 0x000027cd 0x000027cd 31  32   .rodata             ascii   %s(): Failed to initialize cmdq
+232 0x000027ed 0x000027ed 53  54   .rodata             ascii   lqe_toggle_registration_uplink_throughput_indications
+233 0x00002823 0x00002823 27  28   .rodata             ascii   %s(): reporting_status [%u]
+234 0x0000283f 0x0000283f 27  28   .rodata             ascii   %s(): confidence_level : %u
+235 0x0000285b 0x0000285b 49  50   .rodata             ascii   %s(): Not in SSR, ignoring OTT service up event!\n
+236 0x0000288d 0x0000288d 35  36   .rodata             ascii   %s(): uplink message not supported\n
+237 0x000028b1 0x000028b1 18  19   .rodata             ascii   lqe_qmi_wds_err_cb
+238 0x000028c4 0x000028c4 27  28   .rodata             ascii   %s(): WDS service is down!\n
+239 0x000028e0 0x000028e0 26  27   .rodata             ascii   %s(): actual_interval [%u]
+240 0x000028fb 0x000028fb 24  25   .rodata             ascii   %s,Invalid handle passed
+241 0x00002914 0x00002914 18  19   .rodata             ascii   lqe_process_cmd_cb
+242 0x00002927 0x00002927 56  57   .rodata             ascii   %s(): process LQE_DOWNLINK_THROUGHPUT_IND_EV, index [%d]
+243 0x00002960 0x00002960 14  15   .rodata             ascii   %s bad params\n
+244 0x0000296f 0x0000296f 45  46   .rodata             ascii   lqe_ott_get_downlink_throughput_report_status
+245 0x0000299d 0x0000299d 37  38   .rodata             ascii   lqe_wds_toggle_throughput_indications
+246 0x000029c3 0x000029c3 40  41   .rodata             ascii   %s(): releasing lqe client with index:%d
+247 0x000029ec 0x000029ec 17  18   .rodata             ascii   %s: alloc failed\n
+248 0x000029fe 0x000029fe 53  54   .rodata             ascii   %s(): OTT service not available on modem!, rc = [%d]\n
+249 0x00002a34 0x00002a34 70  71   .rodata             ascii   %s(): succesfully set report_interval_timer in uplink direction : %d \n
+250 0x00002a7b 0x00002a7b 22  23   .rodata             ascii   lqe_qmi_get_ott_client
+251 0x00002a92 0x00002a92 30  31   .rodata             ascii   %s(): client handle not found\n
+252 0x00002ab1 0x00002ab1 23  24   .rodata             ascii   %s(): cmd alloc failed\n
+253 0x00002ac9 0x00002ac9 36  37   .rodata             ascii   lqe_wds_set_throughput_report_period
+254 0x00002c3c 0x00002c3c 8   36   .eh_frame_hdr       utf32le 뇀܀뚸ܨ반ݐ솼ݸ
+255 0x0000427f 0x0000427f 4   5    .text               ascii   oB|3
+256 0x000042ef 0x000042ef 4   5    .text               ascii   oB@<
+257 0x000045bf 0x000045bf 4   5    .text               ascii   oBx(
+258 0x00004627 0x00004627 4   5    .text               ascii   oB`\b
+259 0x00004847 0x00004847 4   5    .text               ascii   oBx(
+260 0x000048b3 0x000048b3 4   5    .text               ascii   oB@<
+261 0x00004967 0x00004967 4   5    .text               ascii   oBx(
+262 0x00004c95 0x00004c95 4   5    .text               ascii   ATka
+263 0x00004cb8 0x00004cb8 5   6    .text               ascii   (ih8H
+264 0x00004d4f 0x00004d4f 4   5    .text               ascii   oB|3
+265 0x00004dbb 0x00004dbb 4   5    .text               ascii   oBt5
+266 0x00004e2b 0x00004e2b 4   5    .text               ascii   oB@<
+267 0x00004f34 0x00004f34 4   5    .text               ascii   h"@9
+268 0x000050e5 0x000050e5 5   6    .text               ascii   AUka\a
+269 0x00005123 0x00005123 4   5    .text               ascii   *(\a@
+270 0x000051bf 0x000051bf 4   5    .text               ascii   4(\v@
+271 0x00005253 0x00005253 4   5    .text               ascii   oB@<
+272 0x000053cf 0x000053cf 4   5    .text               ascii   4(\v@
+273 0x000053ff 0x000053ff 4   5    .text               ascii   q\ta\t
+274 0x0000540f 0x0000540f 4   5    .text               ascii   R\ta\t
+275 0x00005427 0x00005427 4   5    .text               ascii   R\ba\n
+276 0x00005443 0x00005443 4   5    .text               ascii   oBx(
+277 0x000056d4 0x000056d4 4   5    .text               ascii   (ih8
+278 0x000057f3 0x000057f3 4   5    .text               ascii   oBt5
+279 0x0000585f 0x0000585f 4   5    .text               ascii   oB|3
+280 0x000058d3 0x000058d3 4   5    .text               ascii   oB@<
+281 0x00005a85 0x00005a85 5   6    .text               ascii   ATka\b
+282 0x00005aa8 0x00005aa8 6   7    .text               ascii   (ih8H\a
+283 0x00005b33 0x00005b33 4   5    .text               ascii   oB\9
+284 0x00005c0b 0x00005c0b 4   5    .text               ascii   oBt5
+285 0x00005c7b 0x00005c7b 4   5    .text               ascii   oB@<
+286 0x00005d84 0x00005d84 4   5    .text               ascii   h"@9
+287 0x00005f3b 0x00005f3b 4   6    .text               utf8    ThݟR
+288 0x00005f64 0x00005f64 4   5    .text               ascii   (kh8
+289 0x0000601f 0x0000601f 4   5    .text               ascii   oB\9
+290 0x000060ff 0x000060ff 4   5    .text               ascii   oB@<
+291 0x000062a3 0x000062a3 4   5    .text               ascii   R\be\t
+292 0x000062c6 0x000062c6 4   5    .text               ascii   \t*\tA
+293 0x000062db 0x000062db 4   5    .text               ascii   oBx(
+294 0x00006440 0x00006440 7   9    .text               utf8    iݟR?A@k
+295 0x0000646c 0x0000646c 5   6    .text               ascii   (ih8(
+296 0x00006483 0x00006483 4   5    .text               ascii   *\b\t@
+297 0x0000662c 0x0000662c 4   5    .text               ascii   (ih8
+298 0x0000673f 0x0000673f 4   5    .text               ascii   oB\9
+299 0x000067ab 0x000067ab 4   5    .text               ascii   oBt5
+300 0x0000688b 0x0000688b 4   5    .text               ascii   oB@<
+301 0x00006c77 0x00006c77 4   5    .text               ascii   oB@<
+302 0x00006de3 0x00006de3 4   5    .text               ascii   oBx0
+303 0x00006ed3 0x00006ed3 4   5    .text               ascii   oBP7
+304 0x00006f3f 0x00006f3f 4   5    .text               ascii   oB@<
+305 0x00007053 0x00007053 4   5    .text               ascii   oBt:
+306 0x00007317 0x00007317 4   5    .text               ascii   Rx^\b
+307 0x000073f7 0x000073f7 4   5    .text               ascii   Rh^\b
+308 0x00007407 0x00007407 4   5    .text               ascii   Ri^\t
+309 0x00007410 0x00007410 5   7    .text               utf8    `ݿR`>
+310 0x000074cf 0x000074cf 4   5    .text               ascii   Rx^\b
+311 0x000075a7 0x000075a7 4   5    .text               ascii   Rh^\b
+312 0x000075b7 0x000075b7 4   5    .text               ascii   Ri^\t
+313 0x000075c0 0x000075c0 5   7    .text               utf8    `ݿR`>
+314 0x000078ff 0x000078ff 4   6    .text               utf8    RsݿR
+315 0x00007a74 0x00007a74 4   6    .text               utf8    `ݿRr
+316 0x00007a8c 0x00007a8c 4   6    .text               utf8    `ݿRl
+317 0x00007b13 0x00007b13 4   5    .text               ascii   oB8>
+318 0x00007c82 0x00007c82 4   5    .text               ascii   @9h\t
+319 0x00007e26 0x00007e26 4   5    .text               ascii   A9h\t
+320 0x00007fc9 0x00007fc9 5   6    .text               ascii   BB9h\t
+321 0x0000816e 0x0000816e 4   5    .text               ascii   C9h\t
+322 0x000081f1 0x000081f1 5   6    .text               ascii   BC9H,
+323 0x0000857c 0x0000857c 5   6    .text               ascii   hBB9H
+324 0x0000895b 0x0000895b 4   5    .text               ascii   oBx(
+325 0x00008a29 0x00008a29 4   5    .text               ascii   B@9\t
+326 0x00008a53 0x00008a53 4   5    .text               ascii   Rh^\b
+327 0x00008a63 0x00008a63 4   5    .text               ascii   Ri^\t
+328 0x00008a6c 0x00008a6c 5   7    .text               utf8    `ݿR`>
+329 0x00008b07 0x00008b07 4   5    .text               ascii   oBx(
+330 0x00008b6f 0x00008b6f 4   5    .text               ascii   oBP)
+331 0x00008bdb 0x00008bdb 4   5    .text               ascii   oBP)
+332 0x00008c47 0x00008c47 4   5    .text               ascii   oBP)
+333 0x00009113 0x00009113 4   5    .text               ascii   oB|?
+334 0x00009697 0x00009697 4   5    .text               ascii   oB@<
+335 0x000099f7 0x000099f7 5   6    .text               ascii   T\tA@9
+336 0x00009a52 0x00009a52 4   5    .text               ascii   @9)\b
+337 0x00009af3 0x00009af3 4   5    .text               ascii   oBp
+338 0x00009c23 0x00009c23 4   5    .text               ascii   oBH\e
+339 0x00009e43 0x00009e43 4   5    .text               ascii   oB<2
+340 0x00009eb7 0x00009eb7 4   5    .text               ascii   oBH*
+341 0x0000a407 0x0000a407 4   5    .text               ascii   oBl!
+342 0x0000a7ff 0x0000a7ff 4   5    .text               ascii   oB@1
+343 0x0000a8eb 0x0000a8eb 4   5    .text               ascii   oB@1
+344 0x0000a967 0x0000a967 4   5    .text               ascii   oB@<
+345 0x0000ad33 0x0000ad33 4   5    .text               ascii   oBX,
+346 0x0000b13f 0x0000b13f 4   5    .text               ascii   oB@<
+347 0x0000b543 0x0000b543 4   5    .text               ascii   oB@<
+348 0x0000b853 0x0000b853 4   5    .text               ascii   R\bQ5
+349 0x0000b897 0x0000b897 4   5    .text               ascii   oB`\a
+350 0x0000bb57 0x0000bb57 4   5    .text               ascii   oB@<
+351 0x0000bbe9 0x0000bbe9 4   5    .text               ascii   #@9\b
+352 0x0000bc71 0x0000bc71 4   5    .text               ascii   C@9\b
+353 0x0000c063 0x0000c063 4   5    .text               ascii   oB@<
+354 0x0000c17d 0x0000c17d 4   5    .text               ascii   c@9(
+355 0x0000c35f 0x0000c35f 4   5    .text               ascii   R\bQ5
+356 0x0000c3a3 0x0000c3a3 4   5    .text               ascii   oB`\a
+357 0x0000c663 0x0000c663 4   5    .text               ascii   oB@<
+358 0x0000c6f5 0x0000c6f5 4   5    .text               ascii   #@9\b
+359 0x0000c77d 0x0000c77d 4   5    .text               ascii   C@9\b
+360 0x0000c9c3 0x0000c9c3 4   5    .text               ascii   oB|?
+361 0x0000ce8b 0x0000ce8b 4   5    .text               ascii   oB@<
+362 0x0000d1df 0x0000d1df 5   6    .text               ascii   T\tA@9
+363 0x0000d2df 0x0000d2df 4   5    .text               ascii   oBH\e
+364 0x0000d466 0x0000d466 4   5    .text               ascii   A9\b\t
+365 0x0000d607 0x0000d607 4   5    .text               ascii   oBH*
+366 0x0000dd87 0x0000dd87 4   5    .text               ascii   R\bQ4
+367 0x0000df7f 0x0000df7f 4   5    .text               ascii   oB@<
+368 0x0000e3a7 0x0000e3a7 4   5    .text               ascii   oB@<
+369 0x0000e4af 0x0000e4af 4   5    .text               ascii   oB@1
+370 0x0000e833 0x0000e833 4   5    .text               ascii   oBX,
+371 0x0000e987 0x0000e987 4   5    .text               ascii   oB4"
+372 0x0000eba3 0x0000eba3 4   5    .text               ascii   oB@<
+373 0x0000ed97 0x0000ed97 4   5    .text               ascii   R\bQ5
+374 0x0000eddb 0x0000eddb 4   5    .text               ascii   oB`\a
+375 0x0000f0b3 0x0000f0b3 4   5    .text               ascii   oB@<
+376 0x0000f149 0x0000f149 4   5    .text               ascii   C@9(
+377 0x0000f1d5 0x0000f1d5 4   5    .text               ascii   c@9(
+378 0x00011f21 0x00000001 11  12   .shstrtab           ascii   .fini_array
+379 0x00011f2d 0x0000000d 5   6    .shstrtab           ascii   .text
+380 0x00011f33 0x00000013 4   5    .shstrtab           ascii   .got
+381 0x00011f38 0x00000018 19  20   .shstrtab           ascii   .note.android.ident
+382 0x00011f4c 0x0000002c 8   9    .shstrtab           ascii   .got.plt
+383 0x00011f55 0x00000035 9   10   .shstrtab           ascii   .rela.plt
+384 0x00011f5f 0x0000003f 4   5    .shstrtab           ascii   .bss
+385 0x00011f64 0x00000044 7   8    .shstrtab           ascii   .dynstr
+386 0x00011f6c 0x0000004c 13  14   .shstrtab           ascii   .eh_frame_hdr
+387 0x00011f7a 0x0000005a 14  15   .shstrtab           ascii   .gnu.version_r
+388 0x00011f89 0x00000069 12  13   .shstrtab           ascii   .data.rel.ro
+389 0x00011f96 0x00000076 9   10   .shstrtab           ascii   .relr.dyn
+390 0x00011fa0 0x00000080 9   10   .shstrtab           ascii   .rela.dyn
+391 0x00011faa 0x0000008a 12  13   .shstrtab           ascii   .gnu.version
+392 0x00011fb7 0x00000097 7   8    .shstrtab           ascii   .dynsym
+393 0x00011fbf 0x0000009f 9   10   .shstrtab           ascii   .gnu.hash
+394 0x00011fc9 0x000000a9 9   10   .shstrtab           ascii   .eh_frame
+395 0x00011fd3 0x000000b3 18  19   .shstrtab           ascii   .note.gnu.build-id
+396 0x00011fe6 0x000000c6 8   9    .shstrtab           ascii   .dynamic
+397 0x00011fef 0x000000cf 9   10   .shstrtab           ascii   .shstrtab
+398 0x00011ff9 0x000000d9 7   8    .shstrtab           ascii   .rodata
+399 0x00012001 0x000000e1 14  15   .shstrtab           ascii   .gnu_debugdata
+400 0x00012010 0x000000f0 5   6    .shstrtab           ascii   .data
+401 0x00012017 0x00000001 4   5    .gnu_debugdata      ascii   7zXZ
+402 0x0001205d 0x00000047 4   5    .gnu_debugdata      ascii    #R_
+403 0x00012068 0x00000052 5   6    .gnu_debugdata      ascii   91bgA
+404 0x00012123 0x0000010d 6   7    .gnu_debugdata      ascii   f[,9sI
+405 0x0001215a 0x00000144 4   7    .gnu_debugdata      utf8    ᶀ\b/N
+406 0x000121cd 0x000001b7 4   5    .gnu_debugdata      ascii   oH=S
+407 0x00012232 0x0000021c 4   5    .gnu_debugdata      ascii   uP\tj
+408 0x0001223b 0x00000225 4   5    .gnu_debugdata      ascii   Af7J
+409 0x000122b2 0x0000029c 7   8    .gnu_debugdata      ascii   \bDav,|'
+410 0x000122d5 0x000002bf 5   6    .gnu_debugdata      ascii   -\nKGm
+411 0x0001237d 0x00000367 6   7    .gnu_debugdata      ascii   \rPltDD
+412 0x00012384 0x0000036e 4   5    .gnu_debugdata      ascii   a$T!
+413 0x00012395 0x0000037f 5   6    .gnu_debugdata      ascii   '| ].
+414 0x000123a5 0x0000038f 4   6    .gnu_debugdata      utf8    3Kӗ\f
+415 0x000123b4 0x0000039e 4   5    .gnu_debugdata      ascii   %c:0
+416 0x000123c2 0x000003ac 4   6    .gnu_debugdata      utf8    %\tyű
+0x0000f310    1     16 sym.imp.__cxa_finalize
+0x0000f430    1     16 sym.imp.Diag_LSM_DeInit
+0x0000f3e0    1     16 sym.imp.Diag_LSM_Init
+0x0000f360    1     16 sym.imp.__stack_chk_fail
+0x0000f320    1     16 sym.imp.ds_format_log_msg
+0x0000f370    1     16 sym.imp.ds_get_target
+0x0000f380    1     16 sym.imp.ds_get_target_str
+0x0000f330    1     16 sym.imp.msg_sprintf
+0x0000f410    1     16 sym.imp.pthread_mutex_destroy
+0x0000f3f0    1     16 sym.imp.pthread_mutex_init
+0x0000f340    1     16 sym.imp.pthread_mutex_lock
+0x0000f350    1     16 sym.imp.pthread_mutex_unlock
+0x0000f490    1     16 sym.imp.ds_cmdq_deinit
+0x0000f470    1     16 sym.imp.ds_cmdq_enq
+0x0000f480    1     16 sym.imp.ds_cmdq_init
+0x0000f460    1     16 sym.imp.free
+0x0000f450    1     16 sym.imp.malloc
+0x0000f4b0    1     16 sym.imp.ott_get_service_object_internal_v01
+0x0000f4c0    1     16 sym.imp.qmi_client_get_service_instance
+0x0000f510    1     16 sym.imp.qmi_client_message_decode
+0x0000f4f0    1     16 sym.imp.qmi_client_notifier_init
+0x0000f4d0    1     16 sym.imp.qmi_client_ott_init_instance
+0x0000f4e0    1     16 sym.imp.qmi_client_register_error_cb
+0x0000f500    1     16 sym.imp.qmi_client_register_notify_cb
+0x0000f4a0    1     16 sym.imp.qmi_client_release
+0x0000f550    1     16 sym.imp.qmi_client_send_msg_sync
+0x0000f570    1     16 sym.imp.qmi_client_wds_init_instance
+0x0000f560    1     16 sym.imp.wds_get_service_object_internal_v01
+0x00004000    1     12 entry0
+0x0000b260   16   1312 sym.lqe_ott_get_downlink_throughput_report_status
+0x00005604   16    976 sym.lqei_get_downlink_throughput_info
+0x00006cf4   10    972 sym.lqei_release
+0x00005e88   24   1440 sym.lqei_set_uplink_throughput_indication_frequency
+0x00008cac    5    244 sym.lqe_cmdq_alloc_cmd
+0x00004bf4   16   1092 sym.lqei_get_min_downlink_throughput_frequency
+0x0000c28c   23   1536 sym.lqe_ott_get_uplink_throughput_info
+0x0000c88c    6    796 sym.lqe_release_wds_client
+0x0000e718   18   1444 sym.lqe_wds_toggle_throughput_indications
+0x00004444   27   1548 sym.lqei_client_register
+0x0000ac4c   21   1556 sym.lqe_ott_toggle_throughput_indications
+0x00008fdc    6    796 sym.lqe_release_ott_client
+0x0000698c   11    872 sym.lqei_init
+0x00005038   30   1484 sym.lqei_set_downlink_throughput_indication_frequency
+0x0000cba8   10   1244 sym.lqe_int_wds_client
+0x000070c0  106   7148 sym.lqe_process_cmd_cb
+0x0000ecbc   23   1584 sym.lqe_wds_get_downlink_throughput_info
+0x000092f8   12   1444 sym.lqe_int_ott_client
+0x0000b780   23   1536 sym.lqe_ott_get_downlink_throughput_info
+0x0000bd80   15   1292 sym.lqe_ott_get_uplink_throughput_report_status
+0x0000e1b8   19   1376 sym.lqe_wds_set_throughput_report_period
+0x0000654c   18   1088 sym.lqei_get_uplink_throughput_info
+0x00008ed8    6    232 sym.lqe_cmdq_enqueue_cmd
+0x00008fc0    1     16 sym.lqe_cmdq_init
+0x0000a570   29   1756 sym.lqe_ott_set_throughput_report_period
+0x00004014   13   1072 sym.lqei_client_release
+0x000059d4   18   1204 sym.lqei_get_min_uplink_throughput_frequency
+0x00008fd0    1     12 sym.lqe_cmdq_deinit
+0x0000dcc0   16   1272 sym.lqe_wds_get_downlink_throughput_report_status
+0x00008da4    9    308 sym.lqe_cmdq_free_cmd
+0x00004010    1      4 entry.fini0
+0x00004a50   16    420 sym.lqei_qmi_client_init
+0x0000f390    1     16 fcn.0000f390
+0x0000f3a0    1     16 fcn.0000f3a0
+0x0000f3b0    1     16 fcn.0000f3b0
+0x0000f3c0    1     16 fcn.0000f3c0
+0x00006428    8    292 sym.lqe_toggle_registration_uplink_throughput_indications
+0x0000f3d0    1     16 fcn.0000f3d0
+0x0000f400    1     16 fcn.0000f400
+0x0000f420    1     16 fcn.0000f420
+0x0000f440    1     16 fcn.0000f440
+0x0000f520    1     16 fcn.0000f520
+0x0000f530    1     16 fcn.0000f530
+0x0000f540    1     16 fcn.0000f540
+0x00009f2c    7    668 fcn.00009f2c
+0x0000a1d8   13    920 fcn.0000a1d8
+0x0000d09c   32   1488 fcn.0000d09c
+0x0000d67c    7    668 fcn.0000d67c
+0x0000d928   13    920 fcn.0000d928
+0x0000989c   35   1664 sym.lqe_qmi_ott_callback
+0x00009f1c    1     16 sym.lqe_qmi_ott_err_cb
+0x0000a1c8    1     16 sym.lqe_qmi_ott_notify_cb
+0x0000d084    1     24 sym.lqe_qmi_wds_callback
+0x0000d66c    1     16 sym.lqe_qmi_wds_err_cb
+0x0000d918    1     16 sym.lqe_qmi_wds_notify_cb
+0x0000f2f0    1     20 section..plt

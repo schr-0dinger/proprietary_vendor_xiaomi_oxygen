@@ -1,0 +1,573 @@
+arch     arm
+baddr    0x0
+binsz    25104
+bintype  elf
+bits     16
+canary   true
+injprot  false
+class    ELF32
+compiler GCC: (GNU) 4.9 20150123 (prerelease)
+flags    0x5000200
+abi      eabi5
+crypto   false
+endian   little
+havecode true
+intrp    /system/bin/linker
+laddr    0x0
+lang     c++
+linenum  false
+lsyms    false
+machine  ARM
+nx       true
+os       android
+pic      true
+relocs   false
+relro    full
+rpath    NONE
+sanitize false
+static   false
+stripped true
+subsys   android
+va       true
+[Exports]
+nth paddr      vaddr      bind   type   size lib name                                      demangled
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+24  0x00000ff0 0x00000ff0 GLOBAL FUNC   58       HWTHandle_Execute
+25  0x000026a0 0x000026a0 GLOBAL FUNC   920      HWTracker_CreateHandle
+26  0x00002d5e 0x00002d5e GLOBAL FUNC   18       HWTracker_SetHoldCount
+27  0x00002a7c 0x00002a7c GLOBAL FUNC   50       HWTracker_CreateResultHandle
+28  0x00002aae 0x00002aae GLOBAL FUNC   28       HWTracker_DeleteResultHandle
+29  0x00002d16 0x00002d16 GLOBAL FUNC   72       HWTracker_GetConsistentResult
+30  ---------- 0x00007004 GLOBAL NOTYPE 0        __bss_start
+31  0x00000f90 0x00000f90 GLOBAL FUNC   96       HWTRHandle_InitializeParameter
+32  ---------- 0x00007010 GLOBAL NOTYPE 0        _end
+33  0x00002ade 0x00002ade GLOBAL FUNC   118      HWTracker_SetDetectResult
+34  0x000011a0 0x000011a0 GLOBAL FUNC   4956     HWT_ExecuteMain
+35  0x0000102a 0x0000102a GLOBAL FUNC   22       invalidateHWTDtResult
+36  ---------- 0x0000700c GLOBAL OBJ    4        g_imgloglevel
+37  ---------- 0x00007004 GLOBAL NOTYPE 0        _edata
+38  0x00002d04 0x00002d04 GLOBAL FUNC   18       HWTracker_GetConsistentCount
+39  0x00002b54 0x00002b54 GLOBAL FUNC   68       HWTracker_SetAllDetectResult
+40  0x00002ddc 0x00002ddc GLOBAL FUNC   18       HWTracker_GetAngleDiffForStrictThresholds
+41  0x00002d94 0x00002d94 GLOBAL FUNC   18       HWTracker_GetDelayCount
+42  0x00002d70 0x00002d70 GLOBAL FUNC   18       HWTracker_GetHoldCount
+43  0x00002d82 0x00002d82 GLOBAL FUNC   18       HWTracker_SetDelayCount
+44  0x00002da6 0x00002da6 GLOBAL FUNC   18       HWTracker_SetDeviceOrientation
+45  ---------- 0x00007008 GLOBAL OBJ    4        g_imgLogModuleMask
+46  0x00002a38 0x00002a38 GLOBAL FUNC   68       HWTracker_DeleteHandle
+47  0x00002db8 0x00002db8 GLOBAL FUNC   18       HWTracker_GetDeviceOrientation
+48  0x00002dee 0x00002dee GLOBAL FUNC   44       HWTracker_SetSwThresholds
+49  0x00002b98 0x00002b98 GLOBAL FUNC   364      HWTracker_Execute
+50  0x00002dca 0x00002dca GLOBAL FUNC   18       HWTracker_SetAngleDiffForStrictThresholds
+51  0x00002e70 0x00002e70 GLOBAL FUNC   42       HWTracker_GetStrictSwThresholds
+52  0x00002e1a 0x00002e1a GLOBAL FUNC   42       HWTracker_GetSwThresholds
+53  0x00002aca 0x00002aca GLOBAL FUNC   20       HWTracker_SetDetectCount
+54  0x00002e44 0x00002e44 GLOBAL FUNC   44       HWTracker_SetStrictSwThresholds
+55  0x00001040 0x00001040 GLOBAL FUNC   352      deleteHoldInfo
+[Sections]
+
+nth paddr         size vaddr        vsize perm type        name
+―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000000     0x0 0x00000000     0x0 ---- NULL
+1   0x00000154    0x13 0x00000154    0x13 -r-- PROGBITS    .interp
+2   0x00000168    0x18 0x00000168    0x18 -r-- NOTE        .note.android.ident
+3   0x00000180    0x20 0x00000180    0x20 -r-- NOTE        .note.gnu.build-id
+4   0x000001a0   0x380 0x000001a0   0x380 -r-- DYNSYM      .dynsym
+5   0x00000520   0x494 0x00000520   0x494 -r-- STRTAB      .dynstr
+6   0x000009b4    0xf4 0x000009b4    0xf4 -r-- GNU_HASH    .gnu.hash
+7   0x00000aa8    0x70 0x00000aa8    0x70 -r-- GNU_VERSYM  .gnu.version
+8   0x00000b18    0x1c 0x00000b18    0x1c -r-- GNU_VERDEF  .gnu.version_d
+9   0x00000b34    0x70 0x00000b34    0x70 -r-- GNU_VERNEED .gnu.version_r
+10  0x00000ba4    0xd0 0x00000ba4    0xd0 -r-- REL         .rel.dyn
+11  0x00000c74    0xd8 0x00000c74    0xd8 -r-- REL         .rel.plt
+12  0x00000d4c   0x158 0x00000d4c   0x158 -r-x PROGBITS    .plt
+13  0x00000eb0  0x3638 0x00000eb0  0x3638 -r-x PROGBITS    .text
+14  0x000044e8   0x1e0 0x000044e8   0x1e0 -r-- ----        .ARM.exidx
+15  0x000046c8    0x40 0x000046c8    0x40 -r-- PROGBITS    .ARM.extab
+16  0x00004708   0xd06 0x00004708   0xd06 -r-- PROGBITS    .rodata
+17  0x00005dfc     0x4 0x00006dfc     0x4 -rw- FINI_ARRAY  .fini_array
+18  0x00005e00    0x48 0x00006e00    0x48 -rw- PROGBITS    .data.rel.ro
+19  0x00005e48   0x120 0x00006e48   0x120 -rw- DYNAMIC     .dynamic
+20  0x00005f68    0x98 0x00006f68    0x98 -rw- PROGBITS    .got
+21  0x00006000     0x4 0x00007000     0x4 -rw- PROGBITS    .data
+22  0x00006004     0x0 0x00007004     0xc -rw- NOBITS      .bss
+23  0x00006004    0x63 0x00000000    0x63 ---- PROGBITS    .comment
+24  0x00006068    0x1c 0x00000000    0x1c ---- NOTE        .note.gnu.gold-version
+25  0x00006084    0x3e 0x00000000    0x3e ---- ----        .ARM.attributes
+26  0x000060c2    0x28 0x00000000    0x28 ---- PROGBITS    .gnu_debuglink
+27  0x000060ea   0x126 0x00000000   0x126 ---- STRTAB      .shstrtab
+
+[Strings]
+nth paddr      vaddr      len size section                type    string
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+0   0x00000028 0x00000028 4   10                          utf16le 4 \t(
+1   0x00000038 0x00000038 5   24                          utf32le 444ĠĠ
+2   0x00000154 0x00000154 18  19   .interp                ascii   /system/bin/linker
+3   0x00000174 0x00000174 7   8    .note.android.ident    ascii   Android
+4   0x00000521 0x00000521 14  15   .dynstr                ascii   __cxa_finalize
+5   0x00000530 0x00000530 4   5    .dynstr                ascii   LIBC
+6   0x00000535 0x00000535 7   8    .dynstr                ascii   libc.so
+7   0x0000053d 0x0000053d 32  33   .dynstr                ascii   libmmcamera_facedetection_lib.so
+8   0x0000055e 0x0000055e 12  13   .dynstr                ascii   __cxa_atexit
+9   0x0000056b 0x0000056b 17  18   .dynstr                ascii   __register_atfork
+10  0x0000057d 0x0000057d 17  18   .dynstr                ascii   HWTHandle_Execute
+11  0x0000058f 0x0000058f 30  31   .dynstr                ascii   HWTRHandle_InitializeParameter
+12  0x000005ae 0x000005ae 6   7    .dynstr                ascii   dladdr
+13  0x000005b5 0x000005b5 8   9    .dynstr                ascii   libdl.so
+14  0x000005be 0x000005be 15  16   .dynstr                ascii   HWT_ExecuteMain
+15  0x000005ce 0x000005ce 14  15   .dynstr                ascii   __snprintf_chk
+16  0x000005dd 0x000005dd 18  19   .dynstr                ascii   g_imgLogModuleMask
+17  0x000005f0 0x000005f0 13  14   .dynstr                ascii   g_imgloglevel
+18  0x000005fe 0x000005fe 21  22   .dynstr                ascii   invalidateHWTDtResult
+19  0x00000614 0x00000614 15  16   .dynstr                ascii   __aeabi_memclr4
+20  0x00000624 0x00000624 6   7    .dynstr                ascii   LIBC_N
+21  0x0000062b 0x0000062b 15  16   .dynstr                ascii   __aeabi_memclr8
+22  0x0000063b 0x0000063b 15  16   .dynstr                ascii   __aeabi_memset8
+23  0x0000064b 0x0000064b 16  17   .dynstr                ascii   __stack_chk_fail
+24  0x0000065c 0x0000065c 17  18   .dynstr                ascii   __stack_chk_guard
+25  0x0000066e 0x0000066e 13  14   .dynstr                ascii   cam_debug_log
+26  0x00000680 0x00000680 7   8    .dynstr                ascii   libm.so
+27  0x00000688 0x00000688 14  15   .dynstr                ascii   deleteHoldInfo
+28  0x00000697 0x00000697 4   5    .dynstr                ascii   free
+29  0x0000069c 0x0000069c 9   10   .dynstr                ascii   g_cam_log
+30  0x000006a6 0x000006a6 6   7    .dynstr                ascii   malloc
+31  0x000006b1 0x000006b1 22  23   .dynstr                ascii   HWTracker_CreateHandle
+32  0x000006c8 0x000006c8 28  29   .dynstr                ascii   HWTracker_CreateResultHandle
+33  0x000006e5 0x000006e5 22  23   .dynstr                ascii   HWTracker_DeleteHandle
+34  0x000006fc 0x000006fc 28  29   .dynstr                ascii   HWTracker_DeleteResultHandle
+35  0x00000719 0x00000719 17  18   .dynstr                ascii   HWTracker_Execute
+36  0x0000072b 0x0000072b 41  42   .dynstr                ascii   HWTracker_GetAngleDiffForStrictThresholds
+37  0x00000755 0x00000755 28  29   .dynstr                ascii   HWTracker_GetConsistentCount
+38  0x00000772 0x00000772 29  30   .dynstr                ascii   HWTracker_GetConsistentResult
+39  0x00000790 0x00000790 23  24   .dynstr                ascii   HWTracker_GetDelayCount
+40  0x000007a8 0x000007a8 30  31   .dynstr                ascii   HWTracker_GetDeviceOrientation
+41  0x000007c7 0x000007c7 22  23   .dynstr                ascii   HWTracker_GetHoldCount
+42  0x000007de 0x000007de 31  32   .dynstr                ascii   HWTracker_GetStrictSwThresholds
+43  0x000007fe 0x000007fe 25  26   .dynstr                ascii   HWTracker_GetSwThresholds
+44  0x00000818 0x00000818 28  29   .dynstr                ascii   HWTracker_SetAllDetectResult
+45  0x00000835 0x00000835 41  42   .dynstr                ascii   HWTracker_SetAngleDiffForStrictThresholds
+46  0x0000085f 0x0000085f 23  24   .dynstr                ascii   HWTracker_SetDelayCount
+47  0x00000877 0x00000877 24  25   .dynstr                ascii   HWTracker_SetDetectCount
+48  0x00000890 0x00000890 25  26   .dynstr                ascii   HWTracker_SetDetectResult
+49  0x000008aa 0x000008aa 30  31   .dynstr                ascii   HWTracker_SetDeviceOrientation
+50  0x000008c9 0x000008c9 22  23   .dynstr                ascii   HWTracker_SetHoldCount
+51  0x000008e0 0x000008e0 31  32   .dynstr                ascii   HWTracker_SetStrictSwThresholds
+52  0x00000900 0x00000900 25  26   .dynstr                ascii   HWTracker_SetSwThresholds
+53  0x0000091a 0x0000091a 4   5    .dynstr                ascii   atoi
+54  0x0000091f 0x0000091f 12  13   .dynstr                ascii   property_get
+55  0x0000092c 0x0000092c 6   7    .dynstr                ascii   stderr
+56  0x00000933 0x00000933 7   8    .dynstr                ascii   fprintf
+57  0x0000093b 0x0000093b 5   6    .dynstr                ascii   abort
+58  0x00000941 0x00000941 14  15   .dynstr                ascii   __aeabi_memcpy
+59  0x00000950 0x00000950 23  24   .dynstr                ascii   __gnu_Unwind_Find_exidx
+60  0x00000968 0x00000968 4   5    .dynstr                ascii   _end
+61  0x0000096d 0x0000096d 6   7    .dynstr                ascii   _edata
+62  0x00000974 0x00000974 11  12   .dynstr                ascii   __bss_start
+63  0x00000980 0x00000980 12  13   .dynstr                ascii   libcutils.so
+64  0x0000098d 0x0000098d 9   10   .dynstr                ascii   liblog.so
+65  0x00000997 0x00000997 18  19   .dynstr                ascii   libmmcamera_dbg.so
+66  0x000009aa 0x000009aa 9   10   .dynstr                ascii   libc++.so
+67  0x000009f8 0x000009f8 4   20   .gnu.hash              utf32le !"$&
+68  0x00000a0c 0x00000a0c 7   32   .gnu.hash              utf32le '(-.137
+69  0x00000a52 0x00000a52 4   5    .gnu.hash              ascii   PK1V
+70  0x00000a6a 0x00000a6a 4   5    .gnu.hash              ascii   B\r&N
+71  0x00000a87 0x00000a87 5   6    .gnu.hash              ascii   oEg.!
+72  0x00000a96 0x00000a96 4   5    .gnu.hash              ascii   p08B
+73  0x00000eeb 0x00000eea 4   5    .text                  ascii   \n\b0\e
+74  0x00000fab 0x00000faa 4   5    .text                  ascii   *2"A
+75  0x00000fc3 0x00000fc2 7   16   .text                  utf16le G¿¿¿¿¿ƿ
+76  0x0000101b 0x0000101a 4   5    .text                  ascii   \n\f3C
+77  0x0000103d 0x0000103c 4   5    .text                  ascii   "pG-
+78  0x0000104d 0x0000104c 5   6    .text                  ascii   FNHxD
+79  0x0000106f 0x0000106e 5   6    .text                  ascii   \vzD\th
+80  0x00001089 0x00001088 4   6    .text                  utf8    )!Тi
+81  0x000010b9 0x000010b8 4   5    .text                  ascii   !7J@
+82  0x000010d8 0x000010d8 4   5    .text                  ascii   T!HD
+83  0x00001108 0x00001108 4   5    .text                  ascii   "i=F
+84  0x00001117 0x00001116 4   5    .text                  ascii   \n2FV
+85  0x00001135 0x00001134 4   5    .text                  ascii   +"ig
+86  0x000011fe 0x000011fe 4   5    .text                  ascii   xDyD
+87  0x00001224 0x00001224 4   5    .text                  ascii   zDxD
+88  0x00001244 0x00001244 6   7    .text                  ascii   yD\th\th
+89  0x0000125f 0x0000125e 5   6    .text                  ascii   szDxD
+90  0x0000129d 0x0000129c 4   5    .text                  ascii   \n\f0`
+91  0x0000132a 0x0000132a 4   5    .text                  ascii   tF"F
+92  0x00001346 0x00001346 4   5    .text                  ascii   xDyD
+93  0x0000136b 0x0000136a 5   6    .text                  ascii   szDxD
+94  0x00001389 0x00001388 7   8    .text                  ascii   (yD\th\th
+95  0x000013a6 0x000013a6 4   5    .text                  ascii   zDxD
+96  0x0000144a 0x0000144a 4   5    .text                  ascii   @\fxD
+97  0x0000145a 0x0000145a 4   5    .text                  ascii   4\fxD
+98  0x00001474 0x00001474 4   5    .text                  ascii   zDxD
+99  0x00001498 0x00001498 4   5    .text                  ascii   %FhC
+100 0x000014b4 0x000014b4 4   5    .text                  ascii   PF!F
+101 0x00001564 0x00001564 4   5    .text                  ascii   0FQF
+102 0x0000156d 0x0000156c 7   8    .text                  ascii   F\rF0FQF
+103 0x00001584 0x00001584 4   6    .text                  utf8    Z/vѻ
+104 0x000016b2 0x000016b2 5   6    .text                  ascii   sFWF\n
+105 0x00001709 0x00001708 4   9    .text                  utf16le F !"
+106 0x000017db 0x000017da 5   6    .text                  ascii   %xDyD
+107 0x00001877 0x00001876 4   5    .text                  ascii   ?F]k
+108 0x000018b8 0x000018b8 4   5    .text                  ascii   4sxD
+109 0x000018fe 0x000018fe 4   5    .text                  ascii   \+xD
+110 0x00001909 0x00001908 5   6    .text                  ascii   \ezDyD
+111 0x00001993 0x00001992 4   5    .text                  ascii   \n\f0`
+112 0x0000199f 0x0000199e 4   5    .text                  ascii   \n\f0@
+113 0x00001a6e 0x00001a6e 4   5    .text                  ascii   zDyD
+114 0x00001ae6 0x00001ae6 4   5    .text                  ascii   l)xD
+115 0x00001af2 0x00001af2 4   5    .text                  ascii   zDyD
+116 0x00001b20 0x00001b20 4   5    .text                  ascii   \a3xD
+117 0x00001c50 0x00001c50 4   5    .text                  ascii   8oFF
+118 0x00001cf6 0x00001cf6 4   5    .text                  ascii   o#xD
+119 0x00001d19 0x00001d18 4   5    .text                  ascii   \fAEO
+120 0x00001e12 0x00001e12 4   5    .text                  ascii   <&yD
+121 0x00001e5a 0x00001e5a 5   6    .text                  ascii   8h@E@
+122 0x00001eb6 0x00001eb6 4   5    .text                  ascii   f3xD
+123 0x00001ee8 0x00001ee8 4   5    .text                  ascii   g3xD
+124 0x00001f4c 0x00001f4c 4   5    .text                  ascii   r3yD
+125 0x00001f52 0x00001f52 4   5    .text                  ascii   X%xD
+126 0x00001f5e 0x00001f5e 4   5    .text                  ascii   zDyD
+127 0x00001f90 0x00001f90 4   5    .text                  ascii   s3xD
+128 0x00001ffa 0x00001ffa 4   5    .text                  ascii   \b\fkj
+129 0x0000209c 0x0000209c 4   5    .text                  ascii   hi.F
+130 0x00002128 0x00002128 4   5    .text                  ascii   `sxD
+131 0x00002143 0x00002142 4   5    .text                  ascii   h>i#
+132 0x00002191 0x00002190 4   5    .text                  ascii   FFi'
+133 0x0000228e 0x0000228e 5   6    .text                  ascii   dH\f6O
+134 0x0000229c 0x0000229c 4   5    .text                  ascii   aHxD
+135 0x00002323 0x00002322 4   5    .text                  ascii   aYb&
+136 0x00002347 0x00002346 5   6    .text                  ascii   -dK{D
+137 0x00002359 0x00002358 4   5    .text                  ascii   -{D\n
+138 0x00002367 0x00002366 10  11   .text                  ascii   -cMbK}D{D\b
+139 0x00002382 0x00002382 6   7    .text                  ascii   XHVJxD
+140 0x000023cd 0x000023cc 5   6    .text                  ascii   3zDxD
+141 0x000023e7 0x000023e6 7   8    .text                  ascii   *yD\th\th
+142 0x00002555 0x00002554 4   6    .text                  utf8    BؿWF
+143 0x000025d4 0x000025d4 8   9    .text                  ascii   (IyD\th\th
+144 0x000025e2 0x000025e2 6   7    .text                  ascii   &IyD\th
+145 0x00002633 0x00002632 4   5    .text                  ascii   N~D\v
+146 0x000026c1 0x000026c0 7   8    .text                  ascii   JxD)FzD
+147 0x000026d5 0x000026d4 7   8    .text                  ascii   JyDzD\vh
+148 0x000026e1 0x000026e0 5   6    .text                  ascii   `\bF)F
+149 0x000026f3 0x000026f2 7   8    .text                  ascii   JyDzD\th
+150 0x000026fb 0x000026fa 5   6    .text                  ascii   h\b`\th
+151 0x0000271b 0x0000271a 7   8    .text                  ascii   hzD\th{D
+152 0x00002741 0x00002740 7   8    .text                  ascii   IyD\th\th
+153 0x00002759 0x00002758 7   8    .text                  ascii   HyDzDxD
+154 0x00002777 0x00002776 7   8    .text                  ascii   IyD\th\th
+155 0x0000282d 0x0000282c 4   5    .text                  ascii   \n(F@
+156 0x00002868 0x00002868 4   5    .text                  ascii   0F9F
+157 0x000028a6 0x000028a6 4   5    .text                  ascii   (FIF
+158 0x000028ae 0x000028ae 8   9    .text                  ascii   UHUIxDyD
+159 0x000028cd 0x000028cc 5   6    .text                  ascii   'PKzD
+160 0x000028ea 0x000028ea 4   5    .text                  ascii   JHxD
+161 0x000028f4 0x000028f4 8   9    .text                  ascii   HIyD\th\th
+162 0x0000295c 0x0000295c 4   5    .text                  ascii   1HxD
+163 0x00002966 0x00002966 8   9    .text                  ascii   0IyD\th\th
+164 0x0000297b 0x0000297a 9   10   .text                  ascii   !,H[#zDxD
+165 0x00002995 0x00002994 4   5    .text                  ascii   %'H.
+166 0x00002ad5 0x00002ad4 4   5    .text                  ascii    pGo
+167 0x00002b13 0x00002b12 4   5    .text                  ascii   *\f3C
+168 0x00002b4f 0x00002b4e 5   9    .text                  utf8    \n`FpG
+169 0x00002b7e 0x00002b7e 6   7    .text                  ascii   0F9F"F
+170 0x00002b9c 0x00002b9c 4   5    .text                  ascii   \rFFI
+171 0x00002ba1 0x00002ba0 9   10   .text                  ascii   FDHyDxD\th
+172 0x00002bc3 0x00002bc2 5   6    .text                  ascii   #zDxD
+173 0x00002bd0 0x00002bd0 4   5    .text                  ascii   <HxD
+174 0x00002bda 0x00002bda 8   9    .text                  ascii   ;IyD\th\th
+175 0x00002bef 0x00002bee 9   10   .text                  ascii   #7I`hzDyD
+176 0x00002c04 0x00002c04 4   5    .text                  ascii   3HxD
+177 0x00002c12 0x00002c12 6   7    .text                  ascii   yD\th\th
+178 0x00002c22 0x00002c22 6   7    .text                  ascii   .J.KzD
+179 0x00002c3e 0x00002c3e 6   7    .text                  ascii    F)F2F
+180 0x00002c4b 0x00002c4a 9   10   .text                  ascii   F%HyDxD\th
+181 0x00002c6d 0x00002c6c 5   6    .text                  ascii   hzDyD
+182 0x00002c88 0x00002c88 8   9    .text                  ascii   \eIyD\th\th
+183 0x00002ca1 0x00002ca0 5   6    .text                  ascii   #zDxD
+184 0x00002d2b 0x00002d2a 4   6    .text                  utf8    BؿpG
+185 0x00002f24 0x00002f24 6   7    .text                  ascii    F\r!BF
+186 0x00002f47 0x00002f46 11  15   .text                  utf8    )$܀)6А)OР)@
+187 0x00002f8a 0x00002f8a 4   5    .text                  ascii    F\r!
+188 0x00002fb7 0x00002fb6 4   5    .text                  ascii   " Fw
+189 0x00003000 0x00003000 4   5    .text                  ascii    FBF
+190 0x00003072 0x00003072 6   7    .text                  ascii    F\r!BF
+191 0x0000309a 0x0000309a 5   6    .text                  ascii   E[--\n
+192 0x000030a8 0x000030a8 4   5    .text                  ascii    " F
+193 0x00003178 0x00003178 4   5    .text                  ascii   \b \aI
+194 0x0000317e 0x0000317e 6   7    .text                  ascii   yD\th\th
+195 0x000031ba 0x000031ba 4   5    .text                  ascii   (F1F
+196 0x000031de 0x000031de 4   5    .text                  ascii   (F"F
+197 0x00003207 0x00003206 5   6    .text                  ascii   q(F"F
+198 0x0000321f 0x0000321e 5   6    .text                  ascii   JxDzD
+199 0x0000324e 0x0000324e 6   7    .text                  ascii   2h F)F
+200 0x000032bb 0x000032ba 5   6    .text                  ascii   JxDzD
+201 0x000032d3 0x000032d2 5   6    .text                  ascii   FIH\rF
+202 0x000032fa 0x000032fa 4   5    .text                  ascii   @F\r!
+203 0x0000336a 0x0000336a 4   5    .text                  ascii   @F\r!
+204 0x00003392 0x00003392 4   5    .text                  ascii   )F@h
+205 0x00003399 0x00003398 5   6    .text                  ascii    @F"F
+206 0x000033c0 0x000033c0 6   7    .text                  ascii   yD\th\th
+207 0x000033da 0x000033da 4   5    .text                  ascii   @F\r!
+208 0x000033f1 0x000033f0 5   6    .text                  ascii   JxDzD
+209 0x00003456 0x00003456 6   7    .text                  ascii   yD\th\th
+210 0x00003489 0x00003488 4   5    .text                  ascii   F&H\n
+211 0x000034a5 0x000034a4 5   6    .text                  ascii   `)F0F
+212 0x000034ae 0x000034ae 4   5    .text                  ascii   iF0F
+213 0x000034c9 0x000034c8 4   5    .text                  ascii   d2F\b
+214 0x000034dc 0x000034dc 4   5    .text                  ascii   0F9F
+215 0x00003537 0x00003536 4   5    .text                  ascii   F3H\f
+216 0x0000356a 0x0000356a 5   6    .text                  ascii   "i(FO
+217 0x00003579 0x00003578 4   5    .text                  ascii   \n(Fo
+218 0x00003586 0x00003586 4   5    .text                  ascii   (FIF
+219 0x0000359b 0x0000359a 4   5    .text                  ascii   d*F\t
+220 0x000035a4 0x000035a4 4   5    .text                  ascii    e8F
+221 0x000035c1 0x000035c0 5   6    .text                  ascii   JxDzD
+222 0x000035e2 0x000035e2 4   5    .text                  ascii    a(F
+223 0x0000362c 0x0000362c 4   5    .text                  ascii   (F!F
+224 0x0000363d 0x0000363c 5   6    .text                  ascii   JxDzD
+225 0x0000365c 0x0000365c 4   5    .text                  ascii   xD\bK
+226 0x0000366c 0x0000366c 4   5    .text                  ascii   aFrF
+227 0x00003688 0x00003688 9   10   .text                  ascii   \vIyD\th\th\v
+228 0x000036a8 0x000036a8 4   5    .text                  ascii   \th\th
+229 0x000036c4 0x000036c4 9   10   .text                  ascii   \vIyD\th\th\v
+230 0x000036e4 0x000036e4 4   5    .text                  ascii   \th\th
+231 0x000037a9 0x000037a8 9   10   .text                  ascii   F\rHzDxD\b0
+232 0x000037ed 0x000037ec 5   6    .text                  ascii   F0h\rF
+233 0x000037fc 0x000037fc 4   5    .text                  ascii   0h)F
+234 0x0000381b 0x0000381a 5   6    .text                  ascii   F h\rF
+235 0x0000382a 0x0000382a 6   7    .text                  ascii    h)F2F
+236 0x0000384f 0x0000384e 5   6    .text                  ascii   %Bk F
+237 0x00003855 0x00003854 4   5    .text                  ascii   G(Fp
+238 0x0000385f 0x0000385e 9   10   .text                  ascii   F0h\rFBi0F
+239 0x0000386e 0x0000386e 4   5    .text                  ascii   0h)F
+240 0x00003897 0x00003896 5   6    .text                  ascii   FBi8F
+241 0x000038a2 0x000038a2 8   9    .text                  ascii   8h1F*FCF
+242 0x000038c3 0x000038c2 5   6    .text                  ascii   h\tj\bG
+243 0x000038cd 0x000038cc 5   6    .text                  ascii   hJj!F
+244 0x000038fb 0x000038fa 4   5    .text                  ascii   k\bG!
+245 0x00003993 0x00003992 7   8    .text                  ascii   KxDyD{D
+246 0x000039b3 0x000039b2 4   5    .text                  ascii   F\f.\b
+247 0x00003a11 0x00003a10 4   5    .text                  ascii   qDPp
+248 0x00003a1f 0x00003a1e 7   8    .text                  ascii   KxDyD{D
+249 0x00003a3d 0x00003a3c 4   5    .text                  ascii   "p(O
+250 0x00003ae5 0x00003ae4 7   8    .text                  ascii   KxDyD{D
+251 0x00003b01 0x00003b00 4   5    .text                  ascii   F\aF&
+252 0x00003b57 0x00003b56 4   5    .text                  ascii   qEPO
+253 0x00003b7f 0x00003b7e 4   5    .text                  ascii   qEPO
+254 0x00003b97 0x00003b96 4   5    .text                  ascii   qEPO
+255 0x00003bb1 0x00003bb0 7   8    .text                  ascii   KxDyD{D
+256 0x00003be1 0x00003be0 5   6    .text                  ascii   !Bk F
+257 0x00003c57 0x00003c56 7   8    .text                  ascii   FyD\th\th
+258 0x00003c86 0x00003c86 4   5    .text                  ascii   0F)F
+259 0x00003c9e 0x00003c9e 6   7    .text                  ascii   yD\th\th
+260 0x00003cfc 0x00003cfc 6   7    .text                  ascii   jF F)F
+261 0x00003d45 0x00003d44 7   8    .text                  ascii   F\aIxDyD
+262 0x00003d53 0x00003d52 5   6    .text                  ascii   #rFcF
+263 0x00003d96 0x00003d96 5   6    .text                  ascii   \b(\aH\b
+264 0x00003e30 0x00003e30 4   5    .text                  ascii   bh^h
+265 0x00003e49 0x00003e48 5   7    .text                  utf8    (~аB|
+266 0x00003e58 0x00003e58 5   6    .text                  ascii   (F)FP
+267 0x00003ee2 0x00003ee2 4   5    .text                  ascii   +N~D
+268 0x00003eee 0x00003eee 4   5    .text                  ascii   )N~D
+269 0x00003f6d 0x00003f6c 7   8    .text                  ascii   KxDyD{D
+270 0x00003f7d 0x00003f7c 11  12   .text                  ascii   2\aI\aKxDyD{D
+271 0x00003feb 0x00003fea 5   6    .text                  ascii   \a'Dl\b
+272 0x000040d6 0x000040d6 4   5    .text                  ascii   xDpG
+273 0x00004708 0x00004708 14  15   .rodata                ascii   deleteHoldInfo
+274 0x00004718 0x00004718 12  13   .rodata                ascii   linkHoldInfo
+275 0x00004725 0x00004725 14  15   .rodata                ascii   -----cur-----\n
+276 0x00004734 0x00004734 13  14   .rodata                ascii   <HWDtResult>\n
+277 0x00004742 0x00004742 22  23   .rodata                ascii   No%3d,(%4d,%4d),Sz%4d\n
+278 0x00004759 0x00004759 86  87   .rodata                ascii   <HWFACE No="%d" Conf="%d" Pose="%d" Angle="%d" Size="%d" CenterX="%d" CenterY="%d" />\n
+279 0x000047b0 0x000047b0 14  15   .rodata                ascii   </HWDtResult>\n
+280 0x000047bf 0x000047bf 15  16   .rodata                ascii   -----prev-----\n
+281 0x000047cf 0x000047cf 15  16   .rodata                ascii   --------------\n
+282 0x000047df 0x000047df 14  15   .rodata                ascii   updateHoldInfo
+283 0x000047ee 0x000047ee 27  28   .rodata                ascii   <RESULTINFO UpdateNo="%d">\n
+284 0x0000480a 0x0000480a 11  12   .rodata                ascii   <FPFILTER>\n
+285 0x00004816 0x00004816 41  42   .rodata                ascii   <FPFILTER_CONFIG>FALSE</FPFILTER_CONFIG>\n
+286 0x00004840 0x00004840 34  35   .rodata                ascii   <FILTER_RESULT>%s</FILTER_RESULT>\n
+287 0x00004863 0x00004863 4   5    .rodata                ascii   TRUE
+288 0x00004868 0x00004868 5   6    .rodata                ascii   FALSE
+289 0x0000486e 0x0000486e 12  13   .rodata                ascii   </FPFILTER>\n
+290 0x0000487b 0x0000487b 14  15   .rodata                ascii   </RESULTINFO>\n
+291 0x0000488a 0x0000488a 18  19   .rodata                ascii   UPD No%3d->No%3d \n
+292 0x0000489d 0x0000489d 14  15   .rodata                ascii   verifyDtResult
+293 0x000048ac 0x000048ac 60  61   .rodata                ascii   Device=%d, face=%d, diff=%d conf=%d, min_thresh_to_accept=%d
+294 0x000048e9 0x000048e9 10  11   .rodata                ascii   UpdateHold
+295 0x000048f4 0x000048f4 59  60   .rodata                ascii   Device=%d, face_angle=%d, fce_conf=%d, goodFaceThreshold=%d
+296 0x00004930 0x00004930 19  20   .rodata                ascii   log_printf_HoldInfo
+297 0x00004944 0x00004944 102 103  .rodata                ascii   <RESULT TrackID="%d" CenterX="%d" CenterY="%d" Size="%d" Angle="%d" Pose="%d" Conf="%d" Status="%s"/>\n
+298 0x000049ab 0x000049ab 5   6    .rodata                ascii   DELAY
+299 0x000049b1 0x000049b1 7   8    .rodata                ascii   CONSIST
+300 0x000049b9 0x000049b9 7   8    .rodata                ascii   LOST_HW
+301 0x000049c1 0x000049c1 7   8    .rodata                ascii   LOST_SW
+302 0x000049c9 0x000049c9 7   8    .rodata                ascii   INVALID
+303 0x000049d1 0x000049d1 4   5    .rodata                ascii   NONE
+304 0x000049d6 0x000049d6 14  15   .rodata                ascii   addNewHoldInfo
+305 0x000049e5 0x000049e5 24  25   .rodata                ascii   <RESULTINFO NewNo="%d">\n
+306 0x000049fe 0x000049fe 38  39   .rodata                ascii   <FPFILTER_RESULT>%s</FPFILTER_RESULT>\n
+307 0x00004a25 0x00004a25 18  19   .rodata                ascii   NEW      ->No%3d \n
+308 0x00004a38 0x00004a38 17  18   .rodata                ascii   writeTrackResults
+309 0x00004a4a 0x00004a4a 53  54   .rodata                ascii   ID%4d,(%4d,%4d),Sz%4d,Cfd%4d,Dly%4d,Hst%4d,Hld%4d,%s\n
+310 0x00004a80 0x00004a80 31  32   .rodata                ascii   ******************************\n
+311 0x00004aa0 0x00004aa0 26  27   .rodata                ascii   persist.camera.imglib.logs
+312 0x00004abd 0x00004abd 29  30   .rodata                ascii   persist.camera.imglib.logsMod
+313 0x00004adb 0x00004adb 5   6    .rodata                ascii   65535
+314 0x00004ae1 0x00004ae1 22  23   .rodata                ascii   HWTracker_CreateHandle
+315 0x00004af8 0x00004af8 33  34   .rodata                ascii   ###Img_Loglevel %d, moduleMask %d
+316 0x00004b1a 0x00004b1a 23  24   .rodata                ascii   Tracker V2 version : %s
+317 0x00004b32 0x00004b32 5   6    .rodata                ascii   2.0.3
+318 0x00004b38 0x00004b38 189 190  .rodata                ascii   Tracker Params : TRKTOL params (%f, %f, %f %f) FaceWieght params (%d, %d), Default Thresholds (%d, %d, %d) (%d, %d, %d) Default AngleDiff %d, FPFILTER_CYCLE=%d, LOST_PENALTY params (%d, %d)
+319 0x00004bf6 0x00004bf6 85  86   .rodata                ascii   <HWTRACKERProperty FPFilterCycle="%d" nSwThreshold="%d" nSwTrackingThreshold="%lf" >\n
+320 0x00004c4c 0x00004c4c 84  85   .rodata                ascii   <TRACKTolerance MoveDist="%lf" SizeRatioMin="%lf" SizeRatioMax="%lf" Angle="%lf" />\n
+321 0x00004ca1 0x00004ca1 21  22   .rodata                ascii   </HWTRACKERProperty>\n
+322 0x00004cb7 0x00004cb7 17  18   .rodata                ascii   HWTracker_Execute
+323 0x00004cc9 0x00004cc9 12  13   .rodata                ascii   <HWTRACKER>\n
+324 0x00004cd6 0x00004cd6 26  27   .rodata                ascii   <HWFaceNum>%d</HWFaceNum>\n
+325 0x00004cf1 0x00004cf1 50  51   .rodata                ascii   <HWTRACKERConfig DelayCount="%d" HoldCount="%d"/>\n
+326 0x00004d24 0x00004d24 32  33   .rodata                ascii   <ValidFaceNum>%d</ValidFaceNum>\n
+327 0x00004d45 0x00004d45 13  14   .rodata                ascii   </HWTRACKER>\n
+328 0x00004d53 0x00004d53 40  41   .rodata                ascii   void _Unwind_Resume(_Unwind_Exception *)
+329 0x00004d7c 0x00004d7c 44  45   .rodata                ascii   external/libunwind_llvm/src/Unwind-EHABI.cpp
+330 0x00004da9 0x00004da9 29  30   .rodata                ascii   _Unwind_Resume() can't return
+331 0x00004dc7 0x00004dc7 125 126  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Set(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+332 0x00004e45 0x00004e45 26  27   .rodata                ascii   unsupported register class
+333 0x00004e60 0x00004e60 117 118  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Pop(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation)
+334 0x00004ed6 0x00004ed6 77  78   .rodata                ascii   _Unwind_Reason_Code unwind_phase2(unw_context_t *, _Unwind_Exception *, bool)
+335 0x00004f24 0x00004f24 98  99   .rodata                ascii   during phase1 personality function said it would stop here, but now in phase2 it did not stop here
+336 0x00004f87 0x00004f87 25  26   .rodata                ascii   libunwind: %s %s:%d - %s\n
+337 0x00004fa1 0x00004fa1 134 135  .rodata                ascii   _Unwind_VRS_Result _Unwind_VRS_Get_Internal(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation, void *)
+338 0x00005028 0x00005028 44  45   .rodata                ascii   external/libunwind_llvm/src/UnwindCursor.hpp
+339 0x00005055 0x00005055 51  52   .rodata                ascii   uint32_t libunwind::Registers_arm::getRegister(int)
+340 0x00005089 0x00005089 41  42   .rodata                ascii   external/libunwind_llvm/src/Registers.hpp
+341 0x000050b3 0x000050b3 24  25   .rodata                ascii   unsupported arm register
+342 0x000050cc 0x000050cc 57  58   .rodata                ascii   void libunwind::Registers_arm::setRegister(int, uint32_t)
+343 0x00005106 0x00005106 59  60   .rodata                ascii   unw_fpreg_t libunwind::Registers_arm::getFloatRegister(int)
+344 0x00005142 0x00005142 26  27   .rodata                ascii   Unknown ARM float register
+345 0x0000515d 0x0000515d 65  66   .rodata                ascii   void libunwind::Registers_arm::setFloatRegister(int, unw_fpreg_t)
+346 0x000051a2 0x000051a2 221 222  .rodata                ascii   bool libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getInfoFromEHABISection(pint_t, const libunwind::UnwindInfoSections &) [A = libunwind::LocalAddressSpace, R = libunwind::Registers_arm]
+347 0x00005280 0x00005280 27  28   .rodata                ascii   unknown personality routine
+348 0x0000529c 0x0000529c 65  66   .rodata                ascii   index inlined table detected but pr function requires extra words
+349 0x000053fd 0x000053fd 16  17   .rodata                ascii   unknown register
+350 0x00006005 0x00000001 36  37   .comment               ascii   GCC: (GNU) 4.9 20150123 (prerelease)
+351 0x0000602a 0x00000026 60  61   .comment               ascii   Android clang version 3.8.256229  (based on LLVM 3.8.256229)
+352 0x00006078 0x00000010 9   10   .note.gnu.gold-version ascii   gold 1.11
+353 0x00006089 0x00000005 5   6    .ARM.attributes        ascii   aeabi
+354 0x00006095 0x00000011 6   7    .ARM.attributes        ascii   ARM v7
+355 0x0000609d 0x00000019 4   5    .ARM.attributes        ascii   \n\aA\b
+356 0x000060c2 0x00000000 32  33   .gnu_debuglink         ascii   libmmcamera_facedetection_lib.so
+357 0x000060eb 0x00000001 9   10   .shstrtab              ascii   .shstrtab
+358 0x000060f5 0x0000000b 7   8    .shstrtab              ascii   .interp
+359 0x000060fd 0x00000013 19  20   .shstrtab              ascii   .note.android.ident
+360 0x00006111 0x00000027 18  19   .shstrtab              ascii   .note.gnu.build-id
+361 0x00006124 0x0000003a 7   8    .shstrtab              ascii   .dynsym
+362 0x0000612c 0x00000042 7   8    .shstrtab              ascii   .dynstr
+363 0x00006134 0x0000004a 9   10   .shstrtab              ascii   .gnu.hash
+364 0x0000613e 0x00000054 12  13   .shstrtab              ascii   .gnu.version
+365 0x0000614b 0x00000061 14  15   .shstrtab              ascii   .gnu.version_d
+366 0x0000615a 0x00000070 14  15   .shstrtab              ascii   .gnu.version_r
+367 0x00006169 0x0000007f 8   9    .shstrtab              ascii   .rel.dyn
+368 0x00006172 0x00000088 8   9    .shstrtab              ascii   .rel.plt
+369 0x0000617b 0x00000091 5   6    .shstrtab              ascii   .text
+370 0x00006181 0x00000097 10  11   .shstrtab              ascii   .ARM.exidx
+371 0x0000618c 0x000000a2 10  11   .shstrtab              ascii   .ARM.extab
+372 0x00006197 0x000000ad 7   8    .shstrtab              ascii   .rodata
+373 0x0000619f 0x000000b5 11  12   .shstrtab              ascii   .fini_array
+374 0x000061ab 0x000000c1 12  13   .shstrtab              ascii   .data.rel.ro
+375 0x000061b8 0x000000ce 8   9    .shstrtab              ascii   .dynamic
+376 0x000061c1 0x000000d7 4   5    .shstrtab              ascii   .got
+377 0x000061c6 0x000000dc 5   6    .shstrtab              ascii   .data
+378 0x000061cc 0x000000e2 4   5    .shstrtab              ascii   .bss
+379 0x000061d1 0x000000e7 8   9    .shstrtab              ascii   .comment
+380 0x000061da 0x000000f0 22  23   .shstrtab              ascii   .note.gnu.gold-version
+381 0x000061f1 0x00000107 15  16   .shstrtab              ascii   .ARM.attributes
+382 0x00006201 0x00000117 14  15   .shstrtab              ascii   .gnu_debuglink
+0x00000d60    1     12 sym.imp.__cxa_finalize
+0x00000d6c    1     12 sym.imp.__cxa_atexit
+0x00000d78    1     12 sym.imp.__register_atfork
+0x00000e80    1     12 sym.imp.dladdr
+0x00000e8c    1     12 sym.imp.__snprintf_chk
+0x00000d9c    1     12 sym.imp.__aeabi_memclr4
+0x00000db4    1     12 sym.imp.__aeabi_memclr8
+0x00000de4    1     12 sym.imp.__aeabi_memset8
+0x00000da8    1     12 sym.imp.__stack_chk_fail
+0x00000d90    1     12 sym.imp.cam_debug_log
+0x00000dcc    1     12 sym.imp.cos
+0x00000df0    1     12 sym.imp.free
+0x00000dc0    1     12 sym.imp.malloc
+0x00000dd8    1     12 sym.imp.sin
+0x00000e20    1     12 sym.imp.atoi
+0x00000e14    1     12 sym.imp.property_get
+0x00000e68    1     12 sym.imp.fprintf
+0x00000e5c    1     12 sym.imp.abort
+0x00000e74    1     12 sym.imp.__aeabi_memcpy
+0x00000e98    1     12 sym.imp.__gnu_Unwind_Find_exidx
+0x00000eb0    1     28 entry0
+0x00000ff0    6     58 sym.HWTHandle_Execute
+0x000026a0   23    780 sym.HWTracker_CreateHandle
+0x00002d5e    4     18 sym.HWTracker_SetHoldCount
+0x00002a7c    5     50 sym.HWTracker_CreateResultHandle
+0x00002aae    3     28 sym.HWTracker_DeleteResultHandle
+0x00002d16    3     28 sym.HWTracker_GetConsistentResult
+0x00000f90    1     52 sym.HWTRHandle_InitializeParameter
+0x00002ade    6    118 sym.HWTracker_SetDetectResult
+0x000011a0  205   4524 sym.HWT_ExecuteMain
+0x0000102a    1     22 sym.invalidateHWTDtResult
+0x00002d04    4     18 sym.HWTracker_GetConsistentCount
+0x00002b54    8     68 sym.HWTracker_SetAllDetectResult
+0x00002ddc    4     18 sym.HWTracker_GetAngleDiffForStrictThresholds
+0x00002d94    4     18 sym.HWTracker_GetDelayCount
+0x00002d70    4     18 sym.HWTracker_GetHoldCount
+0x00002d82    4     18 sym.HWTracker_SetDelayCount
+0x00002da6    4     18 sym.HWTracker_SetDeviceOrientation
+0x00002a38   12     68 sym.HWTracker_DeleteHandle
+0x00002db8    4     18 sym.HWTracker_GetDeviceOrientation
+0x00002dee    1     14 sym.HWTracker_SetSwThresholds
+0x00002b98   11    284 sym.HWTracker_Execute
+0x00002dca    4     18 sym.HWTracker_SetAngleDiffForStrictThresholds
+0x00002e70    5     42 sym.HWTracker_GetStrictSwThresholds
+0x00002e1a    5     42 sym.HWTracker_GetSwThresholds
+0x00002aca    3     20 sym.HWTracker_SetDetectCount
+0x00002e44    1     14 sym.HWTracker_SetStrictSwThresholds
+0x00001040   15    324 sym.deleteHoldInfo
+0x00000d84    1     12 rsym.HWT_ExecuteMain
+0x00000dfc    1     12 rsym.invalidateHWTDtResult
+0x000024fc   13    200 fcn.000024fc
+0x000025d4    3     32 fcn.000025d4
+0x00000e08    1     12 rsym.deleteHoldInfo
+0x00000e2c    1     12 rsym.HWTRHandle_InitializeParameter
+0x00000e38    1     12 rsym.HWTracker_DeleteHandle
+0x00000e44    1     12 rsym.HWTracker_SetDetectResult
+0x00000e50    1     12 rsym.HWTHandle_Execute
+0x000037e8    3     46 fcn.000037e8
+0x00003816    6     68 fcn.00003816
+0x000032cc   25    292 fcn.000032cc
+0x00003230   21    132 fcn.00003230
+0x000038f8    1      6 fcn.000038f8
+0x0000388a    3     56 fcn.0000388a
+0x00003650    1     40 fcn.00003650
+0x000038c8    1     30 fcn.000038c8
+0x000038c2    1      6 fcn.000038c2
+0x0000385a    3     48 fcn.0000385a
+0x0000371c    1      6 fcn.0000371c
+0x000037a4    1     60 fcn.000037a4
+0x00003cbc    5    100 fcn.00003cbc
+0x0000352c   15    214 fcn.0000352c
+0x000038e6    1     18 fcn.000038e6
+0x00003790    3     38 fcn.00003790
+0x00003d3c    1     36 fcn.00003d3c
+0x0000373c   10     72 fcn.0000373c
+0x0000374c    6    114 fcn.0000374c
+0x00003744    1      8 fcn.00003744
+0x00003734    2     12 fcn.00003734
+0x00003d68    1     72 fcn.00003d68
+0x00002e9a    5     64 fcn.00002e9a
+0x00002eec   56    656 fcn.00002eec
+0x00003dbc   13     88 fcn.00003dbc
+0x00003e14   23    372 fcn.00003e14
+0x00004460    1      8 fcn.00004460
+0x00004458    1      8 fcn.00004458
+0x00004468    1      8 fcn.00004468
+0x00004470    1     68 fcn.00004470
+0x000044dc    1      8 fcn.000044dc
