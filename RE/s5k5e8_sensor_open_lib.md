@@ -69,9 +69,20 @@ All-zero (6 words).
 
 ## Output info array
 
-A heuristic scan for an 8-entry `msm_sensor_output_info_t` array (stride `0x40`)
-did not find a plausible sequence yet. This may be stored elsewhere or
-constructed at runtime for S5K5E8.
+The output info array is present at file offset `0x77fc8` with a stride of
+`0x40`, but only one populated entry was found:
 
-Next step is to locate the output info table by tracing code references to
-the inline block or by matching known mode registers.
+- `idx 0`: `2592x1944`, `line=3136`, `frame=1968`, `vt=184000000`, `op=165600000`
+
+## Mode geometry from reg tables
+
+Using `extract_mode_geometry.py` against the S5K5E8 reg tables (start reg
+`0x034c`), only one candidate table was found:
+
+- `2592x1944` line `3136` frame `1968`
+
+This likely corresponds to the full-resolution mode. Additional modes may be
+configured programmatically or stored under a different register start.
+
+Next step is to locate additional mode tables or trace code references to
+the inline block.

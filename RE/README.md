@@ -59,6 +59,22 @@ python3 RE/dump_sensor_open_lib.py \
   --name oxygen_imx386_sunny
 ```
 
+3.6. For OV/S5K sensors, derive mode geometry from their reg tables:
+
+```bash
+python3 RE/extract_mode_geometry.py \
+  RE/libmmcamera_oxygen_ov12a_sunny.so \
+  --start-reg 0x3808 --terminator 0x0000
+```
+
+3.7. Locate output info arrays (use relaxed scan for OV12A):
+
+```bash
+python3 RE/dump_output_info.py \
+  RE/libmmcamera_oxygen_ov12a_sunny.so \
+  --name oxygen_ov12a_sunny --relaxed
+```
+
 4. Disassemble `sensor_open_lib` and identify the top-level structures it returns.
 5. Recover mode metadata around each register table:
    - output size

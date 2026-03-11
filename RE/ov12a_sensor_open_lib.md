@@ -76,9 +76,31 @@ All-zero (6 words).
 
 ## Output info array
 
-A heuristic scan for a 6-entry `msm_sensor_output_info_t` array (stride `0x40`)
-did not find a plausible sequence yet. This may be stored elsewhere or
-constructed at runtime for OV12A.
+The output info array is present at file offset `0x77fc8` with a stride of
+`0x40` and 6 populated entries:
 
-Next step is to locate the output info table by tracing code references to
-the inline block or by matching known mode registers.
+- `idx 0`: `4096x3072`, `line=1168`, `frame=3302`, `vt=108000000`, `op=398400000`
+- `idx 1`: `2048x1536`, `line=1064`, `frame=3346`, `vt=106900000`, `op=123360000`
+- `idx 2`: `4096x2304`, `line=1168`, `frame=3080`, `vt=108000000`, `op=398400000`
+- `idx 3`: `3840x2160`, `line=1168`, `frame=3080`, `vt=108000000`, `op=398400000`
+- `idx 4`: `1920x1080`, `line=1064`, `frame=3346`, `vt=107400000`, `op=233600000`
+- `idx 5`: `1280x720`, `line=1064`, `frame=844`, `vt=107800000`, `op=233600000`
+
+## Mode geometry from reg tables
+
+Using `extract_mode_geometry.py` against the OV12A reg tables (start reg
+`0x3808`), the following candidate mode sizes appear:
+
+- `4096x3072` line `1168` frame `3302` (duplicate table appears twice)
+- `2048x1536` line `1064` frame `3346`
+- `4096x2304` line `1168` frame `3080`
+- `3840x2160` line `1168` frame `3080`
+- `1920x1080` line `1064` frame `3346`
+- `1280x720` line `1064` frame `844`
+
+Note: line length is smaller than width in these tables, which suggests the
+OV12A line length might be stored in different units or with additional
+packing. Treat these as raw register values for now.
+
+The line-length values are smaller than the output width, so treat them as
+raw register values until we confirm the units.

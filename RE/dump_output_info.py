@@ -27,11 +27,12 @@ def parse_output_info(chunk: bytes) -> OutputInfo:
     return OutputInfo(x=x, y=y, line=line, frame=frame, vt=vt, op=op, binning=binning)
 
 
-def is_plausible(info: OutputInfo) -> bool:
+def is_plausible(info: OutputInfo, relaxed: bool) -> bool:
     if info.x == 0 or info.y == 0:
         return False
-    if info.line < info.x or info.frame < info.y:
-        return False
+    if not relaxed:
+        if info.line < info.x or info.frame < info.y:
+            return False
     if not (50_000_000 <= info.vt <= 600_000_000):
         return False
     if not (50_000_000 <= info.op <= 600_000_000):
@@ -60,7 +61,12 @@ def guess_count(data: bytes, base: int) -> int:
     return 6
 
 
-def scan_candidates(data: bytes, count: int, stride: int) -> list[tuple[int, list[OutputInfo], int]]:
+def scan_candidates(
+    data: bytes,
+    count: int,
+    stride: int,
+    relaxed: bool,
+) -> list[tuple[int, list[OutputInfo], int]]:
     results: list[tuple[int, list[OutputInfo], int]] = []
     block = count * stride
 
@@ -71,9 +77,10 @@ def scan_candidates(data: bytes, count: int, stride: int) -> list[tuple[int, lis
             chunk = data[off + idx * stride : off + idx * stride + 20]
             info = parse_output_info(chunk)
             infos.append(info)
-            if is_plausible(info):
+            if is_plausible(info, relaxed):
                 score += 1
-        if score >= max(2, count // 2):
+        threshold = max(1, count // 2)
+        if score >= threshold:
             results.append((off, infos, score))
 
     results.sort(key=lambda item: item[2], reverse=True)
@@ -87,13 +94,18 @@ def main() -> int:
     parser.add_argument("--stride", type=lambda x: int(x, 0), default=0x40)
     parser.add_argument("--count", type=int, default=0, help="Override mode count")
     parser.add_argument("--limit", type=int, default=3)
+    parser.add_argument(
+        "--relaxed",
+        action="store_true",
+        help="Allow line/frame values smaller than x/y",
+    )
     args = parser.parse_args()
 
     data = args.blob.read_bytes()
     base = find_name_offset(data, args.name)
     count = args.count if args.count else guess_count(data, base)
 
-    candidates = scan_candidates(data, count, args.stride)
+    candidates = scan_candidates(data, count, args.stride, args.relaxed)
     if not candidates:
         print("no candidates found")
         return 1

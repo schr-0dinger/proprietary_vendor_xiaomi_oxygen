@@ -134,6 +134,26 @@ def check_ov12a() -> None:
     meta_2b0 = read_words(data, base + 0x2B0, 6)
     assert_words("ov12a meta_0x2b0", meta_2b0, [0, 0, 0, 0, 0, 0])
 
+    output_base = 0x77FC8
+    stride = 0x40
+    expected = [
+        (4096, 3072, 1168, 3302, 108000000, 398400000, 1),
+        (2048, 1536, 1064, 3346, 106900000, 123360000, 1),
+        (4096, 2304, 1168, 3080, 108000000, 398400000, 1),
+        (3840, 2160, 1168, 3080, 108000000, 398400000, 1),
+        (1920, 1080, 1064, 3346, 107400000, 233600000, 1),
+        (1280, 720, 1064, 844, 107800000, 233600000, 1),
+    ]
+    for idx, want in enumerate(expected):
+        off = output_base + idx * stride
+        chunk = data[off : off + 20]
+        x, y, line, frame = struct.unpack_from("<HHHH", chunk, 0)
+        vt, op = struct.unpack_from("<II", chunk, 8)
+        binning = struct.unpack_from("<H", chunk, 16)[0]
+        got = (x, y, line, frame, vt, op, binning)
+        if got != want:
+            raise AssertionError(f"ov12a output_info[{idx}] mismatch: got {got}, expected {want}")
+
     triplets = read_words(data, base + 0x0F8, 1)
     assert_word("ov12a triplets[0]", triplets[0], 0x00000006)
 
@@ -158,6 +178,16 @@ def check_s5k5e8() -> None:
 
     meta_2b0 = read_words(data, base + 0x2B0, 6)
     assert_words("s5k5e8 meta_0x2b0", meta_2b0, [0, 0, 0, 0, 0, 0])
+
+    output_base = 0x77FC8
+    chunk = data[output_base : output_base + 20]
+    x, y, line, frame = struct.unpack_from("<HHHH", chunk, 0)
+    vt, op = struct.unpack_from("<II", chunk, 8)
+    binning = struct.unpack_from("<H", chunk, 16)[0]
+    want = (2592, 1944, 3136, 1968, 184000000, 165600000, 1)
+    got = (x, y, line, frame, vt, op, binning)
+    if got != want:
+        raise AssertionError(f"s5k5e8 output_info[0] mismatch: got {got}, expected {want}")
 
     triplets = read_words(data, base + 0x0F8, 1)
     assert_word("s5k5e8 triplets[0]", triplets[0], 0x00000008)
