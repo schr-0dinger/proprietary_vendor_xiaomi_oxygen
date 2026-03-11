@@ -34,6 +34,18 @@ This strongly suggests a Qualcomm-style static sensor library descriptor where:
 - later fields are scalar sensor configuration values
 - pointer members are stored in `.data.rel.ro`
 
+## File vs memory offsets
+
+`.data` is mapped at `0x6000` with file offset `0x5000`. Any in-memory
+address in the `0x6xxx` range maps to file offset `0x5xxx`.
+
+The previously referenced blocks land at:
+
+- `0x61c8` -> file offset `0x51c8`
+- `0x61f0` -> file offset `0x51f0`
+- `0x6230` -> file offset `0x5230`
+- `0x62b8` -> file offset `0x52b8`
+
 ## Relocation-backed pointer table
 
 `readelf -r` shows `R_ARM_RELATIVE` relocations in `.data.rel.ro` from `0x5e2c` through `0x5e68`.
@@ -206,6 +218,38 @@ This is likely an internal context or enumerator used by the higher-level sensor
 ## Parent object structure clues around `0x6008`
 
 The data between the inline name and the embedded metadata blocks is not random padding. It already looks like mode-count and per-resolution metadata.
+
+### Embedded metadata at `0x61c8`, `0x61f0`, `0x6230`, `0x62b8`
+
+These are raw little-endian words in the returned object (file offsets above).
+
+`0x61c8` (10 words):
+
+- `0x00000001 0x00000000 0x00000001 0x00000001`
+- `0x00000003 0x034e034c 0x03400342 0x00000202`
+- `0x00000204 0x00000000`
+
+`0x61f0` (16 words):
+
+- `0x00000000 0x0000000a 0x3f800000 0x41800000`
+- `0x41800000 0x00000000 0x00000000 0x00000000`
+- `0x00000000 0x0000fff5 0x00000000 0x00000000`
+- `0x00000000 0x00000000 0x00000000 0x00000000`
+
+`0x6230` (34 words):
+
+- `0x00020002 0x00000002 0x3fa00000 0x00000002`
+- `0x40b8f5c3 0x00000fc0 0x00000bc8 0x000c000c`
+- `0x00100010 0x004003ff 0x00400040 0x00000040`
+- `0x00000003 0x00022b00 0x00000000 0x00000000`
+- `0x00000000 0x00023601 0x00000000 0x00000000`
+- `0x00000000 0x00023502 0x00000000 0x00000000`
+- `0x00000000 0x00000000 0x00000000 0x00000000`
+- `0x00000000 0x00000000`
+
+`0x62b8` (6 words):
+
+- `0x00000003 0x00000003 0x00000000 0x00000000 0x00000001 0x00021203`
 
 ### Small per-resolution block at `0x6100`
 

@@ -1,0 +1,2968 @@
+Directory structure:
+└── opensource/
+    ├── README.md
+    ├── Android.bp
+    ├── KERNEL_CONTEXT.md
+    ├── vendor_overrides.mk
+    ├── camera/
+    │   ├── README.md
+    │   ├── Android.bp
+    │   ├── imx386/
+    │   │   ├── README.md
+    │   │   ├── Android.bp
+    │   │   ├── imx386_reg_data.h
+    │   │   └── imx386_sensor.c
+    │   ├── include/
+    │   │   ├── qcom_camera_stub.h
+    │   │   └── qcom_sensor_compat.h
+    │   └── stubs/
+    │       ├── Android.bp
+    │       ├── dw9763_sunny_actuator.c
+    │       ├── imx386_eeprom.c
+    │       ├── ov12a_ofilm_dw9718_actuator.c
+    │       ├── ov12a_ofilm_eeprom.c
+    │       ├── ov12a_ofilm_sensor.c
+    │       ├── ov12a_sunny_dw9763_actuator.c
+    │       ├── ov12a_sunny_eeprom.c
+    │       ├── ov12a_sunny_sensor.c
+    │       ├── s5k5e8_ofilm_sensor.c
+    │       ├── s5k5e8_qtech_eeprom.c
+    │       └── s5k5e8_qtech_sensor.c
+    ├── consumerir/
+    │   ├── README.md
+    │   ├── Android.bp
+    │   ├── consumerir.c
+    │   ├── lirc_common.c
+    │   ├── backend/
+    │   │   ├── backend_select.c
+    │   │   ├── downstream/
+    │   │   │   └── backend_downstream.c
+    │   │   └── mainline/
+    │   │       └── backend_mainline.c
+    │   └── include/
+    │       └── consumerir_backend.h
+    ├── fingerprint/
+    │   ├── README.md
+    │   ├── Android.bp
+    │   ├── fingerprint_hal.c
+    │   ├── backend/
+    │   │   ├── backend_select.c
+    │   │   ├── disabled/
+    │   │   │   └── backend_disabled.c
+    │   │   └── passthrough/
+    │   │       └── backend_passthrough.c
+    │   └── include/
+    │       ├── fingerprint_backend.h
+    │       └── fingerprint_compat.h
+    ├── policy/
+    │   └── vendor_policy.json
+    ├── sensors/
+    │   ├── README.md
+    │   ├── Android.bp
+    │   ├── sensors_qti.c
+    │   ├── backend/
+    │   │   ├── backend_select.c
+    │   │   ├── downstream/
+    │   │   │   └── backend_downstream.c
+    │   │   └── mainline/
+    │   │       └── backend_mainline.c
+    │   └── include/
+    │       └── sensors_backend.h
+    └── tools/
+        └── vendor_inventory.py
+
+================================================
+FILE: README.md
+================================================
+# Open Vendor Scaffolding
+
+This directory is the first concrete layer of the `oxygen` port-first open-vendor plan.
+
+Current priority:
+
+- primary target: `oxygen` on the downstream `4.9` kernel
+- mainline is reference material for future backend work, not a current compatibility target
+
+## What is here
+
+- `tools/vendor_inventory.py`
+  - Builds a machine-readable inventory from `oxygen-vendor.mk`, `mithorium-common-vendor.mk`, `Android.bp`, and `proprietary/vendor/etc/camera/camera_config.xml`.
+  - Annotates each artifact with layer, partition, kind, architecture, subsystem, policy, and a small dependency graph.
+- `policy/vendor_policy.json`
+  - Default replacement policy map.
+  - Current default stance is conservative: camera, sensors, and IR are replacement targets; fingerprint is a shim target; radio/IMS/data, GPU/media, location, DRM/TEE, and firmware stay binary by default.
+- `vendor_overrides.mk`
+  - Mixed-vendor overlay that filters selected prebuilts out of the generated `PRODUCT_COPY_FILES` lists and replaces them with source modules.
+- `consumerir/`
+  - First open replacement module, installed as `vendor/lib64/hw/consumerir.msm8953.so`.
+  - Uses a backend split, but the downstream `4.9` backend is the primary target today.
+  - Backend selection is auto-probed at runtime and can be overridden with `OXYGEN_CONSUMERIR_BACKEND=downstream|mainline|auto`.
+- `camera/`
+  - Shared camera compat headers plus source skeletons for the oxygen camera family.
+  - Includes one RE-backed sensor implementation for IMX386 and generic stubs for the remaining sensor, eeprom, and actuator libraries from `camera_config.xml`.
+- `camera/imx386/`
+  - First source skeleton for `libmmcamera_oxygen_imx386_sunny.so`.
+  - Encodes the recovered `sensor_open_lib` inline layout as exact offsets and exposes the six mode tables in Qualcomm-style `msm_camera_i2c_reg_setting` form.
+  - This is a research module, not a runtime-ready blob replacement yet.
+- `sensors/`
+  - Source skeleton for `vendor/bin/sensors.qti`.
+  - Keeps the planned backend split in place, with downstream `4.9` as the primary compatibility goal.
+- `fingerprint/`
+  - Source skeleton for `vendor/lib64/hw/fingerprint.msm8953.so`.
+  - Starts as a non-operational gating shim so the repo has a concrete place for the future disabled/passthrough split.
+- `KERNEL_CONTEXT.md`
+  - Maps the local downstream and mainline kernel trees to the vendor-side open-source effort.
+  - Records that downstream `4.9` is the implementation target, while mainline is reference-only for now.
+
+## Mixed-vendor enablement
+
+The generated vendor manifests stay unchanged by default.
+
+To enable the open IR HAL in a product or device makefile:
+
+```make
+OXYGEN_OPEN_VENDOR_COMPONENTS += consumerir
+```
+
+Additional component toggles now exist:
+
+```make
+OXYGEN_OPEN_VENDOR_COMPONENTS += sensors
+OXYGEN_OPEN_VENDOR_COMPONENTS += fingerprint
+OXYGEN_OPEN_VENDOR_COMPONENTS += camera-imx386
+OXYGEN_OPEN_VENDOR_COMPONENTS += camera-stubs
+OXYGEN_OPEN_VENDOR_COMPONENTS += camera-all
+```
+
+Current meaning:
+
+- `consumerir`
+  - real open replacement target
+- `sensors`
+  - source skeleton for `vendor/bin/sensors.qti`
+- `fingerprint`
+  - source skeleton for `vendor/lib64/hw/fingerprint.msm8953.so`
+- `camera-imx386`
+  - swaps in the IMX386 sensor/eeprom/actuator source set
+- `camera-stubs`
+  - swaps in the generic OV12A and S5K5E8 source stubs
+- `camera-all`
+  - enables both camera groups above
+
+These toggles are for downstream `4.9` bring-up first. They should not be read as a promise of current mainline compatibility.
+
+Both [`oxygen-vendor.mk`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/oxygen-vendor.mk) and [`mithorium-common-vendor.mk`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/mithorium-common-vendor.mk) now include this overlay at the end, so replacements can be layered on top without rewriting the generated blob lists.
+
+## Inventory usage
+
+Summary only:
+
+```bash
+python3 opensource/tools/vendor_inventory.py --summary
+```
+
+Full JSON inventory:
+
+```bash
+python3 opensource/tools/vendor_inventory.py > /tmp/oxygen-vendor-inventory.json
+```
+
+## Helpful Local Inputs
+
+The most useful local kernel inputs for the current implementation phase are:
+
+- the local downstream `oxygen` kernel tree at
+  [`android_kernel_xiaomi_oxygen/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen)
+- the local mainline reference tree at
+  [`linux/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/linux)
+- extracted init logs or service failure logs once runtime enablement begins
+
+Useful but lower priority:
+
+- firmware and calibration blobs that are loaded by kept-binary components
+- ROM-side manifests or init changes from the `mido`/`vince` bases you expect
+  to port from
+
+## Current limits
+
+- The open `consumerir` HAL preserves the Android legacy `consumerir` ABI and exact installed filename.
+- The downstream `consumerir` path is now grounded against `android_kernel_xiaomi_oxygen/drivers/media/rc/ir-spi.c`: it uses `LIRC_SET_REC_FILTER` as the TX-length ioctl before `write()`. It is still not hardware-verified on-device here.
+- Camera, sensors, and fingerprint scaffolding are present as source now, but only `consumerir` is wired into [`vendor_overrides.mk`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/opensource/vendor_overrides.mk).
+- The IMX386 camera skeleton compiles as source scaffolding, but it is not yet wired into `vendor_overrides.mk` because the full Qualcomm `sensor_open_lib()` userspace ABI is still being reconstructed.
+- The generic camera/eeprom/actuator stubs, the `sensors.qti` skeleton, and the fingerprint shim are coverage scaffolding only. They exist to anchor future RE and implementation work, not to replace blobs yet.
+- The new mixed-vendor toggles for `sensors`, `fingerprint`, `camera-imx386`, `camera-stubs`, and `camera-all` are build-selection hooks for controlled downstream `4.9` bring-up work, not for production boot yet.
+
+
+
+================================================
+FILE: Android.bp
+================================================
+cc_defaults {
+    name: "oxygen_open_vendor_defaults",
+    vendor: true,
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wextra",
+    ],
+}
+
+cc_defaults {
+    name: "oxygen_open_skeleton_defaults",
+    defaults: ["oxygen_open_vendor_defaults"],
+    c_std: "c11",
+}
+
+
+
+================================================
+FILE: KERNEL_CONTEXT.md
+================================================
+# Kernel Context
+
+This repo now has the two kernel trees that matter most to the open-vendor
+effort:
+
+- primary implementation target:
+  [`android_kernel_xiaomi_oxygen/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen)
+  - Linux `4.9.337`
+- reference-only track for now:
+  [`linux/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/linux)
+  - Linux `6.12`
+
+## Why this matters
+
+- The downstream tree defines the currently working device-specific kernel
+  contracts that the proprietary userspace was written against. This is the
+  primary compatibility target.
+- The mainline tree is reference material for future backend design,
+  especially for sensors, power, and other kernel-facing interfaces.
+
+## Immediate subsystem anchors
+
+- consumer IR, downstream
+  - DTS:
+    [`android_kernel_xiaomi_oxygen/arch/arm64/boot/dts/qcom/oxygen/misc.dtsi`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen/arch/arm64/boot/dts/qcom/oxygen/misc.dtsi)
+  - driver:
+    [`android_kernel_xiaomi_oxygen/drivers/media/rc/ir-spi.c`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen/drivers/media/rc/ir-spi.c)
+
+- fingerprint, downstream
+  - DTS:
+    [`android_kernel_xiaomi_oxygen/arch/arm64/boot/dts/qcom/oxygen/fingerprint.dtsi`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen/arch/arm64/boot/dts/qcom/oxygen/fingerprint.dtsi)
+  - driver family:
+    [`android_kernel_xiaomi_oxygen/drivers/input/fingerprint/goodix_ta/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen/drivers/input/fingerprint/goodix_ta)
+
+- camera, downstream
+  - driver family:
+    [`android_kernel_xiaomi_oxygen/drivers/media/platform/msm/camera_v2/`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/android_kernel_xiaomi_oxygen/drivers/media/platform/msm/camera_v2)
+
+- mainline msm8953 Xiaomi references
+  - common:
+    [`linux/arch/arm64/boot/dts/qcom/msm8953-xiaomi-common.dtsi`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/linux/arch/arm64/boot/dts/qcom/msm8953-xiaomi-common.dtsi)
+  - mido:
+    [`linux/arch/arm64/boot/dts/qcom/msm8953-xiaomi-mido.dts`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/linux/arch/arm64/boot/dts/qcom/msm8953-xiaomi-mido.dts)
+  - vince:
+    [`linux/arch/arm64/boot/dts/qcom/msm8953-xiaomi-vince.dts`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/linux/arch/arm64/boot/dts/qcom/msm8953-xiaomi-vince.dts)
+
+## Important current gap
+
+The mainline tree has Xiaomi `msm8953` references for `mido` and `vince`, but
+not for `oxygen` yet. That means:
+
+- downstream remains the authoritative source for current `oxygen` hardware
+  wiring
+- `mido` and `vince` mainline DTS files are reference material, not drop-in
+  replacements
+- current vendor open-source work should first become correct on downstream
+  `4.9`
+- mainline-aware structure is still useful, but it should not slow down or
+  complicate the downstream bring-up path
+
+
+
+================================================
+FILE: vendor_overrides.mk
+================================================
+# Open-vendor overrides layered on top of the generated oxygen and
+# mithorium-common prebuilt lists.
+#
+# Usage from a product or device makefile:
+#   OXYGEN_OPEN_VENDOR_COMPONENTS += consumerir
+#   OXYGEN_OPEN_VENDOR_COMPONENTS += sensors fingerprint
+#   OXYGEN_OPEN_VENDOR_COMPONENTS += camera-imx386 camera-stubs
+#
+# This keeps the generated vendor blobs as the default, and filters out only the
+# prebuilts that have an open replacement module in this repo.
+
+OXYGEN_OPEN_VENDOR_COMPONENTS ?=
+MITHORIUM_COMMON_OPEN_VENDOR_COMPONENTS ?=
+
+OXYGEN_CONSUMERIR_PREBUILT := \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib64/hw/consumerir.msm8953.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/consumerir.msm8953.so
+OXYGEN_SENSORS_PREBUILT := \
+    vendor/xiaomi/oxygen/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti
+OXYGEN_FINGERPRINT_PREBUILT := \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib64/hw/fingerprint.msm8953.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.msm8953.so
+OXYGEN_CAMERA_IMX386_PREBUILTS := \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_imx386_sunny.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_oxygen_imx386_sunny.so \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_imx386_sunny_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_oxygen_imx386_sunny_eeprom.so \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libactuator_oxygen_dw9763_sunny.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_oxygen_dw9763_sunny.so
+OXYGEN_CAMERA_STUB_PREBUILTS := \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_ov12a_sunny.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_oxygen_ov12a_sunny.so \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_ov12a_sunny_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_oxygen_ov12a_sunny_eeprom.so \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libactuator_oxygen_ov12a_sunny_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_oxygen_ov12a_sunny_dw9763.so \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_ov12a_ofilm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_oxygen_ov12a_ofilm.so \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_ov12a_ofilm_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_oxygen_ov12a_ofilm_eeprom.so \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libactuator_oxygen_ov12a_ofilm_dw9718.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_oxygen_ov12a_ofilm_dw9718.so \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_s5k5e8_qtech.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_oxygen_s5k5e8_qtech.so \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_s5k5e8_qtech_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_oxygen_s5k5e8_qtech_eeprom.so \
+    vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_s5k5e8_ofilm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_oxygen_s5k5e8_ofilm.so
+
+OXYGEN_CAMERA_IMX386_PACKAGES := \
+    libmmcamera_oxygen_imx386_sunny.open \
+    libmmcamera_oxygen_imx386_sunny_eeprom.open \
+    libactuator_oxygen_dw9763_sunny.open
+OXYGEN_CAMERA_STUB_PACKAGES := \
+    libmmcamera_oxygen_ov12a_sunny.open \
+    libmmcamera_oxygen_ov12a_sunny_eeprom.open \
+    libactuator_oxygen_ov12a_sunny_dw9763.open \
+    libmmcamera_oxygen_ov12a_ofilm.open \
+    libmmcamera_oxygen_ov12a_ofilm_eeprom.open \
+    libactuator_oxygen_ov12a_ofilm_dw9718.open \
+    libmmcamera_oxygen_s5k5e8_qtech.open \
+    libmmcamera_oxygen_s5k5e8_qtech_eeprom.open \
+    libmmcamera_oxygen_s5k5e8_ofilm.open
+
+ifneq ($(filter consumerir,$(OXYGEN_OPEN_VENDOR_COMPONENTS)),)
+PRODUCT_COPY_FILES := $(filter-out $(OXYGEN_CONSUMERIR_PREBUILT),$(PRODUCT_COPY_FILES))
+PRODUCT_PACKAGES += consumerir.msm8953.open
+endif
+
+ifneq ($(filter sensors,$(OXYGEN_OPEN_VENDOR_COMPONENTS)),)
+PRODUCT_COPY_FILES := $(filter-out $(OXYGEN_SENSORS_PREBUILT),$(PRODUCT_COPY_FILES))
+PRODUCT_PACKAGES += sensors.qti.open
+endif
+
+ifneq ($(filter fingerprint,$(OXYGEN_OPEN_VENDOR_COMPONENTS)),)
+PRODUCT_COPY_FILES := $(filter-out $(OXYGEN_FINGERPRINT_PREBUILT),$(PRODUCT_COPY_FILES))
+PRODUCT_PACKAGES += fingerprint.msm8953.open
+endif
+
+ifneq ($(filter camera-imx386 camera-all,$(OXYGEN_OPEN_VENDOR_COMPONENTS)),)
+PRODUCT_COPY_FILES := $(filter-out $(OXYGEN_CAMERA_IMX386_PREBUILTS),$(PRODUCT_COPY_FILES))
+PRODUCT_PACKAGES += $(OXYGEN_CAMERA_IMX386_PACKAGES)
+endif
+
+ifneq ($(filter camera-stubs camera-all,$(OXYGEN_OPEN_VENDOR_COMPONENTS)),)
+PRODUCT_COPY_FILES := $(filter-out $(OXYGEN_CAMERA_STUB_PREBUILTS),$(PRODUCT_COPY_FILES))
+PRODUCT_PACKAGES += $(OXYGEN_CAMERA_STUB_PACKAGES)
+endif
+
+
+
+================================================
+FILE: camera/README.md
+================================================
+# Open Camera Skeleton
+
+This directory holds the camera-side source scaffolding for the `oxygen`
+open-vendor effort.
+
+## Scope
+
+The current tree covers all module-specific libraries declared in
+[`camera_config.xml`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/proprietary/vendor/etc/camera/camera_config.xml):
+
+- sensor libraries
+  - `libmmcamera_oxygen_imx386_sunny.so`
+  - `libmmcamera_oxygen_ov12a_sunny.so`
+  - `libmmcamera_oxygen_ov12a_ofilm.so`
+  - `libmmcamera_oxygen_s5k5e8_qtech.so`
+  - `libmmcamera_oxygen_s5k5e8_ofilm.so`
+- eeprom libraries
+  - `libmmcamera_oxygen_imx386_sunny_eeprom.so`
+  - `libmmcamera_oxygen_ov12a_sunny_eeprom.so`
+  - `libmmcamera_oxygen_ov12a_ofilm_eeprom.so`
+  - `libmmcamera_oxygen_s5k5e8_qtech_eeprom.so`
+- actuator libraries
+  - `libactuator_oxygen_dw9763_sunny.so`
+  - `libactuator_oxygen_ov12a_sunny_dw9763.so`
+  - `libactuator_oxygen_ov12a_ofilm_dw9718.so`
+
+## Layout
+
+- `include/qcom_sensor_compat.h`
+  - Minimal Qualcomm camera type definitions copied from the local downstream
+    kernel headers.
+- `include/qcom_camera_stub.h`
+  - Shared scaffolding types used by the generic sensor/eeprom/actuator stubs.
+- `imx386/`
+  - RE-backed IMX386 source skeleton.
+- `stubs/`
+  - Generic source stubs for the remaining oxygen-specific camera libraries.
+
+## Current limits
+
+- Only IMX386 contains recovered structure data.
+- The generic stubs preserve module names and export entry points, but do not
+  yet claim ABI compatibility with Qualcomm camera userspace.
+- No camera library from this directory is wired into mixed-vendor replacement
+  yet.
+
+
+
+================================================
+FILE: camera/Android.bp
+================================================
+cc_defaults {
+    name: "oxygen_open_camera_defaults",
+    defaults: ["oxygen_open_skeleton_defaults"],
+    compile_multilib: "32",
+}
+
+cc_defaults {
+    name: "oxygen_open_camera_stub_defaults",
+    defaults: ["oxygen_open_camera_defaults"],
+    local_include_dirs: ["include"],
+}
+
+
+
+================================================
+FILE: camera/imx386/README.md
+================================================
+# IMX386 Open Sensor Skeleton
+
+This directory contains the first source skeleton for `libmmcamera_oxygen_imx386_sunny.so`.
+
+## What it preserves
+
+- exported symbol name: `sensor_open_lib`
+- sensor name: `oxygen_imx386_sunny`
+- six recovered mode tables from [`RE/imx386_regs.c`](/home/schr-0dinger/Xiaomi_Kernel/proprietary_vendor_xiaomi_oxygen/RE/imx386_regs.c)
+- exact recovered offsets for the inline blocks currently anchored at:
+  - `+0x0f8`
+  - `+0x1c0`
+  - `+0x228`
+  - `+0x2b0`
+
+## What it does not claim yet
+
+- ABI correctness versus Qualcomm's real userspace `sensor_lib` layout
+- runtime compatibility with `mm-qcamera-daemon`
+- complete output-info decoding for all six resolution slots
+- recovered callback table or PDAF helper wiring
+
+The current value is that the RE is now represented as compileable source, with the blob layout turned into explicit code offsets instead of only markdown notes.
+
+
+
+================================================
+FILE: camera/imx386/Android.bp
+================================================
+cc_library_shared {
+    name: "libmmcamera_oxygen_imx386_sunny.open",
+    defaults: ["oxygen_open_camera_defaults"],
+    stem: "libmmcamera_oxygen_imx386_sunny",
+    srcs: ["imx386_sensor.c"],
+    local_include_dirs: ["../include"],
+}
+
+
+
+================================================
+FILE: camera/imx386/imx386_reg_data.h
+================================================
+#ifndef OXYGEN_IMX386_REG_DATA_H
+#define OXYGEN_IMX386_REG_DATA_H
+
+#include "qcom_sensor_compat.h"
+
+#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
+#define IMX386_MODE_REG_COUNT(a) ((uint16_t)(ARRAY_SIZE(a) - 1))
+
+static const struct msm_camera_i2c_reg_array kImx386Mode0[] = {
+    {0x3030, 0x0000}, {0x3031, 0x0001}, {0x3032, 0x0000},
+    {0x3047, 0x0001}, {0x3049, 0x0001}, {0x30e6, 0x0002},
+    {0x30e7, 0x0059}, {0x4e25, 0x0080}, {0x663a, 0x0002},
+    {0x9311, 0x0000}, {0xa0cd, 0x0019}, {0xa0ce, 0x0019},
+    {0xa0cf, 0x0019}, {0x0202, 0x000b}, {0x0203, 0x00f4},
+    {0x0204, 0x0000}, {0x0205, 0x0000}, {0x020e, 0x0001},
+    {0x020f, 0x0000}, {0x0210, 0x0001}, {0x0211, 0x0000},
+    {0x0212, 0x0001}, {0x0213, 0x0000}, {0x0214, 0x0001},
+    {0x0215, 0x0000}, {0x3100, 0x0000}, {0x3101, 0x0040},
+    {0x3102, 0x0000}, {0x3103, 0x0010}, {0x3104, 0x0002},
+    {0x3105, 0x00dc}, {0x3106, 0x0002}, {0x3107, 0x00e8},
+    {0x3108, 0x0005}, {0x3109, 0x008c}, {0x310a, 0x0004},
+    {0x310b, 0x0028}, {0x310c, 0x0009}, {0x310d, 0x0023},
+    {0x310e, 0x0006}, {0x310f, 0x00d4}, {0x3110, 0x0006},
+    {0x3111, 0x00b4}, {0x3112, 0x0004}, {0x3113, 0x0028},
+    {0x3114, 0x000a}, {0x3115, 0x004b}, {0x3116, 0x0006},
+    {0x3117, 0x00d4}, {0x3118, 0x0005}, {0x3119, 0x008c},
+    {0x311a, 0x0005}, {0x311b, 0x000b}, {0x311c, 0x0009},
+    {0x311d, 0x0023}, {0x311e, 0x0007}, {0x311f, 0x00b7},
+    {0x3120, 0x0006}, {0x3121, 0x00b4}, {0x3122, 0x0005},
+    {0x3123, 0x000b}, {0x3124, 0x000a}, {0x3125, 0x004b},
+    {0x3126, 0x0007}, {0x3127, 0x00b7}, {0x3128, 0x0005},
+    {0x3129, 0x008c}, {0x312a, 0x0004}, {0x312b, 0x0028},
+    {0x312c, 0x000a}, {0x312d, 0x004b}, {0x312e, 0x0007},
+    {0x312f, 0x00b7}, {0x3130, 0x0004}, {0x3131, 0x00c1},
+    {0x3132, 0x0003}, {0x3133, 0x0090}, {0x3134, 0x000b},
+    {0x3135, 0x0016}, {0x3136, 0x0008}, {0x3137, 0x004f},
+    {0x3004, 0x0000},
+};
+
+static const struct msm_camera_i2c_reg_array kImx386Mode1[] = {
+    {0x3030, 0x0000}, {0x3031, 0x0001}, {0x3032, 0x0000},
+    {0x3047, 0x0001}, {0x3049, 0x0000}, {0x30e6, 0x0000},
+    {0x30e7, 0x0000}, {0x4e25, 0x0080}, {0x663a, 0x0001},
+    {0x9311, 0x003f}, {0xa0cd, 0x000a}, {0xa0ce, 0x000a},
+    {0xa0cf, 0x000a}, {0x0202, 0x0006}, {0x0203, 0x0092},
+    {0x0204, 0x0000}, {0x0205, 0x0000}, {0x020e, 0x0001},
+    {0x020f, 0x0000}, {0x0210, 0x0001}, {0x0211, 0x0000},
+    {0x0212, 0x0001}, {0x0213, 0x0000}, {0x0214, 0x0001},
+    {0x0215, 0x0000}, {0x3004, 0x0000},
+};
+
+static const struct msm_camera_i2c_reg_array kImx386Mode2[] = {
+    {0x3030, 0x0000}, {0x3031, 0x0001}, {0x3032, 0x0000},
+    {0x3047, 0x0001}, {0x3049, 0x0001}, {0x30e6, 0x0002},
+    {0x30e7, 0x0059}, {0x4e25, 0x0080}, {0x663a, 0x0002},
+    {0x9311, 0x0000}, {0xa0cd, 0x0019}, {0xa0ce, 0x0019},
+    {0xa0cf, 0x0019}, {0x0202, 0x0008}, {0x0203, 0x00fc},
+    {0x0204, 0x0000}, {0x0205, 0x0000}, {0x020e, 0x0001},
+    {0x020f, 0x0000}, {0x0210, 0x0001}, {0x0211, 0x0000},
+    {0x0212, 0x0001}, {0x0213, 0x0000}, {0x0214, 0x0001},
+    {0x0215, 0x0000}, {0x3004, 0x0000},
+};
+
+static const struct msm_camera_i2c_reg_array kImx386Mode3[] = {
+    {0x3030, 0x0000}, {0x3031, 0x0001}, {0x3032, 0x0000},
+    {0x3047, 0x0001}, {0x3049, 0x0001}, {0x30e6, 0x0002},
+    {0x30e7, 0x0059}, {0x4e25, 0x0080}, {0x663a, 0x0002},
+    {0x9311, 0x0000}, {0xa0cd, 0x0019}, {0xa0ce, 0x0019},
+    {0xa0cf, 0x0019}, {0x0202, 0x0008}, {0x0203, 0x00f8},
+    {0x0204, 0x0000}, {0x0205, 0x0000}, {0x020e, 0x0001},
+    {0x020f, 0x0000}, {0x0210, 0x0001}, {0x0211, 0x0000},
+    {0x0212, 0x0001}, {0x0213, 0x0000}, {0x0214, 0x0001},
+    {0x0215, 0x0000}, {0x3004, 0x0000},
+};
+
+static const struct msm_camera_i2c_reg_array kImx386Mode4[] = {
+    {0x3030, 0x0000}, {0x3031, 0x0001}, {0x3032, 0x0000},
+    {0x3047, 0x0001}, {0x3049, 0x0000}, {0x30e6, 0x0000},
+    {0x30e7, 0x0000}, {0x4e25, 0x0080}, {0x663a, 0x0001},
+    {0x9311, 0x003f}, {0xa0cd, 0x000a}, {0xa0ce, 0x000a},
+    {0xa0cf, 0x000a}, {0x0202, 0x0006}, {0x0203, 0x0092},
+    {0x0204, 0x0000}, {0x0205, 0x0000}, {0x020e, 0x0001},
+    {0x020f, 0x0000}, {0x0210, 0x0001}, {0x0211, 0x0000},
+    {0x0212, 0x0001}, {0x0213, 0x0000}, {0x0214, 0x0001},
+    {0x0215, 0x0000}, {0x3004, 0x0000},
+};
+
+static const struct msm_camera_i2c_reg_array kImx386Mode5[] = {
+    {0x3030, 0x0000}, {0x3031, 0x0001}, {0x3032, 0x0000},
+    {0x3047, 0x0001}, {0x3049, 0x0000}, {0x30e6, 0x0000},
+    {0x30e7, 0x0000}, {0x4e25, 0x0080}, {0x663a, 0x0001},
+    {0x9311, 0x003f}, {0xa0cd, 0x000a}, {0xa0ce, 0x000a},
+    {0xa0cf, 0x000a}, {0x0202, 0x0004}, {0x0203, 0x008c},
+    {0x0204, 0x0000}, {0x0205, 0x0000}, {0x020e, 0x0001},
+    {0x020f, 0x0000}, {0x0210, 0x0001}, {0x0211, 0x0000},
+    {0x0212, 0x0001}, {0x0213, 0x0000}, {0x0214, 0x0001},
+    {0x0215, 0x0000}, {0x3004, 0x0000},
+};
+
+static const struct msm_camera_i2c_reg_setting kImx386ModeSettings[] = {
+    {
+        .reg_setting = (struct msm_camera_i2c_reg_array *)kImx386Mode0,
+        .size = IMX386_MODE_REG_COUNT(kImx386Mode0),
+        .addr_type = MSM_CAMERA_I2C_WORD_ADDR,
+        .data_type = MSM_CAMERA_I2C_WORD_DATA,
+        .delay = 0,
+    },
+    {
+        .reg_setting = (struct msm_camera_i2c_reg_array *)kImx386Mode1,
+        .size = IMX386_MODE_REG_COUNT(kImx386Mode1),
+        .addr_type = MSM_CAMERA_I2C_WORD_ADDR,
+        .data_type = MSM_CAMERA_I2C_WORD_DATA,
+        .delay = 0,
+    },
+    {
+        .reg_setting = (struct msm_camera_i2c_reg_array *)kImx386Mode2,
+        .size = IMX386_MODE_REG_COUNT(kImx386Mode2),
+        .addr_type = MSM_CAMERA_I2C_WORD_ADDR,
+        .data_type = MSM_CAMERA_I2C_WORD_DATA,
+        .delay = 0,
+    },
+    {
+        .reg_setting = (struct msm_camera_i2c_reg_array *)kImx386Mode3,
+        .size = IMX386_MODE_REG_COUNT(kImx386Mode3),
+        .addr_type = MSM_CAMERA_I2C_WORD_ADDR,
+        .data_type = MSM_CAMERA_I2C_WORD_DATA,
+        .delay = 0,
+    },
+    {
+        .reg_setting = (struct msm_camera_i2c_reg_array *)kImx386Mode4,
+        .size = IMX386_MODE_REG_COUNT(kImx386Mode4),
+        .addr_type = MSM_CAMERA_I2C_WORD_ADDR,
+        .data_type = MSM_CAMERA_I2C_WORD_DATA,
+        .delay = 0,
+    },
+    {
+        .reg_setting = (struct msm_camera_i2c_reg_array *)kImx386Mode5,
+        .size = IMX386_MODE_REG_COUNT(kImx386Mode5),
+        .addr_type = MSM_CAMERA_I2C_WORD_ADDR,
+        .data_type = MSM_CAMERA_I2C_WORD_DATA,
+        .delay = 0,
+    },
+};
+
+#endif
+
+
+
+================================================
+FILE: camera/imx386/imx386_sensor.c
+================================================
+#include <stddef.h>
+#include <stdint.h>
+
+#include "imx386_reg_data.h"
+#include "qcom_sensor_compat.h"
+
+#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
+
+/*
+ * This is a source skeleton for libmmcamera_oxygen_imx386_sunny.so.
+ *
+ * It preserves the exported symbol name and the recovered inline data offsets
+ * from RE/libmmcamera_oxygen_imx386_sunny.so, but it is not a runtime-ready
+ * replacement for the proprietary blob yet.
+ */
+
+struct imx386_open_lib_layout {
+    char sensor_name[32];
+    uint32_t raw_prefix_0x20_to_0x0f7[54];
+    uint32_t resolution_triplets_0x0f8[22];
+    uint8_t reserved_0x150_to_0x1bf[0x70];
+    uint32_t meta_0x1c0_words[10];
+    uint8_t reserved_0x1e8_to_0x227[0x40];
+    uint32_t meta_0x228_words[34];
+    uint32_t meta_0x2b0_words[6];
+    const struct sensor_driver_params_type *driver_params;
+};
+
+_Static_assert(offsetof(struct imx386_open_lib_layout, raw_prefix_0x20_to_0x0f7) == 0x20,
+    "unexpected imx386 sensor name size");
+_Static_assert(offsetof(struct imx386_open_lib_layout, resolution_triplets_0x0f8) == 0x0f8,
+    "unexpected imx386 resolution triplet offset");
+_Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x1c0_words) == 0x1c0,
+    "unexpected imx386 0x61c8 block offset");
+_Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x228_words) == 0x228,
+    "unexpected imx386 0x6230 block offset");
+_Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x2b0_words) == 0x2b0,
+    "unexpected imx386 0x62b8 block offset");
+
+static const struct msm_sensor_output_reg_addr_t kImx386OutputRegAddr = {
+    .x_output = 0x034c,
+    .y_output = 0x034e,
+    .line_length_pclk = 0x0342,
+    .frame_length_lines = 0x0340,
+};
+
+static const struct msm_sensor_exp_gain_info_t kImx386ExpGainInfo = {
+    .coarse_int_time_addr = 0x0202,
+    .global_gain_addr = 0x0204,
+    .vert_offset = 0,
+};
+
+/*
+ * Only the first entry has partially recovered geometry today.
+ * The remaining output_info entries stay zero until the packed 0x6230 region is
+ * mapped field-by-field.
+ */
+static const struct msm_sensor_output_info_t kImx386OutputInfo[6] = {
+    {
+        .x_output = 4032,
+        .y_output = 3016,
+        .line_length_pclk = 0,
+        .frame_length_lines = 0,
+        .vt_pixel_clk = 0,
+        .op_pixel_clk = 0,
+        .binning_factor = 1,
+    },
+    {0},
+    {0},
+    {0},
+    {0},
+    {0},
+};
+
+static const struct sensor_driver_params_type kImx386DriverParams = {
+    .init_settings = NULL,
+    .init_settings_size = 0,
+    .mode_settings = (struct msm_camera_i2c_reg_setting *)kImx386ModeSettings,
+    .mode_settings_size = ARRAY_SIZE(kImx386ModeSettings),
+    .sensor_output_reg_addr = (struct msm_sensor_output_reg_addr_t *)&kImx386OutputRegAddr,
+    .start_settings = NULL,
+    .stop_settings = NULL,
+    .groupon_settings = NULL,
+    .groupoff_settings = NULL,
+    .sensor_exp_gain_info = (struct msm_sensor_exp_gain_info_t *)&kImx386ExpGainInfo,
+    .output_info = (struct msm_sensor_output_info_t *)kImx386OutputInfo,
+};
+
+static const struct imx386_open_lib_layout kImx386OpenLib = {
+    .sensor_name = "oxygen_imx386_sunny",
+    .raw_prefix_0x20_to_0x0f7 = {
+        0x00000020, 0x00000001, 0x00000002, 0x00000000,
+        0x03860016, 0x00000000, 0x00000001, 0x00000000,
+        0x00000000, 0x00000001, 0x00000002, 0x00000002,
+        0x00000000, 0x00000001, 0x00000002, 0x00000000,
+        0x00000000, 0x00000001, 0x00000002, 0x00000001,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x016e3600, 0x00000001, 0x00000001, 0x00000000,
+        0x00000002, 0x0000000b, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000,
+    },
+    .resolution_triplets_0x0f8 = {
+        0x00000006, 0x00000000, 0x00000000, 0x00000000,
+        0x00000001, 0x00000001, 0x00000000,
+        0x00000000, 0x00000001, 0x00000002,
+        0x00000001, 0x00000000, 0x00000000,
+        0x00000002, 0x00000000, 0x00000000,
+        0x00000001, 0x00000002, 0x00000002,
+        0x00000000, 0x00000001, 0x00000000,
+    },
+    .meta_0x1c0_words = {
+        0x00000001, 0x00000000, 0x00000001, 0x00000001,
+        0x00000003, 0x034e034c, 0x03400342, 0x00000202,
+        0x00000204, 0x00000000,
+    },
+    .meta_0x228_words = {
+        0x00020002, 0x00000002, 0x3fa00000, 0x00000002,
+        0x40b8f5c3, 0x00000fc0, 0x00000bc8, 0x000c000c,
+        0x00100010, 0x004003ff, 0x00400040, 0x00000040,
+        0x00000003, 0x00022b00, 0x00000000, 0x00000000,
+        0x00000000, 0x00023601, 0x00000000, 0x00000000,
+        0x00000000, 0x00023502, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000,
+    },
+    .meta_0x2b0_words = {
+        0x00000003, 0x00000003, 0x00000000,
+        0x00000000, 0x00000001, 0x00021203,
+    },
+    .driver_params = &kImx386DriverParams,
+};
+
+const void *imx386_get_driver_params(void) {
+    return &kImx386DriverParams;
+}
+
+__attribute__((visibility("default")))
+void *sensor_open_lib(void) {
+    return (void *)&kImx386OpenLib;
+}
+
+
+
+================================================
+FILE: camera/include/qcom_camera_stub.h
+================================================
+#ifndef OXYGEN_QCOM_CAMERA_STUB_H
+#define OXYGEN_QCOM_CAMERA_STUB_H
+
+#include <stdint.h>
+
+#include "qcom_sensor_compat.h"
+
+#define OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION 1u
+
+struct qcom_stub_sensor_open_lib {
+    char sensor_name[32];
+    const struct sensor_driver_params_type *driver_params;
+    uint32_t abi_revision;
+    uint32_t reserved[7];
+};
+
+struct qcom_stub_named_module {
+    char name[64];
+    char kind[16];
+    uint32_t abi_revision;
+    uint32_t reserved[5];
+};
+
+static const struct sensor_driver_params_type kQcomStubEmptySensorDriverParams = {0};
+
+#endif
+
+
+
+================================================
+FILE: camera/include/qcom_sensor_compat.h
+================================================
+#ifndef OXYGEN_QCOM_SENSOR_COMPAT_H
+#define OXYGEN_QCOM_SENSOR_COMPAT_H
+
+#include <stdint.h>
+
+enum msm_camera_i2c_reg_addr_type {
+    MSM_CAMERA_I2C_BYTE_ADDR = 1,
+    MSM_CAMERA_I2C_WORD_ADDR,
+    MSM_CAMERA_I2C_3B_ADDR,
+    MSM_CAMERA_I2C_DWORD_ADDR,
+};
+
+struct msm_camera_i2c_reg_array {
+    uint16_t reg_addr;
+    uint16_t reg_data;
+};
+
+enum msm_camera_i2c_data_type {
+    MSM_CAMERA_I2C_BYTE_DATA = 1,
+    MSM_CAMERA_I2C_WORD_DATA,
+    MSM_CAMERA_I2C_SET_BYTE_MASK,
+    MSM_CAMERA_I2C_UNSET_BYTE_MASK,
+    MSM_CAMERA_I2C_SET_WORD_MASK,
+    MSM_CAMERA_I2C_UNSET_WORD_MASK,
+    MSM_CAMERA_I2C_SET_BYTE_WRITE_MASK_DATA,
+};
+
+struct msm_camera_i2c_reg_setting {
+    struct msm_camera_i2c_reg_array *reg_setting;
+    uint16_t size;
+    enum msm_camera_i2c_reg_addr_type addr_type;
+    enum msm_camera_i2c_data_type data_type;
+    uint16_t delay;
+};
+
+enum msm_sensor_resolution_t {
+    MSM_SENSOR_RES_FULL,
+    MSM_SENSOR_RES_QTR,
+    MSM_SENSOR_RES_2,
+    MSM_SENSOR_RES_3,
+    MSM_SENSOR_RES_4,
+    MSM_SENSOR_RES_5,
+    MSM_SENSOR_RES_6,
+    MSM_SENSOR_RES_7,
+    MSM_SENSOR_INVALID_RES,
+};
+
+struct msm_sensor_output_info_t {
+    uint16_t x_output;
+    uint16_t y_output;
+    uint16_t line_length_pclk;
+    uint16_t frame_length_lines;
+    uint32_t vt_pixel_clk;
+    uint32_t op_pixel_clk;
+    uint16_t binning_factor;
+};
+
+struct msm_sensor_exp_gain_info_t {
+    uint16_t coarse_int_time_addr;
+    uint16_t global_gain_addr;
+    uint16_t vert_offset;
+};
+
+struct msm_sensor_output_reg_addr_t {
+    uint16_t x_output;
+    uint16_t y_output;
+    uint16_t line_length_pclk;
+    uint16_t frame_length_lines;
+};
+
+struct sensor_driver_params_type {
+    struct msm_camera_i2c_reg_setting *init_settings;
+    uint16_t init_settings_size;
+    struct msm_camera_i2c_reg_setting *mode_settings;
+    uint16_t mode_settings_size;
+    struct msm_sensor_output_reg_addr_t *sensor_output_reg_addr;
+    struct msm_camera_i2c_reg_setting *start_settings;
+    struct msm_camera_i2c_reg_setting *stop_settings;
+    struct msm_camera_i2c_reg_setting *groupon_settings;
+    struct msm_camera_i2c_reg_setting *groupoff_settings;
+    struct msm_sensor_exp_gain_info_t *sensor_exp_gain_info;
+    struct msm_sensor_output_info_t *output_info;
+};
+
+#endif
+
+
+
+================================================
+FILE: camera/stubs/Android.bp
+================================================
+cc_library_shared {
+    name: "libmmcamera_oxygen_ov12a_sunny.open",
+    defaults: ["oxygen_open_camera_stub_defaults"],
+    stem: "libmmcamera_oxygen_ov12a_sunny",
+    srcs: ["ov12a_sunny_sensor.c"],
+}
+
+cc_library_shared {
+    name: "libmmcamera_oxygen_ov12a_ofilm.open",
+    defaults: ["oxygen_open_camera_stub_defaults"],
+    stem: "libmmcamera_oxygen_ov12a_ofilm",
+    srcs: ["ov12a_ofilm_sensor.c"],
+}
+
+cc_library_shared {
+    name: "libmmcamera_oxygen_s5k5e8_qtech.open",
+    defaults: ["oxygen_open_camera_stub_defaults"],
+    stem: "libmmcamera_oxygen_s5k5e8_qtech",
+    srcs: ["s5k5e8_qtech_sensor.c"],
+}
+
+cc_library_shared {
+    name: "libmmcamera_oxygen_s5k5e8_ofilm.open",
+    defaults: ["oxygen_open_camera_stub_defaults"],
+    stem: "libmmcamera_oxygen_s5k5e8_ofilm",
+    srcs: ["s5k5e8_ofilm_sensor.c"],
+}
+
+cc_library_shared {
+    name: "libmmcamera_oxygen_imx386_sunny_eeprom.open",
+    defaults: ["oxygen_open_camera_stub_defaults"],
+    stem: "libmmcamera_oxygen_imx386_sunny_eeprom",
+    srcs: ["imx386_eeprom.c"],
+}
+
+cc_library_shared {
+    name: "libmmcamera_oxygen_ov12a_sunny_eeprom.open",
+    defaults: ["oxygen_open_camera_stub_defaults"],
+    stem: "libmmcamera_oxygen_ov12a_sunny_eeprom",
+    srcs: ["ov12a_sunny_eeprom.c"],
+}
+
+cc_library_shared {
+    name: "libmmcamera_oxygen_ov12a_ofilm_eeprom.open",
+    defaults: ["oxygen_open_camera_stub_defaults"],
+    stem: "libmmcamera_oxygen_ov12a_ofilm_eeprom",
+    srcs: ["ov12a_ofilm_eeprom.c"],
+}
+
+cc_library_shared {
+    name: "libmmcamera_oxygen_s5k5e8_qtech_eeprom.open",
+    defaults: ["oxygen_open_camera_stub_defaults"],
+    stem: "libmmcamera_oxygen_s5k5e8_qtech_eeprom",
+    srcs: ["s5k5e8_qtech_eeprom.c"],
+}
+
+cc_library_shared {
+    name: "libactuator_oxygen_dw9763_sunny.open",
+    defaults: ["oxygen_open_camera_stub_defaults"],
+    stem: "libactuator_oxygen_dw9763_sunny",
+    srcs: ["dw9763_sunny_actuator.c"],
+}
+
+cc_library_shared {
+    name: "libactuator_oxygen_ov12a_sunny_dw9763.open",
+    defaults: ["oxygen_open_camera_stub_defaults"],
+    stem: "libactuator_oxygen_ov12a_sunny_dw9763",
+    srcs: ["ov12a_sunny_dw9763_actuator.c"],
+}
+
+cc_library_shared {
+    name: "libactuator_oxygen_ov12a_ofilm_dw9718.open",
+    defaults: ["oxygen_open_camera_stub_defaults"],
+    stem: "libactuator_oxygen_ov12a_ofilm_dw9718",
+    srcs: ["ov12a_ofilm_dw9718_actuator.c"],
+}
+
+
+
+================================================
+FILE: camera/stubs/dw9763_sunny_actuator.c
+================================================
+#include "qcom_camera_stub.h"
+
+static const struct qcom_stub_named_module kActuatorOpenLib = {
+    .name = "oxygen_dw9763_sunny",
+    .kind = "actuator",
+    .abi_revision = OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION,
+};
+
+__attribute__((visibility("default")))
+void *actuator_driver_open_lib(void) {
+    return (void *)&kActuatorOpenLib;
+}
+
+
+
+================================================
+FILE: camera/stubs/imx386_eeprom.c
+================================================
+#include "qcom_camera_stub.h"
+
+static const struct qcom_stub_named_module kEepromOpenLib = {
+    .name = "oxygen_imx386_sunny_eeprom",
+    .kind = "eeprom",
+    .abi_revision = OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION,
+};
+
+__attribute__((visibility("default")))
+void *oxygen_imx386_sunny_eeprom_open_lib(void) {
+    return (void *)&kEepromOpenLib;
+}
+
+
+
+================================================
+FILE: camera/stubs/ov12a_ofilm_dw9718_actuator.c
+================================================
+#include "qcom_camera_stub.h"
+
+static const struct qcom_stub_named_module kActuatorOpenLib = {
+    .name = "oxygen_ov12a_ofilm_dw9718",
+    .kind = "actuator",
+    .abi_revision = OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION,
+};
+
+__attribute__((visibility("default")))
+void *actuator_driver_open_lib(void) {
+    return (void *)&kActuatorOpenLib;
+}
+
+
+
+================================================
+FILE: camera/stubs/ov12a_ofilm_eeprom.c
+================================================
+#include "qcom_camera_stub.h"
+
+static const struct qcom_stub_named_module kEepromOpenLib = {
+    .name = "oxygen_ov12a_ofilm_eeprom",
+    .kind = "eeprom",
+    .abi_revision = OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION,
+};
+
+__attribute__((visibility("default")))
+void *oxygen_ov12a_ofilm_eeprom_open_lib(void) {
+    return (void *)&kEepromOpenLib;
+}
+
+
+
+================================================
+FILE: camera/stubs/ov12a_ofilm_sensor.c
+================================================
+#include "qcom_camera_stub.h"
+
+static const struct qcom_stub_sensor_open_lib kSensorOpenLib = {
+    .sensor_name = "oxygen_ov12a_ofilm",
+    .driver_params = &kQcomStubEmptySensorDriverParams,
+    .abi_revision = OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION,
+};
+
+__attribute__((visibility("default")))
+void *sensor_open_lib(void) {
+    return (void *)&kSensorOpenLib;
+}
+
+
+
+================================================
+FILE: camera/stubs/ov12a_sunny_dw9763_actuator.c
+================================================
+#include "qcom_camera_stub.h"
+
+static const struct qcom_stub_named_module kActuatorOpenLib = {
+    .name = "oxygen_ov12a_sunny_dw9763",
+    .kind = "actuator",
+    .abi_revision = OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION,
+};
+
+__attribute__((visibility("default")))
+void *actuator_driver_open_lib(void) {
+    return (void *)&kActuatorOpenLib;
+}
+
+
+
+================================================
+FILE: camera/stubs/ov12a_sunny_eeprom.c
+================================================
+#include "qcom_camera_stub.h"
+
+static const struct qcom_stub_named_module kEepromOpenLib = {
+    .name = "oxygen_ov12a_sunny_eeprom",
+    .kind = "eeprom",
+    .abi_revision = OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION,
+};
+
+__attribute__((visibility("default")))
+void *oxygen_ov12a_sunny_eeprom_open_lib(void) {
+    return (void *)&kEepromOpenLib;
+}
+
+
+
+================================================
+FILE: camera/stubs/ov12a_sunny_sensor.c
+================================================
+#include "qcom_camera_stub.h"
+
+static const struct qcom_stub_sensor_open_lib kSensorOpenLib = {
+    .sensor_name = "oxygen_ov12a_sunny",
+    .driver_params = &kQcomStubEmptySensorDriverParams,
+    .abi_revision = OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION,
+};
+
+__attribute__((visibility("default")))
+void *sensor_open_lib(void) {
+    return (void *)&kSensorOpenLib;
+}
+
+
+
+================================================
+FILE: camera/stubs/s5k5e8_ofilm_sensor.c
+================================================
+#include "qcom_camera_stub.h"
+
+static const struct qcom_stub_sensor_open_lib kSensorOpenLib = {
+    .sensor_name = "oxygen_s5k5e8_ofilm",
+    .driver_params = &kQcomStubEmptySensorDriverParams,
+    .abi_revision = OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION,
+};
+
+__attribute__((visibility("default")))
+void *sensor_open_lib(void) {
+    return (void *)&kSensorOpenLib;
+}
+
+
+
+================================================
+FILE: camera/stubs/s5k5e8_qtech_eeprom.c
+================================================
+#include "qcom_camera_stub.h"
+
+static const struct qcom_stub_named_module kEepromOpenLib = {
+    .name = "oxygen_s5k5e8_qtech_eeprom",
+    .kind = "eeprom",
+    .abi_revision = OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION,
+};
+
+__attribute__((visibility("default")))
+void *oxygen_s5k5e8_qtech_eeprom_open_lib(void) {
+    return (void *)&kEepromOpenLib;
+}
+
+
+
+================================================
+FILE: camera/stubs/s5k5e8_qtech_sensor.c
+================================================
+#include "qcom_camera_stub.h"
+
+static const struct qcom_stub_sensor_open_lib kSensorOpenLib = {
+    .sensor_name = "oxygen_s5k5e8_qtech",
+    .driver_params = &kQcomStubEmptySensorDriverParams,
+    .abi_revision = OXYGEN_QCOM_CAMERA_STUB_ABI_REVISION,
+};
+
+__attribute__((visibility("default")))
+void *sensor_open_lib(void) {
+    return (void *)&kSensorOpenLib;
+}
+
+
+
+================================================
+FILE: consumerir/README.md
+================================================
+# Open Consumer IR HAL
+
+This directory contains the first runtime-oriented open replacement in the
+`oxygen` open-vendor effort: `consumerir.msm8953.so`.
+
+## Current contract
+
+- Preserves the legacy Android `consumerir` HAL module name and install path:
+  `vendor/lib64/hw/consumerir.msm8953.so`
+- Keeps the frontend ABI stable and splits kernel-facing behavior into:
+  - `backend/downstream`
+  - `backend/mainline`
+
+Current priority is the downstream `4.9` backend. The mainline backend exists
+only as a reference/design track for now.
+
+## Downstream basis
+
+The downstream path is grounded against the local kernel tree:
+
+- DTS node:
+  [`../android_kernel_xiaomi_oxygen/arch/arm64/boot/dts/qcom/oxygen/misc.dtsi`](/home/schr-0dinger/Xiaomi_Kernel/android_kernel_xiaomi_oxygen/arch/arm64/boot/dts/qcom/oxygen/misc.dtsi)
+  defines an `ir-spi` device on `spi_8`.
+- Driver:
+  [`../android_kernel_xiaomi_oxygen/drivers/media/rc/ir-spi.c`](/home/schr-0dinger/Xiaomi_Kernel/android_kernel_xiaomi_oxygen/drivers/media/rc/ir-spi.c)
+  exposes `/dev/lirc0` and uses `LIRC_SET_REC_FILTER` to set the TX buffer
+  length before `write()`.
+
+That means the blob's `0x4004691c` ioctl is not an opaque Xiaomi-private call.
+It is the standard `LIRC_SET_REC_FILTER` slot being repurposed by the downstream
+driver.
+
+## Backend selection
+
+Selection is runtime-probed:
+
+- `downstream` when an `ir-spi` SPI driver or compatible string is visible
+- `mainline` when generic rc-core userspace markers are visible
+- fallback defaults to `downstream`
+
+Override for bring-up or testing:
+
+```sh
+export OXYGEN_CONSUMERIR_BACKEND=mainline
+```
+
+Accepted values are `downstream`, `mainline`, and `auto`.
+
+## Current limits
+
+- Not hardware-verified on a running device yet.
+- Mainline support is reference-only today, not a current `oxygen` target.
+- Carrier frequency ranges are still static and conservative.
+
+
+
+================================================
+FILE: consumerir/Android.bp
+================================================
+cc_library_shared {
+    name: "consumerir.msm8953.open",
+    defaults: ["oxygen_open_vendor_defaults"],
+    stem: "consumerir.msm8953",
+    relative_install_path: "hw",
+    compile_multilib: "64",
+    srcs: [
+        "backend/backend_select.c",
+        "backend/downstream/backend_downstream.c",
+        "backend/mainline/backend_mainline.c",
+        "consumerir.c",
+        "lirc_common.c",
+    ],
+    local_include_dirs: ["include"],
+    shared_libs: ["liblog"],
+}
+
+
+
+================================================
+FILE: consumerir/consumerir.c
+================================================
+#define LOG_TAG "ConsumerIrHal"
+
+#include <errno.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include <log/log.h>
+#include <hardware/consumerir.h>
+#include <hardware/hardware.h>
+
+#include "consumerir_backend.h"
+
+#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
+
+struct oxygen_consumerir_device {
+    consumerir_device_t device;
+    const struct consumerir_backend *backend;
+};
+
+static const consumerir_freq_range_t kCarrierFreqs[] = {
+    { .min = 30000, .max = 30000 },
+    { .min = 33000, .max = 33000 },
+    { .min = 36000, .max = 36000 },
+    { .min = 38000, .max = 38000 },
+    { .min = 40000, .max = 40000 },
+    { .min = 56000, .max = 56000 },
+};
+
+static int consumerir_transmit(
+    struct consumerir_device *dev,
+    int carrier_freq,
+    const int pattern[],
+    int pattern_len) {
+    struct oxygen_consumerir_device *oxygen_dev = (struct oxygen_consumerir_device *)dev;
+    return oxygen_dev->backend->transmit(carrier_freq, pattern, pattern_len);
+}
+
+static int consumerir_get_num_carrier_freqs(struct consumerir_device *dev) {
+    (void)dev;
+    return (int)ARRAY_SIZE(kCarrierFreqs);
+}
+
+static int consumerir_get_carrier_freqs(
+    struct consumerir_device *dev,
+    size_t len,
+    consumerir_freq_range_t *ranges) {
+    size_t to_copy = ARRAY_SIZE(kCarrierFreqs);
+    (void)dev;
+
+    if (ranges == NULL) {
+        return -EINVAL;
+    }
+
+    if (len < to_copy) {
+        to_copy = len;
+    }
+
+    memcpy(ranges, kCarrierFreqs, to_copy * sizeof(*ranges));
+    return (int)to_copy;
+}
+
+static int consumerir_close(hw_device_t *dev) {
+    free(dev);
+    return 0;
+}
+
+static int consumerir_open(
+    const hw_module_t *module,
+    const char *name,
+    hw_device_t **device) {
+    struct oxygen_consumerir_device *dev = NULL;
+
+    if (strcmp(name, CONSUMERIR_TRANSMITTER) != 0) {
+        return -EINVAL;
+    }
+
+    if (device == NULL) {
+        ALOGE("NULL device on open");
+        return -EINVAL;
+    }
+
+    dev = calloc(1, sizeof(*dev));
+    if (dev == NULL) {
+        return -ENOMEM;
+    }
+
+    dev->backend = consumerir_select_backend();
+    dev->device.common.tag = HARDWARE_DEVICE_TAG;
+    dev->device.common.version = 0;
+    dev->device.common.module = (struct hw_module_t *)module;
+    dev->device.common.close = consumerir_close;
+    dev->device.transmit = consumerir_transmit;
+    dev->device.get_num_carrier_freqs = consumerir_get_num_carrier_freqs;
+    dev->device.get_carrier_freqs = consumerir_get_carrier_freqs;
+
+    *device = &dev->device.common;
+
+    ALOGI("opened open consumerir HAL with %s backend", dev->backend->name);
+    return 0;
+}
+
+static struct hw_module_methods_t consumerir_module_methods = {
+    .open = consumerir_open,
+};
+
+consumerir_module_t HAL_MODULE_INFO_SYM = {
+    .common = {
+        .tag = HARDWARE_MODULE_TAG,
+        .module_api_version = CONSUMERIR_MODULE_API_VERSION_1_0,
+        .hal_api_version = HARDWARE_HAL_API_VERSION,
+        .id = CONSUMERIR_HARDWARE_MODULE_ID,
+        .name = "Oxygen Open Consumer IR HAL",
+        .author = "oxygen open-vendor",
+        .methods = &consumerir_module_methods,
+    },
+};
+
+
+
+================================================
+FILE: consumerir/lirc_common.c
+================================================
+#define LOG_TAG "ConsumerIrHal"
+
+#include <errno.h>
+#include <fcntl.h>
+#include <limits.h>
+#include <linux/lirc.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/ioctl.h>
+#include <unistd.h>
+
+#include <log/log.h>
+
+#include "consumerir_backend.h"
+
+#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
+
+static const char kLircDevice[] = "/dev/lirc0";
+/*
+ * oxygen's downstream kernel driver (drivers/media/rc/ir-spi.c) repurposes
+ * LIRC_SET_REC_FILTER to mean "set TX buffer length before write()".
+ * The original blob issues the same ioctl number before writing to /dev/lirc0.
+ */
+static const uint32_t kDownstreamTxLengthIoctl = LIRC_SET_REC_FILTER;
+
+static int open_lirc_device(const char *backend_name) {
+    int fd = open(kLircDevice, O_WRONLY | O_CLOEXEC);
+    if (fd < 0) {
+        ALOGE("[%s] open(%s) failed: %s", backend_name, kLircDevice, strerror(errno));
+        return -errno;
+    }
+    return fd;
+}
+
+static int set_ioctl_u32(
+    int fd,
+    unsigned long request,
+    uint32_t value,
+    const char *backend_name,
+    const char *label,
+    int required) {
+    if (ioctl(fd, request, &value) == 0) {
+        return 0;
+    }
+    if (!required) {
+        ALOGW("[%s] %s ioctl failed: %s", backend_name, label, strerror(errno));
+        return 0;
+    }
+    ALOGE("[%s] %s ioctl failed: %s", backend_name, label, strerror(errno));
+    return -errno;
+}
+
+static int write_all(int fd, const void *data, size_t size) {
+    const uint8_t *cursor = (const uint8_t *)data;
+    size_t written = 0;
+    while (written < size) {
+        ssize_t ret = write(fd, cursor + written, size - written);
+        if (ret < 0) {
+            if (errno == EINTR) {
+                continue;
+            }
+            return -errno;
+        }
+        if (ret == 0) {
+            return -EIO;
+        }
+        written += (size_t)ret;
+    }
+    return 0;
+}
+
+int consumerir_validate_pattern(
+    int carrier_freq,
+    const int pattern[],
+    int pattern_len,
+    int *total_time) {
+    int total = 0;
+    int i = 0;
+
+    if (carrier_freq <= 0 || pattern == NULL || pattern_len <= 0) {
+        return -EINVAL;
+    }
+
+    for (i = 0; i < pattern_len; ++i) {
+        if (pattern[i] <= 0) {
+            return -EINVAL;
+        }
+        if (total > INT_MAX - pattern[i]) {
+            return -EOVERFLOW;
+        }
+        total += pattern[i];
+    }
+
+    if (total_time != NULL) {
+        *total_time = total;
+    }
+    return 0;
+}
+
+int consumerir_transmit_lirc_pulse(
+    const char *backend_name,
+    int carrier_freq,
+    const int pattern[],
+    int pattern_len,
+    int set_send_mode,
+    int use_downstream_tx_length) {
+    int fd = -1;
+    int ret = 0;
+    int total_time = 0;
+    lirc_t *buffer = NULL;
+    uint32_t length_hint = 0;
+    size_t buffer_size = 0;
+    int i = 0;
+
+    ret = consumerir_validate_pattern(carrier_freq, pattern, pattern_len, &total_time);
+    if (ret < 0) {
+        return ret;
+    }
+
+    fd = open_lirc_device(backend_name);
+    if (fd < 0) {
+        return fd;
+    }
+
+    if (set_send_mode) {
+        ret = set_ioctl_u32(
+            fd,
+            LIRC_SET_SEND_MODE,
+            LIRC_MODE_PULSE,
+            backend_name,
+            "LIRC_SET_SEND_MODE",
+            1);
+        if (ret < 0) {
+            goto out;
+        }
+    }
+
+    ret = set_ioctl_u32(
+        fd,
+        LIRC_SET_SEND_CARRIER,
+        (uint32_t)carrier_freq,
+        backend_name,
+        "LIRC_SET_SEND_CARRIER",
+        1);
+    if (ret < 0) {
+        goto out;
+    }
+
+    (void)set_ioctl_u32(
+        fd,
+        LIRC_SET_SEND_DUTY_CYCLE,
+        50,
+        backend_name,
+        "LIRC_SET_SEND_DUTY_CYCLE",
+        0);
+
+    buffer_size = (size_t)pattern_len * sizeof(*buffer);
+    if (buffer_size > UINT32_MAX) {
+        ret = -EOVERFLOW;
+        goto out;
+    }
+
+    buffer = calloc((size_t)pattern_len, sizeof(*buffer));
+    if (buffer == NULL) {
+        ret = -ENOMEM;
+        goto out;
+    }
+
+    for (i = 0; i < pattern_len; ++i) {
+        buffer[i] = (lirc_t)pattern[i];
+    }
+
+    if (use_downstream_tx_length) {
+        length_hint = (uint32_t)buffer_size;
+        ret = set_ioctl_u32(
+            fd,
+            kDownstreamTxLengthIoctl,
+            length_hint,
+            backend_name,
+            "LIRC_SET_REC_FILTER(tx-length)",
+            1);
+        if (ret < 0) {
+            goto out;
+        }
+    }
+
+    ret = write_all(fd, buffer, buffer_size);
+    if (ret < 0) {
+        ALOGE("[%s] write(%s) failed: %s", backend_name, kLircDevice, strerror(-ret));
+        goto out;
+    }
+
+    ALOGD("[%s] transmitted %d usec at %d Hz via %s", backend_name, total_time, carrier_freq, kLircDevice);
+    ret = 0;
+
+out:
+    free(buffer);
+    if (fd >= 0) {
+        close(fd);
+    }
+    return ret;
+}
+
+
+
+================================================
+FILE: consumerir/backend/backend_select.c
+================================================
+#include "consumerir_backend.h"
+
+#include <fcntl.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+static const char kBackendOverrideEnv[] = "OXYGEN_CONSUMERIR_BACKEND";
+static const char kSysfsRcCompatible[] = "/sys/class/rc/rc0/device/of_node/compatible";
+static const char kSysfsRcProtocols[] = "/sys/class/rc/rc0/protocols";
+static const char kSysfsIrSpiDriver[] = "/sys/bus/spi/drivers/ir-spi";
+
+static int read_text_file(const char *path, char *buffer, size_t buffer_size) {
+    int fd = -1;
+    ssize_t len = 0;
+
+    if (buffer == NULL || buffer_size == 0) {
+        return -1;
+    }
+
+    fd = open(path, O_RDONLY);
+    if (fd < 0) {
+        return -1;
+    }
+
+    len = read(fd, buffer, buffer_size - 1);
+    close(fd);
+    if (len <= 0) {
+        return -1;
+    }
+
+    buffer[len] = '\0';
+    return 0;
+}
+
+static int file_contains_text(const char *path, const char *needle) {
+    char buffer[256];
+
+    if (read_text_file(path, buffer, sizeof(buffer)) < 0) {
+        return 0;
+    }
+
+    return strstr(buffer, needle) != NULL;
+}
+
+static const struct consumerir_backend *lookup_backend_by_name(const char *name) {
+    if (name == NULL || name[0] == '\0') {
+        return NULL;
+    }
+
+    if (strcmp(name, "downstream") == 0) {
+        return consumerir_backend_downstream();
+    }
+
+    if (strcmp(name, "mainline") == 0) {
+        return consumerir_backend_mainline();
+    }
+
+    return NULL;
+}
+
+static const struct consumerir_backend *select_override_backend(void) {
+    const char *override = getenv(kBackendOverrideEnv);
+
+    if (override == NULL || override[0] == '\0' || strcmp(override, "auto") == 0) {
+        return NULL;
+    }
+
+    return lookup_backend_by_name(override);
+}
+
+static int probe_downstream_backend(void) {
+    if (access(kSysfsIrSpiDriver, F_OK) == 0) {
+        return 1;
+    }
+
+    return file_contains_text(kSysfsRcCompatible, "ir-spi");
+}
+
+static int probe_mainline_backend(void) {
+    return access(kSysfsRcProtocols, R_OK) == 0;
+}
+
+const struct consumerir_backend *consumerir_select_backend(void) {
+    const struct consumerir_backend *backend = select_override_backend();
+
+    if (backend != NULL) {
+        return backend;
+    }
+
+    if (probe_downstream_backend()) {
+        return consumerir_backend_downstream();
+    }
+
+    if (probe_mainline_backend()) {
+        return consumerir_backend_mainline();
+    }
+
+    return consumerir_backend_downstream();
+}
+
+
+
+================================================
+FILE: consumerir/backend/downstream/backend_downstream.c
+================================================
+#define LOG_TAG "ConsumerIrHal"
+
+#include <errno.h>
+
+#include <log/log.h>
+
+#include "consumerir_backend.h"
+
+static int consumerir_downstream_transmit(
+    int carrier_freq,
+    const int pattern[],
+    int pattern_len) {
+    int ret = consumerir_transmit_lirc_pulse(
+        "downstream",
+        carrier_freq,
+        pattern,
+        pattern_len,
+        0,
+        1);
+    if (ret == -ENOTTY || ret == -EINVAL || ret == -ENOSYS || ret == -EOPNOTSUPP) {
+        ALOGI("downstream IR backend falling back to standard LIRC pulse mode");
+        ret = consumerir_transmit_lirc_pulse(
+            "downstream-fallback",
+            carrier_freq,
+            pattern,
+            pattern_len,
+            1,
+            0);
+    }
+    return ret;
+}
+
+static const struct consumerir_backend kBackend = {
+    .name = "downstream",
+    .transmit = consumerir_downstream_transmit,
+};
+
+const struct consumerir_backend *consumerir_backend_downstream(void) {
+    return &kBackend;
+}
+
+
+
+================================================
+FILE: consumerir/backend/mainline/backend_mainline.c
+================================================
+#include "consumerir_backend.h"
+
+static int consumerir_mainline_transmit(
+    int carrier_freq,
+    const int pattern[],
+    int pattern_len) {
+    return consumerir_transmit_lirc_pulse(
+        "mainline",
+        carrier_freq,
+        pattern,
+        pattern_len,
+        1,
+        0);
+}
+
+static const struct consumerir_backend kBackend = {
+    .name = "mainline",
+    .transmit = consumerir_mainline_transmit,
+};
+
+const struct consumerir_backend *consumerir_backend_mainline(void) {
+    return &kBackend;
+}
+
+
+
+================================================
+FILE: consumerir/include/consumerir_backend.h
+================================================
+#ifndef OXYGEN_CONSUMERIR_BACKEND_H
+#define OXYGEN_CONSUMERIR_BACKEND_H
+
+struct consumerir_backend {
+    const char *name;
+    int (*transmit)(int carrier_freq, const int pattern[], int pattern_len);
+};
+
+const struct consumerir_backend *consumerir_backend_downstream(void);
+const struct consumerir_backend *consumerir_backend_mainline(void);
+const struct consumerir_backend *consumerir_select_backend(void);
+
+int consumerir_transmit_lirc_pulse(
+    const char *backend_name,
+    int carrier_freq,
+    const int pattern[],
+    int pattern_len,
+    int set_send_mode,
+    int use_downstream_tx_length);
+int consumerir_validate_pattern(
+    int carrier_freq,
+    const int pattern[],
+    int pattern_len,
+    int *total_time);
+
+#endif
+
+
+
+================================================
+FILE: fingerprint/README.md
+================================================
+# Open Fingerprint Skeleton
+
+This directory is the starting point for `vendor/lib64/hw/fingerprint.msm8953.so`.
+
+## Intent
+
+- create a concrete source location for the future fingerprint gating shim
+- keep boot non-blocking by default
+- preserve room for a future disabled/passthrough split without enabling it yet
+
+## Current shape
+
+- local compat headers define a minimal legacy fingerprint HAL surface
+- backend selection supports:
+  - `disabled`
+  - `passthrough`
+  - `auto`
+- default behavior is `disabled`
+- the module is not wired into `vendor_overrides.mk`
+
+## Current limits
+
+- no TEE, Goodix, or HIDL passthrough integration yet
+- no runtime validation
+- intended as source scaffolding only
+
+
+
+================================================
+FILE: fingerprint/Android.bp
+================================================
+cc_defaults {
+    name: "oxygen_open_fingerprint_defaults",
+    defaults: ["oxygen_open_skeleton_defaults"],
+    compile_multilib: "64",
+}
+
+cc_library_shared {
+    name: "fingerprint.msm8953.open",
+    defaults: ["oxygen_open_fingerprint_defaults"],
+    stem: "fingerprint.msm8953",
+    relative_install_path: "hw",
+    srcs: [
+        "backend/backend_select.c",
+        "backend/disabled/backend_disabled.c",
+        "backend/passthrough/backend_passthrough.c",
+        "fingerprint_hal.c",
+    ],
+    local_include_dirs: ["include"],
+}
+
+
+
+================================================
+FILE: fingerprint/fingerprint_hal.c
+================================================
+#include <errno.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "fingerprint_backend.h"
+#include "fingerprint_compat.h"
+
+struct oxygen_fingerprint_device {
+    fingerprint_device_t device;
+    fingerprint_notify_t notify;
+    const struct oxygen_fingerprint_backend *backend;
+};
+
+static int fingerprint_set_notify(fingerprint_device_t *device, fingerprint_notify_t notify) {
+    struct oxygen_fingerprint_device *oxygen_device = (struct oxygen_fingerprint_device *)device;
+
+    oxygen_device->notify = notify;
+    return 0;
+}
+
+static uint64_t fingerprint_pre_enroll(fingerprint_device_t *device) {
+    struct oxygen_fingerprint_device *oxygen_device = (struct oxygen_fingerprint_device *)device;
+    return oxygen_device->backend->pre_enroll();
+}
+
+static int fingerprint_enroll(
+    fingerprint_device_t *device,
+    const void *hat,
+    uint32_t gid,
+    uint32_t timeout_sec) {
+    struct oxygen_fingerprint_device *oxygen_device = (struct oxygen_fingerprint_device *)device;
+    return oxygen_device->backend->enroll(hat, gid, timeout_sec);
+}
+
+static int fingerprint_post_enroll(fingerprint_device_t *device) {
+    struct oxygen_fingerprint_device *oxygen_device = (struct oxygen_fingerprint_device *)device;
+    return oxygen_device->backend->post_enroll();
+}
+
+static uint64_t fingerprint_get_authenticator_id(fingerprint_device_t *device) {
+    struct oxygen_fingerprint_device *oxygen_device = (struct oxygen_fingerprint_device *)device;
+    return oxygen_device->backend->get_authenticator_id();
+}
+
+static int fingerprint_cancel(fingerprint_device_t *device) {
+    struct oxygen_fingerprint_device *oxygen_device = (struct oxygen_fingerprint_device *)device;
+    return oxygen_device->backend->cancel();
+}
+
+static int fingerprint_enumerate(fingerprint_device_t *device) {
+    struct oxygen_fingerprint_device *oxygen_device = (struct oxygen_fingerprint_device *)device;
+    return oxygen_device->backend->enumerate();
+}
+
+static int fingerprint_remove(fingerprint_device_t *device, uint32_t gid, uint32_t fid) {
+    struct oxygen_fingerprint_device *oxygen_device = (struct oxygen_fingerprint_device *)device;
+    return oxygen_device->backend->remove(gid, fid);
+}
+
+static int fingerprint_set_active_group(
+    fingerprint_device_t *device,
+    uint32_t gid,
+    const char *store_path) {
+    struct oxygen_fingerprint_device *oxygen_device = (struct oxygen_fingerprint_device *)device;
+    return oxygen_device->backend->set_active_group(gid, store_path);
+}
+
+static int fingerprint_authenticate(
+    fingerprint_device_t *device,
+    uint64_t operation_id,
+    uint32_t gid) {
+    struct oxygen_fingerprint_device *oxygen_device = (struct oxygen_fingerprint_device *)device;
+    return oxygen_device->backend->authenticate(operation_id, gid);
+}
+
+static int fingerprint_close(hw_device_t *device) {
+    free(device);
+    return 0;
+}
+
+static int fingerprint_open(const hw_module_t *module, const char *id, hw_device_t **device) {
+    struct oxygen_fingerprint_device *oxygen_device = NULL;
+
+    if (device == NULL) {
+        return -EINVAL;
+    }
+
+    if (id != NULL && strcmp(id, FINGERPRINT_HARDWARE_MODULE_ID) != 0) {
+        return -EINVAL;
+    }
+
+    oxygen_device = calloc(1, sizeof(*oxygen_device));
+    if (oxygen_device == NULL) {
+        return -ENOMEM;
+    }
+
+    oxygen_device->backend = oxygen_fingerprint_select_backend();
+    oxygen_device->device.common.tag = HARDWARE_DEVICE_TAG;
+    oxygen_device->device.common.version = 0;
+    oxygen_device->device.common.module = (hw_module_t *)module;
+    oxygen_device->device.common.close = fingerprint_close;
+    oxygen_device->device.set_notify = fingerprint_set_notify;
+    oxygen_device->device.pre_enroll = fingerprint_pre_enroll;
+    oxygen_device->device.enroll = fingerprint_enroll;
+    oxygen_device->device.post_enroll = fingerprint_post_enroll;
+    oxygen_device->device.get_authenticator_id = fingerprint_get_authenticator_id;
+    oxygen_device->device.cancel = fingerprint_cancel;
+    oxygen_device->device.enumerate = fingerprint_enumerate;
+    oxygen_device->device.remove = fingerprint_remove;
+    oxygen_device->device.set_active_group = fingerprint_set_active_group;
+    oxygen_device->device.authenticate = fingerprint_authenticate;
+
+    *device = &oxygen_device->device.common;
+    return 0;
+}
+
+static hw_module_methods_t kFingerprintModuleMethods = {
+    .open = fingerprint_open,
+};
+
+__attribute__((visibility("default")))
+fingerprint_module_t HAL_MODULE_INFO_SYM = {
+    .common = {
+        .tag = HARDWARE_MODULE_TAG,
+        .module_api_version = 1,
+        .hal_api_version = HARDWARE_HAL_API_VERSION,
+        .id = FINGERPRINT_HARDWARE_MODULE_ID,
+        .name = "Oxygen Open Fingerprint Skeleton",
+        .author = "oxygen open-vendor",
+        .methods = &kFingerprintModuleMethods,
+    },
+};
+
+
+
+================================================
+FILE: fingerprint/backend/backend_select.c
+================================================
+#include "fingerprint_backend.h"
+
+#include <stdlib.h>
+#include <string.h>
+
+static const char kBackendOverrideEnv[] = "OXYGEN_FINGERPRINT_BACKEND";
+
+const struct oxygen_fingerprint_backend *oxygen_fingerprint_select_backend(void) {
+    const char *override = getenv(kBackendOverrideEnv);
+
+    if (override != NULL && strcmp(override, "passthrough") == 0) {
+        return oxygen_fingerprint_backend_passthrough();
+    }
+
+    return oxygen_fingerprint_backend_disabled();
+}
+
+
+
+================================================
+FILE: fingerprint/backend/disabled/backend_disabled.c
+================================================
+#include <errno.h>
+
+#include "fingerprint_backend.h"
+
+static int disabled_set_active_group(uint32_t gid, const char *store_path) {
+    (void)gid;
+    (void)store_path;
+    return -ENOSYS;
+}
+
+static uint64_t disabled_pre_enroll(void) {
+    return 0;
+}
+
+static int disabled_enroll(const void *hat, uint32_t gid, uint32_t timeout_sec) {
+    (void)hat;
+    (void)gid;
+    (void)timeout_sec;
+    return -ENOSYS;
+}
+
+static int disabled_post_enroll(void) {
+    return -ENOSYS;
+}
+
+static uint64_t disabled_get_authenticator_id(void) {
+    return 0;
+}
+
+static int disabled_cancel(void) {
+    return -ENOSYS;
+}
+
+static int disabled_enumerate(void) {
+    return -ENOSYS;
+}
+
+static int disabled_remove(uint32_t gid, uint32_t fid) {
+    (void)gid;
+    (void)fid;
+    return -ENOSYS;
+}
+
+static int disabled_authenticate(uint64_t operation_id, uint32_t gid) {
+    (void)operation_id;
+    (void)gid;
+    return -ENOSYS;
+}
+
+static const struct oxygen_fingerprint_backend kBackend = {
+    .name = "disabled",
+    .set_active_group = disabled_set_active_group,
+    .pre_enroll = disabled_pre_enroll,
+    .enroll = disabled_enroll,
+    .post_enroll = disabled_post_enroll,
+    .get_authenticator_id = disabled_get_authenticator_id,
+    .cancel = disabled_cancel,
+    .enumerate = disabled_enumerate,
+    .remove = disabled_remove,
+    .authenticate = disabled_authenticate,
+};
+
+const struct oxygen_fingerprint_backend *oxygen_fingerprint_backend_disabled(void) {
+    return &kBackend;
+}
+
+
+
+================================================
+FILE: fingerprint/backend/passthrough/backend_passthrough.c
+================================================
+#include <errno.h>
+
+#include "fingerprint_backend.h"
+
+/*
+ * Placeholder for future forwarding into the proprietary Goodix stack.
+ * The symbol and directory exist now so the repo has a stable place for the
+ * real passthrough implementation once the wrapper contract is mapped out.
+ */
+
+static int passthrough_set_active_group(uint32_t gid, const char *store_path) {
+    (void)gid;
+    (void)store_path;
+    return -ENOSYS;
+}
+
+static uint64_t passthrough_pre_enroll(void) {
+    return 0;
+}
+
+static int passthrough_enroll(const void *hat, uint32_t gid, uint32_t timeout_sec) {
+    (void)hat;
+    (void)gid;
+    (void)timeout_sec;
+    return -ENOSYS;
+}
+
+static int passthrough_post_enroll(void) {
+    return -ENOSYS;
+}
+
+static uint64_t passthrough_get_authenticator_id(void) {
+    return 0;
+}
+
+static int passthrough_cancel(void) {
+    return -ENOSYS;
+}
+
+static int passthrough_enumerate(void) {
+    return -ENOSYS;
+}
+
+static int passthrough_remove(uint32_t gid, uint32_t fid) {
+    (void)gid;
+    (void)fid;
+    return -ENOSYS;
+}
+
+static int passthrough_authenticate(uint64_t operation_id, uint32_t gid) {
+    (void)operation_id;
+    (void)gid;
+    return -ENOSYS;
+}
+
+static const struct oxygen_fingerprint_backend kBackend = {
+    .name = "passthrough",
+    .set_active_group = passthrough_set_active_group,
+    .pre_enroll = passthrough_pre_enroll,
+    .enroll = passthrough_enroll,
+    .post_enroll = passthrough_post_enroll,
+    .get_authenticator_id = passthrough_get_authenticator_id,
+    .cancel = passthrough_cancel,
+    .enumerate = passthrough_enumerate,
+    .remove = passthrough_remove,
+    .authenticate = passthrough_authenticate,
+};
+
+const struct oxygen_fingerprint_backend *oxygen_fingerprint_backend_passthrough(void) {
+    return &kBackend;
+}
+
+
+
+================================================
+FILE: fingerprint/include/fingerprint_backend.h
+================================================
+#ifndef OXYGEN_FINGERPRINT_BACKEND_H
+#define OXYGEN_FINGERPRINT_BACKEND_H
+
+#include <stdint.h>
+
+struct oxygen_fingerprint_backend {
+    const char *name;
+    int (*set_active_group)(uint32_t gid, const char *store_path);
+    uint64_t (*pre_enroll)(void);
+    int (*enroll)(const void *hat, uint32_t gid, uint32_t timeout_sec);
+    int (*post_enroll)(void);
+    uint64_t (*get_authenticator_id)(void);
+    int (*cancel)(void);
+    int (*enumerate)(void);
+    int (*remove)(uint32_t gid, uint32_t fid);
+    int (*authenticate)(uint64_t operation_id, uint32_t gid);
+};
+
+const struct oxygen_fingerprint_backend *oxygen_fingerprint_backend_disabled(void);
+const struct oxygen_fingerprint_backend *oxygen_fingerprint_backend_passthrough(void);
+const struct oxygen_fingerprint_backend *oxygen_fingerprint_select_backend(void);
+
+#endif
+
+
+
+================================================
+FILE: fingerprint/include/fingerprint_compat.h
+================================================
+#ifndef OXYGEN_FINGERPRINT_COMPAT_H
+#define OXYGEN_FINGERPRINT_COMPAT_H
+
+#include <stdint.h>
+
+#define HARDWARE_MODULE_TAG 0xFACA
+#define HARDWARE_DEVICE_TAG 0xFACE
+#define HARDWARE_HAL_API_VERSION 0
+#define FINGERPRINT_HARDWARE_MODULE_ID "fingerprint"
+
+struct hw_module_t;
+struct hw_device_t;
+
+typedef struct hw_module_methods_t {
+    int (*open)(const struct hw_module_t *module, const char *id, struct hw_device_t **device);
+} hw_module_methods_t;
+
+typedef struct hw_module_t {
+    uint32_t tag;
+    uint16_t module_api_version;
+    uint16_t hal_api_version;
+    const char *id;
+    const char *name;
+    const char *author;
+    hw_module_methods_t *methods;
+    void *dso;
+    uint32_t reserved[32];
+} hw_module_t;
+
+typedef struct hw_device_t {
+    uint32_t tag;
+    uint32_t version;
+    hw_module_t *module;
+    int (*close)(struct hw_device_t *device);
+    uint32_t reserved[12];
+} hw_device_t;
+
+typedef enum fingerprint_msg_type_t {
+    FINGERPRINT_ERROR = -1,
+} fingerprint_msg_type_t;
+
+typedef struct fingerprint_msg_t {
+    fingerprint_msg_type_t type;
+    int32_t data;
+} fingerprint_msg_t;
+
+typedef void (*fingerprint_notify_t)(const fingerprint_msg_t *msg);
+
+typedef struct fingerprint_device fingerprint_device_t;
+
+struct fingerprint_device {
+    hw_device_t common;
+    int (*set_notify)(fingerprint_device_t *device, fingerprint_notify_t notify);
+    uint64_t (*pre_enroll)(fingerprint_device_t *device);
+    int (*enroll)(fingerprint_device_t *device, const void *hat, uint32_t gid, uint32_t timeout_sec);
+    int (*post_enroll)(fingerprint_device_t *device);
+    uint64_t (*get_authenticator_id)(fingerprint_device_t *device);
+    int (*cancel)(fingerprint_device_t *device);
+    int (*enumerate)(fingerprint_device_t *device);
+    int (*remove)(fingerprint_device_t *device, uint32_t gid, uint32_t fid);
+    int (*set_active_group)(fingerprint_device_t *device, uint32_t gid, const char *store_path);
+    int (*authenticate)(fingerprint_device_t *device, uint64_t operation_id, uint32_t gid);
+};
+
+typedef struct fingerprint_module {
+    hw_module_t common;
+} fingerprint_module_t;
+
+#endif
+
+
+
+================================================
+FILE: policy/vendor_policy.json
+================================================
+{
+  "subsystem_defaults": {
+    "audio": "keep-binary",
+    "camera": "replace",
+    "connectivity": "keep-binary",
+    "consumerir": "replace",
+    "fingerprint": "shim",
+    "graphics_media": "keep-binary",
+    "location": "keep-binary",
+    "other": "keep-binary",
+    "perf_thermal_power": "shim",
+    "radio_ims_data": "keep-binary",
+    "security": "keep-binary",
+    "sensors": "replace"
+  },
+  "path_overrides": {
+    "vendor/xiaomi/oxygen/proprietary/vendor/bin/mm-qcamera-daemon": "keep-binary",
+    "vendor/xiaomi/oxygen/proprietary/vendor/bin/sensors.qti": "replace",
+    "vendor/xiaomi/oxygen/proprietary/vendor/lib64/hw/consumerir.msm8953.so": "replace",
+    "vendor/xiaomi/oxygen/proprietary/vendor/lib64/hw/fingerprint.msm8953.so": "shim",
+    "vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_imx386_sunny.so": "replace",
+    "vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_imx386_sunny_eeprom.so": "replace",
+    "vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_ov12a_ofilm.so": "replace",
+    "vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_ov12a_ofilm_eeprom.so": "replace",
+    "vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_ov12a_sunny.so": "replace",
+    "vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_ov12a_sunny_eeprom.so": "replace",
+    "vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_s5k5e8_ofilm.so": "replace",
+    "vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_s5k5e8_qtech.so": "replace",
+    "vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_oxygen_s5k5e8_qtech_eeprom.so": "replace"
+  },
+  "module_overrides": {
+    "manifest_android.hardware.drm@1.3-service.widevine": "keep-binary",
+    "vendor.qti.gnss@4.1-service": "keep-binary"
+  }
+}
+
+
+
+================================================
+FILE: sensors/README.md
+================================================
+# Open Sensors Skeleton
+
+This directory is the first source skeleton for `vendor/bin/sensors.qti`.
+
+Current priority is downstream `4.9` compatibility. The mainline path is
+reference-only for now.
+
+## Intent
+
+- keep a real build target for the future open sensors daemon
+- preserve a backend split without losing focus on downstream `4.9` bring-up
+- avoid claiming runtime compatibility with Qualcomm SSC/DSP userspace before
+  the protocol and service contract are reconstructed
+
+## Current behavior
+
+- `sensors.qti.open` builds a binary named `sensors.qti`
+- backend selection supports:
+  - `downstream`
+  - `mainline`
+  - `auto`
+- the binary is documentation-grade scaffolding only and is not wired into
+  `vendor_overrides.mk`
+
+## Likely next inputs
+
+- stable downstream/custom kernel source with the working sensors stack
+- init/service expectations for the target ROM base
+- logs from the proprietary `sensors.qti` process once runtime work starts
+
+
+
+================================================
+FILE: sensors/Android.bp
+================================================
+cc_defaults {
+    name: "oxygen_open_sensors_defaults",
+    defaults: ["oxygen_open_skeleton_defaults"],
+    compile_multilib: "64",
+}
+
+cc_binary {
+    name: "sensors.qti.open",
+    defaults: ["oxygen_open_sensors_defaults"],
+    stem: "sensors.qti",
+    srcs: [
+        "backend/backend_select.c",
+        "backend/downstream/backend_downstream.c",
+        "backend/mainline/backend_mainline.c",
+        "sensors_qti.c",
+    ],
+    local_include_dirs: ["include"],
+}
+
+
+
+================================================
+FILE: sensors/sensors_qti.c
+================================================
+#include <stdio.h>
+#include <string.h>
+
+#include "sensors_backend.h"
+
+static int print_description(const struct oxygen_sensors_backend *backend) {
+    printf("sensors.qti open skeleton\n");
+    printf("backend: %s\n", backend->name);
+    printf("transport: %s\n", backend->transport);
+    printf("notes: %s\n", backend->notes);
+    return 0;
+}
+
+int main(int argc, char **argv) {
+    const struct oxygen_sensors_backend *backend = oxygen_sensors_select_backend();
+
+    if (argc > 1 && strcmp(argv[1], "--describe") == 0) {
+        return print_description(backend);
+    }
+
+    fprintf(stderr, "sensors.qti open skeleton selected backend=%s\n", backend->name);
+    fprintf(stderr, "sensors.qti open skeleton is not runtime-ready yet\n");
+    return 64;
+}
+
+
+
+================================================
+FILE: sensors/backend/backend_select.c
+================================================
+#include "sensors_backend.h"
+
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+static const char kBackendOverrideEnv[] = "OXYGEN_SENSORS_BACKEND";
+static const char kVendorHalConfig[] = "/vendor/etc/sensors/hals.conf";
+static const char kIioDevices[] = "/sys/bus/iio/devices";
+
+static const struct oxygen_sensors_backend *lookup_backend_by_name(const char *name) {
+    if (name == NULL || name[0] == '\0') {
+        return NULL;
+    }
+
+    if (strcmp(name, "downstream") == 0) {
+        return oxygen_sensors_backend_downstream();
+    }
+
+    if (strcmp(name, "mainline") == 0) {
+        return oxygen_sensors_backend_mainline();
+    }
+
+    return NULL;
+}
+
+const struct oxygen_sensors_backend *oxygen_sensors_select_backend(void) {
+    const char *override = getenv(kBackendOverrideEnv);
+    const struct oxygen_sensors_backend *backend = lookup_backend_by_name(override);
+
+    if (backend != NULL) {
+        return backend;
+    }
+
+    if (override != NULL && strcmp(override, "auto") != 0 && override[0] != '\0') {
+        return oxygen_sensors_backend_downstream();
+    }
+
+    if (access(kVendorHalConfig, R_OK) == 0) {
+        return oxygen_sensors_backend_downstream();
+    }
+
+    if (access(kIioDevices, R_OK) == 0) {
+        return oxygen_sensors_backend_mainline();
+    }
+
+    return oxygen_sensors_backend_downstream();
+}
+
+
+
+================================================
+FILE: sensors/backend/downstream/backend_downstream.c
+================================================
+#include "sensors_backend.h"
+
+static const struct oxygen_sensors_backend kBackend = {
+    .name = "downstream",
+    .transport = "ssc-dsp-placeholder",
+    .notes = "matches the Qualcomm downstream sensors stack shape",
+};
+
+const struct oxygen_sensors_backend *oxygen_sensors_backend_downstream(void) {
+    return &kBackend;
+}
+
+
+
+================================================
+FILE: sensors/backend/mainline/backend_mainline.c
+================================================
+#include "sensors_backend.h"
+
+static const struct oxygen_sensors_backend kBackend = {
+    .name = "mainline",
+    .transport = "iio-userspace-placeholder",
+    .notes = "future userspace path for msm8953-mainline sensor integration",
+};
+
+const struct oxygen_sensors_backend *oxygen_sensors_backend_mainline(void) {
+    return &kBackend;
+}
+
+
+
+================================================
+FILE: sensors/include/sensors_backend.h
+================================================
+#ifndef OXYGEN_SENSORS_BACKEND_H
+#define OXYGEN_SENSORS_BACKEND_H
+
+struct oxygen_sensors_backend {
+    const char *name;
+    const char *transport;
+    const char *notes;
+};
+
+const struct oxygen_sensors_backend *oxygen_sensors_backend_downstream(void);
+const struct oxygen_sensors_backend *oxygen_sensors_backend_mainline(void);
+const struct oxygen_sensors_backend *oxygen_sensors_select_backend(void);
+
+#endif
+
+
+
+================================================
+FILE: tools/vendor_inventory.py
+================================================
+#!/usr/bin/env python3
+"""Build a machine-readable inventory for oxygen and mithorium-common vendor blobs."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+import xml.etree.ElementTree as ET
+from collections import Counter, defaultdict
+from pathlib import Path
+from typing import Any
+
+
+ROOT = Path(__file__).resolve().parents[2]
+
+MODULE_TYPES = {
+    "android_app_import",
+    "cc_prebuilt_library_shared",
+    "dex_import",
+    "prebuilt_etc_xml",
+}
+
+
+def normalize_path(path: Path) -> str:
+    try:
+        return path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+def read_logical_make_lines(path: Path) -> list[str]:
+    logical_lines: list[str] = []
+    current = ""
+    for raw_line in path.read_text().splitlines():
+        line = raw_line.split("#", 1)[0].rstrip()
+        if not line:
+            continue
+        if line.endswith("\\"):
+            current += line[:-1] + " "
+            continue
+        logical_lines.append((current + line).strip())
+        current = ""
+    if current:
+        logical_lines.append(current.strip())
+    return logical_lines
+
+
+def split_make_tokens(value: str) -> list[str]:
+    return [token for token in value.split() if token]
+
+
+def collect_bp_blocks(path: Path) -> dict[str, dict[str, Any]]:
+    blocks: dict[str, dict[str, Any]] = {}
+    lines = path.read_text().splitlines()
+    i = 0
+    while i < len(lines):
+        stripped = lines[i].strip()
+        block_type = stripped[:-1].strip()
+        if stripped.endswith("{") and block_type in MODULE_TYPES:
+            block_lines = [lines[i]]
+            depth = stripped.count("{") - stripped.count("}")
+            i += 1
+            while i < len(lines) and depth > 0:
+                block_lines.append(lines[i])
+                depth += lines[i].count("{") - lines[i].count("}")
+                i += 1
+            text = "\n".join(block_lines)
+            name = extract_first_string(text, "name")
+            if name:
+                blocks[name] = parse_bp_block(block_type, text)
+            continue
+        i += 1
+    return blocks
+
+
+def extract_first_string(text: str, key: str) -> str | None:
+    match = re.search(rf"{re.escape(key)}\s*:\s*\"([^\"]+)\"", text)
+    return match.group(1) if match else None
+
+
+def extract_string_list(text: str, key: str) -> list[str]:
+    match = re.search(rf"{re.escape(key)}\s*:\s*\[([^\]]*)\]", text, re.S)
+    if not match:
+        return []
+    return re.findall(r"\"([^\"]+)\"", match.group(1))
+
+
+def parse_bp_block(block_type: str, text: str) -> dict[str, Any]:
+    item: dict[str, Any] = {
+        "block_type": block_type,
+        "name": extract_first_string(text, "name"),
+        "partition": "system",
+        "source_paths": [],
+        "install_paths": [],
+        "architectures": [],
+    }
+
+    if "product_specific: true" in text:
+        item["partition"] = "product"
+    elif "system_ext_specific: true" in text:
+        item["partition"] = "system_ext"
+    elif "soc_specific: true" in text or "vendor: true" in text or "proprietary: true" in text:
+        item["partition"] = "vendor"
+
+    if block_type == "android_app_import":
+        apk = extract_first_string(text, "apk")
+        privileged = "privileged: true" in text
+        app_dir = "priv-app" if privileged else "app"
+        if apk:
+            apk_name = Path(apk).name
+            item["source_paths"] = [apk]
+            item["install_paths"] = [f"{item['partition']}/{app_dir}/{item['name']}/{apk_name}"]
+    elif block_type == "dex_import":
+        jars = extract_string_list(text, "jars")
+        item["source_paths"] = jars
+        item["install_paths"] = [f"{item['partition']}/framework/{Path(jar).name}" for jar in jars]
+    elif block_type == "prebuilt_etc_xml":
+        src = extract_first_string(text, "src")
+        sub_dir = extract_first_string(text, "sub_dir") or "etc"
+        if src:
+            item["source_paths"] = [src]
+            item["install_paths"] = [f"{item['partition']}/etc/{sub_dir}/{Path(src).name}"]
+    elif block_type == "cc_prebuilt_library_shared":
+        arm_sources = extract_target_srcs(text, "android_arm")
+        arm64_sources = extract_target_srcs(text, "android_arm64")
+        install_paths: list[str] = []
+        source_paths: list[str] = []
+        architectures: list[str] = []
+        if arm_sources:
+            architectures.append("arm")
+            source_paths.extend(arm_sources)
+            install_paths.extend(f"{item['partition']}/lib/{Path(src).name}" for src in arm_sources)
+        if arm64_sources:
+            architectures.append("arm64")
+            source_paths.extend(arm64_sources)
+            install_paths.extend(f"{item['partition']}/lib64/{Path(src).name}" for src in arm64_sources)
+        compile_multilib = extract_first_string(text, "compile_multilib")
+        if not architectures and compile_multilib == "32":
+            architectures.append("arm")
+        item["source_paths"] = source_paths
+        item["install_paths"] = install_paths
+        item["architectures"] = architectures
+    return item
+
+
+def extract_target_srcs(text: str, target_name: str) -> list[str]:
+    match = re.search(rf"{re.escape(target_name)}\s*:\s*\{{(.*?)\}}", text, re.S)
+    if not match:
+        return []
+    return re.findall(r"srcs\s*:\s*\[([^\]]+)\]", match.group(1), re.S)[0:1] and re.findall(
+        r"\"([^\"]+)\"", re.findall(r"srcs\s*:\s*\[([^\]]+)\]", match.group(1), re.S)[0]
+    ) or []
+
+
+def infer_partition_from_copy_dest(dest: str) -> str:
+    if dest.startswith("$(TARGET_COPY_OUT_PRODUCT)"):
+        return "product"
+    if dest.startswith("$(TARGET_COPY_OUT_SYSTEM_EXT)"):
+        return "system_ext"
+    if dest.startswith("$(TARGET_COPY_OUT_VENDOR)"):
+        return "vendor"
+    return "system"
+
+
+def infer_arch_from_path(path: str) -> str | None:
+    if "/lib64/" in path or path.startswith("lib64/"):
+        return "arm64"
+    if "/lib/" in path or path.startswith("lib/"):
+        return "arm"
+    return None
+
+
+def infer_layer(source_path: str) -> str:
+    if "vendor/xiaomi/mithorium-common/" in source_path:
+        return "mithorium-common"
+    return "oxygen"
+
+
+def infer_kind(path: str) -> str:
+    basename = Path(path).name
+    suffix = Path(path).suffix
+    if suffix == ".so":
+        return "shared_library"
+    if suffix == ".apk":
+        return "apk"
+    if suffix == ".jar":
+        return "jar"
+    if suffix == ".rc":
+        return "init_rc"
+    if suffix == ".xml":
+        return "xml"
+    if suffix == ".sql":
+        return "sql"
+    if "/firmware/" in path:
+        return "firmware"
+    if "." not in basename:
+        return "binary"
+    return suffix.lstrip(".") or "file"
+
+
+def infer_subsystem(identifier: str) -> str:
+    value = identifier.lower()
+    if "consumerir" in value or "infrared" in value:
+        return "consumerir"
+    if (
+        "camera/" in value
+        or "mmcamera" in value
+        or "chromatix" in value
+        or "actuator_" in value
+        or "_eeprom" in value
+        or "qcamera" in value
+    ):
+        return "camera"
+    if "fingerprint" in value or "libgf_" in value or "lib_fpc" in value:
+        return "fingerprint"
+    if "sensors" in value or "/sensor" in value:
+        return "sensors"
+    if any(token in value for token in ("thermal", "perf", "alarm", "hvdcp", "power_off_alarm", "time_daemon")):
+        return "perf_thermal_power"
+    if any(token in value for token in ("audio", "soundfx", "acdb", "audiosphere")):
+        return "audio"
+    if any(token in value for token in ("ims", "qcril", "iwlan", "radio", "cne", "uim", "lpa", "dpm", "netmgr")):
+        return "radio_ims_data"
+    if any(token in value for token in ("gnss", "loc_", "izat", "lowi", "xtra", "xtwifi", "slim")):
+        return "location"
+    if any(token in value for token in ("bluetooth", "btconfig", "wcnss", "ant@", "fm@")):
+        return "connectivity"
+    if any(token in value for token in ("adreno", "opencl", "vulkan", "egl", "omx", "llvm", "c2d", "gralloc")):
+        return "graphics_media"
+    if any(token in value for token in ("widevine", "drm", "qsee", "keystore", "gatekeeper", "tui_comm")):
+        return "security"
+    return "other"
+
+
+def merge_item(items_by_id: dict[str, dict[str, Any]], new_item: dict[str, Any]) -> dict[str, Any]:
+    existing = items_by_id.get(new_item["id"])
+    if existing is None:
+        new_item["makefiles"] = [new_item.pop("makefile")]
+        new_item["layers"] = [new_item["layer"]]
+        items_by_id[new_item["id"]] = new_item
+        return new_item
+
+    existing["source_paths"] = sorted(set(existing["source_paths"]) | set(new_item["source_paths"]))
+    existing["install_paths"] = sorted(set(existing["install_paths"]) | set(new_item["install_paths"]))
+    existing["architectures"] = sorted(set(existing["architectures"]) | set(new_item["architectures"]))
+    existing["makefiles"] = sorted(set(existing["makefiles"]) | {new_item["makefile"]})
+    existing["layers"] = sorted(set(existing["layers"]) | {new_item["layer"]})
+    existing["layer"] = existing["layers"][0] if len(existing["layers"]) == 1 else "mixed"
+    return existing
+
+
+def load_policy(path: Path | None) -> dict[str, Any]:
+    if not path:
+        return {"subsystem_defaults": {}, "path_overrides": {}, "module_overrides": {}}
+    return json.loads(path.read_text())
+
+
+def classify_item(item: dict[str, Any], policy: dict[str, Any]) -> str:
+    for key in item.get("source_paths", []):
+        if key in policy.get("path_overrides", {}):
+            return policy["path_overrides"][key]
+    module_name = item.get("module_name")
+    if module_name and module_name in policy.get("module_overrides", {}):
+        return policy["module_overrides"][module_name]
+    return policy.get("subsystem_defaults", {}).get(item["subsystem"], "keep-binary")
+
+
+def build_inventory(args: argparse.Namespace) -> dict[str, Any]:
+    soong_modules = collect_bp_blocks(ROOT / "Android.bp")
+    items_by_id: dict[str, dict[str, Any]] = {}
+    items_by_source: dict[str, str] = {}
+    items_by_install_base: dict[str, set[str]] = defaultdict(set)
+
+    for mk_name in ("oxygen-vendor.mk", "mithorium-common-vendor.mk"):
+        mk_path = ROOT / mk_name
+        for line in read_logical_make_lines(mk_path):
+            if line.startswith("PRODUCT_COPY_FILES +="):
+                for entry in split_make_tokens(line.split("+=", 1)[1]):
+                    if ":" not in entry:
+                        continue
+                    source_path, dest_path = entry.split(":", 1)
+                    item_id = dest_path
+                    item = {
+                        "id": item_id,
+                        "entry_type": "copy_file",
+                        "module_name": None,
+                        "makefile": mk_name,
+                        "layer": infer_layer(source_path),
+                        "kind": infer_kind(source_path),
+                        "partition": infer_partition_from_copy_dest(dest_path),
+                        "source_paths": [source_path],
+                        "install_paths": [dest_path],
+                        "architectures": [arch for arch in [infer_arch_from_path(dest_path)] if arch],
+                        "subsystem": infer_subsystem(source_path),
+                    }
+                    merged_item = merge_item(items_by_id, item)
+                    for source in merged_item["source_paths"]:
+                        items_by_source[source] = merged_item["id"]
+                    for install_path in merged_item["install_paths"]:
+                        items_by_install_base[Path(install_path).name].add(merged_item["id"])
+            elif line.startswith("PRODUCT_PACKAGES +="):
+                for module_name in split_make_tokens(line.split("+=", 1)[1]):
+                    module = soong_modules.get(module_name, {})
+                    install_paths = module.get("install_paths", [f"module:{module_name}"])
+                    item = {
+                        "id": f"module:{module_name}",
+                        "entry_type": "product_package",
+                        "module_name": module_name,
+                        "makefile": mk_name,
+                        "layer": "oxygen",
+                        "kind": module.get("block_type", "module"),
+                        "partition": module.get("partition", "unknown"),
+                        "source_paths": module.get("source_paths", []),
+                        "install_paths": install_paths,
+                        "architectures": module.get("architectures", []),
+                        "subsystem": infer_subsystem(" ".join([module_name] + module.get("source_paths", []))),
+                    }
+                    merged_item = merge_item(items_by_id, item)
+                    for source_path in merged_item["source_paths"]:
+                        items_by_source[source_path] = merged_item["id"]
+                    for install_path in merged_item["install_paths"]:
+                        items_by_install_base[Path(install_path).name].add(merged_item["id"])
+
+    policy = load_policy(ROOT / args.policy if args.policy else None)
+    items = list(items_by_id.values())
+    for item in items:
+        item["policy"] = classify_item(item, policy)
+
+    edges = build_edges(items_by_id, items_by_source, items_by_install_base)
+    summary = {
+        "total_items": len(items),
+        "by_layer": dict(Counter(item["layer"] for item in items)),
+        "by_partition": dict(Counter(item["partition"] for item in items)),
+        "by_subsystem": dict(Counter(item["subsystem"] for item in items)),
+        "by_policy": dict(Counter(item["policy"] for item in items)),
+    }
+    return {
+        "metadata": {
+            "root": normalize_path(ROOT),
+            "policy_file": args.policy,
+            "makefiles": ["oxygen-vendor.mk", "mithorium-common-vendor.mk"],
+        },
+        "summary": summary,
+        "items": sorted(items, key=lambda item: item["id"]),
+        "edges": sorted(edges, key=lambda edge: (edge["type"], edge["from"], edge["to"])),
+    }
+
+
+def build_edges(
+    items_by_id: dict[str, dict[str, Any]],
+    items_by_source: dict[str, str],
+    items_by_install_base: dict[str, set[str]],
+) -> list[dict[str, str]]:
+    edge_set: set[tuple[str, str, str]] = set()
+
+    for item in items_by_id.values():
+        if item["kind"] != "init_rc":
+            continue
+        source_path = item["source_paths"][0]
+        source_file = ROOT / source_path
+        if not source_file.exists():
+            continue
+        for line in source_file.read_text().splitlines():
+            stripped = line.strip()
+            if not stripped.startswith("service "):
+                continue
+            parts = stripped.split()
+            if len(parts) < 3:
+                continue
+            binary_basename = Path(parts[2]).name
+            for target_id in items_by_install_base.get(binary_basename, set()):
+                edge_set.add(("service-binary", item["id"], target_id))
+
+    camera_config = ROOT / "proprietary/vendor/etc/camera/camera_config.xml"
+    if camera_config.exists():
+        tree = ET.parse(camera_config)
+        root = tree.getroot()
+        for module in root.findall("CameraModuleConfig"):
+            sensor_name = text_or_empty(module, "SensorName")
+            eeprom_name = text_or_empty(module, "EepromName")
+            actuator_name = text_or_empty(module, "ActuatorName")
+            chromatix_name = text_or_empty(module, "ChromatixName")
+            sensor_id = items_by_source.get(
+                f"vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_{sensor_name}.so"
+            )
+            if sensor_id and chromatix_name:
+                chromatix_id = items_by_source.get(
+                    f"vendor/xiaomi/oxygen/proprietary/vendor/etc/camera/{chromatix_name}.xml"
+                )
+                if chromatix_id:
+                    edge_set.add(("camera-chromatix", sensor_id, chromatix_id))
+            if sensor_id and eeprom_name:
+                eeprom_id = items_by_source.get(
+                    f"vendor/xiaomi/oxygen/proprietary/vendor/lib/libmmcamera_{eeprom_name}_eeprom.so"
+                )
+                if eeprom_id:
+                    edge_set.add(("camera-eeprom", sensor_id, eeprom_id))
+            if sensor_id and actuator_name:
+                actuator_id = items_by_source.get(
+                    f"vendor/xiaomi/oxygen/proprietary/vendor/lib/libactuator_{actuator_name}.so"
+                )
+                if actuator_id:
+                    edge_set.add(("camera-actuator", sensor_id, actuator_id))
+
+    for item in items_by_id.values():
+        if not item["kind"] == "xml":
+            continue
+        source_path = item["source_paths"][0] if item["source_paths"] else ""
+        if "/vintf/manifest/" not in source_path:
+            continue
+        stem = Path(source_path).stem
+        normalized_stem = stem.replace("manifest_", "")
+        for target_id in items_by_id:
+            if target_id == item["id"]:
+                continue
+            if normalized_stem in target_id:
+                edge_set.add(("service-manifest", item["id"], target_id))
+
+    return [{"type": edge_type, "from": source, "to": target} for edge_type, source, target in edge_set]
+
+
+def text_or_empty(node: ET.Element, tag: str) -> str:
+    child = node.find(tag)
+    return child.text.strip() if child is not None and child.text else ""
+
+
+def parse_args(argv: list[str]) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--policy",
+        default="opensource/policy/vendor_policy.json",
+        help="JSON policy file relative to the repo root.",
+    )
+    parser.add_argument(
+        "--summary",
+        action="store_true",
+        help="Print only the summary section instead of the full inventory.",
+    )
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str]) -> int:
+    args = parse_args(argv)
+    inventory = build_inventory(args)
+    output = inventory["summary"] if args.summary else inventory
+    json.dump(output, sys.stdout, indent=2, sort_keys=True)
+    sys.stdout.write("\n")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(sys.argv[1:]))
+
+

@@ -18,9 +18,9 @@ struct imx386_open_lib_layout {
     char sensor_name[32];
     uint32_t raw_prefix_0x20_to_0x0f7[54];
     uint32_t resolution_triplets_0x0f8[22];
-    uint8_t reserved_0x150_to_0x1bf[0x70];
+    uint32_t reserved_0x150_words[28];
     uint32_t meta_0x1c0_words[10];
-    uint8_t reserved_0x1e8_to_0x227[0x40];
+    uint32_t meta_0x1e8_words[16];
     uint32_t meta_0x228_words[34];
     uint32_t meta_0x2b0_words[6];
     const struct sensor_driver_params_type *driver_params;
@@ -32,6 +32,8 @@ _Static_assert(offsetof(struct imx386_open_lib_layout, resolution_triplets_0x0f8
     "unexpected imx386 resolution triplet offset");
 _Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x1c0_words) == 0x1c0,
     "unexpected imx386 0x61c8 block offset");
+_Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x1e8_words) == 0x1e8,
+    "unexpected imx386 0x61f0 block offset");
 _Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x228_words) == 0x228,
     "unexpected imx386 0x6230 block offset");
 _Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x2b0_words) == 0x2b0,
@@ -113,10 +115,25 @@ static const struct imx386_open_lib_layout kImx386OpenLib = {
         0x00000001, 0x00000002, 0x00000002,
         0x00000000, 0x00000001, 0x00000000,
     },
+    .reserved_0x150_words = {
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000005,
+    },
     .meta_0x1c0_words = {
         0x00000001, 0x00000000, 0x00000001, 0x00000001,
         0x00000003, 0x034e034c, 0x03400342, 0x00000202,
         0x00000204, 0x00000000,
+    },
+    .meta_0x1e8_words = {
+        0x00000000, 0x0000000a, 0x3f800000, 0x41800000,
+        0x41800000, 0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x0000fff5, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000, 0x00000000,
     },
     .meta_0x228_words = {
         0x00020002, 0x00000002, 0x3fa00000, 0x00000002,
