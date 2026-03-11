@@ -75,6 +75,10 @@ python3 RE/dump_output_info.py \
   --name oxygen_ov12a_sunny --relaxed
 ```
 
+For S5K5E8, the inline sensor name is `s5k5e8_qtec` (missing `h`). The default
+output-info scan can miss the single populated entry; use a direct pattern
+search if needed.
+
 4. Disassemble `sensor_open_lib` and identify the top-level structures it returns.
 5. Recover mode metadata around each register table:
    - output size

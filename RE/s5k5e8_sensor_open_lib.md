@@ -74,6 +74,9 @@ The output info array is present at file offset `0x77fc8` with a stride of
 
 - `idx 0`: `2592x1944`, `line=3136`, `frame=1968`, `vt=184000000`, `op=165600000`
 
+Direct pattern search confirms the array content: the first entry matches the
+expected values and the remaining 5 entries are all-zero.
+
 ## Mode geometry from reg tables
 
 Using `extract_mode_geometry.py` against the S5K5E8 reg tables (start reg
@@ -83,6 +86,10 @@ Using `extract_mode_geometry.py` against the S5K5E8 reg tables (start reg
 
 This likely corresponds to the full-resolution mode. Additional modes may be
 configured programmatically or stored under a different register start.
+
+Manual scan shows only a single `0x034c`-anchored reg table with a standard
+Samsung-style register sequence (0x034c/0x034d/0x034e/0x034f/0x0340/0x0341/0x0342/0x0343).
+No other matching tables were found in this blob.
 
 Next step is to locate additional mode tables or trace code references to
 the inline block.
