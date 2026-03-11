@@ -51,6 +51,14 @@ python3 RE/extract_sensor_modes.py \
   --array-prefix imx386_mode
 ```
 
+3.5. Dump known inline metadata blocks for cross-sensor comparison:
+
+```bash
+python3 RE/dump_sensor_open_lib.py \
+  RE/libmmcamera_oxygen_imx386_sunny.so \
+  --name oxygen_imx386_sunny
+```
+
 4. Disassemble `sensor_open_lib` and identify the top-level structures it returns.
 5. Recover mode metadata around each register table:
    - output size

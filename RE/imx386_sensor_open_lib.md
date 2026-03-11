@@ -251,6 +251,47 @@ These are raw little-endian words in the returned object (file offsets above).
 
 - `0x00000003 0x00000003 0x00000000 0x00000000 0x00000001 0x00021203`
 
+## Cross-sensor comparison
+
+Dumping the same blocks from other oxygen sensors shows patterns that help
+interpret a few fields. The helper below prints the same blocks:
+
+```
+python3 RE/dump_sensor_open_lib.py <blob> --name <sensor_name>
+```
+
+### `0x61c8` pack looks like output/exp register addresses
+
+- `imx386`: `0x034e034c 0x03400342 0x00000202 0x00000204`
+- `ov12a`: `0x380a3808 0x380e380c 0x00003500 0x00003508`
+- `s5k5e8`: `0x034e034c 0x03400342 0x00000202 0x00000204`
+
+The middle two words are classic Sony/Samsung output regs, while OV uses
+`0x3808/0x380a/0x380c/0x380e`. This strongly suggests:
+
+- word 5 packs `x_output` and `y_output` register addresses
+- word 6 packs `line_length_pclk` and `frame_length_lines` register addresses
+- word 7/8 are coarse integration and global gain register addresses
+
+### `0x6230` contains active array dimensions
+
+Across sensors, words 5/6 line up with known native sizes:
+
+- `imx386`: `0x0fc0` x `0x0bc8` = `4032 x 3016`
+- `ov12a`: `0x1240` x `0x0db0` = `4672 x 3504`
+- `s5k5e8`: `0x0a20` x `0x0798` = `2592 x 1944`
+
+The following two packed words (imx386 `0x000c000c`, `0x00100010`) vary between
+`0x0008` and `0x0010` depending on sensor, and look like crop/guard margins.
+
+### `0x62b8` is IMX386-only (PDAF?)
+
+`ov12a` and `s5k5e8` are all-zero at `0x62b8`, while IMX386 has:
+
+`0x00000003 0x00000003 0x00000000 0x00000000 0x00000001 0x00021203`
+
+This likely encodes PDAF or another IMX-specific capability flag block.
+
 ### Small per-resolution block at `0x6100`
 
 Relocation-applied words:
