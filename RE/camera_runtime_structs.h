@@ -22,14 +22,15 @@
 struct sensor_lib_context_block_v0 {
   uint16_t field_1e8;       /* obj+0x1e8, unresolved paired u16 */
   uint16_t field_1ea;       /* obj+0x1ea, unresolved paired u16 */
-  uint32_t aux0;            /* obj+0x1ec, unresolved */
-  uint32_t min_like_1f0;    /* obj+0x1f0, IMX386 = 1.0f */
-  uint32_t limit_like_1f4;  /* obj+0x1f4, IMX386 = 16.0f */
-  uint32_t limit_like_1f8;  /* obj+0x1f8, IMX386 = 16.0f */
+  uint32_t field_1ec;       /* obj+0x1ec, unresolved scalar/float-like slot */
+  uint32_t field_1f0;       /* obj+0x1f0, unresolved scalar/float-like slot */
+  uint32_t field_1f4;       /* obj+0x1f4, unresolved scalar/float-like slot */
+  uint32_t field_1f8;       /* obj+0x1f8, unresolved scalar/float-like slot */
   uint32_t field_1fc;       /* obj+0x1fc, unresolved */
   uint32_t field_200;       /* obj+0x200, unresolved */
   uint32_t field_204;       /* obj+0x204, unresolved */
   uint32_t field_208;       /* obj+0x208, unresolved */
+  uint32_t field_20c;       /* obj+0x20c, unresolved */
 };
 
 /*

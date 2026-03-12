@@ -1,6 +1,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#include "../../../RE/camera_runtime_structs.h"
 #include "imx386_reg_data.h"
 #include "qcom_sensor_compat.h"
 
@@ -23,9 +24,12 @@ struct imx386_open_lib_layout {
     uint32_t resolution_triplets_0x0f8[22];
     uint32_t reserved_0x150_words[28];
     /* Helper family 0x70 tails into this static capability/register-info area. */
-    uint32_t meta_0x1c0_words[10];
-    /* Direct sensor-lib helper 0x2ce0 copies exactly 0x28 bytes from here. */
-    uint32_t meta_0x1e8_words[16];
+    uint32_t family_0x70_header_words[5];
+    struct sensor_output_reg_addr_v0 output_reg_addr_0x1d4;
+    uint32_t reserved_0x1e4;
+    /* Direct sensor-lib helper 0x2ce0 copies exactly this 0x28-byte block. */
+    struct sensor_lib_context_block_v0 context_block_0x1e8;
+    uint32_t reserved_0x210_words[6];
     /* Helper family 0xc0 snapshots four words starting at helper sub+0x1d8. */
     /* Starts with 0x228/0x22c words and the proven pixel-size float at word 2. */
     uint32_t meta_0x228_words[34];
@@ -37,14 +41,22 @@ _Static_assert(offsetof(struct imx386_open_lib_layout, raw_prefix_0x20_to_0x0f7)
     "unexpected imx386 sensor name size");
 _Static_assert(offsetof(struct imx386_open_lib_layout, resolution_triplets_0x0f8) == 0x0f8,
     "unexpected imx386 resolution triplet offset");
-_Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x1c0_words) == 0x1c0,
+_Static_assert(offsetof(struct imx386_open_lib_layout, family_0x70_header_words) == 0x1c0,
     "unexpected imx386 0x61c8 block offset");
-_Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x1e8_words) == 0x1e8,
+_Static_assert(offsetof(struct imx386_open_lib_layout, output_reg_addr_0x1d4) == 0x1d4,
+    "unexpected imx386 output_reg_addr offset");
+_Static_assert(offsetof(struct imx386_open_lib_layout, context_block_0x1e8) == 0x1e8,
     "unexpected imx386 0x61f0 block offset");
+_Static_assert(offsetof(struct imx386_open_lib_layout, reserved_0x210_words) == 0x210,
+    "unexpected imx386 0x210 gap offset");
 _Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x228_words) == 0x228,
     "unexpected imx386 0x6230 block offset");
 _Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x2b0_words) == 0x2b0,
     "unexpected imx386 0x62b8 block offset");
+_Static_assert(sizeof(struct sensor_output_reg_addr_v0) == 0x10,
+    "unexpected sensor_output_reg_addr_v0 size");
+_Static_assert(sizeof(struct sensor_lib_context_block_v0) == 0x28,
+    "unexpected sensor_lib_context_block_v0 size");
 
 static const struct msm_sensor_output_reg_addr_t kImx386OutputRegAddr = {
     .x_output = 0x034c,
@@ -173,17 +185,35 @@ static const struct imx386_open_lib_layout kImx386OpenLib = {
         0x00000000, 0x00000000, 0x00000000, 0x00000000,
         0x00000000, 0x00000000, 0x00000000, 0x00000005,
     },
-    .meta_0x1c0_words = {
+    .family_0x70_header_words = {
         /* Family 0x70 high entries walk into this static register-info tail. */
-        0x00000001, 0x00000000, 0x00000001, 0x00000001,
-        0x00000003, 0x034e034c, 0x03400342, 0x00000202,
-        0x00000204, 0x00000000,
+        0x00000001, 0x00000000, 0x00000001, 0x00000001, 0x00000003,
     },
-    .meta_0x1e8_words = {
-        0x00000000, 0x0000000a, 0x3f800000, 0x41800000,
-        0x41800000, 0x00000000, 0x00000000, 0x00000000,
-        0x00000000, 0x0000fff5, 0x00000000, 0x00000000,
-        0x00000000, 0x00000000, 0x00000000, 0x00000000,
+    .output_reg_addr_0x1d4 = {
+        .x_output = 0x034c,
+        .y_output = 0x034e,
+        .line_length_pclk = 0x0342,
+        .frame_length_lines = 0x0340,
+        .coarse_int_time = 0x0202,
+        .global_gain = 0x0204,
+    },
+    .reserved_0x1e4 = 0x00000000,
+    .context_block_0x1e8 = {
+        .field_1e8 = 0x0000,
+        .field_1ea = 0x000a,
+        .field_1ec = 0x3f800000,
+        .field_1f0 = 0x41800000,
+        .field_1f4 = 0x41800000,
+        .field_1f8 = 0x00000000,
+        .field_1fc = 0x00000000,
+        .field_200 = 0x00000000,
+        .field_204 = 0x0000fff5,
+        .field_208 = 0x00000000,
+        .field_20c = 0x00000000,
+    },
+    .reserved_0x210_words = {
+        0x00000000, 0x00000000, 0x00000000,
+        0x00000000, 0x00000000, 0x00000000,
     },
     .meta_0x228_words = {
         0x00020002, 0x00000002, 0x3fa00000, 0x00000002,
