@@ -16,11 +16,16 @@
 
 struct imx386_open_lib_layout {
     char sensor_name[32];
+    /* Helper family 0x100 reads compact static prefix/header pairs from here. */
     uint32_t raw_prefix_0x20_to_0x0f7[54];
+    /* Helper family 0x110 reads compact per-resolution metadata pairs here. */
     uint32_t resolution_triplets_0x0f8[22];
     uint32_t reserved_0x150_words[28];
+    /* Helper family 0x70 tails into this static capability/register-info area. */
     uint32_t meta_0x1c0_words[10];
+    /* Direct sensor-lib helper 0x2ce0 copies exactly 0x28 bytes from here. */
     uint32_t meta_0x1e8_words[16];
+    /* Starts with 0x228/0x22c words and the proven pixel-size float at word 2. */
     uint32_t meta_0x228_words[34];
     uint32_t meta_0x2b0_words[6];
     const struct sensor_driver_params_type *driver_params;
@@ -53,9 +58,9 @@ static const struct msm_sensor_exp_gain_info_t kImx386ExpGainInfo = {
 };
 
 /*
- * Only the first entry has partially recovered geometry today.
- * The remaining output_info entries stay zero until the packed 0x6230 region is
- * mapped field-by-field.
+ * These mode entries are kept as explicit decoded values because they are
+ * already validated against the proprietary blob by RE/tests/test_sensor_blocks.py.
+ * They are not derived from the uncertain 0x1e8 copied context block.
  */
 static const struct msm_sensor_output_info_t kImx386OutputInfo[6] = {
     {
@@ -131,6 +136,7 @@ static const struct sensor_driver_params_type kImx386DriverParams = {
 static const struct imx386_open_lib_layout kImx386OpenLib = {
     .sensor_name = "oxygen_imx386_sunny",
     .raw_prefix_0x20_to_0x0f7 = {
+        /* Family 0x100 is an indexed view over these compact header pairs. */
         0x00000020, 0x00000001, 0x00000002, 0x00000000,
         0x03860016, 0x00000000, 0x00000001, 0x00000000,
         0x00000000, 0x00000001, 0x00000002, 0x00000002,
@@ -147,6 +153,7 @@ static const struct imx386_open_lib_layout kImx386OpenLib = {
         0x00000000, 0x00000000,
     },
     .resolution_triplets_0x0f8 = {
+        /* Family 0x110 lands in this compact mode-metadata region. */
         0x00000006, 0x00000000, 0x00000000, 0x00000000,
         0x00000001, 0x00000001, 0x00000000,
         0x00000000, 0x00000001, 0x00000002,
@@ -165,6 +172,7 @@ static const struct imx386_open_lib_layout kImx386OpenLib = {
         0x00000000, 0x00000000, 0x00000000, 0x00000005,
     },
     .meta_0x1c0_words = {
+        /* Family 0x70 high entries walk into this static register-info tail. */
         0x00000001, 0x00000000, 0x00000001, 0x00000001,
         0x00000003, 0x034e034c, 0x03400342, 0x00000202,
         0x00000204, 0x00000000,
@@ -177,7 +185,7 @@ static const struct imx386_open_lib_layout kImx386OpenLib = {
     },
     .meta_0x228_words = {
         0x00020002, 0x00000002, 0x3fa00000, 0x00000002,
-        0x40b8f5c3, 0x00000fc0, 0x00000bc8, /* active 4032x3016 */
+        0x40b8f5c3, 0x00000fc0, 0x00000bc8, /* word 2 = 1.25f pixel size */
         0x000c000c,
         0x00100010, 0x004003ff, 0x00400040, 0x00000040,
         0x00000003, 0x00022b00, 0x00000000, 0x00000000,

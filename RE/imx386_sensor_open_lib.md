@@ -75,6 +75,30 @@ Interpretation:
 - `0x26e1` appears twice, which usually means the same callback is used for two table slots
 - several entries are Thumb code pointers because the low bit is set
 
+`0x286c` seeds the helper subobject with this table directly:
+
+- `[sub + 0x0] = 0x5e2c`
+- so the helper `ops` pointer is the relocation-backed table starting at `0x5e2c`
+
+Resolved helper ops slots:
+
+- `ops+0x00 -> 0x26e1`
+- `ops+0x04 -> 0x26e1`
+- `ops+0x08 -> 0x29c7`
+- `ops+0x0c -> 0x29e9`
+- `ops+0x10 -> 0x2a75`
+- `ops+0x14 -> 0x2b01`
+- `ops+0x18 -> 0x2b21`
+- `ops+0x1c -> 0x2bc5`
+- `ops+0x20 -> 0x2c91`
+- `ops+0x24 -> 0x2ce1`
+- `ops+0x28 -> 0x2cf9`
+- `ops+0x2c -> 0x2d0f`
+- `ops+0x30 -> 0x2d15`
+- `ops+0x34 -> 0x2d85`
+- `ops+0x38 -> 0x2df5`
+- `ops+0x3c -> 0x2dfb`
+
 ## First interesting code targets
 
 ### `0x26e1`
@@ -84,7 +108,9 @@ Interpretation:
 - Almost certainly a real library callback, not inert data
 - It allocates a large temporary stack object and calls `0x25f4`
 - `0x25f4` drives an interface made of function pointers at object offsets `0x8`, `0xc`, `0x10`, `0x14`, `0x18`, `0x1c`, `0x20`, `0x24`, and `0x28`
-- This looks like a parser / enumerator wrapper around a smaller internal vtable-like object
+- This looks like a wrapper around a smaller internal vtable-like object. The
+  later `obj+8` analysis now suggests that this subobject also carries saved
+  execution/register context, not just table metadata.
 
 ### `0x29c7`, `0x29e9`, `0x2a75`, `0x2b01`, `0x2b21`, `0x2bc5`, `0x2c91`
 
@@ -102,10 +128,10 @@ These names are not final, but they are grounded in the observed control flow.
 
 ### `0x29c7`
 
-- Tiny validator
-- Calls a function pointer from `[obj->ops + 0x3c]`
-- Then checks whether a selector value belongs to a narrow valid range
-- Likely `is_valid_slot()` or `is_valid_key()`
+- Tiny validator body
+- This is the concrete implementation behind `ops+0x08`
+- Checks whether a selector belongs to one of the supported compact selector classes
+- Best current name: `is_supported_selector_family()`
 
 ### `0x29e9`
 
@@ -116,12 +142,161 @@ These names are not final, but they are grounded in the observed control flow.
 - Selector family masked by `0xc0` triggers lazy initialization using the block at `+0x1d8`
 - Best current name: `get_slot_ptr()`
 
+Now directly confirmed from the code:
+
+- selector `-1` / `-2` / `0xd` -> `sub+0x3c`
+- selector `0xe` -> `sub+0x40`
+- selector `0xf` -> `sub+0x44`
+- selectors `0..0xc` -> word table at `sub+0x8 + idx*4`
+- selector family with `(sel & ~3) == 0xc0` lazily snapshots from `sub+0x1d8`
+  using the save helper at `0x2858`, gated by byte `sub+0x4c`
+
+Stronger evidence for selector `0xd`:
+
+- parser paths at `0x1fec`, `0x2052`, `0x213a`, `0x23c0`, `0x2430`, and
+  `0x24a2` repeatedly call the get/set wrappers with selector `0xd`
+- the returned/stored value is advanced by `+4`, `+0x204`, or by iterating over
+  packed entries
+- this is consistent with selector `0xd` naming a mutable parse cursor pointer
+  (or current decode position) in the helper subobject
+
 ### `0x2a75`
 
 - Setter counterpart to `0x29e9`
 - Writes to inline offsets `+0x3c`, `+0x40`, `+0x44` or generic table storage at `+0x8`
 - Selector family masked by `0xc0` triggers lazy initialization of the `+0x1d8` block
 - Best current name: `set_slot_ptr()`
+
+Now directly confirmed from the code:
+
+- selector `-1` / `-2` / `0xd` writes `sub+0x3c`
+- selector `0xe` writes `sub+0x40`
+- selector `0xf` writes `sub+0x44`
+- selectors `0..0xc` write `sub+0x8 + idx*4`
+- selector family with `(sel & ~3) == 0xc0` lazily snapshots from `sub+0x1d8`
+  on first use, gated by byte `sub+0x4c`
+
+Current safe interpretation of the special slots:
+
+- `sub+0x3c` / selector `0xd`: mutable parse cursor pointer
+- `sub+0x40` / selector `0xe`: paired pointer/state slot, still unresolved
+- `sub+0x44` / selector `0xf`: paired pointer/state slot, still unresolved
+
+The `0xe` / `0xf` pair is used together near the end of the parser loop:
+
+```asm
+0x222c add  r2, sp, #4
+0x2230 movs r1, #0xe
+0x2232 bl   0x28b0   ; get selector 0xe
+...
+0x223a movs r1, #0xf
+0x223c bl   0x28de   ; set selector 0xf
+```
+
+So these two slots are related, but not yet named safely.
+
+One stronger behavioral detail is now confirmed:
+
+- at parser completion (`0x2224..0x2240`), if status bit 0 is clear:
+  - selector `0xe` is read into a temporary
+  - that same value is written back through selector `0xf`
+
+So the safest current wording is:
+
+- `sub+0x40` / selector `0xe`: source-side terminal pointer/state slot
+- `sub+0x44` / selector `0xf`: sink-side mirrored terminal pointer/state slot
+
+That is still deliberately conservative; the exact semantic names (for example
+start/end, current/next, or input/output cursor) are not proven yet.
+
+### Generic selector-dispatch helper at `0x22f8`
+
+The helper at `0x22f8` is not specific to selectors `0xe` / `0xf`. It is a
+generic adapter that routes several selector families into the lower-level
+get/set wrappers:
+
+- for op-class `0`:
+  - accepts selectors `0x0..0xf`
+  - uses `0x28b0` (getter)
+- for op-class `1`:
+  - accepts selectors `0x70..0x8f`
+  - uses `0x2922` (pair getter path)
+- for op-class `2`:
+  - accepts selectors `0xc0..0xc3`
+  - uses `0x28b0`
+- for op-class `3`:
+  - accepts selectors `0x100..0x10f` or `0x100..0x11f` depending on mode
+  - uses `0x29c0` / `0x2922`
+
+Instruction-faithful shape:
+
+```asm
+0x22a8 bl 0x28b0   ; plain getter family
+...
+0x22bc bl 0x29c0   ; tail-call via ops+0x3c into the 0x100-family gate
+...
+0x22d4 bl 0x2922   ; pair getter path
+```
+
+Current interpretation:
+
+- `0x22f8` is a selector-family dispatcher for the helper subobject ABI
+- it explains why parser code reuses selector `0xd` and then mixes in
+  `0x70` / `0xc0` / `0x100` class selectors through the same front-end helper
+
+### `0xc0` selector family
+
+The plain getter path at `0x29e8..0x2a4e` now resolves this family directly:
+
+```asm
+0x2a2a bic    r0, r5, #0x3
+0x2a2e cmp    r0, #0xc0
+0x2a32 ldrb.w r0, [r4, #0x4c]
+0x2a38 movs   r0, #0x1
+0x2a3a strb.w r0, [r4, #0x4c]
+0x2a3e add.w  r0, r4, #0x1d8
+0x2a42 blx    0x2858
+0x2a46 add.w  r0, r4, r5, lsl #2
+0x2a4a sub.w  r0, r0, #0x128
+0x2a4e ldr    r0, [r0]
+```
+
+Safe interpretation:
+
+- selectors `0xc0..0xc3` index a 4-word snapshot block rooted at `sub+0x1d8`
+- `sub+0x4c` is the one-time snapshot gate for this family
+- the first access snapshots the block through `0x2858`
+- later accesses return one word at:
+  - `0xc0 -> sub+0x1d8`
+  - `0xc1 -> sub+0x1dc`
+  - `0xc2 -> sub+0x1e0`
+  - `0xc3 -> sub+0x1e4`
+
+The save helper `0x2858` is an ARM stub that stores four coprocessor-register
+words into this block, so the safest current name is:
+
+- compact 4-word snapshot family
+
+That is now enough to preserve the ABI shape without pretending we know the
+architectural register semantics yet.
+
+### `0x29c0`
+
+- Tiny trampoline, not a substantive validator body
+- Implementation:
+
+```asm
+0x29c0 ldr r1, [r0]
+0x29c2 ldr r1, [r1, #0x3c]
+0x29c4 bx  r1
+```
+
+- Current safest reading:
+  - dispatches through `ops+0x3c`, which resolves to `0x2dfb`
+  - `0x2dfb` sets `sub+0x48 = 1` and returns
+  - used by the `0x22f8` front-end before the `0x100`-family pair getter path
+  - so `0x29c0` is an arming step for the `0x100` family, not the actual pair
+    getter/setter logic
 
 ### `0x2b01`
 
@@ -155,7 +330,14 @@ These names are not final, but they are grounded in the observed control flow.
 - If not initialized, calls `0x2e30`
 - Then invokes callbacks through `[obj->ops + 0x34]` and `[obj->ops + 0xc]`
 - Reads an inline value from `+0x1f8`
-- Best current name: `ensure_ready()` or `activate_context()`
+- Best current name: `ensure_subcontext_ready()`
+
+Important correction:
+
+- this helper operates on the internal subobject rooted at `obj + 0x8`
+- so the `+0x210` and `+0x1f8` offsets here are `sub+0x210` / `sub+0x1f8`
+- they are not automatically the same fields as raw top-level
+  `obj+0x210` / `obj+0x1f8`
 
 ### `0x2ce1`
 
@@ -167,7 +349,220 @@ These names are not final, but they are grounded in the observed control flow.
 
 - Wrapper that passes `obj + 0x8` into `0x2e84`
 - Then tail-calls another routine at `0x3590`
-- Best current name: `finalize_or_publish()`
+- Best current name: `restore_and_resume_subcontext()`
+
+Stronger current interpretation:
+
+- this is a restore-and-resume path for the helper subobject, not a plain
+  metadata getter
+
+### `0x2922`
+
+- Pair getter wrapper
+- Calls `[sub->ops + 0x14]` as a readiness/permission gate
+- On success, calls `[sub->ops + 0x18]`
+- Stores the returned `(r0, r1)` pair to caller memory
+- Best current name: `get_pair_slot_wrapped()`
+
+Instruction-faithful shape:
+
+```asm
+ldr r2, [ops, #0x14]
+blx r2
+cmp r0, #1
+bne fail
+ldr r2, [ops, #0x18]
+blx r2
+strd r0, r1, [out]
+```
+
+### `0x2952`
+
+- Extended pair operation wrapper
+- Calls `[sub->ops + 0x14]` as the same readiness/permission gate
+- On success, calls `[sub->ops + 0x1c]` with four arguments
+- Best current name: `set_pair_slot_wrapped()` or `operate_pair_slot_wrapped()`
+
+Instruction-faithful shape:
+
+```asm
+ldr r2, [ops, #0x14]
+blx r2
+cmp r0, #1
+bne fail
+ldr r4, [ops, #0x1c]
+blx r4
+```
+
+Current interpretation:
+
+- `0x2922` / `0x2952` are generic wrappers around the lower-level pair-slot ABI
+- they are the bridge used by the `0x22f8` selector-family dispatcher for the
+  `0x70` / `0x100`-class pair operations
+
+### Concrete pair-selector backing regions
+
+The lower-level pair getter/setter paths at `0x2b20` and `0x2bc4` now resolve
+the selector families to specific backing regions inside the helper subobject:
+
+- selector family `0x100`
+  - lazy-save gate: `sub+0x49`
+  - mode/arm flag: `sub+0x48`
+  - save area: `sub+0x50`
+  - getter loads pair from `sub + 0x50 + idx*8`
+  - setter stores pair to the same region
+- selector family `0x110`
+  - lazy-save gate: `sub+0x4a`
+  - save area: `sub+0xd8`
+  - getter loads pair from `sub + 0xd8 + (idx-0x110)*8`
+  - setter stores pair to the same region
+- selector family `0x70`
+  - lazy-save gate: `sub+0x4b`
+  - save area: `sub+0x158`
+  - getter loads pair from `sub + 0x158 + (idx-0x70)*8`
+  - setter stores pair to the same region
+
+Instruction-faithful load/store offsets:
+
+```asm
+; getter 0x100
+0x2b46 add.w r0, r5, #0x50
+0x2b4a ldrb.w r1, [r5, #0x48]
+0x2b4e cbz    r1, 0x2b92
+0x2b50 blx    0x2804
+...
+0x2b92 blx    0x27fc
+...
+0x2b96 add.w r0, r5, r4, lsl #3
+0x2b9a sub.w r0, r0, #0x7b0   ; == sub+0x50 + idx*8
+
+; getter 0x110
+0x2b80 add.w r0, r5, #0xd8
+...
+0x2b88 add.w r0, r5, r4, lsl #3
+0x2b8c sub.w r0, r0, #0x7a8   ; == sub+0xd8 + (idx-0x110)*8
+
+; getter 0x70
+0x2b62 add.w r0, r5, #0x158
+...
+0x2b6a add.w r0, r5, r4, lsl #3
+0x2b6e sub.w r0, r0, #0x228   ; == sub+0x158 + (idx-0x70)*8
+```
+
+Direct dump correlation from IMX386:
+
+- `sub+0x50` matches the small raw-prefix data from the top-level descriptor
+- `sub+0xd8` matches the compact resolution metadata / triplet region
+- `sub+0x158` reaches into the area that begins with the static
+  output/timing/exposure/gain register block
+
+This is the strongest current link between selector families and concrete blob
+substructures.
+
+Stronger family-specific interpretation:
+
+- family `0x100`
+  - best current reading: small static prefix/header pairs
+  - reason:
+    - `sub+0x50` maps directly onto raw top-level `obj+0x58`
+    - that region contains the early small scalar data from the sensor
+      descriptor prefix
+    - representative pairs are compact control-like constants rather than
+      register addresses or per-resolution triplets
+- family `0x110`
+  - best current reading: compact per-resolution metadata pairs
+  - reason:
+    - `sub+0xd8` maps directly onto raw top-level `obj+0xe0`
+    - that region contains the same small regular values seen in the
+      `resolution_triplets_0x0f8` / compact mode-metadata discussion
+    - the content is too small and regular to be register addresses
+- family `0x70`
+  - best current reading: static sensor capability / register-address pairs
+  - reason:
+    - `sub+0x158` maps into raw top-level `obj+0x160`
+    - the nonzero tail reaches:
+      - `obj+0x1c0`: small scalar header words
+      - `obj+0x1c8`: packed `x_output/y_output` register addresses
+      - `obj+0x1d0`: packed `line_length/frame_length` and exposure register
+    - this is consistent with a static capability pair-family, not per-mode
+      triplets
+
+Concrete IMX386 `0x70` family tail entries from the dump:
+
+- family index `0x7c` (`sub+0x1b8` / `obj+0x1c0`):
+  - pair = `(0x00000001, 0x00000000)`
+- family index `0x7d` (`sub+0x1c0` / `obj+0x1c8`):
+  - pair = `(0x00000001, 0x00000001)`
+- family index `0x7e` (`sub+0x1c8` / `obj+0x1d0`):
+  - pair = `(0x00000003, 0x034e034c)`
+- family index `0x7f` (`sub+0x1d0` / `obj+0x1d8`):
+  - pair = `(0x03400342, 0x00000202)`
+
+So the family `0x70` window is not random:
+
+- its high entries walk directly into the proven static register-address block
+- that makes it a strong candidate for an indexed static-info/capability view
+  over the top-level sensor descriptor
+
+Concrete IMX386 `0x100` family entries from the dump:
+
+- family index `0x100` (`sub+0x50` / `obj+0x58`):
+  - pair = `(0x00000002, 0x00000000)`
+- family index `0x101` (`sub+0x58` / `obj+0x60`):
+  - pair = `(0x00000000, 0x00000001)`
+- family index `0x102` (`sub+0x60` / `obj+0x68`):
+  - pair = `(0x00000002, 0x00000001)`
+- family index `0x105` (`sub+0x78` / `obj+0x80`):
+  - pair = `(0x016e3600, 0x00000001)`
+- family index `0x107` (`sub+0x88` / `obj+0x90`):
+  - pair = `(0x00000002, 0x0000000b)`
+
+So the family `0x100` window currently looks like:
+
+- an indexed view over the small static prefix/header section of the top-level
+  descriptor
+- likely compact sensor capability or mode-policy tuples
+- not a direct register-address family and not the per-resolution metadata area
+- its lazy materialization has two pieces:
+  - `sub+0x49`: one-time init gate for the backing region
+  - `sub+0x48`: arm flag selecting whether the init stub is `0x27fc` or `0x2804`
+
+Cross-sensor check:
+
+- IMX386 and both OV12A variants carry the same `0x100` family pairs
+- S5K5E8 carries a different `0x100` family pattern, but the two S5K5E8 vendor
+  variants match each other
+
+So the safest current conclusion is:
+
+- the `0x100` block is vendor-invariant within a given sensor family
+- but not stable enough across sensor families to assign one global semantic
+  field name per pair index yet
+- this makes it look more like a compact sensor-family policy/header tuple block
+  than optical metadata or purely vendor-tuning data
+
+Cross-sensor check for the `0x110` family:
+
+- IMX386 and both OV12A variants carry the same `0x110` pair pattern:
+  - `0x113 -> (6, 0)`
+  - `0x115 -> (1, 1)`
+  - `0x117 -> (1, 2)`
+  - `0x118 -> (1, 0)`
+  - `0x119 -> (0, 2)`
+- S5K5E8 qtech and ofilm carry a different but internally matching pattern:
+  - `0x113 -> (8, 1)`
+  - `0x114 -> (1, 0)`
+  - `0x115 -> (1, 1)`
+  - `0x117 -> (1, 0)`
+  - `0x119 -> (1, 2)`
+
+So the safest current conclusion for `0x110` is:
+
+- it is also vendor-invariant within a sensor family
+- it still behaves like compact per-resolution/mode metadata rather than lens
+  or optical metadata
+- but the pair indices are not stable enough across sensor families to freeze
+  one global semantic name per slot
 
 ### `0x2d0f`
 
@@ -209,11 +604,157 @@ The block initialized by `0x286c` starts at `obj + 0x8` and is a distinct sub-ob
 Observed behavior:
 
 - `0x286c` writes two pointers at the start of this sub-object
+- It copies a 0x40-byte callback template into `sub+0x8`
 - It clears bytes up to roughly `+0x1c2`
 - It calls `0x2d85` on that sub-object immediately after initialization
 - `0x25f4` and the `0x28xx-0x29xx` helpers then operate on this sub-object through function pointers
 
-This is likely an internal context or enumerator used by the higher-level sensor library callbacks.
+This is now best described as an internal helper subobject used by the
+higher-level sensor library callbacks. It carries both table-like state and a
+saved execution/register context used by the restore path.
+
+The copied template comes from the relocation-backed callback table already
+visible in `.data.rel.ro`:
+
+- template source starts at `0x5e2c`
+- it contains the 16 callback entries previously listed:
+  - `0x26e1`, `0x26e1`, `0x29c7`, `0x29e9`
+  - `0x2a75`, `0x2b01`, `0x2b21`, `0x2bc5`
+  - `0x2c91`, `0x2ce1`, `0x2cf9`, `0x2d0f`
+  - `0x2d15`, `0x2d85`, `0x2df5`, `0x2dfb`
+
+So `0x286c` is not building the helper subobject from scratch; it seeds it from
+the blob's embedded callback template and then clears the larger save-area
+behind it.
+
+The callback wrapper at `0x2cf8` makes this base split explicit:
+
+```asm
+0x2cfa add.w r4, r0, #0x8
+0x2cfe mov   r0, r4
+0x2d00 bl    0x2e84
+0x2d04 mov   r0, r4
+0x2d0a b.w   0x3590
+```
+
+So later helper offsets must be read with two bases in mind:
+
+- raw top-level sensor object: `obj + off`
+- helper subobject: `sub + off`, where `sub = obj + 0x8`
+
+This resolves several earlier offset collisions. For IMX386:
+
+- `sub+0x1d0 == obj+0x1d8`
+- `sub+0x1d8 == obj+0x1e0`
+- `sub+0x1e8 == obj+0x1f0`
+- `sub+0x210 == obj+0x218`
+- `sub+0x220 == obj+0x228`
+
+Direct dump sanity check from the blob supports this:
+
+- `sub+0x220` starts with `0x00020002, 0x00000002, 0x3fa00000`, which matches
+  raw top-level `obj+0x228`
+- `sub+0x1e8` starts with `1.0f, 16.0f, 16.0f`, which matches raw top-level
+  `obj+0x1f0`
+
+### Register-restore helpers inside the subobject path
+
+The helper at `0x2e84` is now much clearer when read together with the ARM
+trampolines:
+
+```asm
+0x2e88 ldrb.w r0, [r4, #0x41]
+0x2e8e ldrb.w r1, [r4, #0x40]
+0x2e92 add.w  r0, r4, #0x48
+...
+0x2e98 blx    0x3528
+0x2e9e blx    0x3520
+...
+0x2ea2 ldrh.w r0, [r4, #0x42]
+...
+0x2eac add.w  r0, r4, #0xd0
+0x2eb0 blx    0x3530
+...
+0x2ebe add.w  r0, r4, #0x150
+0x2ec2 blx    0x3538
+...
+0x2ecc add.w  r0, r4, #0x1d0
+0x2ed4 b.w    0x35a0
+```
+
+Resolved targets:
+
+- `0x3520` / `0x3528`: load a large register bank from `sub+0x48`
+  - for IMX386 these two restore stubs are byte-for-byte equivalent and both
+    restore `d0..d15`
+- `0x3530`: load another large register bank from `sub+0xd0`
+- `0x3538..0x3574`: load a further coprocessor register bank from `sub+0x150`
+- `0x35a0 -> 0x3574`: final tail stage using `sub+0x1d0`
+- `0x3590 -> 0x350c`: restores general registers, `sp`, and branch target from
+  the subobject
+
+Instruction-faithful core of `0x350c`:
+
+```asm
+mov lr, r0
+ldm lr, {r0-r12}
+ldr sp, [lr, #0x34]
+ldr lr, [lr, #0x3c]
+bx  lr
+```
+
+Current safe interpretation:
+
+- the helper subobject is not just metadata storage
+- it includes saved execution/register context
+- `0x2e84` restores floating/coproc state in stages gated by bytes at
+  `sub+0x40..0x44`
+- `0x3590` resumes execution using the restored general-register frame
+
+That makes the `obj+8` subobject look more like a resumable execution context
+or generated callback state block than a plain sensor-parameter table.
+
+### Save-side gate bytes and their paired save areas
+
+The getter/setter paths at `0x2b20` and `0x2bc4` tie the gate bytes directly to
+three lazily materialized save areas:
+
+- `sub+0x48`
+  - gate byte: `sub+0x49`
+  - first-use save helper: `0x27fc` or `0x2804`
+  - on IMX386, `0x27fc` and `0x2804` are byte-for-byte equivalent ARM stubs:
+    both save `d0..d15` with `vstmia`
+  - restored later by `0x3520` / `0x3528`
+- `sub+0xd8`
+  - gate byte: `sub+0x4a`
+  - first-use save helper: `0x280c`
+  - restored later by `0x3530`
+- `sub+0x158`
+  - gate byte: `sub+0x4b`
+  - first-use save helper: `0x2814`
+  - restored later by `0x3538..0x3574`
+
+Separately:
+
+- `sub+0x4c` gates the one-time snapshot rooted at `sub+0x1d8`
+  used by the `0xc0` selector family
+
+So the `sub+0x40..0x4c` bytes are now partially named by behavior:
+
+- `sub+0x40` / `sub+0x41` / `sub+0x42` / `sub+0x43` are restore-time control
+  bytes read by `0x2e84`
+- `sub+0x49` / `sub+0x4a` / `sub+0x4b` are lazy-save completion flags for the
+  three save areas
+- `sub+0x4c` is the lazy-save completion flag for the `sub+0x1d8` snapshot path
+
+Current safe conclusion for `sub+0x48` on IMX386:
+
+- it still acts as a control/arm flag in the `0x100` family save path
+- but the two observed save targets (`0x27fc` and `0x2804`) are identical in
+  this blob, and the paired restore targets (`0x3520` and `0x3528`) are also
+  identical
+- so the flag changes control flow without changing the saved VFP bank on the
+  current IMX386 implementation
 
 ## Parent object structure clues around `0x6008`
 
