@@ -1,8 +1,8 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "../../../RE/camera_runtime_structs.h"
 #include "imx386_reg_data.h"
+#include "imx386_sensor_layout.h"
 #include "qcom_sensor_compat.h"
 
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
@@ -14,27 +14,6 @@
  * from RE/libmmcamera_oxygen_imx386_sunny.so, but it is not a runtime-ready
  * replacement for the proprietary blob yet.
  */
-
-struct imx386_open_lib_layout {
-    char sensor_name[32];
-    /* Helper family 0x100 reads compact static prefix/header pairs from here. */
-    /* See RE/camera_runtime_structs.h for the helper-subobject head model. */
-    uint32_t raw_prefix_0x20_to_0x0f7[54];
-    /* Helper family 0x110 reads compact per-resolution metadata pairs here. */
-    uint32_t resolution_triplets_0x0f8[22];
-    uint32_t reserved_0x150_words[28];
-    /* Helper family 0x70 tails into this static capability/register-info area. */
-    uint32_t family_0x70_header_words[5];
-    struct sensor_output_reg_addr_v0 output_reg_addr_0x1d4;
-    uint32_t reserved_0x1e4;
-    /* Direct sensor-lib helper 0x2ce0 copies exactly this 0x28-byte block. */
-    struct sensor_lib_context_block_v0 context_block_0x1e8;
-    uint32_t reserved_0x210_words[6];
-    /* Helper family 0xc0 snapshots four words starting at helper sub+0x1d8. */
-    struct sensor_meta_0x228_block_v0 meta_0x228;
-    struct sensor_meta_0x2b0_block_v0 meta_0x2b0;
-    const struct sensor_driver_params_type *driver_params;
-};
 
 _Static_assert(offsetof(struct imx386_open_lib_layout, raw_prefix_0x20_to_0x0f7) == 0x20,
     "unexpected imx386 sensor name size");
@@ -243,10 +222,37 @@ static const struct imx386_open_lib_layout kImx386OpenLib = {
 };
 
 const void *imx386_get_driver_params(void) {
-    return &kImx386DriverParams;
+    return imx386_get_driver_params_typed();
+}
+
+const struct imx386_open_lib_layout *imx386_get_open_lib_layout(void) {
+    return &kImx386OpenLib;
+}
+
+const struct sensor_driver_params_type *imx386_get_driver_params_typed(void) {
+    return kImx386OpenLib.driver_params;
+}
+
+const struct sensor_output_reg_addr_v0 *imx386_get_output_reg_block(void) {
+    return &kImx386OpenLib.output_reg_addr_0x1d4;
+}
+
+const struct msm_sensor_output_info_t *imx386_get_output_info_table(uint32_t *count) {
+    if (count != NULL) {
+        *count = ARRAY_SIZE(kImx386OutputInfo);
+    }
+    return kImx386OutputInfo;
+}
+
+const struct sensor_meta_0x228_block_v0 *imx386_get_meta_0x228_block(void) {
+    return &kImx386OpenLib.meta_0x228;
+}
+
+const struct sensor_meta_0x2b0_block_v0 *imx386_get_meta_0x2b0_block(void) {
+    return &kImx386OpenLib.meta_0x2b0;
 }
 
 __attribute__((visibility("default")))
 void *sensor_open_lib(void) {
-    return (void *)&kImx386OpenLib;
+    return (void *)imx386_get_open_lib_layout();
 }
