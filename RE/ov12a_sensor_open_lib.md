@@ -1,114 +1,103 @@
 # OV12A `sensor_open_lib` Notes
 
-This file captures the current reverse-engineering state of:
+This file captures the current offline reference state for
+`proprietary/vendor/lib/libmmcamera_oxygen_ov12a_sunny.so`.
 
-- `proprietary/vendor/lib/libmmcamera_oxygen_ov12a_sunny.so`
-- `proprietary/vendor/lib/libmmcamera_oxygen_ov12a_ofilm.so`
+The goal is to use OV12A as the second sensor-family cross-check and the next
+static reconstruction target while IMX386 waits for device/runtime validation.
 
-Both blobs share the same inline `sensor_open_lib` block layout and values.
+## Current status
 
-## Inline block dump summary
+OV12A has now reached the same pre-runtime checkpoint as IMX386:
 
-Name offsets (file):
+1. typed `sensor_open_lib()` layout exists in `opensource/camera/ov12a/`
+2. shared Sunny/Ofilm core preserves the proven inline slices
+3. host-side query tests validate the recovered output-info and metadata values
 
-- `oxygen_ov12a_sunny`: `0x00004008`
-- `oxygen_ov12a_ofilm`: `0x00004008`
+## Confirmed anchors
 
-### `0x0f8` resolution triplets
+- Sensor name: `oxygen_ov12a_sunny`
+- Returned object base: inline name starts at file offset `0x4008`
 
-The first word is `0x00000006` (six entries), followed by the same triplet
-pattern as IMX386.
+## Stable top-level blocks
 
-### `0x1c0` register address pack
+### `obj+0x1c0` (10 words)
 
-```
-00: 0x00000000
-01: 0x00000000
-02: 0x00000001
-03: 0x00000001
-04: 0x00000000
-05: 0x380a3808
-06: 0x380e380c
-07: 0x00003500
-08: 0x00003508
-09: 0x00000000
+```text
+0x00000000 0x00000000 0x00000001 0x00000001 0x00000000
+0x380a3808 0x380e380c 0x00003500 0x00003508 0x00000000
 ```
 
-The packed addresses match OV register conventions:
+Current interpretation:
 
-- `0x3808/0x380a` => x/y output regs
-- `0x380c/0x380e` => line/frame regs
-- `0x3500/0x3508` => exposure/gain regs
+- same structural role as IMX386 `0x1c0` tail
+- OV12A-specific register values:
+  - packed output registers: `0x380a3808`
+  - packed frame/line registers: `0x380e380c`
+  - coarse integration register: `0x3500`
+  - gain register: `0x3508`
 
-### `0x1e8` gain/exposure limits (provisional)
+### `obj+0x1e8` (16 words)
 
-```
-00: 0x00000000
-01: 0x00000008
-02: 0x3f800000 (1.0)
-03: 0x41780000 (15.5)
-04: 0x41780000 (15.5)
-09: 0x00007ff7
-```
-
-### `0x228` active array + calibration block
-
-```
-02: 0x3f9ef9db (1.242)
-04: 0x3faa3d71 (1.33)
-05: 0x00001240 (4672)
-06: 0x00000db0 (3504)
-07: 0x00080008
-08: 0x00080008
-09: 0x004003ff
-10: 0x00400040
-11: 0x00000040
-12: 0x00000001
-13: 0x00022b00
+```text
+0x00000000 0x00000008 0x3f800000 0x41780000
+0x41780000 0x00000000 0x00000000 0x00000000
+0x00000000 0x00007ff7 0x00000000 0x00000000
+0x00000000 0x00000000 0x00000000 0x00000000
 ```
 
-The active array is `4672x3504`. Black level values are consistent with the
-other oxygen sensors.
+Current interpretation:
 
-### `0x2b0`
+- same copied 0x28-byte context-block role as IMX386
+- field names still intentionally unresolved
 
-All-zero (6 words).
+### `obj+0x228` (34 words)
 
-## Output info array
+```text
+0x00020002 0x00000002 0x3f9ef9db 0x00000002
+0x3faa3d71 0x00001240 0x00000db0 0x00080008
+0x00080008 0x004003ff 0x00400040 0x00000040
+0x00000001 0x00022b00 ...
+```
 
-The output info array is present at file offset `0x77fc8` with a stride of
-`0x40` and 6 populated entries:
+Current interpretation:
 
-- `idx 0`: `4096x3072`, `line=1168`, `frame=3302`, `vt=108000000`, `op=398400000`
-- `idx 1`: `2048x1536`, `line=1064`, `frame=3346`, `vt=106900000`, `op=123360000`
-- `idx 2`: `4096x2304`, `line=1168`, `frame=3080`, `vt=108000000`, `op=398400000`
-- `idx 3`: `3840x2160`, `line=1168`, `frame=3080`, `vt=108000000`, `op=398400000`
-- `idx 4`: `1920x1080`, `line=1064`, `frame=3346`, `vt=107400000`, `op=233600000`
-- `idx 5`: `1280x720`, `line=1064`, `frame=844`, `vt=107800000`, `op=233600000`
+- same structural role as IMX386 `0x228` block
+- proven stable header:
+  - `0x228 = 0x00020002`
+  - `0x22c = 0x00000002`
+  - `0x230 = 0x3f9ef9db` (float-like, sensor-specific)
+- words `5` and `6` match the recovered OV12A geometry/timing values used in
+  the existing host-side block test:
+  - `0x1240`
+  - `0x0db0`
 
-Cross-check against `libmmcamera2_sensor_modules.so` (`sensor_get_output_info`):
+### `obj+0x2b0` (6 words)
 
-- these values are read from fixed offsets relative to the sensor name base:
-  - `+0x73fc0 + idx*0x40` (`x`, `y`, `line`, `frame`, `vt`, `op`)
-- a companion `u16[4]` table at `+0x75188 + idx*0x08` is also read for each
-  mode.
-- for both OV12A blobs, all companion entries are zero in populated modes.
+```text
+0x00000000 0x00000000 0x00000000
+0x00000000 0x00000000 0x00000000
+```
 
-That means userspace effectively computes crop endpoints as `x-1` and `y-1`
-for OV12A, and takes `line`/`frame` directly from the output-info slot.
+Current interpretation:
 
-## Mode geometry from reg tables
+- all-zero tail block on OV12A, matching the current block test
 
-Using `extract_mode_geometry.py` against the OV12A reg tables (start reg
-`0x3808`), the following candidate mode sizes appear:
+## Recovered output-info table
 
-- `4096x3072` line `1168` frame `3302` (duplicate table appears twice)
-- `2048x1536` line `1064` frame `3346`
-- `4096x2304` line `1168` frame `3080`
-- `3840x2160` line `1168` frame `3080`
-- `1920x1080` line `1064` frame `3346`
-- `1280x720` line `1064` frame `844`
+Host-side reference values already checked in `RE/tests/test_sensor_blocks.py`:
 
-The line-length values are smaller than width for OV12A, but this is accepted
-by the Qualcomm userspace path because the fields are consumed as raw timing
-values (no normalization in `sensor_get_output_info`).
+1. `4096x3072`, `line=1168`, `frame=3302`, `vt=108000000`, `op=398400000`
+2. `2048x1536`, `line=1064`, `frame=3346`, `vt=106900000`, `op=123360000`
+3. `4096x2304`, `line=1168`, `frame=3080`, `vt=108000000`, `op=398400000`
+4. `3840x2160`, `line=1168`, `frame=3080`, `vt=108000000`, `op=398400000`
+5. `1920x1080`, `line=1064`, `frame=3346`, `vt=107400000`, `op=233600000`
+6. `1280x720`, `line=1064`, `frame=844`, `vt=107800000`, `op=233600000`
+
+## Offline plan for OV12A
+
+1. Keep the shared Sunny/Ofilm OV12A core stable unless new blob evidence
+   proves the variants diverge.
+2. Reuse OV12A as the second-family validation target for shared query surfaces.
+3. Shift the next offline reconstruction effort to S5K5E8 while IMX386 and
+   OV12A wait for runtime testing on device.

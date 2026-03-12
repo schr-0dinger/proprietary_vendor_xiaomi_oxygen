@@ -83,3 +83,43 @@ Concrete stop condition:
 
 This does not require "perfect documentation" of every field in every blob.
 It requires a stable enough ABI slice for one working sensor replacement.
+
+## Current Handoff
+
+The IMX386 work has now reached the last pre-runtime checkpoint:
+
+1. The descriptor layout is compile-checked with typed substructures.
+2. The first behavior-facing helpers (`imx386_query_mode()` and
+   `imx386_query_output_info()`) are implemented.
+3. A compiled local test confirms those helpers match the expected proprietary
+   IMX386 values for checked modes.
+
+The next stage is runtime validation on the real camera stack or a tighter
+module-side integration test. Further static RE is no longer the highest-value
+step for IMX386 bring-up.
+
+OV12A now matches that offline checkpoint:
+
+1. typed descriptor layout exists for both Sunny and Ofilm variants
+2. shared query helpers are validated by host-side tests
+3. Sunny and Ofilm currently share one static core because their recovered
+   descriptor slices and output-info tables match
+
+## No-Device Plan
+
+Until the device is available again, the highest-value camera work is:
+
+1. Keep IMX386 stable and avoid open-ended static churn.
+   - only fix issues discovered by host-side tests
+   - do not keep renaming unresolved fields without new evidence
+2. Keep OV12A on the same pre-runtime, host-validated track.
+   - reuse the shared sensor-core query surface
+   - keep Sunny and Ofilm variants on one static core unless new evidence breaks that assumption
+3. Start the third-family offline track with S5K5E8.
+   - verify whether the qtech/ofilm split is real or just packaging
+   - recover enough output-info data to reach the same query-helper checkpoint
+4. Prepare host-side comparison tests so runtime time is spent on integration,
+   not on basic descriptor mismatches.
+5. Defer EEPROM / actuator / chromatix until either:
+   - IMX386 runtime testing starts, or
+   - S5K5E8 reaches the same pre-runtime checkpoint

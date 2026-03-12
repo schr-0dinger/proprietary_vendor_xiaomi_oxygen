@@ -244,12 +244,73 @@ const struct msm_sensor_output_info_t *imx386_get_output_info_table(uint32_t *co
     return kImx386OutputInfo;
 }
 
+int imx386_find_mode_by_resolution(uint16_t width, uint16_t height, uint32_t *mode_index) {
+    return oxygen_sensor_find_mode_by_resolution(
+        kImx386OutputInfo, ARRAY_SIZE(kImx386OutputInfo), width, height, mode_index);
+}
+
+const struct msm_sensor_output_info_t *imx386_get_mode_info(uint32_t mode_index) {
+    return oxygen_sensor_get_mode_info(kImx386OutputInfo, ARRAY_SIZE(kImx386OutputInfo), mode_index);
+}
+
+int imx386_query_mode(uint32_t mode_index, struct oxygen_sensor_mode_query_result *out) {
+    return oxygen_sensor_query_mode(
+        kImx386OutputInfo, ARRAY_SIZE(kImx386OutputInfo), mode_index,
+        imx386_get_output_reg_block(), imx386_get_meta_0x228_block(),
+        imx386_get_pixel_size_microns(), out);
+}
+
+int imx386_query_output_info(uint32_t mode_index, struct oxygen_sensor_output_info_query_result *out) {
+    return oxygen_sensor_query_output_info(
+        kImx386OutputInfo, ARRAY_SIZE(kImx386OutputInfo), mode_index,
+        imx386_get_output_reg_block(), imx386_get_meta_0x228_block(),
+        imx386_get_pixel_size_microns(), out);
+}
+
+int imx386_query_output_info_by_resolution(uint16_t width, uint16_t height,
+                                           struct oxygen_sensor_output_info_query_result *out) {
+    uint32_t mode_index = 0;
+
+    if (imx386_find_mode_by_resolution(width, height, &mode_index) != 0) {
+        return -1;
+    }
+    return imx386_query_output_info(mode_index, out);
+}
+
+int imx386_sensor_get_output_info_exact(uint16_t width, uint16_t height,
+                                        struct oxygen_sensor_get_output_info_result *out) {
+    return oxygen_sensor_get_output_info_exact(
+        kImx386OutputInfo, ARRAY_SIZE(kImx386OutputInfo),
+        imx386_get_output_reg_block(), imx386_get_meta_0x228_block(),
+        imx386_get_pixel_size_microns(), width, height, out);
+}
+
+int imx386_sensor_get_output_info_request(
+    const struct oxygen_sensor_output_info_request *req,
+    struct oxygen_sensor_get_output_info_result *out) {
+    return oxygen_sensor_get_output_info_request(
+        kImx386OutputInfo, ARRAY_SIZE(kImx386OutputInfo),
+        imx386_get_output_reg_block(), imx386_get_meta_0x228_block(),
+        imx386_get_pixel_size_microns(), req, out);
+}
+
 const struct sensor_meta_0x228_block_v0 *imx386_get_meta_0x228_block(void) {
     return &kImx386OpenLib.meta_0x228;
 }
 
 const struct sensor_meta_0x2b0_block_v0 *imx386_get_meta_0x2b0_block(void) {
     return &kImx386OpenLib.meta_0x2b0;
+}
+
+float imx386_get_pixel_size_microns(void) {
+    union {
+        uint32_t u32;
+        float f32;
+    } pixel_size = {
+        .u32 = kImx386OpenLib.meta_0x228.pixel_size_0x230,
+    };
+
+    return pixel_size.f32;
 }
 
 __attribute__((visibility("default")))
