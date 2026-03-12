@@ -86,6 +86,17 @@ The output info array is present at file offset `0x77fc8` with a stride of
 - `idx 4`: `1920x1080`, `line=1064`, `frame=3346`, `vt=107400000`, `op=233600000`
 - `idx 5`: `1280x720`, `line=1064`, `frame=844`, `vt=107800000`, `op=233600000`
 
+Cross-check against `libmmcamera2_sensor_modules.so` (`sensor_get_output_info`):
+
+- these values are read from fixed offsets relative to the sensor name base:
+  - `+0x73fc0 + idx*0x40` (`x`, `y`, `line`, `frame`, `vt`, `op`)
+- a companion `u16[4]` table at `+0x75188 + idx*0x08` is also read for each
+  mode.
+- for both OV12A blobs, all companion entries are zero in populated modes.
+
+That means userspace effectively computes crop endpoints as `x-1` and `y-1`
+for OV12A, and takes `line`/`frame` directly from the output-info slot.
+
 ## Mode geometry from reg tables
 
 Using `extract_mode_geometry.py` against the OV12A reg tables (start reg
@@ -98,9 +109,6 @@ Using `extract_mode_geometry.py` against the OV12A reg tables (start reg
 - `1920x1080` line `1064` frame `3346`
 - `1280x720` line `1064` frame `844`
 
-Note: line length is smaller than width in these tables, which suggests the
-OV12A line length might be stored in different units or with additional
-packing. Treat these as raw register values for now.
-
-The line-length values are smaller than the output width, so treat them as
-raw register values until we confirm the units.
+The line-length values are smaller than width for OV12A, but this is accepted
+by the Qualcomm userspace path because the fields are consumed as raw timing
+values (no normalization in `sensor_get_output_info`).

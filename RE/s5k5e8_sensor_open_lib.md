@@ -77,6 +77,16 @@ The output info array is present at file offset `0x77fc8` with a stride of
 Direct pattern search confirms the array content: the first entry matches the
 expected values and the remaining 5 entries are all-zero.
 
+Cross-check against `libmmcamera2_sensor_modules.so` (`sensor_get_output_info`):
+
+- this entry is read via fixed offsets relative to the sensor-name base:
+  - `+0x73fc0 + idx*0x40` for output-info fields
+  - `+0x75188 + idx*0x08` for a companion `u16[4]` table
+- for both QTECH and OFILM blobs, the companion entries are zero for all slots.
+
+So for populated slots, userspace reduces crop-end arithmetic to
+`x-1` / `y-1` and uses `line` / `frame` directly from the output-info slot.
+
 ## Mode geometry from reg tables
 
 Using `extract_mode_geometry.py` against the S5K5E8 reg tables (start reg

@@ -75,6 +75,23 @@ python3 RE/dump_output_info.py \
   --name oxygen_ov12a_sunny --relaxed
 ```
 
+3.8. Probe fixed output-info offsets consumed by `libmmcamera2_sensor_modules.so`:
+
+```bash
+python3 RE/tools/sensor_output_offsets_probe.py \
+  proprietary/vendor/lib/libmmcamera_oxygen_ov12a_sunny.so \
+  --name oxygen_ov12a_sunny
+```
+
+3.9. Evaluate `0x228/0x22c` arithmetic used by `libmmcamera2_sensor_modules.so`
+(`0x2da44` path):
+
+```bash
+python3 RE/tools/sensor_0x228_eval.py \
+  proprietary/vendor/lib/libmmcamera_oxygen_ov12a_sunny.so \
+  --name oxygen_ov12a_sunny
+```
+
 For S5K5E8, the inline sensor name is `s5k5e8_qtec` (missing `h`). The default
 output-info scan can miss the single populated entry; use a direct pattern
 search if needed.

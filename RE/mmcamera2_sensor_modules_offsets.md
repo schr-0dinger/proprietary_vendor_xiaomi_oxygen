@@ -47,8 +47,35 @@ Observed behavior:
 - `0x228` is treated as two packed `u16` values (low/high halfwords).
 - `0x22c` is a `u32` used as a comparison/subtraction reference.
 
-This implies the first word of the `0x228` block is a packed pair of 16-bit
-values used in crop/constraint logic.
+Instruction-faithful pseudocode for this block:
+
+```c
+uint32_t w228 = *(uint32_t *)(base + 0x228);
+uint32_t ref  = *(uint32_t *)(base + 0x22c);
+uint32_t lo = w228 & 0xffff;
+uint32_t hi = (w228 >> 16) & 0xffff;
+
+uint32_t cand = (lo < hi) ? hi : lo;
+if (hi < ref) {
+  cand -= ref;  // 32-bit wrap
+}
+
+uint32_t out = (ref > 0) ? (ref - 1) : ref;
+if ((int32_t)cand >= 0) {
+  out = cand;
+}
+
+*(uint16_t *)(dst + 0x2c) = (uint16_t)out;
+```
+
+Empirical check with `RE/tools/sensor_0x228_eval.py`:
+
+- `ov12a_sunny`: `w228=0x00020002`, `ref=2`, result `u16=2`
+- `s5k5e8_qtech` (inline name `s5k5e8_qtec`): same, result `u16=2`
+- `imx386_sunny`: same, result `u16=2`
+
+For oxygen camera blobs, this path currently collapses to a constant output
+`2` because both packed halfwords and reference are all `2`.
 
 ### `0x0003228e` - `0x000322cc`
 
@@ -85,6 +112,46 @@ Observed behavior:
 - `0x1e8` is also accessed as a `u16` in a mode-table style loop.
 - This suggests the first word of the `0x1e8` block is treated as a small count
   or selector, not just a float.
+
+### `0x0002df6a` - `0x0002dff2` (`sensor_get_output_info`)
+
+This path reads output-info fields from fixed offsets relative to the
+`sensor_open_lib()` base pointer:
+
+```
++0x73fc0 + idx*0x40  (u16) x_output
++0x73fc2 + idx*0x40  (u16) y_output
++0x73fc4 + idx*0x40  (u16) line_length_pclk
++0x73fc6 + idx*0x40  (u16) frame_length_lines
++0x73fc8 + idx*0x40  (u32) vt_pixel_clk
++0x73fcc + idx*0x40  (u32) op_pixel_clk
+```
+
+And a companion table:
+
+```
++0x75188 + idx*0x08  (u16) a0
++0x7518a + idx*0x08  (u16) a1
++0x7518c + idx*0x08  (u16) a2
++0x7518e + idx*0x08  (u16) a3
+```
+
+Observed arithmetic:
+
+```
+crop_end_x = x_output - 1 - a3
+crop_end_y = y_output - 1 - a1
+```
+
+For current oxygen blobs (`imx386`, `ov12a`, `s5k5e8`), `a0..a3` are all zero
+for populated modes, so this path reduces to `(x-1, y-1)`.
+
+Implication:
+
+- The `line` / `frame` values in `output_info` are consumed as raw `u16` timing
+  fields directly from this table (no unit normalization in this path).
+- This explains why OV12A can report `line < width` while remaining accepted by
+  userspace.
 
 ## Working interpretation (current)
 
