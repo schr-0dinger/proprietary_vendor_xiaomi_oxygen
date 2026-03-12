@@ -17,6 +17,7 @@
 struct imx386_open_lib_layout {
     char sensor_name[32];
     /* Helper family 0x100 reads compact static prefix/header pairs from here. */
+    /* See RE/camera_runtime_structs.h for the helper-subobject head model. */
     uint32_t raw_prefix_0x20_to_0x0f7[54];
     /* Helper family 0x110 reads compact per-resolution metadata pairs here. */
     uint32_t resolution_triplets_0x0f8[22];
@@ -25,6 +26,7 @@ struct imx386_open_lib_layout {
     uint32_t meta_0x1c0_words[10];
     /* Direct sensor-lib helper 0x2ce0 copies exactly 0x28 bytes from here. */
     uint32_t meta_0x1e8_words[16];
+    /* Helper family 0xc0 snapshots four words starting at helper sub+0x1d8. */
     /* Starts with 0x228/0x22c words and the proven pixel-size float at word 2. */
     uint32_t meta_0x228_words[34];
     uint32_t meta_0x2b0_words[6];

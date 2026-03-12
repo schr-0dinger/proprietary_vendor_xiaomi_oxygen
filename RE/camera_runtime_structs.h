@@ -46,6 +46,72 @@ struct sensor_output_reg_addr_v0 {
 };
 
 /*
+ * Relocation-backed helper ops table seeded into the IMX386 helper subobject by
+ * 0x286c. This is a concrete ABI surface for the internal selector-family
+ * helpers, even though several callback semantics are still intentionally named
+ * conservatively.
+ */
+struct sensor_helper_ops_v0 {
+  void *prepare0;              /* +0x00 -> 0x26e1 */
+  void *prepare1;              /* +0x04 -> 0x26e1 */
+  void *is_supported_selector; /* +0x08 -> 0x29c7 */
+  void *get_slot_ptr;          /* +0x0c -> 0x29e9 */
+  void *set_slot_ptr;          /* +0x10 -> 0x2a75 */
+  void *is_valid_pair_slot;    /* +0x14 -> 0x2b01 */
+  void *get_pair_slot;         /* +0x18 -> 0x2b21 */
+  void *set_pair_slot;         /* +0x1c -> 0x2bc5 */
+  void *ensure_ready;          /* +0x20 -> 0x2c91 */
+  void *copy_context_block;    /* +0x24 -> 0x2ce1 */
+  void *restore_and_resume;    /* +0x28 -> 0x2cf9 */
+  void *get_state_flag;        /* +0x2c -> 0x2d0f */
+  void *format_self_path;      /* +0x30 -> 0x2d15 */
+  void *init_context;          /* +0x34 -> 0x2d85 */
+  void *mark_primary_present;  /* +0x38 -> 0x2df5 */
+  void *arm_primary_block;     /* +0x3c -> 0x2dfb */
+};
+
+/*
+ * Compact 4-word snapshot block read by selector family 0xc0..0xc3. The
+ * architectural register meaning of each word is not proven yet, so keep the
+ * fields opaque while preserving the ABI shape.
+ */
+struct sensor_helper_snapshot4_v0 {
+  uint32_t word_c0;            /* selector 0xc0 */
+  uint32_t word_c1;            /* selector 0xc1 */
+  uint32_t word_c2;            /* selector 0xc2 */
+  uint32_t word_c3;            /* selector 0xc3 */
+};
+
+/*
+ * Proven front slice of the helper subobject rooted at obj+0x8.
+ *
+ * Observed behavior:
+ * - [sub+0x0] points at the relocation-backed helper ops table
+ * - [sub+0x4] is a second initializer-written pointer, still unresolved
+ * - [sub+0x8..0x37] hold the inline callback/slot table for selectors 0..0xc
+ * - sub+0x3c/sub+0x40/sub+0x44 are the special pointer/state slots
+ * - sub+0x48..0x4c are the arm/lazy-save flags for the family backing regions
+ *
+ * The larger save areas behind this header are modeled separately in the
+ * open-source IMX386 scaffold as raw words because their full semantic names
+ * are not required yet for a compile-safe replacement.
+ */
+struct sensor_helper_subobject_head_v0 {
+  const struct sensor_helper_ops_v0 *ops; /* sub+0x00 */
+  const void *opaque_init_ptr;            /* sub+0x04, unresolved */
+  uint32_t slot_words[13];                /* sub+0x08..0x3c */
+  uint32_t parse_cursor;                  /* sub+0x3c, selector 0xd */
+  uint32_t terminal_src;                  /* sub+0x40, selector 0xe */
+  uint32_t terminal_dst;                  /* sub+0x44, selector 0xf */
+  uint8_t primary_arm_flag;               /* sub+0x48 */
+  uint8_t primary_ready;                  /* sub+0x49, family 0x100 */
+  uint8_t mode_ready;                     /* sub+0x4a, family 0x110 */
+  uint8_t static_ready;                   /* sub+0x4b, family 0x70 */
+  uint8_t snapshot4_ready;                /* sub+0x4c, family 0xc0 */
+  uint8_t reserved_4d[0x03];
+};
+
+/*
  * Minimal downstream-visible header for the cached stream/crop configuration
  * blob at base+0x7a68.
  *

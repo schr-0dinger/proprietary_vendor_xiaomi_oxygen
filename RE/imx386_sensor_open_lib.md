@@ -2,6 +2,13 @@
 
 This file captures the current reverse-engineering state of `RE/libmmcamera_oxygen_imx386_sunny.so`.
 
+The current conservative C-facing slice for the helper ABI is captured in
+`RE/camera_runtime_structs.h` as:
+
+- `struct sensor_helper_ops_v0`
+- `struct sensor_helper_subobject_head_v0`
+- `struct sensor_helper_snapshot4_v0`
+
 ## Confirmed facts
 
 - Exported function: `sensor_open_lib`
