@@ -31,9 +31,8 @@ struct imx386_open_lib_layout {
     struct sensor_lib_context_block_v0 context_block_0x1e8;
     uint32_t reserved_0x210_words[6];
     /* Helper family 0xc0 snapshots four words starting at helper sub+0x1d8. */
-    /* Starts with 0x228/0x22c words and the proven pixel-size float at word 2. */
-    uint32_t meta_0x228_words[34];
-    uint32_t meta_0x2b0_words[6];
+    struct sensor_meta_0x228_block_v0 meta_0x228;
+    struct sensor_meta_0x2b0_block_v0 meta_0x2b0;
     const struct sensor_driver_params_type *driver_params;
 };
 
@@ -49,14 +48,18 @@ _Static_assert(offsetof(struct imx386_open_lib_layout, context_block_0x1e8) == 0
     "unexpected imx386 0x61f0 block offset");
 _Static_assert(offsetof(struct imx386_open_lib_layout, reserved_0x210_words) == 0x210,
     "unexpected imx386 0x210 gap offset");
-_Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x228_words) == 0x228,
+_Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x228) == 0x228,
     "unexpected imx386 0x6230 block offset");
-_Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x2b0_words) == 0x2b0,
+_Static_assert(offsetof(struct imx386_open_lib_layout, meta_0x2b0) == 0x2b0,
     "unexpected imx386 0x62b8 block offset");
 _Static_assert(sizeof(struct sensor_output_reg_addr_v0) == 0x10,
     "unexpected sensor_output_reg_addr_v0 size");
 _Static_assert(sizeof(struct sensor_lib_context_block_v0) == 0x28,
     "unexpected sensor_lib_context_block_v0 size");
+_Static_assert(sizeof(struct sensor_meta_0x228_block_v0) == 0x88,
+    "unexpected sensor_meta_0x228_block_v0 size");
+_Static_assert(sizeof(struct sensor_meta_0x2b0_block_v0) == 0x18,
+    "unexpected sensor_meta_0x2b0_block_v0 size");
 
 static const struct msm_sensor_output_reg_addr_t kImx386OutputRegAddr = {
     .x_output = 0x034c,
@@ -215,21 +218,26 @@ static const struct imx386_open_lib_layout kImx386OpenLib = {
         0x00000000, 0x00000000, 0x00000000,
         0x00000000, 0x00000000, 0x00000000,
     },
-    .meta_0x228_words = {
-        0x00020002, 0x00000002, 0x3fa00000, 0x00000002,
-        0x40b8f5c3, 0x00000fc0, 0x00000bc8, /* word 2 = 1.25f pixel size */
-        0x000c000c,
-        0x00100010, 0x004003ff, 0x00400040, 0x00000040,
-        0x00000003, 0x00022b00, 0x00000000, 0x00000000,
-        0x00000000, 0x00023601, 0x00000000, 0x00000000,
-        0x00000000, 0x00023502, 0x00000000, 0x00000000,
-        0x00000000, 0x00000000, 0x00000000, 0x00000000,
-        0x00000000, 0x00000000, 0x00000000, 0x00000000,
-        0x00000000, 0x00000000,
+    .meta_0x228 = {
+        .packed_pair_0x228 = 0x00020002,
+        .reference_0x22c = 0x00000002,
+        .pixel_size_0x230 = 0x3fa00000, /* 1.25f */
+        .opaque_words = {
+            0x00000002, 0x40b8f5c3, 0x00000fc0, 0x00000bc8,
+            0x000c000c, 0x00100010, 0x004003ff, 0x00400040,
+            0x00000040, 0x00000003, 0x00022b00, 0x00000000,
+            0x00000000, 0x00000000, 0x00023601, 0x00000000,
+            0x00000000, 0x00000000, 0x00023502, 0x00000000,
+            0x00000000, 0x00000000, 0x00000000, 0x00000000,
+            0x00000000, 0x00000000, 0x00000000, 0x00000000,
+            0x00000000, 0x00000000, 0x00000000,
+        },
     },
-    .meta_0x2b0_words = {
-        0x00000003, 0x00000003, 0x00000000,
-        0x00000000, 0x00000001, 0x00021203,
+    .meta_0x2b0 = {
+        .words = {
+            0x00000003, 0x00000003, 0x00000000,
+            0x00000000, 0x00000001, 0x00021203,
+        },
     },
     .driver_params = &kImx386DriverParams,
 };

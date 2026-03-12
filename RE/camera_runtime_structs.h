@@ -47,6 +47,35 @@ struct sensor_output_reg_addr_v0 {
 };
 
 /*
+ * Conservative reconstruction of the top-level metadata block starting at
+ * obj+0x228 in the returned sensor blob.
+ *
+ * Proven facts:
+ * - obj+0x228 is consumed as a packed pair of u16 values
+ * - obj+0x22c is a comparison/subtraction reference used alongside obj+0x228
+ * - obj+0x230 is treated as a float and behaves like pixel size in microns
+ *
+ * The remainder of the block is still opaque, but its size and position are
+ * stable enough to preserve directly in the open scaffold.
+ */
+struct sensor_meta_0x228_block_v0 {
+  uint32_t packed_pair_0x228;     /* obj+0x228 */
+  uint32_t reference_0x22c;       /* obj+0x22c */
+  uint32_t pixel_size_0x230;      /* obj+0x230, float bits */
+  uint32_t opaque_words[31];      /* obj+0x234..0x2af */
+};
+
+/*
+ * Conservative reconstruction of the small tail block at obj+0x2b0.
+ *
+ * This slice is structurally stable in the returned sensor blob, but only its
+ * raw shape is proven so far.
+ */
+struct sensor_meta_0x2b0_block_v0 {
+  uint32_t words[6];              /* obj+0x2b0..0x2c7 */
+};
+
+/*
  * Relocation-backed helper ops table seeded into the IMX386 helper subobject by
  * 0x286c. This is a concrete ABI surface for the internal selector-family
  * helpers, even though several callback semantics are still intentionally named
